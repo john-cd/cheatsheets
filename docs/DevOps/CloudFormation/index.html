@@ -1,0 +1,1293 @@
+
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A collection of cheatsheets and code snippets.">
+      
+      
+        <link rel="canonical" href="http://john-cd.com/cheatsheets/DevOps/CloudFormation/">
+      
+      
+        <meta name="author" content="S. John Cruchon-Dupeyrat">
+      
+      
+        <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      
+      <meta name="generator" content="mkdocs-0.16.1, mkdocs-material-1.4.1">
+    
+    
+      
+        <title>CloudFormation Basics</title>
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr-56ade86843.js"></script>
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application-76741b64bc.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-66fa0d9bba.palette.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+  
+  
+  
+    <body data-md-color-primary="deep-orange" data-md-color-accent="orange">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <a href="../.." title="John's Cheatsheets" class="md-icon md-icon--home md-header-nav__button">
+          </a>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                <span class="md-header-nav__parent">
+                  DevOps
+                </span>
+              
+            
+            CloudFormation
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search">
+  <div class="md-search__overlay"></div>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <div class="md-header-nav__source">
+          
+            
+
+
+  
+
+
+  <a href="https://github.com/john-cd/cheatsheets" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      john-cd/cheatsheets
+    </div>
+  </a>
+
+          
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    
+      <i class="md-icon md-icon--home md-nav__button"></i>
+    
+    John's Cheatsheets
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/john-cd/cheatsheets" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      john-cd/cheatsheets
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Big Data
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Big Data
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Big_Data/Hadoop_Ecosystem/" title="Hadoop Ecosystem" class="md-nav__link">
+      Hadoop Ecosystem
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Big_Data/Spark/" title="Spark" class="md-nav__link">
+      Spark
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Cloud
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Cloud
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Cloud/Serverless/" title="Serverless" class="md-nav__link">
+      Serverless
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Data Science
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Data Science
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Science/Data_Manipulation/" title="Data Manipulation" class="md-nav__link">
+      Data Manipulation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Science/Data_Visualization/" title="Data Visualization" class="md-nav__link">
+      Data Visualization
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Science/Keras/" title="Keras" class="md-nav__link">
+      Keras
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Science/Machine_Learning/" title="Machine Learning" class="md-nav__link">
+      Machine Learning
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Databases
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Databases
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Databases/Mongodb/" title="Mongodb" class="md-nav__link">
+      Mongodb
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Databases/SQL/" title="SQL" class="md-nav__link">
+      SQL
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
+    
+    <label class="md-nav__link" for="nav-6">
+      DevOps
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        DevOps
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        CloudFormation
+      </label>
+    
+    <a href="./" title="CloudFormation" class="md-nav__link md-nav__link--active">
+      CloudFormation
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#devops-philosophy" title="DevOps Philosophy" class="md-nav__link">
+    DevOps Philosophy
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tools" title="Tools" class="md-nav__link">
+    Tools
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#yaml" title="YAML" class="md-nav__link">
+    YAML
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-templates" title="Sample Templates" class="md-nav__link">
+    Sample Templates
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#template-basics" title="Template Basics" class="md-nav__link">
+    Template Basics
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" title="Examples" class="md-nav__link">
+    Examples
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#s3" title="S3" class="md-nav__link">
+    S3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ec2" title="EC2" class="md-nav__link">
+    EC2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Docker/" title="Docker" class="md-nav__link">
+      Docker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Git/" title="Git" class="md-nav__link">
+      Git
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Java
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Java
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Java/Java/" title="Java" class="md-nav__link">
+      Java
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Java/Log4j/" title="Log4j" class="md-nav__link">
+      Log4j
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      Linux
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        Linux
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Linux/Linux/" title="Linux" class="md-nav__link">
+      Linux
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      Markup and Documentation
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        Markup and Documentation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Markup%20and%20Documentation/Jekyll/" title="Jekyll" class="md-nav__link">
+      Jekyll
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Markup%20and%20Documentation/Markdown/" title="Markdown" class="md-nav__link">
+      Markdown
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Markup%20and%20Documentation/MkDocs/" title="MkDocs" class="md-nav__link">
+      MkDocs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Markup%20and%20Documentation/jekyll-introduction/" title="Jekyll introduction" class="md-nav__link">
+      Jekyll introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Markup%20and%20Documentation/reStructuredText/" title="reStructuredText" class="md-nav__link">
+      reStructuredText
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      Python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        Python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/Jupyter/" title="Jupyter" class="md-nav__link">
+      Jupyter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/Matplotlib/" title="Matplotlib" class="md-nav__link">
+      Matplotlib
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/Python3/" title="Python3" class="md-nav__link">
+      Python3
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    
+    <label class="md-nav__link" for="nav-11">
+      Search
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        Search
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Search/ElasticSearch/" title="ElasticSearch" class="md-nav__link">
+      ElasticSearch
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
+    
+    <label class="md-nav__link" for="nav-12">
+      Software Development
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-12">
+        Software Development
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Software_Development/Development_Tools/" title="Development Tools" class="md-nav__link">
+      Development Tools
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
+    
+    <label class="md-nav__link" for="nav-13">
+      dotNET
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-13">
+        dotNET
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dotNET/ASPdotNET/" title="ASPdotNET" class="md-nav__link">
+      ASPdotNET
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dotNET/AkkadotNET/" title="AkkadotNET" class="md-nav__link">
+      AkkadotNET
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dotNET/C%23/" title="C#" class="md-nav__link">
+      C#
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dotNET/Multithreading/" title="Multithreading" class="md-nav__link">
+      Multithreading
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dotNET/WPF/" title="WPF" class="md-nav__link">
+      WPF
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#devops-philosophy" title="DevOps Philosophy" class="md-nav__link">
+    DevOps Philosophy
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tools" title="Tools" class="md-nav__link">
+    Tools
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#yaml" title="YAML" class="md-nav__link">
+    YAML
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-templates" title="Sample Templates" class="md-nav__link">
+    Sample Templates
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#template-basics" title="Template Basics" class="md-nav__link">
+    Template Basics
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" title="Examples" class="md-nav__link">
+    Examples
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#s3" title="S3" class="md-nav__link">
+    S3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ec2" title="EC2" class="md-nav__link">
+    EC2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/john-cd/cheatsheets/edit/master/docs/DevOps\CloudFormation.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
+                
+                
+                  <h1>CloudFormation</h1>
+                
+                <h2 id="devops-philosophy">DevOps Philosophy<a class="headerlink" href="#devops-philosophy" title="Permanent link">&para;</a></h2>
+<p><a href="https://blog.gruntwork.io/why-we-use-terraform-and-not-chef-puppet-ansible-saltstack-or-cloudformation-7989dad2865c#.sp4ce0kog">Why we use Terraform and not Chef, Puppet, Ansible, SaltStack, or CloudFormation</a></p>
+<h2 id="tools">Tools<a class="headerlink" href="#tools" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="http://docs.aws.amazon.com/cli/latest/reference/cloudformation/index.html#cli-aws-cloudformation">AWS CLI cloudformation</a></li>
+<li><a href="http://docs.aws.amazon.com/cli/latest/reference/cloudformation/validate-template.html">aws cloudformation validate-template</a></li>
+<li><a href="http://boto3.readthedocs.io/en/latest/reference/services/cloudformation.html">boto3 cloudformation</a></li>
+</ul>
+<h2 id="yaml"><a href="https://en.wikipedia.org/wiki/YAML">YAML</a><a class="headerlink" href="#yaml" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="http://lzone.de/cheat-sheet/YAML">YAML Cheatsheet</a></li>
+<li><a href="https://gist.github.com/anonymous/1486924">YAML Cheatsheet 2</a></li>
+</ul>
+<p>YAML notation for folded text: <code>&gt;</code></p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">data</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">&gt;</span>
+   <span class="no">Wrapped text</span>
+   <span class="no">will be folded</span>
+   <span class="no">into a single</span>
+   <span class="no">paragraph</span>
+
+   <span class="no">Blank lines denote</span>
+   <span class="no">paragraph breaks</span>
+</pre></div>
+
+
+<h2 id="sample-templates">Sample Templates<a class="headerlink" href="#sample-templates" title="Permanent link">&para;</a></h2>
+<p><a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-sample-templates-us-east-1.html">Templates for the US East (Northern Virginia) Region</a></p>
+<p><a href="https://github.com/awslabs">AWSlabs on GitHub</a>
+- <a href="https://github.com/awslabs/startup-kit-templates">Startup kit templates</a>
+- <a href="https://github.com/awslabs/aws-cloudformation-templates">AWS CloudFormation Sample Templates</a></p>
+<p><a href="https://cloudonaut.io/templates-for-aws-cloudformation/">Cloudonaut Templates</a></p>
+<p><a href="https://github.com/widdix/aws-cf-templates">Free Templates for AWS CloudFormation (Cloudonaut)</a></p>
+<p><a href="https://github.com/awslabs/ecs-refarch-cloudformation">Deploying Microservices with Amazon ECS, AWS CloudFormation, and an Application Load Balancer</a></p>
+<h2 id="template-basics">Template Basics<a class="headerlink" href="#template-basics" title="Permanent link">&para;</a></h2>
+<p><a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/gettingstarted.templatebasics.html">Template Basics</a></p>
+<p><a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template Anatomy</a></p>
+<div class="codehilite"><pre><span></span><span class="nn">---</span>
+<span class="l l-Scalar l-Scalar-Plain">AWSTemplateFormatVersion</span><span class="p p-Indicator">:</span> <span class="s">&quot;version</span><span class="nv"> </span><span class="s">date&quot;</span>
+
+<span class="l l-Scalar l-Scalar-Plain">Description</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">String</span>
+
+<span class="l l-Scalar l-Scalar-Plain">Metadata</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">template metadata</span>
+
+<span class="l l-Scalar l-Scalar-Plain">Parameters</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">set of parameters</span>
+
+<span class="l l-Scalar l-Scalar-Plain">Mappings</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">set of mappings</span>
+
+<span class="l l-Scalar l-Scalar-Plain">Conditions</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">set of conditions</span>
+
+<span class="l l-Scalar l-Scalar-Plain">Transform</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">set of transforms</span>
+
+<span class="l l-Scalar l-Scalar-Plain">Resources</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">set of resources</span>
+
+<span class="l l-Scalar l-Scalar-Plain">Outputs</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">set of outputs</span>
+</pre></div>
+
+
+<p>With examples:</p>
+<div class="codehilite"><pre><span></span><span class="nn">---</span>
+<span class="l l-Scalar l-Scalar-Plain">AWSTemplateFormatVersion</span><span class="p p-Indicator">:</span> <span class="s">&quot;2010-09-09&quot;</span>
+
+<span class="l l-Scalar l-Scalar-Plain">Description</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">&gt;</span>
+  <span class="no">Here are some</span>
+  <span class="no">details about</span>
+  <span class="no">the template.</span>
+
+<span class="l l-Scalar l-Scalar-Plain">Metadata</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">Instances</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">Description</span><span class="p p-Indicator">:</span> <span class="s">&quot;Information</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">instances&quot;</span>
+  <span class="l l-Scalar l-Scalar-Plain">Databases</span><span class="p p-Indicator">:</span> 
+    <span class="l l-Scalar l-Scalar-Plain">Description</span><span class="p p-Indicator">:</span> <span class="s">&quot;Information</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">databases&quot;</span>
+
+<span class="l l-Scalar l-Scalar-Plain">Parameters</span><span class="p p-Indicator">:</span> 
+  <span class="l l-Scalar l-Scalar-Plain">InstanceTypeParameter</span><span class="p p-Indicator">:</span> 
+    <span class="l l-Scalar l-Scalar-Plain">Type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">String</span>            <span class="c1"># String, Number, List&lt;Number&gt;, CommaDelimitedList e.g. &quot;test,dev,prod&quot;, or an AWS-specific types such as Amazon EC2 key pair names and VPC IDs.</span>
+    <span class="l l-Scalar l-Scalar-Plain">Default</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">t2.micro</span>
+    <span class="l l-Scalar l-Scalar-Plain">AllowedValues</span><span class="p p-Indicator">:</span> 
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">t2.micro</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">m1.small</span>
+    <span class="l l-Scalar l-Scalar-Plain">Description</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Enter t2.micro or m1.small. Default is t2.micro.</span>
+    <span class="c1"># AllowedPattern: &quot;[A-Za-z0-9]+&quot; # A regular expression that represents the patterns you want to allow for String types.</span>
+    <span class="c1"># ConstraintDescription: Malformed input-Parameter MyParameter must match pattern [A-Za-z0-9]+</span>
+    <span class="c1"># MinLength: 2  # for String</span>
+    <span class="c1"># MaxLength: 10</span>
+    <span class="c1"># MinValue: 0   # for Number types.</span>
+    <span class="c1"># MaxValue: 100 </span>
+    <span class="c1"># NoEcho: True</span>
+
+<span class="l l-Scalar l-Scalar-Plain">Mappings</span><span class="p p-Indicator">:</span> 
+  <span class="l l-Scalar l-Scalar-Plain">RegionMap</span><span class="p p-Indicator">:</span> 
+    <span class="l l-Scalar l-Scalar-Plain">us-east-1</span><span class="p p-Indicator">:</span> 
+      <span class="s">&quot;32&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;ami-6411e20d&quot;</span>
+    <span class="l l-Scalar l-Scalar-Plain">us-west-1</span><span class="p p-Indicator">:</span> 
+      <span class="s">&quot;32&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;ami-c9c7978c&quot;</span>
+    <span class="l l-Scalar l-Scalar-Plain">eu-west-1</span><span class="p p-Indicator">:</span> 
+      <span class="s">&quot;32&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;ami-37c2f643&quot;</span>
+    <span class="l l-Scalar l-Scalar-Plain">ap-southeast-1</span><span class="p p-Indicator">:</span> 
+      <span class="s">&quot;32&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;ami-66f28c34&quot;</span>
+    <span class="l l-Scalar l-Scalar-Plain">ap-northeast-1</span><span class="p p-Indicator">:</span> 
+      <span class="s">&quot;32&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;ami-9c03a89d&quot;</span>
+
+<span class="l l-Scalar l-Scalar-Plain">Conditions</span><span class="p p-Indicator">:</span> 
+  <span class="l l-Scalar l-Scalar-Plain">CreateProdResources</span><span class="p p-Indicator">:</span> <span class="kt">!Equals</span> <span class="p p-Indicator">[</span> <span class="kt">!Ref</span> <span class="nv">EnvType</span><span class="p p-Indicator">,</span> <span class="nv">prod</span> <span class="p p-Indicator">]</span>
+
+<span class="l l-Scalar l-Scalar-Plain">Transform</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">set of transforms</span>
+
+<span class="l l-Scalar l-Scalar-Plain">Resources</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">Ec2Instance</span><span class="p p-Indicator">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">Type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">AWS::EC2::Instance</span>
+      <span class="l l-Scalar l-Scalar-Plain">Properties</span><span class="p p-Indicator">:</span>
+        <span class="l l-Scalar l-Scalar-Plain">InstanceType</span><span class="p p-Indicator">:</span>
+          <span class="l l-Scalar l-Scalar-Plain">Ref</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">InstanceTypeParameter</span>  <span class="c1"># reference to parameter above</span>
+        <span class="l l-Scalar l-Scalar-Plain">ImageId</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">ami-2f726546</span>
+
+<span class="l l-Scalar l-Scalar-Plain">Outputs</span><span class="p p-Indicator">:</span> 
+  <span class="l l-Scalar l-Scalar-Plain">VolumeId</span><span class="p p-Indicator">:</span> 
+    <span class="l l-Scalar l-Scalar-Plain">Condition</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">CreateProdResources</span>
+    <span class="l l-Scalar l-Scalar-Plain">Value</span><span class="p p-Indicator">:</span> 
+      <span class="kt">!Ref</span> <span class="l l-Scalar l-Scalar-Plain">NewVolume</span>
+</pre></div>
+
+
+<ul>
+<li>The Ref function can refer to input parameters that are specified at stack creation time.</li>
+</ul>
+<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
+<h3 id="s3">S3<a class="headerlink" href="#s3" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">Resources</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">HelloBucket</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">Type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">AWS::S3::Bucket</span>  <span class="c1"># AWS::ProductIdentifier::ResourceType</span>
+</pre></div>
+
+
+<h3 id="ec2">EC2<a class="headerlink" href="#ec2" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">Resources</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">Ec2Instance</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">Type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">AWS::EC2::Instance</span>
+    <span class="l l-Scalar l-Scalar-Plain">Properties</span><span class="p p-Indicator">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">SecurityGroups</span><span class="p p-Indicator">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">Ref</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">InstanceSecurityGroup</span>
+      <span class="l l-Scalar l-Scalar-Plain">KeyName</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mykey</span>
+      <span class="l l-Scalar l-Scalar-Plain">ImageId</span><span class="p p-Indicator">:</span> <span class="s">&#39;&#39;</span>
+  <span class="l l-Scalar l-Scalar-Plain">InstanceSecurityGroup</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">Type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">AWS::EC2::SecurityGroup</span>
+    <span class="l l-Scalar l-Scalar-Plain">Properties</span><span class="p p-Indicator">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">GroupDescription</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Enable SSH access via port 22</span>
+      <span class="l l-Scalar l-Scalar-Plain">SecurityGroupIngress</span><span class="p p-Indicator">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">IpProtocol</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">tcp</span>
+        <span class="l l-Scalar l-Scalar-Plain">FromPort</span><span class="p p-Indicator">:</span> <span class="s">&#39;22&#39;</span>
+        <span class="l l-Scalar l-Scalar-Plain">ToPort</span><span class="p p-Indicator">:</span> <span class="s">&#39;22&#39;</span>
+        <span class="l l-Scalar l-Scalar-Plain">CidrIp</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">0.0.0.0/0</span>    
+</pre></div>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../Databases/SQL/" title="SQL" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                SQL
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../Docker/" title="Docker" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Docker
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2017 S. John Cruchon-Dupeyrat
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/john-cd" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/sjncd" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://www.linkedin.com/in/scdupeyrat/" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application-3964c0cb56.js"></script>
+      <script>app.initialize({url:{base:"../.."}})</script>
+      
+    
+    
+      
+      <script>!function(e,t,a,n,o,c,i){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,c=t.createElement(a),i=t.getElementsByTagName(a)[0],c.async=1,c.src=n,i.parentNode.insertBefore(c,i)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-92780605-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var t=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",t,e.href)})});var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})</script>
+      
+    
+  </body>
+</html>

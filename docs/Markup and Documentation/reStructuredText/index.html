@@ -1,0 +1,1445 @@
+
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A collection of cheatsheets and code snippets.">
+      
+      
+        <link rel="canonical" href="http://john-cd.com/cheatsheets/Markup and Documentation/reStructuredText/">
+      
+      
+        <meta name="author" content="S. John Cruchon-Dupeyrat">
+      
+      
+        <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      
+      <meta name="generator" content="mkdocs-0.16.1, mkdocs-material-1.4.1">
+    
+    
+      
+        <title>reStructuredText Cheatsheet</title>
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr-56ade86843.js"></script>
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application-76741b64bc.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-66fa0d9bba.palette.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+  
+  
+  
+    <body data-md-color-primary="deep-orange" data-md-color-accent="orange">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <a href="../.." title="John's Cheatsheets" class="md-icon md-icon--home md-header-nav__button">
+          </a>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                <span class="md-header-nav__parent">
+                  Markup and Documentation
+                </span>
+              
+            
+            reStructuredText
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search">
+  <div class="md-search__overlay"></div>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <div class="md-header-nav__source">
+          
+            
+
+
+  
+
+
+  <a href="https://github.com/john-cd/cheatsheets" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      john-cd/cheatsheets
+    </div>
+  </a>
+
+          
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    
+      <i class="md-icon md-icon--home md-nav__button"></i>
+    
+    John's Cheatsheets
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/john-cd/cheatsheets" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      john-cd/cheatsheets
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Big Data
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Big Data
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Big_Data/Hadoop_Ecosystem/" title="Hadoop Ecosystem" class="md-nav__link">
+      Hadoop Ecosystem
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Big_Data/Spark/" title="Spark" class="md-nav__link">
+      Spark
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Cloud
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Cloud
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Cloud/Serverless/" title="Serverless" class="md-nav__link">
+      Serverless
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Data Science
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Data Science
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Science/Data_Manipulation/" title="Data Manipulation" class="md-nav__link">
+      Data Manipulation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Science/Data_Visualization/" title="Data Visualization" class="md-nav__link">
+      Data Visualization
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Science/Keras/" title="Keras" class="md-nav__link">
+      Keras
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Science/Machine_Learning/" title="Machine Learning" class="md-nav__link">
+      Machine Learning
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Databases
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Databases
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Databases/Mongodb/" title="Mongodb" class="md-nav__link">
+      Mongodb
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Databases/SQL/" title="SQL" class="md-nav__link">
+      SQL
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      DevOps
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        DevOps
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../DevOps/CloudFormation/" title="CloudFormation" class="md-nav__link">
+      CloudFormation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../DevOps/Docker/" title="Docker" class="md-nav__link">
+      Docker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../DevOps/Git/" title="Git" class="md-nav__link">
+      Git
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Java
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Java
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Java/Java/" title="Java" class="md-nav__link">
+      Java
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Java/Log4j/" title="Log4j" class="md-nav__link">
+      Log4j
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      Linux
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        Linux
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Linux/Linux/" title="Linux" class="md-nav__link">
+      Linux
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9" checked>
+    
+    <label class="md-nav__link" for="nav-9">
+      Markup and Documentation
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        Markup and Documentation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Jekyll/" title="Jekyll" class="md-nav__link">
+      Jekyll
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Markdown/" title="Markdown" class="md-nav__link">
+      Markdown
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MkDocs/" title="MkDocs" class="md-nav__link">
+      MkDocs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../jekyll-introduction/" title="Jekyll introduction" class="md-nav__link">
+      Jekyll introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        reStructuredText
+      </label>
+    
+    <a href="./" title="reStructuredText" class="md-nav__link md-nav__link--active">
+      reStructuredText
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#rest-short-overview" title="reST Short Overview" class="md-nav__link">
+    reST Short Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#source-code-double-colon" title="Source Code Double Colon" class="md-nav__link">
+    Source Code Double Colon
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#links" title="Links" class="md-nav__link">
+    Links
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definitions" title="Definitions" class="md-nav__link">
+    Definitions
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#footnotes" title="Footnotes" class="md-nav__link">
+    Footnotes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-of-restructuredtext-in-python-docstrings" title="Use of reStructuredText in Python docstrings" class="md-nav__link">
+    Use of reStructuredText in Python docstrings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#explicit-markup" title="Explicit Markup" class="md-nav__link">
+    Explicit Markup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inline-markup" title="Inline markup" class="md-nav__link">
+    Inline markup
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      Python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        Python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/Jupyter/" title="Jupyter" class="md-nav__link">
+      Jupyter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/Matplotlib/" title="Matplotlib" class="md-nav__link">
+      Matplotlib
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/Python3/" title="Python3" class="md-nav__link">
+      Python3
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    
+    <label class="md-nav__link" for="nav-11">
+      Search
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        Search
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Search/ElasticSearch/" title="ElasticSearch" class="md-nav__link">
+      ElasticSearch
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
+    
+    <label class="md-nav__link" for="nav-12">
+      Software Development
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-12">
+        Software Development
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Software_Development/Development_Tools/" title="Development Tools" class="md-nav__link">
+      Development Tools
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
+    
+    <label class="md-nav__link" for="nav-13">
+      dotNET
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-13">
+        dotNET
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dotNET/ASPdotNET/" title="ASPdotNET" class="md-nav__link">
+      ASPdotNET
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dotNET/AkkadotNET/" title="AkkadotNET" class="md-nav__link">
+      AkkadotNET
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dotNET/C%23/" title="C#" class="md-nav__link">
+      C#
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dotNET/Multithreading/" title="Multithreading" class="md-nav__link">
+      Multithreading
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dotNET/WPF/" title="WPF" class="md-nav__link">
+      WPF
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#rest-short-overview" title="reST Short Overview" class="md-nav__link">
+    reST Short Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#source-code-double-colon" title="Source Code Double Colon" class="md-nav__link">
+    Source Code Double Colon
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#links" title="Links" class="md-nav__link">
+    Links
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definitions" title="Definitions" class="md-nav__link">
+    Definitions
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#footnotes" title="Footnotes" class="md-nav__link">
+    Footnotes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-of-restructuredtext-in-python-docstrings" title="Use of reStructuredText in Python docstrings" class="md-nav__link">
+    Use of reStructuredText in Python docstrings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#explicit-markup" title="Explicit Markup" class="md-nav__link">
+    Explicit Markup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inline-markup" title="Inline markup" class="md-nav__link">
+    Inline markup
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/john-cd/cheatsheets/edit/master/docs/Markup and Documentation\reStructuredText.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
+                
+                
+                <h1 id="restructuredtext"><a href="http://docutils.sourceforge.net/rst.html">reStructuredText</a><a class="headerlink" href="#restructuredtext" title="Permanent link">&para;</a></h1>
+<p><a href="http://docutils.sourceforge.net/docs/user/rst/quickref.html">reStructuredText Quick Ref</a></p>
+<p><a href="http://docutils.sourceforge.net/docs/user/rst/cheatsheet.txt">reStructuredText Cheat Sheet</a>  (see below)</p>
+<h2 id="rest-short-overview">reST Short Overview<a class="headerlink" href="#rest-short-overview" title="Permanent link">&para;</a></h2>
+<p>All reST files use an indentation of 3 spaces; no tabs are allowed. 
+The maximum line length is 80 characters for normal text, but tables, 
+deeply indented code samples and long links may extend beyond that. 
+Code example bodies should use normal Python 4-space indentation.
+Paragraphs are simply chunks of text separated by one or more blank lines. 
+As in Python, indentation is significant in reST, so all lines of the same
+paragraph must be left-aligned to the same level of indentation.</p>
+<p>Section headers are created by underlining (and optionally overlining)
+the section title with a punctuation character, at least as long as the text:</p>
+<div class="codehilite"><pre><span></span>=================
+This is a heading
+=================
+# with overline, for parts
+* with overline, for chapters
+= for sections
+- for subsections
+^ for subsubsections
+&quot; for paragraphs
+
+one asterisk: *text* for emphasis (italics),
+two asterisks: **text** for strong emphasis (boldface), and
+backquotes: ``text`` for code samples.
+escape with a backslash \
+
+* This is a bulleted list.
+* It has two items, the second
+  item uses two lines.
+
+1. This is a numbered list.
+2. It has two items too.
+
+. This is a numbered list.
+. It has two items too.
+</pre></div>
+
+
+<p>Nested lists are possible, but be aware that they must be separated from the 
+parent list items by blank lines</p>
+<h2 id="source-code-double-colon">Source Code Double Colon<a class="headerlink" href="#source-code-double-colon" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span>This is a normal text paragraph. The next paragraph is a code sample::
+
+       It is not processed in any way, except
+       that the indentation is removed.
+
+       It can span multiple lines.
+
+This is a normal text paragraph again.
+</pre></div>
+
+
+<h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span>`Link text &lt;http://target&gt;`_ for inline web links.
+</pre></div>
+
+
+<h2 id="definitions">Definitions<a class="headerlink" href="#definitions" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span>term (up to a line of text)
+   Definition of the term, which must be indented and 
+   can even consist of multiple paragraphs
+
+next term
+   Description.
+</pre></div>
+
+
+<h3 id="footnotes">Footnotes<a class="headerlink" href="#footnotes" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>Lorem ipsum [#]_ dolor sit amet ... [#]_
+</pre></div>
+
+
+<h2 id="use-of-restructuredtext-in-python-docstrings">Use of reStructuredText in Python docstrings<a class="headerlink" href="#use-of-restructuredtext-in-python-docstrings" title="Permanent link">&para;</a></h2>
+<p>See http://infinitemonkeycorps.net/docs/pph/</p>
+<div class="codehilite"><pre><span></span>    # Typical function documentation: 
+
+    :param volume_id: The ID of the EBS volume to be attached.
+    :type volume_id: str
+
+    :param instance_id: The ID of the EC2 instance 
+    :type instance_id: str
+
+    :return: `Reverse geocoder return value`_ dictionary giving closest
+        address(es) to `(lat, lng)`
+    :rtype: dict
+    :raises GoogleMapsError: If the coordinates could not be reverse geocoded.
+
+    Keyword arguments and return value are identical to those of :meth:`geocode()`.
+
+    .. _`Reverse geocoder return value`:
+        http://code.google.com/apis/maps/documentation/geocoding/index.html#ReverseGeocoding
+</pre></div>
+
+
+<ul>
+<li>Normal docstring formatting conventions apply: see PEP 257.</li>
+<li>Identifier references go in `backticks`.</li>
+<li><code>:param lat: some text</code>  <em>documents parameters</em></li>
+<li><code>:type lat: float</code> <em>documents parameter types</em></li>
+<li><code>:return:</code> dictionary giving some info... <em>documents return values</em></li>
+<li><code>:rtype: dict</code> <em>documents return type</em></li>
+<li><code>:raises SomeError:</code> sometext...  <em>documents exceptions raised</em></li>
+<li><code>&gt;&gt;&gt;</code> <em>starts a doctest and is automatically formatted as code</em></li>
+<li>Code can also be indicated by indenting four spaces or preceding with <code>::</code> and a blank line</li>
+<li>Link to other methods, functions, classes, modules with :meth:<code>mymethod</code>, </li>
+<li>:func:<code>myfunc</code>, :class:<code>myclass</code>, and :mod:<code>mymodule</code>.</li>
+<li>Hyperlink names go in backticks with a trailing underscore: <code>Google</code>_</li>
+<li>Targets can be defined anywhere with: <code>.. _Google: http://www.google.com/</code></li>
+</ul>
+<h2 id="explicit-markup">Explicit Markup<a class="headerlink" href="#explicit-markup" title="Permanent link">&para;</a></h2>
+<p>An explicit markup block begins with a line starting with .. followed by
+whitespace and is terminated by the next paragraph at the same level of 
+indentation. (There needs to be a blank line between explicit markup
+and normal paragraphs.</p>
+<div class="codehilite"><pre><span></span>.. sectionauthor:: Guido van Rossum &lt;guido@python.org&gt;
+
+.. rubric:: Footnotes
+
+.. [#] Text of the first footnote.
+.. [#] Text of the second footnote.
+
+
+:mod:`parrot` -- Dead parrot access
+===================================
+
+.. module:: parrot
+   :platform: Unix, Windows
+   :synopsis: Analyze and reanimate dead parrots.
+.. moduleauthor:: Eric Cleese &lt;eric@python.invalid&gt;
+.. moduleauthor:: John Idle &lt;john@python.invalid&gt;
+
+.. function:: repeat([repeat=3[, number=1000000]])
+              repeat(y, z)
+   :bar: no
+
+   Return a line of text input from the user.
+
+
+.. class:: Spam
+
+      Description of the class.
+
+      .. data:: ham
+
+         Description of the attribute.
+</pre></div>
+
+
+<h2 id="inline-markup">Inline markup<a class="headerlink" href="#inline-markup" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span>:rolename:`content`  or  :role:`title &lt;target&gt;`
+
+:meth:`~Queue.Queue.get` will refer to Queue.Queue.get but only display get as the link text.
+</pre></div>
+
+
+<p>The following roles refer to objects in modules and are possibly hyperlinked 
+if a matching identifier is found:</p>
+<p><strong>mod</strong></p>
+<p>The name of a module; a dotted name may be used. This should also be used for package names.</p>
+<p><strong>func</strong></p>
+<p>The name of a Python function; dotted names may be used. The role text should not include trailing parentheses to enhance readability. The parentheses are stripped when searching for identifiers.</p>
+<p><strong>data</strong></p>
+<p>The name of a module-level variable or constant.</p>
+<p><strong>const</strong></p>
+<p>The name of a “defined” constant. This may be a C-language #define or a Python variable that is not intended to be changed.</p>
+<p><strong>class</strong></p>
+<p>A class name; a dotted name may be used.</p>
+<p><strong>meth</strong></p>
+<p>The name of a method of an object. The role text should include the type name and the method name. A dotted name may be used.</p>
+<p><strong>attr</strong></p>
+<p>The name of a data attribute of an object.</p>
+<p><strong>exc</strong></p>
+<p>The name of an exception. A dotted name may be used.</p>
+<h1 id="official-restructuredtext-cheatsheet">Official reStructuredText Cheatsheet<a class="headerlink" href="#official-restructuredtext-cheatsheet" title="Permanent link">&para;</a></h1>
+<div class="codehilite"><pre><span></span>=====================================================
+ The reStructuredText_ Cheat Sheet: Syntax Reminders
+=====================================================
+:Info: See &lt;http://docutils.sf.net/rst.html&gt; for introductory docs.
+:Author: David Goodger &lt;goodger@python.org&gt;
+:Date: $Date: 2013-02-20 01:10:53 +0000 (Wed, 20 Feb 2013) $
+:Revision: $Revision: 7612 $
+:Description: This is a &quot;docinfo block&quot;, or bibliographic field list
+
+.. NOTE:: If you are reading this as HTML, please read
+   `&lt;cheatsheet.txt&gt;`_ instead to see the input syntax examples!
+
+Section Structure
+=================
+Section titles are underlined or overlined &amp; underlined.
+
+Body Elements
+=============
+Grid table:
+
++--------------------------------+-----------------------------------+
+| Paragraphs are flush-left,     | Literal block, preceded by &quot;::&quot;:: |
+| separated by blank lines.      |                                   |
+|                                |     Indented                      |
+|     Block quotes are indented. |                                   |
++--------------------------------+ or::                              |
+| &gt;&gt;&gt; print &#39;Doctest block&#39;      |                                   |
+| Doctest block                  | &gt; Quoted                          |
++--------------------------------+-----------------------------------+
+| | Line blocks preserve line breaks &amp; indents. [new in 0.3.6]       |
+| |     Useful for addresses, verse, and adornment-free lists; long  |
+|       lines can be wrapped with continuation lines.                |
++--------------------------------------------------------------------+
+
+Simple tables:
+
+================  ============================================================
+List Type         Examples (syntax in the `text source &lt;cheatsheet.txt&gt;`_)
+================  ============================================================
+Bullet list       * items begin with &quot;-&quot;, &quot;+&quot;, or &quot;*&quot;
+Enumerated list   1. items use any variation of &quot;1.&quot;, &quot;A)&quot;, and &quot;(i)&quot;
+                  #. also auto-enumerated
+Definition list   Term is flush-left : optional classifier
+                      Definition is indented, no blank line between
+Field list        :field name: field body
+Option list       -o  at least 2 spaces between option &amp; description
+================  ============================================================
+
+================  ============================================================
+Explicit Markup   Examples (visible in the `text source`_)
+================  ============================================================
+Footnote          .. [1] Manually numbered or [#] auto-numbered
+                     (even [#labelled]) or [*] auto-symbol
+Citation          .. [CIT2002] A citation.
+Hyperlink Target  .. _reStructuredText: http://docutils.sf.net/rst.html
+                  .. _indirect target: reStructuredText_
+                  .. _internal target:
+Anonymous Target  __ http://docutils.sf.net/docs/ref/rst/restructuredtext.html
+Directive (&quot;::&quot;)  .. image:: images/biohazard.png
+Substitution Def  .. |substitution| replace:: like an inline directive
+Comment           .. is anything else
+Empty Comment     (&quot;..&quot; on a line by itself, with blank lines before &amp; after,
+                  used to separate indentation contexts)
+================  ============================================================
+
+Inline Markup
+=============
+*emphasis*; **strong emphasis**; `interpreted text`; `interpreted text
+with role`:emphasis:; ``inline literal text``; standalone hyperlink,
+http://docutils.sourceforge.net; named reference, reStructuredText_;
+`anonymous reference`__; footnote reference, [1]_; citation reference,
+[CIT2002]_; |substitution|; _`inline internal target`.
+
+Directive Quick Reference
+=========================
+See &lt;http://docutils.sf.net/docs/ref/rst/directives.html&gt; for full info.
+
+================  ============================================================
+Directive Name    Description (Docutils version added to, in [brackets])
+================  ============================================================
+attention         Specific admonition; also &quot;caution&quot;, &quot;danger&quot;,
+                  &quot;error&quot;, &quot;hint&quot;, &quot;important&quot;, &quot;note&quot;, &quot;tip&quot;, &quot;warning&quot;
+admonition        Generic titled admonition: ``.. admonition:: By The Way``
+image             ``.. image:: picture.png``; many options possible
+figure            Like &quot;image&quot;, but with optional caption and legend
+topic             ``.. topic:: Title``; like a mini section
+sidebar           ``.. sidebar:: Title``; like a mini parallel document
+parsed-literal    A literal block with parsed inline markup
+rubric            ``.. rubric:: Informal Heading``
+epigraph          Block quote with class=&quot;epigraph&quot;
+highlights        Block quote with class=&quot;highlights&quot;
+pull-quote        Block quote with class=&quot;pull-quote&quot;
+compound          Compound paragraphs [0.3.6]
+container         Generic block-level container element [0.3.10]
+table             Create a titled table [0.3.1]
+list-table        Create a table from a uniform two-level bullet list [0.3.8]
+csv-table         Create a table from CSV data [0.3.4]
+contents          Generate a table of contents
+sectnum           Automatically number sections, subsections, etc.
+header, footer    Create document decorations [0.3.8]
+target-notes      Create an explicit footnote for each external target
+math              Mathematical notation (input in LaTeX format)
+meta              HTML-specific metadata
+include           Read an external reST file as if it were inline
+raw               Non-reST data passed untouched to the Writer
+replace           Replacement text for substitution definitions
+unicode           Unicode character code conversion for substitution defs
+date              Generates today&#39;s date; for substitution defs
+class             Set a &quot;class&quot; attribute on the next element
+role              Create a custom interpreted text role [0.3.2]
+default-role      Set the default interpreted text role [0.3.10]
+title             Set the metadata document title [0.3.10]
+================  ============================================================
+
+Interpreted Text Role Quick Reference
+=====================================
+See &lt;http://docutils.sf.net/docs/ref/rst/roles.html&gt; for full info.
+
+================  ============================================================
+Role Name         Description
+================  ============================================================
+emphasis          Equivalent to *emphasis*
+literal           Equivalent to ``literal`` but processes backslash escapes
+math              Mathematical notation (input in LaTeX format)
+PEP               Reference to a numbered Python Enhancement Proposal
+RFC               Reference to a numbered Internet Request For Comments
+raw               For non-reST data; cannot be used directly (see docs) [0.3.6]
+strong            Equivalent to **strong**
+sub               Subscript
+sup               Superscript
+title             Title reference (book, etc.); standard default role
+================  ============================================================
+</pre></div>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../jekyll-introduction/" title="Jekyll introduction" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Jekyll introduction
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../Python/Jupyter/" title="Jupyter" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Jupyter
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2017 S. John Cruchon-Dupeyrat
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/john-cd" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/sjncd" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://www.linkedin.com/in/scdupeyrat/" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application-3964c0cb56.js"></script>
+      <script>app.initialize({url:{base:"../.."}})</script>
+      
+    
+    
+      
+      <script>!function(e,t,a,n,o,c,i){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,c=t.createElement(a),i=t.getElementsByTagName(a)[0],c.async=1,c.src=n,i.parentNode.insertBefore(c,i)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-92780605-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var t=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",t,e.href)})});var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})</script>
+      
+    
+  </body>
+</html>

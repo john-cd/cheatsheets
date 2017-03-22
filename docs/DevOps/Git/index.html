@@ -1,0 +1,1465 @@
+
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A collection of cheatsheets and code snippets.">
+      
+      
+        <link rel="canonical" href="http://john-cd.com/cheatsheets/DevOps/Git/">
+      
+      
+        <meta name="author" content="S. John Cruchon-Dupeyrat">
+      
+      
+        <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      
+      <meta name="generator" content="mkdocs-0.16.1, mkdocs-material-1.4.1">
+    
+    
+      
+        <title>Git Cheatsheet</title>
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr-56ade86843.js"></script>
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application-76741b64bc.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-66fa0d9bba.palette.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+  
+  
+  
+    <body data-md-color-primary="deep-orange" data-md-color-accent="orange">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <a href="../.." title="John's Cheatsheets" class="md-icon md-icon--home md-header-nav__button">
+          </a>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                <span class="md-header-nav__parent">
+                  DevOps
+                </span>
+              
+            
+            Git
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search">
+  <div class="md-search__overlay"></div>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <div class="md-header-nav__source">
+          
+            
+
+
+  
+
+
+  <a href="https://github.com/john-cd/cheatsheets" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      john-cd/cheatsheets
+    </div>
+  </a>
+
+          
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    
+      <i class="md-icon md-icon--home md-nav__button"></i>
+    
+    John's Cheatsheets
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/john-cd/cheatsheets" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      john-cd/cheatsheets
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Big Data
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Big Data
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Big_Data/Hadoop_Ecosystem/" title="Hadoop Ecosystem" class="md-nav__link">
+      Hadoop Ecosystem
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Big_Data/Spark/" title="Spark" class="md-nav__link">
+      Spark
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Cloud
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Cloud
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Cloud/Serverless/" title="Serverless" class="md-nav__link">
+      Serverless
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Data Science
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Data Science
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Science/Data_Manipulation/" title="Data Manipulation" class="md-nav__link">
+      Data Manipulation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Science/Data_Visualization/" title="Data Visualization" class="md-nav__link">
+      Data Visualization
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Science/Keras/" title="Keras" class="md-nav__link">
+      Keras
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Science/Machine_Learning/" title="Machine Learning" class="md-nav__link">
+      Machine Learning
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Databases
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Databases
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Databases/Mongodb/" title="Mongodb" class="md-nav__link">
+      Mongodb
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Databases/SQL/" title="SQL" class="md-nav__link">
+      SQL
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
+    
+    <label class="md-nav__link" for="nav-6">
+      DevOps
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        DevOps
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../CloudFormation/" title="CloudFormation" class="md-nav__link">
+      CloudFormation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Docker/" title="Docker" class="md-nav__link">
+      Docker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Git
+      </label>
+    
+    <a href="./" title="Git" class="md-nav__link md-nav__link--active">
+      Git
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#common-commands" title="Common Commands" class="md-nav__link">
+    Common Commands
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#branches" title="Branches" class="md-nav__link">
+    Branches
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#typical-workflows" title="Typical Workflows" class="md-nav__link">
+    Typical Workflows
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clone-a-repo" title="Clone a Repo" class="md-nav__link">
+    Clone a Repo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-a-change-in-the-working-directory-to-the-staging-area" title="Add a change in the working directory to the staging area" class="md-nav__link">
+    Add a change in the working directory to the staging area
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#short-lived-topic-branches" title="Short-lived topic branches" class="md-nav__link">
+    Short-lived topic branches
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#push-and-pull-from-a-centralized-repo" title="Push and pull from a centralized repo" class="md-nav__link">
+    Push and pull from a centralized repo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sync-my-local-repo-with-the-remote-repo" title="Sync my local repo with the remote repo" class="md-nav__link">
+    Sync my local repo with the remote repo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-central-repo" title="Create a central Repo" class="md-nav__link">
+    Create a central Repo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Java
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Java
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Java/Java/" title="Java" class="md-nav__link">
+      Java
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Java/Log4j/" title="Log4j" class="md-nav__link">
+      Log4j
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      Linux
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        Linux
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Linux/Linux/" title="Linux" class="md-nav__link">
+      Linux
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      Markup and Documentation
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        Markup and Documentation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Markup%20and%20Documentation/Jekyll/" title="Jekyll" class="md-nav__link">
+      Jekyll
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Markup%20and%20Documentation/Markdown/" title="Markdown" class="md-nav__link">
+      Markdown
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Markup%20and%20Documentation/MkDocs/" title="MkDocs" class="md-nav__link">
+      MkDocs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Markup%20and%20Documentation/jekyll-introduction/" title="Jekyll introduction" class="md-nav__link">
+      Jekyll introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Markup%20and%20Documentation/reStructuredText/" title="reStructuredText" class="md-nav__link">
+      reStructuredText
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      Python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        Python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/Jupyter/" title="Jupyter" class="md-nav__link">
+      Jupyter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/Matplotlib/" title="Matplotlib" class="md-nav__link">
+      Matplotlib
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/Python3/" title="Python3" class="md-nav__link">
+      Python3
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    
+    <label class="md-nav__link" for="nav-11">
+      Search
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        Search
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Search/ElasticSearch/" title="ElasticSearch" class="md-nav__link">
+      ElasticSearch
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
+    
+    <label class="md-nav__link" for="nav-12">
+      Software Development
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-12">
+        Software Development
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Software_Development/Development_Tools/" title="Development Tools" class="md-nav__link">
+      Development Tools
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
+    
+    <label class="md-nav__link" for="nav-13">
+      dotNET
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-13">
+        dotNET
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dotNET/ASPdotNET/" title="ASPdotNET" class="md-nav__link">
+      ASPdotNET
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dotNET/AkkadotNET/" title="AkkadotNET" class="md-nav__link">
+      AkkadotNET
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dotNET/C%23/" title="C#" class="md-nav__link">
+      C#
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dotNET/Multithreading/" title="Multithreading" class="md-nav__link">
+      Multithreading
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dotNET/WPF/" title="WPF" class="md-nav__link">
+      WPF
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#common-commands" title="Common Commands" class="md-nav__link">
+    Common Commands
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#branches" title="Branches" class="md-nav__link">
+    Branches
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#typical-workflows" title="Typical Workflows" class="md-nav__link">
+    Typical Workflows
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clone-a-repo" title="Clone a Repo" class="md-nav__link">
+    Clone a Repo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-a-change-in-the-working-directory-to-the-staging-area" title="Add a change in the working directory to the staging area" class="md-nav__link">
+    Add a change in the working directory to the staging area
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#short-lived-topic-branches" title="Short-lived topic branches" class="md-nav__link">
+    Short-lived topic branches
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#push-and-pull-from-a-centralized-repo" title="Push and pull from a centralized repo" class="md-nav__link">
+    Push and pull from a centralized repo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sync-my-local-repo-with-the-remote-repo" title="Sync my local repo with the remote repo" class="md-nav__link">
+    Sync my local repo with the remote repo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-central-repo" title="Create a central Repo" class="md-nav__link">
+    Create a central Repo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/john-cd/cheatsheets/edit/master/docs/DevOps\Git.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
+                
+                
+                <h1 id="git-cheatsheets">Git Cheatsheets<a class="headerlink" href="#git-cheatsheets" title="Permanent link">&para;</a></h1>
+<ul>
+<li><a href="http://byte.kde.org/~zrusin/git/git-cheat-sheet-medium.png">Graphical git cheatsheet</a></li>
+<li><a href="https://www.atlassian.com/git/tutorials/svn-to-git-prepping-your-team-migration/basic-git-commands">Git basic commands</a></li>
+<li><a href="https://www.maxoberberger.net/media/cheatsheet/git-cheatsheet-visual.pdf">Git cheatsheet (visual)</a></li>
+<li><a href="http://ndpsoftware.com/git-cheatsheet.html#loc=workspace">Git cheatsheet (interactive)</a></li>
+<li><a href="https://git-scm.com/doc">Git full documentation</a></li>
+</ul>
+<p><em>Repo hosting:</em>
+<em> <a href="https://bitbucket.org/">BitBucket</a>
+</em> <a href="https://github.com/">GitHub</a> </p>
+<h2 id="common-commands">Common Commands<a class="headerlink" href="#common-commands" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Create a new Git repository in current directory:</li>
+</ul>
+<div class="codehilite"><pre><span></span>git init
+</pre></div>
+
+
+<ul>
+<li>Or create an empty Git repository in the specified directory:</li>
+</ul>
+<div class="codehilite"><pre><span></span>git init &lt;directory&gt;
+</pre></div>
+
+
+<ul>
+<li>Or copy an existing Git repository:</li>
+</ul>
+<div class="codehilite"><pre><span></span>git clone &lt;repo URL&gt;
+</pre></div>
+
+
+<ul>
+<li>Clone the repository located at <repo> into the folder called <directory> on the local machine:</li>
+</ul>
+<div class="codehilite"><pre><span></span>git clone &lt;repo&gt; &lt;directory&gt;
+git clone username@host:/path/to/repository
+</pre></div>
+
+
+<ul>
+<li>Global Configuration:</li>
+</ul>
+<div class="codehilite"><pre><span></span>$ git config --global user.name <span class="s2">&quot;Firstname Lastname&quot;</span>
+$ git config --global user.email <span class="s2">&quot;your_email@youremail.com&quot;</span>
+</pre></div>
+
+
+<ul>
+<li>Stage all changes in <code>&lt;file&gt;</code> for the next commit:</li>
+</ul>
+<div class="codehilite"><pre><span></span>git add &lt;file&gt;
+</pre></div>
+
+
+<ul>
+<li>Or stage all changes in <code>&lt;directory&gt;</code> for the next commit:</li>
+</ul>
+<div class="codehilite"><pre><span></span>git add &lt;directory&gt;  <span class="c1"># usually &#39;.&#39; for current directory</span>
+</pre></div>
+
+
+<ul>
+<li>Commit the staged snapshot to the project history:</li>
+</ul>
+<div class="codehilite"><pre><span></span>git commit  <span class="c1"># interactive   </span>
+git commit -m <span class="s2">&quot;&lt;message&gt;&quot;</span>
+</pre></div>
+
+
+<ul>
+<li>Or add and commit all in one:</li>
+</ul>
+<div class="codehilite"><pre><span></span>git commit -am <span class="s2">&quot;message&quot;</span>
+</pre></div>
+
+
+<ul>
+<li>Fix up the most recent commit (don't do that if shared history):</li>
+</ul>
+<div class="codehilite"><pre><span></span>git commit --amend
+</pre></div>
+
+
+<ul>
+<li>List which files are staged, unstaged, and untracked:</li>
+</ul>
+<div class="codehilite"><pre><span></span>git status
+git status -s  <span class="c1"># short format</span>
+</pre></div>
+
+
+<ul>
+<li>Show file diff:</li>
+</ul>
+<div class="codehilite"><pre><span></span>git diff           <span class="c1">#  git diff by itself doesn’t show all changes made since your last commit – only changes that are still unstaged.</span>
+git diff --staged  <span class="c1">#  Shows file differences between staging and the last file version</span>
+</pre></div>
+
+
+<ul>
+<li>Open GUI:</li>
+</ul>
+<div class="codehilite"><pre><span></span>git gui
+</pre></div>
+
+
+<ul>
+<li>Displays committed snapshots:</li>
+</ul>
+<div class="codehilite"><pre><span></span>git log -n &lt;limit&gt;
+git log --graph --decorate --oneline
+</pre></div>
+
+
+<ul>
+<li>Checking out commits, and checking out branches:</li>
+</ul>
+<div class="codehilite"><pre><span></span>git checkout &lt;commit&gt;       <span class="c1">#  Return to commit</span>
+git checkout master         <span class="c1">#  Return to the master branch (or whatever branch we choose)</span>
+</pre></div>
+
+
+<ul>
+<li>Check out a previous version of a file:</li>
+</ul>
+<div class="codehilite"><pre><span></span>git checkout &lt;commit&gt; &lt;file&gt;    <span class="c1">#  Check out the version of the file from the selected commit</span>
+git checkout HEAD hello.py      <span class="c1">#  Check out the most recent version</span>
+</pre></div>
+
+
+<h2 id="branches">Branches<a class="headerlink" href="#branches" title="Permanent link">&para;</a></h2>
+<p>Branches are just pointers to commits.</p>
+<ul>
+<li>List all of the branches in your repository.  Also tell you what branch you're currently in ('*' branch):</li>
+</ul>
+<div class="codehilite"><pre><span></span>git branch
+</pre></div>
+
+
+<ul>
+<li>Create a new branch called <code>&lt;branch&gt;</code>. </li>
+</ul>
+<div class="codehilite"><pre><span></span>git branch &lt;branch&gt;
+</pre></div>
+
+
+<p>This does not check out the new branch. You need:</p>
+<div class="codehilite"><pre><span></span>git checkout &lt;existing-branch&gt;
+</pre></div>
+
+
+<p>Or direcly create-and-check out <code>&lt;new-branch&gt;</code>.</p>
+<div class="codehilite"><pre><span></span>git checkout -b &lt;new-branch&gt;
+</pre></div>
+
+
+<ul>
+<li>Safe delete the branch:</li>
+</ul>
+<div class="codehilite"><pre><span></span>git branch -d &lt;branch&gt;
+</pre></div>
+
+
+<ul>
+<li>Merge the specified branch into the current branch:</li>
+</ul>
+<div class="codehilite"><pre><span></span>git merge &lt;branch&gt;
+</pre></div>
+
+
+<ul>
+<li>Undo any undesired changes</li>
+</ul>
+<p>Generate a new commit that undoes all of the changes introduced in <code>&lt;commit&gt;</code>, then apply it to the current branch</p>
+<div class="codehilite"><pre><span></span>git revert &lt;commit&gt;
+</pre></div>
+
+
+<p><code>git revert</code> undoes a single commit — it does not “revert” back to the previous state of a project by removing all subsequent commits.</p>
+<ul>
+<li>Reset (dangerous method - erases history):</li>
+</ul>
+<div class="codehilite"><pre><span></span>git reset
+</pre></div>
+
+
+<ul>
+<li>List the remote connections you have to other repositories.</li>
+</ul>
+<div class="codehilite"><pre><span></span>git remote -v
+</pre></div>
+
+
+<ul>
+<li>Create a new connection / delete a connection to a remote repository.</li>
+</ul>
+<div class="codehilite"><pre><span></span>git remote add &lt;name&gt; &lt;url&gt;  <span class="c1"># often &quot;origin&quot;</span>
+git remote rm &lt;name&gt;         <span class="c1"># delete</span>
+</pre></div>
+
+
+<ul>
+<li>Fetch the specified remote’s copy of the current branch and immediately merge it into the local copy. This is the same as <code>git fetch &lt;remote&gt;</code> followed by <code>git merge origin/&lt;current-branch&gt;</code>.</li>
+</ul>
+<div class="codehilite"><pre><span></span>git pull &lt;remote&gt;
+</pre></div>
+
+
+<ul>
+<li>Put my changes on top of what everybody else has done. Ensure a linear history by preventing unnecessary merge commits.</li>
+</ul>
+<div class="codehilite"><pre><span></span>git pull --rebase &lt;remote&gt;
+</pre></div>
+
+
+<ul>
+<li>Transfer commits from your local repository to a remote repo.</li>
+</ul>
+<div class="codehilite"><pre><span></span>git push &lt;remote&gt; &lt;branch&gt;
+</pre></div>
+
+
+<ul>
+<li>Pushes the current branch to the remote server and links the local branch to the remote so next time you can do <code>git pull</code> or <code>git push</code>.</li>
+</ul>
+<div class="codehilite"><pre><span></span>git push -u origin &lt;branch&gt;
+</pre></div>
+
+
+<h2 id="typical-workflows">Typical Workflows<a class="headerlink" href="#typical-workflows" title="Permanent link">&para;</a></h2>
+<h3 id="clone-a-repo">Clone a Repo<a class="headerlink" href="#clone-a-repo" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>$ mkdir repos
+$ <span class="nb">cd</span> ~/repos
+$ git clone https://&lt;url&gt;
+$ ls -al  &lt;repo dir&gt;
+</pre></div>
+
+
+<h3 id="add-a-change-in-the-working-directory-to-the-staging-area">Add a change in the working directory to the staging area<a class="headerlink" href="#add-a-change-in-the-working-directory-to-the-staging-area" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>$ git status
+$ git add README
+</pre></div>
+
+
+<p><code>-A</code>, <code>--all</code> finds new files as well as staging modified content and removing files that are no longer in the working tree.</p>
+<div class="codehilite"><pre><span></span>$ git add -A
+$ git commit -m <span class="s2">&quot;Add repo instructions&quot;</span>
+$ git push -u origin master
+$ git pull
+$ ssh -p <span class="m">2222</span> user@domain.com
+</pre></div>
+
+
+<h3 id="short-lived-topic-branches">Short-lived topic branches<a class="headerlink" href="#short-lived-topic-branches" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Start a new feature: </li>
+</ul>
+<div class="codehilite"><pre><span></span>git checkout -b new-feature master
+</pre></div>
+
+
+<ul>
+<li>Edit some files:</li>
+</ul>
+<div class="codehilite"><pre><span></span>git add &lt;file&gt;
+git commit -m <span class="s2">&quot;Start a feature&quot;</span>
+</pre></div>
+
+
+<ul>
+<li>Edit some files</li>
+</ul>
+<div class="codehilite"><pre><span></span>git add &lt;file&gt;
+git commit -m <span class="s2">&quot;Finish a feature&quot;</span>
+</pre></div>
+
+
+<ul>
+<li>Merge in the <code>new-feature</code> branch</li>
+</ul>
+<div class="codehilite"><pre><span></span>git checkout master
+git merge new-feature
+git branch -d new-feature
+</pre></div>
+
+
+<h3 id="push-and-pull-from-a-centralized-repo">Push and pull from a centralized repo<a class="headerlink" href="#push-and-pull-from-a-centralized-repo" title="Permanent link">&para;</a></h3>
+<ul>
+<li>To push the master branch to the central repo:</li>
+</ul>
+<div class="codehilite"><pre><span></span>git push origin master
+</pre></div>
+
+
+<p>If local history has diverged from the central repository, Git will refuse the request.</p>
+<div class="codehilite"><pre><span></span>git pull --rebase origin master
+</pre></div>
+
+
+<h3 id="sync-my-local-repo-with-the-remote-repo">Sync my local repo with the remote repo<a class="headerlink" href="#sync-my-local-repo-with-the-remote-repo" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>git pull origin master
+git add filename.xyz
+git commit . -m “comment”
+git push origin master
+</pre></div>
+
+
+<h3 id="create-a-central-repo">Create a central Repo<a class="headerlink" href="#create-a-central-repo" title="Permanent link">&para;</a></h3>
+<p>The <code>--bare</code> flag creates a repository that doesn’t have a working directory, making it impossible to edit files and commit changes in that repository. Central repositories should always be created as bare repositories because pushing branches to a non-bare repository has the potential to overwrite changes.</p>
+<div class="codehilite"><pre><span></span>$ git init --bare foobar.git  
+$ git rev-parse --show-toplevel     <span class="c1"># print top-level directory</span>
+$ git rev-parse --git-dir           <span class="c1"># print .git directory name</span>
+</pre></div>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../Docker/" title="Docker" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Docker
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../Java/Java/" title="Java" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Java
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2017 S. John Cruchon-Dupeyrat
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/john-cd" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/sjncd" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://www.linkedin.com/in/scdupeyrat/" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application-3964c0cb56.js"></script>
+      <script>app.initialize({url:{base:"../.."}})</script>
+      
+    
+    
+      
+      <script>!function(e,t,a,n,o,c,i){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,c=t.createElement(a),i=t.getElementsByTagName(a)[0],c.async=1,c.src=n,i.parentNode.insertBefore(c,i)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-92780605-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var t=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",t,e.href)})});var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})</script>
+      
+    
+  </body>
+</html>

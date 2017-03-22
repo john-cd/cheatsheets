@@ -1,0 +1,1756 @@
+
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A collection of cheatsheets and code snippets.">
+      
+      
+        <link rel="canonical" href="http://john-cd.com/cheatsheets/Search/ElasticSearch/">
+      
+      
+        <meta name="author" content="S. John Cruchon-Dupeyrat">
+      
+      
+        <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      
+      <meta name="generator" content="mkdocs-0.16.1, mkdocs-material-1.4.1">
+    
+    
+      
+        <title>ElasticSearch Cheatsheet</title>
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr-56ade86843.js"></script>
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application-76741b64bc.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-66fa0d9bba.palette.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+  
+  
+  
+    <body data-md-color-primary="deep-orange" data-md-color-accent="orange">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <a href="../.." title="John's Cheatsheets" class="md-icon md-icon--home md-header-nav__button">
+          </a>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                <span class="md-header-nav__parent">
+                  Search
+                </span>
+              
+            
+            ElasticSearch
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search">
+  <div class="md-search__overlay"></div>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <div class="md-header-nav__source">
+          
+            
+
+
+  
+
+
+  <a href="https://github.com/john-cd/cheatsheets" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      john-cd/cheatsheets
+    </div>
+  </a>
+
+          
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    
+      <i class="md-icon md-icon--home md-nav__button"></i>
+    
+    John's Cheatsheets
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/john-cd/cheatsheets" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      john-cd/cheatsheets
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Big Data
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Big Data
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Big_Data/Hadoop_Ecosystem/" title="Hadoop Ecosystem" class="md-nav__link">
+      Hadoop Ecosystem
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Big_Data/Spark/" title="Spark" class="md-nav__link">
+      Spark
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Cloud
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Cloud
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Cloud/Serverless/" title="Serverless" class="md-nav__link">
+      Serverless
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Data Science
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Data Science
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Science/Data_Manipulation/" title="Data Manipulation" class="md-nav__link">
+      Data Manipulation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Science/Data_Visualization/" title="Data Visualization" class="md-nav__link">
+      Data Visualization
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Science/Keras/" title="Keras" class="md-nav__link">
+      Keras
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Science/Machine_Learning/" title="Machine Learning" class="md-nav__link">
+      Machine Learning
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Databases
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Databases
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Databases/Mongodb/" title="Mongodb" class="md-nav__link">
+      Mongodb
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Databases/SQL/" title="SQL" class="md-nav__link">
+      SQL
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      DevOps
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        DevOps
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../DevOps/CloudFormation/" title="CloudFormation" class="md-nav__link">
+      CloudFormation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../DevOps/Docker/" title="Docker" class="md-nav__link">
+      Docker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../DevOps/Git/" title="Git" class="md-nav__link">
+      Git
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Java
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Java
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Java/Java/" title="Java" class="md-nav__link">
+      Java
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Java/Log4j/" title="Log4j" class="md-nav__link">
+      Log4j
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      Linux
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        Linux
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Linux/Linux/" title="Linux" class="md-nav__link">
+      Linux
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      Markup and Documentation
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        Markup and Documentation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Markup%20and%20Documentation/Jekyll/" title="Jekyll" class="md-nav__link">
+      Jekyll
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Markup%20and%20Documentation/Markdown/" title="Markdown" class="md-nav__link">
+      Markdown
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Markup%20and%20Documentation/MkDocs/" title="MkDocs" class="md-nav__link">
+      MkDocs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Markup%20and%20Documentation/jekyll-introduction/" title="Jekyll introduction" class="md-nav__link">
+      Jekyll introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Markup%20and%20Documentation/reStructuredText/" title="reStructuredText" class="md-nav__link">
+      reStructuredText
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      Python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        Python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/Jupyter/" title="Jupyter" class="md-nav__link">
+      Jupyter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/Matplotlib/" title="Matplotlib" class="md-nav__link">
+      Matplotlib
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/Python3/" title="Python3" class="md-nav__link">
+      Python3
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11" checked>
+    
+    <label class="md-nav__link" for="nav-11">
+      Search
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        Search
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+    <a href="./" title="ElasticSearch" class="md-nav__link md-nav__link--active">
+      ElasticSearch
+    </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
+    
+    <label class="md-nav__link" for="nav-12">
+      Software Development
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-12">
+        Software Development
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Software_Development/Development_Tools/" title="Development Tools" class="md-nav__link">
+      Development Tools
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
+    
+    <label class="md-nav__link" for="nav-13">
+      dotNET
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-13">
+        dotNET
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dotNET/ASPdotNET/" title="ASPdotNET" class="md-nav__link">
+      ASPdotNET
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dotNET/AkkadotNET/" title="AkkadotNET" class="md-nav__link">
+      AkkadotNET
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dotNET/C%23/" title="C#" class="md-nav__link">
+      C#
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dotNET/Multithreading/" title="Multithreading" class="md-nav__link">
+      Multithreading
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dotNET/WPF/" title="WPF" class="md-nav__link">
+      WPF
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/john-cd/cheatsheets/edit/master/docs/Search\ElasticSearch.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
+                
+                
+                <h2 id="cheatsheets">Cheatsheets<a class="headerlink" href="#cheatsheets" title="Permanent link">&para;</a></h2>
+<p><a href="http://elasticsearch-cheatsheet.jolicode.com/">Jolicode</a></p>
+<h2 id="development-urls">Development URLs<a class="headerlink" href="#development-urls" title="Permanent link">&para;</a></h2>
+<p><a href="http://localhost:5601">Kibana (port 5601)</a></p>
+<p><a href="http://localhost:5601/app/sense">Sense</a></p>
+<p><a href="http://localhost:9200">ElasticSearch (port 9200)</a></p>
+<h2 id="install">INSTALL<a class="headerlink" href="#install" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Install <a href="http://curl.haxx.se/download.html">curl</a></li>
+<li>Install <a href="http://www.java.com">Java</a></li>
+<li>Download <a href="https://www.elastic.co/downloads/elasticsearch">ElasticSearch</a></li>
+<li>Optionally change the <code>cluster.name</code> in the <code>elasticsearch.yml</code> configuration</li>
+</ol>
+<div class="codehilite"><pre><span></span><span class="nb">cd</span> elasticsearch-&lt;version&gt;
+./bin/elasticsearch -d
+<span class="c1"># or on Windows </span>
+<span class="c1"># bin\elasticsearch.bat</span>
+curl <span class="s1">&#39;http://localhost:9200/?pretty&#39;</span>
+</pre></div>
+
+
+<ol>
+<li>
+<p>Install <a href="https://www.elastic.co/downloads/kibana">Kibana</a></p>
+<ul>
+<li>Open <code>config/kibana.yml</code> in an editor</li>
+<li>Set the elasticsearch.url to point at your Elasticsearch instance</li>
+<li>Run <code>./bin/kibana</code> (orbin\kibana.bat on Windows)</li>
+<li>Point your browser at <a href="http://localhost:5601">http://localhost:5601</a></li>
+</ul>
+</li>
+<li>
+<p>Install <a href="https://www.elastic.co/guide/en/elasticsearch/guide/current/running-elasticsearch.html#sense">Sense</a></p>
+</li>
+</ol>
+<div class="codehilite"><pre><span></span>./bin/kibana plugin --install elastic/sense
+</pre></div>
+
+
+<p><em>On Windows:</em> </p>
+<div class="codehilite"><pre><span></span>bin<span class="se">\k</span>ibana.bat plugin --install elastic/sense
+</pre></div>
+
+
+<p>Then go to</p>
+<p><a href="http://localhost:5601/app/sense">http://localhost:5601/app/sense</a></p>
+<h2 id="curl">CURL<a class="headerlink" href="#curl" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span>curl -X&lt;VERB&gt; <span class="s1">&#39;&lt;PROTOCOL&gt;://&lt;HOST&gt;:&lt;PORT&gt;/&lt;PATH&gt;?&lt;QUERY_STRING&gt;&#39;</span> -d <span class="s1">&#39;&lt;BODY&gt;&#39;</span>
+</pre></div>
+
+
+<p><em>verb is GET, POST, PUT, HEAD, or DELETE</em></p>
+<h3 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>curl -XGET <span class="s1">&#39;http://localhost:9200/_count?pretty&#39;</span> -d <span class="s1">&#39;{ &quot;query&quot;: { &quot;match_all&quot;: {} }}&#39;</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span>curl -XGET &lt;id&gt;.us-west-2.es.amazonaws.com
+
+curl -XGET <span class="s1">&#39;https://&lt;id&gt;.us-west-2.es.amazonaws.com/_count?pretty&#39;</span> -d <span class="s1">&#39;{ &quot;query&quot;: { &quot;match_all&quot;: {} } }&#39;</span>
+
+curl -XPUT https://&lt;id&gt;.us-west-2.es.amazonaws.com/movies/movie/tt0116996 -d <span class="s1">&#39;{&quot;directors&quot; : [&quot;Tim Burton&quot;],&quot;genres&quot; : [&quot;Comedy&quot;,&quot;Sci-Fi&quot;], &quot;plot&quot;: &quot;The Earth is invaded by Martians with irresistible weapons and a cruel sense of humor.&quot;, &quot;title&quot; : &quot;Mars Attacks!&quot;, &quot;actors&quot; :[&quot;Jack Nicholson&quot;,&quot;Pierce Brosnan&quot;,&quot;Sarah Jessica Parker&quot;], &quot;year&quot; : 1996}&#39;</span>
+</pre></div>
+
+
+<h2 id="sense">Sense<a class="headerlink" href="#sense" title="Permanent link">&para;</a></h2>
+<p>Sense syntax is similar to curl:</p>
+<p>Index a document</p>
+<div class="codehilite"><pre><span></span>PUT index/type/1
+{
+ &quot;body&quot;: &quot;here&quot;
+}
+</pre></div>
+
+
+<p>and retrieve it</p>
+<div class="codehilite"><pre><span></span>GET index/type/1
+</pre></div>
+
+
+<h2 id="plugins">PLUGINS<a class="headerlink" href="#plugins" title="Permanent link">&para;</a></h2>
+<p><strong>URL pattern</strong></p>
+<p><code>http://yournode:9200/_plugin/&lt;plugin name&gt;</code></p>
+<p>On Debian, the script is in: <code>/usr/share/elasticsearch/bin/plugin</code>.</p>
+<p><strong>Install various plugins</strong></p>
+<div class="codehilite"><pre><span></span>./bin/plugin --install mobz/elasticsearch-head
+./bin/plugin --install lmenezes/elasticsearch-kopf/1.2
+./bin/plugin --install elasticsearch/marvel/latest
+</pre></div>
+
+
+<p><strong>Remove a plugin</strong></p>
+<div class="codehilite"><pre><span></span>./bin/plugin --remove
+</pre></div>
+
+
+<p><strong>List installed plugins</strong></p>
+<div class="codehilite"><pre><span></span>./bin/plugin --list
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span>GET /_nodes?plugin=true
+</pre></div>
+
+
+<p><a href="https://blog.codecentric.de/en/2014/03/elasticsearch-monitoring-and-management-plugins/">Elasticsearch monitoring and management plugins</a></p>
+<p><strong>Head</strong></p>
+<p><a href="http://mobz.github.io/elasticsearch-head/">Head</a></p>
+<ol>
+<li><code>elasticsearch/bin/plugin -install mobz/elasticsearch-head</code></li>
+<li>open <a href="http://localhost:9200/_plugin/head">http://localhost:9200/_plugin/head</a></li>
+</ol>
+<p><a href="http://www.elastichq.org/">elastichq.org</a></p>
+<p><strong>BigDesk</strong></p>
+<p>Live charts and statistics for elasticsearch cluster: 
+<a href="http://bigdesk.org/">BigDesk</a></p>
+<p><strong>Kopf</strong></p>
+<p><a href="https://github.com/lmenezes/elasticsearch-kopf">Kopf</a></p>
+<div class="codehilite"><pre><span></span>./bin/plugin --install lmenezes/elasticsearch-kopf/1.2`
+</pre></div>
+
+
+<p><strong>Marvel</strong></p>
+<div class="codehilite"><pre><span></span>./bin/plugin --install elasticsearch/marvel/latest
+</pre></div>
+
+
+<h2 id="integrations-cms-importexport-hadoop">Integrations (CMS, import/export, hadoop...)<a class="headerlink" href="#integrations-cms-importexport-hadoop" title="Permanent link">&para;</a></h2>
+<p><a href="https://www.elastic.co/guide/en/elasticsearch/plugins/current/integrations.html">Integrations</a></p>
+<p><strong>Aspire</strong></p>
+<p><a href="http://www.searchtechnologies.com/aspire-for-elasticsearch">Aspire</a></p>
+<p>Aspire is a framework and libraries of extensible components designed to enable creation of solutions to acquire data from one or more content repositories (such as file systems, relational databases, cloud storage, or content management systems), extract metadata and text from the documents, analyze, modify and enhance the content and metadata if needed, and then publish each document, together with its metadata, to a search engine or other target application</p>
+<p><a href="https://wiki.searchtechnologies.com/index.php/Main_Page">Docs</a></p>
+<p><strong>Integration with Hadoop</strong></p>
+<p><a href="https://www.elastic.co/guide/en/elasticsearch/hadoop/current/index.html">Integration with Hadoop</a></p>
+<p><a href="https://github.com/infochimps-labs/wonderdog">Bulk loading for elastic search http://infochimps.com</a></p>
+<p><strong>Integration with Spring</strong></p>
+<p><a href="https://github.com/spring-projects/spring-data-elasticsearch">Spring Data</a></p>
+<p><strong>WordPress</strong></p>
+<p><a href="https://github.com/wallmanderco/elasticsearch-indexer">Wordpress</a></p>
+<h2 id="tools">TOOLS<a class="headerlink" href="#tools" title="Permanent link">&para;</a></h2>
+<p>BI platforms that can use ES as an analytics engine:</p>
+<ul>
+<li>Kibana</li>
+<li><a href="../grafana.org/">Grafana</a></li>
+<li>
+<p>BIRT</p>
+<ul>
+<li><a href="http://developer.actuate.com/community/forum/index.php?/topic/36913-birt-web-service-rest-json/?p=138062">Birt</a></li>
+<li><a href="http://developer.actuate.com/community/forum/index.php?/topic/36913-birt-web-service-rest-json/?p=138062">Birt</a></li>
+</ul>
+</li>
+<li>
+<p>Adminer</p>
+<ul>
+<li><a href="https://www.adminer.org/">Adminer.org</a></li>
+<li>Database management in a single PHP file. Works with MySQL, PostgreSQL, SQLite, MS SQL, Oracle, SimpleDB, Elasticsearch, MongoDB. Needs a webserver + PHP: <a href="https://bitnami.com/stack/wamp">WAMP</a></li>
+</ul>
+</li>
+<li>
+<p>Mongolastic</p>
+<ul>
+<li>A tool that migrates data from MongoDB to Elasticsearch and vice versa</li>
+<li><a href="https://github.com/ozlerhakan/mongolastic">Mongolastic</a></li>
+</ul>
+</li>
+<li>
+<p>Elasticsearch-exporter</p>
+<ul>
+<li><a href="https://github.com/mallocator/Elasticsearch-Exporter">Elasticsearch-exporter</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="code-examples-developing-a-web-ui-for-es">Code Examples - developing a Web UI for ES<a class="headerlink" href="#code-examples-developing-a-web-ui-for-es" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://www.sitepoint.com/building-recipe-search-site-angular-elasticsearch/">Sitepoint</a></li>
+<li><a href="https://github.com/CottageLabs/facetview2">CottageLabs</a></li>
+<li><a href="http://www.scrutmydocs.org/">scrutmydocs.org</a></li>
+<li><a href="https://qbox.io/blog/series/machine-learning">qbox.io</a></li>
+</ul>
+<h2 id="java-api">Java API<a class="headerlink" href="#java-api" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://www.elastic.co/blog/found-java-clients-for-elasticsearch">Java clients</a></li>
+<li><a href="https://github.com/jaibeermalik/elasticsearch-tutorial">elasticsearch tutorial</a></li>
+<li><a href="https://github.com/elasticsearchfr/hands-on">elasticsearchfr/</a></li>
+<li><a href="http://www.ibm.com/developerworks/library/j-use-elasticsearch-java-apps/index.html">IBM</a></li>
+<li><a href="https://dzone.com/articles/elasticsearch-java-api">dzone</a></li>
+</ul>
+<h1 id="basics">BASICS<a class="headerlink" href="#basics" title="Permanent link">&para;</a></h1>
+<p>An Elasticsearch cluster can contain multiple indices, which in turn contain multiple types. These types hold multiple documents, and each document has multiple fields.</p>
+<h2 id="explore-using-sense">Explore (using Sense)<a class="headerlink" href="#explore-using-sense" title="Permanent link">&para;</a></h2>
+<p><code>GET _stats/</code></p>
+<p># List indices</p>
+<div class="codehilite"><pre><span></span>GET /_cat/indices/
+GET /_cat/indices/my_ind*
+</pre></div>
+
+
+<p># Get info about one index</p>
+<div class="codehilite"><pre><span></span>GET /twitter
+GET /my_index_nr_1*/_settings?pretty   or ?v
+GET /twitter/_settings,_mappings
+</pre></div>
+
+
+<p>The available features are _settings, _mappings, _warmers and _aliases</p>
+<p># cluster</p>
+<div class="codehilite"><pre><span></span>GET /_nodes
+</pre></div>
+
+
+<p># insert data</p>
+<div class="codehilite"><pre><span></span>PUT my_index/user/1
+{
+&quot;first_name&quot;:    &quot;John&quot;,
+&quot;last_name&quot;:     &quot;Smith&quot;,
+&quot;date_of_birth&quot;: &quot;1970-10-24&quot;
+}
+</pre></div>
+
+
+<p>#search</p>
+<div class="codehilite"><pre><span></span>GET my_index/_search
+
+GET _count?pretty
+</pre></div>
+
+
+<p># Data schema</p>
+<div class="codehilite"><pre><span></span>GET my_index/_mapping
+</pre></div>
+
+
+<h2 id="insert-documents">INSERT DOCUMENTS<a class="headerlink" href="#insert-documents" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span>PUT /index/type/ID
+PUT /megacorp/employee/1
+{ &quot;first_name&quot; : &quot;John&quot;, &quot;last_name&quot; : &quot;Smith&quot;, &quot;age&quot; : 25, &quot;about&quot; : &quot;I love to go rock climbing&quot;, &quot;interests&quot;: [ &quot;sports&quot;, &quot;music&quot; ]}
+
+PUT /megacorp/employee/2
+{ &quot;first_name&quot; : &quot;Jane&quot;, &quot;last_name&quot; : &quot;Smith&quot;, &quot;age&quot; : 32, &quot;about&quot; : &quot;I like to collect rock albums&quot;, &quot;interests&quot;: [ &quot;music&quot; ]}
+
+GET /megacorp/employee/1
+</pre></div>
+
+
+<p>Field names can be any valid string, but may not include periods.
+Every document in Elasticsearch has a version number. Every time a change is made to a document (including deleting it), the _version number is incremented.</p>
+<p><em>Optimistic concurrency control</em></p>
+<div class="codehilite"><pre><span></span>PUT /website/blog/1?version=1  { &quot;title&quot;: &quot;My first blog entry&quot;, &quot;text&quot;: &quot;Starting to get the hang of this...&quot;}
+
+We want this update to succeed only if the current _version of this document in our index is version 1
+
+External version:
+
+PUT /website/blog/2?version=5&amp;version_type=external { &quot;title&quot;: &quot;My first external blog entry&quot;, &quot;text&quot;: &quot;Starting to get the hang of this...&quot;}
+</pre></div>
+
+
+<h2 id="insert-documents-autogenerated-ids">INSERT DOCUMENTS - AUTOGENERATED IDS<a class="headerlink" href="#insert-documents-autogenerated-ids" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span>POST /website/blog/
+{
+&quot;title&quot;: &quot;My second blog entry&quot;,
+&quot;text&quot;:  &quot;Still trying this out...&quot;,
+&quot;date&quot;:  &quot;2014/01/01&quot;
+}
+</pre></div>
+
+
+<p>Response:</p>
+<div class="codehilite"><pre><span></span>{
+&quot;_index&quot;:    &quot;website&quot;,
+&quot;_type&quot;:     &quot;blog&quot;,
+&quot;_id&quot;:       &quot;AVFgSgVHUP18jI2wRx0w&quot;,
+&quot;_version&quot;:  1,
+&quot;created&quot;:   true
+}
+</pre></div>
+
+
+<p>#  creating an entirely new document and not overwriting an existing one</p>
+<div class="codehilite"><pre><span></span>PUT /website/blog/123?op_type=create { ... }
+PUT /website/blog/123/_create { ... }
+</pre></div>
+
+
+<h2 id="retrieve-documents">RETRIEVE DOCUMENTS<a class="headerlink" href="#retrieve-documents" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span>GET /website/blog/123  # optional ?pretty
+</pre></div>
+
+
+<p>{ "_index" : "website", "_type" : "blog", "_id" : "123", "_version" : 1, "found" : true, "_source" : { "title": "My first blog entry", "text": "Just trying this out...", "date": "2014/01/01" }}</p>
+<p># Contains just the fields that we requested</p>
+<div class="codehilite"><pre><span></span>GET /website/blog/123?_source=title,text
+</pre></div>
+
+
+<p># Just get the original doc</p>
+<div class="codehilite"><pre><span></span>GET /website/blog/123/_source
+</pre></div>
+
+
+<p># check if doc exists -- HTTP 200 or 404</p>
+<div class="codehilite"><pre><span></span>curl -i -XHEAD http://localhost:9200/website/blog/123
+</pre></div>
+
+
+<p># Note: HEAD/exists requests do not work in Sense
+# because they only return HTTP headers, not
+# a JSON body</p>
+<p># multiple docs at once</p>
+<div class="codehilite"><pre><span></span>GET /website/blog/_mget { &quot;ids&quot; : [ &quot;2&quot;, &quot;1&quot; ]}
+</pre></div>
+
+
+<h2 id="update">UPDATE<a class="headerlink" href="#update" title="Permanent link">&para;</a></h2>
+<p>Documents in Elasticsearch are immutable; we cannot change them. Instead, if we need to update an existing document, we reindex or replace it</p>
+<p># Accepts a partial document as the doc parameter, which just gets merged with the existing document.</p>
+<div class="codehilite"><pre><span></span>POST /website/blog/1/_update
+{ &quot;doc&quot; : { &quot;tags&quot; : [ &quot;testing&quot; ], &quot;views&quot;: 0 }}
+</pre></div>
+
+
+<p># Script</p>
+<div class="codehilite"><pre><span></span>POST /website/blog/1/_update
+{ &quot;script&quot; : &quot;ctx._source.views+=1&quot;}
+</pre></div>
+
+
+<p># script with parameters</p>
+<div class="codehilite"><pre><span></span>POST /website/blog/1/_update
+{ &quot;script&quot; : &quot;ctx._source.tags+=new_tag&quot;, &quot;params&quot; : { &quot;new_tag&quot; : &quot;search&quot; }}
+</pre></div>
+
+
+<p># upsert</p>
+<div class="codehilite"><pre><span></span>POST/website/pageviews/1/_update
+{&quot;script&quot;:&quot;ctx._source.views+=1&quot;,&quot;upsert&quot;:{&quot;views&quot;:1}}
+</pre></div>
+
+
+<h2 id="delete">DELETE<a class="headerlink" href="#delete" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span>DELETE /website/blog/123
+</pre></div>
+
+
+<p># delete doc based on its contents</p>
+<div class="codehilite"><pre><span></span>POST /website/blog/1/_update { &quot;script&quot; : &quot;ctx.op = ctx._source.views == count ? &#39;delete&#39; : &#39;none&#39;&quot;, &quot;params&quot; : { &quot;count&quot;: 1 }}
+</pre></div>
+
+
+<h2 id="bulk">BULK<a class="headerlink" href="#bulk" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span>POST /_bulk
+{&quot;delete&quot;:{&quot;_index&quot;:&quot;website&quot;,&quot;_type&quot;:&quot;blog&quot;,&quot;_id&quot;:&quot;123&quot;}}
+{&quot;create&quot;:{&quot;_index&quot;:&quot;website&quot;,&quot;_type&quot;:&quot;blog&quot;,&quot;_id&quot;:&quot;123&quot;}} #  Create a document only if the document does not already exist
+{&quot;title&quot;:&quot;My first blog post&quot;}
+{&quot;index&quot;:{&quot;_index&quot;:&quot;website&quot;,&quot;_type&quot;:&quot;blog&quot;}}
+{&quot;title&quot;:&quot;My second blog post&quot;}
+{&quot;update&quot;:{&quot;_index&quot;:&quot;website&quot;,&quot;_type&quot;:&quot;blog&quot;,&quot;_id&quot;:&quot;123&quot;,&quot;_retry_on_conflict&quot;:3}}
+{&quot;doc&quot;:{&quot;title&quot;:&quot;My updated blog post&quot;}}
+</pre></div>
+
+
+<p>Bulk in the same index or index/type</p>
+<div class="codehilite"><pre><span></span>POST /website/_bulk
+{&quot;index&quot;:{&quot;_type&quot;:&quot;log&quot;}}
+{&quot;event&quot;:&quot;User logged in&quot;}
+{&quot;index&quot;:{&quot;_type&quot;:&quot;blog&quot;}}
+{&quot;title&quot;:&quot;My second blog post&quot;}
+</pre></div>
+
+
+<p>Try  around 5-15MB in size.</p>
+<h2 id="search">SEARCH<a class="headerlink" href="#search" title="Permanent link">&para;</a></h2>
+<p>Every field in a document is indexed and can be queried.</p>
+<p># Search for all employees in the megacorp index:</p>
+<div class="codehilite"><pre><span></span>GET /megacorp/employee/_search
+</pre></div>
+
+
+<p># Search for all employees in the megacorp index
+# who have "Smith" in the last_name field</p>
+<div class="codehilite"><pre><span></span>GET /megacorp/employee/_search?q=last_name:Smith
+</pre></div>
+
+
+<p># Same query as above, but using the Query DSL</p>
+<div class="codehilite"><pre><span></span>GET /megacorp/employee/_search
+{
+    &quot;query&quot;: {
+      &quot;match&quot;: {
+        &quot;last_name&quot;: &quot;smith&quot;
+      }
+    }
+}
+</pre></div>
+
+
+<p># SEARCH QUERY STRING</p>
+<div class="codehilite"><pre><span></span>GET /_all/tweet/_search?q=tweet:elasticsearch
+</pre></div>
+
+
+<p>Don't forget to URL encode special characters e.g. +name:john +tweet:mary</p>
+<div class="codehilite"><pre><span></span>GET /_search?q=%2Bname%3Ajohn+%2Btweet%3Amary
+</pre></div>
+
+
+<p>The + prefix indicates conditions that must be satisfied for our query to match. Similarly a - prefix would indicate conditions that must not match. All conditions without a + or - are optional</p>
+<div class="codehilite"><pre><span></span>+name:(mary john) +date:&gt;2014-09-10 +(aggregations geo) # last part searches _all
+</pre></div>
+
+
+<h2 id="query-dsl">QUERY DSL<a class="headerlink" href="#query-dsl" title="Permanent link">&para;</a></h2>
+<p>When used in filtering context, the query is said to be a "non-scoring" or "filtering" query. That is, the query simply asks the question: "Does this document match?". The answer is always a simple, binary yes|no.
+When used in a querying context, the query becomes a "scoring" query.</p>
+<div class="codehilite"><pre><span></span># Find all employees whose `last_name` is Smith
+# and who are older than 30
+GET /megacorp/employee/_search
+{
+&quot;query&quot; : {
+  &quot;filtered&quot; : {
+      &quot;filter&quot; : {
+      &quot;range&quot; : {
+          &quot;age&quot; : { &quot;gt&quot; : 30 }
+      }
+      },
+      &quot;query&quot; : {
+      &quot;match&quot; : {
+          &quot;last_name&quot; : &quot;smith&quot;
+      }
+      }
+  }
+}
+}
+</pre></div>
+
+
+<h2 id="match">MATCH<a class="headerlink" href="#match" title="Permanent link">&para;</a></h2>
+<p># Find all employees who enjoy "rock" or "climbing"</p>
+<div class="codehilite"><pre><span></span>GET /megacorp/employee/_search
+{
+&quot;query&quot; : {
+  &quot;match&quot; : {
+      &quot;about&quot; : &quot;rock climbing&quot;
+  }
+}
+}
+</pre></div>
+
+
+<p>The match query should be the standard query that you reach for whenever you want to query for a full-text or exact value in almost any field.
+If you run a match query against a full-text field, it will analyze the query string by using the correct analyzer for that field before executing the search
+If you use it on a field containing an exact value, such as a number, a date, a Boolean, or a not_analyzedstring field, then it will search for that exact value</p>
+<h2 id="match-on-multiple-fields">MATCH ON MULTIPLE FIELDS<a class="headerlink" href="#match-on-multiple-fields" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span>{
+&quot;multi_match&quot;: {
+  &quot;query&quot;:    &quot;full text search&quot;,
+  &quot;fields&quot;:  [ &quot;title&quot;, &quot;body&quot; ]
+}}
+</pre></div>
+
+
+<h2 id="exact-search">EXACT SEARCH<a class="headerlink" href="#exact-search" title="Permanent link">&para;</a></h2>
+<p># Find all employees who enjoy "rock climbing"</p>
+<div class="codehilite"><pre><span></span>GET /megacorp/employee/_search
+{
+&quot;query&quot; : {
+  &quot;match_phrase&quot; : {
+      &quot;about&quot; : &quot;rock climbing&quot;
+  }
+}
+}
+</pre></div>
+
+
+<p># EXACT VALUES</p>
+<p>The term query is used to search by exact values, be they numbers, dates, Booleans, or not_analyzed exact-value string fields</p>
+<p>The terms query is the same as the term query, but allows you to specify multiple values to match. If the field contains any of the specified values, the document matches</p>
+<div class="codehilite"><pre><span></span>{ &quot;terms&quot;: { &quot;tag&quot;: [ &quot;search&quot;, &quot;full_text&quot;, &quot;nosql&quot; ] }}
+</pre></div>
+
+
+<p># Compound Queries</p>
+<p>{
+     "bool": {
+       "must": { "match": { "tweet": "elasticsearch" }},
+        "must_not": { "match": { "name": "mary" }},
+        "should": { "match": { "tweet": "full text" }},
+        "filter": { "range": { "age" : { "gt" : 30 }} }
+     }
+  }</p>
+<p># VALIDATE A QUERY</p>
+<p>GET /gb/tweet/_validate/query?explain { "query": { "tweet" : { "match" : "really powerful" } }}</p>
+<p># understand why one particular document matched or, more important, why it didn’t match</p>
+<p>GET /us/tweet/12/_explain { "query" : { "bool" : { "filter" : { "term" : { "user_id" : 2 }}, "must" : { "match" : { "tweet" : "honeymoon" }} } }}</p>
+<h2 id="multiple-indices-or-types">MULTIPLE INDICES OR TYPES<a class="headerlink" href="#multiple-indices-or-types" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span># all documents all indices
+</pre></div>
+
+
+<p>/_search</p>
+<p>/gb,us/_search
+  Search all types in the gb and us indices</p>
+<p>/g<em>,u</em>/_search
+  Search all types in any indices beginning with g or beginning with u</p>
+<p>/gb/user/_search
+  Search type user in the gb index</p>
+<p>/gb,us/user,tweet/_search
+  Search types user and tweet in the gb and us indices</p>
+<p>/_all/user,tweet/_search
+  Search types user and tweet in all indices</p>
+<h2 id="pagination">PAGINATION<a class="headerlink" href="#pagination" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span> GET /_search?size=5GET /_search?size=5&amp;from=5
+</pre></div>
+
+
+<h2 id="sorting">SORTING<a class="headerlink" href="#sorting" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span> GET /_search { &quot;query&quot; : { &quot;bool&quot; : { &quot;filter&quot; : { &quot;term&quot; : { &quot;user_id&quot; : 1 }} } }, &quot;sort&quot;: { &quot;date&quot;: { &quot;order&quot;: &quot;desc&quot; }}}
+</pre></div>
+
+
+<p>For string sorting, use multi-field mapping:</p>
+<div class="codehilite"><pre><span></span> &quot;tweet&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;analyzer&quot;: &quot;english&quot;, &quot;fields&quot;: { &quot;raw&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;index&quot;: &quot;not_analyzed&quot; } }}
+</pre></div>
+
+
+<p>The main tweet field is just the same as before: an analyzed full-text field.
+The new tweet.raw subfield is not_analyzed.</p>
+<p>then sort on the new field</p>
+<div class="codehilite"><pre><span></span> GET /_search { &quot;query&quot;: { &quot;match&quot;: { &quot;tweet&quot;: &quot;elasticsearch&quot; } }, &quot;sort&quot;: &quot;tweet.raw&quot;}
+</pre></div>
+
+
+<h2 id="highlights">HIGHLIGHTS<a class="headerlink" href="#highlights" title="Permanent link">&para;</a></h2>
+<p># Find all employees who enjoy "rock climbing" - highlights
+# and highlight the matches</p>
+<p>GET /megacorp/employee/_search
+  {
+      "query" : {
+          "match_phrase" : {
+              "about" : "rock climbing"
+          }
+      },
+      "highlight": {
+          "fields" : {
+              "about" : {}
+          }
+      }
+  }</p>
+<h2 id="analysis">ANALYSIS<a class="headerlink" href="#analysis" title="Permanent link">&para;</a></h2>
+<p>An analyzer is really just a wrapper that combines three functions into a single package:</p>
+<div class="codehilite"><pre><span></span>* Character filters
+* Tokenizer
+* Token filters
+</pre></div>
+
+
+<p>#  See how text is analyzed</p>
+<p>GET /_analyze { "analyzer": "standard", "text": "Text to analyze"}</p>
+<p># test analyzer</p>
+<p>GET /gb/_analyze { "field": "tweet", "text": "Black-cats"}</p>
+<h2 id="mappings-schemas">MAPPINGS (schemas)<a class="headerlink" href="#mappings-schemas" title="Permanent link">&para;</a></h2>
+<p>Every type has its own mapping, or schema definition. A mapping defines the fields within a type, the datatype for each field, and how the field should be handled by Elasticsearch. A mapping is also used to configure metadata associated with the type.</p>
+<p>You can control dynamic nature of mappings</p>
+<p>Mapping (or schema definition) for the tweet type in the gb index</p>
+<div class="codehilite"><pre><span></span>  GET /gb/_mapping/tweet
+</pre></div>
+
+
+<p>Elasticsearch supports the following simple field types:
+<em> String: string
+</em> Whole number: byte, short, integer, long
+<em> Floating-point: float, double
+</em> Boolean: boolean
+* Date: date</p>
+<p>Fields of type string are, by default, considered to contain full text. That is, their value will be passed through an analyzer before being indexed, and a full-text query on the field will pass the query string through an analyzer before searching.
+The two most important mapping attributes for string fields are index and analyzer.</p>
+<p>The index attribute controls how the string will be indexed. It can contain one of three values:
+<em> analyzed  First analyze the string and then index it. In other words, index this field as full text.
+</em> not_analyzed  Index this field, so it is searchable, but index the value exactly as specified. Do not analyze it.
+* no  Don’t index this field at all. This field will not be searchable.</p>
+<p>If we want to map the field as an exact value, we need to set it to not_analyzed:</p>
+<div class="codehilite"><pre><span></span>  {
+    &quot;tag&quot;: {
+    &quot;type&quot;: &quot;string&quot;,
+    &quot;index&quot;: &quot;not_analyzed&quot;
+    }
+  }
+</pre></div>
+
+
+<p>For analyzed string fields, use the analyzer attribute to specify which analyzer to apply both at search time and at index time. By default, Elasticsearch uses the standard analyzer, but you can change this by specifying one of the built-in analyzers, such as whitespace, simple, or english:</p>
+<div class="codehilite"><pre><span></span>  {
+    &quot;tweet&quot;: {
+    &quot;type&quot;: &quot;string&quot;,
+    &quot;analyzer&quot;: &quot;english&quot;
+    }
+  }
+</pre></div>
+
+
+<p>#  create a new index, specifying that the tweet field should use the english analyzer</p>
+<p>PUT /gb
+  { "mappings":
+       { "tweet" :
+                 { "properties" : {
+                      "tweet" : { "type" : "string", "analyzer": "english" },
+                      "date" : { "type" : "date" },
+                      "name" : { "type" : "string" },
+                      "user_id" : { "type" : "long" }
+                    }}}}</p>
+<p>null, arrays, objects: see <a href="https://www.elastic.co/guide/en/elasticsearch/guide/current/complex-core-fields.html">complex core fields</a></p>
+<h2 id="aggregates">AGGREGATES<a class="headerlink" href="#aggregates" title="Permanent link">&para;</a></h2>
+<p>Aggregations and searches can span multiple indices</p>
+<p># Calculate the most popular interests for all employees</p>
+<p>GET /megacorp/employee/_search
+  {
+    "aggs": {
+      "all_interests": {
+        "terms": {
+          "field": "interests"
+        }
+      }
+    }
+  }</p>
+<p># Calculate the most popular interests for
+# employees named "Smith"</p>
+<p>GET /megacorp/employee/_search
+  {
+    "query": {
+      "match": {
+        "last_name": "smith"
+      }
+    },
+    "aggs": {
+      "all_interests": {
+        "terms": {
+          "field": "interests"
+        }
+      }
+    }
+  }</p>
+<p># Calculate the average age of employee per interest - hierarchical aggregates</p>
+<p>GET /megacorp/employee/_search
+  {
+      "aggs" : {
+          "all_interests" : {
+              "terms" : { "field" : "interests" },
+              "aggs" : {
+                  "avg_age" : {
+                      "avg" : { "field" : "age" }
+                  }
+              }
+          }
+      }
+  }</p>
+<p># requires in config/elasticsearch.yml
+# script.inline: true
+# script.indexed: true</p>
+<p>GET /tlo/contacts/_search
+  {
+    "size" : 0,
+    "query": {
+      "constant_score": {
+        "filter": {
+          "terms": {
+            "version": [
+              "20160301",
+              "20160401"
+            ]
+          }
+        }
+      }
+    },
+    "aggs": {
+      "counts": {
+        "cardinality": {
+          "script": "doc['first_name'].value + ' ' + doc['last_name'].value + ' ' + doc['company'].value",
+          "missing": "N/A"
+        }
+      }
+    }
+  }</p>
+<h2 id="index-management">INDEX MANAGEMENT<a class="headerlink" href="#index-management" title="Permanent link">&para;</a></h2>
+<p>By default, indices are assigned five primary shards. The number of primary shards can be set only when an index is created and never changed</p>
+<p># Add an index</p>
+<div class="codehilite"><pre><span></span>  PUT /blogs { &quot;settings&quot; : { &quot;number_of_shards&quot; : 3, &quot;number_of_replicas&quot; : 1 }}
+  PUT /blogs/_settings { &quot;number_of_replicas&quot; : 2}
+</pre></div>
+
+
+<ul>
+<li>ElasticSearch Shards should be 50 GB or less in size.</li>
+<li>Use aliases to shelter the underlying index (or indices) and allow index swapping</li>
+</ul>
+<h2 id="cluster-management">CLUSTER MANAGEMENT<a class="headerlink" href="#cluster-management" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span> GET /_cluster/health
+</pre></div>
+
+
+<h2 id="configuration">CONFIGURATION<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h2>
+<ul>
+<li>config directory</li>
+<li>
+<p>yaml file</p>
+</li>
+<li>
+<p>Sets the JVM heap size to 0.5 memory size. The OS will use it for file system cache</p>
+</li>
+<li>Prefer not to allocate 30GB !! --&gt; uncompressed pointers</li>
+<li>Never let the JVM swap    bootstrap.mlockall = true</li>
+<li>Keep the JVM defaults</li>
+<li>Do not use G1GC alternative garbage collector</li>
+</ul>
+<div class="codehilite"><pre><span></span>cluster.name: &lt;my cluster&gt;
+</pre></div>
+
+
+<ul>
+<li>All nodes in the cluster must have the same cluster name</li>
+</ul>
+<div class="codehilite"><pre><span></span>node.name: &lt;my_node_name&gt;
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span>./bin/elasticsearch --node.name=`hostname`
+</pre></div>
+
+
+<p>to override the configuration file</p>
+<ul>
+<li>HTTP port: 9200 and successors</li>
+<li>Transport : 9300 (internal communications)</li>
+</ul>
+<h3 id="discovery">Discovery<a class="headerlink" href="#discovery" title="Permanent link">&para;</a></h3>
+<ul>
+<li>AWS plugin available   --&gt; also include integration with S3 (snapshot to S3)</li>
+<li>AWS: multi-AZ is OK but replication across far data centers is not recommended</li>
+<li>See: resiliency</li>
+</ul>
+<p>Sites plugins -- kopf / head / paramedic / bigdesk / kibana
+- contain static web content (JS, HTML....)</p>
+<p>Install plugins on ALL machines of the cluster</p>
+<p>To install,</p>
+<div class="codehilite"><pre><span></span>  ./bin/plugin install marvel-agent
+  ./bin/plugin remove marvel-agent
+</pre></div>
+
+
+<p>One type per index is recommended, except for parent child / nested indexes.</p>
+<p>index size optimization:
+- can disable <code>_source</code> and <code>_all</code> (the index that captures every field - not needed unless the top search bar changes)
+- by default, Kibana will search <code>_all</code></p>
+<p>data types:
+string, number, bool, datetime, binary, array, object, geo_point, geo_shape, ip, multifield
+binary should be base64 encoded before storage</p>
+<h3 id="maintenance">MAINTENANCE<a class="headerlink" href="#maintenance" title="Permanent link">&para;</a></h3>
+<p>Steps to restore elastic search data:</p>
+<ol>
+<li>Stop elastic search</li>
+<li>Extract the zip file (dump file)</li>
+<li>Start elastic search</li>
+<li>Reload elastic search</li>
+</ol>
+<p>The commands to do the above are as below:</p>
+<ol>
+<li><code>systemctl stop elasticsearch</code></li>
+<li>extract gz file to destination path</li>
+<li><code>systemctl start elasticsearch</code></li>
+<li><code>systemctl daemon-reload elasticsearch</code></li>
+</ol>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../Python/Python3/" title="Python3" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Python3
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../Software_Development/Development_Tools/" title="Development Tools" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Development Tools
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2017 S. John Cruchon-Dupeyrat
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/john-cd" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/sjncd" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://www.linkedin.com/in/scdupeyrat/" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application-3964c0cb56.js"></script>
+      <script>app.initialize({url:{base:"../.."}})</script>
+      
+    
+    
+      
+      <script>!function(e,t,a,n,o,c,i){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,c=t.createElement(a),i=t.getElementsByTagName(a)[0],c.async=1,c.src=n,i.parentNode.insertBefore(c,i)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-92780605-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var t=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",t,e.href)})});var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})</script>
+      
+    
+  </body>
+</html>

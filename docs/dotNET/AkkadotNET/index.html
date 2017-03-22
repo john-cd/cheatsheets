@@ -1,0 +1,1183 @@
+
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A collection of cheatsheets and code snippets.">
+      
+      
+        <link rel="canonical" href="http://john-cd.com/cheatsheets/dotNET/AkkadotNET/">
+      
+      
+        <meta name="author" content="S. John Cruchon-Dupeyrat">
+      
+      
+        <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      
+      <meta name="generator" content="mkdocs-0.16.1, mkdocs-material-1.4.1">
+    
+    
+      
+        <title>Akka.NET Examples</title>
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr-56ade86843.js"></script>
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application-76741b64bc.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-66fa0d9bba.palette.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+  
+  
+  
+    <body data-md-color-primary="deep-orange" data-md-color-accent="orange">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <a href="../.." title="John's Cheatsheets" class="md-icon md-icon--home md-header-nav__button">
+          </a>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                <span class="md-header-nav__parent">
+                  dotNET
+                </span>
+              
+            
+            AkkadotNET
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search">
+  <div class="md-search__overlay"></div>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <div class="md-header-nav__source">
+          
+            
+
+
+  
+
+
+  <a href="https://github.com/john-cd/cheatsheets" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      john-cd/cheatsheets
+    </div>
+  </a>
+
+          
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    
+      <i class="md-icon md-icon--home md-nav__button"></i>
+    
+    John's Cheatsheets
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/john-cd/cheatsheets" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      john-cd/cheatsheets
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Big Data
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Big Data
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Big_Data/Hadoop_Ecosystem/" title="Hadoop Ecosystem" class="md-nav__link">
+      Hadoop Ecosystem
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Big_Data/Spark/" title="Spark" class="md-nav__link">
+      Spark
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Cloud
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Cloud
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Cloud/Serverless/" title="Serverless" class="md-nav__link">
+      Serverless
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Data Science
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Data Science
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Science/Data_Manipulation/" title="Data Manipulation" class="md-nav__link">
+      Data Manipulation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Science/Data_Visualization/" title="Data Visualization" class="md-nav__link">
+      Data Visualization
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Science/Keras/" title="Keras" class="md-nav__link">
+      Keras
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Science/Machine_Learning/" title="Machine Learning" class="md-nav__link">
+      Machine Learning
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Databases
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Databases
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Databases/Mongodb/" title="Mongodb" class="md-nav__link">
+      Mongodb
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Databases/SQL/" title="SQL" class="md-nav__link">
+      SQL
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      DevOps
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        DevOps
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../DevOps/CloudFormation/" title="CloudFormation" class="md-nav__link">
+      CloudFormation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../DevOps/Docker/" title="Docker" class="md-nav__link">
+      Docker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../DevOps/Git/" title="Git" class="md-nav__link">
+      Git
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Java
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Java
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Java/Java/" title="Java" class="md-nav__link">
+      Java
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Java/Log4j/" title="Log4j" class="md-nav__link">
+      Log4j
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      Linux
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        Linux
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Linux/Linux/" title="Linux" class="md-nav__link">
+      Linux
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      Markup and Documentation
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        Markup and Documentation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Markup%20and%20Documentation/Jekyll/" title="Jekyll" class="md-nav__link">
+      Jekyll
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Markup%20and%20Documentation/Markdown/" title="Markdown" class="md-nav__link">
+      Markdown
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Markup%20and%20Documentation/MkDocs/" title="MkDocs" class="md-nav__link">
+      MkDocs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Markup%20and%20Documentation/jekyll-introduction/" title="Jekyll introduction" class="md-nav__link">
+      Jekyll introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Markup%20and%20Documentation/reStructuredText/" title="reStructuredText" class="md-nav__link">
+      reStructuredText
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      Python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        Python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/Jupyter/" title="Jupyter" class="md-nav__link">
+      Jupyter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/Matplotlib/" title="Matplotlib" class="md-nav__link">
+      Matplotlib
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/Python3/" title="Python3" class="md-nav__link">
+      Python3
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    
+    <label class="md-nav__link" for="nav-11">
+      Search
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        Search
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Search/ElasticSearch/" title="ElasticSearch" class="md-nav__link">
+      ElasticSearch
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
+    
+    <label class="md-nav__link" for="nav-12">
+      Software Development
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-12">
+        Software Development
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Software_Development/Development_Tools/" title="Development Tools" class="md-nav__link">
+      Development Tools
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13" checked>
+    
+    <label class="md-nav__link" for="nav-13">
+      dotNET
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-13">
+        dotNET
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ASPdotNET/" title="ASPdotNET" class="md-nav__link">
+      ASPdotNET
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+    <a href="./" title="AkkadotNET" class="md-nav__link md-nav__link--active">
+      AkkadotNET
+    </a>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../C%23/" title="C#" class="md-nav__link">
+      C#
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Multithreading/" title="Multithreading" class="md-nav__link">
+      Multithreading
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../WPF/" title="WPF" class="md-nav__link">
+      WPF
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/john-cd/cheatsheets/edit/master/docs/dotNET\AkkadotNET.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
+                
+                
+                <h1 id="akkanet-examples">Akka.NET Examples<a class="headerlink" href="#akkanet-examples" title="Permanent link">&para;</a></h1>
+<p>// To install Akka.NET Distributed Actor Framework, run the following command in the Package Manager Console</p>
+<p>// PM&gt; Install-Package Akka</p>
+<p>// PM&gt; Install-Package Akka.Remote</p>
+<p>// Installing with Topshelf is as easy as calling <myApp>.exe install on the command line.</p>
+<div class="codehilite"><pre><span></span><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Linq</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Text</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Threading.Tasks</span><span class="p">;</span>
+
+<span class="c1">// Add these two lines</span>
+<span class="k">using</span> <span class="nn">Akka</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Akka.Actor</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Topshelf</span><span class="p">;</span>   <span class="c1">// http://topshelf.readthedocs.io/en/latest/configuration/quickstart.html</span>
+
+<span class="k">internal</span> <span class="k">class</span> <span class="nc">Program</span>
+<span class="p">{</span>
+    <span class="k">private</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">// ‘x’ exposes all of the host level configuration</span>
+        <span class="n">HostFactory</span><span class="p">.</span><span class="n">Run</span><span class="p">(</span><span class="n">x</span> <span class="p">=&gt;</span>
+        <span class="p">{</span>
+            <span class="n">x</span><span class="p">.</span><span class="n">Service</span><span class="p">&lt;</span><span class="n">ActorService</span><span class="p">&gt;(</span><span class="n">s</span> <span class="p">=&gt;</span>     <span class="c1">//  telling Topshelf that there is a service of type ActorService. service configuration options exposed through the ‘s’ parameter.</span>
+            <span class="p">{</span>
+                <span class="n">s</span><span class="p">.</span><span class="n">ConstructUsing</span><span class="p">(</span><span class="n">name</span> <span class="p">=&gt;</span> <span class="k">new</span> <span class="n">ActorService</span><span class="p">());</span> <span class="c1">// build an instance of the service; new or pull from IoC container</span>
+                <span class="n">s</span><span class="p">.</span><span class="n">WhenStarted</span><span class="p">(</span><span class="n">service</span> <span class="p">=&gt;</span> <span class="n">service</span><span class="p">.</span><span class="n">Start</span><span class="p">());</span>
+                <span class="n">s</span><span class="p">.</span><span class="n">WhenStopped</span><span class="p">(</span><span class="n">service</span> <span class="p">=&gt;</span> <span class="n">service</span><span class="p">.</span><span class="n">Stop</span><span class="p">());</span>
+                <span class="c1">////continue and restart directives are also available</span>
+                <span class="c1">//s.WhenPaused(service =&gt; service.Pause());</span>
+                <span class="c1">//s.WhenContinued(service =&gt; service.Continue());</span>
+                <span class="c1">//s.WhenShutdown(service =&gt; service.Shutdown());</span>
+
+            <span class="p">});</span>
+
+            <span class="n">x</span><span class="p">.</span><span class="n">RunAsLocalSystem</span><span class="p">();</span> <span class="c1">// service ‘run as’ the ‘local system’. Alternatively x.RunAsLocalSystem(); x.RunAs(&quot;username&quot;, &quot;password&quot;);  x.RunAsPrompt();</span>
+            <span class="n">x</span><span class="p">.</span><span class="n">UseAssemblyInfoForServiceInfo</span><span class="p">();</span>
+
+            <span class="c1">//x.SetDescription(&quot;Orchestrator Host&quot;); </span>
+            <span class="c1">//x.SetDisplayName(&quot;Orchestrator&quot;); // display name for the winservice in the windows service monitor</span>
+            <span class="c1">//x.SetServiceName(&quot;Orchestrator&quot;); // service name for the winservice in the windows service monitor</span>
+            <span class="c1">//x.SetInstanceName(&quot;MyService&quot;); // instance name of the service, which is combined with the base service name and separated by a $.</span>
+        <span class="p">});</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// &lt;summary&gt;</span>
+<span class="c1">/// This class acts as an interface between the application and TopShelf</span>
+<span class="c1">/// &lt;/summary&gt;</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">ActorService</span>
+<span class="p">{</span>
+    <span class="k">private</span> <span class="n">ActorSystem</span> <span class="n">system</span><span class="p">;</span>
+
+    <span class="k">public</span> <span class="k">void</span> <span class="nf">Start</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="c1">// Create a new actor system (a container for actors)</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">system</span> <span class="p">=</span> <span class="n">ActorSystem</span><span class="p">.</span><span class="n">Create</span><span class="p">(</span><span class="s">&quot;MainSystem&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">async</span> <span class="k">void</span> <span class="nf">Stop</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="c1">//this is where you stop your actor system</span>
+        <span class="k">await</span> <span class="k">this</span><span class="p">.</span><span class="n">system</span><span class="p">.</span><span class="n">Terminate</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="k">private</span> <span class="k">void</span> <span class="nf">Create</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="c1">// Create your actor and get a reference to it.</span>
+        <span class="c1">// This will be an &quot;ActorRef&quot;, which is not a</span>
+        <span class="c1">// reference to the actual actor instance</span>
+        <span class="c1">// but rather a client or proxy to it.</span>
+        <span class="kt">var</span> <span class="n">job</span> <span class="p">=</span> <span class="n">system</span><span class="p">.</span><span class="n">ActorOf</span><span class="p">&lt;</span><span class="n">JobActor</span><span class="p">&gt;(</span><span class="s">&quot;Job&quot;</span><span class="p">);</span>
+        <span class="c1">//or: var myActor = system.ActorOf(Props.Create&lt;JobActor&gt;());</span>
+
+        <span class="c1">// Send a message to the actor</span>
+        <span class="n">job</span><span class="p">.</span><span class="n">Tell</span><span class="p">(</span><span class="k">new</span> <span class="n">Message</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;(</span><span class="s">&quot;Hello World&quot;</span><span class="p">));</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Example immutable message class - C# 7.0</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">Message</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="nf">Message</span><span class="p">(</span><span class="n">T</span> <span class="n">data</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="n">Data</span> <span class="p">=</span> <span class="n">data</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="n">T</span> <span class="n">Data</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="p">}</span>
+
+    <span class="c1">// Allow convesion to a tuple </span>
+    <span class="k">public</span> <span class="k">void</span> <span class="nf">Deconstruct</span><span class="p">(</span><span class="k">out</span> <span class="n">T</span> <span class="n">data</span><span class="p">)</span> <span class="p">{</span> <span class="n">data</span> <span class="p">=</span> <span class="k">this</span><span class="p">.</span><span class="n">Data</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Example of ReceiveActor</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">JobActor</span><span class="p">:</span> <span class="n">ReceiveActor</span>
+<span class="p">{</span>
+  <span class="k">private</span> <span class="k">readonly</span> <span class="n">ILoggingAdapter</span> <span class="n">log</span> <span class="p">=</span> <span class="n">Context</span><span class="p">.</span><span class="n">GetLogger</span><span class="p">();</span>
+
+  <span class="k">public</span> <span class="nf">JobActor</span><span class="p">()</span>
+  <span class="p">{</span>
+    <span class="n">Receive</span><span class="p">&lt;</span><span class="n">Message</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;&gt;(</span><span class="n">message</span> <span class="p">=&gt;</span> <span class="p">{</span>
+      <span class="n">log</span><span class="p">.</span><span class="n">Info</span><span class="p">(</span><span class="s">&quot;Received String message: {0}&quot;</span><span class="p">,</span> <span class="n">message</span><span class="p">.</span><span class="n">Data</span><span class="p">);</span>
+      <span class="c1">// Console.WriteLine(message.Data);</span>
+
+      <span class="c1">// reply back</span>
+      <span class="n">Sender</span><span class="p">.</span><span class="n">Tell</span><span class="p">(</span><span class="n">message</span><span class="p">);</span>
+    <span class="p">});</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+
+
+<span class="c1">// Example of untyped actor</span>
+
+<span class="k">public</span> <span class="k">class</span> <span class="nc">MyActor</span> <span class="p">:</span> <span class="n">UntypedActor</span>
+<span class="p">{</span>
+    <span class="k">private</span> <span class="n">ActorRef</span> <span class="n">logger</span> <span class="p">=</span> <span class="n">Context</span><span class="p">.</span><span class="n">ActorOf</span><span class="p">&lt;</span><span class="n">LogActor</span><span class="p">&gt;();</span>
+
+    <span class="c1">// if any child, e.g. the logger above. throws an exception</span>
+    <span class="c1">// apply the rules below</span>
+    <span class="c1">// e.g. Restart the child, if 10 exceptions occur in 30 seconds or</span>
+    <span class="c1">// less, then stop the actor</span>
+    <span class="k">protected</span> <span class="k">override</span> <span class="n">SupervisorStrategy</span> <span class="nf">SupervisorStrategy</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nf">OneForOneStrategy</span><span class="p">(</span> <span class="c1">//or AllForOneStrategy</span>
+            <span class="n">maxNumberOfRetries</span><span class="p">:</span> <span class="m">10</span><span class="p">,</span>
+            <span class="n">duration</span><span class="p">:</span> <span class="n">TimeSpan</span><span class="p">.</span><span class="n">FromSeconds</span><span class="p">(</span><span class="m">30</span><span class="p">),</span>
+            <span class="n">decider</span><span class="p">:</span> <span class="n">Decider</span><span class="p">.</span><span class="n">From</span><span class="p">(</span><span class="n">x</span> <span class="p">=&gt;</span>
+            <span class="p">{</span>
+                <span class="c1">//Maybe we consider ArithmeticException to not be application critical</span>
+                <span class="c1">//so we just ignore the error and keep going.</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="k">is</span> <span class="n">ArithmeticException</span><span class="p">)</span> <span class="k">return</span> <span class="n">Directive</span><span class="p">.</span><span class="n">Resume</span><span class="p">;</span>
+                <span class="c1">//Error that we cannot recover from, stop the failing actor</span>
+                <span class="k">else</span> <span class="nf">if</span> <span class="p">(</span><span class="n">x</span> <span class="k">is</span> <span class="n">NotSupportedException</span><span class="p">)</span> <span class="k">return</span> <span class="n">Directive</span><span class="p">.</span><span class="n">Stop</span><span class="p">;</span>
+                <span class="c1">//In all other cases, just restart the failing actor</span>
+                <span class="k">else</span> <span class="k">return</span> <span class="n">Directive</span><span class="p">.</span><span class="n">Restart</span><span class="p">;</span>
+             <span class="p">}));</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Example of long-running operation in an Actor - PipeTo / Become / Stash</span>
+
+<span class="cm">/*</span>
+<span class="cm">If you stick a long-running operation inside your Receive method then your actors will be unable to process any messages, including system messages, until that operation finishes. And if it’s possible that the operation will never finish, it’s possible to deadlock your actor.</span>
+<span class="cm">The solution to this is simple: you need to encapsulate any long-running I/O-bound or CPU-bound operations inside a Task and make it possible to cancel that task from within the actor.</span>
+<span class="cm">Here’s an example of how you can use behavior switching, stashing, and control messages to do this.</span>
+
+<span class="cm">https://petabridge.com/blog/akka-actors-finite-state-machines-switchable-behavior/</span>
+
+<span class="cm">*/</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">FooActor</span> <span class="p">:</span> <span class="n">ReceiveActor</span><span class="p">,</span> <span class="n">IWithUnboundedStash</span>
+<span class="p">{</span>
+
+    <span class="k">private</span> <span class="n">Task</span> <span class="n">_runningTask</span><span class="p">;</span>
+    <span class="k">private</span> <span class="n">CancellationTokenSource</span> <span class="n">_cancel</span><span class="p">;</span>
+
+    <span class="k">public</span> <span class="n">IStash</span> <span class="n">Stash</span> <span class="p">{</span><span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;}</span>
+
+    <span class="k">public</span> <span class="nf">FooActor</span><span class="p">(){</span>
+        <span class="n">_cancel</span> <span class="p">=</span> <span class="k">new</span> <span class="n">CancellationTokenSource</span><span class="p">();</span>
+        <span class="n">Ready</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="k">private</span> <span class="k">void</span> <span class="nf">Ready</span><span class="p">(){</span>
+        <span class="n">Receive</span><span class="p">&lt;</span><span class="n">Start</span><span class="p">&gt;(</span><span class="n">s</span> <span class="p">=&gt;</span> <span class="p">{</span>
+            <span class="kt">var</span> <span class="n">self</span> <span class="p">=</span> <span class="n">Self</span><span class="p">;</span> <span class="c1">// closure</span>
+            <span class="n">_runningTask</span> <span class="p">=</span> <span class="n">Task</span><span class="p">.</span><span class="n">Run</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+                <span class="c1">// ... work</span>
+            <span class="p">},</span> <span class="n">_cancel</span><span class="p">.</span><span class="n">Token</span><span class="p">).</span><span class="n">ContinueWith</span><span class="p">(</span><span class="n">x</span> <span class="p">=&gt;</span>
+            <span class="p">{</span>
+                <span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="p">.</span><span class="n">IsCancelled</span> <span class="p">||</span> <span class="n">x</span><span class="p">.</span><span class="n">IsFaulted</span><span class="p">)</span>
+                    <span class="k">return</span> <span class="k">new</span> <span class="nf">Failed</span><span class="p">();</span>
+                <span class="k">return</span> <span class="k">new</span> <span class="nf">Finished</span><span class="p">();</span>
+            <span class="p">},</span> <span class="n">TaskContinuationOptions</span><span class="p">.</span><span class="n">ExecuteSynchronously</span><span class="p">)</span>
+            <span class="p">.</span><span class="n">PipeTo</span><span class="p">(</span><span class="n">self</span><span class="p">);</span>
+
+            <span class="c1">// switch behavior</span>
+            <span class="n">Become</span><span class="p">(</span><span class="n">Working</span><span class="p">);</span>
+        <span class="p">})</span>
+    <span class="p">}</span>
+
+    <span class="k">private</span> <span class="k">void</span> <span class="nf">Working</span><span class="p">(){</span>
+        <span class="n">Receive</span><span class="p">&lt;</span><span class="n">Cancel</span><span class="p">&gt;(</span><span class="n">cancel</span> <span class="p">=&gt;</span> <span class="p">{</span>
+            <span class="n">_cancel</span><span class="p">.</span><span class="n">Cancel</span><span class="p">();</span> <span class="c1">// cancel work</span>
+            <span class="n">BecomeReady</span><span class="p">();</span>
+        <span class="p">});</span>
+        <span class="n">Receive</span><span class="p">&lt;</span><span class="n">Failed</span><span class="p">&gt;(</span><span class="n">f</span> <span class="p">=&gt;</span> <span class="n">BecomeReady</span><span class="p">());</span>
+        <span class="n">Receive</span><span class="p">&lt;</span><span class="n">Finished</span><span class="p">&gt;(</span><span class="n">f</span> <span class="p">=&gt;</span> <span class="n">BecomeReady</span><span class="p">());</span>
+        <span class="n">ReceiveAny</span><span class="p">(</span><span class="n">o</span> <span class="p">=&gt;</span> <span class="n">Stash</span><span class="p">.</span><span class="n">Stash</span><span class="p">());</span>
+    <span class="p">}</span>
+
+    <span class="k">private</span> <span class="k">void</span> <span class="nf">BecomeReady</span><span class="p">(){</span>
+        <span class="n">_cancel</span> <span class="p">=</span> <span class="k">new</span> <span class="n">CancellationTokenSource</span><span class="p">();</span>
+        <span class="n">Stash</span><span class="p">.</span><span class="n">UnstashAll</span><span class="p">();</span>
+        <span class="n">Become</span><span class="p">(</span><span class="n">Ready</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../ASPdotNET/" title="ASPdotNET" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                ASPdotNET
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../C%23/" title="C#" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                C#
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2017 S. John Cruchon-Dupeyrat
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/john-cd" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/sjncd" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://www.linkedin.com/in/scdupeyrat/" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application-3964c0cb56.js"></script>
+      <script>app.initialize({url:{base:"../.."}})</script>
+      
+    
+    
+      
+      <script>!function(e,t,a,n,o,c,i){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,c=t.createElement(a),i=t.getElementsByTagName(a)[0],c.async=1,c.src=n,i.parentNode.insertBefore(c,i)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-92780605-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var t=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",t,e.href)})});var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})</script>
+      
+    
+  </body>
+</html>
