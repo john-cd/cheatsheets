@@ -7,7 +7,7 @@ site_url: 'http://john-cd.com/cheatsheets/'
 # Repository
 repo_name: 'john-cd/cheatsheets'
 repo_url: 'https://github.com/john-cd/cheatsheets'
-edit_uri: edit/master/docs/
+edit_uri: edit/master/docs_src/
 
 # Copyright
 copyright: 'Copyright &copy; 2017 S. John Cruchon-Dupeyrat'
