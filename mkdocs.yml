@@ -1,0 +1,49 @@
+# Project information
+site_name: "John's Cheatsheets"
+site_description: 'A collection of cheatsheets and code snippets.'
+site_author: 'S. John Cruchon-Dupeyrat'
+site_url: 'http://john-cd.com/cheatsheets/'
+
+# Repository
+repo_name: 'john-cd/cheatsheets'
+repo_url: 'https://github.com/john-cd/cheatsheets'
+edit_uri: edit/master/docs/
+
+# Copyright
+copyright: 'Copyright &copy; 2017 S. John Cruchon-Dupeyrat'
+
+# Documentation and theme
+docs_dir: 'docs_src'
+theme_dir: 'mkdocs-material/material'
+site_dir: 'docs'
+
+# Options
+extra:
+#  logo: 'images/logo.svg'
+  palette:
+    primary: 'deep orange'
+    accent: 'orange'
+  font:
+    text: 'Roboto'
+    code: 'Roboto Mono'
+  social:
+    - type: 'github'
+      link: 'https://github.com/john-cd'
+    - type: 'twitter'
+      link: 'https://twitter.com/sjncd'
+    - type: 'linkedin'
+      link: 'https://www.linkedin.com/in/scdupeyrat/'
+#  feature:
+#    tabs: true
+      
+      
+# Google Analytics
+google_analytics:
+  - 'UA-92780605-1'
+  - 'auto'
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - codehilite(guess_lang=false)
+  - toc(permalink=true)
