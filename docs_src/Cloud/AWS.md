@@ -140,12 +140,9 @@ SELECT COUNT(DISTINCT field2) FROM table1
 
 ## EMR
 
-[EMR FAQs]( http://aws.amazon.com/elasticmapreduce/faqs/ )
-
-
-[Extract, Transform, and Load (ETL) Data with Amazon EMR] ( http://docs.aws.amazon.com/ElasticMapReduce/latest/DeveloperGuide/emr-etl.html )
-
-[EMR article]( http://aws.amazon.com/articles/Elastic-MapReduce )
+- [EMR FAQs]( http://aws.amazon.com/elasticmapreduce/faqs/ )
+- [Extract, Transform, and Load (ETL) Data with Amazon EMR]( http://docs.aws.amazon.com/ElasticMapReduce/latest/DeveloperGuide/emr-etl.html )
+- [EMR article]( http://aws.amazon.com/articles/Elastic-MapReduce )
 
 
 ## SWF

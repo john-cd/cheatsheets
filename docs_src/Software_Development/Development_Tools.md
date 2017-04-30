@@ -46,15 +46,18 @@ comments: true
 
 - [Comparison of integrated development environments]( http://en.wikipedia.org/wiki/Comparison_of_integrated_development_environments )
 
+
 - [Notepad++]( https://notepad-plus-plus.org/ )
     - [Plugins]( http://www.guidingtech.com/31357/notepad-plus-plugins/ )
 - Gedit
 - Sublime Text
 
+
 - [Eclipse]( http://www.eclipse.org/ )
-   - [List of Eclipse-based software]( http://en.wikipedia.org/wiki/List_of_Eclipse-based_software )
+    - [List of Eclipse-based software]( http://en.wikipedia.org/wiki/List_of_Eclipse-based_software )
 - Visual Studio
 - Visual Studio Code
+
 
 _for Python_
 
@@ -127,8 +130,6 @@ _for Python_
 
 ## Other
 
-[Cygwin](https://www.cygwin.com/)
-
-[Log Tail]( http://www.log-expert.de/)
-
-[Diff - WinMerge](http://winmerge.org/)
+- [Cygwin](https://www.cygwin.com/)
+- [Log Tail]( http://www.log-expert.de/)
+- [Diff - WinMerge](http://winmerge.org/)
