@@ -728,6 +728,101 @@ PUT /gb
 
 null, arrays, objects: see [complex core fields](https://www.elastic.co/guide/en/elasticsearch/guide/current/complex-core-fields.html)
 
+## [Parent Child Relationships]( https://qbox.io/blog/parent-child-relationships-in-elasticsearch )
+
+```JSON
+DELETE /test_index
+
+PUT /test_index
+{
+   "mappings": {
+      "parent_type": {
+         "properties": {
+            "num_prop": {
+               "type": "integer"
+            },
+            "str_prop": {
+               "type": "string"
+            }
+         }
+      },
+      "child_type": {
+         "_parent": {
+            "type": "parent_type"
+         },
+         "properties": {
+            "child_num": {
+               "type": "integer"
+            },
+            "child_str": {
+               "type": "string"
+            }
+         }
+      }
+   }
+}
+
+POST /test_index/_bulk
+{"index":{"_type":"parent_type","_id":1}}
+{"num_prop":1,"str_prop":"hello"}
+{"index":{"_type":"child_type","_id":1,"_parent":1}}
+{"child_num":11,"child_str":"foo"}
+{"index":{"_type":"child_type","_id":2,"_parent":1}}
+{"child_num":12,"child_str":"bar"}
+{"index":{"_type":"parent_type","_id":2}}
+{"num_prop":2,"str_prop":"goodbye"}
+{"index":{"_type":"child_type","_id":3,"_parent":2}}
+{"child_num":21,"child_str":"baz"}
+
+POST /test_index/child_type/_search
+
+POST /test_index/child_type/2?parent=1
+{
+   "child_num": 13,
+   "child_str": "bars"
+}
+
+POST /test_index/child_type/_search
+
+POST /test_index/child_type/3/_update?parent=2
+{
+   "script": "ctx._source.child_num+=1"
+}
+
+POST /test_index/child_type/_search
+
+POST /test_index/child_type/_search
+{
+    "query": {
+        "term": {
+           "child_str": {
+              "value": "foo"
+           }
+        }
+    }
+}
+
+POST /test_index/parent_type/_search
+{
+   "query": {
+      "filtered": {
+         "query": {
+            "match_all": {}
+         },
+         "filter": {
+            "has_child": {
+               "type": "child_type",
+               "filter": {
+                  "term": {
+                     "child_str": "foo"
+                  }
+               }
+            }
+         }
+      }
+   }
+}
+```
 
 ## AGGREGATES
 
