@@ -4,7 +4,7 @@
     
     <url>
      <loc>http://john-cd.com/cheatsheets//</loc>
-     <lastmod>2017-04-29</lastmod>
+     <lastmod>2017-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -13,13 +13,13 @@
         
     <url>
      <loc>http://john-cd.com/cheatsheets//Big_Data/Hadoop_Ecosystem/</loc>
-     <lastmod>2017-04-29</lastmod>
+     <lastmod>2017-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://john-cd.com/cheatsheets//Big_Data/Spark/</loc>
-     <lastmod>2017-04-29</lastmod>
+     <lastmod>2017-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -29,13 +29,13 @@
         
     <url>
      <loc>http://john-cd.com/cheatsheets//Cloud/AWS/</loc>
-     <lastmod>2017-04-29</lastmod>
+     <lastmod>2017-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://john-cd.com/cheatsheets//Cloud/Serverless/</loc>
-     <lastmod>2017-04-29</lastmod>
+     <lastmod>2017-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -45,19 +45,19 @@
         
     <url>
      <loc>http://john-cd.com/cheatsheets//Data_Science/Data_Manipulation/</loc>
-     <lastmod>2017-04-29</lastmod>
+     <lastmod>2017-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://john-cd.com/cheatsheets//Data_Science/Data_Visualization/</loc>
-     <lastmod>2017-04-29</lastmod>
+     <lastmod>2017-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://john-cd.com/cheatsheets//Data_Science/Machine_Learning/</loc>
-     <lastmod>2017-04-29</lastmod>
+     <lastmod>2017-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -67,13 +67,13 @@
         
     <url>
      <loc>http://john-cd.com/cheatsheets//Databases/Mongodb/</loc>
-     <lastmod>2017-04-29</lastmod>
+     <lastmod>2017-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://john-cd.com/cheatsheets//Databases/SQL/</loc>
-     <lastmod>2017-04-29</lastmod>
+     <lastmod>2017-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -83,7 +83,7 @@
         
     <url>
      <loc>http://john-cd.com/cheatsheets//Deep_Learning/Keras/</loc>
-     <lastmod>2017-04-29</lastmod>
+     <lastmod>2017-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -93,19 +93,19 @@
         
     <url>
      <loc>http://john-cd.com/cheatsheets//DevOps/CloudFormation/</loc>
-     <lastmod>2017-04-29</lastmod>
+     <lastmod>2017-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://john-cd.com/cheatsheets//DevOps/Docker/</loc>
-     <lastmod>2017-04-29</lastmod>
+     <lastmod>2017-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://john-cd.com/cheatsheets//DevOps/Git/</loc>
-     <lastmod>2017-04-29</lastmod>
+     <lastmod>2017-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -115,13 +115,13 @@
         
     <url>
      <loc>http://john-cd.com/cheatsheets//Java/Java/</loc>
-     <lastmod>2017-04-29</lastmod>
+     <lastmod>2017-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://john-cd.com/cheatsheets//Java/Log4j/</loc>
-     <lastmod>2017-04-29</lastmod>
+     <lastmod>2017-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -131,7 +131,7 @@
         
     <url>
      <loc>http://john-cd.com/cheatsheets//Linux/Linux/</loc>
-     <lastmod>2017-04-29</lastmod>
+     <lastmod>2017-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -141,25 +141,25 @@
         
     <url>
      <loc>http://john-cd.com/cheatsheets//Markup_and_Documentation/Jekyll/</loc>
-     <lastmod>2017-04-29</lastmod>
+     <lastmod>2017-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://john-cd.com/cheatsheets//Markup_and_Documentation/Markdown/</loc>
-     <lastmod>2017-04-29</lastmod>
+     <lastmod>2017-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://john-cd.com/cheatsheets//Markup_and_Documentation/MkDocs/</loc>
-     <lastmod>2017-04-29</lastmod>
+     <lastmod>2017-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://john-cd.com/cheatsheets//Markup_and_Documentation/reStructuredText/</loc>
-     <lastmod>2017-04-29</lastmod>
+     <lastmod>2017-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -169,19 +169,29 @@
         
     <url>
      <loc>http://john-cd.com/cheatsheets//Python/Jupyter/</loc>
-     <lastmod>2017-04-29</lastmod>
+     <lastmod>2017-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://john-cd.com/cheatsheets//Python/Matplotlib/</loc>
-     <lastmod>2017-04-29</lastmod>
+     <lastmod>2017-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://john-cd.com/cheatsheets//Python/Python3/</loc>
-     <lastmod>2017-04-29</lastmod>
+     <lastmod>2017-05-01</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>http://john-cd.com/cheatsheets//Scala/Scala/</loc>
+     <lastmod>2017-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -191,7 +201,7 @@
         
     <url>
      <loc>http://john-cd.com/cheatsheets//Search/ElasticSearch/</loc>
-     <lastmod>2017-04-29</lastmod>
+     <lastmod>2017-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -201,7 +211,7 @@
         
     <url>
      <loc>http://john-cd.com/cheatsheets//Software_Development/Development_Tools/</loc>
-     <lastmod>2017-04-29</lastmod>
+     <lastmod>2017-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -211,31 +221,31 @@
         
     <url>
      <loc>http://john-cd.com/cheatsheets//dotNET/ASPdotNET/</loc>
-     <lastmod>2017-04-29</lastmod>
+     <lastmod>2017-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://john-cd.com/cheatsheets//dotNET/AkkadotNET/</loc>
-     <lastmod>2017-04-29</lastmod>
+     <lastmod>2017-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://john-cd.com/cheatsheets//dotNET/C#/</loc>
-     <lastmod>2017-04-29</lastmod>
+     <lastmod>2017-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://john-cd.com/cheatsheets//dotNET/Multithreading/</loc>
-     <lastmod>2017-04-29</lastmod>
+     <lastmod>2017-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://john-cd.com/cheatsheets//dotNET/WPF/</loc>
-     <lastmod>2017-04-29</lastmod>
+     <lastmod>2017-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
         

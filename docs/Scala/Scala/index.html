@@ -1,0 +1,1551 @@
+
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A collection of cheatsheets and code snippets.">
+      
+      
+        <link rel="canonical" href="http://john-cd.com/cheatsheets/Scala/Scala/">
+      
+      
+        <meta name="author" content="S. John Cruchon-Dupeyrat">
+      
+      
+        <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      
+      <meta name="generator" content="mkdocs-0.16.1, mkdocs-material-1.4.1">
+    
+    
+      
+        <title>Scala - John's Cheatsheets</title>
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr-56ade86843.js"></script>
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application-76741b64bc.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-66fa0d9bba.palette.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+  
+  
+  
+    <body data-md-color-primary="deep-orange" data-md-color-accent="orange">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <a href="../.." title="John's Cheatsheets" class="md-icon md-icon--home md-header-nav__button">
+          </a>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                <span class="md-header-nav__parent">
+                  Scala
+                </span>
+              
+            
+            Scala
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search">
+  <div class="md-search__overlay"></div>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <div class="md-header-nav__source">
+          
+            
+
+
+  
+
+
+  <a href="https://github.com/john-cd/cheatsheets" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      john-cd/cheatsheets
+    </div>
+  </a>
+
+          
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    
+      <i class="md-icon md-icon--home md-nav__button"></i>
+    
+    John's Cheatsheets
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/john-cd/cheatsheets" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      john-cd/cheatsheets
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Big Data
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Big Data
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Big_Data/Hadoop_Ecosystem/" title="Hadoop Ecosystem" class="md-nav__link">
+      Hadoop Ecosystem
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Big_Data/Spark/" title="Spark" class="md-nav__link">
+      Spark
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Cloud
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Cloud
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Cloud/AWS/" title="AWS" class="md-nav__link">
+      AWS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Cloud/Serverless/" title="Serverless" class="md-nav__link">
+      Serverless
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Data Science
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Data Science
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Science/Data_Manipulation/" title="Data Manipulation" class="md-nav__link">
+      Data Manipulation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Science/Data_Visualization/" title="Data Visualization" class="md-nav__link">
+      Data Visualization
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Science/Machine_Learning/" title="Machine Learning" class="md-nav__link">
+      Machine Learning
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Databases
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Databases
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Databases/Mongodb/" title="Mongodb" class="md-nav__link">
+      Mongodb
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Databases/SQL/" title="SQL" class="md-nav__link">
+      SQL
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Deep Learning
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Deep Learning
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Deep_Learning/Keras/" title="Keras" class="md-nav__link">
+      Keras
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      DevOps
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        DevOps
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../DevOps/CloudFormation/" title="CloudFormation" class="md-nav__link">
+      CloudFormation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../DevOps/Docker/" title="Docker" class="md-nav__link">
+      Docker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../DevOps/Git/" title="Git" class="md-nav__link">
+      Git
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      Java
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        Java
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Java/Java/" title="Java" class="md-nav__link">
+      Java
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Java/Log4j/" title="Log4j" class="md-nav__link">
+      Log4j
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      Linux
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        Linux
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Linux/Linux/" title="Linux" class="md-nav__link">
+      Linux
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      Markup and Documentation
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        Markup and Documentation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Markup_and_Documentation/Jekyll/" title="Jekyll" class="md-nav__link">
+      Jekyll
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Markup_and_Documentation/Markdown/" title="Markdown" class="md-nav__link">
+      Markdown
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Markup_and_Documentation/MkDocs/" title="MkDocs" class="md-nav__link">
+      MkDocs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Markup_and_Documentation/reStructuredText/" title="reStructuredText" class="md-nav__link">
+      reStructuredText
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    
+    <label class="md-nav__link" for="nav-11">
+      Python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        Python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/Jupyter/" title="Jupyter" class="md-nav__link">
+      Jupyter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/Matplotlib/" title="Matplotlib" class="md-nav__link">
+      Matplotlib
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/Python3/" title="Python3" class="md-nav__link">
+      Python3
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12" checked>
+    
+    <label class="md-nav__link" for="nav-12">
+      Scala
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-12">
+        Scala
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Scala
+      </label>
+    
+    <a href="./" title="Scala" class="md-nav__link md-nav__link--active">
+      Scala
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#links" title="Links" class="md-nav__link">
+    Links
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#main-features-of-scala" title="Main Features of Scala" class="md-nav__link">
+    Main Features of Scala
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#syntax" title="Syntax" class="md-nav__link">
+    Syntax
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keywords" title="Keywords" class="md-nav__link">
+    Keywords
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compilation" title="Compilation" class="md-nav__link">
+    Compilation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables-and-values" title="Variables and Values" class="md-nav__link">
+    Variables and Values
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entry-point" title="Entry Point" class="md-nav__link">
+    Entry Point
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#imports" title="Imports" class="md-nav__link">
+    Imports
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scala-is-object-oriented" title="Scala is Object-Oriented" class="md-nav__link">
+    Scala is Object-Oriented
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scala-is-functional" title="Scala is Functional" class="md-nav__link">
+    Scala is Functional
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#anonymous-functions" title="Anonymous Functions" class="md-nav__link">
+    Anonymous Functions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#case-classes" title="Case Classes" class="md-nav__link">
+    Case Classes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pattern-matching" title="Pattern Matching" class="md-nav__link">
+    Pattern Matching
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#traits" title="Traits" class="md-nav__link">
+    Traits
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generics" title="Generics" class="md-nav__link">
+    Generics
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#frameworks" title="Frameworks" class="md-nav__link">
+    Frameworks
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
+    
+    <label class="md-nav__link" for="nav-13">
+      Search
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-13">
+        Search
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Search/ElasticSearch/" title="ElasticSearch" class="md-nav__link">
+      ElasticSearch
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-14" type="checkbox" id="nav-14">
+    
+    <label class="md-nav__link" for="nav-14">
+      Software Development
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-14">
+        Software Development
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Software_Development/Development_Tools/" title="Development Tools" class="md-nav__link">
+      Development Tools
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-15" type="checkbox" id="nav-15">
+    
+    <label class="md-nav__link" for="nav-15">
+      dotNET
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-15">
+        dotNET
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dotNET/ASPdotNET/" title="ASPdotNET" class="md-nav__link">
+      ASPdotNET
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dotNET/AkkadotNET/" title="AkkadotNET" class="md-nav__link">
+      AkkadotNET
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dotNET/C%23/" title="C#" class="md-nav__link">
+      C#
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dotNET/Multithreading/" title="Multithreading" class="md-nav__link">
+      Multithreading
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dotNET/WPF/" title="WPF" class="md-nav__link">
+      WPF
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#links" title="Links" class="md-nav__link">
+    Links
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#main-features-of-scala" title="Main Features of Scala" class="md-nav__link">
+    Main Features of Scala
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#syntax" title="Syntax" class="md-nav__link">
+    Syntax
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keywords" title="Keywords" class="md-nav__link">
+    Keywords
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compilation" title="Compilation" class="md-nav__link">
+    Compilation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables-and-values" title="Variables and Values" class="md-nav__link">
+    Variables and Values
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entry-point" title="Entry Point" class="md-nav__link">
+    Entry Point
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#imports" title="Imports" class="md-nav__link">
+    Imports
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scala-is-object-oriented" title="Scala is Object-Oriented" class="md-nav__link">
+    Scala is Object-Oriented
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scala-is-functional" title="Scala is Functional" class="md-nav__link">
+    Scala is Functional
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#anonymous-functions" title="Anonymous Functions" class="md-nav__link">
+    Anonymous Functions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#case-classes" title="Case Classes" class="md-nav__link">
+    Case Classes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pattern-matching" title="Pattern Matching" class="md-nav__link">
+    Pattern Matching
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#traits" title="Traits" class="md-nav__link">
+    Traits
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generics" title="Generics" class="md-nav__link">
+    Generics
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#frameworks" title="Frameworks" class="md-nav__link">
+    Frameworks
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/john-cd/cheatsheets/edit/master/docs_src/Scala\Scala.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
+                
+                
+                  <h1>Scala</h1>
+                
+                <h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="http://docs.scala-lang.org/cheatsheets/">Scala Cheatsheet</a></li>
+<li><a href="https://www.tutorialspoint.com/scala/index.htm">Scala @ TutorialPoint</a></li>
+<li><a href="http://www.scala-lang.org/docu/files/ScalaTutorial.pdf">Scala Tutorial (PDF)</a></li>
+</ul>
+<h2 id="main-features-of-scala">Main Features of Scala<a class="headerlink" href="#main-features-of-scala" title="Permanent link">&para;</a></h2>
+<ul>
+<li>All types are objects</li>
+<li>Type inference</li>
+<li>Nested Functions</li>
+<li>Functions are objects</li>
+<li>Domain specific language (DSL) support</li>
+<li>Traits</li>
+<li>Closures</li>
+<li>Concurrency support inspired by Erlang</li>
+</ul>
+<h2 id="syntax">Syntax<a class="headerlink" href="#syntax" title="Permanent link">&para;</a></h2>
+<p>Class Names - For all class names, the first letter should be in Upper Case. If several words are used to form a name of the class, each inner word's first letter should be in Upper Case.</p>
+<p><code>class MyFirstScalaClass</code></p>
+<p>Method Names - All method names should start with a Lower Case letter. If multiple words are used to form the name of the method, then each inner word's first letter should be in Upper Case.</p>
+<p><code>def myMethodName()</code></p>
+<p>Program File Name - Name of the program file should exactly match the object name. When saving the file you should save it using the object name (Remember Scala is case-sensitive) and append ".scala" to the end of the name. If the file name and the object name do not match your program will not compile.</p>
+<p>Assume 'HelloWorld' is the object name: the file should be saved as 'HelloWorld.scala'.</p>
+<h2 id="keywords">Keywords<a class="headerlink" href="#keywords" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span>abstract
+case
+catch
+class
+def
+do
+else
+extends
+false
+final
+finally
+for
+forSome
+if
+implicit
+import
+lazy
+match
+new
+Null
+object
+override
+package
+private
+protected
+return
+sealed
+super
+this
+throw
+trait
+Try
+true
+type
+val
+var
+while
+with
+yield
+ -
+ :
+ =
+ =&gt;
+&lt;-
+&lt;:
+&lt;%
+&gt;:
+#
+@
+</pre></div>
+
+
+<h2 id="compilation">Compilation<a class="headerlink" href="#compilation" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span>scalac HelloWorld.scala  // produces HelloWorld.class
+scala -classpath . HelloWorld
+</pre></div>
+
+
+<h2 id="variables-and-values">Variables and Values<a class="headerlink" href="#variables-and-values" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="k">var</span> <span class="n">x</span> <span class="k">=</span> <span class="mi">5</span> <span class="c1">// variable</span>
+<span class="k">val</span> <span class="n">x</span> <span class="k">=</span> <span class="mi">5</span> <span class="c1">// &quot;const&quot;</span>
+<span class="k">var</span> <span class="n">x</span><span class="k">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">5</span> <span class="c1">// explicit type</span>
+</pre></div>
+
+
+<h2 id="entry-point">Entry Point<a class="headerlink" href="#entry-point" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="k">object</span> <span class="nc">HelloWorld</span> <span class="o">{</span>
+    <span class="k">def</span> <span class="n">main</span><span class="o">(</span><span class="n">args</span><span class="k">:</span> <span class="kt">Array</span><span class="o">[</span><span class="kt">String</span><span class="o">])</span> <span class="o">{</span>
+        <span class="n">println</span><span class="o">(</span><span class="s">&quot;Hello, world!&quot;</span><span class="o">)</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+
+
+<p>Static members (methods or fields) do not exist in Scala. Rather than defining static members, the Scala programmer declares these members in singleton objects, that is a class with a single instance.</p>
+<h2 id="imports">Imports<a class="headerlink" href="#imports" title="Permanent link">&para;</a></h2>
+<p>All classes from the java.lang package are imported by default, while others need to be imported explicitly.</p>
+<div class="codehilite"><pre><span></span>import scala.collection.mutable.HashMap
+
+import java.util.{Date, Locale}  // Multiple classes can be imported from the same package by enclosing them in curly braces
+import java.text.DateFormat
+import java.text.DateFormat._    // When importing all the names of a package or class, one uses the underscore character (_) instead of the asterisk (*). 
+
+object FrenchDate {
+    def main(args: Array[String]) {
+        val now = new Date
+        val df = getDateInstance(LONG, Locale.FRANCE)
+    println(df format now)       // Methods taking one argument can be used with an infix syntax. Equivalent to df.format(now)   
+    }
+}
+</pre></div>
+
+
+<h2 id="scala-is-object-oriented">Scala is Object-Oriented<a class="headerlink" href="#scala-is-object-oriented" title="Permanent link">&para;</a></h2>
+<p>Scala is a pure object-oriented language in the sense that everything is an object, including numbers or functions. </p>
+<p><code>1 + 2 * 3 / x</code> consists exclusively of method calls, because it is equivalent to the following expression: <code>(1).+(((2).*(3))./(x))</code>
+This also means that +, *, etc. are valid identifiers in Scala.</p>
+<p>Types and behavior of objects are described by classes and traits.</p>
+<p>Classes are extended by subclassing and a flexible mixin-based composition mechanism as a clean replacement for multiple inheritance.</p>
+<div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">Complex</span><span class="o">(</span><span class="n">real</span><span class="k">:</span> <span class="kt">Double</span><span class="o">,</span> <span class="n">imaginary</span><span class="k">:</span> <span class="kt">Double</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">def</span> <span class="n">re</span> <span class="k">=</span> <span class="n">real</span>       <span class="c1">// return type inferred automatically by the compiler  </span>
+    <span class="k">def</span> <span class="n">im</span> <span class="k">=</span> <span class="n">imaginary</span>  <span class="c1">// methods withot arguments</span>
+    <span class="k">override</span> <span class="k">def</span> <span class="n">toString</span><span class="o">()</span> <span class="k">=</span> <span class="s">&quot;&quot;</span> <span class="o">+</span> <span class="n">re</span> <span class="o">+</span> <span class="o">(</span><span class="k">if</span> <span class="o">(</span><span class="n">im</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="o">)</span> <span class="s">&quot;&quot;</span> <span class="k">else</span> <span class="s">&quot;+&quot;</span><span class="o">)</span> <span class="o">+</span> <span class="n">im</span> <span class="o">+</span> <span class="s">&quot;i&quot;</span>  <span class="c1">// override methods inherited from a super-class</span>
+<span class="o">}</span>
+</pre></div>
+
+
+<h2 id="scala-is-functional">Scala is Functional<a class="headerlink" href="#scala-is-functional" title="Permanent link">&para;</a></h2>
+<p>Scala is also a functional language in the sense that every function is a value and every value is an object so ultimately every function is an object.
+Scala provides a lightweight syntax for defining anonymous functions, it supports higher-order functions, it allows functions to be nested, and supports currying. </p>
+<div class="codehilite"><pre><span></span><span class="k">object</span> <span class="nc">Timer</span> <span class="o">{</span>
+    <span class="k">def</span> <span class="n">oncePerSecond</span><span class="o">(</span><span class="n">callback</span><span class="k">:</span> <span class="o">()</span> <span class="o">=&gt;</span> <span class="nc">Unit</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">while</span> <span class="o">(</span><span class="kc">true</span><span class="o">)</span> <span class="o">{</span> <span class="n">callback</span><span class="o">();</span> <span class="nc">Thread</span> <span class="n">sleep</span> <span class="mi">1000</span> <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="k">def</span> <span class="n">timeFlies</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">println</span><span class="o">(</span><span class="s">&quot;time flies like an arrow...&quot;</span><span class="o">)</span>
+    <span class="o">}</span>
+
+    <span class="k">def</span> <span class="n">main</span><span class="o">(</span><span class="n">args</span><span class="k">:</span> <span class="kt">Array</span><span class="o">[</span><span class="kt">String</span><span class="o">])</span> <span class="o">{</span>
+        <span class="n">oncePerSecond</span><span class="o">(</span><span class="n">timeFlies</span><span class="o">)</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+
+
+<h3 id="anonymous-functions">Anonymous Functions<a class="headerlink" href="#anonymous-functions" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>object TimerAnonymous {
+    def oncePerSecond(callback: () =&gt; Unit) {
+        while (true) { callback(); Thread sleep 1000 }
+    }
+    def main(args: Array[String]) {
+        oncePerSecond(() =&gt; println(&quot;time flies like an arrow...&quot;))
+    }
+}
+</pre></div>
+
+
+<h2 id="case-classes">Case Classes<a class="headerlink" href="#case-classes" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="k">abstract</span> <span class="k">class</span> <span class="nc">Tree</span>
+<span class="k">case</span> <span class="k">class</span> <span class="nc">Sum</span><span class="o">(</span><span class="n">l</span><span class="k">:</span> <span class="kt">Tree</span><span class="o">,</span> <span class="n">r</span><span class="k">:</span> <span class="kt">Tree</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Tree</span>
+<span class="k">case</span> <span class="k">class</span> <span class="nc">Var</span><span class="o">(</span><span class="n">n</span><span class="k">:</span> <span class="kt">String</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Tree</span>
+<span class="k">case</span> <span class="k">class</span> <span class="nc">Const</span><span class="o">(</span><span class="n">v</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Tree</span>
+</pre></div>
+
+
+<ul>
+<li>The <code>new</code> keyword is not mandatory to create instances of these classes (i.e. one can write Const(5) instead of new Const(5)),</li>
+<li>Getter functions are automatically defined for the constructor parameters (i.e. it is possible to get the value of the v constructor parameter of some instance c of class Const just by writing c.v),</li>
+<li>Default definitions for methods equals and hashCode are provided, which work on the structure of the instances and not on their identity,</li>
+<li>A default definition for method toString is provided, and prints the value in a source form (e.g. the tree for expression x+1 prints as Sum(Var(x),Const(1))),</li>
+<li>Instances of these classes can be decomposed through pattern matching</li>
+</ul>
+<h2 id="pattern-matching">Pattern Matching<a class="headerlink" href="#pattern-matching" title="Permanent link">&para;</a></h2>
+<p><code>{ case "x" =&gt; 5 }</code> defines a function which, when given the string "x" as argument, returns the integer 5, and fails with an exception otherwise.</p>
+<div class="codehilite"><pre><span></span><span class="k">type</span> <span class="kt">Environment</span> <span class="o">=</span> <span class="nc">String</span> <span class="k">=&gt;</span> <span class="nc">Int</span>  <span class="c1">// the type Environment can be used as an alias of the type of functions from String to Int</span>
+
+
+<span class="k">def</span> <span class="n">eval</span><span class="o">(</span><span class="n">t</span><span class="k">:</span> <span class="kt">Tree</span><span class="o">,</span> <span class="n">env</span><span class="k">:</span> <span class="kt">Environment</span><span class="o">)</span><span class="k">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="n">t</span> <span class="k">match</span> <span class="o">{</span>
+    <span class="k">case</span> <span class="nc">Sum</span><span class="o">(</span><span class="n">l</span><span class="o">,</span> <span class="n">r</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="n">eval</span><span class="o">(</span><span class="n">l</span><span class="o">,</span> <span class="n">env</span><span class="o">)</span> <span class="o">+</span> <span class="n">eval</span><span class="o">(</span><span class="n">r</span><span class="o">,</span> <span class="n">env</span><span class="o">)</span>
+    <span class="k">case</span> <span class="nc">Var</span><span class="o">(</span><span class="n">n</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="n">env</span><span class="o">(</span><span class="n">n</span><span class="o">)</span>
+    <span class="k">case</span> <span class="nc">Const</span><span class="o">(</span><span class="n">v</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="n">v</span>
+<span class="o">}</span>
+
+<span class="k">def</span> <span class="n">derive</span><span class="o">(</span><span class="n">t</span><span class="k">:</span> <span class="kt">Tree</span><span class="o">,</span> <span class="n">v</span><span class="k">:</span> <span class="kt">String</span><span class="o">)</span><span class="k">:</span> <span class="kt">Tree</span> <span class="o">=</span> <span class="n">t</span> <span class="k">match</span> <span class="o">{</span>
+    <span class="k">case</span> <span class="nc">Sum</span><span class="o">(</span><span class="n">l</span><span class="o">,</span> <span class="n">r</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="nc">Sum</span><span class="o">(</span><span class="n">derive</span><span class="o">(</span><span class="n">l</span><span class="o">,</span> <span class="n">v</span><span class="o">),</span> <span class="n">derive</span><span class="o">(</span><span class="n">r</span><span class="o">,</span> <span class="n">v</span><span class="o">))</span>
+    <span class="k">case</span> <span class="nc">Var</span><span class="o">(</span><span class="n">n</span><span class="o">)</span> <span class="k">if</span> <span class="o">(</span><span class="n">v</span> <span class="o">==</span> <span class="n">n</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="nc">Const</span><span class="o">(</span><span class="mi">1</span><span class="o">)</span>                  <span class="c1">// guard, an expression following the if keyword.</span>
+    <span class="k">case</span> <span class="k">_</span> <span class="k">=&gt;</span> <span class="nc">Const</span><span class="o">(</span><span class="mi">0</span><span class="o">)</span>                                   <span class="c1">// wild-card, written _, which is a pattern matching any value, without giving it a name. </span>
+<span class="o">}</span>
+</pre></div>
+
+
+<h2 id="traits">Traits<a class="headerlink" href="#traits" title="Permanent link">&para;</a></h2>
+<p>Apart from inheriting code from a super-class, a Scala class can also import code from one or several traits i.e. interfaces which can also contain code. 
+In Scala, when a class inherits from a trait, it implements that traits's interface, and inherits all the code contained in the trait.</p>
+<div class="codehilite"><pre><span></span><span class="k">trait</span> <span class="nc">Ord</span> <span class="o">{</span>
+<span class="k">def</span> <span class="o">&lt;</span> <span class="o">(</span><span class="n">that</span><span class="k">:</span> <span class="kt">Any</span><span class="o">)</span><span class="k">:</span> <span class="kt">Boolean</span>                                   <span class="c1">// The type Any which is used above is the type which is a super-type of all other types in Scala</span>
+<span class="k">def</span> <span class="o">&lt;=(</span><span class="n">that</span><span class="k">:</span> <span class="kt">Any</span><span class="o">)</span><span class="k">:</span> <span class="kt">Boolean</span> <span class="o">=</span> <span class="o">(</span><span class="k">this</span> <span class="o">&lt;</span> <span class="n">that</span><span class="o">)</span> <span class="o">||</span> <span class="o">(</span><span class="k">this</span> <span class="o">==</span> <span class="n">that</span><span class="o">)</span>
+<span class="k">def</span> <span class="o">&gt;</span> <span class="o">(</span><span class="n">that</span><span class="k">:</span> <span class="kt">Any</span><span class="o">)</span><span class="k">:</span> <span class="kt">Boolean</span> <span class="o">=</span> <span class="o">!(</span><span class="k">this</span> <span class="o">&lt;=</span> <span class="n">that</span><span class="o">)</span>
+<span class="k">def</span> <span class="o">&gt;=(</span><span class="n">that</span><span class="k">:</span> <span class="kt">Any</span><span class="o">)</span><span class="k">:</span> <span class="kt">Boolean</span> <span class="o">=</span> <span class="o">!(</span><span class="k">this</span> <span class="o">&lt;</span> <span class="n">that</span><span class="o">)</span>
+<span class="o">}</span>
+
+<span class="k">class</span> <span class="nc">Date</span><span class="o">(</span><span class="n">y</span><span class="k">:</span> <span class="kt">Int</span><span class="o">,</span> <span class="n">m</span><span class="k">:</span> <span class="kt">Int</span><span class="o">,</span> <span class="n">d</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Ord</span> <span class="o">{</span>
+    <span class="k">def</span> <span class="n">year</span> <span class="k">=</span> <span class="n">y</span>
+    <span class="k">def</span> <span class="n">month</span> <span class="k">=</span> <span class="n">m</span>
+    <span class="k">def</span> <span class="n">day</span> <span class="k">=</span> <span class="n">d</span>
+    <span class="k">override</span> <span class="k">def</span> <span class="n">toString</span><span class="o">()</span><span class="k">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="n">year</span> <span class="o">+</span> <span class="s">&quot;-&quot;</span> <span class="o">+</span> <span class="n">month</span> <span class="o">+</span> <span class="s">&quot;-&quot;</span> <span class="o">+</span> <span class="n">day</span>
+
+    <span class="k">override</span> <span class="k">def</span> <span class="n">equals</span><span class="o">(</span><span class="n">that</span><span class="k">:</span> <span class="kt">Any</span><span class="o">)</span><span class="k">:</span> <span class="kt">Boolean</span> <span class="o">=</span>
+        <span class="n">that</span><span class="o">.</span><span class="n">isInstanceOf</span><span class="o">[</span><span class="kt">Date</span><span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="o">{</span>
+        <span class="k">val</span> <span class="n">o</span> <span class="k">=</span> <span class="n">that</span><span class="o">.</span><span class="n">asInstanceOf</span><span class="o">[</span><span class="kt">Date</span><span class="o">]</span>
+        <span class="n">o</span><span class="o">.</span><span class="n">day</span> <span class="o">==</span> <span class="n">day</span> <span class="o">&amp;&amp;</span> <span class="n">o</span><span class="o">.</span><span class="n">month</span> <span class="o">==</span> <span class="n">month</span> <span class="o">&amp;&amp;</span> <span class="n">o</span><span class="o">.</span><span class="n">year</span> <span class="o">==</span> <span class="n">year</span>
+    <span class="o">}</span>
+
+    <span class="k">def</span> <span class="o">&lt;(</span><span class="n">that</span><span class="k">:</span> <span class="kt">Any</span><span class="o">)</span><span class="k">:</span> <span class="kt">Boolean</span> <span class="o">=</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(!</span><span class="n">that</span><span class="o">.</span><span class="n">isInstanceOf</span><span class="o">[</span><span class="kt">Date</span><span class="o">])</span>
+            <span class="n">error</span><span class="o">(</span><span class="s">&quot;cannot compare &quot;</span> <span class="o">+</span> <span class="n">that</span> <span class="o">+</span> <span class="s">&quot; and a Date&quot;</span><span class="o">)</span>
+        <span class="k">val</span> <span class="n">o</span> <span class="k">=</span> <span class="n">that</span><span class="o">.</span><span class="n">asInstanceOf</span><span class="o">[</span><span class="kt">Date</span><span class="o">](</span><span class="n">year</span> <span class="o">&lt;</span> <span class="n">o</span><span class="o">.</span><span class="n">year</span><span class="o">)</span> <span class="o">||</span>
+            <span class="o">(</span><span class="n">year</span> <span class="o">==</span> <span class="n">o</span><span class="o">.</span><span class="n">year</span> <span class="o">&amp;&amp;</span> <span class="o">(</span><span class="n">month</span> <span class="o">&lt;</span> <span class="n">o</span><span class="o">.</span><span class="n">month</span> <span class="o">||</span>
+            <span class="o">(</span><span class="n">month</span> <span class="o">==</span> <span class="n">o</span><span class="o">.</span><span class="n">month</span> <span class="o">&amp;&amp;</span> <span class="n">day</span> <span class="o">&lt;</span> <span class="n">o</span><span class="o">.</span><span class="n">day</span>    <span class="o">)))</span>
+    <span class="o">}</span>
+
+<span class="o">}</span>
+</pre></div>
+
+
+<h2 id="generics">Generics<a class="headerlink" href="#generics" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">Reference</span><span class="o">[</span><span class="kt">T</span><span class="o">]</span> <span class="o">{</span>
+    <span class="k">private</span> <span class="k">var</span> <span class="n">contents</span><span class="k">:</span> <span class="kt">T</span> <span class="o">=</span> <span class="k">_</span>             <span class="c1">// _ represents a default value. This default value is 0 for numeric types, false for the Boolean type, () for the Unit type and null for all object types.</span>
+    <span class="k">def</span> <span class="n">set</span><span class="o">(</span><span class="n">value</span><span class="k">:</span> <span class="kt">T</span><span class="o">)</span> <span class="o">{</span> <span class="n">contents</span> <span class="k">=</span> <span class="n">value</span> <span class="o">}</span>
+    <span class="k">def</span> <span class="n">get</span><span class="k">:</span> <span class="kt">T</span> <span class="o">=</span> <span class="n">contents</span>
+<span class="o">}</span>
+</pre></div>
+
+
+<h2 id="frameworks">Frameworks<a class="headerlink" href="#frameworks" title="Permanent link">&para;</a></h2>
+<ul>
+<li>The Lift Framework</li>
+<li>The Play framework</li>
+<li>The Bowler framework</li>
+<li>Akka</li>
+</ul>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../Python/Python3/" title="Python3" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Python3
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../Search/ElasticSearch/" title="ElasticSearch" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                ElasticSearch
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2017 S. John Cruchon-Dupeyrat
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/john-cd" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/sjncd" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://www.linkedin.com/in/scdupeyrat/" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application-3964c0cb56.js"></script>
+      <script>app.initialize({url:{base:"../.."}})</script>
+      
+    
+    
+      
+      <script>!function(e,t,a,n,o,c,i){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,c=t.createElement(a),i=t.getElementsByTagName(a)[0],c.async=1,c.src=n,i.parentNode.insertBefore(c,i)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-92780605-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var t=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",t,e.href)})});var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})</script>
+      
+    
+  </body>
+</html>
