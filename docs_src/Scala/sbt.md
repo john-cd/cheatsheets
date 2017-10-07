@@ -1,14 +1,12 @@
 
-
-# SBT
-
-## Links
+## SBT Links
 
 http://www.scala-sbt.org/
 
 https://twitter.github.io/scala_school/sbt.html
 
 https://github.com/shekhargulati/52-technologies-in-2016/blob/master/02-sbt/README.md
+
 
 ## Create a New Project
 
@@ -20,6 +18,9 @@ $ sbt
 > run
 > exit
 ```
+
+https://github.com/foundweekends/giter8/wiki/giter8-templates
+
 
 ## Layout
 
@@ -94,6 +95,7 @@ SettingKey[T]: a key for a value computed once (the value is computed when loadi
 TaskKey[T]: a key for a value, called a task, that has to be recomputed each time, potentially with side effects.
 InputKey[T]: a key for a task that has command line arguments as input. Check out Input Tasks for more details.
 ```
+
 
 ### Built-in Keys 
 
