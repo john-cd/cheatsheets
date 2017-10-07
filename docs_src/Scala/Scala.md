@@ -18,7 +18,7 @@
 - Concurrency support inspired by Erlang
 
 
-## Syntax
+## Style
 
 Class Names - For all class names, the first letter should be in Upper Case. If several words are used to form a name of the class, each inner word's first letter should be in Upper Case.
 
@@ -98,7 +98,7 @@ scala -classpath . HelloWorld
 
 ```scala
 var x = 5 // variable
-val x = 5 // "const"
+val x = 5 // immutable value / "const" 
 var x: Double = 5 // explicit type
 ```
 
@@ -120,7 +120,7 @@ Static members (methods or fields) do not exist in Scala. Rather than defining s
 
 All classes from the java.lang package are imported by default, while others need to be imported explicitly.
 
-```
+```scala
 import scala.collection.mutable.HashMap
 
 import java.util.{Date, Locale}  // Multiple classes can be imported from the same package by enclosing them in curly braces
@@ -177,9 +177,10 @@ object Timer {
 }
 ```
 
+
 ### Anonymous Functions
 
-```
+```scala
 object TimerAnonymous {
     def oncePerSecond(callback: () => Unit) {
         while (true) { callback(); Thread sleep 1000 }
@@ -189,6 +190,39 @@ object TimerAnonymous {
     }
 }
 ```
+
+
+### Variable Length Arguments
+
+There is a special syntax for methods that can take parameters of a repeated type. To apply String’s capitalize function to several strings, you might write:
+
+```scala
+def capitalizeAll(args: String*) = {
+      args.map { arg =>
+        arg.capitalize
+      }
+    }
+
+//    scala> capitalizeAll("rarity", "applejack")
+```    
+
+
+### Partial Applications
+
+```shell
+scala> def adder(m: Int, n: Int) = m + n
+adder: (m: Int,n: Int)Int
+scala> val add2 = adder(2, _:Int)
+add2: (Int) => Int = <function1>
+
+scala> add2(3)
+res50: Int = 5
+```
+
+You can partially apply any argument in the argument list, not just the last one.
+
+
+
 
 ## Case Classes
 
@@ -235,10 +269,10 @@ In Scala, when a class inherits from a trait, it implements that traits's interf
 
 ```scala
 trait Ord {
-def < (that: Any): Boolean                                   // The type Any which is used above is the type which is a super-type of all other types in Scala
-def <=(that: Any): Boolean = (this < that) || (this == that)
-def > (that: Any): Boolean = !(this <= that)
-def >=(that: Any): Boolean = !(this < that)
+    def < (that: Any): Boolean                                   // The type Any which is used above is the type which is a super-type of all other types in Scala
+    def <=(that: Any): Boolean = (this < that) || (this == that)
+    def > (that: Any): Boolean = !(this <= that)
+    def >=(that: Any): Boolean = !(this < that)
 }
 
 class Date(y: Int, m: Int, d: Int) extends Ord {
@@ -268,6 +302,16 @@ class Date(y: Int, m: Int, d: Int) extends Ord {
 ## Generics
 
 ```scala
+trait Cache[K, V] {
+      def get(key: K): V
+      def put(key: K, value: V)
+      def delete(key: K)
+    }
+    
+def remove[K](key: K)
+```
+
+```scala
 class Reference[T] {
     private var contents: T = _             // _ represents a default value. This default value is 0 for numeric types, false for the Boolean type, () for the Unit type and null for all object types.
     def set(value: T) { contents = value }
@@ -276,9 +320,44 @@ class Reference[T] {
 ```
 
 
+## Root Package
+
+The scala package contains core types like Int, Float, Array or Option which are accessible in all Scala compilation units without explicit qualification or imports.
+
+Notable packages include:
+
+	scala.collection and its sub-packages contain Scala's collections framework
+	scala.collection.immutable - Immutable, sequential data-structures such as Vector, List, Range, HashMap or HashSet
+	scala.collection.mutable - Mutable, sequential data-structures such as ArrayBuffer, StringBuilder, HashMap or HashSet
+	scala.collection.concurrent - Mutable, concurrent data-structures such as TrieMap
+	scala.collection.parallel.immutable - Immutable, parallel data-structures such as ParVector, ParRange, ParHashMap or ParHashSet
+	scala.collection.parallel.mutable - Mutable, parallel data-structures such as ParArray, ParHashMap, ParTrieMap or ParHashSet
+	scala.concurrent - Primitives for concurrent programming such as Futures and Promises
+	scala.io - Input and output operations
+	scala.math - Basic math functions and additional numeric types like BigInt and BigDecimal
+	scala.sys - Interaction with other processes and the operating system
+	scala.util.matching - Regular expressions
+
+
+Additional parts of the standard library are shipped as separate libraries. These include:
+
+	scala.reflect - Scala's reflection API (scala-reflect.jar)
+	scala.xml - XML parsing, manipulation, and serialization (scala-xml.jar)
+	scala.swing - A convenient wrapper around Java's GUI framework called Swing (scala-swing.jar)
+	scala.util.parsing - Parser combinators (scala-parser-combinators.jar)
+	Automatic imports
+
+Identifiers in the scala package and the scala.Predef object are always in scope by default.
+
+Some of these identifiers are type aliases provided as shortcuts to commonly used classes. For example, List is an alias for scala.collection.immutable.List.
+
+Other aliases refer to classes provided by the underlying platform. For example, on the JVM, String is an alias for java.lang.String.
+
+
 ## Frameworks
 
 - The Lift Framework
 - The Play framework
 - The Bowler framework
 - Akka
+- Finagle
