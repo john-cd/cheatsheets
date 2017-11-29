@@ -1,4 +1,13 @@
+---
+title: IntelliJ Cheatsheet
+category: dev
+tags: tools
+comments: true
+---
+
 # IntelliJ
+
+## Shortcuts
 
     Search Anywhere     Double Shift
     Got to file         Ctrl + Shift + N
