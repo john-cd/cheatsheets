@@ -1,3 +1,8 @@
+---
+title: Scala
+category: Scala
+tags: Scala
+---
 
 ## Links
 
@@ -87,12 +92,20 @@ Assume 'HelloWorld' is the object name: the file should be saved as 'HelloWorld.
 
 ## Tools
 
-REPL http://ammonite.io/#ScalaScripts
+REPL [http://ammonite.io/](http://ammonite.io/)
 
-https://scalafiddle.io/
+[https://scalafiddle.io/](https://scalafiddle.io/)
+
+
+## Frameworks
+
+- [The Lift Framework]( https://liftweb.net/ )
+- [The Play framework]( https://www.playframework.com/ )
+- [The Bowler framework]( https://github.com/bowler-framework/bowler-quickstart )
+- [Akka]( http://akka.io/ )
 
   
-### Install
+## Install
 
 * Need to have Java Software Development Kit (SDK) installed 
 
@@ -105,7 +118,7 @@ export JAVA_HOME=/usr/local/java-current
 export PATH=$PATH:$JAVA_HOME/bin/
 ```
 
-http://www.scala-lang.org/download/
+[http://www.scala-lang.org/download/](http://www.scala-lang.org/download/)
 
 ### Compilation
 
@@ -216,11 +229,11 @@ xs(2)	        // paren indexing
 () // (empty parens)	sole member of the Unit type (like C/Java void).
 ```
 
-### Control constructs
+## Control Constructs
 
 ```scala
 if (check) happy else sad	// conditional.
-if (check) happy                // same as 
+if (check) happy            // same as 
 if (check) happy else ()	// conditional sugar.
 while (x < 5) { println(x); x += 1}	// while loop.
 do { println(x); x += 1} while (x < 5)	// do while loop.
@@ -248,7 +261,7 @@ println(i)
 }	// for comprehension: iterate omitting the upper bound
 ```
 
-## Object Orientation
+## Classes
  
 ```scala
 class C(x: R)	constructor params - x is only available in class body
@@ -445,13 +458,6 @@ res50: Int = 5
 
 You can partially apply any argument in the argument list, not just the last one.
 
-### Types
-
-```scala
-type R = Double // type alias
-```
-
-
 
 ## Case Classes
 
@@ -514,8 +520,6 @@ case _ => println("Not 42")
 // Thus, the value contained within UppercaseVal is checked against 3, and “Not 42” is printed.
 ```
 
-
-
 ## Traits
 
 Apart from inheriting code from a super-class, a Scala class can also import code from one or several traits i.e. interfaces which can also contain code. 
@@ -552,6 +556,78 @@ class Date(y: Int, m: Int, d: Int) extends Ord {
 }
 ```
 
+## Classes versus Traits
+
+Use classes:
+
+When a behavior is not going to be reused at all or in multiple places
+When you plan to use your Scala code from another language, for example, if you are building a library that could be used in Java
+
+Use traits:
+
+When a behavior is going to be reused in multiple unrelated classes.
+When you want to define interfaces and want to use them outside Scala, for example Java. The reason is that the traits that do not have any implementations are compiled similar to interfaces.
+
+## Self type
+
+Self-types are a way to declare that a trait must be mixed into another trait, even though it doesn’t directly extend it. That makes the members of the dependency available without imports.
+
+```scala
+trait User {
+  def username: String
+}
+
+trait Tweeter {
+  this: User =>  // reassign this
+  def tweet(tweetText: String) = println(s"$username: $tweetText")
+}
+
+class VerifiedTweeter(val username_ : String) extends Tweeter with User {  // We mixin User because Tweeter required it
+  def username = s"real $username_"
+}
+```
+
+### Difference between a self type and extending a trait:
+
+
+* If you say  B extends A, then B is an A. When you use self-types, B requires an A. 
+
+There are two specific requirements that are created with self-types:
+1. If B is extended, then you're required to mix-in an A.
+1. When a concrete class finally extends/mixes-in these traits, some class/trait must implement A.
+
+```scala
+trait Wrong extends Tweeter {
+     def noCanDo = name        // does not compile
+}
+```
+
+If Tweeter was a subclass of User, there would be no error. In the code above, we required a User whenever Tweeter is used, however a User wasn't provided to Wrong, so we got an error. 
+
+* Self types allow you to define cyclical dependencies. For example, you can achieve this:
+
+```scala
+trait A { self: B => }
+trait B { self: A => }
+```
+
+Inheritance using extends does not allow that.
+
+
+* Because self-types aren't part of the hierarchy of the required class they can be excluded from pattern matching, especially when you are exhaustively matching against a sealed hierarchy. This is convenient when you want to model orthogonal behaviors such as:
+
+```scala
+sealed trait Person
+trait Student extends Person
+trait Teacher extends Person
+trait Adult { this : Person => } // orthogonal to its condition
+
+val p : Person = new Student {}
+p match {
+  case s : Student => println("a student")
+  case t : Teacher => println("a teacher")
+} // that's it we're exhaustive
+```
 
 ## Generics
 
@@ -572,6 +648,36 @@ class Reference[T] {
     def get: T = contents
 }
 ```
+
+## Abstract types
+
+```scala
+type R = Double // type alias
+```
+
+```scala
+trait Container {
+  type T
+  val data: T
+
+  def compare(other: T) = data.equals(other) 
+}
+
+class StringContainer(val data: String) extends Container {
+  override type T = String
+}
+```
+
+## Generics vs Abstract Types
+
+Generics:
+If you need, just type instantiation. A good example is the standard collection classes.
+If you are creating a family of types.
+
+Abstract types:
+If you want to allow people to mix in types using traits.
+If you need better readability in scenarios where both could be interchangeable.
+If you want to hide the type definition from the client code.
 
 
 ## Root Package
@@ -607,10 +713,3 @@ Some of these identifiers are type aliases provided as shortcuts to commonly use
 
 Other aliases refer to classes provided by the underlying platform. For example, on the JVM, String is an alias for java.lang.String.
 
-
-## Frameworks
-
-- [The Lift Framework]( https://liftweb.net/ )
-- [The Play framework]( https://www.playframework.com/ )
-- [The Bowler framework]( https://github.com/bowler-framework/bowler-quickstart )
-- [Akka]( http://akka.io/ )

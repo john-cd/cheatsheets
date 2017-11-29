@@ -1,3 +1,9 @@
+---
+title: Akka Cheatsheet
+category: Scala
+tags: 
+---
+
 # Akka
 
 Actors have:
@@ -7,6 +13,8 @@ Actors have:
 - Messages (pieces of data representing a signal, similar to method calls and their parameters).
 - An execution environment (the machinery that takes actors that have messages to react to and invokes their message handling code).
 - An address.
+
+sbt:
 
 ```scala
 libraryDependencies ++= Seq(
