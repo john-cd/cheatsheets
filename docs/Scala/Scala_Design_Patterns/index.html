@@ -1,0 +1,1442 @@
+
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A collection of cheatsheets and code snippets.">
+      
+      
+        <link rel="canonical" href="http://john-cd.com/cheatsheets/Scala/Scala_Design_Patterns/">
+      
+      
+        <meta name="author" content="S. John Cruchon-Dupeyrat">
+      
+      
+        <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      
+      <meta name="generator" content="mkdocs-0.16.1, mkdocs-material-1.4.1">
+    
+    
+      
+        <title>Scala Design Patterns</title>
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr-56ade86843.js"></script>
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application-76741b64bc.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-66fa0d9bba.palette.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+  
+  
+  
+    <body data-md-color-primary="deep-orange" data-md-color-accent="orange">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <a href="../.." title="John's Cheatsheets" class="md-icon md-icon--home md-header-nav__button">
+          </a>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                <span class="md-header-nav__parent">
+                  Scala
+                </span>
+              
+            
+            Scala Design Patterns
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search">
+  <div class="md-search__overlay"></div>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <div class="md-header-nav__source">
+          
+            
+
+
+  
+
+
+  <a href="https://github.com/john-cd/cheatsheets" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      john-cd/cheatsheets
+    </div>
+  </a>
+
+          
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    
+      <i class="md-icon md-icon--home md-nav__button"></i>
+    
+    John's Cheatsheets
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/john-cd/cheatsheets" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      john-cd/cheatsheets
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Big Data
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Big Data
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Big_Data/Hadoop_Ecosystem/" title="Hadoop Ecosystem" class="md-nav__link">
+      Hadoop Ecosystem
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Big_Data/Spark/" title="Spark" class="md-nav__link">
+      Spark
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Cloud
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Cloud
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Cloud/AWS/" title="AWS" class="md-nav__link">
+      AWS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Cloud/Serverless/" title="Serverless" class="md-nav__link">
+      Serverless
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Data Science
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Data Science
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Science/Data_Manipulation/" title="Data Manipulation" class="md-nav__link">
+      Data Manipulation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Science/Data_Visualization/" title="Data Visualization" class="md-nav__link">
+      Data Visualization
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Science/Machine_Learning/" title="Machine Learning" class="md-nav__link">
+      Machine Learning
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Databases
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Databases
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Databases/Mongodb/" title="Mongodb" class="md-nav__link">
+      Mongodb
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Databases/SQL/" title="SQL" class="md-nav__link">
+      SQL
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Deep Learning
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Deep Learning
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Deep_Learning/Keras/" title="Keras" class="md-nav__link">
+      Keras
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      DevOps
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        DevOps
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../DevOps/CloudFormation/" title="CloudFormation" class="md-nav__link">
+      CloudFormation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../DevOps/Docker/" title="Docker" class="md-nav__link">
+      Docker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../DevOps/Git/" title="Git" class="md-nav__link">
+      Git
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      Java
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        Java
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Java/Java/" title="Java" class="md-nav__link">
+      Java
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Java/Log4j/" title="Log4j" class="md-nav__link">
+      Log4j
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      Linux
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        Linux
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Linux/Linux/" title="Linux" class="md-nav__link">
+      Linux
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      Markup and Documentation
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        Markup and Documentation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Markup_and_Documentation/Jekyll/" title="Jekyll" class="md-nav__link">
+      Jekyll
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Markup_and_Documentation/Markdown/" title="Markdown" class="md-nav__link">
+      Markdown
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Markup_and_Documentation/MkDocs/" title="MkDocs" class="md-nav__link">
+      MkDocs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Markup_and_Documentation/reStructuredText/" title="reStructuredText" class="md-nav__link">
+      reStructuredText
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    
+    <label class="md-nav__link" for="nav-11">
+      Python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        Python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/Jupyter/" title="Jupyter" class="md-nav__link">
+      Jupyter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/Matplotlib/" title="Matplotlib" class="md-nav__link">
+      Matplotlib
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/Python3/" title="Python3" class="md-nav__link">
+      Python3
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12" checked>
+    
+    <label class="md-nav__link" for="nav-12">
+      Scala
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-12">
+        Scala
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Akka/" title="Akka" class="md-nav__link">
+      Akka
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Scala/" title="Scala" class="md-nav__link">
+      Scala
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Scala Design Patterns
+      </label>
+    
+    <a href="./" title="Scala Design Patterns" class="md-nav__link md-nav__link--active">
+      Scala Design Patterns
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#static-factory" title="Static Factory" class="md-nav__link">
+    Static Factory
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algebraic-data-types-and-pattern-matching" title="Algebraic Data Types and Pattern Matching" class="md-nav__link">
+    Algebraic Data Types and Pattern Matching
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stackable-traits" title="Stackable Traits" class="md-nav__link">
+    Stackable Traits
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#components-cake-pattern" title="Components / Cake Pattern" class="md-nav__link">
+    Components / Cake Pattern
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#type-classes-using-context-bound-type-parameters" title="Type Classes (using context-bound type parameters)" class="md-nav__link">
+    Type Classes (using context-bound type parameters)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visitor-pattern" title="Visitor Pattern" class="md-nav__link">
+    Visitor Pattern
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" title="Configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sbt/" title="Sbt" class="md-nav__link">
+      Sbt
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
+    
+    <label class="md-nav__link" for="nav-13">
+      Search
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-13">
+        Search
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Search/ElasticSearch/" title="ElasticSearch" class="md-nav__link">
+      ElasticSearch
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-14" type="checkbox" id="nav-14">
+    
+    <label class="md-nav__link" for="nav-14">
+      Software Development
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-14">
+        Software Development
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Software_Development/Development_Tools/" title="Development Tools" class="md-nav__link">
+      Development Tools
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Software_Development/IntelliJ/" title="IntelliJ" class="md-nav__link">
+      IntelliJ
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-15" type="checkbox" id="nav-15">
+    
+    <label class="md-nav__link" for="nav-15">
+      dotNET
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-15">
+        dotNET
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dotNET/ASPdotNET/" title="ASPdotNET" class="md-nav__link">
+      ASPdotNET
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dotNET/AkkadotNET/" title="AkkadotNET" class="md-nav__link">
+      AkkadotNET
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dotNET/C%23/" title="C#" class="md-nav__link">
+      C#
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dotNET/Multithreading/" title="Multithreading" class="md-nav__link">
+      Multithreading
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dotNET/WPF/" title="WPF" class="md-nav__link">
+      WPF
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#static-factory" title="Static Factory" class="md-nav__link">
+    Static Factory
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algebraic-data-types-and-pattern-matching" title="Algebraic Data Types and Pattern Matching" class="md-nav__link">
+    Algebraic Data Types and Pattern Matching
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stackable-traits" title="Stackable Traits" class="md-nav__link">
+    Stackable Traits
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#components-cake-pattern" title="Components / Cake Pattern" class="md-nav__link">
+    Components / Cake Pattern
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#type-classes-using-context-bound-type-parameters" title="Type Classes (using context-bound type parameters)" class="md-nav__link">
+    Type Classes (using context-bound type parameters)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visitor-pattern" title="Visitor Pattern" class="md-nav__link">
+    Visitor Pattern
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" title="Configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/john-cd/cheatsheets/edit/master/docs_src/Scala\Scala_Design_Patterns.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
+                
+                
+                  <h1>Scala Design Patterns</h1>
+                
+                <h2 id="static-factory">Static Factory<a class="headerlink" href="#static-factory" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="k">trait</span> <span class="nc">Animal</span>
+<span class="k">class</span> <span class="nc">Bird</span> <span class="k">extends</span> <span class="nc">Animal</span>
+<span class="k">class</span> <span class="nc">Mammal</span> <span class="k">extends</span> <span class="nc">Animal</span>
+<span class="k">class</span> <span class="nc">Fish</span> <span class="k">extends</span> <span class="nc">Animal</span>
+
+<span class="k">object</span> <span class="nc">Animal</span> <span class="o">{</span>
+  <span class="k">def</span> <span class="n">apply</span><span class="o">(</span><span class="n">animal</span><span class="k">:</span> <span class="kt">String</span><span class="o">)</span><span class="k">:</span> <span class="kt">Animal</span> <span class="o">=</span> <span class="n">animal</span><span class="o">.</span><span class="n">toLowerCase</span> <span class="k">match</span> <span class="o">{</span>
+    <span class="k">case</span> <span class="s">&quot;bird&quot;</span> <span class="k">=&gt;</span> <span class="k">new</span> <span class="nc">Bird</span>
+    <span class="k">case</span> <span class="s">&quot;mammal&quot;</span> <span class="k">=&gt;</span> <span class="k">new</span> <span class="nc">Mammal</span>
+    <span class="k">case</span> <span class="s">&quot;fish&quot;</span> <span class="k">=&gt;</span> <span class="k">new</span> <span class="nc">Fish</span>
+    <span class="k">case</span> <span class="n">x</span><span class="k">:</span> <span class="kt">String</span> <span class="o">=&gt;</span> <span class="k">throw</span> <span class="k">new</span> <span class="nc">RuntimeException</span><span class="o">(</span><span class="s">s&quot;Unknown animal: </span><span class="si">$x</span><span class="s">&quot;</span><span class="o">)</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+
+
+<h2 id="algebraic-data-types-and-pattern-matching">Algebraic Data Types and Pattern Matching<a class="headerlink" href="#algebraic-data-types-and-pattern-matching" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="k">sealed</span> <span class="k">trait</span> <span class="nc">Shape</span> 
+<span class="k">case</span> <span class="k">class</span> <span class="nc">Circle</span><span class="o">(</span><span class="n">radius</span><span class="k">:</span> <span class="kt">Double</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Shape</span> 
+<span class="k">case</span> <span class="k">class</span> <span class="nc">Rectangle</span><span class="o">(</span><span class="n">height</span><span class="k">:</span> <span class="kt">Double</span><span class="o">,</span> <span class="n">width</span><span class="k">:</span> <span class="kt">Double</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Shape</span>
+
+<span class="k">object</span> <span class="nc">Shape</span> <span class="o">{</span> 
+  <span class="k">def</span> <span class="n">area</span><span class="o">(</span><span class="n">shape</span><span class="k">:</span> <span class="kt">Shape</span><span class="o">)</span><span class="k">:</span> <span class="kt">Double</span> <span class="o">=</span> 
+    <span class="n">shape</span> <span class="k">match</span> <span class="o">{</span> 
+      <span class="k">case</span> <span class="nc">Circle</span><span class="o">(</span><span class="nc">Point</span><span class="o">(</span><span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">),</span> <span class="n">radius</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="nc">Math</span><span class="o">.</span><span class="nc">PI</span> <span class="o">*</span> <span class="nc">Math</span><span class="o">.</span><span class="n">pow</span><span class="o">(</span><span class="n">radius</span><span class="o">,</span> <span class="mi">2</span><span class="o">)</span> 
+      <span class="k">case</span> <span class="nc">Rectangle</span><span class="o">(</span><span class="k">_</span><span class="o">,</span> <span class="n">h</span><span class="o">,</span> <span class="n">w</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="n">h</span> <span class="o">*</span> <span class="n">w</span> 
+    <span class="o">}</span> 
+<span class="o">}</span>
+</pre></div>
+
+
+<p>They have only data and do not contain any functionality on top of this data as normal classes would. </p>
+<h2 id="stackable-traits">Stackable Traits<a class="headerlink" href="#stackable-traits" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="k">abstract</span> <span class="k">class</span> <span class="nc">StringWriter</span> <span class="o">{</span>
+  <span class="k">def</span> <span class="n">write</span><span class="o">(</span><span class="n">data</span><span class="k">:</span> <span class="kt">String</span><span class="o">)</span><span class="k">:</span> <span class="kt">String</span>
+<span class="o">}</span>
+
+<span class="k">class</span> <span class="nc">BasicStringWriter</span> <span class="k">extends</span> <span class="nc">StringWriter</span> <span class="o">{</span>
+  <span class="k">override</span> <span class="k">def</span> <span class="n">write</span><span class="o">(</span><span class="n">data</span><span class="k">:</span> <span class="kt">String</span><span class="o">)</span><span class="k">:</span> <span class="kt">String</span> <span class="o">=</span>
+    <span class="s">s&quot;Writing the following data: </span><span class="si">${</span><span class="n">data</span><span class="si">}</span><span class="s">&quot;</span>
+<span class="o">}</span>
+
+<span class="k">trait</span> <span class="nc">CapitalizingStringWriter</span> <span class="k">extends</span> <span class="nc">StringWriter</span> <span class="o">{</span>
+  <span class="k">abstract</span> <span class="k">override</span> <span class="k">def</span> <span class="n">write</span><span class="o">(</span><span class="n">data</span><span class="k">:</span> <span class="kt">String</span><span class="o">)</span><span class="k">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="o">{</span>
+    <span class="k">super</span><span class="o">.</span><span class="n">write</span><span class="o">(</span><span class="n">data</span><span class="o">.</span><span class="n">split</span><span class="o">(</span><span class="s">&quot;\\s+&quot;</span><span class="o">).</span><span class="n">map</span><span class="o">(</span><span class="k">_</span><span class="o">.</span><span class="n">capitalize</span><span class="o">).</span><span class="n">mkString</span><span class="o">(</span><span class="s">&quot; &quot;</span><span class="o">))</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="k">trait</span> <span class="nc">UppercasingStringWriter</span> <span class="k">extends</span> <span class="nc">StringWriter</span> <span class="o">{</span>
+  <span class="k">abstract</span> <span class="k">override</span> <span class="k">def</span> <span class="n">write</span><span class="o">(</span><span class="n">data</span><span class="k">:</span> <span class="kt">String</span><span class="o">)</span><span class="k">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="o">{</span>
+    <span class="k">super</span><span class="o">.</span><span class="n">write</span><span class="o">(</span><span class="n">data</span><span class="o">.</span><span class="n">toUpperCase</span><span class="o">)</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="k">object</span> <span class="nc">Example</span> <span class="o">{</span>
+  <span class="k">def</span> <span class="n">main</span><span class="o">(</span><span class="n">args</span><span class="k">:</span> <span class="kt">Array</span><span class="o">[</span><span class="kt">String</span><span class="o">])</span><span class="k">:</span> <span class="kt">Unit</span> <span class="o">=</span> <span class="o">{</span>
+    <span class="k">val</span> <span class="n">writer1</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">BasicStringWriter</span> <span class="k">with</span> <span class="nc">UppercasingStringWriter</span> <span class="k">with</span> <span class="nc">CapitalizingStringWriter</span>
+    <span class="nc">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="o">(</span><span class="s">s&quot;Writer 1: &#39;</span><span class="si">${</span><span class="n">writer1</span><span class="o">.</span><span class="n">write</span><span class="o">(</span><span class="s">&quot;we like learning scala!&quot;</span><span class="o">)</span><span class="si">}</span><span class="s">&#39;&quot;</span><span class="o">)</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+
+
+<p><em>Stackable traits order of execution</em></p>
+<p>Stackable traits are always executed from the right mixin to the left. 
+Sometimes, however, if we only get output and it doesn't depend on what is passed to the method, we simply end up with method calls on a stack, which then get evaluated and it will appear as if things are applied from left to right.</p>
+<h2 id="components-cake-pattern">Components / Cake Pattern<a class="headerlink" href="#components-cake-pattern" title="Permanent link">&para;</a></h2>
+<p><a href="http://jonasboner.com/real-world-scala-dependency-injection-di/">http://jonasboner.com/real-world-scala-dependency-injection-di/</a></p>
+<div class="codehilite"><pre><span></span><span class="c1">// Service Interfaces and Component Definitions</span>
+
+<span class="k">trait</span> <span class="nc">OnOffDeviceComponent</span> <span class="o">{</span>
+  <span class="k">val</span> <span class="n">onOff</span><span class="k">:</span> <span class="kt">OnOffDevice</span>  <span class="c1">// abstract val</span>
+
+  <span class="k">trait</span> <span class="nc">OnOffDevice</span> <span class="o">{</span>
+    <span class="k">def</span> <span class="n">on</span><span class="k">:</span> <span class="kt">Unit</span>
+    <span class="k">def</span> <span class="n">off</span><span class="k">:</span> <span class="kt">Unit</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="k">trait</span> <span class="nc">SensorDeviceComponent</span> <span class="o">{</span>
+  <span class="k">val</span> <span class="n">sensor</span><span class="k">:</span> <span class="kt">SensorDevice</span>
+
+  <span class="k">trait</span> <span class="nc">SensorDevice</span> <span class="o">{</span>
+    <span class="k">def</span> <span class="n">isCoffeePresent</span><span class="k">:</span> <span class="kt">Boolean</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="c1">// =======================</span>
+<span class="c1">// Component / Service Implementations</span>
+
+<span class="k">trait</span> <span class="nc">OnOffDeviceComponentImpl</span> <span class="k">extends</span> <span class="nc">OnOffDeviceComponent</span> <span class="o">{</span>
+  <span class="k">class</span> <span class="nc">Heater</span> <span class="k">extends</span> <span class="nc">OnOffDevice</span> <span class="o">{</span>
+    <span class="k">def</span> <span class="n">on</span> <span class="k">=</span> <span class="n">println</span><span class="o">(</span><span class="s">&quot;heater.on&quot;</span><span class="o">)</span>
+    <span class="k">def</span> <span class="n">off</span> <span class="k">=</span> <span class="n">println</span><span class="o">(</span><span class="s">&quot;heater.off&quot;</span><span class="o">)</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="k">trait</span> <span class="nc">SensorDeviceComponentImpl</span> <span class="k">extends</span> <span class="nc">SensorDeviceComponent</span> <span class="o">{</span>
+  <span class="k">class</span> <span class="nc">PotSensor</span> <span class="k">extends</span> <span class="nc">SensorDevice</span> <span class="o">{</span>
+    <span class="k">def</span> <span class="n">isCoffeePresent</span> <span class="k">=</span> <span class="kc">true</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="c1">// =======================</span>
+<span class="c1">// Component declaring two dependencies that it wants injected</span>
+<span class="k">trait</span> <span class="nc">WarmerComponentImpl</span> <span class="o">{</span>
+  <span class="k">this:</span> <span class="kt">SensorDeviceComponent</span> <span class="kt">with</span> <span class="kt">OnOffDeviceComponent</span> <span class="o">=&gt;</span>     <span class="c1">// Use of self-type for composition</span>
+  <span class="k">class</span> <span class="nc">Warmer</span> <span class="o">{</span>
+    <span class="k">def</span> <span class="n">trigger</span> <span class="k">=</span> <span class="o">{</span>
+      <span class="k">if</span> <span class="o">(</span><span class="n">sensor</span><span class="o">.</span><span class="n">isCoffeePresent</span><span class="o">)</span> <span class="n">onOff</span><span class="o">.</span><span class="n">on</span>
+      <span class="k">else</span> <span class="n">onOff</span><span class="o">.</span><span class="n">off</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="c1">// =======================</span>
+<span class="c1">// Instantiation (and configuration) of the services in the ComponentRegistry module </span>
+
+<span class="k">object</span> <span class="nc">ComponentRegistry</span> <span class="k">extends</span>
+  <span class="nc">OnOffDeviceComponentImpl</span> <span class="k">with</span>
+  <span class="nc">SensorDeviceComponentImpl</span> <span class="k">with</span>
+  <span class="nc">WarmerComponentImpl</span> <span class="o">{</span>
+
+  <span class="k">val</span> <span class="n">onOff</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">Heater</span>      <span class="c1">// all instantiations in one spot; can be easily be replaced by e.g. mocks </span>
+  <span class="k">val</span> <span class="n">sensor</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">PotSensor</span>
+  <span class="k">val</span> <span class="n">warmer</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">Warmer</span>
+<span class="o">}</span>
+
+<span class="c1">// =======================</span>
+<span class="k">val</span> <span class="n">warmer</span> <span class="k">=</span> <span class="nc">ComponentRegistry</span><span class="o">.</span><span class="n">warmer</span>
+<span class="n">warmer</span><span class="o">.</span><span class="n">trigger</span>
+</pre></div>
+
+
+<h2 id="type-classes-using-context-bound-type-parameters">Type Classes (using context-bound type parameters)<a class="headerlink" href="#type-classes-using-context-bound-type-parameters" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="c1">// Define some behavior in terms of operations that a type must support in order to be considered a member of the type class.</span>
+<span class="k">trait</span> <span class="nc">Number</span><span class="o">[</span><span class="kt">T</span><span class="o">]</span> <span class="o">{</span>
+  <span class="k">def</span> <span class="n">plus</span><span class="o">(</span><span class="n">x</span><span class="k">:</span> <span class="kt">T</span><span class="o">,</span> <span class="n">y</span><span class="k">:</span> <span class="kt">T</span><span class="o">)</span><span class="k">:</span> <span class="kt">T</span>
+  <span class="k">def</span> <span class="n">divide</span><span class="o">(</span><span class="n">x</span><span class="k">:</span> <span class="kt">T</span><span class="o">,</span> <span class="n">y</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span><span class="k">:</span> <span class="kt">T</span>
+<span class="o">}</span>
+
+<span class="c1">// Define the default type class members in the companion object of the trait</span>
+<span class="k">object</span> <span class="nc">Number</span> <span class="o">{</span>
+
+  <span class="k">implicit</span> <span class="k">object</span> <span class="nc">DoubleNumber</span> <span class="k">extends</span> <span class="nc">Number</span><span class="o">[</span><span class="kt">Double</span><span class="o">]</span> <span class="o">{</span>
+    <span class="k">override</span> <span class="k">def</span> <span class="n">plus</span><span class="o">(</span><span class="n">x</span><span class="k">:</span> <span class="kt">Double</span><span class="o">,</span> <span class="n">y</span><span class="k">:</span> <span class="kt">Double</span><span class="o">)</span><span class="k">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+    <span class="k">override</span> <span class="k">def</span> <span class="n">divide</span><span class="o">(</span><span class="n">x</span><span class="k">:</span> <span class="kt">Double</span><span class="o">,</span> <span class="n">y</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span><span class="k">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="n">x</span> <span class="o">/</span> <span class="n">y</span>
+  <span class="o">}</span>
+<span class="o">}</span> 
+
+<span class="k">object</span> <span class="nc">Stats</span> <span class="o">{</span>
+
+<span class="c1">//  same as</span>
+<span class="c1">//  def mean[T](xs: Vector[T])(implicit ev: Number[T]): T =</span>
+<span class="c1">//    ev.divide(xs.reduce(ev.plus(_, _)), xs.size)</span>
+
+  <span class="k">def</span> <span class="n">mean</span><span class="o">[</span><span class="kt">T:</span> <span class="kt">Number</span><span class="o">](</span><span class="n">xs</span><span class="k">:</span> <span class="kt">Vector</span><span class="o">[</span><span class="kt">T</span><span class="o">])</span><span class="k">:</span> <span class="kt">T</span> <span class="o">=</span> 
+    <span class="n">implicitly</span><span class="o">[</span><span class="kt">Number</span><span class="o">[</span><span class="kt">T</span><span class="o">]].</span><span class="n">divide</span><span class="o">(</span>
+      <span class="n">xs</span><span class="o">.</span><span class="n">reduce</span><span class="o">(</span><span class="n">implicitly</span><span class="o">[</span><span class="kt">Number</span><span class="o">[</span><span class="kt">T</span><span class="o">]].</span><span class="n">plus</span><span class="o">(</span><span class="k">_</span><span class="o">,</span> <span class="k">_</span><span class="o">)),</span>
+      <span class="n">xs</span><span class="o">.</span><span class="n">size</span>
+    <span class="o">)</span>
+<span class="o">}</span>   
+</pre></div>
+
+
+<h2 id="visitor-pattern">Visitor Pattern<a class="headerlink" href="#visitor-pattern" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="k">abstract</span> <span class="k">class</span> <span class="nc">Element</span><span class="o">(</span><span class="n">text</span><span class="k">:</span> <span class="kt">String</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">def</span> <span class="n">accept</span><span class="o">(</span><span class="n">visitor</span><span class="k">:</span> <span class="kt">Visitor</span><span class="o">)</span>
+<span class="o">}</span>
+
+<span class="k">case</span> <span class="k">class</span> <span class="nc">Title</span><span class="o">(</span><span class="n">text</span><span class="k">:</span> <span class="kt">String</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Element</span><span class="o">(</span><span class="n">text</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">override</span> <span class="k">def</span> <span class="n">accept</span><span class="o">(</span><span class="n">visitor</span><span class="k">:</span> <span class="kt">Visitor</span><span class="o">)</span><span class="k">:</span> <span class="kt">Unit</span> <span class="o">=</span> <span class="o">{</span>
+    <span class="n">visitor</span><span class="o">.</span><span class="n">visit</span><span class="o">(</span><span class="k">this</span><span class="o">)</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="k">case</span> <span class="k">class</span> <span class="nc">Text</span><span class="o">(</span><span class="n">text</span><span class="k">:</span> <span class="kt">String</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Element</span><span class="o">(</span><span class="n">text</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">override</span> <span class="k">def</span> <span class="n">accept</span><span class="o">(</span><span class="n">visitor</span><span class="k">:</span> <span class="kt">Visitor</span><span class="o">)</span><span class="k">:</span> <span class="kt">Unit</span> <span class="o">=</span> <span class="o">{</span>
+    <span class="n">visitor</span><span class="o">.</span><span class="n">visit</span><span class="o">(</span><span class="k">this</span><span class="o">)</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="k">class</span> <span class="nc">Document</span><span class="o">(</span><span class="n">parts</span><span class="k">:</span> <span class="kt">List</span><span class="o">[</span><span class="kt">Element</span><span class="o">])</span> <span class="o">{</span>
+  <span class="k">def</span> <span class="n">accept</span><span class="o">(</span><span class="n">visitor</span><span class="k">:</span> <span class="kt">Visitor</span><span class="o">)</span><span class="k">:</span> <span class="kt">Unit</span> <span class="o">=</span> <span class="o">{</span>
+    <span class="n">parts</span><span class="o">.</span><span class="n">foreach</span><span class="o">(</span><span class="n">p</span> <span class="k">=&gt;</span> <span class="n">p</span><span class="o">.</span><span class="n">accept</span><span class="o">(</span><span class="n">visitor</span><span class="o">))</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="k">trait</span> <span class="nc">Visitor</span> <span class="o">{</span>
+  <span class="k">def</span> <span class="n">visit</span><span class="o">(</span><span class="n">element</span><span class="k">:</span> <span class="kt">Element</span><span class="o">)</span>
+<span class="o">}</span>
+
+<span class="k">class</span> <span class="nc">VisitorImpl1</span> <span class="k">extends</span> <span class="nc">Visitor</span> <span class="o">{</span> 
+  <span class="k">override</span> <span class="k">def</span> <span class="n">visit</span><span class="o">(</span><span class="n">element</span><span class="k">:</span> <span class="kt">Element</span><span class="o">)</span><span class="k">:</span> <span class="kt">Unit</span> <span class="o">=</span> <span class="o">{</span>
+    <span class="n">element</span> <span class="k">match</span> <span class="o">{</span>
+      <span class="k">case</span> <span class="nc">Title</span><span class="o">(</span><span class="n">text</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="o">???</span>
+      <span class="k">case</span> <span class="nc">Text</span><span class="o">(</span><span class="n">text</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="o">???</span> 
+      <span class="c1">//...</span>
+      <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+
+
+<h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="k">import</span> <span class="nn">com.typesafe.config.ConfigFactory</span>
+
+<span class="k">trait</span> <span class="nc">AppConfigComponent</span> <span class="o">{</span>
+
+  <span class="k">val</span> <span class="n">appConfigService</span><span class="k">:</span> <span class="kt">AppConfigService</span>
+
+  <span class="k">class</span> <span class="nc">AppConfigService</span><span class="o">()</span> <span class="o">{</span>
+    <span class="c1">//-Dconfig.resource=production.conf for overriding</span>
+    <span class="k">private</span> <span class="k">val</span> <span class="n">conf</span> <span class="k">=</span> <span class="nc">ConfigFactory</span><span class="o">.</span><span class="n">load</span><span class="o">()</span>
+    <span class="k">private</span> <span class="k">val</span> <span class="n">appConf</span> <span class="k">=</span> <span class="n">conf</span><span class="o">.</span><span class="n">getConfig</span><span class="o">(</span><span class="s">&quot;job-scheduler&quot;</span><span class="o">)</span>
+    <span class="k">private</span> <span class="k">val</span> <span class="n">db</span> <span class="k">=</span> <span class="n">appConf</span><span class="o">.</span><span class="n">getConfig</span><span class="o">(</span><span class="s">&quot;db&quot;</span><span class="o">)</span>
+
+    <span class="k">val</span> <span class="n">configPath</span> <span class="k">=</span> <span class="n">appConf</span><span class="o">.</span><span class="n">getString</span><span class="o">(</span><span class="s">&quot;config-path&quot;</span><span class="o">)</span>
+    <span class="k">val</span> <span class="n">configExtension</span> <span class="k">=</span> <span class="n">appConf</span><span class="o">.</span><span class="n">getString</span><span class="o">(</span><span class="s">&quot;config-extension&quot;</span><span class="o">)</span>
+    <span class="k">val</span> <span class="n">workers</span> <span class="k">=</span> <span class="n">appConf</span><span class="o">.</span><span class="n">getInt</span><span class="o">(</span><span class="s">&quot;workers&quot;</span><span class="o">)</span>
+
+    <span class="k">val</span> <span class="n">dbConnectionString</span> <span class="k">=</span> <span class="n">db</span><span class="o">.</span><span class="n">getString</span><span class="o">(</span><span class="s">&quot;connection-string&quot;</span><span class="o">)</span>
+    <span class="k">val</span> <span class="n">dbUsername</span> <span class="k">=</span> <span class="n">db</span><span class="o">.</span><span class="n">getString</span><span class="o">(</span><span class="s">&quot;username&quot;</span><span class="o">)</span>
+    <span class="k">val</span> <span class="n">dbPassword</span> <span class="k">=</span> <span class="n">db</span><span class="o">.</span><span class="n">getString</span><span class="o">(</span><span class="s">&quot;password&quot;</span><span class="o">)</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../Scala/" title="Scala" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Scala
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../sbt/" title="Sbt" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Sbt
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2017 S. John Cruchon-Dupeyrat
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/john-cd" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/sjncd" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://www.linkedin.com/in/scdupeyrat/" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application-3964c0cb56.js"></script>
+      <script>app.initialize({url:{base:"../.."}})</script>
+      
+    
+    
+      
+      <script>!function(e,t,a,n,o,c,i){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,c=t.createElement(a),i=t.getElementsByTagName(a)[0],c.async=1,c.src=n,i.parentNode.insertBefore(c,i)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-92780605-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var t=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",t,e.href)})});var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})</script>
+      
+    
+  </body>
+</html>
