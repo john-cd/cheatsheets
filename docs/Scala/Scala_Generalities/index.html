@@ -9,7 +9,7 @@
         <meta name="description" content="A collection of cheatsheets and code snippets.">
       
       
-        <link rel="canonical" href="http://john-cd.com/cheatsheets/dotNET/Multithreading/">
+        <link rel="canonical" href="http://john-cd.com/cheatsheets/Scala/Scala_Generalities/">
       
       
         <meta name="author" content="S. John Cruchon-Dupeyrat">
@@ -21,7 +21,7 @@
     
     
       
-        <title>.NET Multithreading</title>
+        <title>Scala (Generalities)</title>
       
     
     
@@ -82,11 +82,11 @@
             
               
                 <span class="md-header-nav__parent">
-                  dotNET
+                  Scala
                 </span>
               
             
-            Multithreading
+            Scala Generalities
           
         </span>
       </div>
@@ -718,10 +718,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12" checked>
     
     <label class="md-nav__link" for="nav-12">
       Scala
@@ -739,7 +741,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Scala/Akka/" title="Akka" class="md-nav__link">
+    <a href="../Akka/" title="Akka" class="md-nav__link">
       Akka
     </a>
   </li>
@@ -751,7 +753,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Scala/Scala_Collections/" title="Scala Collections" class="md-nav__link">
+    <a href="../Scala_Collections/" title="Scala Collections" class="md-nav__link">
       Scala Collections
     </a>
   </li>
@@ -763,7 +765,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Scala/Scala_Database_Access/" title="Scala Database Access" class="md-nav__link">
+    <a href="../Scala_Database_Access/" title="Scala Database Access" class="md-nav__link">
       Scala Database Access
     </a>
   </li>
@@ -775,7 +777,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Scala/Scala_Design_Patterns/" title="Scala Design Patterns" class="md-nav__link">
+    <a href="../Scala_Design_Patterns/" title="Scala Design Patterns" class="md-nav__link">
       Scala Design Patterns
     </a>
   </li>
@@ -785,11 +787,70 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../Scala/Scala_Generalities/" title="Scala Generalities" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Scala Generalities
+      </label>
+    
+    <a href="./" title="Scala Generalities" class="md-nav__link md-nav__link--active">
       Scala Generalities
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#main-features-of-scala" title="Main Features of Scala" class="md-nav__link">
+    Main Features of Scala
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tools-and-frameworks" title="Tools and Frameworks" class="md-nav__link">
+    Tools and Frameworks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install" title="Install" class="md-nav__link">
+    Install
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#compilation" title="Compilation" class="md-nav__link">
+    Compilation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -799,7 +860,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Scala/Scala_Language/" title="Scala Language" class="md-nav__link">
+    <a href="../Scala_Language/" title="Scala Language" class="md-nav__link">
       Scala Language
     </a>
   </li>
@@ -811,7 +872,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Scala/Scala_Testing/" title="Scala Testing" class="md-nav__link">
+    <a href="../Scala_Testing/" title="Scala Testing" class="md-nav__link">
       Scala Testing
     </a>
   </li>
@@ -823,7 +884,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Scala/Scala_Types/" title="Scala Types" class="md-nav__link">
+    <a href="../Scala_Types/" title="Scala Types" class="md-nav__link">
       Scala Types
     </a>
   </li>
@@ -835,7 +896,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Scala/Scaladoc/" title="Scaladoc" class="md-nav__link">
+    <a href="../Scaladoc/" title="Scaladoc" class="md-nav__link">
       Scaladoc
     </a>
   </li>
@@ -847,7 +908,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Scala/sbt/" title="Sbt" class="md-nav__link">
+    <a href="../sbt/" title="Sbt" class="md-nav__link">
       Sbt
     </a>
   </li>
@@ -946,12 +1007,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-15" type="checkbox" id="nav-15" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-15" type="checkbox" id="nav-15">
     
     <label class="md-nav__link" for="nav-15">
       dotNET
@@ -969,7 +1028,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../ASPdotNET/" title="ASPdotNET" class="md-nav__link">
+    <a href="../../dotNET/ASPdotNET/" title="ASPdotNET" class="md-nav__link">
       ASPdotNET
     </a>
   </li>
@@ -981,7 +1040,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../AkkadotNET/" title="AkkadotNET" class="md-nav__link">
+    <a href="../../dotNET/AkkadotNET/" title="AkkadotNET" class="md-nav__link">
       AkkadotNET
     </a>
   </li>
@@ -993,7 +1052,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../C%23/" title="C#" class="md-nav__link">
+    <a href="../../dotNET/C%23/" title="C#" class="md-nav__link">
       C#
     </a>
   </li>
@@ -1003,43 +1062,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="toc">
-        Multithreading
-      </label>
-    
-    <a href="./" title="Multithreading" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../dotNET/Multithreading/" title="Multithreading" class="md-nav__link">
       Multithreading
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#advanced-net-threading" title="Advanced .NET Threading" class="md-nav__link">
-    Advanced .NET Threading
-  </a>
-  
-</li>
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -1049,7 +1076,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../WPF/" title="WPF" class="md-nav__link">
+    <a href="../../dotNET/WPF/" title="WPF" class="md-nav__link">
       WPF
     </a>
   </li>
@@ -1079,9 +1106,36 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#advanced-net-threading" title="Advanced .NET Threading" class="md-nav__link">
-    Advanced .NET Threading
+  <a href="#main-features-of-scala" title="Main Features of Scala" class="md-nav__link">
+    Main Features of Scala
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tools-and-frameworks" title="Tools and Frameworks" class="md-nav__link">
+    Tools and Frameworks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install" title="Install" class="md-nav__link">
+    Install
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#compilation" title="Compilation" class="md-nav__link">
+    Compilation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1099,17 +1153,50 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/john-cd/cheatsheets/edit/master/docs_src/dotNET\Multithreading.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
+                  <a href="https://github.com/john-cd/cheatsheets/edit/master/docs_src/Scala\Scala_Generalities.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
                 
                 
-                  <h1>Multithreading</h1>
+                  <h1>Scala Generalities</h1>
                 
-                <h2 id="advanced-net-threading">Advanced .NET Threading<a class="headerlink" href="#advanced-net-threading" title="Permanent link">&para;</a></h2>
-<p><a href="https://mva.microsoft.com/en-US/training-courses/advanced-net-threading-part-1-thread-fundamentals-16656?l=zAsojditC_6606218965">Advanced .NET Threading, Part 1: Thread Fundamentals</a></p>
-<p><a href="https://mva.microsoft.com/en-US/training-courses/advanced-net-threading-part-2-computebound-async-operations-16658?l=fG7K1fitC_2206218965">Advanced .NET Threading, Part 2: Compute-Bound Async Operations</a></p>
-<p><a href="https://mva.microsoft.com/en-US/training-courses/advanced-net-threading-part-3-iobound-async-operations-16659?l=DLvEmkitC_4406218965">Advanced .NET Threading, Part 3: I/O-Bound Async Operations</a></p>
-<p><a href="https://mva.microsoft.com/en-US/training-courses/advanced-net-threading-part-4-thread-synchronization-primitives-16660?l=1oGCZnitC_8406218965">Advanced .NET Threading, Part 4: Thread Synchronization Primitives</a></p>
-<p><a href="https://mva.microsoft.com/en-US/training-courses/advanced-net-threading-part-5-thread-synchronization-locks-16661?l=A3VXnpitC_9006218965">Advanced .NET Threading, Part 5: Thread Synchronization Locks</a></p>
+                <h2 id="main-features-of-scala">Main Features of Scala<a class="headerlink" href="#main-features-of-scala" title="Permanent link">&para;</a></h2>
+<ul>
+<li>All types are objects</li>
+<li>Type inference</li>
+<li>Nested Functions</li>
+<li>Functions are objects</li>
+<li>Domain specific language (DSL) support</li>
+<li>Traits</li>
+<li>Closures</li>
+<li>Concurrency support inspired by Erlang</li>
+</ul>
+<h2 id="tools-and-frameworks">Tools and Frameworks<a class="headerlink" href="#tools-and-frameworks" title="Permanent link">&para;</a></h2>
+<p>REPL <a href="http://ammonite.io/">http://ammonite.io/</a></p>
+<p><a href="https://scalafiddle.io/">https://scalafiddle.io/</a></p>
+<ul>
+<li><a href="https://liftweb.net/">The Lift Framework</a></li>
+<li><a href="https://www.playframework.com/">The Play framework</a></li>
+<li><a href="https://github.com/bowler-framework/bowler-quickstart">The Bowler framework</a></li>
+<li><a href="http://akka.io/">Akka</a></li>
+</ul>
+<p><a href="https://typelevel.org/">https://typelevel.org/</a></p>
+<h2 id="install">Install<a class="headerlink" href="#install" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Need to have Java Software Development Kit (SDK) installed </li>
+</ul>
+<div class="codehilite"><pre><span></span>java -version
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="nb">export</span> <span class="nv">JAVA_HOME</span><span class="o">=</span>/usr/local/java-current
+<span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$JAVA_HOME</span>/bin/
+</pre></div>
+
+
+<p><a href="http://www.scala-lang.org/download/">http://www.scala-lang.org/download/</a></p>
+<h3 id="compilation">Compilation<a class="headerlink" href="#compilation" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>scalac HelloWorld.scala  // produces HelloWorld.class
+scala -classpath . HelloWorld
+</pre></div>
                 
                   
                 
@@ -1128,7 +1215,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../C%23/" title="C#" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../Scala_Design_Patterns/" title="Scala Design Patterns" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1137,19 +1224,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                C#
+                Scala Design Patterns
               </span>
             </div>
           </a>
         
         
-          <a href="../WPF/" title="WPF" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../Scala_Language/" title="Scala Language" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                WPF
+                Scala Language
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

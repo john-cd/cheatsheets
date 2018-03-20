@@ -1,12 +1,11 @@
 
 ## SBT Links
 
-http://www.scala-sbt.org/
+[SBT Home Page](http://www.scala-sbt.org/)
 
-https://twitter.github.io/scala_school/sbt.html
+[Scala school's SBT page](https://twitter.github.io/scala_school/sbt.html)
 
-https://github.com/shekhargulati/52-technologies-in-2016/blob/master/02-sbt/README.md
-
+[SBT: The Missing Tutorial](https://github.com/shekhargulati/52-technologies-in-2016/blob/master/02-sbt/README.md)
 
 ## Create a New Project
 
@@ -19,7 +18,7 @@ $ sbt
 > exit
 ```
 
-https://github.com/foundweekends/giter8/wiki/giter8-templates
+[Giter8 templates](https://github.com/foundweekends/giter8/wiki/giter8-templates)
 
 
 ## Layout

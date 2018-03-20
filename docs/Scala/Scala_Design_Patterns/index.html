@@ -753,8 +753,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../Scala/" title="Scala" class="md-nav__link">
-      Scala
+    <a href="../Scala_Collections/" title="Scala Collections" class="md-nav__link">
+      Scala Collections
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Scala_Database_Access/" title="Scala Database Access" class="md-nav__link">
+      Scala Database Access
     </a>
   </li>
 
@@ -786,6 +798,13 @@
   
     <label class="md-nav__title" for="toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-new-project-from-template" title="Create a new project from template" class="md-nav__link">
+    Create a new project from template
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#static-factory" title="Static Factory" class="md-nav__link">
@@ -836,12 +855,86 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#memoization" title="Memoization" class="md-nav__link">
+    Memoization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pimp-my-library-pattern" title="Pimp my Library Pattern" class="md-nav__link">
+    Pimp my Library Pattern
+  </a>
+  
+</li>
+      
       
       
     </ul>
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Scala_Generalities/" title="Scala Generalities" class="md-nav__link">
+      Scala Generalities
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Scala_Language/" title="Scala Language" class="md-nav__link">
+      Scala Language
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Scala_Testing/" title="Scala Testing" class="md-nav__link">
+      Scala Testing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Scala_Types/" title="Scala Types" class="md-nav__link">
+      Scala Types
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Scaladoc/" title="Scaladoc" class="md-nav__link">
+      Scaladoc
+    </a>
   </li>
 
         
@@ -1049,6 +1142,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#create-a-new-project-from-template" title="Create a new project from template" class="md-nav__link">
+    Create a new project from template
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#static-factory" title="Static Factory" class="md-nav__link">
     Static Factory
   </a>
@@ -1097,6 +1197,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#memoization" title="Memoization" class="md-nav__link">
+    Memoization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pimp-my-library-pattern" title="Pimp my Library Pattern" class="md-nav__link">
+    Pimp my Library Pattern
+  </a>
+  
+</li>
+      
       
       
     </ul>
@@ -1116,7 +1230,11 @@
                 
                   <h1>Scala Design Patterns</h1>
                 
-                <h2 id="static-factory">Static Factory<a class="headerlink" href="#static-factory" title="Permanent link">&para;</a></h2>
+                <h2 id="create-a-new-project-from-template">Create a new project from template<a class="headerlink" href="#create-a-new-project-from-template" title="Permanent link">&para;</a></h2>
+<p>Use the “sbt new” command, providing the name of the template. For example, “$ sbt new akka/hello-akka.g8”. 
+You can find a list of templates <a href="https://github.com/foundweekends/giter8/wiki/giter8-templates/30ac1007438f6f7727ea98c19db1f82ea8f00ac8">here</a>.</p>
+<p>Or download from <a href="https://developer.lightbend.com/start/">Scala Project Templates</a></p>
+<h2 id="static-factory">Static Factory<a class="headerlink" href="#static-factory" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span><span class="k">trait</span> <span class="nc">Animal</span>
 <span class="k">class</span> <span class="nc">Bird</span> <span class="k">extends</span> <span class="nc">Animal</span>
 <span class="k">class</span> <span class="nc">Mammal</span> <span class="k">extends</span> <span class="nc">Animal</span>
@@ -1134,6 +1252,25 @@
 
 
 <h2 id="algebraic-data-types-and-pattern-matching">Algebraic Data Types and Pattern Matching<a class="headerlink" href="#algebraic-data-types-and-pattern-matching" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Goal: translate data descriptions into code</li>
+<li>Model data with logical ors and logical ands</li>
+<li>Two patterns: product types (and) sum types (or)</li>
+<li>Product type: A has a B and C</li>
+<li>Sum type: A is a B or C</li>
+<li>Sum and product together make algebraic data types</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="c1">// A has a B and C</span>
+<span class="k">case</span> <span class="k">class</span> <span class="nc">A</span><span class="o">(</span><span class="n">b</span><span class="k">:</span> <span class="kt">B</span><span class="o">,</span> <span class="n">c</span><span class="k">:</span> <span class="kt">C</span><span class="o">)</span>
+
+<span class="c1">// A is a B or C</span>
+<span class="k">sealed</span> <span class="k">trait</span> <span class="nc">A</span>
+<span class="k">case</span> <span class="k">class</span> <span class="nc">B</span><span class="o">()</span> <span class="k">extends</span> <span class="n">A</span>
+<span class="k">case</span> <span class="k">class</span> <span class="nc">C</span><span class="o">()</span> <span class="k">extends</span> <span class="n">A</span>
+</pre></div>
+
+
+<p>They have only data and do not contain any functionality on top of this data as normal classes would. </p>
 <div class="codehilite"><pre><span></span><span class="k">sealed</span> <span class="k">trait</span> <span class="nc">Shape</span> 
 <span class="k">case</span> <span class="k">class</span> <span class="nc">Circle</span><span class="o">(</span><span class="n">radius</span><span class="k">:</span> <span class="kt">Double</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Shape</span> 
 <span class="k">case</span> <span class="k">class</span> <span class="nc">Rectangle</span><span class="o">(</span><span class="n">height</span><span class="k">:</span> <span class="kt">Double</span><span class="o">,</span> <span class="n">width</span><span class="k">:</span> <span class="kt">Double</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Shape</span>
@@ -1141,14 +1278,13 @@
 <span class="k">object</span> <span class="nc">Shape</span> <span class="o">{</span> 
   <span class="k">def</span> <span class="n">area</span><span class="o">(</span><span class="n">shape</span><span class="k">:</span> <span class="kt">Shape</span><span class="o">)</span><span class="k">:</span> <span class="kt">Double</span> <span class="o">=</span> 
     <span class="n">shape</span> <span class="k">match</span> <span class="o">{</span> 
-      <span class="k">case</span> <span class="nc">Circle</span><span class="o">(</span><span class="nc">Point</span><span class="o">(</span><span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">),</span> <span class="n">radius</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="nc">Math</span><span class="o">.</span><span class="nc">PI</span> <span class="o">*</span> <span class="nc">Math</span><span class="o">.</span><span class="n">pow</span><span class="o">(</span><span class="n">radius</span><span class="o">,</span> <span class="mi">2</span><span class="o">)</span> 
+      <span class="k">case</span> <span class="nc">Circle</span><span class="o">(</span><span class="nc">Point</span><span class="o">(</span><span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">),</span> <span class="n">radius</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="nc">Math</span><span class="o">.</span><span class="nc">PI</span> <span class="o">*</span> <span class="nc">Math</span><span class="o">.</span><span class="n">pow</span><span class="o">(</span><span class="n">radius</span><span class="o">,</span> <span class="mi">2</span><span class="o">)</span>   <span class="c1">// use pattern matching to process</span>
       <span class="k">case</span> <span class="nc">Rectangle</span><span class="o">(</span><span class="k">_</span><span class="o">,</span> <span class="n">h</span><span class="o">,</span> <span class="n">w</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="n">h</span> <span class="o">*</span> <span class="n">w</span> 
     <span class="o">}</span> 
 <span class="o">}</span>
 </pre></div>
 
 
-<p>They have only data and do not contain any functionality on top of this data as normal classes would. </p>
 <h2 id="stackable-traits">Stackable Traits<a class="headerlink" href="#stackable-traits" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span><span class="k">abstract</span> <span class="k">class</span> <span class="nc">StringWriter</span> <span class="o">{</span>
   <span class="k">def</span> <span class="n">write</span><span class="o">(</span><span class="n">data</span><span class="k">:</span> <span class="kt">String</span><span class="o">)</span><span class="k">:</span> <span class="kt">String</span>
@@ -1252,6 +1388,14 @@ Sometimes, however, if we only get output and it doesn't depend on what is passe
 
 
 <h2 id="type-classes-using-context-bound-type-parameters">Type Classes (using context-bound type parameters)<a class="headerlink" href="#type-classes-using-context-bound-type-parameters" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Ad-hoc polymorphism</li>
+<li>Break free from your class oppressors!</li>
+<li>Concerns that cross class hierarchy e.g. serialize to JSON</li>
+<li>Common behaviour without (useful) common type</li>
+<li>Abstract behaviour to a type class</li>
+<li>Can implement type class instances in ad-hoc manner </li>
+</ul>
 <div class="codehilite"><pre><span></span><span class="c1">// Define some behavior in terms of operations that a type must support in order to be considered a member of the type class.</span>
 <span class="k">trait</span> <span class="nc">Number</span><span class="o">[</span><span class="kt">T</span><span class="o">]</span> <span class="o">{</span>
   <span class="k">def</span> <span class="n">plus</span><span class="o">(</span><span class="n">x</span><span class="k">:</span> <span class="kt">T</span><span class="o">,</span> <span class="n">y</span><span class="k">:</span> <span class="kt">T</span><span class="o">)</span><span class="k">:</span> <span class="kt">T</span>
@@ -1261,7 +1405,7 @@ Sometimes, however, if we only get output and it doesn't depend on what is passe
 <span class="c1">// Define the default type class members in the companion object of the trait</span>
 <span class="k">object</span> <span class="nc">Number</span> <span class="o">{</span>
 
-  <span class="k">implicit</span> <span class="k">object</span> <span class="nc">DoubleNumber</span> <span class="k">extends</span> <span class="nc">Number</span><span class="o">[</span><span class="kt">Double</span><span class="o">]</span> <span class="o">{</span>
+  <span class="k">implicit</span> <span class="k">object</span> <span class="nc">DoubleNumber</span> <span class="k">extends</span> <span class="nc">Number</span><span class="o">[</span><span class="kt">Double</span><span class="o">]</span> <span class="o">{</span>             <span class="c1">// note the implicit</span>
     <span class="k">override</span> <span class="k">def</span> <span class="n">plus</span><span class="o">(</span><span class="n">x</span><span class="k">:</span> <span class="kt">Double</span><span class="o">,</span> <span class="n">y</span><span class="k">:</span> <span class="kt">Double</span><span class="o">)</span><span class="k">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
     <span class="k">override</span> <span class="k">def</span> <span class="n">divide</span><span class="o">(</span><span class="n">x</span><span class="k">:</span> <span class="kt">Double</span><span class="o">,</span> <span class="n">y</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span><span class="k">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="n">x</span> <span class="o">/</span> <span class="n">y</span>
   <span class="o">}</span>
@@ -1269,13 +1413,13 @@ Sometimes, however, if we only get output and it doesn't depend on what is passe
 
 <span class="k">object</span> <span class="nc">Stats</span> <span class="o">{</span>
 
-<span class="c1">//  same as</span>
-<span class="c1">//  def mean[T](xs: Vector[T])(implicit ev: Number[T]): T =</span>
+<span class="c1">//  older pattern with implicit parameter</span>
+<span class="c1">//  def mean[T](xs: Vector[T])(implicit ev: Number[T]): T =         // note the implicit</span>
 <span class="c1">//    ev.divide(xs.reduce(ev.plus(_, _)), xs.size)</span>
 
-  <span class="k">def</span> <span class="n">mean</span><span class="o">[</span><span class="kt">T:</span> <span class="kt">Number</span><span class="o">](</span><span class="n">xs</span><span class="k">:</span> <span class="kt">Vector</span><span class="o">[</span><span class="kt">T</span><span class="o">])</span><span class="k">:</span> <span class="kt">T</span> <span class="o">=</span> 
+  <span class="k">def</span> <span class="n">mean</span><span class="o">[</span><span class="kt">T:</span> <span class="kt">Number</span><span class="o">](</span><span class="n">xs</span><span class="k">:</span> <span class="kt">Vector</span><span class="o">[</span><span class="kt">T</span><span class="o">])</span><span class="k">:</span> <span class="kt">T</span> <span class="o">=</span>                           <span class="c1">// note the context bound</span>
     <span class="n">implicitly</span><span class="o">[</span><span class="kt">Number</span><span class="o">[</span><span class="kt">T</span><span class="o">]].</span><span class="n">divide</span><span class="o">(</span>
-      <span class="n">xs</span><span class="o">.</span><span class="n">reduce</span><span class="o">(</span><span class="n">implicitly</span><span class="o">[</span><span class="kt">Number</span><span class="o">[</span><span class="kt">T</span><span class="o">]].</span><span class="n">plus</span><span class="o">(</span><span class="k">_</span><span class="o">,</span> <span class="k">_</span><span class="o">)),</span>
+      <span class="n">xs</span><span class="o">.</span><span class="n">reduce</span><span class="o">(</span><span class="n">implicitly</span><span class="o">[</span><span class="kt">Number</span><span class="o">[</span><span class="kt">T</span><span class="o">]].</span><span class="n">plus</span><span class="o">(</span><span class="k">_</span><span class="o">,</span> <span class="k">_</span><span class="o">)),</span>                  <span class="c1">// retrieve the evidence via implicitly[]</span>
       <span class="n">xs</span><span class="o">.</span><span class="n">size</span>
     <span class="o">)</span>
 <span class="o">}</span>   
@@ -1344,6 +1488,43 @@ Sometimes, however, if we only get output and it doesn't depend on what is passe
   <span class="o">}</span>
 <span class="o">}</span>
 </pre></div>
+
+
+<h2 id="memoization">Memoization<a class="headerlink" href="#memoization" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="k">import</span> <span class="nn">scala.collection.mutable.Map</span>
+
+<span class="k">trait</span> <span class="nc">Memoizer</span> <span class="o">{</span>
+
+  <span class="k">def</span> <span class="n">memo</span><span class="o">[</span><span class="kt">X</span>, <span class="kt">Y</span><span class="o">](</span><span class="n">f</span><span class="k">:</span> <span class="kt">X</span> <span class="o">=&gt;</span> <span class="n">Y</span><span class="o">)</span><span class="k">:</span> <span class="o">(</span><span class="kt">X</span> <span class="o">=&gt;</span> <span class="kt">Y</span><span class="o">)</span> <span class="k">=</span> <span class="o">{</span>
+    <span class="k">val</span> <span class="n">cache</span> <span class="k">=</span> <span class="nc">Map</span><span class="o">[</span><span class="kt">X</span>, <span class="kt">Y</span><span class="o">]()</span>
+    <span class="o">(</span><span class="n">x</span><span class="k">:</span> <span class="kt">X</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="n">cache</span><span class="o">.</span><span class="n">getOrElseUpdate</span><span class="o">(</span><span class="n">x</span><span class="o">,</span> <span class="n">f</span><span class="o">(</span><span class="n">x</span><span class="o">))</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+
+
+<p>Using scalaz:</p>
+<div class="codehilite"><pre><span></span><span class="k">val</span> <span class="n">memoScalaz</span><span class="k">:</span> <span class="kt">String</span> <span class="o">=&gt;</span> <span class="nc">String</span> <span class="k">=</span> <span class="nc">Memo</span><span class="o">.</span><span class="n">mutableHashMapMemo</span> <span class="o">{</span>
+  <span class="n">func</span>
+<span class="o">}</span>
+</pre></div>
+
+
+<h2 id="pimp-my-library-pattern">Pimp my Library Pattern<a class="headerlink" href="#pimp-my-library-pattern" title="Permanent link">&para;</a></h2>
+<p>The pimp my library design pattern is really similar to extension methods in C#.</p>
+<div class="codehilite"><pre><span></span><span class="k">package</span> <span class="nn">object</span> <span class="n">pimp</span> <span class="o">{</span>
+
+  <span class="k">implicit</span> <span class="k">class</span> <span class="nc">StringExtensions</span><span class="o">(</span><span class="k">val</span> <span class="n">s</span><span class="k">:</span> <span class="kt">String</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">AnyVal</span> <span class="o">{</span>
+
+    <span class="k">def</span> <span class="n">isAllUpperCase</span><span class="k">:</span> <span class="kt">Boolean</span> <span class="o">=</span>
+      <span class="o">(</span><span class="mi">0</span> <span class="n">to</span> <span class="n">s</span><span class="o">.</span><span class="n">size</span> <span class="o">-</span> <span class="mi">1</span><span class="o">).</span><span class="n">find</span> <span class="o">{</span>
+        <span class="k">case</span> <span class="n">index</span> <span class="k">=&gt;</span>
+          <span class="o">!</span><span class="n">s</span><span class="o">.</span><span class="n">charAt</span><span class="o">(</span><span class="n">index</span><span class="o">).</span><span class="n">isUpper</span>
+      <span class="o">}.</span><span class="n">isEmpty</span>
+
+  <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
                 
                   
                 
@@ -1362,7 +1543,7 @@ Sometimes, however, if we only get output and it doesn't depend on what is passe
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../Scala/" title="Scala" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../Scala_Database_Access/" title="Scala Database Access" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1371,19 +1552,19 @@ Sometimes, however, if we only get output and it doesn't depend on what is passe
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Scala
+                Scala Database Access
               </span>
             </div>
           </a>
         
         
-          <a href="../sbt/" title="Sbt" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../Scala_Generalities/" title="Scala Generalities" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Sbt
+                Scala Generalities
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
