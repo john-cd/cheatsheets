@@ -1,13 +1,19 @@
+---
+title: Play Framework
+category: Scala
+tag: Scala Akka Play Web REST 
+---
 
+## Links
 
-# Play Framework
+[Play Framework](https://playframework.com/documentation/)
 
-https://playframework.com/documentation/2.6.x/Anatomy
 
 ## The Play application layout
 
 The layout of a Play application is standardized to keep things as simple as possible. After a first successful compile, a Play application looks like this:
 
+```
 app                      → Application sources
  └ assets                → Compiled asset sources
     └ stylesheets        → Typically LESS CSS sources
@@ -40,6 +46,6 @@ target                   → Generated stuff
  └ universal             → Application packaging
  └ web                   → Compiled web assets
 test                     → source folder for unit or functional tests
-
+```
 
 

@@ -1,6 +1,7 @@
 
+### Links
 
-[Recommender system - Wikipedia]( https://en.wikipedia.org/wiki/Recommender_system )
+[Recommender System]( https://en.wikipedia.org/wiki/Recommender_system )
  
 [Building a Recommendation Engine- An Algorithm Tutorial - Toptal]( https://www.toptal.com/algorithms/predicting-likes-inside-a-simple-recommendation-engine )
 
