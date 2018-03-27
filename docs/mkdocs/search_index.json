@@ -211,6 +211,16 @@
             "title": "SWF"
         },
         {
+            "location": "/Cloud/AWS_Lambda/",
+            "text": "Useful Links\n\u00b6\n\n\nBuilding a Dynamic DNS for Route 53 using CloudWatch Events and Lambda\n\n\nLambkin\n - CLI tool for generating and managing simple functions in AWS Lambda",
+            "title": "AWS Lambda"
+        },
+        {
+            "location": "/Cloud/AWS_Lambda/#useful-links",
+            "text": "Building a Dynamic DNS for Route 53 using CloudWatch Events and Lambda  Lambkin  - CLI tool for generating and managing simple functions in AWS Lambda",
+            "title": "Useful Links"
+        },
+        {
             "location": "/Cloud/Serverless/",
             "text": "Serverless Cheatsheet\n\u00b6\n\n\nServerless home page\n\n\nInstall\n\u00b6\n\n\nnpm install -g serverless\n\n\n\n\n\nExamples\n\u00b6\n\n\nServerless Examples\n\n\nServerless Starter\n\n\nPython example\n\n\nC# example\n\n\nCheatsheet\n\u00b6\n\n\n\n\nCreate a Service:\n\n\n\n\n# NodeJS\n\nserverless create -p \n[\nSERVICE NAME\n]\n -t aws-nodejs\n\n\n# C#\n\nserverless create --path serverlessCSharp --template aws-csharp\n\n\n\n\n\n\n\nInstall a Service\n\n\n\n\nThis is a convenience method to install a pre-made Serverless Service locally by downloading the Github repo and unzipping it.\n\n\nserverless install -u \n[\nGITHUB URL OF SERVICE\n]\n\n\n\n\n\n\n\n\nDeploy All\n\n\n\n\nUse this when you have made changes to your Functions, Events or Resources in \nserverless.yml\n or you simply want to deploy all changes within your Service at the same time.\n\n\nserverless deploy -s \n[\nSTAGE NAME\n]\n -r \n[\nREGION NAME\n]\n -v\n\n\n\n\n\n\n\nDeploy Function\n\n\n\n\nUse this to quickly overwrite your AWS Lambda code on AWS, allowing you to develop faster.\n\n\nserverless deploy \nfunction\n -f \n[\nFUNCTION NAME\n]\n -s \n[\nSTAGE NAME\n]\n -r \n[\nREGION NAME\n]\n\n\n\n\n\n\n\n\nInvoke Function\n\n\n\n\nInvokes an AWS Lambda Function on AWS and returns logs.\n\n\nserverless invoke -f \n[\nFUNCTION NAME\n]\n -s \n[\nSTAGE NAME\n]\n -r \n[\nREGION NAME\n]\n -l\n\n\n\n\n\n\n\nStreaming Logs\n\n\n\n\nOpen up a separate tab in your console and stream all logs for a specific Function using this command.\n\n\nserverless logs -f \n[\nFUNCTION NAME\n]\n -s \n[\nSTAGE NAME\n]\n -r \n[\nREGION NAME\n]",
             "title": "Serverless"
@@ -354,6 +364,16 @@
             "location": "/Databases/Mongodb/#longer-example",
             "text": "Add a count field to all records  function   gatherStats ()   {    \n     var   start   =   Date . now (); \n\n     var   inputDB   =   db . getSiblingDB ( \"inputDB\" ); \n     var   inputColl   =   inputDB . getCollection ( \"inputColl\" ); \n\n     // debug: inputColl.find( {} ).limit(2).forEach(printjson);   \n\n     outputDB   =   db . getSiblingDB ( \"outputDB\" );  \n     db   =   outputDB ;   // set current database for the next aggregate step \n\n     // create temporary collection with count \n     inputColl . aggregate (    [  \n     {   $group :   {   _id :   {   $toLower :   \"$address\"   },   count :   {   $sum :   1   }   }   },  \n     {   $sort :   {   \"count\" :   - 1   }   }, \n     {   $limit :   100000   },                   // limit to 100k addresses with highest count   \n     {   $out :   \"stats\"   } \n     ],    {   allowDiskUse :   true   }   );         // returns { _id, count } where _id is the address \n\n     var   statsColl   =   outputDB . getCollection ( \"stats\" ); \n\n    // create output collection \n     var   outputColl   =   outputDB . getCollection ( \"outputColl\" );  \n     var   outputBulk   =   outputColl . initializeUnorderedBulkOp ();  \n     var   counter   =   0 ;  \n\n     var   inputCursor   =   inputColl . find (   {},   {}   );  \n     inputCursor . forEach (   function ( doc )   {  \n         var   statDoc   =   statsColl . findOne (   {   _id :   doc . address   }   ); \n         if   ( statDoc )   { \n             doc . count   =   statDoc . count ; \n             outputBulk . insert ( doc ); \n             counter ++ ;   \n             if   (   counter   %   1000   ==   0   )   { \n                     outputBulk . execute (); \n                     // you have to reset \n                     outputBulk   =   outputColl . initializeUnorderedBulkOp ();  \n                 } \n             } \n         } \n     ); \n\n     if   (   counter   %   1000   >   0   ) \n         outputBulk . execute (); \n\n\n     // print the results \n     outputColl . find ({}). sort ({ count :   - 1 }). forEach ( printjson );  \n\n     var   end   =   Date . now (); \n     var   duration   =   ( end   -   start ) / 1000 ; \n     printjson ( \"Duration: \"   +   duration   +   \" seconds\" ); \n\n     printjson ( \" | DONE | \" );  }  gatherStats ();   Alternatively move data to memory:       var   statsDict   =   {};   // or better Object.create(null);     \n     statsColl . find ({}). forEach (   function ( doc )   {   statsDict [ doc . _id ]   =   doc . count   }   ); \n\n     // could also use: var statsArray = statsCursor.toArray(); \n\n     inputCursor . forEach (   function ( doc )   { \n         if   ( doc . address   in   statsDict ) \n         {  \n             doc [ \"count\" ]   =   statsDict [ doc . address ];  \n             outputBulk . insert ( doc );  \n         } \n     }); \n     outputBulk . execute ();",
             "title": "Longer Example"
+        },
+        {
+            "location": "/Databases/Redshift/",
+            "text": "Redshift Best Practices\n\u00b6\n\n\n\n\nSmaller node types load data faster\n\n\nBest Practices for data load:\n\n\n1 file in S3 per slice (instances in RedShift)\n\n\nCompressed using gzip compression\n\n\nFile size: 1MB to 1GB compressed \n\n\nCOPY from S3 is the fastest\n\n\nCOPY from EMR HDFS may be faster, but most people don't use HDFS - they store data in S3\n\n\n\n\nFirst column of SORTKEY should not be compressed\n\n\n\n\n\n\nWorkflows: move from staging table to production table\n\n\n\n\nMake sure to wrap the entire workflow into ONE transaction\n\n\nCOMMITs are very expensive in RedShift\n\n\nDisable statistics on staging tables\n\n\nMake sure that the distribution keys match between staging and prod tables\n\n\n\n\nCompress your staging tables\n\n\n\n\n\n\nDo ANALYZE after VACUUM",
+            "title": "Redshift"
+        },
+        {
+            "location": "/Databases/Redshift/#redshift-best-practices",
+            "text": "Smaller node types load data faster  Best Practices for data load:  1 file in S3 per slice (instances in RedShift)  Compressed using gzip compression  File size: 1MB to 1GB compressed   COPY from S3 is the fastest  COPY from EMR HDFS may be faster, but most people don't use HDFS - they store data in S3   First column of SORTKEY should not be compressed    Workflows: move from staging table to production table   Make sure to wrap the entire workflow into ONE transaction  COMMITs are very expensive in RedShift  Disable statistics on staging tables  Make sure that the distribution keys match between staging and prod tables   Compress your staging tables    Do ANALYZE after VACUUM",
+            "title": "Redshift Best Practices"
         },
         {
             "location": "/Databases/SQL/",
@@ -656,6 +676,21 @@
             "title": "Create a central Repo"
         },
         {
+            "location": "/DevOps/Orchestrator_Scheduler/",
+            "text": "Orchestrators / Schedulers\n\u00b6\n\n\nTools to build complex pipelines of batch jobs. They handle dependency resolution, workflow management, visualization.\n\n\nLinks\n\u00b6\n\n\nLuigi vs Airflow vs Pinball\n\n\nAirflow Documentation\n\n\nLuigi\n\n\nPetabyte-Scale Data Pipelines with Docker, Luigi and Elastic Spot Instances\n \n\n\nSnowplow",
+            "title": "Orchestrator Scheduler"
+        },
+        {
+            "location": "/DevOps/Orchestrator_Scheduler/#orchestrators-schedulers",
+            "text": "Tools to build complex pipelines of batch jobs. They handle dependency resolution, workflow management, visualization.",
+            "title": "Orchestrators / Schedulers"
+        },
+        {
+            "location": "/DevOps/Orchestrator_Scheduler/#links",
+            "text": "Luigi vs Airflow vs Pinball  Airflow Documentation  Luigi  Petabyte-Scale Data Pipelines with Docker, Luigi and Elastic Spot Instances    Snowplow",
+            "title": "Links"
+        },
+        {
             "location": "/Java/Java/",
             "text": "Install \nJava\n\u00b6\n\n\nJDK download\n\n\njava -version\n\n\n\n\n\nJava Tools\n\u00b6\n\n\nList 1\n\n\nList 2\n\n\n\n\nEclipse\n IDE\n\n\nMaven\n or Graddle build tool\n\n\nNexus\n private repository\n\n\nMaven public repository\n\n\nPhabrikator\n code review\n\n\nPhabrikator blog\n\n\n\n\n\n\nJenkins\n CI / CD automation server\n\n\nJProfiler\n\n\nFindBugs\n static analysis or \nChecker Framework\n\n\nCheckstyle\n coding standard checker\n\n\nStyle guidelines\n\n\n\n\n\n\n\n\nJava Libraries\n\u00b6\n\n\nLibraries\n\n\n\n\nLog4j\n\n\nSpring\n\n\nSpring Cloud for Amazon Web Services\n\n\nSpring boot code generator\n\n\n\n\n\n\nApache Commons\n\n\nGuava\n\n\nJackson JSON\n or \nGSON\n\n\nHibernate\n\non the JVM. \n\n\nPlay framework\n\n\nSpark web microframework\n\n\nAkka\n - actor model, to build highly concurrent, distributed, and resilient message-driven applications\n\n\n\n\nRandom Snippets\n\u00b6\n\n\nUUID\n.\nrandomUUID\n().\ntoString\n();",
             "title": "Java"
@@ -926,6 +961,26 @@
             "title": "Official reStructuredText Cheatsheet"
         },
         {
+            "location": "/Microservices/Microservices/",
+            "text": "MicroServices\n\u00b6\n\n\n microservices.io \n\n\n Introduction to microservices \n\n\nScala\n\u00b6\n\n\nLagom\n \n\n\n.NET\n\u00b6\n\n\nMicroservices in C#",
+            "title": "Microservices"
+        },
+        {
+            "location": "/Microservices/Microservices/#microservices",
+            "text": "microservices.io    Introduction to microservices",
+            "title": "MicroServices"
+        },
+        {
+            "location": "/Microservices/Microservices/#scala",
+            "text": "Lagom",
+            "title": "Scala"
+        },
+        {
+            "location": "/Microservices/Microservices/#net",
+            "text": "Microservices in C#",
+            "title": ".NET"
+        },
+        {
             "location": "/Python/Jupyter/",
             "text": "IPython\n / \nJupyter\n\u00b6\n\n\n\n\nUsing IPython makes interactive work easy.\n\n\nBetter shell\n\n\nNotebook interface\n\n\nEmbeddable kernel\n\n\nParallel python\n\n\n\n\n\n\n\n\nIPython shell shortcuts\n\u00b6\n\n\n\n\nTAB expansion to complete python names and file paths\n\n\n~ and * directory / file expansion\n\n\nmany \"magic\" methods:\n\n\n\n\n%lsmagic                # list of all magic methods\n%quickref               # cheatsheet\n%magic\n\n\n\n\n\nHelp\n\u00b6\n\n\n?                       # overall help\nhelp                    # python help system\n?someobj or someobj?    # help\n??someobj or someobj??  # detailed help\n\n\n\n\n\n%pdoc\n \n%pdef\n \n%psource\n  for docstring, function definition, source code only.\n\n\nRun\n\u00b6\n\n\nTo run a program directly from the IPython console:\n\n\n%run somescript.py      # instead of execfile(\"somescript.py\") at the python prompt\n\n\n\n\n\n%run\n has special flags for timing the execution of your scripts (\n-t\n) or for running them under the control of either Python's pdb debugger (\n-d\n) or profiler (\n-p\n):\n\n\n%run -d myscript.py\n\n\n\n\n\nOther Commands\n\u00b6\n\n\n%edit %ed               # edit then execute\n%save\n%load example.py        # load local (example) file (or url) allowing modification\n%load http://matplotlib.org/plot_directive/mpl_examples/mplot3d/contour3d_demo.py\n%macro                  # define macro with range of history lines, filenames or string objects\n%recall\n\n%whos                   # list identifiers you have defined interactively\n%reset  -f -s           # remove objects -f for force -s for soft (leaves history).\n\n\n\n\n\n\n\n%reset\n is not a kernel restart\n\n\nRestart with \nCtrl+.\n in \"qtconsole\"\n\n\nimport module ; reload(module)\n to reload a module from disk\n\n\n\n\nDebugging\n\u00b6\n\n\n%debug                  # jump into the Python debugger (pdb)\n%pdb                    # start the debugger on any uncaught exception.\n\n%cd                     # change directory\n%pwd                    # print working directory\n%env                    # OS environment variables\n\n\n\n\n\nOS Commands\n\u00b6\n\n\n!OScommand\n!ping www.bbc.co.uk\n%alias                  # system command alias\n\n\n\n\n\nHistory\n\u00b6\n\n\n_ __ ___                # etc... for previous outputs.\n_i _ii _i4              # etc.. for previous input. _ih for list of previous inputs\n\n\n\n\n\nGUI integration\n\u00b6\n\n\nStart with \nipython --gui=qt\n or at the IPython prompt:\n\n\n%gui wx\n\n\n\n\n\nArguments can be \nwx\n, \nqt\n, \ngtk\n and \ntk\n.\n\n\nMatplotlib / pylab graphics in an iPython shell\n\u00b6\n\n\nStart with: \nipython --matplotlib\n ( or \n--matplotlib=qt\n etc...)\n\n\nAt the IPython prompt:\n\n\n%matplotlib             # set matplotlib to work interactively; does not import anythig\n%matplotlib  inline\n%matplotlib qt          # request a specific GUI backend\n%pylab inline\n\n\n\n\n\n%pylab\n makes the following imports:\n\n\nimport\n \nnumpy\n\n\nimport\n \nmatplotlib\n\n\nfrom\n \nmatplotlib\n \nimport\n \npylab\n,\n \nmlab\n,\n \npyplot\n\n\nnp\n \n=\n \nnumpy\n\n\nplt\n \n=\n \npyplot\n\n\nfrom\n \nIPython.display\n \nimport\n \ndisplay\n\n\nfrom\n \nIPython.core.pylabtools\n \nimport\n \nfigsize\n,\n \ngetfigs\n\n\nfrom\n \npylab\n \nimport\n \n*\n\n\nfrom\n \nnumpy\n \nimport\n \n*\n\n\n\n\n\n\nQtconsole - an improved console\n\u00b6\n\n\nAt the command prompt:\n\n\nipython.exe qtconsole --pylab=inline --ConsoleWidget.font_size=10\n\n\n\n\n\nalternative: --matplotlib inline\nor within IPython:\n\n\n%matplotlib  inline\n%pylab inline\n\n\n\n\n\nTo embed plots, SVG or HTML in qtconsole, call display:\n\n\nfrom IPython.core.display import display, display_html\nfrom IPython.core.display import display_png, display_svg\ndisplay(plt.gcf()) # embeds the current figure in the qtconsole\ndisplay(*getfigs()) # embeds all active figures in the qtconsole\n#or:\nf = plt.figure()\nplt.plot(np.rand(100))\ndisplay(f)\n\n\n\n\n\nipython and ipython notebook for matlab users\n\n\nIPython Notebook web-based interface\n\u00b6\n\n\n\n\nStart with: ipython notebook and switch to browser\n\n\nKeyboard shortcuts:\n\n\nEnter\n to edit a cell\n\n\nShift + Enter\n to evaluate\n\n\nCtrl + m\n or \nEsc\n for the \"command mode\"\n\n\n\n\n\n\n\n\nIn command mode:\n\n\n h list of keyboard shortcuts\n 1-6 to convert to heading cell\n m to convert to markdown cell\n y to convert to code\n c copy / v paste\n d d delete cell\n s save notebook\n . to restart kernel",
             "title": "Jupyter"
@@ -1079,6 +1134,21 @@
             "location": "/Scala/Akka/#basic-example",
             "text": "//#full-example  package   com.lightbend.akka.sample  import   akka.actor. {   Actor ,   ActorLogging ,   ActorRef ,   ActorSystem ,   Props   }  import   scala.io.StdIn  //#greeter-companion  //#greeter-messages  object   Greeter   { \n   //#greeter-messages \n   def   props ( message :   String ,   printerActor :   ActorRef ) :   Props   =   Props ( new   Greeter ( message ,   printerActor )) \n   //#greeter-messages \n   final   case   class   WhoToGreet ( who :   String ) \n   case   object   Greet  }  //#greeter-messages  //#greeter-companion  //#greeter-actor  class   Greeter ( message :   String ,   printerActor :   ActorRef )   extends   Actor   { \n   import   Greeter._ \n   import   Printer._ \n\n   var   greeting   =   \"\" \n\n   def   receive   =   { \n     case   WhoToGreet ( who )   => \n       greeting   =   s\" $message ,  $who \" \n     case   Greet             => \n       //#greeter-send-message \n       printerActor   !   Greeting ( greeting ) \n       //#greeter-send-message \n   }  }  //#greeter-actor  //#printer-companion  //#printer-messages  object   Printer   { \n   //#printer-messages \n   def   props :   Props   =   Props [ Printer ] \n   //#printer-messages \n   final   case   class   Greeting ( greeting :   String )  }  //#printer-messages  //#printer-companion  //#printer-actor  class   Printer   extends   Actor   with   ActorLogging   { \n   import   Printer._ \n\n   def   receive   =   { \n     case   Greeting ( greeting )   => \n       log . info ( s\"Greeting received (from  ${ sender () } ):  $greeting \" ) \n   }  }  //#printer-actor  //#main-class  object   AkkaQuickstart   extends   App   { \n   import   Greeter._ \n\n   // Create the 'helloAkka' actor system \n   val   system :   ActorSystem   =   ActorSystem ( \"helloAkka\" ) \n\n   try   { \n     //#create-actors \n     // Create the printer actor \n     val   printer :   ActorRef   =   system . actorOf ( Printer . props ,   \"printerActor\" ) \n\n     // Create the 'greeter' actors \n     val   howdyGreeter :   ActorRef   = \n       system . actorOf ( Greeter . props ( \"Howdy\" ,   printer ),   \"howdyGreeter\" ) \n     val   helloGreeter :   ActorRef   = \n       system . actorOf ( Greeter . props ( \"Hello\" ,   printer ),   \"helloGreeter\" ) \n     val   goodDayGreeter :   ActorRef   = \n       system . actorOf ( Greeter . props ( \"Good day\" ,   printer ),   \"goodDayGreeter\" ) \n     //#create-actors \n\n     //#main-send-messages \n     howdyGreeter   !   WhoToGreet ( \"Akka\" ) \n     howdyGreeter   !   Greet \n\n     howdyGreeter   !   WhoToGreet ( \"Lightbend\" ) \n     howdyGreeter   !   Greet \n\n     helloGreeter   !   WhoToGreet ( \"Scala\" ) \n     helloGreeter   !   Greet \n\n     goodDayGreeter   !   WhoToGreet ( \"Play\" ) \n     goodDayGreeter   !   Greet \n     //#main-send-messages \n\n     println ( \">>> Press ENTER to exit <<<\" ) \n     StdIn . readLine () \n   }   finally   { \n     system . terminate () \n   }  }  //#main-class  //#full-example",
             "title": "Basic Example"
+        },
+        {
+            "location": "/Scala/Play_Framework/",
+            "text": "Links\n\u00b6\n\n\nPlay Framework\n\n\nThe Play application layout\n\u00b6\n\n\nThe layout of a Play application is standardized to keep things as simple as possible. After a first successful compile, a Play application looks like this:\n\n\napp                      \u2192 Application sources\n \u2514 assets                \u2192 Compiled asset sources\n    \u2514 stylesheets        \u2192 Typically LESS CSS sources\n    \u2514 javascripts        \u2192 Typically CoffeeScript sources\n \u2514 controllers           \u2192 Application controllers\n \u2514 models                \u2192 Application business layer\n \u2514 views                 \u2192 Templates\nbuild.sbt                \u2192 Application build script\nconf                     \u2192 Configurations files and other non-compiled resources (on classpath)\n \u2514 application.conf      \u2192 Main configuration file\n \u2514 routes                \u2192 Routes definition\ndist                     \u2192 Arbitrary files to be included in your projects distribution\npublic                   \u2192 Public assets\n \u2514 stylesheets           \u2192 CSS files\n \u2514 javascripts           \u2192 Javascript files\n \u2514 images                \u2192 Image files\nproject                  \u2192 sbt configuration files\n \u2514 build.properties      \u2192 Marker for sbt project\n \u2514 plugins.sbt           \u2192 sbt plugins including the declaration for Play itself\nlib                      \u2192 Unmanaged libraries dependencies\nlogs                     \u2192 Logs folder\n \u2514 application.log       \u2192 Default log file\ntarget                   \u2192 Generated stuff\n \u2514 resolution-cache      \u2192 Info about dependencies\n \u2514 scala-2.11\n    \u2514 api                \u2192 Generated API docs\n    \u2514 classes            \u2192 Compiled class files\n    \u2514 routes             \u2192 Sources generated from routes\n    \u2514 twirl              \u2192 Sources generated from templates\n \u2514 universal             \u2192 Application packaging\n \u2514 web                   \u2192 Compiled web assets\ntest                     \u2192 source folder for unit or functional tests",
+            "title": "Play Framework"
+        },
+        {
+            "location": "/Scala/Play_Framework/#links",
+            "text": "Play Framework",
+            "title": "Links"
+        },
+        {
+            "location": "/Scala/Play_Framework/#the-play-application-layout",
+            "text": "The layout of a Play application is standardized to keep things as simple as possible. After a first successful compile, a Play application looks like this:  app                      \u2192 Application sources\n \u2514 assets                \u2192 Compiled asset sources\n    \u2514 stylesheets        \u2192 Typically LESS CSS sources\n    \u2514 javascripts        \u2192 Typically CoffeeScript sources\n \u2514 controllers           \u2192 Application controllers\n \u2514 models                \u2192 Application business layer\n \u2514 views                 \u2192 Templates\nbuild.sbt                \u2192 Application build script\nconf                     \u2192 Configurations files and other non-compiled resources (on classpath)\n \u2514 application.conf      \u2192 Main configuration file\n \u2514 routes                \u2192 Routes definition\ndist                     \u2192 Arbitrary files to be included in your projects distribution\npublic                   \u2192 Public assets\n \u2514 stylesheets           \u2192 CSS files\n \u2514 javascripts           \u2192 Javascript files\n \u2514 images                \u2192 Image files\nproject                  \u2192 sbt configuration files\n \u2514 build.properties      \u2192 Marker for sbt project\n \u2514 plugins.sbt           \u2192 sbt plugins including the declaration for Play itself\nlib                      \u2192 Unmanaged libraries dependencies\nlogs                     \u2192 Logs folder\n \u2514 application.log       \u2192 Default log file\ntarget                   \u2192 Generated stuff\n \u2514 resolution-cache      \u2192 Info about dependencies\n \u2514 scala-2.11\n    \u2514 api                \u2192 Generated API docs\n    \u2514 classes            \u2192 Compiled class files\n    \u2514 routes             \u2192 Sources generated from routes\n    \u2514 twirl              \u2192 Sources generated from templates\n \u2514 universal             \u2192 Application packaging\n \u2514 web                   \u2192 Compiled web assets\ntest                     \u2192 source folder for unit or functional tests",
+            "title": "The Play application layout"
         },
         {
             "location": "/Scala/Scala_Collections/",
@@ -1924,6 +1994,31 @@
             "location": "/Software_Development/IntelliJ/#shortcuts",
             "text": "Search Anywhere     Double Shift\nGot to file         Ctrl + Shift + N\nRecent files        Ctrl + E\nCode Completion     Ctrl + Space \nParameters          Ctrl + P\nHighlight usages in file            Ctrl + Shift + F7\nDeclaration of the current method   Alt + Q\nCode Templates      Ctrl + J",
             "title": "Shortcuts"
+        },
+        {
+            "location": "/Web/Bootstrap/",
+            "text": "Bootstrap\n\u00b6\n\n\nUseful Links\n\u00b6\n\n\nBootstrap\n\n\nInstall\n\u00b6\n\n\n$ npm install bootstrap\n\n\n\n\n\nCDN\n\u00b6\n\n\n<!-- Latest compiled and minified CSS -->\n<\nlink\n \nrel\n=\n\"stylesheet\"\n \nhref\n=\n\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css\"\n \nintegrity\n=\n\"sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7\"\n \ncrossorigin\n=\n\"anonymous\"\n>\n\n\n\n<!-- Optional theme -->\n<\nlink\n \nrel\n=\n\"stylesheet\"\n \nhref\n=\n\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css\"\n \nintegrity\n=\n\"sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r\"\n \ncrossorigin\n=\n\"anonymous\"\n>\n\n\n\n<!-- Latest compiled and minified JavaScript -->\n<\nscript\n \nsrc\n=\n\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js\"\n \nintegrity\n=\n\"sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS\"\n \ncrossorigin\n=\n\"anonymous\"\n></\nscript\n>",
+            "title": "Bootstrap"
+        },
+        {
+            "location": "/Web/Bootstrap/#bootstrap",
+            "text": "",
+            "title": "Bootstrap"
+        },
+        {
+            "location": "/Web/Bootstrap/#useful-links",
+            "text": "Bootstrap",
+            "title": "Useful Links"
+        },
+        {
+            "location": "/Web/Bootstrap/#install",
+            "text": "$ npm install bootstrap",
+            "title": "Install"
+        },
+        {
+            "location": "/Web/Bootstrap/#cdn",
+            "text": "<!-- Latest compiled and minified CSS --> < link   rel = \"stylesheet\"   href = \"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css\"   integrity = \"sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7\"   crossorigin = \"anonymous\" >  <!-- Optional theme --> < link   rel = \"stylesheet\"   href = \"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css\"   integrity = \"sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r\"   crossorigin = \"anonymous\" >  <!-- Latest compiled and minified JavaScript --> < script   src = \"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js\"   integrity = \"sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS\"   crossorigin = \"anonymous\" ></ script >",
+            "title": "CDN"
         },
         {
             "location": "/dotNET/ASPdotNET/",
