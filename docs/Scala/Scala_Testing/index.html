@@ -1,10 +1,14 @@
 
+
+
+
 <!DOCTYPE html>
-<html class="no-js">
+<html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
       
         <meta name="description" content="A collection of cheatsheets and code snippets.">
       
@@ -15,9 +19,26 @@
         <meta name="author" content="S. John Cruchon-Dupeyrat">
       
       
-        <link rel="shortcut icon" href="../../assets/images/favicon.png">
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
       
-      <meta name="generator" content="mkdocs-0.16.1, mkdocs-material-1.4.1">
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.3, mkdocs-material-2.7.1">
     
     
       
@@ -25,19 +46,17 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr-56ade86843.js"></script>
-    
-    
-      <link rel="stylesheet" href="../../assets/stylesheets/application-76741b64bc.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.78aab2dc.css">
       
-        <link rel="stylesheet" href="../../assets/stylesheets/application-66fa0d9bba.palette.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.6079476c.css">
       
     
     
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
       
-        
-        
-        
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
@@ -47,64 +66,90 @@
     
   </head>
   
-  
-  
-  
-    <body data-md-color-primary="deep-orange" data-md-color-accent="orange">
+    
+    
+    <body dir="ltr" data-md-color-primary="deep-orange" data-md-color-accent="orange">
   
     <svg class="md-svg">
       <defs>
         
         
-          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
         
       </defs>
     </svg>
-    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
-    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <a href="#links" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        
-          <a href="../.." title="John's Cheatsheets" class="md-icon md-icon--home md-header-nav__button">
-          </a>
-        
+        <a href="http://john-cd.com/cheatsheets/" title="John's Cheatsheets" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
       </div>
       <div class="md-flex__cell md-flex__cell--stretch">
-        <span class="md-flex__ellipsis md-header-nav__title">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
             
-              
-                <span class="md-header-nav__parent">
-                  Scala
-                </span>
-              
+              <span class="md-header-nav__topic">
+                John's Cheatsheets
+              </span>
+              <span class="md-header-nav__topic">
+                Scala Testing
+              </span>
             
-            Scala Testing
           
-        </span>
+        </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         
-          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
           
-<div class="md-search" data-md-component="search">
-  <div class="md-search__overlay"></div>
-  <div class="md-search__inner">
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
       <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
         <div class="md-search-result" data-md-component="result">
-          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+          <div class="md-search-result__meta">
             Type to start searching
           </div>
           <ol class="md-search-result__list"></ol>
@@ -113,18 +158,19 @@
     </div>
   </div>
 </div>
+          
         
       </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <div class="md-header-nav__source">
-          
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
             
 
 
   
 
 
-  <a href="https://github.com/john-cd/cheatsheets" title="Go to repository" class="md-source" data-md-source="github">
+  <a href="https://github.com/john-cd/cheatsheets/" title="Go to repository" class="md-source" data-md-source="github">
     
       <div class="md-source__icon">
         <svg viewBox="0 0 24 24" width="24" height="24">
@@ -137,14 +183,16 @@
     </div>
   </a>
 
-          
+          </div>
         </div>
-      </div>
+      
     </div>
   </nav>
 </header>
     
     <div class="md-container">
+      
+        
       
       
       <main class="md-main">
@@ -156,9 +204,11 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="drawer">
-    
-      <i class="md-icon md-icon--home md-nav__button"></i>
-    
+    <span class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </span>
     John's Cheatsheets
   </label>
   
@@ -169,7 +219,7 @@
   
 
 
-  <a href="https://github.com/john-cd/cheatsheets" title="Go to repository" class="md-source" data-md-source="github">
+  <a href="https://github.com/john-cd/cheatsheets/" title="Go to repository" class="md-source" data-md-source="github">
     
       <div class="md-source__icon">
         <svg viewBox="0 0 24 24" width="24" height="24">
@@ -203,15 +253,27 @@
       
 
 
+  <li class="md-nav__item">
+    <a href="../../Command_Prompt_Here/" title="Command Prompt Here" class="md-nav__link">
+      Command Prompt Here
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
-    <label class="md-nav__link" for="nav-2">
+    <label class="md-nav__link" for="nav-3">
       Big Data
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-2">
+      <label class="md-nav__title" for="nav-3">
         Big Data
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -235,8 +297,80 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Big_Data/Spark/" title="Spark" class="md-nav__link">
-      Spark
+    <a href="../../Big_Data/Install_Spark_2.3_Locally/" title="Install Spark 2.3 Locally" class="md-nav__link">
+      Install Spark 2.3 Locally
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Big_Data/Spark_APIs/" title="Spark APIs" class="md-nav__link">
+      Spark APIs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Big_Data/Spark_Basics/" title="Spark Basics" class="md-nav__link">
+      Spark Basics
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Big_Data/Spark_Development_with_sbt_and_InteliJ/" title="Setup a Spark Development Environment with IntelliJ and sbt" class="md-nav__link">
+      Setup a Spark Development Environment with IntelliJ and sbt
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Big_Data/Spark_on_AWS_EMR/" title="Spark on AWS EMR" class="md-nav__link">
+      Spark on AWS EMR
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Big_Data/Spark_on_EC2/" title="Install Spark on EC2 with Flintrock" class="md-nav__link">
+      Install Spark on EC2 with Flintrock
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Big_Data/Spark_on_Kubernetes/" title="Spark 2.3 on Kubernetes" class="md-nav__link">
+      Spark 2.3 on Kubernetes
     </a>
   </li>
 
@@ -253,13 +387,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
-    <label class="md-nav__link" for="nav-3">
+    <label class="md-nav__link" for="nav-4">
       Cloud
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-3">
+      <label class="md-nav__title" for="nav-4">
         Cloud
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -271,8 +405,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Cloud/AWS/" title="AWS" class="md-nav__link">
-      AWS
+    <a href="../../Cloud/AWS/" title="AWS Services Overview" class="md-nav__link">
+      AWS Services Overview
     </a>
   </li>
 
@@ -295,8 +429,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Cloud/Serverless/" title="Serverless" class="md-nav__link">
-      Serverless
+    <a href="../../Cloud/Serverless/" title="Serverless Cheatsheet" class="md-nav__link">
+      Serverless Cheatsheet
     </a>
   </li>
 
@@ -313,13 +447,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
-    <label class="md-nav__link" for="nav-4">
+    <label class="md-nav__link" for="nav-5">
       Data Science
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
+      <label class="md-nav__title" for="nav-5">
         Data Science
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -373,13 +507,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
     
-    <label class="md-nav__link" for="nav-5">
+    <label class="md-nav__link" for="nav-6">
       Databases
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
+      <label class="md-nav__title" for="nav-6">
         Databases
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -391,8 +525,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Databases/Mongodb/" title="Mongodb" class="md-nav__link">
-      Mongodb
+    <a href="../../Databases/Mongodb/" title="MongoDB Cheatsheet" class="md-nav__link">
+      MongoDB Cheatsheet
     </a>
   </li>
 
@@ -403,8 +537,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Databases/Redshift/" title="Redshift" class="md-nav__link">
-      Redshift
+    <a href="../../Databases/Redshift/" title="RedShift" class="md-nav__link">
+      RedShift
     </a>
   </li>
 
@@ -415,44 +549,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Databases/SQL/" title="SQL" class="md-nav__link">
-      SQL
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
-    
-    <label class="md-nav__link" for="nav-6">
-      Deep Learning
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-6">
-        Deep Learning
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../Deep_Learning/Keras/" title="Keras" class="md-nav__link">
-      Keras
+    <a href="../../Databases/SQL/" title="SQL Cheatsheet" class="md-nav__link">
+      SQL Cheatsheet
     </a>
   </li>
 
@@ -472,11 +570,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
     
     <label class="md-nav__link" for="nav-7">
-      DevOps
+      Deep Learning
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-7">
-        DevOps
+        Deep Learning
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -487,44 +585,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../DevOps/CloudFormation/" title="CloudFormation" class="md-nav__link">
-      CloudFormation
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../DevOps/Docker/" title="Docker" class="md-nav__link">
-      Docker
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../DevOps/Git/" title="Git" class="md-nav__link">
-      Git
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../DevOps/Orchestrator_Scheduler/" title="Orchestrator Scheduler" class="md-nav__link">
-      Orchestrator Scheduler
+    <a href="../../Deep_Learning/Keras/" title="Keras Cheatsheet" class="md-nav__link">
+      Keras Cheatsheet
     </a>
   </li>
 
@@ -544,11 +606,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
     
     <label class="md-nav__link" for="nav-8">
-      Java
+      DevOps
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-8">
-        Java
+        DevOps
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -559,8 +621,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Java/Java/" title="Java" class="md-nav__link">
-      Java
+    <a href="../../DevOps/CloudFormation/" title="CloudFormation Basics" class="md-nav__link">
+      CloudFormation Basics
     </a>
   </li>
 
@@ -571,8 +633,44 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Java/Log4j/" title="Log4j" class="md-nav__link">
-      Log4j
+    <a href="../../DevOps/Docker/" title="Docker Cheatsheet" class="md-nav__link">
+      Docker Cheatsheet
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../DevOps/Git/" title="Git Cheatsheet" class="md-nav__link">
+      Git Cheatsheet
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../DevOps/Minikube_Install/" title="Install Minikube" class="md-nav__link">
+      Install Minikube
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../DevOps/Orchestrator_Scheduler/" title="Orchestrators / Schedulers" class="md-nav__link">
+      Orchestrators / Schedulers
     </a>
   </li>
 
@@ -592,11 +690,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
     
     <label class="md-nav__link" for="nav-9">
-      Linux
+      Java
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-9">
-        Linux
+        Java
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -607,8 +705,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Linux/Linux/" title="Linux" class="md-nav__link">
-      Linux
+    <a href="../../Java/Java/" title="Java Pointers" class="md-nav__link">
+      Java Pointers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Java/Log4j/" title="Apache Log4j 2" class="md-nav__link">
+      Apache Log4j 2
     </a>
   </li>
 
@@ -628,11 +738,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
     
     <label class="md-nav__link" for="nav-10">
-      Markup and Documentation
+      Linux
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-10">
-        Markup and Documentation
+        Linux
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -643,44 +753,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Markup_and_Documentation/Jekyll/" title="Jekyll" class="md-nav__link">
-      Jekyll
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../Markup_and_Documentation/Markdown/" title="Markdown" class="md-nav__link">
-      Markdown
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../Markup_and_Documentation/MkDocs/" title="MkDocs" class="md-nav__link">
-      MkDocs
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../Markup_and_Documentation/reStructuredText/" title="reStructuredText" class="md-nav__link">
-      reStructuredText
+    <a href="../../Linux/Linux/" title="Linux Cheatsheet" class="md-nav__link">
+      Linux Cheatsheet
     </a>
   </li>
 
@@ -700,10 +774,82 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
     
     <label class="md-nav__link" for="nav-11">
-      Microservices
+      Markup and Documentation
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-11">
+        Markup and Documentation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Markup_and_Documentation/Jekyll/" title=""Jekyll How-To"" class="md-nav__link">
+      "Jekyll How-To"
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Markup_and_Documentation/Markdown/" title="Markdown Essentials" class="md-nav__link">
+      Markdown Essentials
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Markup_and_Documentation/MkDocs/" title="MkDocs Basics" class="md-nav__link">
+      MkDocs Basics
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Markup_and_Documentation/reStructuredText/" title="reStructuredText Cheatsheet" class="md-nav__link">
+      reStructuredText Cheatsheet
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
+    
+    <label class="md-nav__link" for="nav-12">
+      Microservices
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-12">
         Microservices
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -733,13 +879,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
     
-    <label class="md-nav__link" for="nav-12">
+    <label class="md-nav__link" for="nav-13">
       Python
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-12">
+      <label class="md-nav__title" for="nav-13">
         Python
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -751,8 +897,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Python/Jupyter/" title="Jupyter" class="md-nav__link">
-      Jupyter
+    <a href="../../Python/Jupyter/" title="IPython / Jupyter Cheatsheet" class="md-nav__link">
+      IPython / Jupyter Cheatsheet
     </a>
   </li>
 
@@ -763,8 +909,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Python/Matplotlib/" title="Matplotlib" class="md-nav__link">
-      Matplotlib
+    <a href="../../Python/Matplotlib/" title="Matplotlib Cheatsheet" class="md-nav__link">
+      Matplotlib Cheatsheet
     </a>
   </li>
 
@@ -775,8 +921,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Python/Python3/" title="Python3" class="md-nav__link">
-      Python3
+    <a href="../../Python/Python3/" title="Python 3" class="md-nav__link">
+      Python 3
     </a>
   </li>
 
@@ -795,13 +941,13 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-14" type="checkbox" id="nav-14" checked>
     
-    <label class="md-nav__link" for="nav-13">
+    <label class="md-nav__link" for="nav-14">
       Scala
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-13">
+      <label class="md-nav__title" for="nav-14">
         Scala
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -813,8 +959,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Akka/" title="Akka" class="md-nav__link">
-      Akka
+    <a href="../Akka/" title="Akka Cheatsheet" class="md-nav__link">
+      Akka Cheatsheet
     </a>
   </li>
 
@@ -873,8 +1019,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Scala_Generalities/" title="Scala Generalities" class="md-nav__link">
-      Scala Generalities
+    <a href="../Scala_Generalities/" title="Scala (Generalities)" class="md-nav__link">
+      Scala (Generalities)
     </a>
   </li>
 
@@ -969,6 +1115,8 @@
       
       
       
+      
+      
     </ul>
   
 </nav>
@@ -1024,13 +1172,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-14" type="checkbox" id="nav-14">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-15" type="checkbox" id="nav-15">
     
-    <label class="md-nav__link" for="nav-14">
+    <label class="md-nav__link" for="nav-15">
       Search
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-14">
+      <label class="md-nav__title" for="nav-15">
         Search
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1060,13 +1208,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-15" type="checkbox" id="nav-15">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-16" type="checkbox" id="nav-16">
     
-    <label class="md-nav__link" for="nav-15">
+    <label class="md-nav__link" for="nav-16">
       Software Development
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-15">
+      <label class="md-nav__title" for="nav-16">
         Software Development
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1108,13 +1256,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-16" type="checkbox" id="nav-16">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-17" type="checkbox" id="nav-17">
     
-    <label class="md-nav__link" for="nav-16">
+    <label class="md-nav__link" for="nav-17">
       Web
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-16">
+      <label class="md-nav__title" for="nav-17">
         Web
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1144,13 +1292,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-17" type="checkbox" id="nav-17">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-18" type="checkbox" id="nav-18">
     
-    <label class="md-nav__link" for="nav-17">
+    <label class="md-nav__link" for="nav-18">
       dotNET
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-17">
+      <label class="md-nav__title" for="nav-18">
         dotNET
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1289,6 +1437,8 @@
       
       
       
+      
+      
     </ul>
   
 </nav>
@@ -1301,7 +1451,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/john-cd/cheatsheets/edit/master/docs_src/Scala\Scala_Testing.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
+                  <a href="https://github.com/john-cd/cheatsheets/edit/master/docs_src/Scala/Scala_Testing.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
                   <h1>Scala Testing</h1>
@@ -1418,6 +1568,8 @@
               
               
                 
+
+
               
             </article>
           </div>
@@ -1467,13 +1619,13 @@
       <div class="md-footer-copyright">
         
           <div class="md-footer-copyright__highlight">
-            Copyright &copy; 2017 S. John Cruchon-Dupeyrat
+            Copyright &copy; 2017-2018 S. John Cruchon-Dupeyrat
           </div>
         
         powered by
-        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        <a href="http://www.mkdocs.org">MkDocs</a>
         and
-        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+        <a href="https://squidfunk.github.io/mkdocs-material/">
           Material for MkDocs</a>
       </div>
       
@@ -1497,13 +1649,14 @@
       
     </div>
     
-      <script src="../../assets/javascripts/application-3964c0cb56.js"></script>
-      <script>app.initialize({url:{base:"../.."}})</script>
+      <script src="../../assets/javascripts/application.8eb9be28.js"></script>
+      
+      <script>app.initialize({version:"0.17.3",url:{base:"../.."}})</script>
       
     
     
       
-      <script>!function(e,t,a,n,o,c,i){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,c=t.createElement(a),i=t.getElementsByTagName(a)[0],c.async=1,c.src=n,i.parentNode.insertBefore(c,i)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-92780605-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var t=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",t,e.href)})});var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})</script>
+        <script>!function(e,a,t,n,o,c,i){e.GoogleAnalyticsObject=o,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),i=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",i.parentNode.insertBefore(c,i)}(window,document,"script",0,"ga"),ga("create","UA-92780605-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var a=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",a,e.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
       
     
   </body>

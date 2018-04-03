@@ -10,22 +10,27 @@ repo_url: 'https://github.com/john-cd/cheatsheets'
 edit_uri: edit/master/docs_src/
 
 # Copyright
-copyright: 'Copyright &copy; 2017 S. John Cruchon-Dupeyrat'
+copyright: 'Copyright &copy; 2017-2018 S. John Cruchon-Dupeyrat'
 
-# Documentation and theme
+# Documentation sources and theme
 docs_dir: 'docs_src'
-theme_dir: 'mkdocs-material/material'
 site_dir: 'docs'
 
-# Options
-extra:
-#  logo: 'images/logo.svg'
+theme:
+  name: material
   palette:
     primary: 'deep orange'
     accent: 'orange'
   font:
     text: 'Roboto'
     code: 'Roboto Mono'
+#  feature:
+#    tabs: true
+# logo: 'images/logo.svg'
+# favicon: 'assets/images/favicon.ico   
+
+# Options
+extra:
   social:
     - type: 'github'
       link: 'https://github.com/john-cd'
@@ -33,8 +38,7 @@ extra:
       link: 'https://twitter.com/sjncd'
     - type: 'linkedin'
       link: 'https://www.linkedin.com/in/scdupeyrat/'
-#  feature:
-#    tabs: true
+#  disqus: 'your-shortname'
       
       
 # Google Analytics
@@ -45,5 +49,7 @@ google_analytics:
 # Extensions
 markdown_extensions:
   - admonition
-  - codehilite(guess_lang=false)
-  - toc(permalink=true)
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true
