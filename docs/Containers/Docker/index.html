@@ -13,7 +13,7 @@
         <meta name="description" content="A collection of cheatsheets and code snippets.">
       
       
-        <link rel="canonical" href="http://john-cd.com/cheatsheets/DevOps/Minikube_Install/">
+        <link rel="canonical" href="http://john-cd.com/cheatsheets/Containers/Docker/">
       
       
         <meta name="author" content="S. John Cruchon-Dupeyrat">
@@ -42,7 +42,7 @@
     
     
       
-        <title>Install Minikube</title>
+        <title>Docker Cheatsheet</title>
       
     
     
@@ -99,7 +99,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
-      <a href="#install-minikube" tabindex="1" class="md-skip">
+      <a href="#docker-cheatsheet" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -125,7 +125,7 @@
                 John's Cheatsheets
               </span>
               <span class="md-header-nav__topic">
-                Install Minikube
+                Docker Cheatsheet
               </span>
             
           
@@ -444,16 +444,249 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
     
     <label class="md-nav__link" for="nav-5">
-      Data Science
+      Containers
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-5">
+        Containers
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Debug_Kubernetes/" title="Debug Kubernetes" class="md-nav__link">
+      Debug Kubernetes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Deploy_to_Kubernetes%20%20%28Helm%29/" title="Deploy to Kubernetes (Helm)" class="md-nav__link">
+      Deploy to Kubernetes (Helm)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Deploy_to_Kubernetes/" title="Deploy to Kubernetes" class="md-nav__link">
+      Deploy to Kubernetes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Docker Cheatsheet
+      </label>
+    
+    <a href="./" title="Docker Cheatsheet" class="md-nav__link md-nav__link--active">
+      Docker Cheatsheet
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#useful-links" title="Useful Links" class="md-nav__link">
+    Useful Links
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts" title="Concepts" class="md-nav__link">
+    Concepts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cheatsheet" title="Cheatsheet" class="md-nav__link">
+    Cheatsheet
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#port-mapping" title="Port Mapping" class="md-nav__link">
+    Port Mapping
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linking" title="Linking" class="md-nav__link">
+    Linking
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#networks" title="Networks" class="md-nav__link">
+    Networks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-volumes" title="Data Volumes" class="md-nav__link">
+    Data Volumes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-dockerfile" title="Example Dockerfile" class="md-nav__link">
+    Example Dockerfile
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Helm_Chart_Creation/" title="Helm Chart Creation" class="md-nav__link">
+      Helm Chart Creation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Kubernetes_Cheatsheet/" title="Kubernetes Cheatsheet" class="md-nav__link">
+      Kubernetes Cheatsheet
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Kubernetes_Concepts/" title="Kubernetes Concepts" class="md-nav__link">
+      Kubernetes Concepts
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Kubernetes_Examples/" title="Kubernetes Examples" class="md-nav__link">
+      Kubernetes Examples
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Minikube_Install_in_Ubuntu_on_Windows/" title="Minikube Install in Ubuntu on Windows" class="md-nav__link">
+      Minikube Install in Ubuntu on Windows
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Minikube_Install_on_Windows/" title="Minikube Install on Windows" class="md-nav__link">
+      Minikube Install on Windows
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Data Science
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
         Data Science
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -489,44 +722,56 @@
 
 
   <li class="md-nav__item">
+    <a href="../../Data_Science/Deep_Learning/" title="Deep Learning" class="md-nav__link">
+      Deep Learning
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Science/Dimensionality_Reduction/" title="Dimensionality Reduction" class="md-nav__link">
+      Dimensionality Reduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Science/Keras/" title="Keras" class="md-nav__link">
+      Keras
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../Data_Science/Machine_Learning/" title="Machine Learning" class="md-nav__link">
       Machine Learning
     </a>
   </li>
 
         
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
-    
-    <label class="md-nav__link" for="nav-6">
-      Databases
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-6">
-        Databases
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
           
           
           
 
 
   <li class="md-nav__item">
-    <a href="../../Databases/Mongodb/" title="MongoDB Cheatsheet" class="md-nav__link">
-      MongoDB Cheatsheet
+    <a href="../../Data_Science/Recommenders/" title="Recommenders" class="md-nav__link">
+      Recommenders
     </a>
   </li>
 
@@ -537,20 +782,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Databases/Redshift/" title="RedShift" class="md-nav__link">
-      RedShift
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../Databases/SQL/" title="SQL Cheatsheet" class="md-nav__link">
-      SQL Cheatsheet
+    <a href="../../Data_Science/scikit-learn/" title="Scikit learn" class="md-nav__link">
+      Scikit learn
     </a>
   </li>
 
@@ -570,11 +803,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
     
     <label class="md-nav__link" for="nav-7">
-      Deep Learning
+      Databases
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-7">
-        Deep Learning
+        Databases
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -585,8 +818,32 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Deep_Learning/Keras/" title="Keras Cheatsheet" class="md-nav__link">
-      Keras Cheatsheet
+    <a href="../../Databases/Mongodb/" title="Mongodb" class="md-nav__link">
+      Mongodb
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Databases/Redshift/" title="Redshift" class="md-nav__link">
+      Redshift
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Databases/SQL/" title="SQL" class="md-nav__link">
+      SQL
     </a>
   </li>
 
@@ -600,12 +857,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
     
     <label class="md-nav__link" for="nav-8">
       DevOps
@@ -623,8 +878,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../CloudFormation/" title="CloudFormation Basics" class="md-nav__link">
-      CloudFormation Basics
+    <a href="../../DevOps/CloudFormation/" title="CloudFormation" class="md-nav__link">
+      CloudFormation
     </a>
   </li>
 
@@ -635,8 +890,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Docker/" title="Docker Cheatsheet" class="md-nav__link">
-      Docker Cheatsheet
+    <a href="../../DevOps/Git/" title="Git" class="md-nav__link">
+      Git
     </a>
   </li>
 
@@ -647,126 +902,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Git/" title="Git Cheatsheet" class="md-nav__link">
-      Git Cheatsheet
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-  
-
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="toc">
-        Install Minikube
-      </label>
-    
-    <a href="./" title="Install Minikube" class="md-nav__link md-nav__link--active">
-      Install Minikube
-    </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#install-minikube" title="Install Minikube" class="md-nav__link">
-    Install Minikube
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#install-kubectl" title="Install kubectl" class="md-nav__link">
-    Install kubectl
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#configure-kubectl" title="Configure kubectl" class="md-nav__link">
-    Configure kubectl
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#run-minikube" title="Run Minikube" class="md-nav__link">
-    Run Minikube
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#install-helm" title="Install Helm" class="md-nav__link">
-    Install Helm
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#kubernetes-concepts" title="Kubernetes Concepts" class="md-nav__link">
-    Kubernetes Concepts
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#minikube-kubectl-command-examples" title="Minikube / kubectl command examples" class="md-nav__link">
-    Minikube / kubectl command examples
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#reusing-the-docker-daemon" title="Reusing the Docker daemon" class="md-nav__link">
-    Reusing the Docker daemon
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Orchestrator_Scheduler/" title="Orchestrator Scheduler" class="md-nav__link">
+    <a href="../../DevOps/Orchestrator_Scheduler/" title="Orchestrator Scheduler" class="md-nav__link">
       Orchestrator Scheduler
     </a>
   </li>
@@ -816,6 +952,18 @@
   <li class="md-nav__item">
     <a href="../../Java/Log4j/" title="Log4j" class="md-nav__link">
       Log4j
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Java/Maven/" title="Maven" class="md-nav__link">
+      Maven
     </a>
   </li>
 
@@ -1258,6 +1406,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../Software_Development/Eclipse/" title="Eclipse" class="md-nav__link">
+      Eclipse
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../Software_Development/IntelliJ/" title="IntelliJ" class="md-nav__link">
       IntelliJ
     </a>
@@ -1403,75 +1563,65 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#install-minikube" title="Install Minikube" class="md-nav__link">
-    Install Minikube
+  <a href="#useful-links" title="Useful Links" class="md-nav__link">
+    Useful Links
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#install-kubectl" title="Install kubectl" class="md-nav__link">
-    Install kubectl
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#configure-kubectl" title="Configure kubectl" class="md-nav__link">
-    Configure kubectl
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#run-minikube" title="Run Minikube" class="md-nav__link">
-    Run Minikube
+  <a href="#concepts" title="Concepts" class="md-nav__link">
+    Concepts
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#install-helm" title="Install Helm" class="md-nav__link">
-    Install Helm
+  <a href="#cheatsheet" title="Cheatsheet" class="md-nav__link">
+    Cheatsheet
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#kubernetes-concepts" title="Kubernetes Concepts" class="md-nav__link">
-    Kubernetes Concepts
+  <a href="#port-mapping" title="Port Mapping" class="md-nav__link">
+    Port Mapping
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#minikube-kubectl-command-examples" title="Minikube / kubectl command examples" class="md-nav__link">
-    Minikube / kubectl command examples
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#reusing-the-docker-daemon" title="Reusing the Docker daemon" class="md-nav__link">
-    Reusing the Docker daemon
+  <a href="#linking" title="Linking" class="md-nav__link">
+    Linking
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#networks" title="Networks" class="md-nav__link">
+    Networks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-volumes" title="Data Volumes" class="md-nav__link">
+    Data Volumes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-dockerfile" title="Example Dockerfile" class="md-nav__link">
+    Example Dockerfile
+  </a>
   
 </li>
       
@@ -1491,212 +1641,145 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/john-cd/cheatsheets/edit/master/docs_src/DevOps/Minikube_Install.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/john-cd/cheatsheets/edit/master/docs_src/Containers/Docker.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>Install Minikube</h1>
-                
-                <h2 id="install-minikube"><a href="https://kubernetes.io/docs/tasks/tools/install-minikube/">Install Minikube</a><a class="headerlink" href="#install-minikube" title="Permanent link">&para;</a></h2>
-<p>Minikube runs a single-node Kubernetes cluster inside a VM on your laptop for users looking to try out Kubernetes or develop with it day-to-day.</p>
-<ul>
-<li>For Windows, install <a href="https://www.virtualbox.org/wiki/Downloads">VirtualBox</a> or Hyper-V first.</li>
-<li>Minikube is distributed in binary form: <a href="https://github.com/kubernetes/minikube/releases"> GitHub Repo </a>. Download the minikube-installer.exe file, and execute the installer. This should automatically add minikube.exe to your path with an uninstaller available as well.</li>
-<li>If needed, add "C:\Program Files (x86)\Kubernetes\minikube" or similar to the PATH (in System Settings &gt; Environment Variables)</li>
-<li>Test that minikube works</li>
-</ul>
-<div class="codehilite"><pre><span></span>$ minikube
+                <h1 id="docker-cheatsheet">Docker Cheatsheet<a class="headerlink" href="#docker-cheatsheet" title="Permanent link">&para;</a></h1>
+<h2 id="useful-links">Useful Links<a class="headerlink" href="#useful-links" title="Permanent link">&para;</a></h2>
+<p><a href="https://github.com/wsargent/docker-cheat-sheet">Docker Cheat Sheet</a></p>
+<p><a href="https://docs.docker.com/">Docker Documentation</a></p>
+<p><a href="https://github.com/docker/labs">Docker Tutorials and Labs</a></p>
+<p><a href="https://www.toptal.com/java/java-continuous-integration-setup-tutorial">Docker + Jenkins</a></p>
+<p><a href="https://hub.docker.com/">Docker Hub</a></p>
+<h2 id="concepts">Concepts<a class="headerlink" href="#concepts" title="Permanent link">&para;</a></h2>
+<p>A Docker image is a read-only template. For example, an image could contain an Ubuntu operating system with Apache and your web application installed. Images are used to create Docker containers. Docker provides a simple way to build new images or update existing images, or you can download Docker images that other people have already created. Docker images are the buildcomponent of Docker.</p>
+<p>Docker registries hold images.</p>
+<h2 id="cheatsheet">Cheatsheet<a class="headerlink" href="#cheatsheet" title="Permanent link">&para;</a></h2>
+<p>To show only running containers use:</p>
+<div class="codehilite"><pre><span></span>$ docker ps
 </pre></div>
 
 
-<p>More info at <a href="https://kubernetes.io/docs/getting-started-guides/minikube/">Getting Started</a></p>
-<h2 id="install-kubectl"><a href="https://kubernetes.io/docs/tasks/tools/install-kubectl/">Install kubectl</a><a class="headerlink" href="#install-kubectl" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Install kubectl</li>
-</ul>
-<p>Use a version of kubectl that is the same version as your server or later. Using an older kubectl with a newer server might produce validation errors.</p>
-<p>On Windows 10:</p>
-<div class="codehilite"><pre><span></span>curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.10.0/bin/windows/amd64/kubectl.exe
+<p>To show all containers use:</p>
+<div class="codehilite"><pre><span></span>$ docker ps -a
 </pre></div>
 
 
-<p>OR</p>
-<p><a href="https://chocolatey.org/install">Install Choco</a></p>
-<p>then </p>
-<div class="codehilite"><pre><span></span>choco install kubernetes-cli
+<p>Show last started container:</p>
+<div class="codehilite"><pre><span></span>$ docker ps -l
 </pre></div>
 
 
-<p>Run kubectl version to verify that the version you’ve installed is sufficiently up-to-date.</p>
-<div class="codehilite"><pre><span></span>kubectl version
+<p>Download an image:</p>
+<div class="codehilite"><pre><span></span>$ docker pull centos
 </pre></div>
 
 
-<h3 id="configure-kubectl">Configure kubectl<a class="headerlink" href="#configure-kubectl" title="Permanent link">&para;</a></h3>
-<p>Configure kubectl to use a remote Kubernetes cluster</p>
-<ul>
-<li>If .kube config does not exist (should be created by minikube): </li>
-</ul>
-<div class="codehilite"><pre><span></span><span class="nb">cd</span> C:<span class="se">\u</span>sers<span class="se">\y</span>ourusername
-mkdir .kube
-<span class="nb">cd</span> .kube
-New-Item config -type file
+<p>Create then start a container: <code>docker run [OPTIONS] IMAGE [COMMAND] [ARG...]</code>
+    * <a href="https://docs.docker.com/engine/reference/run/">Docker run reference</a></p>
+<div class="codehilite"><pre><span></span>$ docker run hello-world
 </pre></div>
 
 
-<ul>
-<li>
-<p>Edit the config file with a text editor of your choice.</p>
-</li>
-<li>
-<p>Check that kubectl is properly configured by getting the cluster state:</p>
-</li>
-</ul>
-<div class="codehilite"><pre><span></span>kubectl cluster-info
+<p>Run with interactive terminal (i = interactive t = terminal):</p>
+<div class="codehilite"><pre><span></span>$ docker run -it ubuntu bash
 </pre></div>
 
 
-<ul>
-<li>Enable auto-completion</li>
-</ul>
-<div class="codehilite"><pre><span></span><span class="nb">echo</span> <span class="s2">&quot;source &lt;(kubectl completion bash)&quot;</span> &gt;&gt; ~/.bashrc
+<p>Start then detach the container (daemonize):</p>
+<div class="codehilite"><pre><span></span>$ docker run -d -p8088:80 --name webserver nginx
 </pre></div>
 
 
-<ul>
-<li>You must have appropriate permissions to list, create, edit and delete pods in your cluster. 
-You can verify that you can list these resources by running kubectl auth can-i <list|create|edit|delete> pods.</li>
-</ul>
-<div class="codehilite"><pre><span></span>kubectl auth can-i list pods
-kubectl auth can-i create pods
-kubectl auth can-i edit pods
-kubectl auth can-i delete pods
+<p>If you want a transient container, <code>docker run --rm</code> will remove the container after it stops.</p>
+<p>Looks inside the container (use <code>-f</code> to act like <code>tail -f</code>):</p>
+<div class="codehilite"><pre><span></span>$ docker logs &lt;container name&gt;
 </pre></div>
 
 
-<h2 id="run-minikube"><a href="https://kubernetes.io/docs/getting-started-guides/minikube/">Run Minikube</a><a class="headerlink" href="#run-minikube" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Install <a href="https://curl.haxx.se/">curl</a></li>
-</ul>
-<div class="codehilite"><pre><span></span>choco install curl
-
-<span class="c1"># Test</span>
-curl http://google.com 
+<p>Stop container:</p>
+<div class="codehilite"><pre><span></span>$ docker stop &lt;container name&gt;   <span class="c1"># container ID or name</span>
 </pre></div>
 
 
-<div class="codehilite"><pre><span></span>$ minikube start
-
-<span class="c1"># List hosts</span>
-$ kubectl get nodes
-
-<span class="c1"># Test by deploying a container  (creates a deployment / pod automatically)</span>
-$ kubectl run hello-minikube --image<span class="o">=</span>k8s.gcr.io/echoserver:1.4 --port<span class="o">=</span><span class="m">8080</span>
-
-<span class="c1"># Provide a dynamic port to the container (creates a service)</span>
-$ kubectl expose deployment hello-minikube --type<span class="o">=</span>NodePort
-
-<span class="c1"># We have now launched an echoserver pod but we have to wait until the pod is up before curling/accessing it</span>
-<span class="c1"># via the exposed service.</span>
-<span class="c1"># To check whether the pod is up and running we can use the following:</span>
-
-$ kubectl get pod
-
-<span class="c1"># We can see that the pod is now Running and we will now be able to curl it:</span>
-$ curl <span class="k">$(</span>minikube service hello-minikube --url<span class="k">)</span>
-
-$ kubectl delete deployment hello-minikube
-
-$ kubectl delete service hello-minikube
-
-$ minikube stop
+<p>Delete container:</p>
+<div class="codehilite"><pre><span></span>$ docker rm &lt;container name&gt;
 </pre></div>
 
 
-<h2 id="install-helm">Install <a href="https://helm.sh/">Helm</a><a class="headerlink" href="#install-helm" title="Permanent link">&para;</a></h2>
-<p>Helm is a package manager for Kubernetes</p>
-<p>Download a binary release of the Helm client from <a href="https://github.com/kubernetes/helm/releases">here</a></p>
-<p>Once you have Helm ready, you can initialize the local CLI and also install Tiller into your Kubernetes cluster in one step:</p>
-<div class="codehilite"><pre><span></span>$ helm init
+<p>To check the environment:</p>
+<div class="codehilite"><pre><span></span>$ docker run -it alpine env 
 </pre></div>
 
 
-<p>This will install Tiller (the helm server) into the Kubernetes cluster you saw with kubectl config current-context.</p>
-<p>Install a test Helm chart</p>
-<div class="codehilite"><pre><span></span>helm repo update              <span class="c1"># Make sure we get the latest list of charts</span>
-helm install stable/mysql
-helm ls
-helm status &lt;release name&gt;
-helm delete &lt;release name&gt;
+<p>Docker version / info:</p>
+<div class="codehilite"><pre><span></span>$ docker version
+$ docker info
 </pre></div>
 
 
-<h2 id="kubernetes-concepts">Kubernetes Concepts<a class="headerlink" href="#kubernetes-concepts" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Pods - This is the basic unit for all of the workloads you run on Kubernetes. These workloads, such as Deployments and Jobs, are composed of one or more Pods.
-A Pod is a Kubernetes abstraction that represents a group of one or more application containers (such as Docker or rkt), and some shared resources for those containers. Those resources include:</li>
-</ul>
-<p>Shared storage, as Volumes
-Networking, as a unique cluster IP address
-Information about how to run each container, such as the container image version or specific ports to use</p>
-<ul>
-<li>
-<p>Nodes: A Pod always runs on a Node. A Node is a worker machine in Kubernetes and may be either a virtual or a physical machine, depending on the cluster. Each Node is managed by the Master. A Node can have multiple pods, and the Kubernetes master automatically handles scheduling the pods across the Nodes in the cluster. </p>
-</li>
-<li>
-<p>Deployment - The most common way of running X copies (Pods) of your application. Supports rolling updates to your container images.</p>
-</li>
-<li>
-<p>Service - By itself, a Deployment can’t receive traffic. Setting up a Service is one of the simplest ways to configure a Deployment to receive and loadbalance requests. Depending on the type of Service used, these requests can come from external client apps or be limited to apps within the same cluster. A Service is tied to a specific Deployment using label selection.</p>
-</li>
-<li>
-<p>Labels - Identifying metadata that you can use to sort and select sets of API objects. Labels have many applications, including the following:</p>
-</li>
-<li>
-<p>To keep the right number of replicas (Pods) running in a Deployment. The specified label is used to stamp the Deployment’s newly created Pods (as the value of the spec.template.labels configuration field), and to query which Pods it already manages (as the value of spec.selector.matchLabels).</p>
-</li>
-<li>To tie a Service to a Deployment using the selector field.</li>
-<li>To look for specific subset of Kubernetes objects, when you are using kubectl. For instance, the command kubectl get deployments --selector=app=nginx only displays Deployments from the nginx app.</li>
-</ul>
-<h2 id="minikube-kubectl-command-examples">Minikube / kubectl command examples<a class="headerlink" href="#minikube-kubectl-command-examples" title="Permanent link">&para;</a></h2>
-<ul>
-<li>To access the Kubernetes Dashboard, run this command in a shell after starting Minikube to get the address:</li>
-</ul>
-<div class="codehilite"><pre><span></span>minikube dashboard
+<h2 id="port-mapping">Port Mapping<a class="headerlink" href="#port-mapping" title="Permanent link">&para;</a></h2>
+<p><code>-p 80:5000</code>  would map port 80 on our local host to port 5000 inside our container.</p>
+<div class="codehilite"><pre><span></span>$ docker run -d -p <span class="m">80</span>:5000 training/webapp python app.py
 </pre></div>
 
 
-<ul>
-<li>
-<p>The minikube VM is exposed to the host system via a host-only IP address, that can be obtained with the <code>minikube ip</code> command</p>
-</li>
-<li>
-<p>Deploy</p>
-</li>
-</ul>
-<div class="codehilite"><pre><span></span>kubectl run hello-world --replicas<span class="o">=</span><span class="m">2</span> --labels<span class="o">=</span><span class="s2">&quot;run=load-balancer-example&quot;</span> --image<span class="o">=</span>gcr.io/google-samples/node-hello:1.0  --port<span class="o">=</span><span class="m">8080</span>
+<p>Full format: ip:hostPort:containerPort | ip::containerPort | hostPort:containerPort | containerPort</p>
+<div class="codehilite"><pre><span></span>$ docker run -d -p <span class="m">127</span>.0.0.1:80:5000 training/webapp python app.py
 </pre></div>
 
 
-<ul>
-<li>
-<p><code>kubectl get</code> - list resources. <code>kubectl get deployment</code> to get all deployments; <code>kubectl get pods -l app=nginx</code> to get pods with label "app: nginx"</p>
-</li>
-<li>
-<p><code>kubectl describe</code> - show detailed information about a resource</p>
-</li>
-<li><code>kubectl logs</code> - print the logs from a container in a pod</li>
-<li><code>kubectl exec</code> - execute a command on a container in a pod</li>
-</ul>
-<h3 id="reusing-the-docker-daemon">Reusing the Docker daemon<a class="headerlink" href="#reusing-the-docker-daemon" title="Permanent link">&para;</a></h3>
-<p>When using a single VM of Kubernetes, it’s really handy to reuse the minikube’s built-in Docker daemon; as this means you don’t have to build a docker registry on your host machine and push the image into it - you can just build inside the same docker daemon as minikube which speeds up local experiments. Just make sure you tag your Docker image with something other than ‘latest’ and use that tag while you pull the image. Otherwise, if you do not specify version of your image, it will be assumed as :latest, with pull image policy of Always correspondingly, which may eventually result in ErrImagePull as you may not have any versions of your Docker image out there in the default docker registry (usually DockerHub) yet.</p>
-<p>To be able to work with the docker daemon on your mac/linux host use the docker-env command in your shell:</p>
-<div class="codehilite"><pre><span></span><span class="nb">eval</span> <span class="k">$(</span>minikube docker-env<span class="k">)</span>
-docker ps
+<p>Both hostPort and containerPort can be specified as a range of ports. When specifying ranges for both, the number of container ports in the range must match the number of host ports in the range, for example: <code>-p1234-1236:1234-1236/tcp</code></p>
+<p>The <code>-P</code> flag tells Docker to map any required network ports inside our container to our host (using random ports).</p>
+<div class="codehilite"><pre><span></span>$ docker run -d -P training/webapp python app.py
 </pre></div>
 
 
-<p>A Docker client is required to publish built docker images to the Docker daemon running inside of minikube. 
-See <a href="https://docs.docker.com/install/">installing Docker</a> for instructions for your platform.</p>
+<h2 id="linking">Linking<a class="headerlink" href="#linking" title="Permanent link">&para;</a></h2>
+<p><code>--link &lt;name or id&gt;:alias</code> where <em>name</em> is the name of the container we’re linking to and <em>alias</em> is an alias for the link name.
+The <code>--link</code> flag also takes the form: <code>--link &lt;name or id&gt;</code></p>
+<div class="codehilite"><pre><span></span>$ docker run -d --name myES -p <span class="m">9200</span>:9200 -p <span class="m">9300</span>:9300 elasticsearch
+$ docker run --name myK --link myES:elasticsearch  -p <span class="m">5601</span>:5601 -d docker-kibana-sense
+</pre></div>
+
+
+<h2 id="networks">Networks<a class="headerlink" href="#networks" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span>$ docker network ls
+</pre></div>
+
+
+<p>Find out the container’s IP address:</p>
+<div class="codehilite"><pre><span></span>$ docker network inspect bridge
+</pre></div>
+
+
+<h2 id="data-volumes">Data Volumes<a class="headerlink" href="#data-volumes" title="Permanent link">&para;</a></h2>
+<p>Create a new volume inside a container at /webapp:</p>
+<div class="codehilite"><pre><span></span>$ docker run -d -P --name web -v /webapp training/webapp python app.py
+$ docker inspect web
+</pre></div>
+
+
+<p>You can also use the VOLUME instruction in a Dockerfile to add one or more new volumes to any container created from that image.</p>
+<p>Mount the host directory, <code>/src/webapp</code>, into the container at <code>/opt/webapp</code>.</p>
+<div class="codehilite"><pre><span></span>$ docker run -d -P --name web -v /src/webapp:/opt/webapp training/webapp python app.py
+</pre></div>
+
+
+<p>On Windows, use:  <code>docker run -v /c/Users/&lt;path&gt;:/&lt;container path&gt; ...</code></p>
+<h2 id="example-dockerfile">Example Dockerfile<a class="headerlink" href="#example-dockerfile" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span>$ vim Dockerfile
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="k">FROM</span><span class="s"> docker/whalesay:latest</span>
+<span class="k">RUN</span> apt-get -y update <span class="o">&amp;&amp;</span> apt-get install -y fortunes
+<span class="k">CMD</span><span class="s"> /usr/games/fortune -a | cowsay</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span>$ docker build -t docker-whale .
+</pre></div>
                 
                   
                 
@@ -1717,7 +1800,7 @@ See <a href="https://docs.docker.com/install/">installing Docker</a> for instruc
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../Git/" title="Git Cheatsheet" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../Deploy_to_Kubernetes/" title="Deploy to Kubernetes" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1726,19 +1809,19 @@ See <a href="https://docs.docker.com/install/">installing Docker</a> for instruc
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Git Cheatsheet
+                Deploy to Kubernetes
               </span>
             </div>
           </a>
         
         
-          <a href="../Orchestrator_Scheduler/" title="Orchestrator Scheduler" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../Helm_Chart_Creation/" title="Helm Chart Creation" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Orchestrator Scheduler
+                Helm Chart Creation
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

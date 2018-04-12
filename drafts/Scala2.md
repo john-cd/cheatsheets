@@ -99,7 +99,7 @@ case class Pair[A](head: A, tail: MyList[A]) extends MyList[A]
 
 Goal: patterns for sequencing computations
 Functional programming is about transforming values
-That is all you can do without introducing side- effects
+That is all you can do without introducing side-effects
 A => B => C
 This is sequencing computations
 Three patterns: fold, map, and flatMap

@@ -4,7 +4,7 @@
     
     <url>
      <loc>http://john-cd.com/cheatsheets//</loc>
-     <lastmod>2018-04-02</lastmod>
+     <lastmod>2018-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -12,7 +12,7 @@
     
     <url>
      <loc>http://john-cd.com/cheatsheets//Command_Prompt_Here/</loc>
-     <lastmod>2018-04-02</lastmod>
+     <lastmod>2018-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -21,49 +21,49 @@
         
     <url>
      <loc>http://john-cd.com/cheatsheets//Big_Data/Hadoop_Ecosystem/</loc>
-     <lastmod>2018-04-02</lastmod>
+     <lastmod>2018-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://john-cd.com/cheatsheets//Big_Data/Install_Spark_2.3_Locally/</loc>
-     <lastmod>2018-04-02</lastmod>
+     <lastmod>2018-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://john-cd.com/cheatsheets//Big_Data/Spark_APIs/</loc>
-     <lastmod>2018-04-02</lastmod>
+     <lastmod>2018-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://john-cd.com/cheatsheets//Big_Data/Spark_Basics/</loc>
-     <lastmod>2018-04-02</lastmod>
+     <lastmod>2018-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://john-cd.com/cheatsheets//Big_Data/Spark_Development_with_sbt_and_InteliJ/</loc>
-     <lastmod>2018-04-02</lastmod>
+     <lastmod>2018-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://john-cd.com/cheatsheets//Big_Data/Spark_on_AWS_EMR/</loc>
-     <lastmod>2018-04-02</lastmod>
+     <lastmod>2018-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://john-cd.com/cheatsheets//Big_Data/Spark_on_EC2/</loc>
-     <lastmod>2018-04-02</lastmod>
+     <lastmod>2018-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://john-cd.com/cheatsheets//Big_Data/Spark_on_Kubernetes/</loc>
-     <lastmod>2018-04-02</lastmod>
+     <lastmod>2018-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -73,19 +73,83 @@
         
     <url>
      <loc>http://john-cd.com/cheatsheets//Cloud/AWS/</loc>
-     <lastmod>2018-04-02</lastmod>
+     <lastmod>2018-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://john-cd.com/cheatsheets//Cloud/AWS_Lambda/</loc>
-     <lastmod>2018-04-02</lastmod>
+     <lastmod>2018-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://john-cd.com/cheatsheets//Cloud/Serverless/</loc>
-     <lastmod>2018-04-02</lastmod>
+     <lastmod>2018-04-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>http://john-cd.com/cheatsheets//Containers/Debug_Kubernetes/</loc>
+     <lastmod>2018-04-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://john-cd.com/cheatsheets//Containers/Deploy_to_Kubernetes  (Helm)/</loc>
+     <lastmod>2018-04-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://john-cd.com/cheatsheets//Containers/Deploy_to_Kubernetes/</loc>
+     <lastmod>2018-04-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://john-cd.com/cheatsheets//Containers/Docker/</loc>
+     <lastmod>2018-04-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://john-cd.com/cheatsheets//Containers/Helm_Chart_Creation/</loc>
+     <lastmod>2018-04-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://john-cd.com/cheatsheets//Containers/Kubernetes_Cheatsheet/</loc>
+     <lastmod>2018-04-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://john-cd.com/cheatsheets//Containers/Kubernetes_Concepts/</loc>
+     <lastmod>2018-04-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://john-cd.com/cheatsheets//Containers/Kubernetes_Examples/</loc>
+     <lastmod>2018-04-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://john-cd.com/cheatsheets//Containers/Minikube_Install_in_Ubuntu_on_Windows/</loc>
+     <lastmod>2018-04-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://john-cd.com/cheatsheets//Containers/Minikube_Install_on_Windows/</loc>
+     <lastmod>2018-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -95,19 +159,49 @@
         
     <url>
      <loc>http://john-cd.com/cheatsheets//Data_Science/Data_Manipulation/</loc>
-     <lastmod>2018-04-02</lastmod>
+     <lastmod>2018-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://john-cd.com/cheatsheets//Data_Science/Data_Visualization/</loc>
-     <lastmod>2018-04-02</lastmod>
+     <lastmod>2018-04-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://john-cd.com/cheatsheets//Data_Science/Deep_Learning/</loc>
+     <lastmod>2018-04-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://john-cd.com/cheatsheets//Data_Science/Dimensionality_Reduction/</loc>
+     <lastmod>2018-04-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://john-cd.com/cheatsheets//Data_Science/Keras/</loc>
+     <lastmod>2018-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://john-cd.com/cheatsheets//Data_Science/Machine_Learning/</loc>
-     <lastmod>2018-04-02</lastmod>
+     <lastmod>2018-04-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://john-cd.com/cheatsheets//Data_Science/Recommenders/</loc>
+     <lastmod>2018-04-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://john-cd.com/cheatsheets//Data_Science/scikit-learn/</loc>
+     <lastmod>2018-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -117,29 +211,19 @@
         
     <url>
      <loc>http://john-cd.com/cheatsheets//Databases/Mongodb/</loc>
-     <lastmod>2018-04-02</lastmod>
+     <lastmod>2018-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://john-cd.com/cheatsheets//Databases/Redshift/</loc>
-     <lastmod>2018-04-02</lastmod>
+     <lastmod>2018-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://john-cd.com/cheatsheets//Databases/SQL/</loc>
-     <lastmod>2018-04-02</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    
-
-    
-        
-    <url>
-     <loc>http://john-cd.com/cheatsheets//Deep_Learning/Keras/</loc>
-     <lastmod>2018-04-02</lastmod>
+     <lastmod>2018-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -149,31 +233,19 @@
         
     <url>
      <loc>http://john-cd.com/cheatsheets//DevOps/CloudFormation/</loc>
-     <lastmod>2018-04-02</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://john-cd.com/cheatsheets//DevOps/Docker/</loc>
-     <lastmod>2018-04-02</lastmod>
+     <lastmod>2018-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://john-cd.com/cheatsheets//DevOps/Git/</loc>
-     <lastmod>2018-04-02</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://john-cd.com/cheatsheets//DevOps/Minikube_Install/</loc>
-     <lastmod>2018-04-02</lastmod>
+     <lastmod>2018-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://john-cd.com/cheatsheets//DevOps/Orchestrator_Scheduler/</loc>
-     <lastmod>2018-04-02</lastmod>
+     <lastmod>2018-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -183,13 +255,19 @@
         
     <url>
      <loc>http://john-cd.com/cheatsheets//Java/Java/</loc>
-     <lastmod>2018-04-02</lastmod>
+     <lastmod>2018-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://john-cd.com/cheatsheets//Java/Log4j/</loc>
-     <lastmod>2018-04-02</lastmod>
+     <lastmod>2018-04-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://john-cd.com/cheatsheets//Java/Maven/</loc>
+     <lastmod>2018-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -199,7 +277,7 @@
         
     <url>
      <loc>http://john-cd.com/cheatsheets//Linux/Linux/</loc>
-     <lastmod>2018-04-02</lastmod>
+     <lastmod>2018-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -209,25 +287,25 @@
         
     <url>
      <loc>http://john-cd.com/cheatsheets//Markup_and_Documentation/Jekyll/</loc>
-     <lastmod>2018-04-02</lastmod>
+     <lastmod>2018-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://john-cd.com/cheatsheets//Markup_and_Documentation/Markdown/</loc>
-     <lastmod>2018-04-02</lastmod>
+     <lastmod>2018-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://john-cd.com/cheatsheets//Markup_and_Documentation/MkDocs/</loc>
-     <lastmod>2018-04-02</lastmod>
+     <lastmod>2018-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://john-cd.com/cheatsheets//Markup_and_Documentation/reStructuredText/</loc>
-     <lastmod>2018-04-02</lastmod>
+     <lastmod>2018-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -237,7 +315,7 @@
         
     <url>
      <loc>http://john-cd.com/cheatsheets//Microservices/Microservices/</loc>
-     <lastmod>2018-04-02</lastmod>
+     <lastmod>2018-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -247,19 +325,19 @@
         
     <url>
      <loc>http://john-cd.com/cheatsheets//Python/Jupyter/</loc>
-     <lastmod>2018-04-02</lastmod>
+     <lastmod>2018-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://john-cd.com/cheatsheets//Python/Matplotlib/</loc>
-     <lastmod>2018-04-02</lastmod>
+     <lastmod>2018-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://john-cd.com/cheatsheets//Python/Python3/</loc>
-     <lastmod>2018-04-02</lastmod>
+     <lastmod>2018-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -269,67 +347,67 @@
         
     <url>
      <loc>http://john-cd.com/cheatsheets//Scala/Akka/</loc>
-     <lastmod>2018-04-02</lastmod>
+     <lastmod>2018-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://john-cd.com/cheatsheets//Scala/Play_Framework/</loc>
-     <lastmod>2018-04-02</lastmod>
+     <lastmod>2018-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://john-cd.com/cheatsheets//Scala/Scala_Collections/</loc>
-     <lastmod>2018-04-02</lastmod>
+     <lastmod>2018-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://john-cd.com/cheatsheets//Scala/Scala_Database_Access/</loc>
-     <lastmod>2018-04-02</lastmod>
+     <lastmod>2018-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://john-cd.com/cheatsheets//Scala/Scala_Design_Patterns/</loc>
-     <lastmod>2018-04-02</lastmod>
+     <lastmod>2018-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://john-cd.com/cheatsheets//Scala/Scala_Generalities/</loc>
-     <lastmod>2018-04-02</lastmod>
+     <lastmod>2018-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://john-cd.com/cheatsheets//Scala/Scala_Language/</loc>
-     <lastmod>2018-04-02</lastmod>
+     <lastmod>2018-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://john-cd.com/cheatsheets//Scala/Scala_Testing/</loc>
-     <lastmod>2018-04-02</lastmod>
+     <lastmod>2018-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://john-cd.com/cheatsheets//Scala/Scala_Types/</loc>
-     <lastmod>2018-04-02</lastmod>
+     <lastmod>2018-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://john-cd.com/cheatsheets//Scala/Scaladoc/</loc>
-     <lastmod>2018-04-02</lastmod>
+     <lastmod>2018-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://john-cd.com/cheatsheets//Scala/sbt/</loc>
-     <lastmod>2018-04-02</lastmod>
+     <lastmod>2018-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -339,7 +417,7 @@
         
     <url>
      <loc>http://john-cd.com/cheatsheets//Search/ElasticSearch/</loc>
-     <lastmod>2018-04-02</lastmod>
+     <lastmod>2018-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -349,13 +427,19 @@
         
     <url>
      <loc>http://john-cd.com/cheatsheets//Software_Development/Development_Tools/</loc>
-     <lastmod>2018-04-02</lastmod>
+     <lastmod>2018-04-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://john-cd.com/cheatsheets//Software_Development/Eclipse/</loc>
+     <lastmod>2018-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://john-cd.com/cheatsheets//Software_Development/IntelliJ/</loc>
-     <lastmod>2018-04-02</lastmod>
+     <lastmod>2018-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -365,7 +449,7 @@
         
     <url>
      <loc>http://john-cd.com/cheatsheets//Web/Bootstrap/</loc>
-     <lastmod>2018-04-02</lastmod>
+     <lastmod>2018-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -375,31 +459,31 @@
         
     <url>
      <loc>http://john-cd.com/cheatsheets//dotNET/ASPdotNET/</loc>
-     <lastmod>2018-04-02</lastmod>
+     <lastmod>2018-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://john-cd.com/cheatsheets//dotNET/AkkadotNET/</loc>
-     <lastmod>2018-04-02</lastmod>
+     <lastmod>2018-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://john-cd.com/cheatsheets//dotNET/C#/</loc>
-     <lastmod>2018-04-02</lastmod>
+     <lastmod>2018-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://john-cd.com/cheatsheets//dotNET/Multithreading/</loc>
-     <lastmod>2018-04-02</lastmod>
+     <lastmod>2018-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://john-cd.com/cheatsheets//dotNET/WPF/</loc>
-     <lastmod>2018-04-02</lastmod>
+     <lastmod>2018-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         

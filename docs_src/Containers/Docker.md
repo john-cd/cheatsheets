@@ -102,7 +102,6 @@ $ docker info
 
 ## Port Mapping
 
-
 ``-p 80:5000``  would map port 80 on our local host to port 5000 inside our container.
 
 ```bash

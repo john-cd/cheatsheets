@@ -13,7 +13,7 @@
         <meta name="description" content="A collection of cheatsheets and code snippets.">
       
       
-        <link rel="canonical" href="http://john-cd.com/cheatsheets/DevOps/Docker/">
+        <link rel="canonical" href="http://john-cd.com/cheatsheets/Containers/Debug_Kubernetes/">
       
       
         <meta name="author" content="S. John Cruchon-Dupeyrat">
@@ -42,7 +42,7 @@
     
     
       
-        <title>Docker Cheatsheet</title>
+        <title>Debug Kubernetes</title>
       
     
     
@@ -99,7 +99,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
-      <a href="#docker-cheatsheet" tabindex="1" class="md-skip">
+      <a href="#run-a-test-docker-container" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -125,7 +125,7 @@
                 John's Cheatsheets
               </span>
               <span class="md-header-nav__topic">
-                Docker Cheatsheet
+                Debug Kubernetes
               </span>
             
           
@@ -444,16 +444,203 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
     
     <label class="md-nav__link" for="nav-5">
-      Data Science
+      Containers
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-5">
+        Containers
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Debug Kubernetes
+      </label>
+    
+    <a href="./" title="Debug Kubernetes" class="md-nav__link md-nav__link--active">
+      Debug Kubernetes
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#run-a-test-docker-container" title="Run a test Docker container" class="md-nav__link">
+    Run a test Docker container
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-a-test-k8s-pod" title="Run a test K8s pod" class="md-nav__link">
+    Run a test K8s pod
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Deploy_to_Kubernetes%20%20%28Helm%29/" title="Deploy to Kubernetes  (Helm)" class="md-nav__link">
+      Deploy to Kubernetes  (Helm)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Deploy_to_Kubernetes/" title="Deploy to Kubernetes" class="md-nav__link">
+      Deploy to Kubernetes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Docker/" title="Docker" class="md-nav__link">
+      Docker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Helm_Chart_Creation/" title="Helm Chart Creation" class="md-nav__link">
+      Helm Chart Creation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Kubernetes_Cheatsheet/" title="Kubernetes Cheatsheet" class="md-nav__link">
+      Kubernetes Cheatsheet
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Kubernetes_Concepts/" title="Kubernetes Concepts" class="md-nav__link">
+      Kubernetes Concepts
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Kubernetes_Examples/" title="Kubernetes Examples" class="md-nav__link">
+      Kubernetes Examples
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Minikube_Install_in_Ubuntu_on_Windows/" title="Minikube Install in Ubuntu on Windows" class="md-nav__link">
+      Minikube Install in Ubuntu on Windows
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Minikube_Install_on_Windows/" title="Minikube Install on Windows" class="md-nav__link">
+      Minikube Install on Windows
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Data Science
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
         Data Science
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -489,44 +676,56 @@
 
 
   <li class="md-nav__item">
+    <a href="../../Data_Science/Deep_Learning/" title="Deep Learning" class="md-nav__link">
+      Deep Learning
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Science/Dimensionality_Reduction/" title="Dimensionality Reduction" class="md-nav__link">
+      Dimensionality Reduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Data_Science/Keras/" title="Keras" class="md-nav__link">
+      Keras
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../Data_Science/Machine_Learning/" title="Machine Learning" class="md-nav__link">
       Machine Learning
     </a>
   </li>
 
         
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
-    
-    <label class="md-nav__link" for="nav-6">
-      Databases
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-6">
-        Databases
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
           
           
           
 
 
   <li class="md-nav__item">
-    <a href="../../Databases/Mongodb/" title="MongoDB Cheatsheet" class="md-nav__link">
-      MongoDB Cheatsheet
+    <a href="../../Data_Science/Recommenders/" title="Recommenders" class="md-nav__link">
+      Recommenders
     </a>
   </li>
 
@@ -537,20 +736,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Databases/Redshift/" title="RedShift" class="md-nav__link">
-      RedShift
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../Databases/SQL/" title="SQL Cheatsheet" class="md-nav__link">
-      SQL Cheatsheet
+    <a href="../../Data_Science/scikit-learn/" title="Scikit learn" class="md-nav__link">
+      Scikit learn
     </a>
   </li>
 
@@ -570,11 +757,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
     
     <label class="md-nav__link" for="nav-7">
-      Deep Learning
+      Databases
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-7">
-        Deep Learning
+        Databases
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -585,8 +772,32 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Deep_Learning/Keras/" title="Keras Cheatsheet" class="md-nav__link">
-      Keras Cheatsheet
+    <a href="../../Databases/Mongodb/" title="Mongodb" class="md-nav__link">
+      Mongodb
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Databases/Redshift/" title="Redshift" class="md-nav__link">
+      Redshift
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Databases/SQL/" title="SQL" class="md-nav__link">
+      SQL
     </a>
   </li>
 
@@ -600,12 +811,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
     
     <label class="md-nav__link" for="nav-8">
       DevOps
@@ -623,108 +832,9 @@
 
 
   <li class="md-nav__item">
-    <a href="../CloudFormation/" title="CloudFormation Basics" class="md-nav__link">
-      CloudFormation Basics
+    <a href="../../DevOps/CloudFormation/" title="CloudFormation" class="md-nav__link">
+      CloudFormation
     </a>
-  </li>
-
-        
-          
-          
-          
-
-  
-
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="toc">
-        Docker Cheatsheet
-      </label>
-    
-    <a href="./" title="Docker Cheatsheet" class="md-nav__link md-nav__link--active">
-      Docker Cheatsheet
-    </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#useful-links" title="Useful Links" class="md-nav__link">
-    Useful Links
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#concepts" title="Concepts" class="md-nav__link">
-    Concepts
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cheatsheet" title="Cheatsheet" class="md-nav__link">
-    Cheatsheet
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#port-mapping" title="Port Mapping" class="md-nav__link">
-    Port Mapping
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#linking" title="Linking" class="md-nav__link">
-    Linking
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#networks" title="Networks" class="md-nav__link">
-    Networks
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#data-volumes" title="Data Volumes" class="md-nav__link">
-    Data Volumes
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-dockerfile" title="Example Dockerfile" class="md-nav__link">
-    Example Dockerfile
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -734,7 +844,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Git/" title="Git" class="md-nav__link">
+    <a href="../../DevOps/Git/" title="Git" class="md-nav__link">
       Git
     </a>
   </li>
@@ -746,19 +856,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Minikube_Install/" title="Minikube Install" class="md-nav__link">
-      Minikube Install
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Orchestrator_Scheduler/" title="Orchestrator Scheduler" class="md-nav__link">
+    <a href="../../DevOps/Orchestrator_Scheduler/" title="Orchestrator Scheduler" class="md-nav__link">
       Orchestrator Scheduler
     </a>
   </li>
@@ -808,6 +906,18 @@
   <li class="md-nav__item">
     <a href="../../Java/Log4j/" title="Log4j" class="md-nav__link">
       Log4j
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Java/Maven/" title="Maven" class="md-nav__link">
+      Maven
     </a>
   </li>
 
@@ -1250,6 +1360,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../Software_Development/Eclipse/" title="Eclipse" class="md-nav__link">
+      Eclipse
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../Software_Development/IntelliJ/" title="IntelliJ" class="md-nav__link">
       IntelliJ
     </a>
@@ -1395,64 +1517,20 @@
 <nav class="md-nav md-nav--secondary">
   
   
-    
-  
   
     <label class="md-nav__title" for="toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#useful-links" title="Useful Links" class="md-nav__link">
-    Useful Links
+  <a href="#run-a-test-docker-container" title="Run a test Docker container" class="md-nav__link">
+    Run a test Docker container
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#concepts" title="Concepts" class="md-nav__link">
-    Concepts
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cheatsheet" title="Cheatsheet" class="md-nav__link">
-    Cheatsheet
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#port-mapping" title="Port Mapping" class="md-nav__link">
-    Port Mapping
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#linking" title="Linking" class="md-nav__link">
-    Linking
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#networks" title="Networks" class="md-nav__link">
-    Networks
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#data-volumes" title="Data Volumes" class="md-nav__link">
-    Data Volumes
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-dockerfile" title="Example Dockerfile" class="md-nav__link">
-    Example Dockerfile
+  <a href="#run-a-test-k8s-pod" title="Run a test K8s pod" class="md-nav__link">
+    Run a test K8s pod
   </a>
   
 </li>
@@ -1473,144 +1551,52 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/john-cd/cheatsheets/edit/master/docs_src/DevOps/Docker.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/john-cd/cheatsheets/edit/master/docs_src/Containers/Debug_Kubernetes.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="docker-cheatsheet">Docker Cheatsheet<a class="headerlink" href="#docker-cheatsheet" title="Permanent link">&para;</a></h1>
-<h2 id="useful-links">Useful Links<a class="headerlink" href="#useful-links" title="Permanent link">&para;</a></h2>
-<p><a href="https://github.com/wsargent/docker-cheat-sheet">Docker Cheat Sheet</a></p>
-<p><a href="https://docs.docker.com/">Docker Documentation</a></p>
-<p><a href="https://github.com/docker/labs">Docker Tutorials and Labs</a></p>
-<p><a href="https://www.toptal.com/java/java-continuous-integration-setup-tutorial">Docker + Jenkins</a></p>
-<p><a href="https://hub.docker.com/">Docker Hub</a></p>
-<h2 id="concepts">Concepts<a class="headerlink" href="#concepts" title="Permanent link">&para;</a></h2>
-<p>A Docker image is a read-only template. For example, an image could contain an Ubuntu operating system with Apache and your web application installed. Images are used to create Docker containers. Docker provides a simple way to build new images or update existing images, or you can download Docker images that other people have already created. Docker images are the buildcomponent of Docker.</p>
-<p>Docker registries hold images.</p>
-<h2 id="cheatsheet">Cheatsheet<a class="headerlink" href="#cheatsheet" title="Permanent link">&para;</a></h2>
-<p>To show only running containers use:</p>
-<div class="codehilite"><pre><span></span>$ docker ps
+                  <h1>Debug Kubernetes</h1>
+                
+                <h3 id="run-a-test-docker-container">Run a test Docker container<a class="headerlink" href="#run-a-test-docker-container" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>docker run --rm -p &lt;port&gt;:&lt;port&gt; &lt;docker image&gt;:&lt;tag&gt;
+docker ps
+<span class="c1"># cleanup</span>
+docker <span class="nb">kill</span> &lt;container&gt;
 </pre></div>
 
 
-<p>To show all containers use:</p>
-<div class="codehilite"><pre><span></span>$ docker ps -a
+<p>To override the entrypoint, use:</p>
+<div class="codehilite"><pre><span></span>winpty docker run --rm -p &lt;port&gt;:&lt;port&gt; -it --entrypoint bash &lt;docker image&gt;:&lt;tag&gt;
 </pre></div>
 
 
-<p>Show last started container:</p>
-<div class="codehilite"><pre><span></span>$ docker ps -l
+<p>The above assumes you are using cygwin / git bash on Windows. </p>
+<h3 id="run-a-test-k8s-pod">Run a test K8s pod<a class="headerlink" href="#run-a-test-k8s-pod" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>kubectl run &lt;deployment name&gt; --image<span class="o">=</span>&lt;docker image&gt;:&lt;tag&gt;
 </pre></div>
 
 
-<p>Download an image:</p>
-<div class="codehilite"><pre><span></span>$ docker pull centos
+<p>Useful options:
+- <code>--restart=Never</code> 
+- if the pod has a console: <code>-i --tty  --command -- bash</code></p>
+<ul>
+<li>Attach to the (first) container in the Pod: </li>
+</ul>
+<div class="codehilite"><pre><span></span>kubectl attach &lt;pod name&gt; -i -t
 </pre></div>
 
 
-<p>Create then start a container: <code>docker run [OPTIONS] IMAGE [COMMAND] [ARG...]</code>
-    * <a href="https://docs.docker.com/engine/reference/run/">Docker run reference</a></p>
-<div class="codehilite"><pre><span></span>$ docker run hello-world
+<p>If there are multiple containers in the pod, use: <code>-c &lt;container name&gt;</code></p>
+<ul>
+<li>Get a shell to a running Container:</li>
+</ul>
+<div class="codehilite"><pre><span></span>kubectl <span class="nb">exec</span> -it &lt;pod name&gt; -- bash
 </pre></div>
 
 
-<p>Run with interactive terminal (i = interactive t = terminal):</p>
-<div class="codehilite"><pre><span></span>$ docker run -it ubuntu bash
-</pre></div>
-
-
-<p>Start then detach the container (daemonize):</p>
-<div class="codehilite"><pre><span></span>$ docker run -d -p8088:80 --name webserver nginx
-</pre></div>
-
-
-<p>If you want a transient container, <code>docker run --rm</code> will remove the container after it stops.</p>
-<p>Looks inside the container (use <code>-f</code> to act like <code>tail -f</code>):</p>
-<div class="codehilite"><pre><span></span>$ docker logs &lt;container name&gt;
-</pre></div>
-
-
-<p>Stop container:</p>
-<div class="codehilite"><pre><span></span>$ docker stop &lt;container name&gt;   <span class="c1"># container ID or name</span>
-</pre></div>
-
-
-<p>Delete container:</p>
-<div class="codehilite"><pre><span></span>$ docker rm &lt;container name&gt;
-</pre></div>
-
-
-<p>To check the environment:</p>
-<div class="codehilite"><pre><span></span>$ docker run -it alpine env 
-</pre></div>
-
-
-<p>Docker version / info:</p>
-<div class="codehilite"><pre><span></span>$ docker version
-$ docker info
-</pre></div>
-
-
-<h2 id="port-mapping">Port Mapping<a class="headerlink" href="#port-mapping" title="Permanent link">&para;</a></h2>
-<p><code>-p 80:5000</code>  would map port 80 on our local host to port 5000 inside our container.</p>
-<div class="codehilite"><pre><span></span>$ docker run -d -p <span class="m">80</span>:5000 training/webapp python app.py
-</pre></div>
-
-
-<p>Full format: ip:hostPort:containerPort | ip::containerPort | hostPort:containerPort | containerPort</p>
-<div class="codehilite"><pre><span></span>$ docker run -d -p <span class="m">127</span>.0.0.1:80:5000 training/webapp python app.py
-</pre></div>
-
-
-<p>Both hostPort and containerPort can be specified as a range of ports. When specifying ranges for both, the number of container ports in the range must match the number of host ports in the range, for example: <code>-p1234-1236:1234-1236/tcp</code></p>
-<p>The <code>-P</code> flag tells Docker to map any required network ports inside our container to our host (using random ports).</p>
-<div class="codehilite"><pre><span></span>$ docker run -d -P training/webapp python app.py
-</pre></div>
-
-
-<h2 id="linking">Linking<a class="headerlink" href="#linking" title="Permanent link">&para;</a></h2>
-<p><code>--link &lt;name or id&gt;:alias</code> where <em>name</em> is the name of the container we’re linking to and <em>alias</em> is an alias for the link name.
-The <code>--link</code> flag also takes the form: <code>--link &lt;name or id&gt;</code></p>
-<div class="codehilite"><pre><span></span>$ docker run -d --name myES -p <span class="m">9200</span>:9200 -p <span class="m">9300</span>:9300 elasticsearch
-$ docker run --name myK --link myES:elasticsearch  -p <span class="m">5601</span>:5601 -d docker-kibana-sense
-</pre></div>
-
-
-<h2 id="networks">Networks<a class="headerlink" href="#networks" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span>$ docker network ls
-</pre></div>
-
-
-<p>Find out the container’s IP address:</p>
-<div class="codehilite"><pre><span></span>$ docker network inspect bridge
-</pre></div>
-
-
-<h2 id="data-volumes">Data Volumes<a class="headerlink" href="#data-volumes" title="Permanent link">&para;</a></h2>
-<p>Create a new volume inside a container at /webapp:</p>
-<div class="codehilite"><pre><span></span>$ docker run -d -P --name web -v /webapp training/webapp python app.py
-$ docker inspect web
-</pre></div>
-
-
-<p>You can also use the VOLUME instruction in a Dockerfile to add one or more new volumes to any container created from that image.</p>
-<p>Mount the host directory, <code>/src/webapp</code>, into the container at <code>/opt/webapp</code>.</p>
-<div class="codehilite"><pre><span></span>$ docker run -d -P --name web -v /src/webapp:/opt/webapp training/webapp python app.py
-</pre></div>
-
-
-<p>On Windows, use:  <code>docker run -v /c/Users/&lt;path&gt;:/&lt;container path&gt; ...</code></p>
-<h2 id="example-dockerfile">Example Dockerfile<a class="headerlink" href="#example-dockerfile" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span>$ vim Dockerfile
-</pre></div>
-
-
-<div class="codehilite"><pre><span></span><span class="k">FROM</span><span class="s"> docker/whalesay:latest</span>
-<span class="k">RUN</span> apt-get -y update <span class="o">&amp;&amp;</span> apt-get install -y fortunes
-<span class="k">CMD</span><span class="s"> /usr/games/fortune -a | cowsay</span>
-</pre></div>
-
-
-<div class="codehilite"><pre><span></span>$ docker build -t docker-whale .
+<ul>
+<li>Delete test pod:</li>
+</ul>
+<div class="codehilite"><pre><span></span>kubectl delete pod &lt;pod name&gt;
 </pre></div>
                 
                   
@@ -1632,7 +1618,7 @@ $ docker inspect web
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../CloudFormation/" title="CloudFormation Basics" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../Cloud/Serverless/" title="Serverless Cheatsheet" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1641,19 +1627,19 @@ $ docker inspect web
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                CloudFormation Basics
+                Serverless Cheatsheet
               </span>
             </div>
           </a>
         
         
-          <a href="../Git/" title="Git" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../Deploy_to_Kubernetes%20%20%28Helm%29/" title="Deploy to Kubernetes  (Helm)" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Git
+                Deploy to Kubernetes  (Helm)
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
