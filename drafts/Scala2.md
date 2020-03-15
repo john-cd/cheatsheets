@@ -1,10 +1,12 @@
+---
+title: Scala Patterns
+category: Scala
+tags: Scala
+---
 
+# Algebraic Data Types
 
-https://gist.github.com/arosien/0aee59cc734042f7044d24bdaec731a8
-
-## Algebraic Data Types
-
-
+[Scala pattern gist]( https://gist.github.com/arosien/0aee59cc734042f7044d24bdaec731a8 )
 
 ```scala
 // A website visitor is: logged in; or anonymous
@@ -50,7 +52,6 @@ Summary
 Processing algebraic data types immediately follows from the structure of the data
 Can choose between pattern matching and polymorphism
 Pattern matching (within the base trait) is usually preferred
-
 
 // Calculation.add(value: Int): Calculation
 
@@ -125,9 +126,7 @@ You can teach monads in an introductory course!
 
 // fold: A => B
 
-
 // Convert user to JSON
-
 
 // A Result is a Success with value A or a Failure (with no value)
 sealed trait Result[A] {
@@ -140,9 +139,7 @@ sealed trait Result[A] {
 case class Success[A](value: A) extends Result[A]
 case class Failure[A]() extends Result[A]
 
-
 // map: F[A] => (A => B) => F[B]
-
 
 // Get user from database (might not be a user): Result[User]
 def getUser(id: Long): Result[User]
@@ -153,15 +150,9 @@ val order: Result[Order] =
   getUser(12) // Result[User]
     .flatMap(getOrder) // User => Result[Order]
 
-
 // flatMap: F[A] => (A => F[B]) => F[B]
-
 
 // Get user by id: UserId => Result[User]
 // Get user's order: User => Result[Order]
 // Transform order to JSON: (Order => Json) => Result[Json]
 // Send JSON: Result[Json] => Response
- 
-
- 
- 

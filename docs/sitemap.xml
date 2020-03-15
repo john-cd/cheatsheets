@@ -156,7 +156,15 @@
      <lastmod>2020-03-15</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
+     <loc>http://john-cd.com/cheatsheets/Java/Spring/</loc>
+     <lastmod>2020-03-15</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
      <loc>http://john-cd.com/cheatsheets/Linux/Linux/</loc>
+     <lastmod>2020-03-15</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>http://john-cd.com/cheatsheets/Linux/Virtualization/</loc>
      <lastmod>2020-03-15</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
@@ -177,6 +185,10 @@
      <changefreq>daily</changefreq>
     </url><url>
      <loc>http://john-cd.com/cheatsheets/Microservices/Microservices/</loc>
+     <lastmod>2020-03-15</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>http://john-cd.com/cheatsheets/Privacy/Privacy_engineering/</loc>
      <lastmod>2020-03-15</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
@@ -248,6 +260,10 @@
      <lastmod>2020-03-15</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
+     <loc>http://john-cd.com/cheatsheets/Search/Logstash/</loc>
+     <lastmod>2020-03-15</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
      <loc>http://john-cd.com/cheatsheets/Software_Development/Development_Tools/</loc>
      <lastmod>2020-03-15</lastmod>
      <changefreq>daily</changefreq>
@@ -261,6 +277,14 @@
      <changefreq>daily</changefreq>
     </url><url>
      <loc>http://john-cd.com/cheatsheets/Web/Bootstrap/</loc>
+     <lastmod>2020-03-15</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>http://john-cd.com/cheatsheets/Web/CORS/</loc>
+     <lastmod>2020-03-15</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>http://john-cd.com/cheatsheets/Web/jQuery/</loc>
      <lastmod>2020-03-15</lastmod>
      <changefreq>daily</changefreq>
     </url><url>

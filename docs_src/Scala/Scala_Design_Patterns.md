@@ -174,7 +174,6 @@ warmer.trigger
 
 ```
 
-
 ## Type Classes (using context-bound type parameters)
 
 - Ad-hoc polymorphism
@@ -211,7 +210,7 @@ object Stats {
       xs.reduce(implicitly[Number[T]].plus(_, _)),					// retrieve the evidence via implicitly[]
       xs.size
     )
-}	
+}
 ```
 
 ## Visitor Pattern

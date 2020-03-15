@@ -6,8 +6,7 @@ tags: Java Logs
 
 # Apache Log4j 2
 
-http://www.tutorialspoint.com/log4j/log4j_quick_guide.htm
-http://www.tutorialspoint.com/log4j/index.htm
+[Log4j quick guide]( http://www.tutorialspoint.com/log4j/log4j_quick_guide.htm )
 
 
 ## Key Components
@@ -16,13 +15,12 @@ http://www.tutorialspoint.com/log4j/index.htm
 * appenders: Responsible for publishing logging information to various preferred destinations.
 * layouts: Responsible for formatting logging information in different styles.
 
-
 There are seven levels of logging defined within the API: OFF, DEBUG, INFO, ERROR, WARN, FATAL, and ALL.
-
 
 ## Install
 
-https://logging.apache.org/log4j/2.x/download.html
+[Download Log4j]( 
+https://logging.apache.org/log4j/2.x/download.html )
 
 ```bash
 $ gunzip apache-log4j-1.2.15.tar.gz
