@@ -39,3 +39,9 @@ D3 provides many built-in reusable functions and function factories, such as gra
 [Quadrigram](http://www.quadrigram.com/)
 
 
+### Open-source data viz
+
+[Superset vs Metabase vs ReDash](https://hevodata.com/blog/superset-vs-metabase-vs-redash/ )
+
+[AirPal]( https://airbnb.io/airpal/ )
+

@@ -3,7 +3,7 @@ title: IPython / Jupyter Cheatsheet
 category: python
 tags:
 ---
-### [IPython]( http://ipython.org/ ) / [Jupyter](http://jupyter.org/)
+### [IPython]( http://ipython.org/ ) / [Jupyter]( http://jupyter.org/ )
 
 - Using IPython makes interactive work easy.
     - Better shell
@@ -178,3 +178,13 @@ In command mode:
      d d delete cell
      s save notebook
      . to restart kernel
+
+# Papermill
+
+[Papermill]( https://papermill.readthedocs.io/en/latest/ )
+
+Papermill is a tool for parameterizing and executing Jupyter Notebooks.
+
+[Papermill GitHub]( https://github.com/nteract/papermill )
+
+

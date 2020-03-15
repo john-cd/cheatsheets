@@ -2,7 +2,7 @@
 
 
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="no-js">
   <head>
     
@@ -38,7 +38,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-0.17.3, mkdocs-material-2.7.1">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
     
     
       
@@ -46,22 +46,56 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.78aab2dc.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.adb8469c.css">
       
-        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.6079476c.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#ff7043">
       
     
     
-      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+      <script src="../../assets/javascripts/modernizr.86422ebf.js"></script>
     
     
-      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
       
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
-      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-92780605-1", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
     
     
   </head>
@@ -74,32 +108,15 @@
       <defs>
         
         
-          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
-    viewBox="0 0 416 448" id="github">
-  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
-        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
-        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
-        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
-        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
-        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
-        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
-        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
-        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
-        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
-        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
-        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
-        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
-        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
-        99.5z" />
-</svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
         
       </defs>
     </svg>
-    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer" autocomplete="off">
-    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
-    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#sql-cheatsheet" tabindex="1" class="md-skip">
+      <a href="#sql-cheatsheet" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -108,40 +125,39 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="http://john-cd.com/cheatsheets/" title="John's Cheatsheets" class="md-header-nav__button md-logo">
+        <a href="http://john-cd.com/cheatsheets/" title="John's Cheatsheets" aria-label="John's Cheatsheets" class="md-header-nav__button md-logo">
           
             <i class="md-icon"></i>
           
         </a>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
-        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
       </div>
       <div class="md-flex__cell md-flex__cell--stretch">
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
-            
-              <span class="md-header-nav__topic">
-                John's Cheatsheets
-              </span>
-              <span class="md-header-nav__topic">
+            <span class="md-header-nav__topic">
+              John's Cheatsheets
+            </span>
+            <span class="md-header-nav__topic">
+              
                 SQL Cheatsheet
-              </span>
-            
+              
+            </span>
           
         </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
           
-            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
-            
 <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="search"></label>
+  <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
-      <label class="md-icon md-search__icon" for="search"></label>
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
       <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
         &#xE5CD;
       </button>
@@ -158,7 +174,6 @@
     </div>
   </div>
 </div>
-          
         
       </div>
       
@@ -169,20 +184,18 @@
 
   
 
-
-  <a href="https://github.com/john-cd/cheatsheets/" title="Go to repository" class="md-source" data-md-source="github">
-    
-      <div class="md-source__icon">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#github" width="24" height="24"></use>
-        </svg>
-      </div>
-    
-    <div class="md-source__repository">
-      john-cd/cheatsheets
+<a href="https://github.com/john-cd/cheatsheets/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
     </div>
-  </a>
-
+  
+  <div class="md-source__repository">
+    john-cd/cheatsheets
+  </div>
+</a>
           </div>
         </div>
       
@@ -195,7 +208,7 @@
         
       
       
-      <main class="md-main">
+      <main class="md-main" role="main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
             
@@ -203,12 +216,12 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
-  <label class="md-nav__title md-nav__title--site" for="drawer">
-    <span class="md-nav__button md-logo">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="http://john-cd.com/cheatsheets/" title="John's Cheatsheets" class="md-nav__button md-logo">
       
         <i class="md-icon"></i>
       
-    </span>
+    </a>
     John's Cheatsheets
   </label>
   
@@ -218,20 +231,18 @@
 
   
 
-
-  <a href="https://github.com/john-cd/cheatsheets/" title="Go to repository" class="md-source" data-md-source="github">
-    
-      <div class="md-source__icon">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#github" width="24" height="24"></use>
-        </svg>
-      </div>
-    
-    <div class="md-source__repository">
-      john-cd/cheatsheets
+<a href="https://github.com/john-cd/cheatsheets/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
     </div>
-  </a>
-
+  
+  <div class="md-source__repository">
+    john-cd/cheatsheets
+  </div>
+</a>
     </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -253,27 +264,15 @@
       
 
 
-  <li class="md-nav__item">
-    <a href="../../Command_Prompt_Here/" title="Command Prompt Here" class="md-nav__link">
-      Command Prompt Here
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
-    <label class="md-nav__link" for="nav-3">
+    <label class="md-nav__link" for="nav-2">
       Big Data
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-3">
+      <label class="md-nav__title" for="nav-2">
         Big Data
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -387,13 +386,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
-    <label class="md-nav__link" for="nav-4">
+    <label class="md-nav__link" for="nav-3">
       Cloud
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
+      <label class="md-nav__title" for="nav-3">
         Cloud
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -447,13 +446,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
-    <label class="md-nav__link" for="nav-5">
+    <label class="md-nav__link" for="nav-4">
       Containers
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
+      <label class="md-nav__title" for="nav-4">
         Containers
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -591,13 +590,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
-    <label class="md-nav__link" for="nav-6">
+    <label class="md-nav__link" for="nav-5">
       Data Science
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-6">
+      <label class="md-nav__title" for="nav-5">
         Data Science
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -713,13 +712,13 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
     
-    <label class="md-nav__link" for="nav-7">
+    <label class="md-nav__link" for="nav-6">
       Databases
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-7">
+      <label class="md-nav__title" for="nav-6">
         Databases
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -758,12 +757,12 @@
 
   <li class="md-nav__item md-nav__item--active">
     
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
       
     
     
-      <label class="md-nav__link md-nav__link--active" for="toc">
+      <label class="md-nav__link md-nav__link--active" for="__toc">
         SQL Cheatsheet
       </label>
     
@@ -778,116 +777,116 @@
     
   
   
-    <label class="md-nav__title" for="toc">Table of contents</label>
+    <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#dml-select" title="DML: SELECT" class="md-nav__link">
+  <a href="#dml-select" class="md-nav__link">
     DML: SELECT
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#dml-insert" title="DML: INSERT" class="md-nav__link">
+  <a href="#dml-insert" class="md-nav__link">
     DML: INSERT
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#dml-update" title="DML: UPDATE" class="md-nav__link">
+  <a href="#dml-update" class="md-nav__link">
     DML: UPDATE
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#dml-delete" title="DML: DELETE" class="md-nav__link">
+  <a href="#dml-delete" class="md-nav__link">
     DML: DELETE
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#databases" title="Databases" class="md-nav__link">
+  <a href="#databases" class="md-nav__link">
     Databases
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#tables" title="Tables" class="md-nav__link">
+  <a href="#tables" class="md-nav__link">
     Tables
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#primary-key-constraint" title="PRIMARY KEY constraint" class="md-nav__link">
+  <a href="#primary-key-constraint" class="md-nav__link">
     PRIMARY KEY constraint
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#foreign-key-constraints" title="FOREIGN KEY constraints" class="md-nav__link">
+  <a href="#foreign-key-constraints" class="md-nav__link">
     FOREIGN KEY constraints
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#check-constraints" title="CHECK Constraints" class="md-nav__link">
+  <a href="#check-constraints" class="md-nav__link">
     CHECK Constraints
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#default-constraints" title="DEFAULT Constraints" class="md-nav__link">
+  <a href="#default-constraints" class="md-nav__link">
     DEFAULT Constraints
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#index" title="Index" class="md-nav__link">
+  <a href="#index" class="md-nav__link">
     Index
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#add-drop-alter-column-in-table" title="Add / drop / alter column in table" class="md-nav__link">
+  <a href="#add-drop-alter-column-in-table" class="md-nav__link">
     Add / drop / alter column in table
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#autoincrement" title="Autoincrement" class="md-nav__link">
+  <a href="#autoincrement" class="md-nav__link">
     Autoincrement
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#views" title="Views" class="md-nav__link">
+  <a href="#views" class="md-nav__link">
     Views
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#dates" title="Dates" class="md-nav__link">
+  <a href="#dates" class="md-nav__link">
     Dates
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#sql-server-data-types" title="SQL Server Data Types" class="md-nav__link">
+  <a href="#sql-server-data-types" class="md-nav__link">
     SQL Server Data Types
   </a>
   
@@ -895,21 +894,21 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#number-types" title="Number types" class="md-nav__link">
+  <a href="#number-types" class="md-nav__link">
     Number types
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#date-types" title="Date types" class="md-nav__link">
+  <a href="#date-types" class="md-nav__link">
     Date types
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#other-data-types" title="Other data types" class="md-nav__link">
+  <a href="#other-data-types" class="md-nav__link">
     Other data types
   </a>
   
@@ -921,49 +920,49 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sql-aggregate-functions" title="SQL Aggregate Functions" class="md-nav__link">
+  <a href="#sql-aggregate-functions" class="md-nav__link">
     SQL Aggregate Functions
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#sql-scalar-functions" title="SQL Scalar functions" class="md-nav__link">
+  <a href="#sql-scalar-functions" class="md-nav__link">
     SQL Scalar functions
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#variables" title="Variables" class="md-nav__link">
+  <a href="#variables" class="md-nav__link">
     Variables
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#scalar-function" title="Scalar Function" class="md-nav__link">
+  <a href="#scalar-function" class="md-nav__link">
     Scalar Function
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#table-value-function" title="Table Value Function" class="md-nav__link">
+  <a href="#table-value-function" class="md-nav__link">
     Table Value Function
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#stored-procedure" title="Stored Procedure" class="md-nav__link">
+  <a href="#stored-procedure" class="md-nav__link">
     Stored Procedure
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#self-join" title="Self-join" class="md-nav__link">
+  <a href="#self-join" class="md-nav__link">
     Self-join
   </a>
   
@@ -992,13 +991,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
     
-    <label class="md-nav__link" for="nav-8">
+    <label class="md-nav__link" for="nav-7">
       DevOps
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-8">
+      <label class="md-nav__title" for="nav-7">
         DevOps
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1010,8 +1009,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../DevOps/CloudFormation/" title="CloudFormation" class="md-nav__link">
-      CloudFormation
+    <a href="../../DevOps/CloudFormation/" title="CloudFormation Basics" class="md-nav__link">
+      CloudFormation Basics
     </a>
   </li>
 
@@ -1022,8 +1021,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../DevOps/Git/" title="Git" class="md-nav__link">
-      Git
+    <a href="../../DevOps/Git/" title="Git Cheatsheet" class="md-nav__link">
+      Git Cheatsheet
     </a>
   </li>
 
@@ -1034,8 +1033,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../DevOps/Orchestrator_Scheduler/" title="Orchestrator Scheduler" class="md-nav__link">
-      Orchestrator Scheduler
+    <a href="../../DevOps/Orchestrator_Scheduler/" title="Orchestrators / Schedulers" class="md-nav__link">
+      Orchestrators / Schedulers
     </a>
   </li>
 
@@ -1052,13 +1051,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
     
-    <label class="md-nav__link" for="nav-9">
+    <label class="md-nav__link" for="nav-8">
       Java
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-9">
+      <label class="md-nav__title" for="nav-8">
         Java
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1070,8 +1069,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Java/Java/" title="Java" class="md-nav__link">
-      Java
+    <a href="../../Java/Java/" title="Java Pointers" class="md-nav__link">
+      Java Pointers
     </a>
   </li>
 
@@ -1082,8 +1081,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Java/Log4j/" title="Log4j" class="md-nav__link">
-      Log4j
+    <a href="../../Java/Log4j/" title="Apache Log4j 2" class="md-nav__link">
+      Apache Log4j 2
     </a>
   </li>
 
@@ -1112,13 +1111,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
     
-    <label class="md-nav__link" for="nav-10">
+    <label class="md-nav__link" for="nav-9">
       Linux
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-10">
+      <label class="md-nav__title" for="nav-9">
         Linux
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1130,8 +1129,80 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Linux/Linux/" title="Linux" class="md-nav__link">
-      Linux
+    <a href="../../Linux/Linux/" title="Linux Cheatsheet" class="md-nav__link">
+      Linux Cheatsheet
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      Markup and Documentation
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        Markup and Documentation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Markup_and_Documentation/Jekyll/" title="Jekyll How-To" class="md-nav__link">
+      Jekyll How-To
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Markup_and_Documentation/Markdown/" title="Markdown Essentials" class="md-nav__link">
+      Markdown Essentials
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Markup_and_Documentation/MkDocs/" title="MkDocs Basics" class="md-nav__link">
+      MkDocs Basics
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Markup_and_Documentation/reStructuredText/" title="reStructuredText Cheatsheet" class="md-nav__link">
+      reStructuredText Cheatsheet
     </a>
   </li>
 
@@ -1151,82 +1222,10 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
     
     <label class="md-nav__link" for="nav-11">
-      Markup and Documentation
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-11">
-        Markup and Documentation
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../Markup_and_Documentation/Jekyll/" title="Jekyll" class="md-nav__link">
-      Jekyll
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../Markup_and_Documentation/Markdown/" title="Markdown" class="md-nav__link">
-      Markdown
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../Markup_and_Documentation/MkDocs/" title="MkDocs" class="md-nav__link">
-      MkDocs
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../Markup_and_Documentation/reStructuredText/" title="reStructuredText" class="md-nav__link">
-      reStructuredText
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
-    
-    <label class="md-nav__link" for="nav-12">
       Microservices
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-12">
+      <label class="md-nav__title" for="nav-11">
         Microservices
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1256,13 +1255,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
     
-    <label class="md-nav__link" for="nav-13">
+    <label class="md-nav__link" for="nav-12">
       Python
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-13">
+      <label class="md-nav__title" for="nav-12">
         Python
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1274,8 +1273,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Python/Jupyter/" title="Jupyter" class="md-nav__link">
-      Jupyter
+    <a href="../../Python/Flask/" title="Flask" class="md-nav__link">
+      Flask
     </a>
   </li>
 
@@ -1286,8 +1285,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Python/Matplotlib/" title="Matplotlib" class="md-nav__link">
-      Matplotlib
+    <a href="../../Python/Jupyter/" title="IPython / Jupyter Cheatsheet" class="md-nav__link">
+      IPython / Jupyter Cheatsheet
     </a>
   </li>
 
@@ -1298,8 +1297,32 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Python/Python3/" title="Python3" class="md-nav__link">
-      Python3
+    <a href="../../Python/Matplotlib/" title="Matplotlib Cheatsheet" class="md-nav__link">
+      Matplotlib Cheatsheet
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/Python/" title="Python Links" class="md-nav__link">
+      Python Links
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/Python3/" title="Python 3" class="md-nav__link">
+      Python 3
     </a>
   </li>
 
@@ -1316,13 +1339,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-14" type="checkbox" id="nav-14">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
     
-    <label class="md-nav__link" for="nav-14">
+    <label class="md-nav__link" for="nav-13">
       Scala
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-14">
+      <label class="md-nav__title" for="nav-13">
         Scala
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1334,8 +1357,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Scala/Akka/" title="Akka" class="md-nav__link">
-      Akka
+    <a href="../../Scala/Akka/" title="Akka Cheatsheet" class="md-nav__link">
+      Akka Cheatsheet
     </a>
   </li>
 
@@ -1394,8 +1417,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Scala/Scala_Generalities/" title="Scala Generalities" class="md-nav__link">
-      Scala Generalities
+    <a href="../../Scala/Scala_Generalities/" title="Scala (Generalities)" class="md-nav__link">
+      Scala (Generalities)
     </a>
   </li>
 
@@ -1472,13 +1495,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-15" type="checkbox" id="nav-15">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-14" type="checkbox" id="nav-14">
     
-    <label class="md-nav__link" for="nav-15">
+    <label class="md-nav__link" for="nav-14">
       Search
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-15">
+      <label class="md-nav__title" for="nav-14">
         Search
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1490,8 +1513,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Search/ElasticSearch/" title="ElasticSearch" class="md-nav__link">
-      ElasticSearch
+    <a href="../../Search/ElasticSearch/" title="ElasticSearch Cheatsheet" class="md-nav__link">
+      ElasticSearch Cheatsheet
     </a>
   </li>
 
@@ -1508,13 +1531,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-16" type="checkbox" id="nav-16">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-15" type="checkbox" id="nav-15">
     
-    <label class="md-nav__link" for="nav-16">
+    <label class="md-nav__link" for="nav-15">
       Software Development
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-16">
+      <label class="md-nav__title" for="nav-15">
         Software Development
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1550,8 +1573,44 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Software_Development/IntelliJ/" title="IntelliJ" class="md-nav__link">
-      IntelliJ
+    <a href="../../Software_Development/IntelliJ/" title="IntelliJ Cheatsheet" class="md-nav__link">
+      IntelliJ Cheatsheet
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-16" type="checkbox" id="nav-16">
+    
+    <label class="md-nav__link" for="nav-16">
+      Web
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-16">
+        Web
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web/Bootstrap/" title="Bootstrap" class="md-nav__link">
+      Bootstrap
     </a>
   </li>
 
@@ -1571,11 +1630,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-17" type="checkbox" id="nav-17">
     
     <label class="md-nav__link" for="nav-17">
-      Web
+      Windows
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-17">
-        Web
+        Windows
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -1586,8 +1645,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Web/Bootstrap/" title="Bootstrap" class="md-nav__link">
-      Bootstrap
+    <a href="../../Windows/Command_Prompt_Here/" title="Command Line" class="md-nav__link">
+      Command Line
     </a>
   </li>
 
@@ -1622,8 +1681,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../dotNET/ASPdotNET/" title="ASPdotNET" class="md-nav__link">
-      ASPdotNET
+    <a href="../../dotNET/ASPdotNET/" title="ASP.NET Core app" class="md-nav__link">
+      ASP.NET Core app
     </a>
   </li>
 
@@ -1634,8 +1693,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../dotNET/AkkadotNET/" title="AkkadotNET" class="md-nav__link">
-      AkkadotNET
+    <a href="../../dotNET/AkkadotNET/" title="Akka.NET Examples" class="md-nav__link">
+      Akka.NET Examples
     </a>
   </li>
 
@@ -1646,8 +1705,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../dotNET/C%23/" title="C#" class="md-nav__link">
-      C#
+    <a href="../../dotNET/C%23/" title="C# Cheatsheet" class="md-nav__link">
+      C# Cheatsheet
     </a>
   </li>
 
@@ -1658,8 +1717,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../dotNET/Multithreading/" title="Multithreading" class="md-nav__link">
-      Multithreading
+    <a href="../../dotNET/Multithreading/" title=".NET Multithreading" class="md-nav__link">
+      .NET Multithreading
     </a>
   </li>
 
@@ -1698,116 +1757,116 @@
     
   
   
-    <label class="md-nav__title" for="toc">Table of contents</label>
+    <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#dml-select" title="DML: SELECT" class="md-nav__link">
+  <a href="#dml-select" class="md-nav__link">
     DML: SELECT
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#dml-insert" title="DML: INSERT" class="md-nav__link">
+  <a href="#dml-insert" class="md-nav__link">
     DML: INSERT
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#dml-update" title="DML: UPDATE" class="md-nav__link">
+  <a href="#dml-update" class="md-nav__link">
     DML: UPDATE
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#dml-delete" title="DML: DELETE" class="md-nav__link">
+  <a href="#dml-delete" class="md-nav__link">
     DML: DELETE
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#databases" title="Databases" class="md-nav__link">
+  <a href="#databases" class="md-nav__link">
     Databases
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#tables" title="Tables" class="md-nav__link">
+  <a href="#tables" class="md-nav__link">
     Tables
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#primary-key-constraint" title="PRIMARY KEY constraint" class="md-nav__link">
+  <a href="#primary-key-constraint" class="md-nav__link">
     PRIMARY KEY constraint
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#foreign-key-constraints" title="FOREIGN KEY constraints" class="md-nav__link">
+  <a href="#foreign-key-constraints" class="md-nav__link">
     FOREIGN KEY constraints
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#check-constraints" title="CHECK Constraints" class="md-nav__link">
+  <a href="#check-constraints" class="md-nav__link">
     CHECK Constraints
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#default-constraints" title="DEFAULT Constraints" class="md-nav__link">
+  <a href="#default-constraints" class="md-nav__link">
     DEFAULT Constraints
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#index" title="Index" class="md-nav__link">
+  <a href="#index" class="md-nav__link">
     Index
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#add-drop-alter-column-in-table" title="Add / drop / alter column in table" class="md-nav__link">
+  <a href="#add-drop-alter-column-in-table" class="md-nav__link">
     Add / drop / alter column in table
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#autoincrement" title="Autoincrement" class="md-nav__link">
+  <a href="#autoincrement" class="md-nav__link">
     Autoincrement
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#views" title="Views" class="md-nav__link">
+  <a href="#views" class="md-nav__link">
     Views
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#dates" title="Dates" class="md-nav__link">
+  <a href="#dates" class="md-nav__link">
     Dates
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#sql-server-data-types" title="SQL Server Data Types" class="md-nav__link">
+  <a href="#sql-server-data-types" class="md-nav__link">
     SQL Server Data Types
   </a>
   
@@ -1815,21 +1874,21 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#number-types" title="Number types" class="md-nav__link">
+  <a href="#number-types" class="md-nav__link">
     Number types
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#date-types" title="Date types" class="md-nav__link">
+  <a href="#date-types" class="md-nav__link">
     Date types
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#other-data-types" title="Other data types" class="md-nav__link">
+  <a href="#other-data-types" class="md-nav__link">
     Other data types
   </a>
   
@@ -1841,49 +1900,49 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sql-aggregate-functions" title="SQL Aggregate Functions" class="md-nav__link">
+  <a href="#sql-aggregate-functions" class="md-nav__link">
     SQL Aggregate Functions
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#sql-scalar-functions" title="SQL Scalar functions" class="md-nav__link">
+  <a href="#sql-scalar-functions" class="md-nav__link">
     SQL Scalar functions
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#variables" title="Variables" class="md-nav__link">
+  <a href="#variables" class="md-nav__link">
     Variables
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#scalar-function" title="Scalar Function" class="md-nav__link">
+  <a href="#scalar-function" class="md-nav__link">
     Scalar Function
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#table-value-function" title="Table Value Function" class="md-nav__link">
+  <a href="#table-value-function" class="md-nav__link">
     Table Value Function
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#stored-procedure" title="Stored Procedure" class="md-nav__link">
+  <a href="#stored-procedure" class="md-nav__link">
     Stored Procedure
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#self-join" title="Self-join" class="md-nav__link">
+  <a href="#self-join" class="md-nav__link">
     Self-join
   </a>
   
@@ -1911,13 +1970,13 @@
                 <h1 id="sql-cheatsheet">SQL Cheatsheet<a class="headerlink" href="#sql-cheatsheet" title="Permanent link">&para;</a></h1>
 <h2 id="dml-select">DML: SELECT<a class="headerlink" href="#dml-select" title="Permanent link">&para;</a></h2>
 <p><em>Filter</em>:</p>
-<div class="codehilite"><pre><span></span><span class="k">SELECT</span> <span class="n">LastName</span><span class="p">,</span> <span class="n">FirstName</span><span class="p">,</span> <span class="n">Address</span> <span class="k">FROM</span> <span class="n">Persons</span>
+<div class="codehilite"><pre><span></span><code><span class="k">SELECT</span> <span class="n">LastName</span><span class="p">,</span> <span class="n">FirstName</span><span class="p">,</span> <span class="n">Address</span> <span class="k">FROM</span> <span class="n">Persons</span>
 <span class="k">WHERE</span> <span class="n">Address</span> <span class="k">IS</span> <span class="k">NULL</span>
-</pre></div>
+</code></pre></div>
 
 
 <p><em>Like</em>:</p>
-<div class="codehilite"><pre><span></span><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">Customers</span>
+<div class="codehilite"><pre><span></span><code><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">Customers</span>
 <span class="k">WHERE</span> <span class="n">City</span> <span class="k">LIKE</span> <span class="s1">&#39;s%&#39;</span><span class="p">;</span>
 
 <span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">Customers</span>
@@ -1925,71 +1984,71 @@
 
 <span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">Customers</span>
 <span class="k">WHERE</span> <span class="n">Country</span> <span class="k">NOT</span> <span class="k">LIKE</span> <span class="s1">&#39;%land%&#39;</span><span class="p">;</span>
-</pre></div>
+</code></pre></div>
 
 
 <p><em>Sort</em>:</p>
-<div class="codehilite"><pre><span></span><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">Customers</span>
+<div class="codehilite"><pre><span></span><code><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">Customers</span>
 <span class="k">ORDER</span> <span class="k">BY</span> <span class="n">Country</span> <span class="k">DESC</span><span class="p">;</span>
 
 <span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">Customers</span>
 <span class="k">ORDER</span> <span class="k">BY</span> <span class="n">Country</span><span class="p">,</span> <span class="n">CustomerName</span><span class="p">;</span>
-</pre></div>
+</code></pre></div>
 
 
 <p><em>Limit</em>:</p>
-<div class="codehilite"><pre><span></span><span class="k">SELECT</span> <span class="n">TOP</span> <span class="nb">number</span><span class="o">|</span><span class="n">percent</span> <span class="k">column_name</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><code><span class="k">SELECT</span> <span class="n">TOP</span> <span class="nb">number</span><span class="o">|</span><span class="n">percent</span> <span class="k">column_name</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 <span class="k">FROM</span> <span class="k">table_name</span><span class="p">;</span>
 
 <span class="c1">-- Examples:</span>
 <span class="k">SELECT</span> <span class="n">TOP</span> <span class="mi">2</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">Customers</span><span class="p">;</span>
 
 <span class="k">SELECT</span> <span class="n">TOP</span> <span class="mi">50</span> <span class="n">PERCENT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">Customers</span><span class="p">;</span>
-</pre></div>
+</code></pre></div>
 
 
 <p><em>Oracle Syntax</em>:</p>
-<div class="codehilite"><pre><span></span><span class="k">SELECT</span> <span class="k">column_name</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><code><span class="k">SELECT</span> <span class="k">column_name</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 <span class="k">FROM</span> <span class="k">table_name</span>
 <span class="k">WHERE</span> <span class="n">ROWNUM</span> <span class="o">&lt;=</span> <span class="nb">number</span><span class="p">;</span>
-</pre></div>
+</code></pre></div>
 
 
 <p><em>Joins</em>:</p>
-<div class="codehilite"><pre><span></span><span class="k">SELECT</span> <span class="n">Customers</span><span class="p">.</span><span class="n">CustomerName</span><span class="p">,</span> <span class="n">Orders</span><span class="p">.</span><span class="n">OrderID</span>
+<div class="codehilite"><pre><span></span><code><span class="k">SELECT</span> <span class="n">Customers</span><span class="p">.</span><span class="n">CustomerName</span><span class="p">,</span> <span class="n">Orders</span><span class="p">.</span><span class="n">OrderID</span>
 <span class="k">FROM</span> <span class="n">Customers</span>
 <span class="k">FULL</span> <span class="k">OUTER</span> <span class="k">JOIN</span> <span class="n">Orders</span>
 <span class="k">ON</span> <span class="n">Customers</span><span class="p">.</span><span class="n">CustomerID</span> <span class="o">=</span> <span class="n">Orders</span><span class="p">.</span><span class="n">CustomerID</span>
 <span class="k">ORDER</span> <span class="k">BY</span> <span class="n">Customers</span><span class="p">.</span><span class="n">CustomerName</span><span class="p">;</span>
-</pre></div>
+</code></pre></div>
 
 
 <p><em>Union</em>:</p>
-<div class="codehilite"><pre><span></span><span class="k">SELECT</span> <span class="k">column_name</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">table1</span>
+<div class="codehilite"><pre><span></span><code><span class="k">SELECT</span> <span class="k">column_name</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">table1</span>
 <span class="k">UNION</span>
 <span class="k">SELECT</span> <span class="k">column_name</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">table2</span><span class="p">;</span>
 
 <span class="k">SELECT</span> <span class="k">column_name</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">table1</span>
 <span class="k">UNION</span> <span class="k">ALL</span>
 <span class="k">SELECT</span> <span class="k">column_name</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">table2</span><span class="p">;</span>
-</pre></div>
+</code></pre></div>
 
 
 <p><em>Select Into</em>:</p>
-<div class="codehilite"><pre><span></span><span class="k">SELECT</span> <span class="k">column_name</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><code><span class="k">SELECT</span> <span class="k">column_name</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 <span class="k">INTO</span> <span class="n">newtable</span> <span class="p">[</span><span class="k">IN</span> <span class="n">externaldb</span><span class="p">]</span>
 <span class="k">FROM</span> <span class="n">table1</span><span class="p">;</span>
-</pre></div>
+</code></pre></div>
 
 
 <p><em>Formula</em>:</p>
-<div class="codehilite"><pre><span></span><span class="k">SELECT</span> <span class="n">ProductName</span><span class="p">,</span> <span class="n">UnitPrice</span><span class="o">*</span><span class="p">(</span><span class="n">UnitsInStock</span><span class="o">+</span><span class="k">ISNULL</span><span class="p">(</span><span class="n">UnitsOnOrder</span><span class="p">,</span><span class="mi">0</span><span class="p">))</span>
+<div class="codehilite"><pre><span></span><code><span class="k">SELECT</span> <span class="n">ProductName</span><span class="p">,</span> <span class="n">UnitPrice</span><span class="o">*</span><span class="p">(</span><span class="n">UnitsInStock</span><span class="o">+</span><span class="k">ISNULL</span><span class="p">(</span><span class="n">UnitsOnOrder</span><span class="p">,</span><span class="mi">0</span><span class="p">))</span>
 <span class="k">FROM</span> <span class="n">Products</span>
-</pre></div>
+</code></pre></div>
 
 
 <h2 id="dml-insert">DML: INSERT<a class="headerlink" href="#dml-insert" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="k">INSERT</span> <span class="k">INTO</span> <span class="k">table_name</span>
+<div class="codehilite"><pre><span></span><code><span class="k">INSERT</span> <span class="k">INTO</span> <span class="k">table_name</span>
 <span class="k">VALUES</span> <span class="p">(</span><span class="n">value1</span><span class="p">,</span><span class="n">value2</span><span class="p">,</span><span class="n">value3</span><span class="p">,...);</span>
 
 <span class="k">INSERT</span> <span class="k">INTO</span> <span class="k">table_name</span> <span class="p">(</span><span class="n">column1</span><span class="p">,</span><span class="n">column2</span><span class="p">,</span><span class="n">column3</span><span class="p">,...)</span>
@@ -1999,11 +2058,11 @@
 
 <span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">Customers</span> <span class="p">(</span><span class="n">CustomerName</span><span class="p">,</span> <span class="n">City</span><span class="p">,</span> <span class="n">Country</span><span class="p">)</span>
 <span class="k">VALUES</span> <span class="p">(</span><span class="s1">&#39;Cardinal&#39;</span><span class="p">,</span> <span class="s1">&#39;Stavanger&#39;</span><span class="p">,</span> <span class="s1">&#39;Norway&#39;</span><span class="p">);</span>
-</pre></div>
+</code></pre></div>
 
 
 <p><em>Insert from select</em>:</p>
-<div class="codehilite"><pre><span></span><span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">table2</span><span class="p">(</span><span class="k">column_name</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
+<div class="codehilite"><pre><span></span><code><span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">table2</span><span class="p">(</span><span class="k">column_name</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
 <span class="k">SELECT</span> <span class="k">column_name</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 <span class="k">FROM</span> <span class="n">table1</span><span class="p">;</span>
 
@@ -2012,11 +2071,11 @@
 <span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">Customers</span> <span class="p">(</span><span class="n">CustomerName</span><span class="p">,</span> <span class="n">Country</span><span class="p">)</span>
 <span class="k">SELECT</span> <span class="n">SupplierName</span><span class="p">,</span> <span class="n">Country</span> <span class="k">FROM</span> <span class="n">Suppliers</span>
 <span class="k">WHERE</span> <span class="n">Country</span><span class="o">=</span><span class="s1">&#39;Germany&#39;</span><span class="p">;</span>
-</pre></div>
+</code></pre></div>
 
 
 <h2 id="dml-update">DML: UPDATE<a class="headerlink" href="#dml-update" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="k">UPDATE</span> <span class="k">table_name</span>
+<div class="codehilite"><pre><span></span><code><span class="k">UPDATE</span> <span class="k">table_name</span>
 <span class="k">SET</span> <span class="n">column1</span><span class="o">=</span><span class="n">value1</span><span class="p">,</span><span class="n">column2</span><span class="o">=</span><span class="n">value2</span><span class="p">,...</span>
 <span class="k">WHERE</span> <span class="n">some_column</span><span class="o">=</span><span class="n">some_value</span><span class="p">;</span>
 
@@ -2025,28 +2084,28 @@
 <span class="k">UPDATE</span> <span class="n">Customers</span>
 <span class="k">SET</span> <span class="n">ContactName</span><span class="o">=</span><span class="s1">&#39;Alfred Schmidt&#39;</span><span class="p">,</span> <span class="n">City</span><span class="o">=</span><span class="s1">&#39;Hamburg&#39;</span>
 <span class="k">WHERE</span> <span class="n">CustomerName</span><span class="o">=</span><span class="s1">&#39;Alfreds Futterkiste&#39;</span><span class="p">;</span>
-</pre></div>
+</code></pre></div>
 
 
 <h2 id="dml-delete">DML: DELETE<a class="headerlink" href="#dml-delete" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="k">DELETE</span> <span class="k">FROM</span> <span class="k">table_name</span>
+<div class="codehilite"><pre><span></span><code><span class="k">DELETE</span> <span class="k">FROM</span> <span class="k">table_name</span>
 <span class="k">WHERE</span> <span class="n">some_column</span><span class="o">=</span><span class="n">some_value</span><span class="p">;</span>
 
 <span class="k">DELETE</span> <span class="k">FROM</span> <span class="n">Customers</span>
 <span class="k">WHERE</span> <span class="n">CustomerName</span><span class="o">=</span><span class="s1">&#39;Alfreds Futterkiste&#39;</span> <span class="k">AND</span> <span class="n">ContactName</span><span class="o">=</span><span class="s1">&#39;Maria Anders&#39;</span><span class="p">;</span>
-</pre></div>
+</code></pre></div>
 
 
 <h2 id="databases">Databases<a class="headerlink" href="#databases" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="k">CREATE</span> <span class="k">DATABASE</span> <span class="n">my_db</span><span class="p">;</span>
+<div class="codehilite"><pre><span></span><code><span class="k">CREATE</span> <span class="k">DATABASE</span> <span class="n">my_db</span><span class="p">;</span>
 
 <span class="k">DROP</span> <span class="k">DATABASE</span> <span class="n">my_db</span><span class="p">;</span>
-</pre></div>
+</code></pre></div>
 
 
 <h2 id="tables">Tables<a class="headerlink" href="#tables" title="Permanent link">&para;</a></h2>
 <p><em>Create</em>:</p>
-<div class="codehilite"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="k">table_name</span>
+<div class="codehilite"><pre><span></span><code><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="k">table_name</span>
 <span class="p">(</span>
 <span class="n">column_name1</span> <span class="n">data_type</span><span class="p">(</span><span class="k">size</span><span class="p">),</span>
 <span class="n">column_name2</span> <span class="n">data_type</span><span class="p">(</span><span class="k">size</span><span class="p">),</span>
@@ -2061,11 +2120,11 @@
 <span class="n">column_name3</span> <span class="n">data_type</span><span class="p">(</span><span class="k">size</span><span class="p">)</span> <span class="k">constraint_name</span><span class="p">,</span>
 <span class="p">....</span>
 <span class="p">);</span>
-</pre></div>
+</code></pre></div>
 
 
 <p>-- Examples</p>
-<div class="codehilite"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">Persons</span>
+<div class="codehilite"><pre><span></span><code><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">Persons</span>
 <span class="p">(</span>
 <span class="n">P_Id</span> <span class="nb">int</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="k">UNIQUE</span><span class="p">,</span>
 <span class="n">LastName</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
@@ -2083,32 +2142,32 @@
 <span class="n">City</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
 <span class="k">CONSTRAINT</span> <span class="n">uc_PersonID</span> <span class="k">UNIQUE</span> <span class="p">(</span><span class="n">P_Id</span><span class="p">,</span> <span class="n">LastName</span><span class="p">)</span>
 <span class="p">)</span>
-</pre></div>
+</code></pre></div>
 
 
-<div class="codehilite"><pre><span></span><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">Persons</span>
+<div class="codehilite"><pre><span></span><code><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">Persons</span>
 <span class="k">ADD</span> <span class="k">CONSTRAINT</span> <span class="n">uc_PersonID</span> <span class="k">UNIQUE</span> <span class="p">(</span><span class="n">P_Id</span><span class="p">,</span><span class="n">LastName</span><span class="p">)</span>
 
 <span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">Persons</span>
 <span class="k">DROP</span> <span class="k">CONSTRAINT</span> <span class="n">uc_PersonID</span>
-</pre></div>
+</code></pre></div>
 
 
 <p><em>Temporary Table</em>:</p>
-<div class="codehilite"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="o">#</span><span class="n">MyTempTable</span> <span class="p">(</span><span class="n">cola</span> <span class="nb">INT</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">);</span>
+<div class="codehilite"><pre><span></span><code><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="o">#</span><span class="n">MyTempTable</span> <span class="p">(</span><span class="n">cola</span> <span class="nb">INT</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">);</span>
 <span class="k">INSERT</span> <span class="k">INTO</span> <span class="o">#</span><span class="n">MyTempTable</span> <span class="k">VALUES</span> <span class="p">(</span><span class="mi">1</span><span class="p">);</span>
-</pre></div>
+</code></pre></div>
 
 
 <p><em>Drop / Truncate</em>:</p>
-<div class="codehilite"><pre><span></span><span class="k">DROP</span> <span class="k">TABLE</span> <span class="k">table_name</span>
+<div class="codehilite"><pre><span></span><code><span class="k">DROP</span> <span class="k">TABLE</span> <span class="k">table_name</span>
 
 <span class="k">TRUNCATE</span> <span class="k">TABLE</span> <span class="k">table_name</span>
-</pre></div>
+</code></pre></div>
 
 
 <h2 id="primary-key-constraint">PRIMARY KEY constraint<a class="headerlink" href="#primary-key-constraint" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">Persons</span>
+<div class="codehilite"><pre><span></span><code><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">Persons</span>
 <span class="p">(</span>
 <span class="n">P_Id</span> <span class="nb">int</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span>
 <span class="n">LastName</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
@@ -2132,11 +2191,11 @@
 
 <span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">Persons</span>
 <span class="k">DROP</span> <span class="k">CONSTRAINT</span> <span class="n">PK_PersonID</span>
-</pre></div>
+</code></pre></div>
 
 
 <h2 id="foreign-key-constraints">FOREIGN KEY constraints<a class="headerlink" href="#foreign-key-constraints" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">Orders</span>
+<div class="codehilite"><pre><span></span><code><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">Orders</span>
 <span class="p">(</span>
 <span class="n">O_Id</span> <span class="nb">int</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span>
 <span class="n">OrderNo</span> <span class="nb">int</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
@@ -2152,10 +2211,10 @@
 <span class="k">CONSTRAINT</span> <span class="n">FK_PerOrders</span> <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">P_Id</span><span class="p">)</span>
 <span class="k">REFERENCES</span> <span class="n">Persons</span><span class="p">(</span><span class="n">P_Id</span><span class="p">)</span>
 <span class="p">)</span>
-</pre></div>
+</code></pre></div>
 
 
-<div class="codehilite"><pre><span></span><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">Orders</span>
+<div class="codehilite"><pre><span></span><code><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">Orders</span>
 <span class="k">ADD</span> <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">P_Id</span><span class="p">)</span>
 <span class="k">REFERENCES</span> <span class="n">Persons</span><span class="p">(</span><span class="n">P_Id</span><span class="p">)</span>
 
@@ -2166,11 +2225,11 @@
 
 <span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">Orders</span>
 <span class="k">DROP</span> <span class="k">CONSTRAINT</span> <span class="n">fk_PerOrders</span>
-</pre></div>
+</code></pre></div>
 
 
 <h2 id="check-constraints">CHECK Constraints<a class="headerlink" href="#check-constraints" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">Persons</span>
+<div class="codehilite"><pre><span></span><code><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">Persons</span>
 <span class="p">(</span>
 <span class="n">P_Id</span> <span class="nb">int</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="k">CHECK</span> <span class="p">(</span><span class="n">P_Id</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">),</span>
 <span class="n">LastName</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
@@ -2188,38 +2247,38 @@
 <span class="n">City</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
 <span class="k">CONSTRAINT</span> <span class="n">chk_Person</span> <span class="k">CHECK</span> <span class="p">(</span><span class="n">P_Id</span><span class="o">&gt;</span><span class="mi">0</span> <span class="k">AND</span> <span class="n">City</span><span class="o">=</span><span class="s1">&#39;Sandnes&#39;</span><span class="p">)</span>
 <span class="p">)</span>
-</pre></div>
+</code></pre></div>
 
 
-<div class="codehilite"><pre><span></span><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">Persons</span>
+<div class="codehilite"><pre><span></span><code><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">Persons</span>
 <span class="k">ADD</span> <span class="k">CONSTRAINT</span> <span class="n">CHK_Person</span> <span class="k">CHECK</span> <span class="p">(</span><span class="n">P_Id</span><span class="o">&gt;</span><span class="mi">0</span> <span class="k">AND</span> <span class="n">City</span><span class="o">=</span><span class="s1">&#39;Sandnes&#39;</span><span class="p">)</span>
 
 <span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">Persons</span>
 <span class="k">DROP</span> <span class="k">CONSTRAINT</span> <span class="n">CHK_Person</span>
-</pre></div>
+</code></pre></div>
 
 
 <h2 id="default-constraints">DEFAULT Constraints<a class="headerlink" href="#default-constraints" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">Orders</span>
+<div class="codehilite"><pre><span></span><code><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">Orders</span>
 <span class="p">(</span>
 <span class="n">O_Id</span> <span class="nb">int</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
 <span class="n">OrderNo</span> <span class="nb">int</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
 <span class="n">P_Id</span> <span class="nb">int</span><span class="p">,</span>
 <span class="n">OrderDate</span> <span class="nb">date</span> <span class="k">DEFAULT</span> <span class="n">GETDATE</span><span class="p">()</span>
 <span class="p">)</span>
-</pre></div>
+</code></pre></div>
 
 
-<div class="codehilite"><pre><span></span><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">Persons</span>
+<div class="codehilite"><pre><span></span><code><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">Persons</span>
 <span class="k">ALTER</span> <span class="k">COLUMN</span> <span class="n">City</span> <span class="k">SET</span> <span class="k">DEFAULT</span> <span class="s1">&#39;SEATTLE&#39;</span>
 
 <span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">Persons</span>
 <span class="k">ALTER</span> <span class="k">COLUMN</span> <span class="n">City</span> <span class="k">DROP</span> <span class="k">DEFAULT</span>
-</pre></div>
+</code></pre></div>
 
 
 <h2 id="index">Index<a class="headerlink" href="#index" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="k">CREATE</span> <span class="k">UNIQUE</span> <span class="k">INDEX</span> <span class="n">index_name</span>
+<div class="codehilite"><pre><span></span><code><span class="k">CREATE</span> <span class="k">UNIQUE</span> <span class="k">INDEX</span> <span class="n">index_name</span>
 <span class="k">ON</span> <span class="k">table_name</span> <span class="p">(</span><span class="k">column_name</span><span class="p">)</span>
 
 <span class="k">CREATE</span> <span class="k">INDEX</span> <span class="n">index_name</span>
@@ -2229,20 +2288,20 @@
 
 <span class="k">CREATE</span> <span class="k">INDEX</span> <span class="n">PIndex</span>
 <span class="k">ON</span> <span class="n">Persons</span> <span class="p">(</span><span class="n">LastName</span><span class="p">,</span> <span class="n">FirstName</span><span class="p">)</span>
-</pre></div>
+</code></pre></div>
 
 
-<div class="codehilite"><pre><span></span><span class="k">DROP</span> <span class="k">INDEX</span> <span class="k">table_name</span><span class="p">.</span><span class="n">index_name</span>
+<div class="codehilite"><pre><span></span><code><span class="k">DROP</span> <span class="k">INDEX</span> <span class="k">table_name</span><span class="p">.</span><span class="n">index_name</span>
 
 <span class="c1">-- Example:</span>
 
 <span class="k">DROP</span> <span class="k">INDEX</span> <span class="n">IX_ProductVendor_BusinessEntityID</span>
     <span class="k">ON</span> <span class="n">Purchasing</span><span class="p">.</span><span class="n">ProductVendor</span><span class="p">;</span>
-</pre></div>
+</code></pre></div>
 
 
 <h2 id="add-drop-alter-column-in-table">Add / drop / alter column in table<a class="headerlink" href="#add-drop-alter-column-in-table" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="k">table_name</span>
+<div class="codehilite"><pre><span></span><code><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="k">table_name</span>
 <span class="k">ADD</span> <span class="k">column_name</span> <span class="n">datatype</span>
 
 <span class="k">ALTER</span> <span class="k">TABLE</span> <span class="k">table_name</span>
@@ -2250,11 +2309,11 @@
 
 <span class="k">ALTER</span> <span class="k">TABLE</span> <span class="k">table_name</span>
 <span class="k">ALTER</span> <span class="k">COLUMN</span> <span class="k">column_name</span> <span class="n">datatype</span>
-</pre></div>
+</code></pre></div>
 
 
 <h2 id="autoincrement">Autoincrement<a class="headerlink" href="#autoincrement" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">Persons</span>
+<div class="codehilite"><pre><span></span><code><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">Persons</span>
 <span class="p">(</span>
 <span class="n">ID</span> <span class="nb">int</span> <span class="k">IDENTITY</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span>
 <span class="n">LastName</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
@@ -2262,11 +2321,11 @@
 <span class="n">Address</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
 <span class="n">City</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span>
 <span class="p">)</span>
-</pre></div>
+</code></pre></div>
 
 
 <p>Example:</p>
-<div class="codehilite"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">dbo</span><span class="p">.</span><span class="n">PurchaseOrderDetail</span>
+<div class="codehilite"><pre><span></span><code><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">dbo</span><span class="p">.</span><span class="n">PurchaseOrderDetail</span>
 <span class="p">(</span>
     <span class="n">PurchaseOrderID</span> <span class="nb">int</span> <span class="k">NOT</span> <span class="k">NULL</span>
         <span class="k">REFERENCES</span> <span class="n">Purchasing</span><span class="p">.</span><span class="n">PurchaseOrderHeader</span><span class="p">(</span><span class="n">PurchaseOrderID</span><span class="p">),</span>
@@ -2289,47 +2348,47 @@
               <span class="k">WITH</span> <span class="p">(</span><span class="n">IGNORE_DUP_KEY</span> <span class="o">=</span> <span class="k">OFF</span><span class="p">)</span>
 <span class="p">)</span>
 <span class="k">ON</span> <span class="k">PRIMARY</span><span class="p">;</span>
-</pre></div>
+</code></pre></div>
 
 
 <h2 id="views">Views<a class="headerlink" href="#views" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="k">CREATE</span> <span class="k">VIEW</span> <span class="n">view_name</span> <span class="k">AS</span>
+<div class="codehilite"><pre><span></span><code><span class="k">CREATE</span> <span class="k">VIEW</span> <span class="n">view_name</span> <span class="k">AS</span>
 <span class="k">SELECT</span> <span class="k">column_name</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 <span class="k">FROM</span> <span class="k">table_name</span>
 <span class="k">WHERE</span> <span class="n">condition</span>
-</pre></div>
+</code></pre></div>
 
 
-<div class="codehilite"><pre><span></span><span class="k">CREATE</span> <span class="k">OR</span> <span class="k">REPLACE</span> <span class="k">VIEW</span> <span class="n">view_name</span> <span class="k">AS</span>
+<div class="codehilite"><pre><span></span><code><span class="k">CREATE</span> <span class="k">OR</span> <span class="k">REPLACE</span> <span class="k">VIEW</span> <span class="n">view_name</span> <span class="k">AS</span>
 <span class="k">SELECT</span> <span class="k">column_name</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 <span class="k">FROM</span> <span class="k">table_name</span>
 <span class="k">WHERE</span> <span class="n">condition</span>
-</pre></div>
+</code></pre></div>
 
 
-<div class="codehilite"><pre><span></span><span class="k">DROP</span> <span class="k">VIEW</span> <span class="n">view_name</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="k">DROP</span> <span class="k">VIEW</span> <span class="n">view_name</span>
+</code></pre></div>
 
 
 <p><em>Examples</em>:</p>
-<div class="codehilite"><pre><span></span><span class="k">CREATE</span> <span class="k">VIEW</span> <span class="p">[</span><span class="n">Products</span> <span class="n">Above</span> <span class="n">Average</span> <span class="n">Price</span><span class="p">]</span> <span class="k">AS</span>
+<div class="codehilite"><pre><span></span><code><span class="k">CREATE</span> <span class="k">VIEW</span> <span class="p">[</span><span class="n">Products</span> <span class="n">Above</span> <span class="n">Average</span> <span class="n">Price</span><span class="p">]</span> <span class="k">AS</span>
 <span class="k">SELECT</span> <span class="n">ProductName</span><span class="p">,</span><span class="n">UnitPrice</span>
 <span class="k">FROM</span> <span class="n">Products</span>
 <span class="k">WHERE</span> <span class="n">UnitPrice</span> <span class="o">&gt;</span> <span class="p">(</span><span class="k">SELECT</span> <span class="k">AVG</span><span class="p">(</span><span class="n">UnitPrice</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">Products</span><span class="p">)</span>
 
 <span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="p">[</span><span class="n">Products</span> <span class="n">Above</span> <span class="n">Average</span> <span class="n">Price</span><span class="p">]</span>
-</pre></div>
+</code></pre></div>
 
 
-<div class="codehilite"><pre><span></span><span class="k">CREATE</span> <span class="k">VIEW</span> <span class="p">[</span><span class="n">Category</span> <span class="n">Sales</span> <span class="k">For</span> <span class="mi">1997</span><span class="p">]</span> <span class="k">AS</span>
+<div class="codehilite"><pre><span></span><code><span class="k">CREATE</span> <span class="k">VIEW</span> <span class="p">[</span><span class="n">Category</span> <span class="n">Sales</span> <span class="k">For</span> <span class="mi">1997</span><span class="p">]</span> <span class="k">AS</span>
 <span class="k">SELECT</span> <span class="k">DISTINCT</span> <span class="n">CategoryName</span><span class="p">,</span> <span class="k">Sum</span><span class="p">(</span><span class="n">ProductSales</span><span class="p">)</span> <span class="k">AS</span> <span class="n">CategorySales</span>
 <span class="k">FROM</span> <span class="p">[</span><span class="n">Product</span> <span class="n">Sales</span> <span class="k">for</span> <span class="mi">1997</span><span class="p">]</span>
 <span class="k">GROUP</span> <span class="k">BY</span> <span class="n">CategoryName</span>
-</pre></div>
+</code></pre></div>
 
 
 <h2 id="dates">Dates<a class="headerlink" href="#dates" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="n">GETDATE</span><span class="p">()</span>  <span class="c1">-- Returns the current date and time</span>
+<div class="codehilite"><pre><span></span><code><span class="n">GETDATE</span><span class="p">()</span>  <span class="c1">-- Returns the current date and time</span>
 
 <span class="n">DATEPART</span><span class="p">()</span> <span class="c1">-- Returns a single part of a date/time</span>
 
@@ -2338,11 +2397,11 @@
 <span class="n">DATEDIFF</span><span class="p">()</span> <span class="c1">-- Returns the time between two dates</span>
 
 <span class="k">CONVERT</span><span class="p">()</span>  <span class="c1">-- Displays date/time data in different formats</span>
-</pre></div>
+</code></pre></div>
 
 
 <p><em>Example</em>:</p>
-<div class="codehilite"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">Orders</span>
+<div class="codehilite"><pre><span></span><code><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">Orders</span>
 <span class="p">(</span>
 <span class="n">OrderId</span> <span class="nb">int</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span>
 <span class="n">ProductName</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
@@ -2363,7 +2422,7 @@
 <span class="k">CONVERT</span><span class="p">(</span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">19</span><span class="p">),</span><span class="n">GETDATE</span><span class="p">())</span>
 <span class="k">CONVERT</span><span class="p">(</span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span><span class="n">GETDATE</span><span class="p">(),</span><span class="mi">10</span><span class="p">)</span>
 <span class="k">CONVERT</span><span class="p">(</span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span><span class="n">GETDATE</span><span class="p">(),</span><span class="mi">110</span><span class="p">)</span>
-</pre></div>
+</code></pre></div>
 
 
 <h2 id="sql-server-data-types">SQL Server Data Types<a class="headerlink" href="#sql-server-data-types" title="Permanent link">&para;</a></h2>
@@ -2479,7 +2538,7 @@ Stores a result-set for later processing</p>
 <li><code>SUM()</code>   - Returns the sum</li>
 </ul>
 <p>Examples:</p>
-<div class="codehilite"><pre><span></span><span class="k">SELECT</span> <span class="k">COUNT</span><span class="p">(</span><span class="k">DISTINCT</span> <span class="k">column_name</span><span class="p">)</span> <span class="k">FROM</span> <span class="k">table_name</span><span class="p">;</span>
+<div class="codehilite"><pre><span></span><code><span class="k">SELECT</span> <span class="k">COUNT</span><span class="p">(</span><span class="k">DISTINCT</span> <span class="k">column_name</span><span class="p">)</span> <span class="k">FROM</span> <span class="k">table_name</span><span class="p">;</span>
 
 <span class="k">SELECT</span> <span class="n">TOP</span> <span class="mi">1</span> <span class="k">column_name</span> <span class="k">FROM</span> <span class="k">table_name</span>
 <span class="k">ORDER</span> <span class="k">BY</span> <span class="k">column_name</span> <span class="k">DESC</span><span class="p">;</span>
@@ -2507,7 +2566,7 @@ Stores a result-set for later processing</p>
 <span class="k">ON</span> <span class="n">Orders</span><span class="p">.</span><span class="n">EmployeeID</span><span class="o">=</span><span class="n">Employees</span><span class="p">.</span><span class="n">EmployeeID</span><span class="p">)</span>
 <span class="k">GROUP</span> <span class="k">BY</span> <span class="n">LastName</span>
 <span class="k">HAVING</span> <span class="k">COUNT</span><span class="p">(</span><span class="n">Orders</span><span class="p">.</span><span class="n">OrderID</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">;</span>
-</pre></div>
+</code></pre></div>
 
 
 <h2 id="sql-scalar-functions">SQL Scalar functions<a class="headerlink" href="#sql-scalar-functions" title="Permanent link">&para;</a></h2>
@@ -2520,20 +2579,20 @@ Stores a result-set for later processing</p>
 <li>NOW() - Returns the current system date and time</li>
 <li>FORMAT() - Formats how a field is to be displayed</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="k">SELECT</span> <span class="n">ProductName</span><span class="p">,</span> <span class="n">ROUND</span><span class="p">(</span><span class="n">Price</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> <span class="k">AS</span> <span class="n">RoundedPrice</span>
+<div class="codehilite"><pre><span></span><code><span class="k">SELECT</span> <span class="n">ProductName</span><span class="p">,</span> <span class="n">ROUND</span><span class="p">(</span><span class="n">Price</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> <span class="k">AS</span> <span class="n">RoundedPrice</span>
 <span class="k">FROM</span> <span class="n">Products</span><span class="p">;</span>
-</pre></div>
+</code></pre></div>
 
 
 <h2 id="variables">Variables<a class="headerlink" href="#variables" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="k">DECLARE</span> <span class="o">@</span><span class="n">myvar</span> <span class="nb">char</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span>
+<div class="codehilite"><pre><span></span><code><span class="k">DECLARE</span> <span class="o">@</span><span class="n">myvar</span> <span class="nb">char</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span>
 <span class="k">SET</span> <span class="o">@</span><span class="n">myvar</span> <span class="o">=</span> <span class="s1">&#39;This is a test&#39;</span><span class="p">;</span>
 <span class="k">SELECT</span> <span class="o">@</span><span class="n">myvar</span><span class="p">;</span>
-</pre></div>
+</code></pre></div>
 
 
 <h2 id="scalar-function">Scalar Function<a class="headerlink" href="#scalar-function" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="k">CREATE</span> <span class="k">FUNCTION</span> <span class="n">FunctionName</span>
+<div class="codehilite"><pre><span></span><code><span class="k">CREATE</span> <span class="k">FUNCTION</span> <span class="n">FunctionName</span>
 <span class="p">(</span>
 <span class="c1">-- Add the parameters for the function here</span>
 <span class="o">@</span><span class="n">p1</span> <span class="nb">int</span>
@@ -2549,11 +2608,11 @@ Stores a result-set for later processing</p>
 <span class="c1">-- Return the result of the function</span>
 <span class="k">RETURN</span> <span class="o">@</span><span class="k">Result</span>
 <span class="k">END</span>
-</pre></div>
+</code></pre></div>
 
 
 <h2 id="table-value-function">Table Value Function<a class="headerlink" href="#table-value-function" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="k">IF</span> <span class="n">OBJECT_ID</span> <span class="p">(</span><span class="n">N</span><span class="s1">&#39;dbo.EmployeeByID&#39;</span> <span class="p">)</span> <span class="k">IS</span> <span class="k">NOT</span> <span class="k">NULL</span>
+<div class="codehilite"><pre><span></span><code><span class="k">IF</span> <span class="n">OBJECT_ID</span> <span class="p">(</span><span class="n">N</span><span class="s1">&#39;dbo.EmployeeByID&#39;</span> <span class="p">)</span> <span class="k">IS</span> <span class="k">NOT</span> <span class="k">NULL</span>
    <span class="k">DROP</span> <span class="k">FUNCTION</span> <span class="n">dbo</span><span class="p">.</span><span class="n">EmployeeByID</span>
 <span class="k">GO</span>
 
@@ -2599,11 +2658,11 @@ Stores a result-set for later processing</p>
    <span class="k">RETURN</span>
 <span class="k">END</span>
 <span class="k">GO</span>
-</pre></div>
+</code></pre></div>
 
 
 <h2 id="stored-procedure">Stored Procedure<a class="headerlink" href="#stored-procedure" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="k">CREATE</span> <span class="k">PROCEDURE</span> <span class="n">ProcedureName</span>
+<div class="codehilite"><pre><span></span><code><span class="k">CREATE</span> <span class="k">PROCEDURE</span> <span class="n">ProcedureName</span>
         <span class="c1">-- Add the parameters for the stored procedure here</span>
         <span class="o">@</span><span class="n">p1</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span> <span class="p">,</span>
         <span class="o">@</span><span class="n">p2</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
@@ -2617,28 +2676,29 @@ Stores a result-set for later processing</p>
         <span class="k">SELECT</span> <span class="o">@</span><span class="n">p1</span> <span class="p">,</span> <span class="o">@</span><span class="n">p2</span>
 <span class="k">END</span>
 <span class="k">GO</span>
-</pre></div>
+</code></pre></div>
 
 
 <h2 id="self-join">Self-join<a class="headerlink" href="#self-join" title="Permanent link">&para;</a></h2>
 <p>Q. Here's the data in a table 'orders'</p>
-<div class="codehilite"><pre><span></span>customer_id order_id order_day
+<div class="codehilite"><pre><span></span><code>customer_id order_id order_day
 123        27424624    25Dec2011
 123        89690900    25Dec2010
 797        12131323    25Dec2010
 876        67145419    15Dec2011
-</pre></div>
+</code></pre></div>
 
 
 <p>Could you give me SQL for customers who placed orders on both the days, 25th Dec 2010 and 25th Dec 2011?</p>
-<div class="codehilite"><pre><span></span>    <span class="k">SELECT</span> <span class="n">o</span><span class="p">.</span><span class="n">customer_id</span><span class="p">,</span> <span class="n">o</span><span class="p">.</span><span class="n">order_day</span>
+<div class="codehilite"><pre><span></span><code>    <span class="k">SELECT</span> <span class="n">o</span><span class="p">.</span><span class="n">customer_id</span><span class="p">,</span> <span class="n">o</span><span class="p">.</span><span class="n">order_day</span>
     <span class="k">FROM</span> <span class="n">orders</span> <span class="k">AS</span> <span class="n">o</span>
     <span class="k">INNER</span> <span class="k">JOIN</span> <span class="n">orders</span> <span class="k">AS</span> <span class="n">o1</span>
     <span class="k">ON</span> <span class="n">o</span><span class="p">.</span><span class="n">customer_id</span> <span class="o">=</span> <span class="n">o1</span><span class="p">.</span><span class="n">customer_id</span>
     <span class="k">WHERE</span> <span class="p">...</span>
-</pre></div>
+</code></pre></div>
                 
                   
+                
                 
               
               
@@ -2672,13 +2732,13 @@ Stores a result-set for later processing</p>
           </a>
         
         
-          <a href="../../DevOps/CloudFormation/" title="CloudFormation" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../DevOps/CloudFormation/" title="CloudFormation Basics" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                CloudFormation
+                CloudFormation Basics
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -2694,44 +2754,36 @@ Stores a result-set for later processing</p>
       <div class="md-footer-copyright">
         
           <div class="md-footer-copyright__highlight">
-            Copyright &copy; 2017-2018 S. John Cruchon-Dupeyrat
+            Copyright &copy; 2017-2020 S. John Cruchon-Dupeyrat
           </div>
         
         powered by
-        <a href="http://www.mkdocs.org">MkDocs</a>
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
         and
-        <a href="https://squidfunk.github.io/mkdocs-material/">
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
           Material for MkDocs</a>
       </div>
       
-        
   <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <a href="https://github.com/john-cd" target="_blank" rel="noopener" title="github" class="md-footer-social__link fa fa-github"></a>
     
-      <a href="https://github.com/john-cd" class="md-footer-social__link fa fa-github"></a>
+      <a href="https://twitter.com/sjncd" target="_blank" rel="noopener" title="twitter" class="md-footer-social__link fa fa-twitter"></a>
     
-      <a href="https://twitter.com/sjncd" class="md-footer-social__link fa fa-twitter"></a>
-    
-      <a href="https://www.linkedin.com/in/scdupeyrat/" class="md-footer-social__link fa fa-linkedin"></a>
+      <a href="https://www.linkedin.com/in/scdupeyrat/" target="_blank" rel="noopener" title="linkedin" class="md-footer-social__link fa fa-linkedin"></a>
     
   </div>
 
-      
     </div>
   </div>
 </footer>
       
     </div>
     
-      <script src="../../assets/javascripts/application.8eb9be28.js"></script>
+      <script src="../../assets/javascripts/application.c33a9706.js"></script>
       
-      <script>app.initialize({version:"0.17.3",url:{base:"../.."}})</script>
-      
-    
-    
-      
-        <script>!function(e,a,t,n,o,c,i){e.GoogleAnalyticsObject=o,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),i=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",i.parentNode.insertBefore(c,i)}(window,document,"script",0,"ga"),ga("create","UA-92780605-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var a=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",a,e.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
+      <script>app.initialize({version:"1.1",url:{base:"../.."}})</script>
       
     
   </body>

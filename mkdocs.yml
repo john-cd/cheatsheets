@@ -10,20 +10,21 @@ repo_url: 'https://github.com/john-cd/cheatsheets'
 edit_uri: edit/master/docs_src/
 
 # Copyright
-copyright: 'Copyright &copy; 2017-2018 S. John Cruchon-Dupeyrat'
+copyright: 'Copyright &copy; 2017-2020 S. John Cruchon-Dupeyrat'
 
 # Documentation sources and theme
 docs_dir: 'docs_src'
 site_dir: 'docs'
 
 theme:
-  name: material
-  palette:
-    primary: 'deep orange'
-    accent: 'orange'
-  font:
-    text: 'Roboto'
-    code: 'Roboto Mono'
+#  name: readthedocs
+ name: material  
+ palette:
+   primary: 'deep orange'
+   accent: 'orange'
+ font:
+   text: 'Roboto'
+   code: 'Roboto Mono'
 #  feature:
 #    tabs: true
 # logo: 'images/logo.svg'

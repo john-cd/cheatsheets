@@ -134,7 +134,7 @@ You can run ``mvn site`` and then find an ``index.html`` file in ``target/site``
 
 ## POM files
 
-Use the search engine at [repository.sonatype.org]( repository.sonatype.org ) to find dependencies by name and get the ``xml`` necessary to paste into your ``pom.xml``
+Use the search engine at [repository.sonatype.org]( http://repository.sonatype.org ) to find dependencies by name and get the ``xml`` necessary to paste into your ``pom.xml``
 
 ```xml
 <project>

@@ -21,11 +21,9 @@ comments: true
 
 [A Beginner's Tutorial for Restricted Boltzmann Machines - Deeplearning4j- Open-source, Distributed Deep Learning for the JVM](https://deeplearning4j.org/restrictedboltzmannmachine)
 
-
 ## Embedding
 
 [t-distributed stochastic neighbor embedding - Wikipedia](https://en.wikipedia.org/wiki/T-distributed_stochastic_neighbor_embedding)
-
 
 ## Reinforcement Learning
 
@@ -37,11 +35,9 @@ comments: true
 
 [CyBrain](https://github.com/cgarciae/cybrain)
 
-
 # ML Plaforms
 
 [Palladium](http://palladium.readthedocs.io/en/latest/)
-
 
 # GUI tools 
 
@@ -59,16 +55,12 @@ together like a flow diagram. Under the covers you can use Weka as a Java librar
 configuring algorithms (decision trees) and reviewing the results. The best feature of this service is that it is all in the cloud, meaning that
 all you need is a web browser to get started. It also provides an API so that if you like it you can build an application around it.
 
-
-
 # Tutorials
 
 - [machinelearningmastery.com](http://machinelearningmastery.com/)
 - [Kaggle](https://www.kaggle.com/wiki/Tutorials)
 
-
 # Books
 
 - [The Elements of Statistical Learning: Data Mining, Inference, and Prediction](http://statweb.stanford.edu/~tibs/ElemStatLearn/)
 - [Boosting Foundations and Algorithms](http://mitpress.mit.edu/books/boosting)
-

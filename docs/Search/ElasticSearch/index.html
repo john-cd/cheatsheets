@@ -2,7 +2,7 @@
 
 
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="no-js">
   <head>
     
@@ -38,7 +38,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-0.17.3, mkdocs-material-2.7.1">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
     
     
       
@@ -46,22 +46,56 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.78aab2dc.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.adb8469c.css">
       
-        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.6079476c.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#ff7043">
       
     
     
-      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+      <script src="../../assets/javascripts/modernizr.86422ebf.js"></script>
     
     
-      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
       
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
-      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-92780605-1", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
     
     
   </head>
@@ -74,32 +108,15 @@
       <defs>
         
         
-          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
-    viewBox="0 0 416 448" id="github">
-  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
-        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
-        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
-        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
-        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
-        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
-        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
-        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
-        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
-        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
-        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
-        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
-        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
-        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
-        99.5z" />
-</svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
         
       </defs>
     </svg>
-    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer" autocomplete="off">
-    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
-    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#cheatsheets" tabindex="1" class="md-skip">
+      <a href="#cheatsheets" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -108,40 +125,39 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="http://john-cd.com/cheatsheets/" title="John's Cheatsheets" class="md-header-nav__button md-logo">
+        <a href="http://john-cd.com/cheatsheets/" title="John's Cheatsheets" aria-label="John's Cheatsheets" class="md-header-nav__button md-logo">
           
             <i class="md-icon"></i>
           
         </a>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
-        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
       </div>
       <div class="md-flex__cell md-flex__cell--stretch">
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
-            
-              <span class="md-header-nav__topic">
-                John's Cheatsheets
-              </span>
-              <span class="md-header-nav__topic">
+            <span class="md-header-nav__topic">
+              John's Cheatsheets
+            </span>
+            <span class="md-header-nav__topic">
+              
                 ElasticSearch Cheatsheet
-              </span>
-            
+              
+            </span>
           
         </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
           
-            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
-            
 <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="search"></label>
+  <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
-      <label class="md-icon md-search__icon" for="search"></label>
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
       <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
         &#xE5CD;
       </button>
@@ -158,7 +174,6 @@
     </div>
   </div>
 </div>
-          
         
       </div>
       
@@ -169,20 +184,18 @@
 
   
 
-
-  <a href="https://github.com/john-cd/cheatsheets/" title="Go to repository" class="md-source" data-md-source="github">
-    
-      <div class="md-source__icon">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#github" width="24" height="24"></use>
-        </svg>
-      </div>
-    
-    <div class="md-source__repository">
-      john-cd/cheatsheets
+<a href="https://github.com/john-cd/cheatsheets/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
     </div>
-  </a>
-
+  
+  <div class="md-source__repository">
+    john-cd/cheatsheets
+  </div>
+</a>
           </div>
         </div>
       
@@ -195,7 +208,7 @@
         
       
       
-      <main class="md-main">
+      <main class="md-main" role="main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
             
@@ -203,12 +216,12 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
-  <label class="md-nav__title md-nav__title--site" for="drawer">
-    <span class="md-nav__button md-logo">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="http://john-cd.com/cheatsheets/" title="John's Cheatsheets" class="md-nav__button md-logo">
       
         <i class="md-icon"></i>
       
-    </span>
+    </a>
     John's Cheatsheets
   </label>
   
@@ -218,20 +231,18 @@
 
   
 
-
-  <a href="https://github.com/john-cd/cheatsheets/" title="Go to repository" class="md-source" data-md-source="github">
-    
-      <div class="md-source__icon">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#github" width="24" height="24"></use>
-        </svg>
-      </div>
-    
-    <div class="md-source__repository">
-      john-cd/cheatsheets
+<a href="https://github.com/john-cd/cheatsheets/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
     </div>
-  </a>
-
+  
+  <div class="md-source__repository">
+    john-cd/cheatsheets
+  </div>
+</a>
     </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -253,27 +264,15 @@
       
 
 
-  <li class="md-nav__item">
-    <a href="../../Command_Prompt_Here/" title="Command Prompt Here" class="md-nav__link">
-      Command Prompt Here
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
-    <label class="md-nav__link" for="nav-3">
+    <label class="md-nav__link" for="nav-2">
       Big Data
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-3">
+      <label class="md-nav__title" for="nav-2">
         Big Data
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -387,13 +386,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
-    <label class="md-nav__link" for="nav-4">
+    <label class="md-nav__link" for="nav-3">
       Cloud
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
+      <label class="md-nav__title" for="nav-3">
         Cloud
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -447,13 +446,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
-    <label class="md-nav__link" for="nav-5">
+    <label class="md-nav__link" for="nav-4">
       Containers
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
+      <label class="md-nav__title" for="nav-4">
         Containers
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -591,13 +590,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
-    <label class="md-nav__link" for="nav-6">
+    <label class="md-nav__link" for="nav-5">
       Data Science
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-6">
+      <label class="md-nav__title" for="nav-5">
         Data Science
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -711,13 +710,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
     
-    <label class="md-nav__link" for="nav-7">
+    <label class="md-nav__link" for="nav-6">
       Databases
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-7">
+      <label class="md-nav__title" for="nav-6">
         Databases
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -771,13 +770,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
     
-    <label class="md-nav__link" for="nav-8">
+    <label class="md-nav__link" for="nav-7">
       DevOps
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-8">
+      <label class="md-nav__title" for="nav-7">
         DevOps
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -831,13 +830,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
     
-    <label class="md-nav__link" for="nav-9">
+    <label class="md-nav__link" for="nav-8">
       Java
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-9">
+      <label class="md-nav__title" for="nav-8">
         Java
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -891,13 +890,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
     
-    <label class="md-nav__link" for="nav-10">
+    <label class="md-nav__link" for="nav-9">
       Linux
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-10">
+      <label class="md-nav__title" for="nav-9">
         Linux
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -927,13 +926,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
     
-    <label class="md-nav__link" for="nav-11">
+    <label class="md-nav__link" for="nav-10">
       Markup and Documentation
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-11">
+      <label class="md-nav__title" for="nav-10">
         Markup and Documentation
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -945,8 +944,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Markup_and_Documentation/Jekyll/" title=""Jekyll How-To"" class="md-nav__link">
-      "Jekyll How-To"
+    <a href="../../Markup_and_Documentation/Jekyll/" title="Jekyll How-To" class="md-nav__link">
+      Jekyll How-To
     </a>
   </li>
 
@@ -999,13 +998,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
     
-    <label class="md-nav__link" for="nav-12">
+    <label class="md-nav__link" for="nav-11">
       Microservices
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-12">
+      <label class="md-nav__title" for="nav-11">
         Microservices
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1035,17 +1034,29 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
     
-    <label class="md-nav__link" for="nav-13">
+    <label class="md-nav__link" for="nav-12">
       Python
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-13">
+      <label class="md-nav__title" for="nav-12">
         Python
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Python/Flask/" title="Flask" class="md-nav__link">
+      Flask
+    </a>
+  </li>
+
         
           
           
@@ -1077,6 +1088,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../Python/Python/" title="Python Links" class="md-nav__link">
+      Python Links
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../Python/Python3/" title="Python 3" class="md-nav__link">
       Python 3
     </a>
@@ -1095,13 +1118,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-14" type="checkbox" id="nav-14">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
     
-    <label class="md-nav__link" for="nav-14">
+    <label class="md-nav__link" for="nav-13">
       Scala
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-14">
+      <label class="md-nav__title" for="nav-13">
         Scala
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1253,13 +1276,13 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-15" type="checkbox" id="nav-15" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-14" type="checkbox" id="nav-14" checked>
     
-    <label class="md-nav__link" for="nav-15">
+    <label class="md-nav__link" for="nav-14">
       Search
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-15">
+      <label class="md-nav__title" for="nav-14">
         Search
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1274,7 +1297,7 @@
 
   <li class="md-nav__item md-nav__item--active">
     
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
       
     
@@ -1298,13 +1321,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-16" type="checkbox" id="nav-16">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-15" type="checkbox" id="nav-15">
     
-    <label class="md-nav__link" for="nav-16">
+    <label class="md-nav__link" for="nav-15">
       Software Development
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-16">
+      <label class="md-nav__title" for="nav-15">
         Software Development
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1340,8 +1363,44 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Software_Development/IntelliJ/" title="IntelliJ" class="md-nav__link">
-      IntelliJ
+    <a href="../../Software_Development/IntelliJ/" title="IntelliJ Cheatsheet" class="md-nav__link">
+      IntelliJ Cheatsheet
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-16" type="checkbox" id="nav-16">
+    
+    <label class="md-nav__link" for="nav-16">
+      Web
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-16">
+        Web
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Web/Bootstrap/" title="Bootstrap" class="md-nav__link">
+      Bootstrap
     </a>
   </li>
 
@@ -1361,11 +1420,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-17" type="checkbox" id="nav-17">
     
     <label class="md-nav__link" for="nav-17">
-      Web
+      Windows
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-17">
-        Web
+        Windows
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -1376,8 +1435,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Web/Bootstrap/" title="Bootstrap" class="md-nav__link">
-      Bootstrap
+    <a href="../../Windows/Command_Prompt_Here/" title="Command Line" class="md-nav__link">
+      Command Line
     </a>
   </li>
 
@@ -1412,8 +1471,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../dotNET/ASPdotNET/" title="ASPdotNET" class="md-nav__link">
-      ASPdotNET
+    <a href="../../dotNET/ASPdotNET/" title="ASP.NET Core app" class="md-nav__link">
+      ASP.NET Core app
     </a>
   </li>
 
@@ -1424,8 +1483,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../dotNET/AkkadotNET/" title="AkkadotNET" class="md-nav__link">
-      AkkadotNET
+    <a href="../../dotNET/AkkadotNET/" title="Akka.NET Examples" class="md-nav__link">
+      Akka.NET Examples
     </a>
   </li>
 
@@ -1436,8 +1495,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../dotNET/C%23/" title="C#" class="md-nav__link">
-      C#
+    <a href="../../dotNET/C%23/" title="C# Cheatsheet" class="md-nav__link">
+      C# Cheatsheet
     </a>
   </li>
 
@@ -1448,8 +1507,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../dotNET/Multithreading/" title="Multithreading" class="md-nav__link">
-      Multithreading
+    <a href="../../dotNET/Multithreading/" title=".NET Multithreading" class="md-nav__link">
+      .NET Multithreading
     </a>
   </li>
 
@@ -1514,12 +1573,12 @@
 <li>Download <a href="https://www.elastic.co/downloads/elasticsearch">ElasticSearch</a></li>
 <li>Optionally change the <code>cluster.name</code> in the <code>elasticsearch.yml</code> configuration</li>
 </ol>
-<div class="codehilite"><pre><span></span><span class="nb">cd</span> elasticsearch-&lt;version&gt;
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> elasticsearch-&lt;version&gt;
 ./bin/elasticsearch -d
 <span class="c1"># or on Windows </span>
 <span class="c1"># bin\elasticsearch.bat</span>
 curl <span class="s1">&#39;http://localhost:9200/?pretty&#39;</span>
-</pre></div>
+</code></pre></div>
 
 
 <ol>
@@ -1536,49 +1595,49 @@ curl <span class="s1">&#39;http://localhost:9200/?pretty&#39;</span>
 <p>Install <a href="https://www.elastic.co/guide/en/elasticsearch/guide/current/running-elasticsearch.html#sense">Sense</a></p>
 </li>
 </ol>
-<div class="codehilite"><pre><span></span>./bin/kibana plugin --install elastic/sense
-</pre></div>
+<div class="codehilite"><pre><span></span><code>./bin/kibana plugin --install elastic/sense
+</code></pre></div>
 
 
 <p><em>On Windows:</em> </p>
-<div class="codehilite"><pre><span></span>bin<span class="se">\k</span>ibana.bat plugin --install elastic/sense
-</pre></div>
+<div class="codehilite"><pre><span></span><code>bin<span class="se">\k</span>ibana.bat plugin --install elastic/sense
+</code></pre></div>
 
 
 <p>Then go to</p>
 <p><a href="http://localhost:5601/app/sense">http://localhost:5601/app/sense</a></p>
 <h2 id="curl">CURL<a class="headerlink" href="#curl" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span>curl -X&lt;VERB&gt; <span class="s1">&#39;&lt;PROTOCOL&gt;://&lt;HOST&gt;:&lt;PORT&gt;/&lt;PATH&gt;?&lt;QUERY_STRING&gt;&#39;</span> -d <span class="s1">&#39;&lt;BODY&gt;&#39;</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code>curl -X&lt;VERB&gt; <span class="s1">&#39;&lt;PROTOCOL&gt;://&lt;HOST&gt;:&lt;PORT&gt;/&lt;PATH&gt;?&lt;QUERY_STRING&gt;&#39;</span> -d <span class="s1">&#39;&lt;BODY&gt;&#39;</span>
+</code></pre></div>
 
 
 <p><em>verb is GET, POST, PUT, HEAD, or DELETE</em></p>
 <h3 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>curl -XGET <span class="s1">&#39;http://localhost:9200/_count?pretty&#39;</span> -d <span class="s1">&#39;{ &quot;query&quot;: { &quot;match_all&quot;: {} }}&#39;</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code>curl -XGET <span class="s1">&#39;http://localhost:9200/_count?pretty&#39;</span> -d <span class="s1">&#39;{ &quot;query&quot;: { &quot;match_all&quot;: {} }}&#39;</span>
+</code></pre></div>
 
 
-<div class="codehilite"><pre><span></span>curl -XGET &lt;id&gt;.us-west-2.es.amazonaws.com
+<div class="codehilite"><pre><span></span><code>curl -XGET &lt;id&gt;.us-west-2.es.amazonaws.com
 
 curl -XGET <span class="s1">&#39;https://&lt;id&gt;.us-west-2.es.amazonaws.com/_count?pretty&#39;</span> -d <span class="s1">&#39;{ &quot;query&quot;: { &quot;match_all&quot;: {} } }&#39;</span>
 
 curl -XPUT https://&lt;id&gt;.us-west-2.es.amazonaws.com/movies/movie/tt0116996 -d <span class="s1">&#39;{&quot;directors&quot; : [&quot;Tim Burton&quot;],&quot;genres&quot; : [&quot;Comedy&quot;,&quot;Sci-Fi&quot;], &quot;plot&quot;: &quot;The Earth is invaded by Martians with irresistible weapons and a cruel sense of humor.&quot;, &quot;title&quot; : &quot;Mars Attacks!&quot;, &quot;actors&quot; :[&quot;Jack Nicholson&quot;,&quot;Pierce Brosnan&quot;,&quot;Sarah Jessica Parker&quot;], &quot;year&quot; : 1996}&#39;</span>
-</pre></div>
+</code></pre></div>
 
 
 <h2 id="sense">Sense<a class="headerlink" href="#sense" title="Permanent link">&para;</a></h2>
 <p>Sense syntax is similar to curl:</p>
 <p>Index a document</p>
-<div class="codehilite"><pre><span></span>PUT index/type/1
+<div class="codehilite"><pre><span></span><code>PUT index/type/1
 {
  &quot;body&quot;: &quot;here&quot;
 }
-</pre></div>
+</code></pre></div>
 
 
 <p>and retrieve it</p>
-<div class="codehilite"><pre><span></span>GET index/type/1
-</pre></div>
+<div class="codehilite"><pre><span></span><code>GET index/type/1
+</code></pre></div>
 
 
 <h2 id="plugins">PLUGINS<a class="headerlink" href="#plugins" title="Permanent link">&para;</a></h2>
@@ -1586,24 +1645,24 @@ curl -XPUT https://&lt;id&gt;.us-west-2.es.amazonaws.com/movies/movie/tt0116996 
 <p><code>http://yournode:9200/_plugin/&lt;plugin name&gt;</code></p>
 <p>On Debian, the script is in: <code>/usr/share/elasticsearch/bin/plugin</code>.</p>
 <p><strong>Install various plugins</strong></p>
-<div class="codehilite"><pre><span></span>./bin/plugin --install mobz/elasticsearch-head
+<div class="codehilite"><pre><span></span><code>./bin/plugin --install mobz/elasticsearch-head
 ./bin/plugin --install lmenezes/elasticsearch-kopf/1.2
 ./bin/plugin --install elasticsearch/marvel/latest
-</pre></div>
+</code></pre></div>
 
 
 <p><strong>Remove a plugin</strong></p>
-<div class="codehilite"><pre><span></span>./bin/plugin --remove
-</pre></div>
+<div class="codehilite"><pre><span></span><code>./bin/plugin --remove
+</code></pre></div>
 
 
 <p><strong>List installed plugins</strong></p>
-<div class="codehilite"><pre><span></span>./bin/plugin --list
-</pre></div>
+<div class="codehilite"><pre><span></span><code>./bin/plugin --list
+</code></pre></div>
 
 
-<div class="codehilite"><pre><span></span>GET /_nodes?plugin=true
-</pre></div>
+<div class="codehilite"><pre><span></span><code>GET /_nodes?plugin=true
+</code></pre></div>
 
 
 <p><a href="https://blog.codecentric.de/en/2014/03/elasticsearch-monitoring-and-management-plugins/">Elasticsearch monitoring and management plugins</a></p>
@@ -1619,13 +1678,13 @@ curl -XPUT https://&lt;id&gt;.us-west-2.es.amazonaws.com/movies/movie/tt0116996 
 <a href="http://bigdesk.org/">BigDesk</a></p>
 <p><strong>Kopf</strong></p>
 <p><a href="https://github.com/lmenezes/elasticsearch-kopf">Kopf</a></p>
-<div class="codehilite"><pre><span></span>./bin/plugin --install lmenezes/elasticsearch-kopf/1.2`
-</pre></div>
+<div class="codehilite"><pre><span></span><code>./bin/plugin --install lmenezes/elasticsearch-kopf/1.2`
+</code></pre></div>
 
 
 <p><strong>Marvel</strong></p>
-<div class="codehilite"><pre><span></span>./bin/plugin --install elasticsearch/marvel/latest
-</pre></div>
+<div class="codehilite"><pre><span></span><code>./bin/plugin --install elasticsearch/marvel/latest
+</code></pre></div>
 
 
 <h2 id="integrations-cms-importexport-hadoop">Integrations (CMS, import/export, hadoop...)<a class="headerlink" href="#integrations-cms-importexport-hadoop" title="Permanent link">&para;</a></h2>
@@ -1645,7 +1704,7 @@ curl -XPUT https://&lt;id&gt;.us-west-2.es.amazonaws.com/movies/movie/tt0116996 
 <p>BI platforms that can use ES as an analytics engine:</p>
 <ul>
 <li>Kibana</li>
-<li><a href="../grafana.org/">Grafana</a></li>
+<li><a href="grafana.org/">Grafana</a></li>
 <li>
 <p>BIRT</p>
 <ul>
@@ -1694,48 +1753,48 @@ curl -XPUT https://&lt;id&gt;.us-west-2.es.amazonaws.com/movies/movie/tt0116996 
 <h2 id="explore-using-sense">Explore (using Sense)<a class="headerlink" href="#explore-using-sense" title="Permanent link">&para;</a></h2>
 <p><code>GET _stats/</code></p>
 <p># List indices</p>
-<div class="codehilite"><pre><span></span>GET /_cat/indices/
+<div class="codehilite"><pre><span></span><code>GET /_cat/indices/
 GET /_cat/indices/my_ind*
-</pre></div>
+</code></pre></div>
 
 
 <p># Get info about one index</p>
-<div class="codehilite"><pre><span></span>GET /twitter
+<div class="codehilite"><pre><span></span><code>GET /twitter
 GET /my_index_nr_1*/_settings?pretty   or ?v
 GET /twitter/_settings,_mappings
-</pre></div>
+</code></pre></div>
 
 
 <p>The available features are _settings, _mappings, _warmers and _aliases</p>
 <p># cluster</p>
-<div class="codehilite"><pre><span></span>GET /_nodes
-</pre></div>
+<div class="codehilite"><pre><span></span><code>GET /_nodes
+</code></pre></div>
 
 
 <p># insert data</p>
-<div class="codehilite"><pre><span></span>PUT my_index/user/1
+<div class="codehilite"><pre><span></span><code>PUT my_index/user/1
 {
 &quot;first_name&quot;:    &quot;John&quot;,
 &quot;last_name&quot;:     &quot;Smith&quot;,
 &quot;date_of_birth&quot;: &quot;1970-10-24&quot;
 }
-</pre></div>
+</code></pre></div>
 
 
 <p>#search</p>
-<div class="codehilite"><pre><span></span>GET my_index/_search
+<div class="codehilite"><pre><span></span><code>GET my_index/_search
 
 GET _count?pretty
-</pre></div>
+</code></pre></div>
 
 
 <p># Data schema</p>
-<div class="codehilite"><pre><span></span>GET my_index/_mapping
-</pre></div>
+<div class="codehilite"><pre><span></span><code>GET my_index/_mapping
+</code></pre></div>
 
 
 <h2 id="insert-documents">INSERT DOCUMENTS<a class="headerlink" href="#insert-documents" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span>PUT /index/type/ID
+<div class="codehilite"><pre><span></span><code>PUT /index/type/ID
 PUT /megacorp/employee/1
 { &quot;first_name&quot; : &quot;John&quot;, &quot;last_name&quot; : &quot;Smith&quot;, &quot;age&quot; : 25, &quot;about&quot; : &quot;I love to go rock climbing&quot;, &quot;interests&quot;: [ &quot;sports&quot;, &quot;music&quot; ]}
 
@@ -1743,116 +1802,116 @@ PUT /megacorp/employee/2
 { &quot;first_name&quot; : &quot;Jane&quot;, &quot;last_name&quot; : &quot;Smith&quot;, &quot;age&quot; : 32, &quot;about&quot; : &quot;I like to collect rock albums&quot;, &quot;interests&quot;: [ &quot;music&quot; ]}
 
 GET /megacorp/employee/1
-</pre></div>
+</code></pre></div>
 
 
 <p>Field names can be any valid string, but may not include periods.
 Every document in Elasticsearch has a version number. Every time a change is made to a document (including deleting it), the _version number is incremented.</p>
 <p><em>Optimistic concurrency control</em></p>
-<div class="codehilite"><pre><span></span>PUT /website/blog/1?version=1  { &quot;title&quot;: &quot;My first blog entry&quot;, &quot;text&quot;: &quot;Starting to get the hang of this...&quot;}
+<div class="codehilite"><pre><span></span><code>PUT /website/blog/1?version=1  { &quot;title&quot;: &quot;My first blog entry&quot;, &quot;text&quot;: &quot;Starting to get the hang of this...&quot;}
 
 We want this update to succeed only if the current _version of this document in our index is version 1
 
 External version:
 
 PUT /website/blog/2?version=5&amp;version_type=external { &quot;title&quot;: &quot;My first external blog entry&quot;, &quot;text&quot;: &quot;Starting to get the hang of this...&quot;}
-</pre></div>
+</code></pre></div>
 
 
 <h2 id="insert-documents-autogenerated-ids">INSERT DOCUMENTS - AUTOGENERATED IDS<a class="headerlink" href="#insert-documents-autogenerated-ids" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span>POST /website/blog/
+<div class="codehilite"><pre><span></span><code>POST /website/blog/
 {
 &quot;title&quot;: &quot;My second blog entry&quot;,
 &quot;text&quot;:  &quot;Still trying this out...&quot;,
 &quot;date&quot;:  &quot;2014/01/01&quot;
 }
-</pre></div>
+</code></pre></div>
 
 
 <p>Response:</p>
-<div class="codehilite"><pre><span></span>{
+<div class="codehilite"><pre><span></span><code>{
 &quot;_index&quot;:    &quot;website&quot;,
 &quot;_type&quot;:     &quot;blog&quot;,
 &quot;_id&quot;:       &quot;AVFgSgVHUP18jI2wRx0w&quot;,
 &quot;_version&quot;:  1,
 &quot;created&quot;:   true
 }
-</pre></div>
+</code></pre></div>
 
 
 <p>#  creating an entirely new document and not overwriting an existing one</p>
-<div class="codehilite"><pre><span></span>PUT /website/blog/123?op_type=create { ... }
+<div class="codehilite"><pre><span></span><code>PUT /website/blog/123?op_type=create { ... }
 PUT /website/blog/123/_create { ... }
-</pre></div>
+</code></pre></div>
 
 
 <h2 id="retrieve-documents">RETRIEVE DOCUMENTS<a class="headerlink" href="#retrieve-documents" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span>GET /website/blog/123  # optional ?pretty
-</pre></div>
+<div class="codehilite"><pre><span></span><code>GET /website/blog/123  # optional ?pretty
+</code></pre></div>
 
 
 <p>{ "_index" : "website", "_type" : "blog", "_id" : "123", "_version" : 1, "found" : true, "_source" : { "title": "My first blog entry", "text": "Just trying this out...", "date": "2014/01/01" }}</p>
 <p># Contains just the fields that we requested</p>
-<div class="codehilite"><pre><span></span>GET /website/blog/123?_source=title,text
-</pre></div>
+<div class="codehilite"><pre><span></span><code>GET /website/blog/123?_source=title,text
+</code></pre></div>
 
 
 <p># Just get the original doc</p>
-<div class="codehilite"><pre><span></span>GET /website/blog/123/_source
-</pre></div>
+<div class="codehilite"><pre><span></span><code>GET /website/blog/123/_source
+</code></pre></div>
 
 
 <p># check if doc exists -- HTTP 200 or 404</p>
-<div class="codehilite"><pre><span></span>curl -i -XHEAD http://localhost:9200/website/blog/123
-</pre></div>
+<div class="codehilite"><pre><span></span><code>curl -i -XHEAD http://localhost:9200/website/blog/123
+</code></pre></div>
 
 
 <p># Note: HEAD/exists requests do not work in Sense
 # because they only return HTTP headers, not
 # a JSON body</p>
 <p># multiple docs at once</p>
-<div class="codehilite"><pre><span></span>GET /website/blog/_mget { &quot;ids&quot; : [ &quot;2&quot;, &quot;1&quot; ]}
-</pre></div>
+<div class="codehilite"><pre><span></span><code>GET /website/blog/_mget { &quot;ids&quot; : [ &quot;2&quot;, &quot;1&quot; ]}
+</code></pre></div>
 
 
 <h2 id="update">UPDATE<a class="headerlink" href="#update" title="Permanent link">&para;</a></h2>
 <p>Documents in Elasticsearch are immutable; we cannot change them. Instead, if we need to update an existing document, we reindex or replace it</p>
 <p># Accepts a partial document as the doc parameter, which just gets merged with the existing document.</p>
-<div class="codehilite"><pre><span></span>POST /website/blog/1/_update
+<div class="codehilite"><pre><span></span><code>POST /website/blog/1/_update
 { &quot;doc&quot; : { &quot;tags&quot; : [ &quot;testing&quot; ], &quot;views&quot;: 0 }}
-</pre></div>
+</code></pre></div>
 
 
 <p># Script</p>
-<div class="codehilite"><pre><span></span>POST /website/blog/1/_update
+<div class="codehilite"><pre><span></span><code>POST /website/blog/1/_update
 { &quot;script&quot; : &quot;ctx._source.views+=1&quot;}
-</pre></div>
+</code></pre></div>
 
 
 <p># script with parameters</p>
-<div class="codehilite"><pre><span></span>POST /website/blog/1/_update
+<div class="codehilite"><pre><span></span><code>POST /website/blog/1/_update
 { &quot;script&quot; : &quot;ctx._source.tags+=new_tag&quot;, &quot;params&quot; : { &quot;new_tag&quot; : &quot;search&quot; }}
-</pre></div>
+</code></pre></div>
 
 
 <p># upsert</p>
-<div class="codehilite"><pre><span></span>POST/website/pageviews/1/_update
+<div class="codehilite"><pre><span></span><code>POST/website/pageviews/1/_update
 {&quot;script&quot;:&quot;ctx._source.views+=1&quot;,&quot;upsert&quot;:{&quot;views&quot;:1}}
-</pre></div>
+</code></pre></div>
 
 
 <h2 id="delete">DELETE<a class="headerlink" href="#delete" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span>DELETE /website/blog/123
-</pre></div>
+<div class="codehilite"><pre><span></span><code>DELETE /website/blog/123
+</code></pre></div>
 
 
 <p># delete doc based on its contents</p>
-<div class="codehilite"><pre><span></span>POST /website/blog/1/_update { &quot;script&quot; : &quot;ctx.op = ctx._source.views == count ? &#39;delete&#39; : &#39;none&#39;&quot;, &quot;params&quot; : { &quot;count&quot;: 1 }}
-</pre></div>
+<div class="codehilite"><pre><span></span><code>POST /website/blog/1/_update { &quot;script&quot; : &quot;ctx.op = ctx._source.views == count ? &#39;delete&#39; : &#39;none&#39;&quot;, &quot;params&quot; : { &quot;count&quot;: 1 }}
+</code></pre></div>
 
 
 <h2 id="bulk">BULK<a class="headerlink" href="#bulk" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span>POST /_bulk
+<div class="codehilite"><pre><span></span><code>POST /_bulk
 {&quot;delete&quot;:{&quot;_index&quot;:&quot;website&quot;,&quot;_type&quot;:&quot;blog&quot;,&quot;_id&quot;:&quot;123&quot;}}
 {&quot;create&quot;:{&quot;_index&quot;:&quot;website&quot;,&quot;_type&quot;:&quot;blog&quot;,&quot;_id&quot;:&quot;123&quot;}} #  Create a document only if the document does not already exist
 {&quot;title&quot;:&quot;My first blog post&quot;}
@@ -1860,34 +1919,34 @@ PUT /website/blog/123/_create { ... }
 {&quot;title&quot;:&quot;My second blog post&quot;}
 {&quot;update&quot;:{&quot;_index&quot;:&quot;website&quot;,&quot;_type&quot;:&quot;blog&quot;,&quot;_id&quot;:&quot;123&quot;,&quot;_retry_on_conflict&quot;:3}}
 {&quot;doc&quot;:{&quot;title&quot;:&quot;My updated blog post&quot;}}
-</pre></div>
+</code></pre></div>
 
 
 <p>Bulk in the same index or index/type</p>
-<div class="codehilite"><pre><span></span>POST /website/_bulk
+<div class="codehilite"><pre><span></span><code>POST /website/_bulk
 {&quot;index&quot;:{&quot;_type&quot;:&quot;log&quot;}}
 {&quot;event&quot;:&quot;User logged in&quot;}
 {&quot;index&quot;:{&quot;_type&quot;:&quot;blog&quot;}}
 {&quot;title&quot;:&quot;My second blog post&quot;}
-</pre></div>
+</code></pre></div>
 
 
 <p>Try  around 5-15MB in size.</p>
 <h2 id="search">SEARCH<a class="headerlink" href="#search" title="Permanent link">&para;</a></h2>
 <p>Every field in a document is indexed and can be queried.</p>
 <p># Search for all employees in the megacorp index:</p>
-<div class="codehilite"><pre><span></span>GET /megacorp/employee/_search
-</pre></div>
+<div class="codehilite"><pre><span></span><code>GET /megacorp/employee/_search
+</code></pre></div>
 
 
 <p># Search for all employees in the megacorp index
 # who have "Smith" in the last_name field</p>
-<div class="codehilite"><pre><span></span>GET /megacorp/employee/_search?q=last_name:Smith
-</pre></div>
+<div class="codehilite"><pre><span></span><code>GET /megacorp/employee/_search?q=last_name:Smith
+</code></pre></div>
 
 
 <p># Same query as above, but using the Query DSL</p>
-<div class="codehilite"><pre><span></span>GET /megacorp/employee/_search
+<div class="codehilite"><pre><span></span><code>GET /megacorp/employee/_search
 {
     &quot;query&quot;: {
       &quot;match&quot;: {
@@ -1895,28 +1954,28 @@ PUT /website/blog/123/_create { ... }
       }
     }
 }
-</pre></div>
+</code></pre></div>
 
 
 <p># SEARCH QUERY STRING</p>
-<div class="codehilite"><pre><span></span>GET /_all/tweet/_search?q=tweet:elasticsearch
-</pre></div>
+<div class="codehilite"><pre><span></span><code>GET /_all/tweet/_search?q=tweet:elasticsearch
+</code></pre></div>
 
 
 <p>Don't forget to URL encode special characters e.g. +name:john +tweet:mary</p>
-<div class="codehilite"><pre><span></span>GET /_search?q=%2Bname%3Ajohn+%2Btweet%3Amary
-</pre></div>
+<div class="codehilite"><pre><span></span><code>GET /_search?q=%2Bname%3Ajohn+%2Btweet%3Amary
+</code></pre></div>
 
 
 <p>The + prefix indicates conditions that must be satisfied for our query to match. Similarly a - prefix would indicate conditions that must not match. All conditions without a + or - are optional</p>
-<div class="codehilite"><pre><span></span>+name:(mary john) +date:&gt;2014-09-10 +(aggregations geo) # last part searches _all
-</pre></div>
+<div class="codehilite"><pre><span></span><code>+name:(mary john) +date:&gt;2014-09-10 +(aggregations geo) # last part searches _all
+</code></pre></div>
 
 
 <h2 id="query-dsl">QUERY DSL<a class="headerlink" href="#query-dsl" title="Permanent link">&para;</a></h2>
 <p>When used in filtering context, the query is said to be a "non-scoring" or "filtering" query. That is, the query simply asks the question: "Does this document match?". The answer is always a simple, binary yes|no.
 When used in a querying context, the query becomes a "scoring" query.</p>
-<div class="codehilite"><pre><span></span># Find all employees whose `last_name` is Smith
+<div class="codehilite"><pre><span></span><code># Find all employees whose `last_name` is Smith
 # and who are older than 30
 GET /megacorp/employee/_search
 {
@@ -1935,12 +1994,12 @@ GET /megacorp/employee/_search
   }
 }
 }
-</pre></div>
+</code></pre></div>
 
 
 <h2 id="match">MATCH<a class="headerlink" href="#match" title="Permanent link">&para;</a></h2>
 <p># Find all employees who enjoy "rock" or "climbing"</p>
-<div class="codehilite"><pre><span></span>GET /megacorp/employee/_search
+<div class="codehilite"><pre><span></span><code>GET /megacorp/employee/_search
 {
 &quot;query&quot; : {
   &quot;match&quot; : {
@@ -1948,24 +2007,24 @@ GET /megacorp/employee/_search
   }
 }
 }
-</pre></div>
+</code></pre></div>
 
 
 <p>The match query should be the standard query that you reach for whenever you want to query for a full-text or exact value in almost any field.
 If you run a match query against a full-text field, it will analyze the query string by using the correct analyzer for that field before executing the search
 If you use it on a field containing an exact value, such as a number, a date, a Boolean, or a not_analyzedstring field, then it will search for that exact value</p>
 <h2 id="match-on-multiple-fields">MATCH ON MULTIPLE FIELDS<a class="headerlink" href="#match-on-multiple-fields" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span>{
+<div class="codehilite"><pre><span></span><code>{
 &quot;multi_match&quot;: {
   &quot;query&quot;:    &quot;full text search&quot;,
   &quot;fields&quot;:  [ &quot;title&quot;, &quot;body&quot; ]
 }}
-</pre></div>
+</code></pre></div>
 
 
 <h2 id="exact-search">EXACT SEARCH<a class="headerlink" href="#exact-search" title="Permanent link">&para;</a></h2>
 <p># Find all employees who enjoy "rock climbing"</p>
-<div class="codehilite"><pre><span></span>GET /megacorp/employee/_search
+<div class="codehilite"><pre><span></span><code>GET /megacorp/employee/_search
 {
 &quot;query&quot; : {
   &quot;match_phrase&quot; : {
@@ -1973,14 +2032,14 @@ If you use it on a field containing an exact value, such as a number, a date, a 
   }
 }
 }
-</pre></div>
+</code></pre></div>
 
 
 <p># EXACT VALUES</p>
 <p>The term query is used to search by exact values, be they numbers, dates, Booleans, or not_analyzed exact-value string fields</p>
 <p>The terms query is the same as the term query, but allows you to specify multiple values to match. If the field contains any of the specified values, the document matches</p>
-<div class="codehilite"><pre><span></span>{ &quot;terms&quot;: { &quot;tag&quot;: [ &quot;search&quot;, &quot;full_text&quot;, &quot;nosql&quot; ] }}
-</pre></div>
+<div class="codehilite"><pre><span></span><code>{ &quot;terms&quot;: { &quot;tag&quot;: [ &quot;search&quot;, &quot;full_text&quot;, &quot;nosql&quot; ] }}
+</code></pre></div>
 
 
 <p># Compound Queries</p>
@@ -1997,8 +2056,8 @@ If you use it on a field containing an exact value, such as a number, a date, a 
 <p># understand why one particular document matched or, more important, why it didn’t match</p>
 <p>GET /us/tweet/12/_explain { "query" : { "bool" : { "filter" : { "term" : { "user_id" : 2 }}, "must" : { "match" : { "tweet" : "honeymoon" }} } }}</p>
 <h2 id="multiple-indices-or-types">MULTIPLE INDICES OR TYPES<a class="headerlink" href="#multiple-indices-or-types" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span># all documents all indices
-</pre></div>
+<div class="codehilite"><pre><span></span><code># all documents all indices
+</code></pre></div>
 
 
 <p>/_search</p>
@@ -2013,25 +2072,25 @@ If you use it on a field containing an exact value, such as a number, a date, a 
 <p>/_all/user,tweet/_search
   Search types user and tweet in all indices</p>
 <h2 id="pagination">PAGINATION<a class="headerlink" href="#pagination" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span> GET /_search?size=5GET /_search?size=5&amp;from=5
-</pre></div>
+<div class="codehilite"><pre><span></span><code> GET /_search?size=5GET /_search?size=5&amp;from=5
+</code></pre></div>
 
 
 <h2 id="sorting">SORTING<a class="headerlink" href="#sorting" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span> GET /_search { &quot;query&quot; : { &quot;bool&quot; : { &quot;filter&quot; : { &quot;term&quot; : { &quot;user_id&quot; : 1 }} } }, &quot;sort&quot;: { &quot;date&quot;: { &quot;order&quot;: &quot;desc&quot; }}}
-</pre></div>
+<div class="codehilite"><pre><span></span><code> GET /_search { &quot;query&quot; : { &quot;bool&quot; : { &quot;filter&quot; : { &quot;term&quot; : { &quot;user_id&quot; : 1 }} } }, &quot;sort&quot;: { &quot;date&quot;: { &quot;order&quot;: &quot;desc&quot; }}}
+</code></pre></div>
 
 
 <p>For string sorting, use multi-field mapping:</p>
-<div class="codehilite"><pre><span></span> &quot;tweet&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;analyzer&quot;: &quot;english&quot;, &quot;fields&quot;: { &quot;raw&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;index&quot;: &quot;not_analyzed&quot; } }}
-</pre></div>
+<div class="codehilite"><pre><span></span><code> &quot;tweet&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;analyzer&quot;: &quot;english&quot;, &quot;fields&quot;: { &quot;raw&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;index&quot;: &quot;not_analyzed&quot; } }}
+</code></pre></div>
 
 
 <p>The main tweet field is just the same as before: an analyzed full-text field.
 The new tweet.raw subfield is not_analyzed.</p>
 <p>then sort on the new field</p>
-<div class="codehilite"><pre><span></span> GET /_search { &quot;query&quot;: { &quot;match&quot;: { &quot;tweet&quot;: &quot;elasticsearch&quot; } }, &quot;sort&quot;: &quot;tweet.raw&quot;}
-</pre></div>
+<div class="codehilite"><pre><span></span><code> GET /_search { &quot;query&quot;: { &quot;match&quot;: { &quot;tweet&quot;: &quot;elasticsearch&quot; } }, &quot;sort&quot;: &quot;tweet.raw&quot;}
+</code></pre></div>
 
 
 <h2 id="highlights">HIGHLIGHTS<a class="headerlink" href="#highlights" title="Permanent link">&para;</a></h2>
@@ -2052,10 +2111,10 @@ The new tweet.raw subfield is not_analyzed.</p>
   }</p>
 <h2 id="analysis">ANALYSIS<a class="headerlink" href="#analysis" title="Permanent link">&para;</a></h2>
 <p>An analyzer is really just a wrapper that combines three functions into a single package:</p>
-<div class="codehilite"><pre><span></span>* Character filters
+<div class="codehilite"><pre><span></span><code>* Character filters
 * Tokenizer
 * Token filters
-</pre></div>
+</code></pre></div>
 
 
 <p>#  See how text is analyzed</p>
@@ -2066,40 +2125,40 @@ The new tweet.raw subfield is not_analyzed.</p>
 <p>Every type has its own mapping, or schema definition. A mapping defines the fields within a type, the datatype for each field, and how the field should be handled by Elasticsearch. A mapping is also used to configure metadata associated with the type.</p>
 <p>You can control dynamic nature of mappings</p>
 <p>Mapping (or schema definition) for the tweet type in the gb index</p>
-<div class="codehilite"><pre><span></span>  GET /gb/_mapping/tweet
-</pre></div>
+<div class="codehilite"><pre><span></span><code>  GET /gb/_mapping/tweet
+</code></pre></div>
 
 
 <p>Elasticsearch supports the following simple field types:
-<em> String: string
-</em> Whole number: byte, short, integer, long
-<em> Floating-point: float, double
-</em> Boolean: boolean
+* String: string
+* Whole number: byte, short, integer, long
+* Floating-point: float, double
+* Boolean: boolean
 * Date: date</p>
 <p>Fields of type string are, by default, considered to contain full text. That is, their value will be passed through an analyzer before being indexed, and a full-text query on the field will pass the query string through an analyzer before searching.
 The two most important mapping attributes for string fields are index and analyzer.</p>
 <p>The index attribute controls how the string will be indexed. It can contain one of three values:
-<em> analyzed  First analyze the string and then index it. In other words, index this field as full text.
-</em> not_analyzed  Index this field, so it is searchable, but index the value exactly as specified. Do not analyze it.
+* analyzed  First analyze the string and then index it. In other words, index this field as full text.
+* not_analyzed  Index this field, so it is searchable, but index the value exactly as specified. Do not analyze it.
 * no  Don’t index this field at all. This field will not be searchable.</p>
 <p>If we want to map the field as an exact value, we need to set it to not_analyzed:</p>
-<div class="codehilite"><pre><span></span>  {
+<div class="codehilite"><pre><span></span><code>  {
     &quot;tag&quot;: {
     &quot;type&quot;: &quot;string&quot;,
     &quot;index&quot;: &quot;not_analyzed&quot;
     }
   }
-</pre></div>
+</code></pre></div>
 
 
 <p>For analyzed string fields, use the analyzer attribute to specify which analyzer to apply both at search time and at index time. By default, Elasticsearch uses the standard analyzer, but you can change this by specifying one of the built-in analyzers, such as whitespace, simple, or english:</p>
-<div class="codehilite"><pre><span></span>  {
+<div class="codehilite"><pre><span></span><code>  {
     &quot;tweet&quot;: {
     &quot;type&quot;: &quot;string&quot;,
     &quot;analyzer&quot;: &quot;english&quot;
     }
   }
-</pre></div>
+</code></pre></div>
 
 
 <p>#  create a new index, specifying that the tweet field should use the english analyzer</p>
@@ -2114,7 +2173,7 @@ The two most important mapping attributes for string fields are index and analyz
                     }}}}</p>
 <p>null, arrays, objects: see <a href="https://www.elastic.co/guide/en/elasticsearch/guide/current/complex-core-fields.html">complex core fields</a></p>
 <h2 id="parent-child-relationships"><a href="https://qbox.io/blog/parent-child-relationships-in-elasticsearch">Parent Child Relationships</a><a class="headerlink" href="#parent-child-relationships" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="err">DELETE</span> <span class="err">/test_index</span>
+<div class="codehilite"><pre><span></span><code><span class="err">DELETE</span> <span class="err">/test_index</span>
 
 <span class="err">PUT</span> <span class="err">/test_index</span>
 <span class="p">{</span>
@@ -2205,7 +2264,7 @@ The two most important mapping attributes for string fields are index and analyz
       <span class="p">}</span>
    <span class="p">}</span>
 <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 
 
 <h2 id="aggregates">AGGREGATES<a class="headerlink" href="#aggregates" title="Permanent link">&para;</a></h2>
@@ -2282,9 +2341,9 @@ The two most important mapping attributes for string fields are index and analyz
 <h2 id="index-management">INDEX MANAGEMENT<a class="headerlink" href="#index-management" title="Permanent link">&para;</a></h2>
 <p>By default, indices are assigned five primary shards. The number of primary shards can be set only when an index is created and never changed</p>
 <p># Add an index</p>
-<div class="codehilite"><pre><span></span>  PUT /blogs { &quot;settings&quot; : { &quot;number_of_shards&quot; : 3, &quot;number_of_replicas&quot; : 1 }}
+<div class="codehilite"><pre><span></span><code>  PUT /blogs { &quot;settings&quot; : { &quot;number_of_shards&quot; : 3, &quot;number_of_replicas&quot; : 1 }}
   PUT /blogs/_settings { &quot;number_of_replicas&quot; : 2}
-</pre></div>
+</code></pre></div>
 
 
 <ul>
@@ -2292,8 +2351,8 @@ The two most important mapping attributes for string fields are index and analyz
 <li>Use aliases to shelter the underlying index (or indices) and allow index swapping</li>
 </ul>
 <h2 id="cluster-management">CLUSTER MANAGEMENT<a class="headerlink" href="#cluster-management" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span> GET /_cluster/health
-</pre></div>
+<div class="codehilite"><pre><span></span><code> GET /_cluster/health
+</code></pre></div>
 
 
 <h2 id="configuration">CONFIGURATION<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h2>
@@ -2310,19 +2369,19 @@ The two most important mapping attributes for string fields are index and analyz
 <li>Keep the JVM defaults</li>
 <li>Do not use G1GC alternative garbage collector</li>
 </ul>
-<div class="codehilite"><pre><span></span>cluster.name: &lt;my cluster&gt;
-</pre></div>
+<div class="codehilite"><pre><span></span><code>cluster.name: &lt;my cluster&gt;
+</code></pre></div>
 
 
 <ul>
 <li>All nodes in the cluster must have the same cluster name</li>
 </ul>
-<div class="codehilite"><pre><span></span>node.name: &lt;my_node_name&gt;
-</pre></div>
+<div class="codehilite"><pre><span></span><code>node.name: &lt;my_node_name&gt;
+</code></pre></div>
 
 
-<div class="codehilite"><pre><span></span>./bin/elasticsearch --node.name=`hostname`
-</pre></div>
+<div class="codehilite"><pre><span></span><code>./bin/elasticsearch --node.name=`hostname`
+</code></pre></div>
 
 
 <p>to override the configuration file</p>
@@ -2340,9 +2399,9 @@ The two most important mapping attributes for string fields are index and analyz
 - contain static web content (JS, HTML....)</p>
 <p>Install plugins on ALL machines of the cluster</p>
 <p>To install,</p>
-<div class="codehilite"><pre><span></span>  ./bin/plugin install marvel-agent
+<div class="codehilite"><pre><span></span><code>  ./bin/plugin install marvel-agent
   ./bin/plugin remove marvel-agent
-</pre></div>
+</code></pre></div>
 
 
 <p>One type per index is recommended, except for parent child / nested indexes.</p>
@@ -2369,6 +2428,7 @@ binary should be base64 encoded before storage</p>
 </ol>
                 
                   
+                
                 
               
               
@@ -2424,44 +2484,36 @@ binary should be base64 encoded before storage</p>
       <div class="md-footer-copyright">
         
           <div class="md-footer-copyright__highlight">
-            Copyright &copy; 2017-2018 S. John Cruchon-Dupeyrat
+            Copyright &copy; 2017-2020 S. John Cruchon-Dupeyrat
           </div>
         
         powered by
-        <a href="http://www.mkdocs.org">MkDocs</a>
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
         and
-        <a href="https://squidfunk.github.io/mkdocs-material/">
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
           Material for MkDocs</a>
       </div>
       
-        
   <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <a href="https://github.com/john-cd" target="_blank" rel="noopener" title="github" class="md-footer-social__link fa fa-github"></a>
     
-      <a href="https://github.com/john-cd" class="md-footer-social__link fa fa-github"></a>
+      <a href="https://twitter.com/sjncd" target="_blank" rel="noopener" title="twitter" class="md-footer-social__link fa fa-twitter"></a>
     
-      <a href="https://twitter.com/sjncd" class="md-footer-social__link fa fa-twitter"></a>
-    
-      <a href="https://www.linkedin.com/in/scdupeyrat/" class="md-footer-social__link fa fa-linkedin"></a>
+      <a href="https://www.linkedin.com/in/scdupeyrat/" target="_blank" rel="noopener" title="linkedin" class="md-footer-social__link fa fa-linkedin"></a>
     
   </div>
 
-      
     </div>
   </div>
 </footer>
       
     </div>
     
-      <script src="../../assets/javascripts/application.8eb9be28.js"></script>
+      <script src="../../assets/javascripts/application.c33a9706.js"></script>
       
-      <script>app.initialize({version:"0.17.3",url:{base:"../.."}})</script>
-      
-    
-    
-      
-        <script>!function(e,a,t,n,o,c,i){e.GoogleAnalyticsObject=o,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),i=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",i.parentNode.insertBefore(c,i)}(window,document,"script",0,"ga"),ga("create","UA-92780605-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var a=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",a,e.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
+      <script>app.initialize({version:"1.1",url:{base:"../.."}})</script>
       
     
   </body>
