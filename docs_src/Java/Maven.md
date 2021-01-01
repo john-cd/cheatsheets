@@ -25,7 +25,7 @@ export PATH=/usr/local/maven/bin:$PATH
 mvn -v
 ```
 
-- Settings file: 
+- Settings file:
 
 ```shell
 ~/.m2/settings.xml
@@ -41,7 +41,6 @@ It contains user-specific configuration for authentication, repositories, and ot
 
 This directory contains your local Maven repository. When you download a dependency from a remote Maven repository, Maven stores a copy of the dependency in your local repository.
 
-
 ### Directory Layout
 
 [Introduction to the standard directory layout](https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html )
@@ -52,7 +51,6 @@ Maven assumes that you want the compile bytecode to ``${basedir}/target/classes`
 
 For [WAR files]( https://en.wikipedia.org/wiki/WAR_(file_format) ), the ``/WEB-INF`` directory  contains a file named ``web.xml`` which defines the structure of the web application.
 See  also [Tomcat Deployment guide]( https://tomcat.apache.org/tomcat-7.0-doc/appdev/deployment.html )
-
 
 ## Cheatsheet
 
@@ -130,7 +128,6 @@ mvn deploy:deploy-file -Dfile=/path/to/jar/file -DrepositoryId=repos-server -Dur
 ```
 
 You can run ``mvn site`` and then find an ``index.html`` file in ``target/site`` that contains links to JavaDoc and a few reports about your source code.
-
 
 ## POM files
 
