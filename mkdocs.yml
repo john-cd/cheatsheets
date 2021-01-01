@@ -25,7 +25,7 @@ theme:
     text: Roboto
     code: Roboto Mono  
   features:
-    - navigation.tabs
+#    - navigation.tabs
     - header.autohide
 
 # Options
@@ -51,3 +51,4 @@ markdown_extensions:
       guess_lang: false
   - toc:
       permalink: true
+      slugify: !!python/name:pymdownx.slugs.uslugify
