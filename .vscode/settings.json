@@ -1,3 +1,10 @@
 {
-    "cSpell.enabled": true
+    "cSpell.enabled": true,
+    "cSpell.words": [
+        "Anson",
+        "Buildx",
+        "debugpy",
+        "moby",
+        "pylance"
+    ]
 }
