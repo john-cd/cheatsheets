@@ -1,15 +1,13 @@
 
+# Basics
 
-## Basics
-
-[Introduction to Machine Learning]( https://developers.google.com/machine-learning/crash-course/ml-intro ) 
+[Introduction to Machine Learning]( https://developers.google.com/machine-learning/crash-course/ml-intro )
 
 [School of AI - Udacity]( https://www.udacity.com/school-of-ai )
 
-
 ## Data Science Books
 
-[Practical Data Science Cookbook]( http://www.amazon.com/Practical-Data-Science-Cookbook-Ojeda/dp/1783980249/ref=sr_1_49?ie=UTF8&qid=1415658223&sr=8-49&keywords=graph+database )
+[Practical Data Science Cookbook]( https://www.amazon.com/Practical-Data-Science-Cookbook-Ojeda/dp/1783980249/ref=sr_1_49?ie=UTF8&qid=1415658223&sr=8-49&keywords=graph+database )
 
 ## Recommendation engines
 
@@ -17,10 +15,10 @@
 
 ## Semantic Search
 
-[Build Your Own Semantic Search Engine With Hakia's APIs - TechCrunch ]( http://techcrunch.com/2008/06/19/build-your-own-semenatic-search-engine-with-hakias-apis/ )
+[Build Your Own Semantic Search Engine With Hakia's APIs - TechCrunch]( https://techcrunch.com/2008/06/19/build-your-own-semenatic-search-engine-with-hakias-apis/ )
 
 [How To Create Natural Language Semantic Search For Arbitrary Objects With Deep Learning]
-( https://towardsdatascience.com/semantic-code-search-3cd6d244a39c )
+( <https://towardsdatascience.com/semantic-code-search-3cd6d244a39c> )
 
 [Code Search on Kubeflow]( https://github.com/kubeflow/examples/tree/master/code_search )
 
@@ -48,9 +46,9 @@
 
 ## Reinforcement Learning
 
-[Reinforcement Learning - A Deep Dive]( https://www.toptal.com/machine-learning/deep-dive-into-reinforcement-learning ) 
+[Reinforcement Learning - A Deep Dive]( https://www.toptal.com/machine-learning/deep-dive-into-reinforcement-learning )
 
-[Rainbow- Combining Improvements in Deep Reinforcement Learning]( https://arxiv.org/abs/1710.02298 ) 
+[Rainbow- Combining Improvements in Deep Reinforcement Learning]( https://arxiv.org/abs/1710.02298 )
 
 ## Probabilistic Programming in Python
 
@@ -62,7 +60,7 @@
 
 [Bayesian ChangePoint]( https://cscherrer.github.io/post/bayesian-changepoint/ )
 
-[Bayesian Inference for Hiring Engineers]( https://triplebyte.com/blog/bayesian-inference-for-hiring-engineers?ref=20180702_blog_bayes_email ) 
+[Bayesian Inference for Hiring Engineers]( https://triplebyte.com/blog/bayesian-inference-for-hiring-engineers?ref=20180702_blog_bayes_email )
 
 [Uber Open Sources Pyro, a Deep Probabilistic Programming Language]( https://eng.uber.com/pyro/ )
 
@@ -80,7 +78,7 @@ Shapley values help us think through how to attribute cause in black-box models.
 
 [Introduction to TensorFlow Lite]( https://www.tensorflow.org/mobile/tflite/ )
 
-[PyTorch]( http://pytorch.org/ )
+[PyTorch]( https://pytorch.org/ )
 
 [How to build a deep learning model in 15 minutes – tech-at-instacart]( https://tech.instacart.com/how-to-build-a-deep-learning-model-in-15-minutes-a3684c6f71e )
 
@@ -96,8 +94,7 @@ Shapley values help us think through how to attribute cause in black-box models.
 
 ### LSTMs
 
-[Exploring LSTMs]( http://blog.echen.me/2017/05/30/exploring-lstms/?utm_source=Mailing+list&utm_campaign=479f35fbcc-Kaggle_Newsletter_06-29-2017&utm_medium=email&utm_term=0_f42f9df1e1-479f35fbcc-399045217 )
-
+[Exploring LSTMs]( https://blog.echen.me/2017/05/30/exploring-lstms/?utm_source=Mailing+list&utm_campaign=479f35fbcc-Kaggle_Newsletter_06-29-2017&utm_medium=email&utm_term=0_f42f9df1e1-479f35fbcc-399045217 )
 
 ## MLOps
 
@@ -111,9 +108,9 @@ Taking the pain out of data access and distribution
 
 Intake is a lightweight package for finding, investigating, loading and disseminating data. It will appeal to different groups for some of the reasons below, but is useful for all and acts as a common platform that everyone can use to smooth the progression of data from developers and providers to users.
 
-## AWS 
+## AWS
 
-[Amazon Pinpoint campaigns driven by machine learning on Amazon SageMaker - AWS Machine Learning Blog]( https://aws.amazon.com/blogs/machine-learning/amazon-pinpoint-campaigns-driven-by-machine-learning-on-amazon-sagemaker/ ) 
+[Amazon Pinpoint campaigns driven by machine learning on Amazon SageMaker - AWS Machine Learning Blog]( https://aws.amazon.com/blogs/machine-learning/amazon-pinpoint-campaigns-driven-by-machine-learning-on-amazon-sagemaker/ )
 
 ## PipelineAI
 
@@ -124,4 +121,3 @@ Intake is a lightweight package for finding, investigating, loading and dissemin
 [PipelineAI GitHub]( https://github.com/PipelineAI/pipeline/tree/master/docs/quickstart/ )
 
 [PipelineAI YouTube]( https://www.youtube.com/c/PipelineAI/ )
-

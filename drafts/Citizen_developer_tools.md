@@ -1,5 +1,4 @@
-
-## Citizen Developer tools
+# Citizen Developer tools
 
 - Outsystems
 - Mendix

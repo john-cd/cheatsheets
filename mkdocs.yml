@@ -1,54 +1,139 @@
+
+## References:
+## https://www.mkdocs.org/
+## https://squidfunk.github.io/mkdocs-material/
+
 # Project information
 site_name: "John's Cheatsheets"
-site_description: 'A collection of cheatsheets and code snippets.'
-site_author: 'S. John Cruchon-Dupeyrat'
-site_url: 'http://john-cd.com/cheatsheets/'
+site_description: "A collection of cheatsheets and code snippets."
+site_author: "S. John CD"
+site_url: "https://john-cd.com/cheatsheets/"
+
+# Required within Dev Container (default binding is 127.0.0.1:8000)
+dev_addr: 0.0.0.0:8000
+
+## Navigation is automatic but can be overriden:
+# nav:
+#   - Home: index.md
+
+## Strict validation, if required:
+# validation:
+#   omitted_files: warn
+#   absolute_links: warn
+#   unrecognized_links: warn
 
 # Repository
-repo_name: 'john-cd/cheatsheets'
-repo_url: 'https://github.com/john-cd/cheatsheets'
-edit_uri: edit/master/docs_src/
+repo_name: "john-cd/cheatsheets"
+repo_url: "https://github.com/john-cd/cheatsheets"
+# automatic: edit_uri: edit/master/docs/
 
 # Copyright
-copyright: 'Copyright &copy; 2017-2021 S. John Cruchon-Dupeyrat'
-
-# Documentation sources and theme
-docs_dir: 'docs_src'
-site_dir: 'docs'
+copyright: >
+  Copyright &copy; 2016 - 2024  S. John CD –
+  <a href="#__consent">Change cookie settings</a>
 
 theme:
-  name: material  
+  name: material
+
+  language: en
+
+  #logo: assets/logo.png
+  #favicon: images/favicon.png
+
+  icon:
+    repo: fontawesome/brands/github
+
   palette:
-    primary: deep orange
-    accent: orange
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+  ## Optional color override
+  #   primary: deep orange
+  #   accent: orange
   font:
     text: Roboto
-    code: Roboto Mono  
+    code: Roboto Mono
   features:
-#    - navigation.tabs
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    # alternative: - navigation.tabs
+    - navigation.sections
+    - navigation.prune
+    - navigation.indexes
+    - navigation.footer
+    - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - search.share
     - header.autohide
 
 # Options
 extra:
+  consent:
+    title: Cookie consent
+    description: >-
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+
   social:
     - icon: fontawesome/brands/github
-      link: 'https://github.com/john-cd'
+      link: "https://github.com/john-cd"
     - icon: fontawesome/brands/twitter
-      link: 'https://twitter.com/sjncd'
+      link: "https://twitter.com/sjncd"
     - icon: fontawesome/brands/linkedin
-      link: 'https://www.linkedin.com/in/scdupeyrat/'
-#  disqus: 'your-shortname'
+      link: "https://www.linkedin.com/in/scdupeyrat/"
+  #  disqus: 'your-shortname'
 
-# Google Analytics
-google_analytics:
-  - 'UA-92780605-1'
-  - 'auto'
+  # Google Analytics
+  analytics:
+    provider: google
+    property: G-VH46N7PJC6
+
+    # feedback:
+    #   title: Was this page helpful?
+    #   ratings:
+    #     - icon: material/emoticon-happy-outline
+    #       name: This page was helpful
+    #       data: 1
+    #       note: >-
+    #         Thanks for your feedback!
+    #     - icon: material/emoticon-sad-outline
+    #       name: This page could be improved
+    #       data: 0
+    #       note: >-
+    #         Thanks for your feedback! Help us improve this page by
+    #         using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
 
 # Extensions
 markdown_extensions:
   - admonition
-  - codehilite:
-      guess_lang: false
+  - tables
   - toc:
       permalink: true
-      slugify: !!python/name:pymdownx.slugs.uslugify
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.inlinehilite

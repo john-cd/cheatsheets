@@ -1,0 +1,8 @@
+name: cheatsheets_ci
+services:
+  site:
+    build:
+      target: ci
+    # Bind the output folder to a folder in the CI host
+    volumes:
+      - ../site:/code/site

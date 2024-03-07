@@ -1,0 +1,14 @@
+version: '3.8'
+
+# Docker Compose reference guide at
+# https://docs.docker.com/go/compose-spec-reference/
+#For examples, see the Awesome Compose repository:
+# https://github.com/docker/awesome-compose
+# Note that the path of the Dockerfile and context is relative to the *primary*
+# docker-compose.yml file (the first in the devcontainer.json "dockerComposeFile"
+# array).
+services:
+  site:
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile

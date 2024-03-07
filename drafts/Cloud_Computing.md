@@ -1,7 +1,6 @@
 
+# Cloud Computing IaaS Platform
 
-## Cloud Computing IaaS Platform
+[CloudStack]( https://en.wikipedia.org/wiki/CloudStack )
 
-[CloudStack]( http://en.wikipedia.org/wiki/CloudStack )
-
-[OpenStack]( http://en.wikipedia.org/wiki/OpenStack )
+[OpenStack]( https://en.wikipedia.org/wiki/OpenStack )
