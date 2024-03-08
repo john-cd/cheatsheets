@@ -1,8 +1,15 @@
+# NOT IN USE YET in .github/workflows
+
 name: cheatsheets_ci
 services:
   site:
+    image: john-cd/cheatsheets_ci
     build:
       target: ci
+      cache_from:
+        - type=gha
+      cache_to:
+        - type=gha
     # Bind the output folder to a folder in the CI host
     volumes:
       - ../site:/code/site

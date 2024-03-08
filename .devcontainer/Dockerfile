@@ -15,8 +15,8 @@ ENV PYTHONDONTWRITEBYTECODE=1
 # the application crashes without emitting any logs due to buffering.
 ENV PYTHONUNBUFFERED=1
 
-RUN pip install mkdocs
-RUN pip install mkdocs-material
+RUN pip install mkdocs \
+    && pip install mkdocs-material
 ## https://github.com/byrnereese/mkdocs-minify-plugin
 #RUN pip install mkdocs-minify-plugin
 ## https://github.com/mkdocs/mkdocs-redirects
@@ -25,14 +25,15 @@ RUN pip install mkdocs-material
 ARG WORK_DIR
 WORKDIR $WORK_DIR
 
-
 ## -------------------------------------------------------------
 FROM base AS dev
 
 # Install additional OS packages.
 # Install pix
-RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-     && apt-get -y install --no-install-recommends git pipx
+# Caching per https://docs.docker.com/build/cache/
+RUN --mount=type=cache,target=/var/cache/apt \
+    apt-get update && export DEBIAN_FRONTEND=noninteractive \
+    && apt-get -y install --no-install-recommends git pipx
 
 ARG USERNAME=vscode
 ARG USER_UID=1000
@@ -59,17 +60,12 @@ RUN <<EOF
   echo 'alias l="ls -CF"' >> $HOME/.bashrc
 EOF
 
-# # Install Poetry
-# # Change some Poetry settings to better deal with working in a container
+## Install Poetry, if required
+## Change some Poetry settings to better deal with working in a container
 # ARG WORK_DIR
 # RUN --mount=type=cache,target=${WORK_DIR}/.cache \
 #   pipx install poetry \
 #   && pipx ensurepath
-
-# Expose the port that the application listens on.
-#EXPOSE 8000
-
-CMD while sleep 1000; do :; done
 
 ## Run if necessary:
 # poetry self update \
@@ -77,6 +73,12 @@ CMD while sleep 1000; do :; done
 # && poetry config virtualenvs.in-project true \
 # && poetry completions bash >> ~/.bash_completion \
 # && poetry install
+
+# `mkdocs serve` uses port 8000
+# The EXPOSE instruction doesn't actually publish the port. See compose.override.yaml
+EXPOSE 8000
+
+CMD while sleep 1000; do :; done
 
 ## -------------------------------------------------------------
 FROM base AS ci
