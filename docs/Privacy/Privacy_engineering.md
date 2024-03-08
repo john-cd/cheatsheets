@@ -1,8 +1,9 @@
 ---
-title: Privacy Engineering 
+title: Privacy Engineering
 tags: privacy
 ---
-# Privacy Engineering 
+
+# Privacy Engineering
 
 ## Interesting Links
 

@@ -54,9 +54,9 @@ Method, Constructor and/or Class tags
 
 ### Member grouping tags
 
-``@group <group>`` - mark the entity as a member of the <group> group.
+``@group <group>`` - mark the entity as a member of the `<group>` group.
 
-``@groupname <group> <name>`` - provide an optional name for the group. <name> is displayed as the group header
+``@groupname <group> <name>`` - provide an optional name for the group. `<name>` is displayed as the group header
 before the group description.
 
 ``@groupdesc <group> <description>`` - add optional descriptive text to display under the group name. Supports multiline formatted text.

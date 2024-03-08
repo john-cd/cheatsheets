@@ -320,7 +320,9 @@ $( this ).toggleClass( "hover" );
 
 The event object is most commonly used to prevent the default action of the event via the `.preventDefault()` method. However, the event object contains a number of other useful properties and methods, including:
 
-    pageX, pageY, type, which, data
+```txt
+pageX, pageY, type, which, data
+```
 
 Use this code to inspect it in your browser console
 

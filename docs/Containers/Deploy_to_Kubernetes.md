@@ -106,7 +106,7 @@ helm install --name nginx-ingress-release stable/nginx-ingress \
 kubectl get ing
 ```
 
-See [explanations]( https://daemonza.github.io/2017/02/13/kubernetes-nginx-ingress-controller/ ) and [ documentation ]( https://github.com/kubernetes/ingress-nginx )
+See [explanations]( https://daemonza.github.io/2017/02/13/kubernetes-nginx-ingress-controller/ ) and [documentation]( https://github.com/kubernetes/ingress-nginx )
 
 The nginx ingress controller requires a 404-server like [this]( https://github.com/kubernetes/ingress-nginx/tree/master/images/404-server )
 

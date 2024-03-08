@@ -738,41 +738,41 @@ GO
 CREATE FUNCTION dbo.EmployeeByID(@InEmpID int)
 RETURNS @retFindReports TABLE
 (
-	-- columns returned by the function
-	EmployeeID int NOT NULL,
-	Name nvarchar(255 ) NOT NULL,
-	Title nvarchar(50 ) NOT NULL,
-	EmployeeLevel int NOT NULL
+-- columns returned by the function
+EmployeeID int NOT NULL,
+Name nvarchar(255 ) NOT NULL,
+Title nvarchar(50 ) NOT NULL,
+EmployeeLevel int NOT NULL
 )
 AS
 -- body of the function
 BEGIN
    WITH DirectReports(Name , Title , EmployeeID , EmployeeLevel , Sort ) AS
-	(SELECT CONVERT( varchar(255 ), c .FirstName + ' ' + c.LastName ),
-		e.Title ,
-		e.EmployeeID ,
-		1 ,
-		CONVERT(varchar (255), c. FirstName + ' ' + c .LastName)
-	 FROM HumanResources.Employee AS e
-		  JOIN Person.Contact AS c ON e.ContactID = c.ContactID
-	 WHERE e.EmployeeID = @InEmpID
+  (SELECT CONVERT( varchar(255 ), c .FirstName + ' ' + c.LastName ),
+    e.Title ,
+    e.EmployeeID ,
+    1 ,
+    CONVERT(varchar (255), c. FirstName + ' ' + c .LastName)
+   FROM HumanResources.Employee AS e
+      JOIN Person.Contact AS c ON e.ContactID = c.ContactID
+   WHERE e.EmployeeID = @InEmpID
    UNION ALL
-	 SELECT CONVERT (varchar( 255), REPLICATE ( '| ' , EmployeeLevel) +
-		c.FirstName + ' ' + c. LastName),
-		e.Title ,
-		e.EmployeeID ,
-		EmployeeLevel + 1,
-		CONVERT ( varchar(255 ), RTRIM (Sort) + '| ' + FirstName + ' ' +
-				 LastName)
-	 FROM HumanResources.Employee as e
-		  JOIN Person.Contact AS c ON e.ContactID = c.ContactID
-		  JOIN DirectReports AS d ON e. ManagerID = d. EmployeeID
-	)
+   SELECT CONVERT (varchar( 255), REPLICATE ( '| ' , EmployeeLevel) +
+    c.FirstName + ' ' + c. LastName),
+    e.Title ,
+    e.EmployeeID ,
+    EmployeeLevel + 1,
+    CONVERT ( varchar(255 ), RTRIM (Sort) + '| ' + FirstName + ' ' +
+         LastName)
+   FROM HumanResources.Employee as e
+      JOIN Person.Contact AS c ON e.ContactID = c.ContactID
+      JOIN DirectReports AS d ON e. ManagerID = d. EmployeeID
+  )
    -- copy the required columns to the result of the function
 
    INSERT @retFindReports
    SELECT EmployeeID, Name, Title, EmployeeLevel
-	 FROM DirectReports
+   FROM DirectReports
    ORDER BY Sort
    RETURN
 END
@@ -783,17 +783,17 @@ GO
 
 ```SQL
 CREATE PROCEDURE ProcedureName
-		-- Add the parameters for the stored procedure here
-		@p1 int = 0 ,
-		@p2 int = 0
+    -- Add the parameters for the stored procedure here
+    @p1 int = 0 ,
+    @p2 int = 0
 AS
 BEGIN
-		-- SET NOCOUNT ON added to prevent extra result sets from
-		-- interfering with SELECT statements.
-		SET NOCOUNT ON;
+    -- SET NOCOUNT ON added to prevent extra result sets from
+    -- interfering with SELECT statements.
+    SET NOCOUNT ON;
 
-	-- Insert statements for procedure here
-		SELECT @p1 , @p2
+  -- Insert statements for procedure here
+    SELECT @p1 , @p2
 END
 GO
 ```
@@ -802,18 +802,18 @@ GO
 
 Q. Here's the data in a table 'orders'
 
-	customer_id order_id order_day
-	123        27424624    25Dec2011
-	123        89690900    25Dec2010
-	797        12131323    25Dec2010
-	876        67145419    15Dec2011
+  customer_id order_id order_day
+  123        27424624    25Dec2011
+  123        89690900    25Dec2010
+  797        12131323    25Dec2010
+  876        67145419    15Dec2011
 
 Could you give me SQL for customers who placed orders on both the days, 25th Dec 2010 and 25th Dec 2011?
 
 ```SQL
-	SELECT o.customer_id, o.order_day
-	FROM orders AS o
-	INNER JOIN orders AS o1
-	ON o.customer_id = o1.customer_id
-	WHERE ...
+  SELECT o.customer_id, o.order_day
+  FROM orders AS o
+  INNER JOIN orders AS o1
+  ON o.customer_id = o1.customer_id
+  WHERE ...
 ```

@@ -3,7 +3,6 @@ title: Scala Patterns
 category: Scala
 tags: Scala
 ---
-
 # Algebraic Data Types
 
 [Scala pattern gist]( https://gist.github.com/arosien/0aee59cc734042f7044d24bdaec731a8 )
@@ -122,12 +121,12 @@ Standard patterns for sequencing computations
 fold is general transformation for algebraic data types
 map: F[A] => (A => B) => F[B]
 flatMap: F[A] => (A => F[B]) => F[B]
-You can teach monads in an introductory course!
 
 // fold: A => B
 
 // Convert user to JSON
 
+```scala
 // A Result is a Success with value A or a Failure (with no value)
 sealed trait Result[A] {
   def map[B](f: A => B): Result[B] =
@@ -138,6 +137,7 @@ sealed trait Result[A] {
 }
 case class Success[A](value: A) extends Result[A]
 case class Failure[A]() extends Result[A]
+```
 
 // map: F[A] => (A => B) => F[B]
 

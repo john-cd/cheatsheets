@@ -3,7 +3,7 @@
 name: cheatsheets_ci
 services:
   site:
-    image: john-cd/cheatsheets_ci
+    image: johncd/cheatsheets_ci
     build:
       target: ci
       cache_from:

@@ -1,5 +1,5 @@
 
-## Play
+# Play
 
 [Angular 2+ with Play Framework 2.6.x – Yohan Gomez – Medium]( https://medium.com/@yohan.gz/https-medium-com-yohan-gz-angular-with-play-framework-a6c3f8b339f3 )
 
@@ -9,8 +9,7 @@
 
 [How Visier Accelerates Developer Productivity with Play Framework, Typescript and Angular 2 - @lightbend]( https://www.lightbend.com/blog/getting-started-with-angular-2 )
 
-[jamesward-play-rest-security]( https://github.com/jamesward/p
-lay-rest-security )
+[jamesward-play-rest-security]( https://github.com/jamesward/play-rest-security )
 
 [joost-de-vries-play-angular-typescript.g8- A giter8 template for a Play Angular 4 Typescript application]( https://github.com/joost-de-vries/play-angular-typescript.g8 )
 

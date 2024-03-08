@@ -51,7 +51,7 @@ comments: true
 - Visual Studio
 - Visual Studio Code
 
-_for Python_
+### _for Python_
 
 - Python Tools for Visual Studio
 - PyDev

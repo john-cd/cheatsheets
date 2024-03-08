@@ -1,5 +1,5 @@
 
-## SBT Links
+# SBT Links
 
 [SBT Home Page](https://www.scala-sbt.org/)
 

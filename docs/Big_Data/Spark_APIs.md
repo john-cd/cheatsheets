@@ -1,4 +1,4 @@
-## DataFrames APIs
+# DataFrames APIs
 
 DataFrame operations:
 
@@ -33,7 +33,7 @@ import org.apache.spark.sql.functions._
 df.groupBy("project").sum().show()
 ```
 
-### Columns
+## Columns
 
 A new column is constructed based on the input columns present in a dataframe:
 
@@ -54,7 +54,7 @@ $"a" + 1
 $"a" === $"b"
 ```
 
-### File Read
+## File Read
 
 CSV - Create a DataFrame with the anticipated structure
 
@@ -79,7 +79,7 @@ people.filter("age > 30")
   .agg(avg(people("salary")), max(people("age")))
 ```
 
-### Repartitioning / Caching
+## Repartitioning / Caching
 
 ```scala
 val clickstreamNoIDs8partDF = clickstreamNoIDsDF.repartition(8)

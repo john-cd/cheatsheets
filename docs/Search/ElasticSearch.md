@@ -3,8 +3,7 @@ title: ElasticSearch Cheatsheet
 category: search
 tags: IR
 ---
-
-## Cheatsheets
+# Cheatsheets
 
 [Jolicode](https://elasticsearch-cheatsheet.jolicode.com/)
 
@@ -32,10 +31,11 @@ curl 'https://localhost:9200/?pretty'
 ```
 
 5. Install [Kibana](https://www.elastic.co/downloads/kibana)
-    * Open `config/kibana.yml` in an editor
-    * Set the elasticsearch.url to point at your Elasticsearch instance
-    * Run `./bin/kibana` (orbin\kibana.bat on Windows)
-    * Point your browser at [https://localhost:5601](https://localhost:5601)
+
+    - Open `config/kibana.yml` in an editor
+    - Set the elasticsearch.url to point at your Elasticsearch instance
+    - Run `./bin/kibana` (orbin\kibana.bat on Windows)
+    - Point your browser at [https://localhost:5601](https://localhost:5601)
 
 6. Install [Sense](https://www.elastic.co/guide/en/elasticsearch/guide/current/running-elasticsearch.html#sense)
 
@@ -59,7 +59,7 @@ Then go to
 curl -X<VERB> '<PROTOCOL>://<HOST>:<PORT>/<PATH>?<QUERY_STRING>' -d '<BODY>'
 ```
 
-*verb is GET, POST, PUT, HEAD, or DELETE*
+Verb is GET, POST, PUT, HEAD, or DELETE.
 
 ### Examples
 
@@ -81,7 +81,7 @@ Sense syntax is similar to curl:
 
 Index a document
 
-```
+```txt
 PUT index/type/1
 {
  "body": "here"
@@ -90,44 +90,45 @@ PUT index/type/1
 
 and retrieve it
 
-```
+```txt
 GET index/type/1
 ```
 
 ## PLUGINS
 
-**URL pattern**
+### **URL pattern**
 
 `https://yournode:9200/_plugin/<plugin name>`
 
 On Debian, the script is in: `/usr/share/elasticsearch/bin/plugin`.
 
-**Install various plugins**
+### **Install various plugins**
 
 ```bash
 ./bin/plugin --install mobz/elasticsearch-head
 ./bin/plugin --install lmenezes/elasticsearch-kopf/1.2
 ./bin/plugin --install elasticsearch/marvel/latest
 ```
-**Remove a plugin**
+
+### **Remove a plugin**
 
 ```bash
 ./bin/plugin --remove
 ```
 
-**List installed plugins**
+### **List installed plugins**
 
 ```bash
 ./bin/plugin --list
 ```
 
-```
+```txt
 GET /_nodes?plugin=true
 ```
 
 [Elasticsearch monitoring and management plugins](https://blog.codecentric.de/en/2014/03/elasticsearch-monitoring-and-management-plugins/)
 
-**Head**
+### **Head**
 
 [Head](https://mobz.github.io/elasticsearch-head/)
 
@@ -136,20 +137,20 @@ GET /_nodes?plugin=true
 
 [elastichq.org](https://www.elastichq.org/)
 
-**BigDesk**
+### **BigDesk**
 
 Live charts and statistics for elasticsearch cluster:
 [BigDesk](https://bigdesk.org/)
 
-**Kopf**
+### **Kopf**
 
 [Kopf](https://github.com/lmenezes/elasticsearch-kopf)
 
-```
+```bash
 ./bin/plugin --install lmenezes/elasticsearch-kopf/1.2`
 ```
 
-**Marvel**
+### **Marvel**
 
 ```bash
 ./bin/plugin --install elasticsearch/marvel/latest
@@ -159,7 +160,7 @@ Live charts and statistics for elasticsearch cluster:
 
 [Integrations](https://www.elastic.co/guide/en/elasticsearch/plugins/current/integrations.html)
 
-**Aspire**
+### **Aspire**
 
 [Aspire](https://www.searchtechnologies.com/aspire-for-elasticsearch)
 
@@ -167,17 +168,17 @@ Aspire is a framework and libraries of extensible components designed to enable 
 
 [Docs](https://wiki.searchtechnologies.com/index.php/Main_Page)
 
-**Integration with Hadoop**
+### **Integration with Hadoop**
 
 [Integration with Hadoop](https://www.elastic.co/guide/en/elasticsearch/hadoop/current/index.html)
 
 [Bulk loading for elastic search https://infochimps.com](https://github.com/infochimps-labs/wonderdog)
 
-**Integration with Spring**
+### **Integration with Spring**
 
 [Spring Data](https://github.com/spring-projects/spring-data-elasticsearch)
 
-**WordPress**
+### **WordPress**
 
 [Wordpress](https://github.com/wallmanderco/elasticsearch-indexer)
 
@@ -185,39 +186,39 @@ Aspire is a framework and libraries of extensible components designed to enable 
 
 BI platforms that can use ES as an analytics engine:
 
-* Kibana
-* [Grafana](https://grafana.org/)
-* BIRT
-  * [Birt](https://developer.actuate.com/community/forum/index.php?/topic/36913-birt-web-service-rest-json/?p=138062)
-  * [Birt](https://developer.actuate.com/community/forum/index.php?/topic/36913-birt-web-service-rest-json/?p=138062)
+- Kibana
+- [Grafana](https://grafana.org/)
+- BIRT
+  - [Birt](https://developer.actuate.com/community/forum/index.php?/topic/36913-birt-web-service-rest-json/?p=138062)
+  - [Birt](https://developer.actuate.com/community/forum/index.php?/topic/36913-birt-web-service-rest-json/?p=138062)
 
-* Adminer
-  * [Adminer.org](https://www.adminer.org/)
-  * Database management in a single PHP file. Works with MySQL, PostgreSQL, SQLite, MS SQL, Oracle, SimpleDB, Elasticsearch, MongoDB. Needs a webserver + PHP: [WAMP](https://bitnami.com/stack/wamp)
+- Adminer
+  - [Adminer.org](https://www.adminer.org/)
+  - Database management in a single PHP file. Works with MySQL, PostgreSQL, SQLite, MS SQL, Oracle, SimpleDB, Elasticsearch, MongoDB. Needs a webserver + PHP: [WAMP](https://bitnami.com/stack/wamp)
 
-* Mongolastic
-  * A tool that migrates data from MongoDB to Elasticsearch and vice versa
-  * [Mongolastic](https://github.com/ozlerhakan/mongolastic)
+- Mongolastic
+  - A tool that migrates data from MongoDB to Elasticsearch and vice versa
+  - [Mongolastic](https://github.com/ozlerhakan/mongolastic)
 
-* Elasticsearch-exporter
-  * [Elasticsearch-exporter](https://github.com/mallocator/Elasticsearch-Exporter)
+- Elasticsearch-exporter
+  - [Elasticsearch-exporter](https://github.com/mallocator/Elasticsearch-Exporter)
 
 ## Code Examples - developing a Web UI for ES
 
-* [Sitepoint](https://www.sitepoint.com/building-recipe-search-site-angular-elasticsearch/)
-* [CottageLabs](https://github.com/CottageLabs/facetview2)
-* [scrutmydocs.org](https://www.scrutmydocs.org/)
-* [qbox.io](https://qbox.io/blog/series/machine-learning)
+- [Sitepoint](https://www.sitepoint.com/building-recipe-search-site-angular-elasticsearch/)
+- [CottageLabs](https://github.com/CottageLabs/facetview2)
+- [scrutmydocs.org](https://www.scrutmydocs.org/)
+- [qbox.io](https://qbox.io/blog/series/machine-learning)
 
 ## Java API
 
-* [Java clients](https://www.elastic.co/blog/found-java-clients-for-elasticsearch)
-* [elasticsearch tutorial](https://github.com/jaibeermalik/elasticsearch-tutorial)
-* [elasticsearchfr/](https://github.com/elasticsearchfr/hands-on)
-* [IBM](https://www.ibm.com/developerworks/library/j-use-elasticsearch-java-apps/index.html)
-* [dzone](https://dzone.com/articles/elasticsearch-java-api)
+- [Java clients](https://www.elastic.co/blog/found-java-clients-for-elasticsearch)
+- [elasticsearch tutorial](https://github.com/jaibeermalik/elasticsearch-tutorial)
+- [elasticsearchfr/](https://github.com/elasticsearchfr/hands-on)
+- [IBM](https://www.ibm.com/developerworks/library/j-use-elasticsearch-java-apps/index.html)
+- [dzone](https://dzone.com/articles/elasticsearch-java-api)
 
-# BASICS
+## BASICS
 
 An Elasticsearch cluster can contain multiple indices, which in turn contain multiple types. These types hold multiple documents, and each document has multiple fields.
 
@@ -289,7 +290,7 @@ GET /megacorp/employee/1
 Field names can be any valid string, but may not include periods.
 Every document in Elasticsearch has a version number. Every time a change is made to a document (including deleting it), the _version number is incremented.
 
-*Optimistic concurrency control*
+### *Optimistic concurrency control*
 
 ```txt
 PUT /website/blog/1?version=1  { "title": "My first blog entry", "text": "Starting to get the hang of this..."}
@@ -586,6 +587,7 @@ The terms query is the same as the term query, but allows you to specify multipl
 
 ## MULTIPLE INDICES OR TYPES
 
+```txt
     # all documents all indices
   /_search
 
@@ -603,31 +605,40 @@ The terms query is the same as the term query, but allows you to specify multipl
 
   /_all/user,tweet/_search
   Search types user and tweet in all indices
+```
 
 ## PAGINATION
 
-     GET /_search?size=5GET /_search?size=5&from=5
+```txt
+GET /_search?size=5GET /_search?size=5&from=5
+```
 
 ## SORTING
 
-     GET /_search { "query" : { "bool" : { "filter" : { "term" : { "user_id" : 1 }} } }, "sort": { "date": { "order": "desc" }}}
+```txt
+GET /_search { "query" : { "bool" : { "filter" : { "term" : { "user_id" : 1 }} } }, "sort": { "date": { "order": "desc" }}}
+```
 
 For string sorting, use multi-field mapping:
 
-     "tweet": { "type": "string", "analyzer": "english", "fields": { "raw": {"type": "string", "index": "not_analyzed" } }}
+```txt
+"tweet": { "type": "string", "analyzer": "english", "fields": { "raw": {"type": "string", "index": "not_analyzed" } }}
+```
 
 The main tweet field is just the same as before: an analyzed full-text field.
 The new tweet.raw subfield is not_analyzed.
 
 then sort on the new field
 
-     GET /_search { "query": { "match": { "tweet": "elasticsearch" } }, "sort": "tweet.raw"}
+```txt
+GET /_search { "query": { "match": { "tweet": "elasticsearch" } }, "sort": "tweet.raw"}
+```
 
 ## HIGHLIGHTS
 
-\# Find all employees who enjoy "rock climbing" - highlights
-\# and highlight the matches
+Find all employees who enjoy "rock climbing" - and highlight the matches
 
+```txt
   GET /megacorp/employee/_search
   {
       "query" : {
@@ -641,22 +652,27 @@ then sort on the new field
           }
       }
   }
+```
 
 ## ANALYSIS
 
 An analyzer is really just a wrapper that combines three functions into a single package:
 
-    * Character filters
-    * Tokenizer
-    * Token filters
+- Character filters
+- Tokenizer
+- Token filters
 
-\#  See how text is analyzed
+### See how text is analyzed
 
-  GET /_analyze { "analyzer": "standard", "text": "Text to analyze"}
+```txt
+GET /_analyze { "analyzer": "standard", "text": "Text to analyze"}
+```
 
-\# test analyzer
+### test analyzer
 
-  GET /gb/_analyze { "field": "tweet", "text": "Black-cats"}
+```txt
+GET /gb/_analyze { "field": "tweet", "text": "Black-cats"}
+```
 
 ## MAPPINGS (schemas)
 
@@ -672,20 +688,20 @@ Mapping (or schema definition) for the tweet type in the gb index
 
 Elasticsearch supports the following simple field types:
 
-* String: string
-* Whole number: byte, short, integer, long
-* Floating-point: float, double
-* Boolean: boolean
-* Date: date
+- String: string
+- Whole number: byte, short, integer, long
+- Floating-point: float, double
+- Boolean: boolean
+- Date: date
 
 Fields of type string are, by default, considered to contain full text. That is, their value will be passed through an analyzer before being indexed, and a full-text query on the field will pass the query string through an analyzer before searching.
 The two most important mapping attributes for string fields are index and analyzer.
 
 The index attribute controls how the string will be indexed. It can contain one of three values:
 
-* analyzed  First analyze the string and then index it. In other words, index this field as full text.
-* not_analyzed  Index this field, so it is searchable, but index the value exactly as specified. Do not analyze it.
-* no  Don’t index this field at all. This field will not be searchable.
+- `analyzed`: First analyze the string and then index it. In other words, index this field as full text.
+- `not_analyzed`: Index this field, so it is searchable, but index the value exactly as specified. Do not analyze it.
+- `no`: Don’t index this field at all. This field will not be searchable.
 
 If we want to map the field as an exact value, we need to set it to not_analyzed:
 
@@ -709,8 +725,9 @@ For analyzed string fields, use the analyzer attribute to specify which analyzer
   }
 ```
 
-\#  create a new index, specifying that the tweet field should use the english analyzer
+### Create a new index, specifying that the tweet field should use the english analyzer
 
+```txt
 PUT /gb
   { "mappings":
        { "tweet" :
@@ -720,6 +737,7 @@ PUT /gb
                       "name" : { "type" : "string" },
                       "user_id" : { "type" : "long" }
                     }}}}
+```
 
 null, arrays, objects: see [complex core fields](https://www.elastic.co/guide/en/elasticsearch/guide/current/complex-core-fields.html)
 
@@ -823,8 +841,9 @@ POST /test_index/parent_type/_search
 
 Aggregations and searches can span multiple indices
 
-\# Calculate the most popular interests for all employees
+### Calculate the most popular interests for all employees
 
+```txt
   GET /megacorp/employee/_search
   {
     "aggs": {
@@ -835,10 +854,11 @@ Aggregations and searches can span multiple indices
       }
     }
   }
+```
 
-\# Calculate the most popular interests for
-\# employees named "Smith"
+### Calculate the most popular interests for employees named "Smith"
 
+```txt
   GET /megacorp/employee/_search
   {
     "query": {
@@ -854,9 +874,11 @@ Aggregations and searches can span multiple indices
       }
     }
   }
+```
 
-\# Calculate the average age of employee per interest - hierarchical aggregates
+### Calculate the average age of employee per interest - hierarchical aggregates
 
+```txt
   GET /megacorp/employee/_search
   {
       "aggs" : {
@@ -870,11 +892,14 @@ Aggregations and searches can span multiple indices
           }
       }
   }
+```
 
-\# requires in config/elasticsearch.yml
-\# script.inline: true
-\# script.indexed: true
+requires in config/elasticsearch.yml
 
+- script.inline: true
+- script.indexed: true
+
+```txt
   GET /tlo/contacts/_search
   {
     "size" : 0,
@@ -899,41 +924,44 @@ Aggregations and searches can span multiple indices
       }
     }
   }
+```
 
 ## INDEX MANAGEMENT
 
 By default, indices are assigned five primary shards. The number of primary shards can be set only when an index is created and never changed
 
-\# Add an index
+- Add an index
 
 ```txt
   PUT /blogs { "settings" : { "number_of_shards" : 3, "number_of_replicas" : 1 }}
   PUT /blogs/_settings { "number_of_replicas" : 2}
 ```
 
-* ElasticSearch Shards should be 50 GB or less in size.
-* Use aliases to shelter the underlying index (or indices) and allow index swapping
+- ElasticSearch Shards should be 50 GB or less in size.
+- Use aliases to shelter the underlying index (or indices) and allow index swapping
 
 ## CLUSTER MANAGEMENT
 
-     GET /_cluster/health
+```txt
+GET /_cluster/health
+```
 
 ## CONFIGURATION
 
-* config directory
-* yaml file
+- config directory
+- yaml file
 
-* Sets the JVM heap size to 0.5 memory size. The OS will use it for file system cache
-* Prefer not to allocate 30GB !! --> uncompressed pointers
-* Never let the JVM swap    bootstrap.mlockall = true
-* Keep the JVM defaults
-* Do not use G1GC alternative garbage collector
+- Sets the JVM heap size to 0.5 memory size. The OS will use it for file system cache
+- Prefer not to allocate 30GB !! --> uncompressed pointers
+- Never let the JVM swap    bootstrap.mlockall = true
+- Keep the JVM defaults
+- Do not use G1GC alternative garbage collector
 
 ```txt
 cluster.name: <my cluster>
 ```
 
-* All nodes in the cluster must have the same cluster name
+- All nodes in the cluster must have the same cluster name
 
 ```txt
 node.name: <my_node_name>
@@ -945,17 +973,18 @@ node.name: <my_node_name>
 
 to override the configuration file
 
-* HTTP port: 9200 and successors
-* Transport : 9300 (internal communications)
+- HTTP port: 9200 and successors
+- Transport : 9300 (internal communications)
 
 ### Discovery
 
-* AWS plugin available   --> also include integration with S3 (snapshot to S3)
-* AWS: multi-AZ is OK but replication across far data centers is not recommended
-* See: resiliency
+- AWS plugin available   --> also include integration with S3 (snapshot to S3)
+- AWS: multi-AZ is OK but replication across far data centers is not recommended
+- See: resiliency
 
 Sites plugins -- kopf / head / paramedic / bigdesk / kibana
-* contain static web content (JS, HTML....)
+
+- contain static web content (JS, HTML....)
 
 Install plugins on ALL machines of the cluster
 
@@ -970,8 +999,8 @@ One type per index is recommended, except for parent child / nested indexes.
 
 index size optimization:
 
-* can disable `_source` and `_all` (the index that captures every field - not needed unless the top search bar changes)
-* by default, Kibana will search `_all`
+- can disable `_source` and `_all` (the index that captures every field - not needed unless the top search bar changes)
+- by default, Kibana will search `_all`
 
 data types:
 string, number, bool, datetime, binary, array, object, geo_point, geo_shape, ip, multifield

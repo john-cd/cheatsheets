@@ -50,7 +50,7 @@ docker compose -f .devcontainer/compose.yaml -f .devcontainer/compose-ci.yaml up
 docker compose down
 ```
 
-You may also build the image directly, e.g.: `docker build --file .devcontainer/Dockerfile --target dev --tag john-cd/cheatsheets:latest .`
+You may also build the image directly, e.g.: `docker build --file .devcontainer/Dockerfile --target dev --tag johncd/cheatsheets:latest .`
 To push an image to your registry, use `docker push myregistry.com/myapp`.
 
 Consult Docker's [getting started](https://docs.docker.com/go/get-started-sharing/) docs for more detail on building and pushing.

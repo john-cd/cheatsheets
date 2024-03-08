@@ -96,7 +96,7 @@ object Example {
 }
 ```
 
-_Stackable traits order of execution_
+### _Stackable traits order of execution_
 
 Stackable traits are always executed from the right mixin to the left.
 Sometimes, however, if we only get output and it doesn't depend on what is passed to the method, we simply end up with method calls on a stack, which then get evaluated and it will appear as if things are applied from left to right.

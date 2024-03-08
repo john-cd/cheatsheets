@@ -124,7 +124,7 @@ type ~[A,B] = Pair[A,B]
 val pairlist: List[String ~ Int]   // operator-like usage
 
 case class Item[T](i: T) {
-	def ~(j: Item[T]) = new Pair(this, j)  // creating an infix operator method to use with our infix type
+  def ~(j: Item[T]) = new Pair(this, j)  // creating an infix operator method to use with our infix type
 }
 
 (Item("a") ~ Item("b")).isInstanceOf[String ~ String]
@@ -165,9 +165,10 @@ class VerifiedTweeter(val username_ : String) extends Tweeter with User {  // We
 
 ### Difference between a self type and extending a trait
 
-* If you say that B extends A, then B is an A. When you use self-types, B requires an A.
+- If you say that B extends A, then B is an A. When you use self-types, B requires an A.
 
 There are two specific requirements that are created with self-types:
+
 1. If B is extended, then you're required to mix-in an A.
 1. When a concrete class finally extends/mixes-in these traits, some class/trait must implement A.
 

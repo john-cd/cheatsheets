@@ -174,42 +174,41 @@ and normal paragraphs.
  :meth:`~Queue.Queue.get` will refer to Queue.Queue.get but only display get as the link text.
 ```
 
-The following roles refer to objects in modules and are possibly hyperlinked
-if a matching identifier is found:
+The following roles refer to objects in modules and are possibly hyperlinked if a matching identifier is found:
 
-**mod**
+### **mod**
 
 The name of a module; a dotted name may be used. This should also be used for package names.
 
-**func**
+### **func**
 
 The name of a Python function; dotted names may be used. The role text should not include trailing parentheses to enhance readability. The parentheses are stripped when searching for identifiers.
 
-**data**
+### **data**
 
 The name of a module-level variable or constant.
 
-**const**
+### **const**
 
 The name of a “defined” constant. This may be a C-language #define or a Python variable that is not intended to be changed.
 
-**class**
+### **class**
 
 A class name; a dotted name may be used.
 
-**meth**
+### **meth**
 
 The name of a method of an object. The role text should include the type name and the method name. A dotted name may be used.
 
-**attr**
+### **attr**
 
 The name of a data attribute of an object.
 
-**exc**
+### **exc**
 
 The name of an exception. A dotted name may be used.
 
-# Official reStructuredText Cheatsheet
+## Official reStructuredText Cheatsheet
 
 ```txt
  =====================================================

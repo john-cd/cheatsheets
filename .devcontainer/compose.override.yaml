@@ -1,7 +1,7 @@
 name: cheatsheets_dev
 services:
   site:
-    image: john-cd/cheatsheets_dev
+    image: johncd/cheatsheets_dev
     build:
       target: dev
     ports:

@@ -101,7 +101,7 @@ etc...
 
 Add to ``_config.yml``
 
-```
+```yaml
 gems:
   - jekyll-paginate
   - jekyll-feed

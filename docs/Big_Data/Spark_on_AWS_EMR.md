@@ -11,9 +11,9 @@ The following procedure creates a cluster with Spark installed.
 1. Open the Amazon EMR console at [https://console.aws.amazon.com/elasticmapreduce/]( https://console.aws.amazon.com/elasticmapreduce/ ).
 1. Choose Create cluster to use Quick Create.
 
-  - For the Software Configuration field, choose Amazon Release Version emr-5.0.0 or later.
-  - In the Select Applications field, choose either All Applications or Spark.
-  - Select other options as necessary and then choose Create cluster
+- For the Software Configuration field, choose Amazon Release Version emr-5.0.0 or later.
+- In the Select Applications field, choose either All Applications or Spark.
+- Select other options as necessary and then choose Create cluster
 
 ## Create a EMR Cluster with Spark using the AWS CLI
 
