@@ -5,7 +5,7 @@ tags: Scala
 ---
 # Algebraic Data Types
 
-[Scala pattern gist]( https://gist.github.com/arosien/0aee59cc734042f7044d24bdaec731a8 )
+[Scala pattern gist](https://gist.github.com/arosien/0aee59cc734042f7044d24bdaec731a8)
 
 ```scala
 // A website visitor is: logged in; or anonymous

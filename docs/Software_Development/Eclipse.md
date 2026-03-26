@@ -1,8 +1,8 @@
 # Useful Links
 
-* [Eclipse]( https://eclipse.org/downloads/ )
-* [AWS Toolkit for Eclipse]( https://aws.amazon.com/eclipse/ )
-* [Spring Tool Suite]( https://spring.io/tools )
+* [Eclipse](https://eclipse.org/downloads/)
+* [AWS Toolkit for Eclipse](https://aws.amazon.com/eclipse/)
+* [Spring Tool Suite](https://spring.io/tools)
 
 ## To install the AWS Toolkit
 

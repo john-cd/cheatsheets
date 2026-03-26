@@ -7,4 +7,4 @@ tags: privacy
 
 ## Interesting Links
 
-[Homomorphic Encryption]( https://conferences.oreilly.com/artificial-intelligence/ai-ca/public/schedule/detail/76797 )
+[Homomorphic Encryption](https://conferences.oreilly.com/artificial-intelligence/ai-ca/public/schedule/detail/76797)

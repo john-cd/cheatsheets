@@ -6,4 +6,4 @@
 
 ## Platforms
 
-[Infoworks]( https://www.infoworks.io/ ) Big Data Automation, Integration & Management Software Company.
+[Infoworks](https://www.infoworks.io/) Big Data Automation, Integration & Management Software Company.

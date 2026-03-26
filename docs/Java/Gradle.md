@@ -35,9 +35,7 @@ You can now use `./gradlew` or `gradlew.bat` in the project folder
 
 ## Usage with Java
 
-[Example for the JVM](
-https://hackersandslackers.com/building-java-projects-with-gradle/
-)
+[Example for the JVM](https://hackersandslackers.com/building-java-projects-with-gradle/)
 
 ## Common commands
 

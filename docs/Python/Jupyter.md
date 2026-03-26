@@ -3,7 +3,7 @@ title: IPython / Jupyter Cheatsheet
 category: python
 tags:
 ---
-### [IPython]( https://ipython.org/ ) / [Jupyter]( https://jupyter.org/ )
+### [IPython](https://ipython.org/) / [Jupyter](https://jupyter.org/)
 
 - Using IPython makes interactive work easy.
   - Better shell
@@ -129,7 +129,7 @@ from pylab import *
 from numpy import *
 ```
 
-### [Qtconsole - an improved console]( https://ipython.org/ipython-doc/stable/interactive/qtconsole.html )
+### [Qtconsole - an improved console](https://ipython.org/ipython-doc/stable/interactive/qtconsole.html)
 
 At the command prompt:
 
@@ -158,7 +158,7 @@ plt.plot(np.rand(100))
 display(f)
 ```
 
-[ipython and ipython notebook for matlab users]( https://xcorr.net/2013/04/19/ipython-and-ipython-notebook-for-matlab-users/ )
+[ipython and ipython notebook for matlab users](https://xcorr.net/2013/04/19/ipython-and-ipython-notebook-for-matlab-users/)
 
 ### IPython Notebook web-based interface
 
@@ -183,8 +183,8 @@ In command mode:
 
 ## Papermill
 
-[Papermill]( https://papermill.readthedocs.io/en/latest/ )
+[Papermill](https://papermill.readthedocs.io/en/latest/)
 
 Papermill is a tool for parameterizing and executing Jupyter Notebooks.
 
-[Papermill GitHub]( https://github.com/nteract/papermill )
+[Papermill GitHub](https://github.com/nteract/papermill)

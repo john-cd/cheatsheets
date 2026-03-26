@@ -1,8 +1,8 @@
 # CORS
 
-- [CORS on Wikipedia]( https://en.wikipedia.org/wiki/Cross-origin_resource_sharing )
-- [Same-origin_policy]( https://en.wikipedia.org/wiki/Same-origin_policy )
-- [CORS]( https://www.html5rocks.com/en/tutorials/cors/ )
+- [CORS on Wikipedia](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing)
+- [Same-origin_policy](https://en.wikipedia.org/wiki/Same-origin_policy)
+- [CORS](https://www.html5rocks.com/en/tutorials/cors/)
 
 Certain "cross-domain" requests, notably AJAX requests, are forbidden by default by the same-origin security policy of web browsers.
 
@@ -41,4 +41,4 @@ Some Javascript libraries, such as AngularJS and Sencha Touch, send preflight re
 
 ## API Gateway and CORS
 
-[How to CORS (AWS)]( https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-cors.html )
+[How to CORS (AWS)](https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-cors.html)

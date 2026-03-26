@@ -8,18 +8,18 @@ Hadoop is not a single product, but rather a software family. Its common compone
 - HBase, which is essentially a database built on top of Hadoop
 - HDFS, the actual file system for hadoop.
 - Apache Mahout
-- Packaging for Hadoop: [BigTop]( https://bigtop.apache.org/ )
+- Packaging for Hadoop: [BigTop](https://bigtop.apache.org/)
 
 Hadoop structures data using Hive, but can handle unstructured data easily using Pig.
 
 ## Hadoop and Mongo
 
-- [Hadoop and MongoDB]( https://www.mongodb.com/hadoop-and-mongodb?_ga=1.104126339.207014561.1422350149 )
-- [Hadoop and MongoDB Use Cases]( https://docs.mongodb.org/ecosystem/use-cases/hadoop/ )
+- [Hadoop and MongoDB](https://www.mongodb.com/hadoop-and-mongodb?_ga=1.104126339.207014561.1422350149)
+- [Hadoop and MongoDB Use Cases](https://docs.mongodb.org/ecosystem/use-cases/hadoop/)
 
 ## AWS EMR
 
-[Amazon EMR Best Practices]( https://media.amazonwebservices.com/AWS_Amazon_EMR_Best_Practices.pdf )
+[Amazon EMR Best Practices](https://media.amazonwebservices.com/AWS_Amazon_EMR_Best_Practices.pdf)
 
 Amazon EMR includes
 

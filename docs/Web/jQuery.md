@@ -2,8 +2,8 @@
 
 ## Links
 
-- [jQuery API documentation]( https://api.jquery.com/ )
-- [Learn jQuery]( https://learn.jquery.com/ )
+- [jQuery API documentation](https://api.jquery.com/)
+- [Learn jQuery](https://learn.jquery.com/)
 
 The jQuery library exposes its methods and properties via two properties of the window object called jQuery and $. $ is simply an alias for jQuery and it's often employed because it's shorter and faster to write.
 

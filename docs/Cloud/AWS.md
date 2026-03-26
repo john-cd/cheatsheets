@@ -53,21 +53,21 @@
 
 ## Tools
 
-- Unix tools on Windows: [Cygwin]( https://www.cygwin.com/ )
+- Unix tools on Windows: [Cygwin](https://www.cygwin.com/)
 
-- Putty SSH client for Windows [doc](  https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/get-set-up-for-amazon-ec2.html )
+- Putty SSH client for Windows [doc](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/get-set-up-for-amazon-ec2.html)
 
-1. Download and install PuTTY [link]( https://www.chiark.greenend.org.uk/~sgtatham/putty/ ). Be sure to install the entire suite.
+1. Download and install PuTTY [link](https://www.chiark.greenend.org.uk/~sgtatham/putty/). Be sure to install the entire suite.
 2. Start PuTTYgen (for example, from the Start menu, click All Programs > PuTTY > PuTTYgen).
 3. Under Type of key to generate, select SSH-2 RSA.
 4. Load the .pem file (private key) downloaded from the console (in "credentials" folder)
 5. Save private key
 
-- AWS [command line interface]( https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-set-up.html )
+- AWS [command line interface](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-set-up.html)
 
-- [AWS toolkit for Visual Studio]( https://docs.aws.amazon.com/AWSToolkitVS/latest/UserGuide/welcome.html )
+- [AWS toolkit for Visual Studio](https://docs.aws.amazon.com/AWSToolkitVS/latest/UserGuide/welcome.html)
 
-- [AWS tools for PowerShell]( https://aws.amazon.com/documentation/powershell/ )
+- [AWS tools for PowerShell](https://aws.amazon.com/documentation/powershell/)
 
 ## AWS EC2
 
@@ -75,9 +75,9 @@
 
 login as: ec2-user (Amazon Linux) or: ubuntu
 
-[Bash shell documentation]( https://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO.html )
+[Bash shell documentation](https://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO.html)
 
-- Use a shell script to configure the instance [link]( https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html )
+- Use a shell script to configure the instance [link](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html)
 
 - User data: You can specify user data to configure an instance during launch, or to run a configuration script. To attach a file, select the "As file" option and browse for the file to attach.
 
@@ -105,9 +105,9 @@ Command-line s3 clients:
 
 2) Tools
 
-- install SQL [tool]( https://docs.aws.amazon.com/redshift/latest/gsg/rs-gsg-prereq.html )
-- or [Aginity]( https://www.aginity.com/workbench/redshift/ )
-- Microsoft [SSDT]( https://stackoverflow.com/questions/17323590/redshift-with-ssis-ssdt )
+- install SQL [tool](https://docs.aws.amazon.com/redshift/latest/gsg/rs-gsg-prereq.html)
+- or [Aginity](https://www.aginity.com/workbench/redshift/)
+- Microsoft [SSDT](https://stackoverflow.com/questions/17323590/redshift-with-ssis-ssdt)
 
 3) Get data into Redshift:
 
@@ -127,9 +127,9 @@ SELECT COUNT(DISTINCT field2) FROM table1
 
 ## EMR
 
-- [EMR FAQs]( https://aws.amazon.com/elasticmapreduce/faqs/ )
-- [Extract, Transform, and Load (ETL) Data with Amazon EMR]( https://docs.aws.amazon.com/ElasticMapReduce/latest/DeveloperGuide/emr-etl.html )
-- [EMR article]( https://aws.amazon.com/articles/Elastic-MapReduce )
+- [EMR FAQs](https://aws.amazon.com/elasticmapreduce/faqs/)
+- [Extract, Transform, and Load (ETL) Data with Amazon EMR](https://docs.aws.amazon.com/ElasticMapReduce/latest/DeveloperGuide/emr-etl.html)
+- [EMR article](https://aws.amazon.com/articles/Elastic-MapReduce)
 
 ## SWF
 

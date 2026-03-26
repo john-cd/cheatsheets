@@ -24,7 +24,7 @@ comments: true
 - RedMine
 - TFS
 
-## [Enterprise Architecture / UML]( https://en.wikipedia.org/wiki/List_of_Unified_Modeling_Language_tools )
+## [Enterprise Architecture / UML](https://en.wikipedia.org/wiki/List_of_Unified_Modeling_Language_tools)
 
 - Violet UML Editor
 - Visio
@@ -39,15 +39,15 @@ comments: true
 
 ## Editors/ IDEs
 
-- [Comparison of integrated development environments]( https://en.wikipedia.org/wiki/Comparison_of_integrated_development_environments )
+- [Comparison of integrated development environments](https://en.wikipedia.org/wiki/Comparison_of_integrated_development_environments)
 
-- [Notepad++]( https://notepad-plus-plus.org/ )
-  - [Plugins]( https://www.guidingtech.com/31357/notepad-plus-plugins/ )
+- [Notepad++](https://notepad-plus-plus.org/)
+  - [Plugins](https://www.guidingtech.com/31357/notepad-plus-plugins/)
 - Gedit
 - Sublime Text
 
-- [Eclipse]( https://www.eclipse.org/ )
-  - [List of Eclipse-based software]( https://en.wikipedia.org/wiki/List_of_Eclipse-based_software )
+- [Eclipse](https://www.eclipse.org/)
+  - [List of Eclipse-based software](https://en.wikipedia.org/wiki/List_of_Eclipse-based_software)
 - Visual Studio
 - Visual Studio Code
 
@@ -66,13 +66,13 @@ comments: true
 
 ## Code Quality
 
-- [SonarQube]( https://www.sonarqube.org/ )
-- [Phabricator]( https://www.phacility.com/ )
-- [Code Coverage]( https://codecov.io/ )
+- [SonarQube](https://www.sonarqube.org/)
+- [Phabricator](https://www.phacility.com/)
+- [Code Coverage](https://codecov.io/)
 
 ## Virtual Machines and Containers
 
-- [Oracle Virtualbox]( https://www.virtualbox.org/ )
+- [Oracle Virtualbox](https://www.virtualbox.org/)
 
 - Docker
 - Kubernetes

@@ -8,7 +8,7 @@
 
 The following procedure creates a cluster with Spark installed.
 
-1. Open the Amazon EMR console at [https://console.aws.amazon.com/elasticmapreduce/]( https://console.aws.amazon.com/elasticmapreduce/ ).
+1. Open the Amazon EMR console at [https://console.aws.amazon.com/elasticmapreduce/](https://console.aws.amazon.com/elasticmapreduce/).
 1. Choose Create cluster to use Quick Create.
 
 - For the Software Configuration field, choose Amazon Release Version emr-5.0.0 or later.
@@ -92,14 +92,14 @@ aws emr list-instances --cluster-id j-2AL4XXXXXX5T9Or:aws emr describe-clusters 
 
 ## View the Web Interfaces Hosted on Amazon EMR Clusters
 
-- [View Web Interfaces Hosted on Amazon EMR Clusters]( https://docs.aws.amazon.com//ElasticMapReduce/latest/ManagementGuide/emr-web-interfaces.html )
+- [View Web Interfaces Hosted on Amazon EMR Clusters](https://docs.aws.amazon.com//ElasticMapReduce/latest/ManagementGuide/emr-web-interfaces.html)
 
-- YARN ResourceManager: [https://master-public-dns-name:8088]( https://master-public-dns-name:8088/ )
-- YARN NodeManager: [https://slave-public-dns-name:8042]( https://slave-public-dns-name:8042/ )
-- Hadoop HDFS NameNode: [https://master-public-dns-name:50070]( https://master-public-dns-name:50070/ )
-- Hadoop HDFS DataNode: [https://slave-public-dns-name:50075]( https://slave-public-dns-name:50075/ )
-- Spark HistoryServer: [https://master-public-dns-name:18080]( https://master-public-dns-name:18080/ )
-- Zeppelin: [https://master-public-dns-name:8890]( https://master-public-dns-name:8890/ )
-- Hue: [https://master-public-dns-name:8888]( https://master-public-dns-name:8888/ )
-- Ganglia: [https://master-public-dns-name/ganglia]( https://master-public-dns-name/ganglia/ )
-- HBase UI: [https://master-public-dns-name:16010]( https://master-public-dns-name:16010/ )
+- YARN ResourceManager: [https://master-public-dns-name:8088](https://master-public-dns-name:8088/)
+- YARN NodeManager: [https://slave-public-dns-name:8042](https://slave-public-dns-name:8042/)
+- Hadoop HDFS NameNode: [https://master-public-dns-name:50070](https://master-public-dns-name:50070/)
+- Hadoop HDFS DataNode: [https://slave-public-dns-name:50075](https://slave-public-dns-name:50075/)
+- Spark HistoryServer: [https://master-public-dns-name:18080](https://master-public-dns-name:18080/)
+- Zeppelin: [https://master-public-dns-name:8890](https://master-public-dns-name:8890/)
+- Hue: [https://master-public-dns-name:8888](https://master-public-dns-name:8888/)
+- Ganglia: [https://master-public-dns-name/ganglia](https://master-public-dns-name/ganglia/)
+- HBase UI: [https://master-public-dns-name:16010](https://master-public-dns-name:16010/)

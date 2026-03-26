@@ -21,10 +21,10 @@ REPL [https://ammonite.io/](https://ammonite.io/)
 
 [https://scalafiddle.io/](https://scalafiddle.io/)
 
-- [The Lift Framework]( https://liftweb.net/ )
-- [The Play framework]( https://www.playframework.com/ )
-- [The Bowler framework]( https://github.com/bowler-framework/bowler-quickstart )
-- [Akka]( https://akka.io/ )
+- [The Lift Framework](https://liftweb.net/)
+- [The Play framework](https://www.playframework.com/)
+- [The Bowler framework](https://github.com/bowler-framework/bowler-quickstart)
+- [Akka](https://akka.io/)
 
 [https://typelevel.org/](https://typelevel.org/)
 

@@ -2,7 +2,7 @@
 
 ## Key Links
 
-[Flintrock GitHub Repo]( https://github.com/nchammas/flintrock )
+[Flintrock GitHub Repo](https://github.com/nchammas/flintrock)
 
 ## Configurable CLI Defaults
 

@@ -15,7 +15,7 @@ minikube dashboard
 
 ### ``kubectl``
 
-[kubectl Cheat Sheet]( https://kubernetes.io/docs/reference/kubectl/cheatsheet/ )
+[kubectl Cheat Sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
 
 - Run a particular image on the cluster (creates a deployment automatically)
 
@@ -44,4 +44,4 @@ Just make sure you tag your Docker image with something other than ‘latest’ 
 Otherwise, if you do not specify version of your image, it will be assumed as ``:latest``, with pull image policy of ``Always`` correspondingly, which may eventually result in ErrImagePull as you may not have any versions of your Docker image out there in the default docker registry (usually DockerHub) yet.
 
 A Docker client is required to publish built docker images to the Docker daemon running inside of minikube.
-See [installing Docker]( https://docs.docker.com/install/ ) for instructions for your platform.
+See [installing Docker](https://docs.docker.com/install/) for instructions for your platform.

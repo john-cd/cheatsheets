@@ -6,7 +6,7 @@ tags:
 
 ## Vim
 
-[Vim Commands Cheat Sheet]( https://www.fprintf.net/vimCheatSheet.html )
+[Vim Commands Cheat Sheet](https://www.fprintf.net/vimCheatSheet.html)
 
 ```sh
 :q
@@ -22,9 +22,9 @@ dd  delete [count] lines
 
 ## Bash
 
-- [BASH Programming - Introduction]( https://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO.html )
-- [Bash CheatSheet for UNIX Systems]( https://gist.github.com/LeCoupa/122b12050f5fb267e75f )
-- [Bash Cheat Sheet]( ftp://ftp.psu.ac.th/pub/bash-howto/reference_bash-cheat.pdf )
+- [BASH Programming - Introduction](https://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO.html)
+- [Bash CheatSheet for UNIX Systems](https://gist.github.com/LeCoupa/122b12050f5fb267e75f)
+- [Bash Cheat Sheet](ftp://ftp.psu.ac.th/pub/bash-howto/reference_bash-cheat.pdf)
 
 ```bash
 #!/bin/bash
@@ -37,7 +37,7 @@ Don't forget chmod +x filename
 
 ## Amazon Linux
 
-[Amazon Linux Basics]( https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AmazonLinuxAMIBasics.html )
+[Amazon Linux Basics](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AmazonLinuxAMIBasics.html)
 
 ### Adding Packages
 
@@ -57,8 +57,8 @@ sudo service nginx start
 
 ### Autostarting a service on Amazon Linux
 
-- [Tutorial on "Chkconfig" Command in Linux with Examples]( https://www.yourownlinux.com/2015/01/tutorial-on-chkconfig-command-in-linux-with-examples.html )
-- [man page]( https://linux.die.net/man/8/chkconfig )
+- [Tutorial on "Chkconfig" Command in Linux with Examples](https://www.yourownlinux.com/2015/01/tutorial-on-chkconfig-command-in-linux-with-examples.html)
+- [man page](https://linux.die.net/man/8/chkconfig)
 
 ```bash
 # check a service is configured for startup
@@ -76,8 +76,8 @@ sudo chkconfig --level 3 httpd on  # specific runlevel
 
 ## Linux Boot Process
 
-- [Linux Boot Process]( https://www.thegeekstuff.com/2011/02/linux-boot-process/ )
-- [Scripts in /etc/init.d]( https://www.novell.com/documentation/suse91/suselinux-adminguide/html/ch13s04.html )
+- [Linux Boot Process](https://www.thegeekstuff.com/2011/02/linux-boot-process/)
+- [Scripts in /etc/init.d](https://www.novell.com/documentation/suse91/suselinux-adminguide/html/ch13s04.html)
 
 You can also use a ``/etc/rc.d/rc.local`` script.
 
@@ -101,8 +101,8 @@ echo "<?php phpinfo(); ?>" > /var/www/html/phpinfo.php
 ```
 
 - Or use ``cloud-init``
-  - [cloud-init for AWS EC2]( https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AmazonLinuxAMIBasics.html#CloudInit )
-  - [cloud-init docs]( https://cloudinit.readthedocs.io/en/latest/ )
+  - [cloud-init for AWS EC2](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AmazonLinuxAMIBasics.html#CloudInit)
+  - [cloud-init docs](https://cloudinit.readthedocs.io/en/latest/)
 
 File location: ``/etc/sysconfig/cloudinit``
 
@@ -119,4 +119,4 @@ yum install -y amazon-ssm-agent.rpm
 
 ## Linux desktop
 
-[How can I connect to an Amazon EC2 Linux instance with desktop functionality from Windows?]( https://aws.amazon.com/premiumsupport/knowledge-center/connect-to-linux-desktop-from-windows/ )
+[How can I connect to an Amazon EC2 Linux instance with desktop functionality from Windows?](https://aws.amazon.com/premiumsupport/knowledge-center/connect-to-linux-desktop-from-windows/)
