@@ -5,6 +5,8 @@ tags:
 ---
 ### [IPython](https://ipython.org/) / [Jupyter](https://jupyter.org/)
 
+Jupyter Notebook is a web-based interactive computing platform. The notebook combines live code, equations, narrative text, visualizations, interactive dashboards and other media.
+
 - Using IPython makes interactive work easy.
   - Better shell
   - Notebook interface
@@ -54,7 +56,7 @@ To run a program directly from the IPython console:
 %edit %ed               # edit then execute
 %save
 %load example.py        # load local (example) file (or url) allowing modification
-%load https://matplotlib.org/plot_directive/mpl_examples/mplot3d/contour3d_demo.py
+%load https://raw.githubusercontent.com/matplotlib/matplotlib/main/galleries/examples/mplot3d/contour3d.py
 %macro                  # define macro with range of history lines, filenames or string objects
 %recall
 

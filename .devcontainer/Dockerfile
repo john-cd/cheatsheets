@@ -15,7 +15,9 @@ ENV PYTHONDONTWRITEBYTECODE=1
 # the application crashes without emitting any logs due to buffering.
 ENV PYTHONUNBUFFERED=1
 
-RUN pip install mkdocs \
+COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
+
+RUN uv pip install --system mkdocs \
     mkdocs-material \
     mkdocs-minify-plugin \
     mkdocs-redirects
@@ -27,11 +29,11 @@ WORKDIR $WORK_DIR
 FROM base AS dev
 
 # Install additional OS packages.
-# Install pix
+# Install git
 # Caching per https://docs.docker.com/build/cache/
 RUN --mount=type=cache,target=/var/cache/apt \
     apt-get update && export DEBIAN_FRONTEND=noninteractive \
-    && apt-get install -y --no-install-recommends git pipx
+    && apt-get install -y --no-install-recommends git
 
 ARG USERNAME=vscode
 ARG USER_UID=1000
@@ -62,8 +64,8 @@ EOF
 ## Change some Poetry settings to better deal with working in a container
 # ARG WORK_DIR
 # RUN --mount=type=cache,target=${WORK_DIR}/.cache \
-#   pipx install poetry \
-#   && pipx ensurepath
+#   uv tool install poetry \
+#   && uv tool update-shell
 
 ## Run if necessary:
 # poetry self update \
