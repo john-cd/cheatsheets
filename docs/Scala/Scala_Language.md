@@ -6,9 +6,9 @@ tags: Scala
 
 ## Links
 
-- [Scala Cheatsheet]( https://docs.scala-lang.org/cheatsheets/ )
-- [Scala @ TutorialPoint]( https://www.tutorialspoint.com/scala/index.htm )
-- [Scala Tutorial (PDF)]( https://www.scala-lang.org/docu/files/ScalaTutorial.pdf )
+- [Scala Cheatsheet](https://docs.scala-lang.org/cheatsheets/)
+- [Scala @ TutorialPoint](https://www.tutorialspoint.com/scala/index.htm)
+- [Scala Tutorial (PDF)](https://www.scala-lang.org/docu/files/ScalaTutorial.pdf)
 
 Some examples are derived from [Scala Koans](https://www.scalakoans.org/).
 

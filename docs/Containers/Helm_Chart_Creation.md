@@ -5,7 +5,7 @@ tags: Kubernetes MiniKube Kubectl
 
 ## Links
 
-[How to create your first Helm chart]( https://docs.bitnami.com/kubernetes/how-to/create-your-first-helm-chart/ )
+[How to create your first Helm chart](https://docs.bitnami.com/kubernetes/how-to/create-your-first-helm-chart/)
 
 ## Steps
 

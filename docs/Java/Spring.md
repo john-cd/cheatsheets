@@ -10,5 +10,4 @@ What is "living" in the application context? This means that the context instant
 
 ## Spring and AWS
 
-[A New Way of Using Email for Support Apps: An AWS Tutorial](
-https://www.toptal.com/aws/new-way-email-support-app-aws?utm_campaign=blog_post_new_way_email_support_app_aws&utm_medium=email&utm_source=blog_subscribers )
+[A New Way of Using Email for Support Apps: An AWS Tutorial](https://www.toptal.com/aws/new-way-email-support-app-aws?utm_campaign=blog_post_new_way_email_support_app_aws&utm_medium=email&utm_source=blog_subscribers)

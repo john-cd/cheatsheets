@@ -9,7 +9,7 @@ services:
       cache_from:
         - type=gha
       cache_to:
-        - type=gha
+        - type=gha,mode=max
     # Bind the output folder to a folder in the CI host
     volumes:
       - ../site:/code/site

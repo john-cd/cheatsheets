@@ -5,13 +5,13 @@ tags: Kubernetes MiniKube Kubectl
 
 ## Useful Links
 
-[Deploying scala sbt microservice to Kubernetes]( https://steveking.site/blog/2017/deploying-scala-sbt-microservices-to-kubernetes/ )
+[Deploying scala sbt microservice to Kubernetes](https://steveking.site/blog/2017/deploying-scala-sbt-microservices-to-kubernetes/)
 
-[SBT Native Packager - Docker]( https://sbt-native-packager.readthedocs.io/en/latest/formats/docker.html )
+[SBT Native Packager - Docker](https://sbt-native-packager.readthedocs.io/en/latest/formats/docker.html)
 
-[OpenSSL]( https://www.openssl.org/ )
+[OpenSSL](https://www.openssl.org/)
 
-[Helm]( https://helm.sh/ )
+[Helm](https://helm.sh/)
 
 ## Deployment of a ``sbt``-built app on Kubernetes (MiniKube)
 
@@ -157,13 +157,13 @@ minikube addons enable ingress
 
 - Deploy on Kubernetes as above
 
-See [Blog]( https://medium.com/@Oskarr3/setting-up-ingress-on-minikube-6ae825e98f82 )
+See [Blog](https://medium.com/@Oskarr3/setting-up-ingress-on-minikube-6ae825e98f82)
 
 ### SSL Termination (TO DO)
 
-[IBM Ingress TLS tutorial]( https://www.ibm.com/support/knowledgecenter/en/SS5PWC/front_end_tls_ingress_task.html )
+[IBM Ingress TLS tutorial](https://www.ibm.com/support/knowledgecenter/en/SS5PWC/front_end_tls_ingress_task.html)
 
-- Generate a x509, pem encoded, RSA 2048 certificate with [OpenSSL]( https://www.openssl.org/ )
+- Generate a x509, pem encoded, RSA 2048 certificate with [OpenSSL](https://www.openssl.org/)
 
 ```shell
 openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout ${KEY_FILE} -out ${CERT_FILE} -subj "/CN=${HOST}/O=${HOST}"

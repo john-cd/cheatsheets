@@ -4,7 +4,7 @@ Spark runs on Java 8+, Python 2.7+/3.4+ and R 3.1+. For the Scala API, Spark 2.3
 
 ## Download Spark
 
-[Link]( https://spark.apache.org/downloads.html )
+[Link](https://spark.apache.org/downloads.html)
 
 ## Java
 
@@ -18,8 +18,8 @@ java -version
 
 Download the Scala binaries for windows -- you will need Scala 11.x (not 10.x or 12.x) for Spark 2.3
 
-- [Latest Scala]( https://www.scala-lang.org/download/ )
-- [Scala version 2.11.12]( https://www.scala-lang.org/download/2.11.12.html )
+- [Latest Scala](https://www.scala-lang.org/download/)
+- [Scala version 2.11.12](https://www.scala-lang.org/download/2.11.12.html)
 
 Test correct installation of scala:
 
@@ -56,11 +56,11 @@ Then
 - Set the environment variable %HADOOP_HOME% to point to the directory above the BIN dir containing WINUTILS.EXE.
 - Or: run the Java process with the system property hadoop.home.dir set to the home directory.
 
-[Explanation on Hadoop Wiki]( https://wiki.apache.org/hadoop/WindowsProblems )
+[Explanation on Hadoop Wiki](https://wiki.apache.org/hadoop/WindowsProblems)
 
-[Stack Overflow]( https://stackoverflow.com/questions/19620642/failed-to-locate-the-winutils-binary-in-the-hadoop-binary-path?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa )
+[Stack Overflow](https://stackoverflow.com/questions/19620642/failed-to-locate-the-winutils-binary-in-the-hadoop-binary-path?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa)
 
-[Windows binaries for some Hadoop versions]( https://github.com/steveloughran/winutils )
+[Windows binaries for some Hadoop versions](https://github.com/steveloughran/winutils)
 
 ## Run Spark on the local machine
 
@@ -78,4 +78,4 @@ Or submit Spark jobs:
 
 ## Additional Links
 
-[Spark Installation Tutorial]( https://www.tutorialspoint.com/apache_spark/apache_spark_installation.htm )
+[Spark Installation Tutorial](https://www.tutorialspoint.com/apache_spark/apache_spark_installation.htm)

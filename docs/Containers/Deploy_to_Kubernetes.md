@@ -7,7 +7,7 @@ using ``kubectl``
 
 ### Create ConfigMap from config files
 
-A [ConfigMap]( https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/ ) stores K8s-specific configuration that can be mounted as volume or used in env variables.
+A [ConfigMap](https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/) stores K8s-specific configuration that can be mounted as volume or used in env variables.
 It is often used to provide production configuration: application configuration, log settings, etc...
 
 ```shell
@@ -28,7 +28,7 @@ kubectl describe configmaps app-conf
 
 You may need a Secret to store database passwords and secret keys.
 
-For applications using the [Play Framework]( https://www.playframework.com/ ), generate a secret using:
+For applications using the [Play Framework](https://www.playframework.com/), generate a secret using:
 
 ```shell
 secretText = $(sbt playGenerateSecret)
@@ -68,7 +68,7 @@ kubectl delete deployment <deployment name>
 
 ### Install an Ingress Controller
 
-- An ingress controller is necessary to make Ingresses work. See the [Ingress doc]( https://kubernetes.io/docs/concepts/services-networking/ingress/ )
+- An ingress controller is necessary to make Ingresses work. See the [Ingress doc](https://kubernetes.io/docs/concepts/services-networking/ingress/)
 
 #### Minikube
 
@@ -86,7 +86,7 @@ Enabling the add-on provisions the following:
 
 #### Install the nginx ingress controller (non-minikube Kubernetes)
 
-- Install via this [helm chart]( https://hub.kubeapps.com/charts/stable/nginx-ingress )
+- Install via this [helm chart](https://hub.kubeapps.com/charts/stable/nginx-ingress)
 
 ```shell
 #./helm install stable/nginx-ingress
@@ -106,10 +106,10 @@ helm install --name nginx-ingress-release stable/nginx-ingress \
 kubectl get ing
 ```
 
-See [explanations]( https://daemonza.github.io/2017/02/13/kubernetes-nginx-ingress-controller/ ) and [documentation]( https://github.com/kubernetes/ingress-nginx )
+See [explanations](https://daemonza.github.io/2017/02/13/kubernetes-nginx-ingress-controller/) and [documentation](https://github.com/kubernetes/ingress-nginx)
 
-The nginx ingress controller requires a 404-server like [this]( https://github.com/kubernetes/ingress-nginx/tree/master/images/404-server )
+The nginx ingress controller requires a 404-server like [this](https://github.com/kubernetes/ingress-nginx/tree/master/images/404-server)
 
 #### Alternative ingress controllers
 
-- Install [https://traefik.io/]( https://traefik.io/ )
+- Install [https://traefik.io/](https://traefik.io/)

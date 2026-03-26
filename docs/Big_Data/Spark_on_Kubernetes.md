@@ -9,7 +9,7 @@ tags: Kubernetes MiniKube Kubectl Spark
 
 ## Running Spark on Kubernetes
 
-[Main Page]( https://spark.apache.org/docs/latest/running-on-kubernetes.html )
+[Main Page](https://spark.apache.org/docs/latest/running-on-kubernetes.html)
 
 Prerequisites:
 
@@ -32,7 +32,7 @@ To check the version, enter ``kubectl version``.
 minikube addons list
 ```
 
-[Kubernetes DNS Page]( https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/ )
+[Kubernetes DNS Page](https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/)
 
 - Start minikube with the recommended configuration for Spark
 
@@ -69,13 +69,13 @@ kubectl -n=<namespace> logs -f <driver-pod-name>
 kubectl port-forward <driver-pod-name> 4040:4040
 ```
 
-Then go to [https://localhost:4040]( https://localhost:4040 )
+Then go to [https://localhost:4040](https://localhost:4040)
 
 ## Alternatives
 
-[Helm Chart for Spark]( https://github.com/kubernetes/charts/tree/master/stable/spark )
+[Helm Chart for Spark](https://github.com/kubernetes/charts/tree/master/stable/spark)
 
-[The same on KubeApps]( https://hub.kubeapps.com/charts/stable/spark )
+[The same on KubeApps](https://hub.kubeapps.com/charts/stable/spark)
 
 ```shell
 helm install --name my-spark-release --version 0.1.12 stable/spark

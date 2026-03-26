@@ -92,6 +92,4 @@ output {
 
 ## Interesting Plugins
 
-[Stanford NLP library logstash plugin](
-https://github.com/jwconway/logstash-filter-stanford-nlp
-)
+[Stanford NLP library logstash plugin](https://github.com/jwconway/logstash-filter-stanford-nlp)

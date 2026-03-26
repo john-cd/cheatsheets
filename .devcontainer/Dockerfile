@@ -5,7 +5,7 @@
 
 ARG WORK_DIR="/code"
 
-ARG PYTHON_VERSION=3.12
+ARG PYTHON_VERSION=3.13
 FROM python:${PYTHON_VERSION}-slim as base
 
 # Prevents Python from writing pyc files.
@@ -16,11 +16,9 @@ ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
 RUN pip install mkdocs \
-    && pip install mkdocs-material
-## https://github.com/byrnereese/mkdocs-minify-plugin
-#RUN pip install mkdocs-minify-plugin
-## https://github.com/mkdocs/mkdocs-redirects
-#RUN pip install mkdocs-redirects
+    mkdocs-material \
+    mkdocs-minify-plugin \
+    mkdocs-redirects
 
 ARG WORK_DIR
 WORKDIR $WORK_DIR
@@ -33,7 +31,7 @@ FROM base AS dev
 # Caching per https://docs.docker.com/build/cache/
 RUN --mount=type=cache,target=/var/cache/apt \
     apt-get update && export DEBIAN_FRONTEND=noninteractive \
-    && apt-get -y install --no-install-recommends git pipx
+    && apt-get install -y --no-install-recommends git pipx
 
 ARG USERNAME=vscode
 ARG USER_UID=1000
@@ -45,7 +43,7 @@ RUN groupadd --gid $USER_GID $USERNAME \
     && useradd --uid $USER_UID --gid $USER_GID -m $USERNAME \
     # Add sudo support. Omit if you don't need to install software after connecting.
     && apt-get update \
-    && apt-get install -y sudo \
+    && apt-get install -y --no-install-recommends sudo \
     && echo $USERNAME ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$USERNAME \
     && chmod 0440 /etc/sudoers.d/$USERNAME
 

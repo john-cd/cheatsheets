@@ -1,18 +1,18 @@
 ## Useful Links
 
-[https://maven.apache.org/]( https://maven.apache.org/ )
+[https://maven.apache.org/](https://maven.apache.org/)
 
-[Maven Cheatsheet]( https://eckobar.files.wordpress.com/2007/02/maven-cheatsheet.pdf )
+[Maven Cheatsheet](https://eckobar.files.wordpress.com/2007/02/maven-cheatsheet.pdf)
 
-[Maven Quick Ref]( https://maven.apache.org/guides/MavenQuickReferenceCard.pdf )
+[Maven Quick Ref](https://maven.apache.org/guides/MavenQuickReferenceCard.pdf)
 
-[Apache-maven-2]( https://dzone.com/refcardz/apache-maven-2 )
+[Apache-maven-2](https://dzone.com/refcardz/apache-maven-2)
 
-[Maven Basics]( https://deeplearning4j.org/maven.html )
+[Maven Basics](https://deeplearning4j.org/maven.html)
 
-[Maven Download / Install]( https://maven.apache.org/download.cgi )
+[Maven Download / Install](https://maven.apache.org/download.cgi)
 
-[Nexus]( https://www.sonatype.com/nexus-repository-oss )
+[Nexus](https://www.sonatype.com/nexus-repository-oss)
 
 ## Basics
 
@@ -49,8 +49,8 @@ Without customization, source code is assumed to be in ``${basedir}/src/main/jav
 Tests are assumed to be in ``${basedir}/src/test``, and a project is assumed to produce a JAR file.
 Maven assumes that you want the compile bytecode to ``${basedir}/target/classes`` and then create a distributable JAR file in ``${basedir}/target``
 
-For [WAR files]( https://en.wikipedia.org/wiki/WAR_(file_format) ), the ``/WEB-INF`` directory  contains a file named ``web.xml`` which defines the structure of the web application.
-See  also [Tomcat Deployment guide]( https://tomcat.apache.org/tomcat-7.0-doc/appdev/deployment.html )
+For [WAR files](https://en.wikipedia.org/wiki/WAR_(file_format)), the ``/WEB-INF`` directory  contains a file named ``web.xml`` which defines the structure of the web application.
+See  also [Tomcat Deployment guide](https://tomcat.apache.org/tomcat-7.0-doc/appdev/deployment.html)
 
 ## Cheatsheet
 
@@ -131,7 +131,7 @@ You can run ``mvn site`` and then find an ``index.html`` file in ``target/site``
 
 ## POM files
 
-Use the search engine at [repository.sonatype.org]( https://repository.sonatype.org ) to find dependencies by name and get the ``xml`` necessary to paste into your ``pom.xml``
+Use the search engine at [repository.sonatype.org](https://repository.sonatype.org) to find dependencies by name and get the ``xml`` necessary to paste into your ``pom.xml``
 
 ```xml
 <project>

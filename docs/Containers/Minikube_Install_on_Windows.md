@@ -5,10 +5,10 @@ tags: Kubernetes MiniKube Kubectl
 
 ## Install ``minikube`` on Windows
 
-[Minikube]( https://kubernetes.io/docs/tasks/tools/install-minikube/ ) runs a single-node Kubernetes cluster inside a VM on your laptop for users looking to try out Kubernetes or develop with it day-to-day.
+[Minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/) runs a single-node Kubernetes cluster inside a VM on your laptop for users looking to try out Kubernetes or develop with it day-to-day.
 
 - For Windows, install [VirtualBox](https://www.virtualbox.org/wiki/Downloads) or Hyper-V first.
-- Minikube is distributed in binary form: [GitHub Repo]( https://github.com/kubernetes/minikube/releases ). Download the minikube-installer.exe file, and execute the installer. This should automatically add minikube.exe to your path with an uninstaller available as well.
+- Minikube is distributed in binary form: [GitHub Repo](https://github.com/kubernetes/minikube/releases). Download the minikube-installer.exe file, and execute the installer. This should automatically add minikube.exe to your path with an uninstaller available as well.
 - If needed, add ``C:\Program Files (x86)\Kubernetes\minikube`` or similar to the PATH (in ``System Settings`` > ``Environment Variables``)
 - Test that minikube works:
 
@@ -16,11 +16,11 @@ tags: Kubernetes MiniKube Kubectl
 minikube
 ```
 
-More info at [Getting Started]( https://kubernetes.io/docs/getting-started-guides/minikube/ )
+More info at [Getting Started](https://kubernetes.io/docs/getting-started-guides/minikube/)
 
 ## Install ``kubectl``
 
-Use a version of [kubectl]( https://kubernetes.io/docs/tasks/tools/install-kubectl/ ) that is the same version as your server or later. Using an older ``kubectl`` with a newer server might produce validation errors.
+Use a version of [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) that is the same version as your server or later. Using an older ``kubectl`` with a newer server might produce validation errors.
 
 On Windows 10 (using Git Bash):
 
@@ -30,7 +30,7 @@ curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.10.0/bin/w
 
 OR
 
-[Install Choco]( https://chocolatey.org/install )
+[Install Choco](https://chocolatey.org/install)
 
 Then
 
@@ -93,7 +93,7 @@ kubectl.exe
 
 ## Run ``minikube``
 
-[Running Kubernetes Locally via Minikube]( https://kubernetes.io/docs/getting-started-guides/minikube/ )
+[Running Kubernetes Locally via Minikube](https://kubernetes.io/docs/getting-started-guides/minikube/)
 
 - Install [curl]( https://curl.haxx.se/)
 
@@ -158,9 +158,9 @@ kubectl delete service hello-minikube
 minikube stop
 ```
 
-## Install [Helm]( https://helm.sh/ )
+## Install [Helm](https://helm.sh/)
 
-Helm is a package manager for Kubernetes. Download a binary release of the Helm client from [here]( https://github.com/kubernetes/helm/releases )
+Helm is a package manager for Kubernetes. Download a binary release of the Helm client from [here](https://github.com/kubernetes/helm/releases)
 
 - Once you have Helm ready, you can initialize the local CLI and also install Tiller into your Kubernetes cluster in one step:
 
