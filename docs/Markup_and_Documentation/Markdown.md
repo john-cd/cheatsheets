@@ -6,6 +6,8 @@ tags: github
 
 # Markdown Essentials
 
+Markdown is a lightweight markup language for creating formatted text using a plain-text editor. It is widely used in blogging, instant messaging, online forums, and collaborative software.
+
 [Markdown main site](https://daringfireball.net/projects/markdown/)
 
 [GitHub Flavored Markdown Guide](https://guides.github.com/features/mastering-markdown/)
@@ -106,12 +108,12 @@ def wiki_rocks(text):
 
 [GitHub Pages documentation](https://help.github.com/categories/github-pages-basics/)
 
-GitHub Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/john-cd/john-cd.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+GitHub Pages site will use the layout and styles from the Jekyll theme you have selected in your repository settings. The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
 ## Bitbucket
 
 Bitbucket doesn't support arbitrary HTML in Markdown, it instead uses safe mode.
-[Safe mode](https://pythonhosted.org/Markdown/reference.html#safe_mode) requires that you replace, remove, or escape HTML tags appropriately.
+Safe mode requires that you replace, remove, or escape HTML tags appropriately.
 
 Code highlighting to bitbucket README.md written in Python Markdown
 

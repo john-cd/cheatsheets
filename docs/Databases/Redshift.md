@@ -4,6 +4,8 @@ category: databases
 tags: Redshift DW Warehouse
 ---
 
+Amazon Redshift is a fully managed, petabyte-scale data warehouse service in the cloud. You can analyze all your data using standard SQL and your existing Business Intelligence (BI) tools.
+
 ## Redshift Best Practices
 
 - Smaller node types load data faster

@@ -8,6 +8,10 @@ tags:
 
 ## Python environments
 
+[uv](https://github.com/astral-sh/uv)
+
+An extremely fast Python package installer and resolver, written in Rust. Designed as a drop-in replacement for `pip` and `pip-tools`.
+
 [venv — Creation of virtual environments](https://docs.python.org/3/library/venv.html)
 
 ```bash

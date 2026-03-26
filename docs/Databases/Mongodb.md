@@ -5,6 +5,8 @@ tags: NoSQL
 comments: true
 ---
 
+MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas.
+
 ## Import from CSV
 
 ```bash
@@ -14,7 +16,7 @@ mongoimport --db users --collection contacts --type csv --headerline --file cont
 Specifying `--headerline` instructs mongoimport to determine the name of the fields using the first line in the CSV file.
 Use the `--ignoreBlanks` option to ignore blank fields. For CSV and TSV imports, this option provides the desired functionality in most cases, because it avoids inserting fields with null values into your collection.
 
-[MongoImport documentation](https://docs.mongodb.org/manual/reference/program/mongoimport/ )
+[MongoImport documentation](https://www.mongodb.com/docs/database-tools/mongoimport/)
 
 ## Print from a Cursor
 

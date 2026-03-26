@@ -4,6 +4,8 @@ category: python
 tags:
 ---
 
+Python 3 is the current version of the Python programming language. It is a high-level, general-purpose programming language that emphasizes code readability with its notable use of significant indentation.
+
 ## What's new in Python 3.x
 
 [What's really new in Python 3](https://powerfulpython.com/blog/whats-really-new-in-python-3/)

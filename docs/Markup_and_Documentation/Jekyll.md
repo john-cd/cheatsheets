@@ -8,6 +8,8 @@ tags: blog jekyll
 
 # Jekyll Basics
 
+Jekyll is a simple, blog-aware, static site generator. It takes your text written in your favorite markup language and uses layouts to create a static website. You can tweak the site's look and feel, URLs, the data displayed on the page, and more.
+
 [Jekyll Home Page](https://jekyllrb.com)
 
 Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
@@ -18,7 +20,6 @@ Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most ou
 
 [Jekyll source code](https://github.com/jekyll/jekyll)
 
-[Guide to basic Jekyll](https://jmcglone.com/guides/github-pages/)
 
 ## Jekyll Install How-To
 

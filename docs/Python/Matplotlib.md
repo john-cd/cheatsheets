@@ -6,14 +6,12 @@ tags: data visualization
 
 # Matplotlib Cheatsheet
 
-Matplotlib prepares 2D (and some 3D) graphics.
+Matplotlib is a comprehensive library for creating static, animated, and interactive visualizations in Python. Matplotlib prepares 2D (and some 3D) graphics.
 
-- Main page: <https://www.matplotlib.org>
-- Image gallery: <https://matplotlib.org/gallery.html>
-- pyplot command summary: <https://matplotlib.org/api/pyplot_summary.html>
-- Examples <https://matplotlib.org/examples/index.html>
-- Tutorial: <https://www.loria.fr/~rougier/teaching/matplotlib/>
-- See also: <https://www.wakari.io/nb/url///wakari.io/static/notebooks/Lecture_4_Matplotlib.ipynb>
+- Main page: <https://matplotlib.org>
+- Image gallery: <https://matplotlib.org/stable/gallery/index.html>
+- Examples <https://matplotlib.org/stable/plot_types/index.html>
+- Tutorial: <https://matplotlib.org/stable/tutorials/index.html>
 
 ## Matplotlib, pylab, and pyplot: how are they related?
 

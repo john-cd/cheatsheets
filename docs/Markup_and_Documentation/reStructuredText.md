@@ -4,11 +4,13 @@ category: markup
 tags: python
 ---
 
-# [reStructuredText](https://docutils.sourceforge.net/rst.html)
+reStructuredText is an easy-to-read, what-you-see-is-what-you-get plaintext markup syntax and parser system. It is useful for in-line program documentation (such as Python docstrings), for quickly creating simple web pages, and for standalone documents.
 
-[reStructuredText Quick Ref](https://docutils.sourceforge.net/docs/user/rst/quickref.html)
+# [reStructuredText](https://docutils.sourceforge.io/rst.html)
 
-[reStructuredText Cheat Sheet](https://docutils.sourceforge.net/docs/user/rst/cheatsheet.txt)  (see below)
+[reStructuredText Quick Ref](https://docutils.sourceforge.io/docs/user/rst/quickref.html)
+
+[reStructuredText Cheat Sheet](https://docutils.sourceforge.io/docs/user/rst/cheatsheet.txt)  (see below)
 
 ## reST Short Overview
 
@@ -68,7 +70,7 @@ This is a normal text paragraph again.
 
 ## Links
 
- `Link text <https://target>`_ for inline web links.
+ `Link text <https://example.com>`_ for inline web links.
 
 ## Definitions
 
@@ -169,7 +171,7 @@ and normal paragraphs.
 ## Inline markup
 
 ```txt
- :rolename:`content`  or  :role:`title <target>`
+ :rolename:`content`  or  :role:`title <example.com>`
 
  :meth:`~Queue.Queue.get` will refer to Queue.Queue.get but only display get as the link text.
 ```
@@ -214,7 +216,7 @@ The name of an exception. A dotted name may be used.
  =====================================================
   The reStructuredText_ Cheat Sheet: Syntax Reminders
  =====================================================
- :Info: See <https://docutils.sf.net/rst.html> for introductory docs.
+ :Info: See <https://docutils.sourceforge.io/rst.html> for introductory docs.
  :Author: David Goodger <goodger@python.org>
  :Date: $Date: 2013-02-20 01:10:53 +0000 (Wed, 20 Feb 2013) $
  :Revision: $Revision: 7612 $
@@ -265,10 +267,10 @@ The name of an exception. A dotted name may be used.
  Footnote          .. [1] Manually numbered or [#] auto-numbered
        (even [#labelled]) or [*] auto-symbol
  Citation          .. [CIT2002] A citation.
- Hyperlink Target  .. _reStructuredText: https://docutils.sf.net/rst.html
+ Hyperlink Target  .. _reStructuredText: https://docutils.sourceforge.io/rst.html
        .. _indirect target: reStructuredText_
        .. _internal target:
- Anonymous Target  __ https://docutils.sf.net/docs/ref/rst/restructuredtext.html
+ Anonymous Target  __ https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html
  Directive ("::")  .. image:: images/biohazard.png
  Substitution Def  .. |substitution| replace:: like an inline directive
  Comment           .. is anything else
@@ -280,13 +282,13 @@ The name of an exception. A dotted name may be used.
  =============
  *emphasis*; **strong emphasis**; `interpreted text`; `interpreted text
  with role`:emphasis:; ``inline literal text``; standalone hyperlink,
- https://docutils.sourceforge.net; named reference, reStructuredText_;
+ https://docutils.sourceforge.io; named reference, reStructuredText_;
  `anonymous reference`__; footnote reference, [1]_; citation reference,
  [CIT2002]_; |substitution|; _`inline internal target`.
 
  Directive Quick Reference
  =========================
- See <https://docutils.sf.net/docs/ref/rst/directives.html> for full info.
+ See <https://docutils.sourceforge.io/docs/ref/rst/directives.html> for full info.
 
  ================  ============================================================
  Directive Name    Description (Docutils version added to, in [brackets])
@@ -327,7 +329,7 @@ The name of an exception. A dotted name may be used.
 
  Interpreted Text Role Quick Reference
  =====================================
- See <https://docutils.sf.net/docs/ref/rst/roles.html> for full info.
+ See <https://docutils.sourceforge.io/docs/ref/rst/roles.html> for full info.
 
  ================  ============================================================
  Role Name         Description

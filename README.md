@@ -21,8 +21,7 @@ If you use [Visual Studio Code](https://code.visualstudio.com/), install the [De
 Alternatively, install the required tools on your development machine directly, including [Python](https://www.python.org/), and [Docker](https://www.docker.com/).
 
 ```shell
-python -m pip install mkdocs --user
-python -m pip install mkdocs-material --user
+uv tool install mkdocs --with mkdocs-material --with mkdocs-minify-plugin --with mkdocs-redirects
 ```
 
 ### Basic MkDocs Commands

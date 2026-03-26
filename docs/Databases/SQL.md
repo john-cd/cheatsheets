@@ -6,6 +6,8 @@ tags: SQL RDBMS
 
 # SQL Cheatsheet
 
+Structured Query Language (SQL) is a domain-specific language used in programming and designed for managing data held in a relational database management system (RDBMS). It is particularly useful in handling structured data.
+
 ## DML: SELECT
 
 *Filter*:
