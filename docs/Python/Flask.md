@@ -6,7 +6,15 @@ tags: web
 
 # Flask
 
-Flask is a lightweight WSGI web application framework.
+## Useful Flask modules
+
+[Flask-Login](https://pypi.org/project/Flask-Login/)
+
+[Flask-SSLify](https://pypi.org/project/Flask-SSLify/)
+
+[Flask-RESTPlus](https://flask-restplus.readthedocs.io/en/stable/)
+
+[Building beautiful REST APIs using Flask, Swagger UI and Flask-RESTPlus](https://michal.karzynski.pl/blog/2016/06/19/building-beautiful-restful-apis-using-flask-swagger-ui-flask-restplus/)
 
 ## Modern Flask (3.x) Best Practices
 
@@ -37,10 +45,3 @@ def create_app(test_config=None):
 
     return app
 ```
-
-### Useful Flask modules
-
-[Flask-Login](https://pypi.org/project/Flask-Login/)
-
-[Flask-RESTful](https://flask-restful.readthedocs.io/en/latest/)
-

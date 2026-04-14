@@ -4,7 +4,7 @@ category: scala
 tags:
 ---
 
-Examples from [Scala Koans](htpp://scalakoans.org).
+Examples from [Scala Koans](http://scalakoans.org).
 
 ## Core Packages
 
@@ -373,6 +373,5 @@ Scala can implicitly convert from a Scala collection type into a Java collection
 import scala.collection.JavaConversions._
 ```
 
-## Missing Links Replaced
-
+## Updated Links
 [Scala Collections Documentation](https://docs.scala-lang.org/overviews/collections/introduction.html)

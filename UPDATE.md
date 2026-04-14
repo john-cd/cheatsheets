@@ -209,8 +209,8 @@ The goal is to ensure all cheatsheets remain technical, very concise, and direct
 - [x] Update to newest version: Refresh obsolete dates and versions.
 
 ### docs/Search/ElasticSearch.md
-- [x] Update to newest version: Refresh to ElasticSearch 8.x.
-- [x] File splitting: Break out plugins, APIs, and architectures. Remove Sense/Kopf and obsolete references.
+- [ ] Update to newest version: Refresh to ElasticSearch 8.x.
+- [ ] File splitting: Break out plugins, APIs, and architectures. Remove Sense/Kopf and obsolete references.
 
 ### docs/Search/Logstash.md
 - [ ] Update to newest version: Align with latest ELK stack.

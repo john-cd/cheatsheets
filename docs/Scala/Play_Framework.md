@@ -6,13 +6,11 @@ tag: Scala Akka Play Web REST
 
 ## Links
 
-[Play Framework Documentation](https://www.playframework.com/documentation/3.0.x/Home)
-
-Play 3.0 uses Apache Pekko instead of Akka.
+[Play Framework](https://playframework.com/documentation/)
 
 ## The Play application layout
 
-The layout of a Play application is standardized to keep things as simple as possible.
+The layout of a Play application is standardized to keep things as simple as possible. After a first successful compile, a Play application looks like this:
 
 ```txt
 app                      → Application sources
@@ -23,16 +21,33 @@ app                      → Application sources
  └ models                → Application business layer
  └ views                 → Templates
 build.sbt                → Application build script
-conf                     → Configuration files and other non-compiled resources (on classpath)
+conf                     → Configurations files and other non-compiled resources (on classpath)
  └ application.conf      → Main configuration file
  └ routes                → Routes definition
-dist                     → Arbitrary files that should be included in your projects distribution
-project                  → sbt configuration files
- └ build.properties      → Marker for sbt project
- └ plugins.sbt           → sbt plugins including the declaration for Play itself
+dist                     → Arbitrary files to be included in your projects distribution
 public                   → Public assets
  └ stylesheets           → CSS files
  └ javascripts           → Javascript files
  └ images                → Image files
+project                  → sbt configuration files
+ └ build.properties      → Marker for sbt project
+ └ plugins.sbt           → sbt plugins including the declaration for Play itself
+lib                      → Unmanaged libraries dependencies
+logs                     → Logs folder
+ └ application.log       → Default log file
+target                   → Generated stuff
+ └ resolution-cache      → Info about dependencies
+ └ scala-2.11
+    └ api                → Generated API docs
+    └ classes            → Compiled class files
+    └ routes             → Sources generated from routes
+    └ twirl              → Sources generated from templates
+ └ universal             → Application packaging
+ └ web                   → Compiled web assets
 test                     → source folder for unit or functional tests
 ```
+
+## Play 3.x
+Play 3.0 uses Apache Pekko instead of Akka.
+
+[Play Framework Documentation](https://www.playframework.com/documentation/3.0.x/Home)

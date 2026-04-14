@@ -6,8 +6,7 @@ tags: data
 
 ## Useful Links
 
-[Scikit-Learn Documentation](https://scikit-learn.org/stable/)
-
+[Cheatsheet- Scikit-Learn & Caret Package for Python & R respectively](https://www.analyticsvidhya.com/blog/2016/12/cheatsheet-scikit-learn-caret-package-for-python-r-respectively/?utm_content=buffer3140b&utm_medium=social&utm_source=linkedin.com&utm_campaign=buffer)
 ## Modern API Features
 
 - **Pipeline**: `make_pipeline` for easier composition.
