@@ -12,7 +12,7 @@ The goal is to ensure all cheatsheets remain technical, very concise, and direct
 ## Files
 
 ### docs/Big_Data/Hadoop_Ecosystem.md
-- [ ] Formatting
+- [ ] Formatting *(needs code examples)*
 - [ ] Expansion
 - [ ] Link additions
 - [ ] Update to newest version
@@ -22,28 +22,28 @@ The goal is to ensure all cheatsheets remain technical, very concise, and direct
 - [ ] Formatting
 - [ ] Expansion
 - [ ] Link additions
-- [ ] Update to newest version
+- [ ] Update to newest version *(Spark 2.x, Python 2.x, Java 8, Scala 2.11)*
 - [ ] Assess for removal if obsolete
 
 ### docs/Big_Data/Spark_APIs.md
 - [ ] Formatting
 - [ ] Expansion
-- [ ] Link additions
+- [ ] Link additions *(no links found)*
 - [ ] Update to newest version
 - [ ] Assess for removal if obsolete
 
 ### docs/Big_Data/Spark_Basics.md
-- [ ] Formatting
+- [ ] Formatting *(needs code examples)*
 - [ ] Expansion
 - [ ] Link additions
-- [ ] Update to newest version
+- [ ] Update to newest version *(mentions old dates)*
 - [ ] Assess for removal if obsolete
 
 ### docs/Big_Data/Spark_Development_with_sbt_and_InteliJ.md
 - [ ] Formatting
 - [ ] Expansion
 - [ ] Link additions
-- [ ] Update to newest version
+- [ ] Update to newest version *(mentions old dates)*
 - [ ] Assess for removal if obsolete
 
 ### docs/Big_Data/Spark_on_AWS_EMR.md
@@ -64,7 +64,7 @@ The goal is to ensure all cheatsheets remain technical, very concise, and direct
 - [ ] Formatting
 - [ ] Expansion
 - [ ] Link additions
-- [ ] Update to newest version
+- [ ] Update to newest version *(Spark 2.x)*
 - [ ] Assess for removal if obsolete
 
 ### docs/Cloud/AWS.md
@@ -76,7 +76,7 @@ The goal is to ensure all cheatsheets remain technical, very concise, and direct
 
 ### docs/Cloud/AWS_Lambda.md
 - [ ] Formatting
-- [ ] Expansion
+- [ ] Expansion *(very brief, <50 words)*
 - [ ] Link additions
 - [ ] Update to newest version
 - [ ] Assess for removal if obsolete
@@ -91,7 +91,7 @@ The goal is to ensure all cheatsheets remain technical, very concise, and direct
 ### docs/Containers/Debug_Kubernetes.md
 - [ ] Formatting
 - [ ] Expansion
-- [ ] Link additions
+- [ ] Link additions *(no links found)*
 - [ ] Update to newest version
 - [ ] Assess for removal if obsolete
 
@@ -99,14 +99,14 @@ The goal is to ensure all cheatsheets remain technical, very concise, and direct
 - [ ] Formatting
 - [ ] Expansion
 - [ ] Link additions
-- [ ] Update to newest version
+- [ ] Update to newest version *(mentions old dates)*
 - [ ] Assess for removal if obsolete
 
 ### docs/Containers/Deploy_to_Kubernetes.md
 - [ ] Formatting
 - [ ] Expansion
 - [ ] Link additions
-- [ ] Update to newest version
+- [ ] Update to newest version *(mentions old dates)*
 - [ ] Assess for removal if obsolete
 
 ### docs/Containers/Docker.md
@@ -131,16 +131,16 @@ The goal is to ensure all cheatsheets remain technical, very concise, and direct
 - [ ] Assess for removal if obsolete
 
 ### docs/Containers/Kubernetes_Concepts.md
-- [ ] Formatting
+- [ ] Formatting *(needs code examples)*
 - [ ] Expansion
-- [ ] Link additions
+- [ ] Link additions *(no links found)*
 - [ ] Update to newest version
 - [ ] Assess for removal if obsolete
 
 ### docs/Containers/Kubernetes_Examples.md
 - [ ] Formatting
 - [ ] Expansion
-- [ ] Link additions
+- [ ] Link additions *(no links found)*
 - [ ] Update to newest version
 - [ ] Assess for removal if obsolete
 
@@ -159,7 +159,7 @@ The goal is to ensure all cheatsheets remain technical, very concise, and direct
 - [ ] Assess for removal if obsolete
 
 ### docs/Data_Science/Data_Manipulation.md
-- [ ] Formatting
+- [ ] Formatting *(needs code examples)*
 - [ ] Expansion
 - [ ] Link additions
 - [ ] Update to newest version
@@ -169,21 +169,21 @@ The goal is to ensure all cheatsheets remain technical, very concise, and direct
 - [ ] Formatting
 - [ ] Expansion
 - [ ] Link additions
-- [ ] Update to newest version
+- [ ] Update to newest version *(mentions old dates)*
 - [ ] Assess for removal if obsolete
 
 ### docs/Data_Science/Deep_Learning.md
 - [ ] Formatting
 - [ ] Expansion
 - [ ] Link additions
-- [ ] Update to newest version
+- [ ] Update to newest version *(mentions old dates)*
 - [ ] Assess for removal if obsolete
 
 ### docs/Data_Science/Dimensionality_Reduction.md
 - [ ] Formatting
-- [ ] Expansion
+- [ ] Expansion *(very brief, <50 words)*
 - [ ] Link additions
-- [ ] Update to newest version
+- [ ] Update to newest version *(mentions old dates)*
 - [ ] Assess for removal if obsolete
 
 ### docs/Data_Science/Keras.md
@@ -194,7 +194,7 @@ The goal is to ensure all cheatsheets remain technical, very concise, and direct
 - [ ] Assess for removal if obsolete
 
 ### docs/Data_Science/Machine_Learning.md
-- [ ] Formatting
+- [ ] Formatting *(needs code examples)*
 - [ ] Expansion
 - [ ] Link additions
 - [ ] Update to newest version
@@ -202,16 +202,16 @@ The goal is to ensure all cheatsheets remain technical, very concise, and direct
 
 ### docs/Data_Science/Recommenders.md
 - [ ] Formatting
-- [ ] Expansion
+- [ ] Expansion *(very brief, <50 words)*
 - [ ] Link additions
 - [ ] Update to newest version
 - [ ] Assess for removal if obsolete
 
 ### docs/Data_Science/scikit-learn.md
 - [ ] Formatting
-- [ ] Expansion
+- [ ] Expansion *(very brief, <50 words)*
 - [ ] Link additions
-- [ ] Update to newest version
+- [ ] Update to newest version *(mentions old dates)*
 - [ ] Assess for removal if obsolete
 
 ### docs/Databases/Mongodb.md
@@ -219,27 +219,27 @@ The goal is to ensure all cheatsheets remain technical, very concise, and direct
 - [ ] Expansion
 - [ ] Link additions
 - [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] Assess for removal if obsolete *(contains deprecated/obsolete keywords)*
 
 ### docs/Databases/Redshift.md
-- [ ] Formatting
+- [ ] Formatting *(needs code examples)*
 - [ ] Expansion
-- [ ] Link additions
+- [ ] Link additions *(no links found)*
 - [ ] Update to newest version
 - [ ] Assess for removal if obsolete
 
 ### docs/Databases/SQL.md
 - [ ] Formatting
 - [ ] Expansion
-- [ ] Link additions
-- [ ] Update to newest version
+- [ ] Link additions *(no links found)*
+- [ ] Update to newest version *(mentions old dates)*
 - [ ] Assess for removal if obsolete
 
 ### docs/DevOps/CloudFormation.md
 - [ ] Formatting
 - [ ] Expansion
 - [ ] Link additions
-- [ ] Update to newest version
+- [ ] Update to newest version *(mentions old dates)*
 - [ ] Assess for removal if obsolete
 
 ### docs/DevOps/Git.md
@@ -253,7 +253,7 @@ The goal is to ensure all cheatsheets remain technical, very concise, and direct
 - [ ] Formatting
 - [ ] Expansion
 - [ ] Link additions
-- [ ] Update to newest version
+- [ ] Update to newest version *(mentions old dates)*
 - [ ] Assess for removal if obsolete
 
 ### docs/Java/Gradle.md
@@ -267,14 +267,14 @@ The goal is to ensure all cheatsheets remain technical, very concise, and direct
 - [ ] Formatting
 - [ ] Expansion
 - [ ] Link additions
-- [ ] Update to newest version
+- [ ] Update to newest version *(mentions old dates)*
 - [ ] Assess for removal if obsolete
 
 ### docs/Java/Log4j.md
 - [ ] Formatting
 - [ ] Expansion
 - [ ] Link additions
-- [ ] Update to newest version
+- [ ] Update to newest version *(Java 8)*
 - [ ] Assess for removal if obsolete
 
 ### docs/Java/Maven.md
@@ -285,7 +285,7 @@ The goal is to ensure all cheatsheets remain technical, very concise, and direct
 - [ ] Assess for removal if obsolete
 
 ### docs/Java/Spring.md
-- [ ] Formatting
+- [ ] Formatting *(needs code examples)*
 - [ ] Expansion
 - [ ] Link additions
 - [ ] Update to newest version
@@ -295,12 +295,12 @@ The goal is to ensure all cheatsheets remain technical, very concise, and direct
 - [ ] Formatting
 - [ ] Expansion
 - [ ] Link additions
-- [ ] Update to newest version
+- [ ] Update to newest version *(mentions old dates)*
 - [ ] Assess for removal if obsolete
 
 ### docs/Linux/Virtualization.md
 - [ ] Formatting
-- [ ] Expansion
+- [ ] Expansion *(very brief, <50 words)*
 - [ ] Link additions
 - [ ] Update to newest version
 - [ ] Assess for removal if obsolete
@@ -309,7 +309,7 @@ The goal is to ensure all cheatsheets remain technical, very concise, and direct
 - [ ] Formatting
 - [ ] Expansion
 - [ ] Link additions
-- [ ] Update to newest version
+- [ ] Update to newest version *(mentions old dates)*
 - [ ] Assess for removal if obsolete
 
 ### docs/Markup_and_Documentation/Markdown.md
@@ -330,41 +330,41 @@ The goal is to ensure all cheatsheets remain technical, very concise, and direct
 - [ ] Formatting
 - [ ] Expansion
 - [ ] Link additions
-- [ ] Update to newest version
+- [ ] Update to newest version *(mentions old dates)*
 - [ ] Assess for removal if obsolete
 
 ### docs/Microservices/Microservices.md
 - [ ] Formatting
-- [ ] Expansion
+- [ ] Expansion *(very brief, <50 words)*
 - [ ] Link additions
 - [ ] Update to newest version
 - [ ] Assess for removal if obsolete
 
 ### docs/Privacy/Privacy_engineering.md
 - [ ] Formatting
-- [ ] Expansion
+- [ ] Expansion *(very brief, <50 words)*
 - [ ] Link additions
 - [ ] Update to newest version
 - [ ] Assess for removal if obsolete
 
 ### docs/Python/Flask.md
 - [ ] Formatting
-- [ ] Expansion
+- [ ] Expansion *(very brief, <50 words)*
 - [ ] Link additions
-- [ ] Update to newest version
+- [ ] Update to newest version *(mentions old dates)*
 - [ ] Assess for removal if obsolete
 
 ### docs/Python/Jupyter.md
 - [ ] Formatting
 - [ ] Expansion
 - [ ] Link additions
-- [ ] Update to newest version
+- [ ] Update to newest version *(mentions old dates)*
 - [ ] Assess for removal if obsolete
 
 ### docs/Python/Matplotlib.md
 - [ ] Formatting
 - [ ] Expansion
-- [ ] Link additions
+- [ ] Link additions *(no links found)*
 - [ ] Update to newest version
 - [ ] Assess for removal if obsolete
 
@@ -385,7 +385,7 @@ The goal is to ensure all cheatsheets remain technical, very concise, and direct
 ### docs/Scala/Akka.md
 - [ ] Formatting
 - [ ] Expansion
-- [ ] Link additions
+- [ ] Link additions *(no links found)*
 - [ ] Update to newest version
 - [ ] Assess for removal if obsolete
 
@@ -399,13 +399,13 @@ The goal is to ensure all cheatsheets remain technical, very concise, and direct
 ### docs/Scala/Scala_Collections.md
 - [ ] Formatting
 - [ ] Expansion
-- [ ] Link additions
+- [ ] Link additions *(needs http/https links)*
 - [ ] Update to newest version
 - [ ] Assess for removal if obsolete
 
 ### docs/Scala/Scala_Database_Access.md
 - [ ] Formatting
-- [ ] Expansion
+- [ ] Expansion *(very brief, <50 words)*
 - [ ] Link additions
 - [ ] Update to newest version
 - [ ] Assess for removal if obsolete
@@ -450,20 +450,20 @@ The goal is to ensure all cheatsheets remain technical, very concise, and direct
 - [ ] Expansion
 - [ ] Link additions
 - [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] Assess for removal if obsolete *(contains deprecated/obsolete keywords)*
 
 ### docs/Scala/sbt.md
 - [ ] Formatting
 - [ ] Expansion
 - [ ] Link additions
-- [ ] Update to newest version
+- [ ] Update to newest version *(mentions old dates)*
 - [ ] Assess for removal if obsolete
 
 ### docs/Search/ElasticSearch.md
 - [ ] Formatting
 - [ ] Expansion
 - [ ] Link additions
-- [ ] Update to newest version
+- [ ] Update to newest version *(mentions old dates)*
 - [ ] Assess for removal if obsolete
 
 ### docs/Search/Logstash.md
@@ -474,7 +474,7 @@ The goal is to ensure all cheatsheets remain technical, very concise, and direct
 - [ ] Assess for removal if obsolete
 
 ### docs/Software_Development/Development_Tools.md
-- [ ] Formatting
+- [ ] Formatting *(needs code examples)*
 - [ ] Expansion
 - [ ] Link additions
 - [ ] Update to newest version
@@ -490,19 +490,19 @@ The goal is to ensure all cheatsheets remain technical, very concise, and direct
 ### docs/Software_Development/IntelliJ.md
 - [ ] Formatting
 - [ ] Expansion
-- [ ] Link additions
+- [ ] Link additions *(no links found)*
 - [ ] Update to newest version
 - [ ] Assess for removal if obsolete
 
 ### docs/Web/Bootstrap.md
 - [ ] Formatting
 - [ ] Expansion
-- [ ] Link additions
+- [ ] Link additions *(needs http/https links)*
 - [ ] Update to newest version
 - [ ] Assess for removal if obsolete
 
 ### docs/Web/CORS.md
-- [ ] Formatting
+- [ ] Formatting *(needs code examples)*
 - [ ] Expansion
 - [ ] Link additions
 - [ ] Update to newest version
@@ -519,7 +519,7 @@ The goal is to ensure all cheatsheets remain technical, very concise, and direct
 - [ ] Formatting
 - [ ] Expansion
 - [ ] Link additions
-- [ ] Update to newest version
+- [ ] Update to newest version *(mentions old dates)*
 - [ ] Assess for removal if obsolete
 
 ### docs/dotNET/ASPdotNET.md
@@ -532,7 +532,7 @@ The goal is to ensure all cheatsheets remain technical, very concise, and direct
 ### docs/dotNET/AkkadotNET.md
 - [ ] Formatting
 - [ ] Expansion
-- [ ] Link additions
+- [ ] Link additions *(no links found)*
 - [ ] Update to newest version
 - [ ] Assess for removal if obsolete
 
@@ -560,12 +560,12 @@ The goal is to ensure all cheatsheets remain technical, very concise, and direct
 ### docs/index.md
 - [ ] Formatting
 - [ ] Expansion
-- [ ] Link additions
+- [ ] Link additions *(no links found)*
 - [ ] Update to newest version
 - [ ] Assess for removal if obsolete
 
 ### drafts/Analytical_Tools.md
-- [ ] Formatting
+- [ ] Formatting *(needs code examples)*
 - [ ] Expansion
 - [ ] Link additions
 - [ ] Update to newest version
@@ -573,84 +573,84 @@ The goal is to ensure all cheatsheets remain technical, very concise, and direct
 
 ### drafts/Azure.md
 - [ ] Formatting
-- [ ] Expansion
+- [ ] Expansion *(very brief, <50 words)*
 - [ ] Link additions
 - [ ] Update to newest version
 - [ ] Assess for removal if obsolete
 
 ### drafts/Citizen_developer_tools.md
 - [ ] Formatting
-- [ ] Expansion
-- [ ] Link additions
+- [ ] Expansion *(very brief, <50 words)*
+- [ ] Link additions *(no links found)*
 - [ ] Update to newest version
 - [ ] Assess for removal if obsolete
 
 ### drafts/Cloud_Computing.md
 - [ ] Formatting
-- [ ] Expansion
+- [ ] Expansion *(very brief, <50 words)*
 - [ ] Link additions
 - [ ] Update to newest version
 - [ ] Assess for removal if obsolete
 
 ### drafts/DataScience.md
-- [ ] Formatting
+- [ ] Formatting *(needs code examples)*
 - [ ] Expansion
 - [ ] Link additions
-- [ ] Update to newest version
+- [ ] Update to newest version *(mentions old dates)*
 - [ ] Assess for removal if obsolete
 
 ### drafts/Data_Visualization.md
 - [ ] Formatting
-- [ ] Expansion
+- [ ] Expansion *(very brief, <50 words)*
 - [ ] Link additions
 - [ ] Update to newest version
 - [ ] Assess for removal if obsolete
 
 ### drafts/Databases.md
 - [ ] Formatting
-- [ ] Expansion
+- [ ] Expansion *(very brief, <50 words)*
 - [ ] Link additions
 - [ ] Update to newest version
 - [ ] Assess for removal if obsolete
 
 ### drafts/ELK.md
 - [ ] Formatting
-- [ ] Expansion
+- [ ] Expansion *(very brief, <50 words)*
 - [ ] Link additions
 - [ ] Update to newest version
 - [ ] Assess for removal if obsolete
 
 ### drafts/ETL.md
 - [ ] Formatting
-- [ ] Expansion
+- [ ] Expansion *(very brief, <50 words)*
 - [ ] Link additions
 - [ ] Update to newest version
 - [ ] Assess for removal if obsolete
 
 ### drafts/Hive.md
 - [ ] Formatting
-- [ ] Expansion
+- [ ] Expansion *(very brief, <50 words)*
 - [ ] Link additions
 - [ ] Update to newest version
 - [ ] Assess for removal if obsolete
 
 ### drafts/Java.md
 - [ ] Formatting
-- [ ] Expansion
+- [ ] Expansion *(very brief, <50 words)*
 - [ ] Link additions
 - [ ] Update to newest version
 - [ ] Assess for removal if obsolete
 
 ### drafts/Kong.md
 - [ ] Formatting
-- [ ] Expansion
+- [ ] Expansion *(very brief, <50 words)*
 - [ ] Link additions
 - [ ] Update to newest version
 - [ ] Assess for removal if obsolete
 
 ### drafts/Logging.md
 - [ ] Formatting
-- [ ] Expansion
+- [ ] Expansion *(very brief, <50 words)*
 - [ ] Link additions
 - [ ] Update to newest version
 - [ ] Assess for removal if obsolete
@@ -671,35 +671,35 @@ The goal is to ensure all cheatsheets remain technical, very concise, and direct
 
 ### drafts/Scala3.md
 - [ ] Formatting
-- [ ] Expansion
+- [ ] Expansion *(very brief, <50 words)*
 - [ ] Link additions
 - [ ] Update to newest version
 - [ ] Assess for removal if obsolete
 
 ### drafts/Software_Design.md
 - [ ] Formatting
-- [ ] Expansion
+- [ ] Expansion *(very brief, <50 words)*
 - [ ] Link additions
 - [ ] Update to newest version
 - [ ] Assess for removal if obsolete
 
 ### drafts/Stream_Processing.md
 - [ ] Formatting
-- [ ] Expansion
+- [ ] Expansion *(very brief, <50 words)*
 - [ ] Link additions
 - [ ] Update to newest version
 - [ ] Assess for removal if obsolete
 
 ### drafts/Terraform2.md
 - [ ] Formatting
-- [ ] Expansion
+- [ ] Expansion *(very brief, <50 words)*
 - [ ] Link additions
 - [ ] Update to newest version
 - [ ] Assess for removal if obsolete
 
 ### drafts/Windows_Tools.md
 - [ ] Formatting
-- [ ] Expansion
+- [ ] Expansion *(very brief, <50 words)*
 - [ ] Link additions
 - [ ] Update to newest version
 - [ ] Assess for removal if obsolete
