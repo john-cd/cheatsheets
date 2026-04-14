@@ -2,450 +2,314 @@
 
 This document tracks the update and improvement of all cheatsheets and markdown files in the repository.
 
-The goal is to ensure all cheatsheets remain technical, very concise, and directed at software engineers. For each file, the following tasks should be considered:
-- formatting
-- content refresh
-- content expansion
-- file splitting
-- link additions
-- updating of the contents to match newest version of the software or tool being discussed
-- removal if obsolete
+The goal is to ensure all cheatsheets remain technical, very concise, and directed at software engineers.
 
 ## Global Tasks
-- [ ] Add more code snippets for Docker and Python.
-- [ ] Update documentation structure for easier navigation.
+- [ ] **Update documentation structure for easier navigation** (e.g., group related topics, consolidate redundant drafts).
+- [ ] **Add more code snippets for Docker and Python** across relevant cheatsheets.
+- [ ] **Format, lint, and split large files** to maintain readability and conciseness.
 
 ## Files
 
 ### docs/Big_Data/Hadoop_Ecosystem.md
-- [ ] formatting *(needs code examples)*
-- [ ] content expansion
+- [ ] Content refresh: Update to match newest Hadoop ecosystem trends.
+- [ ] Formatting: Add architecture code examples and diagrams.
 
 ### docs/Big_Data/Install_Spark_2.3_Locally.md
-- [ ] formatting
-- [ ] updating of the contents to match newest version of the software or tool being discussed *(Spark 2.x, Python 2.x, Java 8, Scala 2.11)*
+- [ ] Removal: Spark 2.x, Python 2.x, and Java 8 are obsolete. Remove or replace with a general modern setup guide.
 
 ### docs/Big_Data/Spark_APIs.md
-- [ ] formatting
-- [ ] link additions *(no links found)*
+- [ ] Update to newest version: Upgrade APIs to Spark 3.x/4.x.
+- [ ] Link additions: Add references to official Spark API docs.
 
 ### docs/Big_Data/Spark_Basics.md
-- [ ] formatting *(needs code examples)*
-- [ ] content expansion
-- [ ] updating of the contents to match newest version of the software or tool being discussed *(mentions old dates)*
+- [ ] Update to newest version: Refresh contents to modern Spark.
+- [ ] Content expansion: Add concise code snippets.
 
 ### docs/Big_Data/Spark_Development_with_sbt_and_InteliJ.md
-- [ ] formatting
-- [ ] content expansion
-- [ ] updating of the contents to match newest version of the software or tool being discussed *(mentions old dates)*
+- [ ] Update to newest version: Refresh IntelliJ and sbt setup steps.
 
 ### docs/Big_Data/Spark_on_AWS_EMR.md
-- [ ] formatting
+- [ ] Content refresh: Align with the latest AWS EMR console and configurations.
 
 ### docs/Big_Data/Spark_on_EC2.md
-- [ ] formatting
-- [ ] content expansion
+- [ ] Removal: Assess for removal as EMR and Kubernetes are the preferred deployment targets.
 
 ### docs/Big_Data/Spark_on_Kubernetes.md
-- [ ] formatting
-- [ ] updating of the contents to match newest version of the software or tool being discussed *(Spark 2.x)*
+- [ ] Update to newest version: K8s and Spark versions are outdated. Refresh configurations.
 
 ### docs/Cloud/AWS.md
-- [ ] formatting
+- [ ] File splitting: The file is too large; separate into Compute, Storage, DBs, etc.
+- [ ] Update to newest version: Remove outdated Putty/Cygwin steps; favor WSL/Windows Terminal.
 
 ### docs/Cloud/AWS_Lambda.md
-- [ ] formatting
-- [ ] content expansion *(very brief, <50 words)*
+- [ ] Content expansion: Add practical deployment, serverless config, and trigger code snippets.
 
 ### docs/Cloud/Serverless.md
-- [ ] formatting
+- [ ] Content refresh: Update to reflect modern serverless architectures.
 
 ### docs/Containers/Debug_Kubernetes.md
-- [ ] formatting
-- [ ] content expansion
-- [ ] link additions *(no links found)*
+- [ ] Content expansion: Add `kubectl debug` and modern debugging strategies.
+- [ ] Link additions: Point to official K8s troubleshooting guides.
 
 ### docs/Containers/Deploy_to_Kubernetes  (Helm).md
-- [ ] formatting
-- [ ] updating of the contents to match newest version of the software or tool being discussed *(mentions old dates)*
+- [ ] Update to newest version: Remove Helm 2 / Tiller references; update to Helm 3.
 
 ### docs/Containers/Deploy_to_Kubernetes.md
-- [ ] formatting
-- [ ] updating of the contents to match newest version of the software or tool being discussed *(mentions old dates)*
+- [ ] Content refresh: Merge with Helm documentation or focus purely on native manifests.
 
 ### docs/Containers/Docker.md
-- [ ] formatting
+- [ ] **Content expansion: Add more code snippets for Docker** (Dockerfiles, compose, multi-stage builds).
 
 ### docs/Containers/Helm_Chart_Creation.md
-- [ ] formatting
-- [ ] content expansion
+- [ ] Update to newest version: Align with Helm 3 chart structure.
 
 ### docs/Containers/Kubernetes_Cheatsheet.md
-- [ ] formatting
+- [ ] Content refresh: Update deprecated K8s API versions and outdated commands.
 
 ### docs/Containers/Kubernetes_Concepts.md
-- [ ] formatting *(needs code examples)*
-- [ ] link additions *(no links found)*
+- [ ] Formatting: Add code examples for key concepts (Deployments, Services, ConfigMaps).
 
 ### docs/Containers/Kubernetes_Examples.md
-- [ ] formatting
-- [ ] link additions *(no links found)*
+- [ ] Formatting: Add more examples of modern K8s objects (Ingress, CRDs).
 
 ### docs/Containers/Minikube_Install_in_Ubuntu_on_Windows.md
-- [ ] formatting
-- [ ] content expansion
+- [ ] Update to newest version: Shift focus to WSL2 and K8s 1.30+.
 
 ### docs/Containers/Minikube_Install_on_Windows.md
-- [ ] formatting
+- [ ] Update to newest version: Update K8s version, remove `helm init` instructions.
 
 ### docs/Data_Science/Data_Manipulation.md
-- [ ] formatting *(needs code examples)*
-- [ ] content expansion
+- [ ] Formatting: Add Python (pandas/NumPy) code examples.
 
 ### docs/Data_Science/Data_Visualization.md
-- [ ] formatting
-- [ ] content expansion
-- [ ] updating of the contents to match newest version of the software or tool being discussed *(mentions old dates)*
+- [ ] Update to newest version: Refresh libraries and code examples.
 
 ### docs/Data_Science/Deep_Learning.md
-- [ ] formatting
-- [ ] content expansion
-- [ ] updating of the contents to match newest version of the software or tool being discussed *(mentions old dates)*
+- [ ] Update to newest version: Refresh frameworks (TensorFlow 2.x, modern PyTorch).
 
 ### docs/Data_Science/Dimensionality_Reduction.md
-- [ ] formatting
-- [ ] content expansion *(very brief, <50 words)*
-- [ ] updating of the contents to match newest version of the software or tool being discussed *(mentions old dates)*
+- [ ] Content expansion: Provide concise examples of PCA and t-SNE.
 
 ### docs/Data_Science/Keras.md
-- [ ] formatting
-- [ ] content expansion
+- [ ] Update to newest version: Align with Keras 3.
 
 ### docs/Data_Science/Machine_Learning.md
-- [ ] formatting *(needs code examples)*
+- [ ] Formatting: Add brief, technical code examples.
 
 ### docs/Data_Science/Recommenders.md
-- [ ] formatting
-- [ ] content expansion *(very brief, <50 words)*
+- [ ] Content expansion: Add technical examples and expand beyond basic theory.
 
 ### docs/Data_Science/scikit-learn.md
-- [ ] formatting
-- [ ] content expansion *(very brief, <50 words)*
-- [ ] updating of the contents to match newest version of the software or tool being discussed *(mentions old dates)*
+- [ ] Update to newest version: Refresh scikit-learn API changes.
 
 ### docs/Databases/Mongodb.md
-- [ ] formatting
-- [ ] removal if obsolete *(contains deprecated/obsolete keywords)*
+- [ ] Update to newest version: Remove deprecated keywords and update syntax.
 
 ### docs/Databases/Redshift.md
-- [ ] formatting *(needs code examples)*
-- [ ] content expansion
-- [ ] link additions *(no links found)*
+- [ ] Formatting: Add advanced SQL code examples.
 
 ### docs/Databases/SQL.md
-- [ ] formatting
-- [ ] file splitting
-- [ ] link additions *(no links found)*
-- [ ] updating of the contents to match newest version of the software or tool being discussed *(mentions old dates)*
+- [ ] Update to newest version: Update syntax and add references to modern SQL dialects.
 
 ### docs/DevOps/CloudFormation.md
-- [ ] formatting
-- [ ] updating of the contents to match newest version of the software or tool being discussed *(mentions old dates)*
+- [ ] Update to newest version: Refresh templates to modern standards.
 
 ### docs/DevOps/Git.md
-- [ ] formatting
+- [ ] Content refresh: Add modern commands like `git switch` and `git restore`.
 
 ### docs/DevOps/Orchestrator_Scheduler.md
-- [ ] formatting
-- [ ] content expansion
-- [ ] updating of the contents to match newest version of the software or tool being discussed *(mentions old dates)*
+- [ ] Update to newest version: Focus on modern tools (Airflow, Dagster, Prefect).
 
 ### docs/Java/Gradle.md
-- [ ] formatting
+- [ ] Update to newest version: Ensure compatibility with modern Gradle DSL and Java versions.
 
 ### docs/Java/Java.md
-- [ ] formatting
-- [ ] content expansion
-- [ ] updating of the contents to match newest version of the software or tool being discussed *(mentions old dates)*
+- [ ] Update to newest version: Update syntax references to Java 21+.
 
 ### docs/Java/Log4j.md
-- [ ] formatting
-- [ ] updating of the contents to match newest version of the software or tool being discussed *(Java 8)*
+- [ ] Update to newest version: Upgrade to Log4j2 and add Log4Shell mitigation context.
 
 ### docs/Java/Maven.md
-- [ ] formatting
-- [ ] updating of the contents to match newest version of the software or tool being discussed
+- [ ] Update to newest version: Refresh POM structure best practices.
 
 ### docs/Java/Spring.md
-- [ ] formatting *(needs code examples)*
-- [ ] content expansion
+- [ ] Formatting: Add modern Spring Boot 3 code examples.
 
 ### docs/Linux/Linux.md
-- [ ] formatting
-- [ ] updating of the contents to match newest version of the software or tool being discussed *(mentions old dates)*
+- [ ] Update to newest version: Refresh standard CLI tooling and commands.
 
 ### docs/Linux/Virtualization.md
-- [ ] formatting
-- [ ] content expansion *(very brief, <50 words)*
+- [ ] Content expansion: Clarify differences between KVM, Hyper-V, and modern container runtime engines.
 
 ### docs/Markup_and_Documentation/Jekyll.md
-- [ ] formatting
-- [ ] updating of the contents to match newest version of the software or tool being discussed *(mentions old dates)*
+- [ ] Update to newest version: Check compatibility with newer Ruby and GitHub pages updates.
 
 ### docs/Markup_and_Documentation/Markdown.md
-- [ ] formatting
+- [ ] Update to newest version: Align with current CommonMark specs.
 
 ### docs/Markup_and_Documentation/MkDocs.md
-- [ ] formatting
-- [ ] content expansion
+- [ ] Update to newest version: Ensure Material for MkDocs best practices are included.
 
 ### docs/Markup_and_Documentation/reStructuredText.md
-- [ ] formatting
-- [ ] file splitting
-- [ ] updating of the contents to match newest version of the software or tool being discussed *(mentions old dates)*
+- [ ] Update to newest version: Refresh Sphinx configurations.
 
 ### docs/Microservices/Microservices.md
-- [ ] formatting
-- [ ] content expansion *(very brief, <50 words)*
+- [ ] Content expansion: Add concise examples of gRPC, REST, and GraphQL APIs.
 
 ### docs/Privacy/Privacy_engineering.md
-- [ ] formatting
-- [ ] content expansion *(very brief, <50 words)*
+- [ ] Content expansion: Expand on GDPR/CCPA technical implementations.
 
 ### docs/Python/Flask.md
-- [ ] formatting
-- [ ] content expansion *(very brief, <50 words)*
-- [ ] updating of the contents to match newest version of the software or tool being discussed *(mentions old dates)*
+- [ ] Update to newest version: Ensure compatibility with modern Flask (3.x).
 
 ### docs/Python/Jupyter.md
-- [ ] formatting
-- [ ] updating of the contents to match newest version of the software or tool being discussed *(mentions old dates)*
+- [ ] Update to newest version: Transition notes heavily to JupyterLab.
 
 ### docs/Python/Matplotlib.md
-- [ ] formatting
-- [ ] link additions *(no links found)*
+- [ ] Link additions: Point to current Matplotlib galleries and documentation.
 
 ### docs/Python/Python.md
-- [ ] formatting
+- [ ] **Content expansion: Add more code snippets for modern Python features.**
 
 ### docs/Python/Python3.md
-- [ ] formatting
+- [ ] File splitting / merge: Consolidate fully with `Python.md`.
 
 ### docs/Scala/Akka.md
-- [ ] formatting
-- [ ] link additions *(no links found)*
+- [ ] Link additions: Update references to current Akka or Pekko forks.
 
 ### docs/Scala/Play_Framework.md
-- [ ] formatting
+- [ ] Update to newest version: Check Play 3.x compatibility.
 
 ### docs/Scala/Scala_Collections.md
-- [ ] formatting
-- [ ] file splitting
-- [ ] link additions *(needs http/https links)*
+- [ ] Link additions: Fix and update missing http/https links.
 
 ### docs/Scala/Scala_Database_Access.md
-- [ ] formatting
-- [ ] content expansion *(very brief, <50 words)*
+- [ ] Content expansion: Add examples (Slick, Doobie, Quill).
 
 ### docs/Scala/Scala_Design_Patterns.md
-- [ ] formatting
+- [ ] Update to newest version: Reflect changes in Scala 3 constructs.
 
 ### docs/Scala/Scala_Generalities.md
-- [ ] formatting
-- [ ] content expansion
+- [ ] Update to newest version: Refresh basic syntax for Scala 3.
 
 ### docs/Scala/Scala_Language.md
-- [ ] formatting
-- [ ] file splitting
+- [ ] Update to newest version: Incorporate Scala 3 features (givens, enums).
 
 ### docs/Scala/Scala_Testing.md
-- [ ] formatting
+- [ ] Update to newest version: Refresh ScalaTest / MUnit examples.
 
 ### docs/Scala/Scala_Types.md
-- [ ] formatting
+- [ ] Update to newest version: Add union and intersection types (Scala 3).
 
 ### docs/Scala/Scaladoc.md
-- [ ] formatting
-- [ ] content refresh
-- [ ] removal if obsolete *(contains deprecated/obsolete keywords)*
+- [ ] Update to newest version: Update tags to align with Scala 3 / Dotty scaladoc tool.
 
 ### docs/Scala/sbt.md
-- [ ] formatting
-- [ ] updating of the contents to match newest version of the software or tool being discussed *(mentions old dates)*
+- [ ] Update to newest version: Refresh obsolete dates and versions.
 
 ### docs/Search/ElasticSearch.md
-- [ ] formatting
-- [ ] file splitting
-- [ ] updating of the contents to match newest version of the software or tool being discussed *(mentions old dates)*
+- [ ] Update to newest version: Refresh to ElasticSearch 8.x.
+- [ ] File splitting: Break out plugins, APIs, and architectures. Remove Sense/Kopf and obsolete references.
 
 ### docs/Search/Logstash.md
-- [ ] formatting
-- [ ] content expansion
+- [ ] Update to newest version: Align with latest ELK stack.
 
 ### docs/Software_Development/Development_Tools.md
-- [ ] formatting *(needs code examples)*
+- [ ] Formatting: Add relevant CLI code examples.
 
 ### docs/Software_Development/Eclipse.md
-- [ ] formatting
-- [ ] content expansion
+- [ ] Removal: Assess for removal as IntelliJ is the modern standard.
 
 ### docs/Software_Development/IntelliJ.md
-- [ ] formatting
-- [ ] content expansion
-- [ ] link additions *(no links found)*
+- [ ] Link additions: Add links to official documentation and keymaps.
 
 ### docs/Web/Bootstrap.md
-- [ ] formatting
-- [ ] content expansion
-- [ ] link additions *(needs http/https links)*
+- [ ] Update to newest version: Update to Bootstrap 5, fix links.
 
 ### docs/Web/CORS.md
-- [ ] formatting *(needs code examples)*
+- [ ] Formatting: Add server-side and client-side code examples.
 
 ### docs/Web/jQuery.md
-- [ ] formatting
-- [ ] file splitting
+- [ ] Removal: Assess for removal, or strictly mark as legacy context documentation.
 
 ### docs/Windows/Command_Prompt_Here.md
-- [ ] formatting
-- [ ] content expansion
-- [ ] updating of the contents to match newest version of the software or tool being discussed *(mentions old dates)*
+- [ ] Removal: Assess for removal; replace with Windows Terminal/WSL notes.
 
 ### docs/dotNET/ASPdotNET.md
-- [ ] formatting
+- [ ] Update to newest version: Align with modern ASP.NET Core framework.
 
 ### docs/dotNET/AkkadotNET.md
-- [ ] formatting
-- [ ] link additions *(no links found)*
+- [ ] Link additions: Add references to official documentation.
 
 ### docs/dotNET/C#.md
-- [ ] formatting
+- [ ] Update to newest version: Include modern C# features and syntax.
 
 ### docs/dotNET/Multithreading.md
-- [ ] formatting
-- [ ] content expansion
+- [ ] Update to newest version: Emphasize modern Task Parallel Library (TPL).
 
 ### docs/dotNET/WPF.md
-- [ ] formatting
-- [ ] content expansion
-- [ ] updating of the contents to match newest version of the software or tool being discussed
+- [ ] Update to newest version: Refresh UI patterns.
 
 ### docs/index.md
-- [ ] formatting
-- [ ] content expansion
-- [ ] link additions *(no links found)*
+- [ ] Update documentation structure: Implement navigation improvements.
 
 ### drafts/Analytical_Tools.md
-- [ ] formatting *(needs code examples)*
-- [ ] content refresh
+- [ ] Formatting: Add relevant configuration examples.
 
 ### drafts/Azure.md
-- [ ] formatting
-- [ ] content refresh
-- [ ] content expansion *(very brief, <50 words)*
-- [ ] removal if obsolete
+- [ ] Content expansion: Fill in the brief placeholders.
 
 ### drafts/Citizen_developer_tools.md
-- [ ] formatting
-- [ ] content refresh
-- [ ] content expansion *(very brief, <50 words)*
-- [ ] link additions *(no links found)*
-- [ ] removal if obsolete
+- [ ] Content expansion: Expand on low-code platforms and add links.
 
 ### drafts/Cloud_Computing.md
-- [ ] formatting
-- [ ] content refresh
-- [ ] content expansion *(very brief, <50 words)*
-- [ ] removal if obsolete
+- [ ] Content expansion: Add substance to the brief overview.
 
 ### drafts/DataScience.md
-- [ ] formatting *(needs code examples)*
-- [ ] content refresh
-- [ ] updating of the contents to match newest version of the software or tool being discussed *(mentions old dates)*
+- [ ] Formatting: Add code examples and fix outdated references.
 
 ### drafts/Data_Visualization.md
-- [ ] formatting
-- [ ] content refresh
-- [ ] content expansion *(very brief, <50 words)*
-- [ ] removal if obsolete
+- [ ] Content expansion: Distinguish from the similarly named file in docs/.
 
 ### drafts/Databases.md
-- [ ] formatting
-- [ ] content refresh
-- [ ] content expansion *(very brief, <50 words)*
-- [ ] removal if obsolete
+- [ ] Content expansion: Expand out brief sections.
 
 ### drafts/ELK.md
-- [ ] formatting
-- [ ] content refresh
-- [ ] content expansion *(very brief, <50 words)*
-- [ ] removal if obsolete
+- [ ] File splitting / merge: Consolidate with ElasticSearch and Logstash files.
 
 ### drafts/ETL.md
-- [ ] formatting
-- [ ] content refresh
-- [ ] content expansion *(very brief, <50 words)*
-- [ ] removal if obsolete
+- [ ] Content expansion: Expand placeholders.
 
 ### drafts/Hive.md
-- [ ] formatting
-- [ ] content refresh
-- [ ] content expansion *(very brief, <50 words)*
-- [ ] removal if obsolete
+- [ ] Content expansion: Add HiveQL examples.
 
 ### drafts/Java.md
-- [ ] formatting
-- [ ] content refresh
-- [ ] content expansion *(very brief, <50 words)*
-- [ ] removal if obsolete
+- [ ] File splitting / merge: Combine with `docs/Java/Java.md`.
 
 ### drafts/Kong.md
-- [ ] formatting
-- [ ] content refresh
-- [ ] content expansion *(very brief, <50 words)*
-- [ ] removal if obsolete
+- [ ] Content expansion: Add API Gateway configurations.
 
 ### drafts/Logging.md
-- [ ] formatting
-- [ ] content refresh
-- [ ] content expansion *(very brief, <50 words)*
-- [ ] removal if obsolete
+- [ ] Content expansion: Add structured logging examples.
 
 ### drafts/Play_Framework2.md
-- [ ] formatting
-- [ ] content refresh
-- [ ] content expansion
+- [ ] File splitting / merge: Combine with `docs/Scala/Play_Framework.md`.
 
 ### drafts/Scala2.md
-- [ ] formatting
-- [ ] content refresh
+- [ ] File splitting / merge: Integrate relevant parts into main Scala documentation.
 
 ### drafts/Scala3.md
-- [ ] formatting
-- [ ] content refresh
-- [ ] content expansion *(very brief, <50 words)*
-- [ ] removal if obsolete
+- [ ] File splitting / merge: Move contents to `docs/Scala/Scala_Language.md`.
 
 ### drafts/Software_Design.md
-- [ ] formatting
-- [ ] content refresh
-- [ ] content expansion *(very brief, <50 words)*
-- [ ] removal if obsolete
+- [ ] Content expansion: Elaborate on system design principles.
 
 ### drafts/Stream_Processing.md
-- [ ] formatting
-- [ ] content refresh
-- [ ] content expansion *(very brief, <50 words)*
-- [ ] removal if obsolete
+- [ ] Content expansion: Add Kafka/Flink concepts.
 
 ### drafts/Terraform2.md
-- [ ] formatting
-- [ ] content refresh
-- [ ] content expansion *(very brief, <50 words)*
-- [ ] removal if obsolete
+- [ ] Content expansion: Rename and expand with modern Terraform practices.
 
 ### drafts/Windows_Tools.md
-- [ ] formatting
-- [ ] content refresh
-- [ ] content expansion *(very brief, <50 words)*
-- [ ] removal if obsolete
+- [ ] Removal: Assess for removal or update with modern dev tooling (WSL, Windows Terminal).

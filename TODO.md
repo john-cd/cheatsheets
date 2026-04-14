@@ -1,9 +1,5 @@
 # TODO
 
-- [ ] Refresh or remove outdated notes in `drafts/`. The files here often contain old unmaintained links.
-- [ ] Add more code snippets for Docker and Python.
-- [ ] Review documentation structure for easier navigation.
-
 ## Plan for moving to Zola + Rust
 
 1. **Install Zola:** Download via `brew install zola` or directly from the GitHub releases page.
