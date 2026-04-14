@@ -3,703 +3,449 @@
 This document tracks the update and improvement of all cheatsheets and markdown files in the repository.
 
 The goal is to ensure all cheatsheets remain technical, very concise, and directed at software engineers. For each file, the following tasks should be considered:
-- Formatting improvements (Markdown syntax, code blocks, readability)
-- Expansion (adding missing key concepts)
-- Link additions (pointing to official, up-to-date documentation)
-- Updating contents to match the newest version of the software/tool
-- Removal if obsolete or no longer relevant
+- formatting
+- content refresh
+- content expansion
+- file splitting
+- link additions
+- updating of the contents to match newest version of the software or tool being discussed
+- removal if obsolete
+
+## Global Tasks
+- [ ] Add more code snippets for Docker and Python.
+- [ ] Update documentation structure for easier navigation.
 
 ## Files
 
 ### docs/Big_Data/Hadoop_Ecosystem.md
-- [ ] Formatting *(needs code examples)*
-- [ ] Expansion
-- [ ] Link additions
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting *(needs code examples)*
+- [ ] content expansion
 
 ### docs/Big_Data/Install_Spark_2.3_Locally.md
-- [ ] Formatting
-- [ ] Expansion
-- [ ] Link additions
-- [ ] Update to newest version *(Spark 2.x, Python 2.x, Java 8, Scala 2.11)*
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] updating of the contents to match newest version of the software or tool being discussed *(Spark 2.x, Python 2.x, Java 8, Scala 2.11)*
 
 ### docs/Big_Data/Spark_APIs.md
-- [ ] Formatting
-- [ ] Expansion
-- [ ] Link additions *(no links found)*
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] link additions *(no links found)*
 
 ### docs/Big_Data/Spark_Basics.md
-- [ ] Formatting *(needs code examples)*
-- [ ] Expansion
-- [ ] Link additions
-- [ ] Update to newest version *(mentions old dates)*
-- [ ] Assess for removal if obsolete
+- [ ] formatting *(needs code examples)*
+- [ ] content expansion
+- [ ] updating of the contents to match newest version of the software or tool being discussed *(mentions old dates)*
 
 ### docs/Big_Data/Spark_Development_with_sbt_and_InteliJ.md
-- [ ] Formatting
-- [ ] Expansion
-- [ ] Link additions
-- [ ] Update to newest version *(mentions old dates)*
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] content expansion
+- [ ] updating of the contents to match newest version of the software or tool being discussed *(mentions old dates)*
 
 ### docs/Big_Data/Spark_on_AWS_EMR.md
-- [ ] Formatting
-- [ ] Expansion
-- [ ] Link additions
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting
 
 ### docs/Big_Data/Spark_on_EC2.md
-- [ ] Formatting
-- [ ] Expansion
-- [ ] Link additions
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] content expansion
 
 ### docs/Big_Data/Spark_on_Kubernetes.md
-- [ ] Formatting
-- [ ] Expansion
-- [ ] Link additions
-- [ ] Update to newest version *(Spark 2.x)*
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] updating of the contents to match newest version of the software or tool being discussed *(Spark 2.x)*
 
 ### docs/Cloud/AWS.md
-- [ ] Formatting
-- [ ] Expansion
-- [ ] Link additions
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting
 
 ### docs/Cloud/AWS_Lambda.md
-- [ ] Formatting
-- [ ] Expansion *(very brief, <50 words)*
-- [ ] Link additions
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] content expansion *(very brief, <50 words)*
 
 ### docs/Cloud/Serverless.md
-- [ ] Formatting
-- [ ] Expansion
-- [ ] Link additions
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting
 
 ### docs/Containers/Debug_Kubernetes.md
-- [ ] Formatting
-- [ ] Expansion
-- [ ] Link additions *(no links found)*
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] content expansion
+- [ ] link additions *(no links found)*
 
 ### docs/Containers/Deploy_to_Kubernetes  (Helm).md
-- [ ] Formatting
-- [ ] Expansion
-- [ ] Link additions
-- [ ] Update to newest version *(mentions old dates)*
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] updating of the contents to match newest version of the software or tool being discussed *(mentions old dates)*
 
 ### docs/Containers/Deploy_to_Kubernetes.md
-- [ ] Formatting
-- [ ] Expansion
-- [ ] Link additions
-- [ ] Update to newest version *(mentions old dates)*
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] updating of the contents to match newest version of the software or tool being discussed *(mentions old dates)*
 
 ### docs/Containers/Docker.md
-- [ ] Formatting
-- [ ] Expansion
-- [ ] Link additions
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting
 
 ### docs/Containers/Helm_Chart_Creation.md
-- [ ] Formatting
-- [ ] Expansion
-- [ ] Link additions
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] content expansion
 
 ### docs/Containers/Kubernetes_Cheatsheet.md
-- [ ] Formatting
-- [ ] Expansion
-- [ ] Link additions
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting
 
 ### docs/Containers/Kubernetes_Concepts.md
-- [ ] Formatting *(needs code examples)*
-- [ ] Expansion
-- [ ] Link additions *(no links found)*
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting *(needs code examples)*
+- [ ] link additions *(no links found)*
 
 ### docs/Containers/Kubernetes_Examples.md
-- [ ] Formatting
-- [ ] Expansion
-- [ ] Link additions *(no links found)*
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] link additions *(no links found)*
 
 ### docs/Containers/Minikube_Install_in_Ubuntu_on_Windows.md
-- [ ] Formatting
-- [ ] Expansion
-- [ ] Link additions
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] content expansion
 
 ### docs/Containers/Minikube_Install_on_Windows.md
-- [ ] Formatting
-- [ ] Expansion
-- [ ] Link additions
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting
 
 ### docs/Data_Science/Data_Manipulation.md
-- [ ] Formatting *(needs code examples)*
-- [ ] Expansion
-- [ ] Link additions
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting *(needs code examples)*
+- [ ] content expansion
 
 ### docs/Data_Science/Data_Visualization.md
-- [ ] Formatting
-- [ ] Expansion
-- [ ] Link additions
-- [ ] Update to newest version *(mentions old dates)*
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] content expansion
+- [ ] updating of the contents to match newest version of the software or tool being discussed *(mentions old dates)*
 
 ### docs/Data_Science/Deep_Learning.md
-- [ ] Formatting
-- [ ] Expansion
-- [ ] Link additions
-- [ ] Update to newest version *(mentions old dates)*
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] content expansion
+- [ ] updating of the contents to match newest version of the software or tool being discussed *(mentions old dates)*
 
 ### docs/Data_Science/Dimensionality_Reduction.md
-- [ ] Formatting
-- [ ] Expansion *(very brief, <50 words)*
-- [ ] Link additions
-- [ ] Update to newest version *(mentions old dates)*
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] content expansion *(very brief, <50 words)*
+- [ ] updating of the contents to match newest version of the software or tool being discussed *(mentions old dates)*
 
 ### docs/Data_Science/Keras.md
-- [ ] Formatting
-- [ ] Expansion
-- [ ] Link additions
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] content expansion
 
 ### docs/Data_Science/Machine_Learning.md
-- [ ] Formatting *(needs code examples)*
-- [ ] Expansion
-- [ ] Link additions
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting *(needs code examples)*
 
 ### docs/Data_Science/Recommenders.md
-- [ ] Formatting
-- [ ] Expansion *(very brief, <50 words)*
-- [ ] Link additions
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] content expansion *(very brief, <50 words)*
 
 ### docs/Data_Science/scikit-learn.md
-- [ ] Formatting
-- [ ] Expansion *(very brief, <50 words)*
-- [ ] Link additions
-- [ ] Update to newest version *(mentions old dates)*
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] content expansion *(very brief, <50 words)*
+- [ ] updating of the contents to match newest version of the software or tool being discussed *(mentions old dates)*
 
 ### docs/Databases/Mongodb.md
-- [ ] Formatting
-- [ ] Expansion
-- [ ] Link additions
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete *(contains deprecated/obsolete keywords)*
+- [ ] formatting
+- [ ] removal if obsolete *(contains deprecated/obsolete keywords)*
 
 ### docs/Databases/Redshift.md
-- [ ] Formatting *(needs code examples)*
-- [ ] Expansion
-- [ ] Link additions *(no links found)*
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting *(needs code examples)*
+- [ ] content expansion
+- [ ] link additions *(no links found)*
 
 ### docs/Databases/SQL.md
-- [ ] Formatting
-- [ ] Expansion
-- [ ] Link additions *(no links found)*
-- [ ] Update to newest version *(mentions old dates)*
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] file splitting
+- [ ] link additions *(no links found)*
+- [ ] updating of the contents to match newest version of the software or tool being discussed *(mentions old dates)*
 
 ### docs/DevOps/CloudFormation.md
-- [ ] Formatting
-- [ ] Expansion
-- [ ] Link additions
-- [ ] Update to newest version *(mentions old dates)*
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] updating of the contents to match newest version of the software or tool being discussed *(mentions old dates)*
 
 ### docs/DevOps/Git.md
-- [ ] Formatting
-- [ ] Expansion
-- [ ] Link additions
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting
 
 ### docs/DevOps/Orchestrator_Scheduler.md
-- [ ] Formatting
-- [ ] Expansion
-- [ ] Link additions
-- [ ] Update to newest version *(mentions old dates)*
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] content expansion
+- [ ] updating of the contents to match newest version of the software or tool being discussed *(mentions old dates)*
 
 ### docs/Java/Gradle.md
-- [ ] Formatting
-- [ ] Expansion
-- [ ] Link additions
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting
 
 ### docs/Java/Java.md
-- [ ] Formatting
-- [ ] Expansion
-- [ ] Link additions
-- [ ] Update to newest version *(mentions old dates)*
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] content expansion
+- [ ] updating of the contents to match newest version of the software or tool being discussed *(mentions old dates)*
 
 ### docs/Java/Log4j.md
-- [ ] Formatting
-- [ ] Expansion
-- [ ] Link additions
-- [ ] Update to newest version *(Java 8)*
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] updating of the contents to match newest version of the software or tool being discussed *(Java 8)*
 
 ### docs/Java/Maven.md
-- [ ] Formatting
-- [ ] Expansion
-- [ ] Link additions
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] updating of the contents to match newest version of the software or tool being discussed
 
 ### docs/Java/Spring.md
-- [ ] Formatting *(needs code examples)*
-- [ ] Expansion
-- [ ] Link additions
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting *(needs code examples)*
+- [ ] content expansion
 
 ### docs/Linux/Linux.md
-- [ ] Formatting
-- [ ] Expansion
-- [ ] Link additions
-- [ ] Update to newest version *(mentions old dates)*
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] updating of the contents to match newest version of the software or tool being discussed *(mentions old dates)*
 
 ### docs/Linux/Virtualization.md
-- [ ] Formatting
-- [ ] Expansion *(very brief, <50 words)*
-- [ ] Link additions
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] content expansion *(very brief, <50 words)*
 
 ### docs/Markup_and_Documentation/Jekyll.md
-- [ ] Formatting
-- [ ] Expansion
-- [ ] Link additions
-- [ ] Update to newest version *(mentions old dates)*
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] updating of the contents to match newest version of the software or tool being discussed *(mentions old dates)*
 
 ### docs/Markup_and_Documentation/Markdown.md
-- [ ] Formatting
-- [ ] Expansion
-- [ ] Link additions
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting
 
 ### docs/Markup_and_Documentation/MkDocs.md
-- [ ] Formatting
-- [ ] Expansion
-- [ ] Link additions
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] content expansion
 
 ### docs/Markup_and_Documentation/reStructuredText.md
-- [ ] Formatting
-- [ ] Expansion
-- [ ] Link additions
-- [ ] Update to newest version *(mentions old dates)*
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] file splitting
+- [ ] updating of the contents to match newest version of the software or tool being discussed *(mentions old dates)*
 
 ### docs/Microservices/Microservices.md
-- [ ] Formatting
-- [ ] Expansion *(very brief, <50 words)*
-- [ ] Link additions
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] content expansion *(very brief, <50 words)*
 
 ### docs/Privacy/Privacy_engineering.md
-- [ ] Formatting
-- [ ] Expansion *(very brief, <50 words)*
-- [ ] Link additions
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] content expansion *(very brief, <50 words)*
 
 ### docs/Python/Flask.md
-- [ ] Formatting
-- [ ] Expansion *(very brief, <50 words)*
-- [ ] Link additions
-- [ ] Update to newest version *(mentions old dates)*
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] content expansion *(very brief, <50 words)*
+- [ ] updating of the contents to match newest version of the software or tool being discussed *(mentions old dates)*
 
 ### docs/Python/Jupyter.md
-- [ ] Formatting
-- [ ] Expansion
-- [ ] Link additions
-- [ ] Update to newest version *(mentions old dates)*
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] updating of the contents to match newest version of the software or tool being discussed *(mentions old dates)*
 
 ### docs/Python/Matplotlib.md
-- [ ] Formatting
-- [ ] Expansion
-- [ ] Link additions *(no links found)*
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] link additions *(no links found)*
 
 ### docs/Python/Python.md
-- [ ] Formatting
-- [ ] Expansion
-- [ ] Link additions
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting
 
 ### docs/Python/Python3.md
-- [ ] Formatting
-- [ ] Expansion
-- [ ] Link additions
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting
 
 ### docs/Scala/Akka.md
-- [ ] Formatting
-- [ ] Expansion
-- [ ] Link additions *(no links found)*
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] link additions *(no links found)*
 
 ### docs/Scala/Play_Framework.md
-- [ ] Formatting
-- [ ] Expansion
-- [ ] Link additions
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting
 
 ### docs/Scala/Scala_Collections.md
-- [ ] Formatting
-- [ ] Expansion
-- [ ] Link additions *(needs http/https links)*
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] file splitting
+- [ ] link additions *(needs http/https links)*
 
 ### docs/Scala/Scala_Database_Access.md
-- [ ] Formatting
-- [ ] Expansion *(very brief, <50 words)*
-- [ ] Link additions
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] content expansion *(very brief, <50 words)*
 
 ### docs/Scala/Scala_Design_Patterns.md
-- [ ] Formatting
-- [ ] Expansion
-- [ ] Link additions
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting
 
 ### docs/Scala/Scala_Generalities.md
-- [ ] Formatting
-- [ ] Expansion
-- [ ] Link additions
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] content expansion
 
 ### docs/Scala/Scala_Language.md
-- [ ] Formatting
-- [ ] Expansion
-- [ ] Link additions
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] file splitting
 
 ### docs/Scala/Scala_Testing.md
-- [ ] Formatting
-- [ ] Expansion
-- [ ] Link additions
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting
 
 ### docs/Scala/Scala_Types.md
-- [ ] Formatting
-- [ ] Expansion
-- [ ] Link additions
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting
 
 ### docs/Scala/Scaladoc.md
-- [ ] Formatting
-- [ ] Expansion
-- [ ] Link additions
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete *(contains deprecated/obsolete keywords)*
+- [ ] formatting
+- [ ] content refresh
+- [ ] removal if obsolete *(contains deprecated/obsolete keywords)*
 
 ### docs/Scala/sbt.md
-- [ ] Formatting
-- [ ] Expansion
-- [ ] Link additions
-- [ ] Update to newest version *(mentions old dates)*
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] updating of the contents to match newest version of the software or tool being discussed *(mentions old dates)*
 
 ### docs/Search/ElasticSearch.md
-- [ ] Formatting
-- [ ] Expansion
-- [ ] Link additions
-- [ ] Update to newest version *(mentions old dates)*
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] file splitting
+- [ ] updating of the contents to match newest version of the software or tool being discussed *(mentions old dates)*
 
 ### docs/Search/Logstash.md
-- [ ] Formatting
-- [ ] Expansion
-- [ ] Link additions
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] content expansion
 
 ### docs/Software_Development/Development_Tools.md
-- [ ] Formatting *(needs code examples)*
-- [ ] Expansion
-- [ ] Link additions
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting *(needs code examples)*
 
 ### docs/Software_Development/Eclipse.md
-- [ ] Formatting
-- [ ] Expansion
-- [ ] Link additions
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] content expansion
 
 ### docs/Software_Development/IntelliJ.md
-- [ ] Formatting
-- [ ] Expansion
-- [ ] Link additions *(no links found)*
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] content expansion
+- [ ] link additions *(no links found)*
 
 ### docs/Web/Bootstrap.md
-- [ ] Formatting
-- [ ] Expansion
-- [ ] Link additions *(needs http/https links)*
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] content expansion
+- [ ] link additions *(needs http/https links)*
 
 ### docs/Web/CORS.md
-- [ ] Formatting *(needs code examples)*
-- [ ] Expansion
-- [ ] Link additions
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting *(needs code examples)*
 
 ### docs/Web/jQuery.md
-- [ ] Formatting
-- [ ] Expansion
-- [ ] Link additions
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] file splitting
 
 ### docs/Windows/Command_Prompt_Here.md
-- [ ] Formatting
-- [ ] Expansion
-- [ ] Link additions
-- [ ] Update to newest version *(mentions old dates)*
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] content expansion
+- [ ] updating of the contents to match newest version of the software or tool being discussed *(mentions old dates)*
 
 ### docs/dotNET/ASPdotNET.md
-- [ ] Formatting
-- [ ] Expansion
-- [ ] Link additions
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting
 
 ### docs/dotNET/AkkadotNET.md
-- [ ] Formatting
-- [ ] Expansion
-- [ ] Link additions *(no links found)*
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] link additions *(no links found)*
 
 ### docs/dotNET/C#.md
-- [ ] Formatting
-- [ ] Expansion
-- [ ] Link additions
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting
 
 ### docs/dotNET/Multithreading.md
-- [ ] Formatting
-- [ ] Expansion
-- [ ] Link additions
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] content expansion
 
 ### docs/dotNET/WPF.md
-- [ ] Formatting
-- [ ] Expansion
-- [ ] Link additions
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] content expansion
+- [ ] updating of the contents to match newest version of the software or tool being discussed
 
 ### docs/index.md
-- [ ] Formatting
-- [ ] Expansion
-- [ ] Link additions *(no links found)*
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] content expansion
+- [ ] link additions *(no links found)*
 
 ### drafts/Analytical_Tools.md
-- [ ] Formatting *(needs code examples)*
-- [ ] Expansion
-- [ ] Link additions
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting *(needs code examples)*
+- [ ] content refresh
 
 ### drafts/Azure.md
-- [ ] Formatting
-- [ ] Expansion *(very brief, <50 words)*
-- [ ] Link additions
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] content refresh
+- [ ] content expansion *(very brief, <50 words)*
+- [ ] removal if obsolete
 
 ### drafts/Citizen_developer_tools.md
-- [ ] Formatting
-- [ ] Expansion *(very brief, <50 words)*
-- [ ] Link additions *(no links found)*
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] content refresh
+- [ ] content expansion *(very brief, <50 words)*
+- [ ] link additions *(no links found)*
+- [ ] removal if obsolete
 
 ### drafts/Cloud_Computing.md
-- [ ] Formatting
-- [ ] Expansion *(very brief, <50 words)*
-- [ ] Link additions
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] content refresh
+- [ ] content expansion *(very brief, <50 words)*
+- [ ] removal if obsolete
 
 ### drafts/DataScience.md
-- [ ] Formatting *(needs code examples)*
-- [ ] Expansion
-- [ ] Link additions
-- [ ] Update to newest version *(mentions old dates)*
-- [ ] Assess for removal if obsolete
+- [ ] formatting *(needs code examples)*
+- [ ] content refresh
+- [ ] updating of the contents to match newest version of the software or tool being discussed *(mentions old dates)*
 
 ### drafts/Data_Visualization.md
-- [ ] Formatting
-- [ ] Expansion *(very brief, <50 words)*
-- [ ] Link additions
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] content refresh
+- [ ] content expansion *(very brief, <50 words)*
+- [ ] removal if obsolete
 
 ### drafts/Databases.md
-- [ ] Formatting
-- [ ] Expansion *(very brief, <50 words)*
-- [ ] Link additions
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] content refresh
+- [ ] content expansion *(very brief, <50 words)*
+- [ ] removal if obsolete
 
 ### drafts/ELK.md
-- [ ] Formatting
-- [ ] Expansion *(very brief, <50 words)*
-- [ ] Link additions
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] content refresh
+- [ ] content expansion *(very brief, <50 words)*
+- [ ] removal if obsolete
 
 ### drafts/ETL.md
-- [ ] Formatting
-- [ ] Expansion *(very brief, <50 words)*
-- [ ] Link additions
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] content refresh
+- [ ] content expansion *(very brief, <50 words)*
+- [ ] removal if obsolete
 
 ### drafts/Hive.md
-- [ ] Formatting
-- [ ] Expansion *(very brief, <50 words)*
-- [ ] Link additions
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] content refresh
+- [ ] content expansion *(very brief, <50 words)*
+- [ ] removal if obsolete
 
 ### drafts/Java.md
-- [ ] Formatting
-- [ ] Expansion *(very brief, <50 words)*
-- [ ] Link additions
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] content refresh
+- [ ] content expansion *(very brief, <50 words)*
+- [ ] removal if obsolete
 
 ### drafts/Kong.md
-- [ ] Formatting
-- [ ] Expansion *(very brief, <50 words)*
-- [ ] Link additions
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] content refresh
+- [ ] content expansion *(very brief, <50 words)*
+- [ ] removal if obsolete
 
 ### drafts/Logging.md
-- [ ] Formatting
-- [ ] Expansion *(very brief, <50 words)*
-- [ ] Link additions
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] content refresh
+- [ ] content expansion *(very brief, <50 words)*
+- [ ] removal if obsolete
 
 ### drafts/Play_Framework2.md
-- [ ] Formatting
-- [ ] Expansion
-- [ ] Link additions
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] content refresh
+- [ ] content expansion
 
 ### drafts/Scala2.md
-- [ ] Formatting
-- [ ] Expansion
-- [ ] Link additions
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] content refresh
 
 ### drafts/Scala3.md
-- [ ] Formatting
-- [ ] Expansion *(very brief, <50 words)*
-- [ ] Link additions
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] content refresh
+- [ ] content expansion *(very brief, <50 words)*
+- [ ] removal if obsolete
 
 ### drafts/Software_Design.md
-- [ ] Formatting
-- [ ] Expansion *(very brief, <50 words)*
-- [ ] Link additions
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] content refresh
+- [ ] content expansion *(very brief, <50 words)*
+- [ ] removal if obsolete
 
 ### drafts/Stream_Processing.md
-- [ ] Formatting
-- [ ] Expansion *(very brief, <50 words)*
-- [ ] Link additions
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] content refresh
+- [ ] content expansion *(very brief, <50 words)*
+- [ ] removal if obsolete
 
 ### drafts/Terraform2.md
-- [ ] Formatting
-- [ ] Expansion *(very brief, <50 words)*
-- [ ] Link additions
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] content refresh
+- [ ] content expansion *(very brief, <50 words)*
+- [ ] removal if obsolete
 
 ### drafts/Windows_Tools.md
-- [ ] Formatting
-- [ ] Expansion *(very brief, <50 words)*
-- [ ] Link additions
-- [ ] Update to newest version
-- [ ] Assess for removal if obsolete
+- [ ] formatting
+- [ ] content refresh
+- [ ] content expansion *(very brief, <50 words)*
+- [ ] removal if obsolete
