@@ -6,7 +6,9 @@ tags: python dotNET
 
 # Serverless Cheatsheet
 
-[Serverless home page](https://serverless.com/)
+[Serverless Framework home page](https://www.serverless.com/)
+
+Modern serverless architectures emphasize event-driven design, leveraging managed services (like EventBridge, SQS, and API Gateway) to trigger ephemeral compute (Lambda) with minimal operational overhead.
 
 ## Install
 
@@ -18,46 +20,34 @@ npm install -g serverless
 
 [Serverless Examples](https://github.com/serverless/examples)
 
-[Serverless Starter](https://github.com/serverless/serverless-starter)
+## CLI Cheatsheet
 
-[Python example](https://serverlesscode.com/post/python-on-serverless-intro/)
-
-[C# example](https://serverless.com/blog/serverless-v1.4.0/)
-
-## Cheatsheet
+Note: `sls` is an alias for the `serverless` command.
 
 - Create a Service:
 
 ```bash
 # NodeJS
-serverless create -p [SERVICE NAME] -t aws-nodejs
+sls create -p [SERVICE NAME] -t aws-nodejs
 
-# C#
-serverless create --path serverlessCSharp --template aws-csharp
-```
-
-- Install a Service
-
-This is a convenience method to install a pre-made Serverless Service locally by downloading the Github repo and unzipping it.
-
-```bash
-serverless install -u [GITHUB URL OF SERVICE]
+# Python
+sls create --path myService --template aws-python3
 ```
 
 - Deploy All
 
-Use this when you have made changes to your Functions, Events or Resources in ``serverless.yml`` or you simply want to deploy all changes within your Service at the same time.
+Use this when you have made changes to your Functions, Events or Resources in `serverless.yml` or you simply want to deploy all changes within your Service at the same time.
 
 ```bash
-serverless deploy -s [STAGE NAME] -r [REGION NAME] -v
+sls deploy --stage [STAGE NAME] --region [REGION NAME] --verbose
 ```
 
 - Deploy Function
 
-Use this to quickly overwrite your AWS Lambda code on AWS, allowing you to develop faster.
+Use this to quickly overwrite your AWS Lambda code on AWS, allowing you to develop faster without deploying CloudFormation changes.
 
 ```bash
-serverless deploy function -f [FUNCTION NAME] -s [STAGE NAME] -r [REGION NAME]
+sls deploy function -f [FUNCTION NAME]
 ```
 
 - Invoke Function
@@ -65,13 +55,29 @@ serverless deploy function -f [FUNCTION NAME] -s [STAGE NAME] -r [REGION NAME]
 Invokes an AWS Lambda Function on AWS and returns logs.
 
 ```bash
-serverless invoke -f [FUNCTION NAME] -s [STAGE NAME] -r [REGION NAME] -l
+sls invoke -f [FUNCTION NAME] -l
+```
+
+- Invoke Local
+
+Invokes a function locally for testing.
+
+```bash
+sls invoke local -f [FUNCTION NAME] -d '{"data": "value"}'
 ```
 
 - Streaming Logs
 
-Open up a separate tab in your console and stream all logs for a specific Function using this command.
+Open up a separate tab in your console and stream all logs for a specific Function.
 
 ```bash
-serverless logs -f [FUNCTION NAME] -s [STAGE NAME] -r [REGION NAME]
+sls logs -f [FUNCTION NAME] -t
+```
+
+- Remove Service
+
+Deletes all deployed AWS resources associated with the service.
+
+```bash
+sls remove --stage [STAGE]
 ```

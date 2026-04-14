@@ -50,19 +50,3 @@ kubectl exec -it <pod name> -- bash
 ```shell
 kubectl delete pod <pod name>
 ```
-
-### Ephemeral Debug Containers
-
-Starting with Kubernetes 1.25, `kubectl debug` allows you to attach an ephemeral container to a running pod for troubleshooting, which is especially useful if the pod's image doesn't contain debugging utilities (like `bash` or `curl`).
-
-```shell
-# Add an interactive busybox container to a running pod
-kubectl debug -it <pod_name> --image=busybox --target=<container_name>
-
-# Debug a node by creating a privileged pod on it
-kubectl debug node/<node_name> -it --image=ubuntu
-```
-
-### Useful Links
-
-- [Official K8s Troubleshooting Guide](https://kubernetes.io/docs/tasks/debug/)
