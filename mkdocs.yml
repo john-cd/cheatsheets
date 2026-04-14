@@ -12,9 +12,33 @@ site_url: "https://john-cd.com/cheatsheets/"
 # Required within Dev Container (default binding is 127.0.0.1:8000)
 dev_addr: 0.0.0.0:8000
 
-## Navigation is automatic but can be overriden:
-# nav:
-#   - Home: index.md
+## Navigation is automatic but can be overridden:
+nav:
+  - Home: index.md
+  - Big Data:
+    - Spark APIs: Big_Data/Spark_APIs.md
+  - Containers:
+    - Helm Chart Creation: Containers/Helm_Chart_Creation.md
+    - Kubernetes Cheatsheet: Containers/Kubernetes_Cheatsheet.md
+    - Kubernetes Concepts: Containers/Kubernetes_Concepts.md
+    - Kubernetes Examples: Containers/Kubernetes_Examples.md
+    - Minikube Install in Ubuntu on Windows: Containers/Minikube_Install_in_Ubuntu_on_Windows.md
+    - Minikube Install on Windows: Containers/Minikube_Install_on_Windows.md
+  - Data Science:
+    - Data Manipulation: Data_Science/Data_Manipulation.md
+    - Data Visualization: Data_Science/Data_Visualization.md
+    - Deep Learning: Data_Science/Deep_Learning.md
+    - Dimensionality Reduction: Data_Science/Dimensionality_Reduction.md
+    - Keras: Data_Science/Keras.md
+    - Machine Learning: Data_Science/Machine_Learning.md
+    - Recommenders: Data_Science/Recommenders.md
+    - Scikit-Learn: Data_Science/scikit-learn.md
+  - Scala:
+    - Scala Generalities: Scala/Scala_Generalities.md
+    - Scaladoc: Scala/Scaladoc.md
+  - Search:
+    - ElasticSearch: Search/ElasticSearch.md
+    - Logstash: Search/Logstash.md
 
 ## Strict validation, if required:
 # validation:
