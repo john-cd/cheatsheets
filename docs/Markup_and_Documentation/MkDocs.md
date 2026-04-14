@@ -53,3 +53,30 @@ mkdocs gh-deploy
         index.md  # The documentation homepage.
         ...       # Other markdown pages, images and other files.
 ```
+
+## Material for MkDocs Best Practices
+
+Use the `mkdocs.yml` to leverage the Material theme extensively:
+
+```yaml
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  palette:
+    - scheme: default
+      primary: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+```

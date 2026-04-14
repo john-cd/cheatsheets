@@ -11,3 +11,39 @@ What is "living" in the application context? This means that the context instant
 ## Spring and AWS
 
 [A New Way of Using Email for Support Apps: An AWS Tutorial](https://www.toptal.com/aws/new-way-email-support-app-aws?utm_campaign=blog_post_new_way_email_support_app_aws&utm_medium=email&utm_source=blog_subscribers)
+
+## Modern Spring Boot 3 Features
+
+Spring Boot 3 requires Java 17+ and heavily relies on Jakarta EE 10 instead of Java EE (`javax` -> `jakarta`).
+
+```java
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@SpringBootApplication
+public class ModernApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(ModernApplication.class, args);
+    }
+}
+
+@RestController
+class HelloController {
+    @GetMapping("/api/hello")
+    public String hello() {
+        return "Hello, Spring Boot 3!";
+    }
+}
+
+@Entity
+class User {
+    @Id
+    private Long id;
+    private String name;
+    // Getters and setters
+}
+```

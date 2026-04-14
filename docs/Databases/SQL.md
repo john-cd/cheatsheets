@@ -819,3 +819,26 @@ Could you give me SQL for customers who placed orders on both the days, 25th Dec
   ON o.customer_id = o1.customer_id
   WHERE ...
 ```
+
+## Modern SQL Dialects
+
+Modern SQL (PostgreSQL 12+, SQL Server 2019+) features:
+
+**Common Table Expressions (CTEs):**
+```sql
+WITH regional_sales AS (
+    SELECT region, SUM(amount) AS total_sales
+    FROM orders
+    GROUP BY region
+)
+SELECT region, total_sales
+FROM regional_sales
+WHERE total_sales > (SELECT SUM(total_sales)/10 FROM regional_sales);
+```
+
+**JSON Support (PostgreSQL):**
+```sql
+SELECT info ->> 'customer' AS customer_name
+FROM orders
+WHERE info @> '{"status": "completed"}';
+```

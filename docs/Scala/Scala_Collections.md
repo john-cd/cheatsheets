@@ -372,3 +372,7 @@ Scala can implicitly convert from a Scala collection type into a Java collection
 ```scala
 import scala.collection.JavaConversions._
 ```
+
+## Missing Links Replaced
+
+[Scala Collections Documentation](https://docs.scala-lang.org/overviews/collections/introduction.html)
