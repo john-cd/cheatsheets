@@ -13,7 +13,7 @@ category: devops
 
 [Docker Tutorials and Labs](https://github.com/docker/labs)
 
-[Docker + Jenkins](https://www.toptal.com/java/java-continuous-integration-setup-tutorial)
+[Docker + Jenkins](https://www.toptal.com/java/java-continuous-integration-setup-tutorial) (Update Note: Link unreachable)
 
 [Docker Hub](https://hub.docker.com/)
 
@@ -21,29 +21,29 @@ category: devops
 
 A Docker image is a read-only template. For example, an image could contain an Ubuntu operating system with Apache and your web application installed. Images are used to create Docker containers. Docker provides a simple way to build new images or update existing images, or you can download Docker images that other people have already created. Docker images are the buildcomponent of Docker.
 
-Docker registries hold images.
+Docker registries hold images. For orchestration, see [Kubernetes Concepts](Kubernetes_Concepts.md).
 
 ## Cheatsheet
 
-To show only running containers use:
+To show only running containers, use the following command.
 
 ```bash
 docker ps
 ```
 
-To show all containers use:
+To show all containers, use the following command.
 
 ```bash
 docker ps -a
 ```
 
-Show last started container:
+To show the last started container, use the following command.
 
 ```bash
 docker ps -l
 ```
 
-Download an image:
+To download an image from Docker Hub, use the `docker pull` command.
 
 ```bash
 docker pull centos
@@ -70,7 +70,7 @@ docker run -d -p8088:80 --name webserver nginx
 
 If you want a transient container, `docker run --rm` will remove the container after it stops.
 
-Looks inside the container (use `-f` to act like `tail -f`):
+To look inside the container, use the logs command. You can also use `-f` to act like `tail -f`.
 
 ```bash
 docker logs <container name>
@@ -79,7 +79,7 @@ docker logs <container name>
 Stop container:
 
 ```bash
-docker stop <container name>   # container ID or name
+docker stop <container name>   # Container ID or name.
 ```
 
 Delete container:
@@ -182,18 +182,18 @@ docker build -t docker-whale .
 
 ## Multi-stage Build Example
 
-Multi-stage builds are useful to optimize image sizes, separating the build environment from the runtime environment.
+The following is a Dockerfile example showing a multi-stage build. Multi-stage builds are useful to optimize image sizes, separating the build environment from the runtime environment.
 
 ```dockerfile
-# Build stage
-FROM golang:1.20-alpine AS builder
+# Build stage.
+FROM golang:1.22-alpine AS builder
 WORKDIR /app
 COPY go.mod go.sum ./
 RUN go mod download
 COPY . .
 RUN go build -o myapp .
 
-# Final stage
+# Final stage.
 FROM alpine:latest
 WORKDIR /root/
 COPY --from=builder /app/myapp .
@@ -202,14 +202,14 @@ CMD ["./myapp"]
 
 ## Docker Compose Example
 
-`docker-compose.yml` to define and run multi-container applications:
+`compose.yaml` (or `compose.yaml`) to define and run multi-container applications:
 
 ```yaml
 version: '3.8'
 
 services:
   web:
-    image: nginx:latest
+    image: nginx:alpine
     ports:
       - "8080:80"
     volumes:
@@ -226,7 +226,7 @@ services:
       - "5000:5000"
 
   db:
-    image: postgres:15-alpine
+    image: postgres:16-alpine
     environment:
       - POSTGRES_PASSWORD=secret
     volumes:
@@ -241,4 +241,21 @@ Run compose:
 ```bash
 docker compose up -d
 docker compose down
+```
+
+## Docker Cleanup Commands
+
+To remove all unused or dangling images, containers, volumes, and networks:
+
+```bash
+docker system prune -a --volumes
+```
+
+## Multi-architecture Builds
+
+Use `buildx` to build for multiple architectures (e.g., AMD64 and ARM64):
+
+```bash
+docker buildx create --use
+docker buildx build --platform linux/amd64,linux/arm64 -t myrepo/myimage:latest --push .
 ```

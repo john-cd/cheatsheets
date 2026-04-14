@@ -130,7 +130,7 @@ gem "jekyll-theme-tactile"
 ```bash
 $ bundle install
 
-# check proper install
+# Check proper install.
 $ bundle show jekyll-theme-tactile
 ```
 
@@ -165,7 +165,7 @@ def print_hi(name)
   puts "Hi, #{name}"
 end
 print_hi('Tom')
-# => prints 'Hi, Tom' to STDOUT.
+## => prints 'Hi, Tom' to STDOUT.
 {% endhighlight %}
 ```
 
@@ -174,14 +174,14 @@ print_hi('Tom')
 Ensure you have a recent version of Ruby (3.x) installed via `rbenv` or `rvm`.
 
 ```shell
-# Install Jekyll and Bundler
+## Install Jekyll and Bundler
 gem install jekyll bundler
 
-# Create a new site
+## Create a new site
 jekyll new myblog
 cd myblog
 
-# Serve locally
+## Serve locally
 bundle exec jekyll serve
 ```
 

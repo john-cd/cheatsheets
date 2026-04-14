@@ -72,9 +72,7 @@ Twine is a utility for publishing Python packages on PyPI.
 Host, run, and code Python in the cloud
 
 
-
-
-
+## Python 3
 
 Python 3 is the current version of the Python programming language. It is a high-level, general-purpose programming language that emphasizes code readability with its notable use of significant indentation.
 
@@ -157,7 +155,7 @@ def lazy_range(up_to):
      yield from gratuitous_refactor()
 ```
 
-New 3.6 syntax:
+New 3.12 syntax:
 
 ```python
 async def func(param1, param2):
@@ -289,4 +287,45 @@ def http_error(status):
             return "I'm a teapot"
         case _:
             return "Something's wrong with the internet"
+```
+
+## Dataclasses
+
+Dataclasses (introduced in Python 3.7) provide a decorator and functions for automatically adding generated special methods such as `__init__()` and `__repr__()` to user-defined classes.
+
+```python
+from dataclasses import dataclass
+
+@dataclass
+class InventoryItem:
+    name: str
+    unit_price: float
+    quantity_on_hand: int = 0
+
+    def total_cost(self) -> float:
+        return self.unit_price * self.quantity_on_hand
+```
+
+## Asyncio
+
+Asyncio is a library to write concurrent code using the `async`/`await` syntax.
+
+```python
+import asyncio
+
+async def main():
+    print('Hello ...')
+    await asyncio.sleep(1)
+    print('... World!')
+
+asyncio.run(main())
+```
+
+## Type Hinting
+
+Type hinting allows you to explicitly state the expected type of arguments and return values.
+
+```python
+def greeting(name: str) -> str:
+    return 'Hello ' + name
 ```

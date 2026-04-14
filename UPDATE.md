@@ -313,3 +313,7 @@ The goal is to ensure all cheatsheets remain technical, very concise, and direct
 
 ### drafts/Windows_Tools.md
 - [ ] Removal: Assess for removal or update with modern dev tooling (WSL, Windows Terminal).
+
+### Added Tasks
+- [ ] `docs/Web/jQuery.md`: Add more modern JavaScript (ES6+) examples
+- [ ] `docs/Containers/Kubernetes_Concepts.md`: Expand on Kubernetes custom resources (CRDs)

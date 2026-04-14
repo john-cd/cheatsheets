@@ -576,3 +576,6 @@ showGraphWithCanvas();
 showTable();
 }
 ```
+
+
+<!-- TODO: Add more modern JavaScript (ES6+) examples -->
