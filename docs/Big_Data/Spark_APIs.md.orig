@@ -59,7 +59,7 @@ $"a" === $"b"
 CSV - Create a DataFrame with the anticipated structure
 
 ```scala
-val clickstreamDF = spark.read.format("csv")
+val clickstreamDF = sqlContext.read.format("com.databricks.spark.csv")
   .option("header", "true")
   .option("delimiter", "\\t")
   .option("mode", "PERMISSIVE")
@@ -83,13 +83,9 @@ people.filter("age > 30")
 
 ```scala
 val clickstreamNoIDs8partDF = clickstreamNoIDsDF.repartition(8)
-clickstreamNoIDs8partDF.createOrReplaceTempView("Clickstream")
-spark.cacheTable("Clickstream")
+clickstreamNoIDs8partDF.registerTempTable("Clickstream")
+sqlContext.cacheTable("Clickstream")
 ```
 
 An ideal partition size in Spark is about 50 MB - 200 MB.
 The cache gets stored in Project Tungsten binary compressed columnar format.
-
-## Reference
-
-- [Official Spark Scala API Docs](https://spark.apache.org/docs/latest/api/scala/index.html)

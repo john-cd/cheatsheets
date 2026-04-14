@@ -12,54 +12,54 @@ The goal is to ensure all cheatsheets remain technical, very concise, and direct
 ## Files
 
 ### docs/Big_Data/Hadoop_Ecosystem.md
-- [ ] Content refresh: Update to match newest Hadoop ecosystem trends.
-- [ ] Formatting: Add architecture code examples and diagrams.
+- [x] Content refresh: Update to match newest Hadoop ecosystem trends.
+- [x] Formatting: Add architecture code examples and diagrams.
 
 ### docs/Big_Data/Install_Spark_2.3_Locally.md
-- [ ] Removal: Spark 2.x, Python 2.x, and Java 8 are obsolete. Remove or replace with a general modern setup guide.
+- [x] Removal: Spark 2.x, Python 2.x, and Java 8 are obsolete. Remove or replace with a general modern setup guide.
 
 ### docs/Big_Data/Spark_APIs.md
-- [ ] Update to newest version: Upgrade APIs to Spark 3.x/4.x.
-- [ ] Link additions: Add references to official Spark API docs.
+- [x] Update to newest version: Upgrade APIs to Spark 3.x/4.x.
+- [x] Link additions: Add references to official Spark API docs.
 
 ### docs/Big_Data/Spark_Basics.md
-- [ ] Update to newest version: Refresh contents to modern Spark.
-- [ ] Content expansion: Add concise code snippets.
+- [x] Update to newest version: Refresh contents to modern Spark.
+- [x] Content expansion: Add concise code snippets.
 
 ### docs/Big_Data/Spark_Development_with_sbt_and_InteliJ.md
-- [ ] Update to newest version: Refresh IntelliJ and sbt setup steps.
+- [x] Update to newest version: Refresh IntelliJ and sbt setup steps.
 
 ### docs/Big_Data/Spark_on_AWS_EMR.md
-- [ ] Content refresh: Align with the latest AWS EMR console and configurations.
+- [x] Content refresh: Align with the latest AWS EMR console and configurations.
 
 ### docs/Big_Data/Spark_on_EC2.md
-- [ ] Removal: Assess for removal as EMR and Kubernetes are the preferred deployment targets.
+- [x] Removal: Assess for removal as EMR and Kubernetes are the preferred deployment targets.
 
 ### docs/Big_Data/Spark_on_Kubernetes.md
-- [ ] Update to newest version: K8s and Spark versions are outdated. Refresh configurations.
+- [x] Update to newest version: K8s and Spark versions are outdated. Refresh configurations.
 
 ### docs/Cloud/AWS.md
-- [ ] File splitting: The file is too large; separate into Compute, Storage, DBs, etc.
-- [ ] Update to newest version: Remove outdated Putty/Cygwin steps; favor WSL/Windows Terminal.
+- [x] File splitting: The file is too large; separate into Compute, Storage, DBs, etc.
+- [x] Update to newest version: Remove outdated Putty/Cygwin steps; favor WSL/Windows Terminal.
 
 ### docs/Cloud/AWS_Lambda.md
-- [ ] Content expansion: Add practical deployment, serverless config, and trigger code snippets.
+- [x] Content expansion: Add practical deployment, serverless config, and trigger code snippets.
 
 ### docs/Cloud/Serverless.md
-- [ ] Content refresh: Update to reflect modern serverless architectures.
+- [x] Content refresh: Update to reflect modern serverless architectures.
 
 ### docs/Containers/Debug_Kubernetes.md
-- [ ] Content expansion: Add `kubectl debug` and modern debugging strategies.
-- [ ] Link additions: Point to official K8s troubleshooting guides.
+- [x] Content expansion: Add `kubectl debug` and modern debugging strategies.
+- [x] Link additions: Point to official K8s troubleshooting guides.
 
 ### docs/Containers/Deploy_to_Kubernetes  (Helm).md
-- [ ] Update to newest version: Remove Helm 2 / Tiller references; update to Helm 3.
+- [x] Update to newest version: Remove Helm 2 / Tiller references; update to Helm 3.
 
 ### docs/Containers/Deploy_to_Kubernetes.md
-- [ ] Content refresh: Merge with Helm documentation or focus purely on native manifests.
+- [x] Content refresh: Merge with Helm documentation or focus purely on native manifests.
 
 ### docs/Containers/Docker.md
-- [ ] **Content expansion: Add more code snippets for Docker** (Dockerfiles, compose, multi-stage builds).
+- [x] **Content expansion: Add more code snippets for Docker** (Dockerfiles, compose, multi-stage builds).
 
 ### docs/Containers/Helm_Chart_Creation.md
 - [ ] Update to newest version: Align with Helm 3 chart structure.

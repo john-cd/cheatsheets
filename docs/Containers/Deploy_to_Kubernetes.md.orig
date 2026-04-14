@@ -84,22 +84,32 @@ Enabling the add-on provisions the following:
 - the Nginx ingress controller
 - a service that exposes a default Nginx backend pod for handling unmapped requests.
 
+#### Install the nginx ingress controller (non-minikube Kubernetes)
+
+- Install via this [helm chart](https://hub.kubeapps.com/charts/stable/nginx-ingress)
+
+```shell
+#./helm install stable/nginx-ingress
+```
+
+or with stat collection enabled for Prometheus
+
+```shell
+helm install --name nginx-ingress-release stable/nginx-ingress \
+  --set controller.stats.enabled=true \
+  --set controller.metrics.enabled=true
+```
+
+- Verify that the Ingress exists
+
+```shell
+kubectl get ing
+```
+
+See [explanations](https://daemonza.github.io/2017/02/13/kubernetes-nginx-ingress-controller/) and [documentation](https://github.com/kubernetes/ingress-nginx)
+
+The nginx ingress controller requires a 404-server like [this](https://github.com/kubernetes/ingress-nginx/tree/master/images/404-server)
+
 #### Alternative ingress controllers
 
 - Install [https://traefik.io/](https://traefik.io/)
-
-### Declarative Deployments (Kustomize)
-
-Kustomize is built into `kubectl` and allows for template-free customization of YAML manifests.
-
-To deploy a directory containing a `kustomization.yaml` file:
-
-```shell
-kubectl apply -k <directory-path>
-```
-
-To view the generated native manifests without applying them:
-
-```shell
-kubectl kustomize <directory-path>
-```
