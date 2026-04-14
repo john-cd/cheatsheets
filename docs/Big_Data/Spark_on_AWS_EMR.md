@@ -11,7 +11,7 @@ The following procedure creates a cluster with Spark installed.
 1. Open the Amazon EMR console at [https://console.aws.amazon.com/elasticmapreduce/](https://console.aws.amazon.com/elasticmapreduce/).
 1. Choose Create cluster to use Quick Create.
 
-- For the Software Configuration field, choose Amazon Release Version emr-5.0.0 or later.
+- For the Software Configuration field, choose Amazon Release Version emr-7.0.0 or later.
 - In the Select Applications field, choose either All Applications or Spark.
 - Select other options as necessary and then choose Create cluster
 
@@ -20,8 +20,8 @@ The following procedure creates a cluster with Spark installed.
 *Simple cluster:*
 
 ```bash
-aws emr create-cluster --name "Spark cluster" --release-label emr-5.0.0 --applications Name=Spark \
---ec2-attributes KeyName=myKey --instance-type m3.xlarge --instance-count 3 --use-default-roles
+aws emr create-cluster --name "Spark cluster" --release-label emr-7.0.0 --applications Name=Spark \
+--ec2-attributes KeyName=myKey --instance-type m5.xlarge --instance-count 3 --use-default-roles
 ```
 
 Note: For Windows, replace the above Linux line continuation character (\) with the caret (^).
@@ -30,7 +30,7 @@ Note: For Windows, replace the above Linux line continuation character (\) with 
 
 ```bash
 aws emr create-cluster --release-label --applications Name=Spark \
---instance-type m3.xlarge --instance-count 3 --configurations https://s3.amazonaws.com/mybucket/myfolder/myConfig.json
+--instance-type m5.xlarge --instance-count 3 --configurations https://s3.amazonaws.com/mybucket/myfolder/myConfig.json
 ```
 
 *Sample myConfig.json:*
@@ -49,12 +49,12 @@ aws emr create-cluster --release-label --applications Name=Spark \
 *Using Spot instances:*
 
 ```bash
-aws emr create-cluster --name "Spot cluster" --release-label emr-5.0.0 --applications Name=Spark \
+aws emr create-cluster --name "Spot cluster" --release-label emr-7.0.0 --applications Name=Spark \
 --use-default-roles --ec2-attributes KeyName=myKey \
---instance-groups InstanceGroupType=MASTER,InstanceType=m3.xlarge,InstanceCount=1,BidPrice=0.25 \
-InstanceGroupType=CORE,BidPrice=0.03,InstanceType=m3.xlarge,InstanceCount=2
+--instance-groups InstanceGroupType=MASTER,InstanceType=m5.xlarge,InstanceCount=1,BidPrice=0.25 \
+InstanceGroupType=CORE,BidPrice=0.03,InstanceType=m5.xlarge,InstanceCount=2
 
-# InstanceGroupType=TASK,BidPrice=0.10,InstanceType=m3.xlarge,InstanceCount=3
+# InstanceGroupType=TASK,BidPrice=0.10,InstanceType=m5.xlarge,InstanceCount=3
 ```
 
 *In Java:*
@@ -65,7 +65,7 @@ AmazonElasticMapReduceClient emr = new AmazonElasticMapReduceClient(credentials)
 Application sparkApp = new Application() .withName("Spark");
 Applications myApps = new Applications();
 myApps.add(sparkApp);
-RunJobFlowRequest request = new RunJobFlowRequest() .withName("Spark Cluster") .withApplications(myApps) .withReleaseLabel("") .withInstances(new JobFlowInstancesConfig() .withEc2KeyName("myKeyName") .withInstanceCount(1) .withKeepJobFlowAliveWhenNoSteps(true) .withMasterInstanceType("m3.xlarge") .withSlaveInstanceType("m3.xlarge") ); RunJobFlowResult result = emr.runJobFlow(request);
+RunJobFlowRequest request = new RunJobFlowRequest() .withName("Spark Cluster") .withApplications(myApps) .withReleaseLabel("") .withInstances(new JobFlowInstancesConfig() .withEc2KeyName("myKeyName") .withInstanceCount(1) .withKeepJobFlowAliveWhenNoSteps(true) .withMasterInstanceType("m5.xlarge") .withSlaveInstanceType("m5.xlarge") ); RunJobFlowResult result = emr.runJobFlow(request);
 ```
 
 ## Connect to the Master Node using SSH

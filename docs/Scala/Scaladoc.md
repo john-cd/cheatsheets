@@ -118,3 +118,20 @@ Indentation is relative to the starting * for the comment.
 Headings are defined with surrounding = characters, with more = denoting subheadings. E.g. =Heading=, ==Sub-Heading==, etc.
 
 List blocks are a sequence of list items with the same style and level, with no interruptions from other block styles. Unordered lists can be bulleted using -, while numbered lists can be denoted using 1., i., I., a. for the various numbering styles.
+
+## Scaladoc for Scala 3
+
+[Scaladoc 3 Documentation](https://docs.scala-lang.org/scala3/guides/scaladoc/)
+
+Scaladoc for Scala 3 has a revamped toolset.
+
+```scala
+/** Starts the comment here
+ *
+ * In Scala 3 Scaladoc, Markdown is heavily supported.
+ *
+ * @param name The name of the person
+ * @return A greeting message
+ */
+def greet(name: String): String = s"Hello, $name"
+```

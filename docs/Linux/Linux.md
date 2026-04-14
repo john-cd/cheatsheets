@@ -120,3 +120,19 @@ yum install -y amazon-ssm-agent.rpm
 ## Linux desktop
 
 [How can I connect to an Amazon EC2 Linux instance with desktop functionality from Windows?](https://aws.amazon.com/premiumsupport/knowledge-center/connect-to-linux-desktop-from-windows/)
+
+## Modern CLI Tooling
+
+- **`bat`**: A modern replacement for `cat` with syntax highlighting.
+- **`ripgrep` (`rg`)**: Extremely fast alternative to `grep`.
+- **`fd`**: A simple, fast alternative to `find`.
+- **`htop` / `btm` (bottom)**: Better alternatives to `top`.
+- **`exa` / `eza`**: Modern replacement for `ls`.
+
+```shell
+# Example uses
+rg "search_term" .
+fd "file_name" /path
+eza -la --icons
+bat script.sh
+```

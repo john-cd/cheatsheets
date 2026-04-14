@@ -255,3 +255,28 @@ def inspect[T](l: List[T])(implicit tt: TypeTag[T]) = tt.tpe.typeSymbol.name.dec
 ```
 
 TypeTags can be used to determine a type used before it erased by the VM by using an implicit TypeTag argument.
+
+## Scala 3 Types
+
+### Union Types
+Union types allow a value to be one of multiple types.
+```scala
+def help(id: UserName | Password) =
+  val user = id match
+    case UserName(name) => lookupName(name)
+    case Password(hash) => lookupPassword(hash)
+```
+
+### Intersection Types
+Intersection types replace compound types (`A with B`).
+```scala
+trait Resettable:
+  def reset(): Unit
+
+trait Growable[T]:
+  def add(x: T): Unit
+
+def f(x: Resettable & Growable[String]) =
+  x.reset()
+  x.add("first")
+```

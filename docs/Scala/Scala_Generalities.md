@@ -49,3 +49,9 @@ export PATH=$PATH:$JAVA_HOME/bin/
 scalac HelloWorld.scala  // produces HelloWorld.class
 scala -classpath . HelloWorld
 ```
+
+## Scala 3 Updates
+- **Indentation-based syntax**: Similar to Python.
+- **Enums**: First-class support for algebraic data types.
+- **Extension Methods**: Easier way to add methods to existing types.
+- **Given Instances and Using Clauses**: Replacement for `implicit`s.

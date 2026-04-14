@@ -128,3 +128,16 @@ object AkkaQuickstart extends App {
 //#main-class
 //#full-example
 ```
+
+## Apache Pekko
+Apache Pekko is an open-source fork of Akka 2.6.x, created after Akka changed its license.
+
+- [Pekko Documentation](https://pekko.apache.org/docs/pekko/current/)
+
+sbt dependencies (for Pekko):
+```scala
+libraryDependencies ++= Seq(
+  "org.apache.pekko" %% "pekko-actor-typed" % "1.0.2",
+  "org.apache.pekko" %% "pekko-stream" % "1.0.2"
+)
+```
