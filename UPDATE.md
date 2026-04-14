@@ -4,7 +4,7 @@ This document tracks the update and improvement of all cheatsheets and markdown 
 
 The goal is to ensure all cheatsheets remain technical, very concise, and directed at software engineers.
 
-- [ ] **Update documentation structure for easier navigation** (e.g., group related topics, consolidate redundant drafts).
+- [x] **Update documentation structure for easier navigation** (e.g., group related topics, consolidate redundant drafts).
 - [ ] **Add more code snippets for Docker and Python** across relevant cheatsheets.
 - [ ] **Format, lint, and split large files** to maintain readability and conciseness.
 

@@ -18,6 +18,7 @@ nav:
   - Big Data:
     - Spark APIs: Big_Data/Spark_APIs.md
   - Containers:
+    - Docker: Containers/Docker.md
     - Helm Chart Creation: Containers/Helm_Chart_Creation.md
     - Kubernetes Cheatsheet: Containers/Kubernetes_Cheatsheet.md
     - Kubernetes Concepts: Containers/Kubernetes_Concepts.md
@@ -33,6 +34,8 @@ nav:
     - Machine Learning: Data_Science/Machine_Learning.md
     - Recommenders: Data_Science/Recommenders.md
     - Scikit-Learn: Data_Science/scikit-learn.md
+  - Python:
+    - Python: Python/Python.md
   - Scala:
     - Scala Generalities: Scala/Scala_Generalities.md
     - Scaladoc: Scala/Scaladoc.md
