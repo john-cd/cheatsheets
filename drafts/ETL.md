@@ -7,3 +7,6 @@
 ## Platforms
 
 [Infoworks](https://www.infoworks.io/) Big Data Automation, Integration & Management Software Company.
+
+## Apache Airflow
+Airflow uses DAGs (Directed Acyclic Graphs) written in Python.

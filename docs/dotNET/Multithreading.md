@@ -20,3 +20,6 @@ https://mva.microsoft.com/en-US/training-courses/advanced-net-threading-part-4-t
 
 [Advanced .NET Threading, Part 5: Thread Synchronization Locks](
 https://mva.microsoft.com/en-US/training-courses/advanced-net-threading-part-5-thread-synchronization-locks-16661?l=A3VXnpitC_9006218965)
+
+## Task Parallel Library (TPL)
+Use `Task.Run` for CPU-bound work and `async/await` for I/O bound work.

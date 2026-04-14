@@ -317,12 +317,3 @@ package object pimp {
   }
 }
 ```
-
-## Scala 3 Constructs
-
-In Scala 3, you can use `enum` to represent ADTs more concisely.
-
-```scala
-enum Animal:
-  case Bird, Mammal, Fish
-```
