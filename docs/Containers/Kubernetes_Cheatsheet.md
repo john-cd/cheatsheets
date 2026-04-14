@@ -17,10 +17,17 @@ minikube dashboard
 
 [kubectl Cheat Sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
 
-- Run a particular image on the cluster (creates a deployment automatically)
+- Create a deployment to run a particular image on the cluster (modern equivalent of deprecated `kubectl run --replicas`)
 
 ```shell
-kubectl run hello-world --replicas=2 --labels="run=load-balancer-example" --image=gcr.io/google-samples/node-hello:1.0  --port=8080
+kubectl create deployment hello-world --image=gcr.io/google-samples/node-hello:1.0
+kubectl scale deployment hello-world --replicas=2
+```
+
+- Run a single, isolated Pod (since K8s v1.18, `kubectl run` no longer creates deployments)
+
+```shell
+kubectl run hello-world-pod --labels="run=load-balancer-example" --image=gcr.io/google-samples/node-hello:1.0 --port=8080
 ```
 
 - ``kubectl get`` - list resources.

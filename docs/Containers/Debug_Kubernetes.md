@@ -3,7 +3,7 @@ title: Debug Kubernetes
 tags: Kubernetes MiniKube Kubectl
 ---
 
-### Run a test Docker container
+# Run a test Docker container
 
 ```shell
 docker run --rm -p <port>:<port> <docker image>:<tag>
@@ -20,7 +20,7 @@ winpty docker run --rm -p <port>:<port> -it --entrypoint bash <docker image>:<ta
 
 The above assumes you are using cygwin / git bash on Windows.
 
-### Run a test K8s pod
+## Run a test K8s pod
 
 ```shell
 kubectl run <deployment name> --image=<docker image>:<tag>
