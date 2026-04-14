@@ -121,3 +121,6 @@ public IActionResult Int(int id) => Ok($"Looked up user id {id}");
 public IActionResult String(string name) => Ok($"User name {name}");
 }
 ```
+
+## ASP.NET Core
+ASP.NET Core is a modern, cross-platform, high-performance, open-source framework.

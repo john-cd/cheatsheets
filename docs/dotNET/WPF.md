@@ -106,3 +106,6 @@ WPF provides a set of predefined commands. The command library consists of the f
     </Trigger>
   </Style.Triggers></Style>
 ```
+
+## MVVM Pattern
+Model-View-ViewModel (MVVM) is the standard architectural pattern for WPF.

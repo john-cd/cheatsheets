@@ -1021,3 +1021,6 @@ The commands to do the above are as below:
 2. extract gz file to destination path
 3. `systemctl start elasticsearch`
 4. `systemctl daemon-reload elasticsearch`
+# ELK Stack
+
+[The Complete Guide to the ELK Stack - Logz.io](https://logz.io/learn/complete-guide-elk-stack/)

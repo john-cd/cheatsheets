@@ -47,3 +47,8 @@ on the JVM.
 - [Play framework](https://www.playframework.com/)
 - [Spark web microframework](https://sparkjava.com/)
 - [Akka](https://akka.io/) - actor model, to build highly concurrent, distributed, and resilient message-driven applications
+# Java
+
+[Spock](https://spockframework.org/)
+
+[YourKit - Profiling and Monitoring Tools for Java and .NET Professionals](https://www.yourkit.com/)

@@ -121,3 +121,9 @@ Intake is a lightweight package for finding, investigating, loading and dissemin
 [PipelineAI GitHub](https://github.com/PipelineAI/pipeline/tree/master/docs/quickstart/)
 
 [PipelineAI YouTube](https://www.youtube.com/c/PipelineAI/)
+
+## Code Examples
+```python
+import pandas as pd
+df = pd.read_csv('data.csv')
+```
