@@ -129,3 +129,32 @@ Code highlighting to bitbucket README.md written in Python Markdown
 ```bash
 git clone https://bitbucket.org/MY_USER/MY_REPO/wiki
 ```
+
+## Modern CommonMark
+
+Current standards heavily follow [CommonMark](https://commonmark.org/).
+
+### Syntax Examples
+
+**Bold** and *Italic*
+
+### Lists
+- Item 1
+- Item 2
+  - Nested Item
+
+### Links and Images
+[CommonMark](https://commonmark.org/)
+![Alt Text](https://via.placeholder.com/150)
+
+### Code Blocks
+```python
+def hello():
+    print("Hello CommonMark")
+```
+
+### Tables
+| Syntax      | Description |
+| ----------- | ----------- |
+| Header      | Title       |
+| Paragraph   | Text        |

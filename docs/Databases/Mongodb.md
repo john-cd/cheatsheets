@@ -21,11 +21,11 @@ Use the `--ignoreBlanks` option to ignore blank fields. For CSV and TSV imports,
 ## Print from a Cursor
 
 ```js
-myCursor.forEach(printjson);
+myCursor.forEach(console.log);
 
 // or
 while (myCollection.hasNext()) {
-   printjson(myCollection.next());
+   console.log(myCollection.next());
 }
 ```
 
@@ -130,9 +130,9 @@ function gatherStats() {
 
     var end = Date.now();
     var duration = (end - start)/1000;
-    printjson("Duration: " + duration + " seconds");
+    console.log("Duration: " + duration + " seconds");
 
-    printjson(" | DONE | ");
+    console.log(" | DONE | ");
 }
 
 gatherStats();

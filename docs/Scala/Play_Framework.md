@@ -46,3 +46,8 @@ target                   → Generated stuff
  └ web                   → Compiled web assets
 test                     → source folder for unit or functional tests
 ```
+
+## Play 3.x
+Play 3.0 uses Apache Pekko instead of Akka.
+
+[Play Framework Documentation](https://www.playframework.com/documentation/3.0.x/Home)

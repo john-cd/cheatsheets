@@ -100,3 +100,38 @@ logger.debug("Logging in user %1$s with birthday %2$tm %2$te,%2$tY", user.getNam
 //
 logger.debug("Logging in user {} with birthday {}", user.getName(), user.getBirthdayCalendar());
 ```
+
+## Log4Shell Mitigation Context
+**Important:** Versions of Log4j2 between 2.0-beta9 and 2.14.1 are vulnerable to Log4Shell (CVE-2021-44228).
+**Fix:** Always ensure you are using Log4j2 version **2.17.1 or newer**.
+
+## Modern Dependencies
+```xml
+<dependency>
+    <groupId>org.apache.logging.log4j</groupId>
+    <artifactId>log4j-api</artifactId>
+    <version>2.20.0</version>
+</dependency>
+<dependency>
+    <groupId>org.apache.logging.log4j</groupId>
+    <artifactId>log4j-core</artifactId>
+    <version>2.20.0</version>
+</dependency>
+```
+
+## Modern log4j2.xml Configuration
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+  <Appenders>
+    <Console name="Console" target="SYSTEM_OUT">
+      <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+    </Console>
+  </Appenders>
+  <Loggers>
+    <Root level="info">
+      <AppenderRef ref="Console"/>
+    </Root>
+  </Loggers>
+</Configuration>
+```

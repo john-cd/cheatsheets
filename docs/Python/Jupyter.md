@@ -190,3 +190,17 @@ In command mode:
 Papermill is a tool for parameterizing and executing Jupyter Notebooks.
 
 [Papermill GitHub](https://github.com/nteract/papermill)
+
+## JupyterLab
+
+JupyterLab is the latest web-based interactive development environment for notebooks, code, and data.
+
+### Installation
+```shell
+pip install jupyterlab
+```
+
+### Starting JupyterLab
+```shell
+jupyter lab
+```

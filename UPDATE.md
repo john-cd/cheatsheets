@@ -101,112 +101,112 @@ The goal is to ensure all cheatsheets remain technical, very concise, and direct
 - [ ] Content expansion: Add technical examples and expand beyond basic theory.
 
 ### docs/Data_Science/scikit-learn.md
-- [ ] Update to newest version: Refresh scikit-learn API changes.
+- [x] Update to newest version: Refresh scikit-learn API changes.
 
 ### docs/Databases/Mongodb.md
-- [ ] Update to newest version: Remove deprecated keywords and update syntax.
+- [x] Update to newest version: Remove deprecated keywords and update syntax.
 
 ### docs/Databases/Redshift.md
-- [ ] Formatting: Add advanced SQL code examples.
+- [x] Formatting: Add advanced SQL code examples.
 
 ### docs/Databases/SQL.md
-- [ ] Update to newest version: Update syntax and add references to modern SQL dialects.
+- [x] Update to newest version: Update syntax and add references to modern SQL dialects.
 
 ### docs/DevOps/CloudFormation.md
-- [ ] Update to newest version: Refresh templates to modern standards.
+- [x] Update to newest version: Refresh templates to modern standards.
 
 ### docs/DevOps/Git.md
-- [ ] Content refresh: Add modern commands like `git switch` and `git restore`.
+- [x] Content refresh: Add modern commands like `git switch` and `git restore`.
 
 ### docs/DevOps/Orchestrator_Scheduler.md
-- [ ] Update to newest version: Focus on modern tools (Airflow, Dagster, Prefect).
+- [x] Update to newest version: Focus on modern tools (Airflow, Dagster, Prefect).
 
 ### docs/Java/Gradle.md
-- [ ] Update to newest version: Ensure compatibility with modern Gradle DSL and Java versions.
+- [x] Update to newest version: Ensure compatibility with modern Gradle DSL and Java versions.
 
 ### docs/Java/Java.md
-- [ ] Update to newest version: Update syntax references to Java 21+.
+- [x] Update to newest version: Update syntax references to Java 21+.
 
 ### docs/Java/Log4j.md
-- [ ] Update to newest version: Upgrade to Log4j2 and add Log4Shell mitigation context.
+- [x] Update to newest version: Upgrade to Log4j2 and add Log4Shell mitigation context.
 
 ### docs/Java/Maven.md
-- [ ] Update to newest version: Refresh POM structure best practices.
+- [x] Update to newest version: Refresh POM structure best practices.
 
 ### docs/Java/Spring.md
-- [ ] Formatting: Add modern Spring Boot 3 code examples.
+- [x] Formatting: Add modern Spring Boot 3 code examples.
 
 ### docs/Linux/Linux.md
-- [ ] Update to newest version: Refresh standard CLI tooling and commands.
+- [x] Update to newest version: Refresh standard CLI tooling and commands.
 
 ### docs/Linux/Virtualization.md
-- [ ] Content expansion: Clarify differences between KVM, Hyper-V, and modern container runtime engines.
+- [x] Content expansion: Clarify differences between KVM, Hyper-V, and modern container runtime engines.
 
 ### docs/Markup_and_Documentation/Jekyll.md
-- [ ] Update to newest version: Check compatibility with newer Ruby and GitHub pages updates.
+- [x] Update to newest version: Check compatibility with newer Ruby and GitHub pages updates.
 
 ### docs/Markup_and_Documentation/Markdown.md
-- [ ] Update to newest version: Align with current CommonMark specs.
+- [x] Update to newest version: Align with current CommonMark specs.
 
 ### docs/Markup_and_Documentation/MkDocs.md
-- [ ] Update to newest version: Ensure Material for MkDocs best practices are included.
+- [x] Update to newest version: Ensure Material for MkDocs best practices are included.
 
 ### docs/Markup_and_Documentation/reStructuredText.md
-- [ ] Update to newest version: Refresh Sphinx configurations.
+- [x] Update to newest version: Refresh Sphinx configurations.
 
 ### docs/Microservices/Microservices.md
-- [ ] Content expansion: Add concise examples of gRPC, REST, and GraphQL APIs.
+- [x] Content expansion: Add concise examples of gRPC, REST, and GraphQL APIs.
 
 ### docs/Privacy/Privacy_engineering.md
-- [ ] Content expansion: Expand on GDPR/CCPA technical implementations.
+- [x] Content expansion: Expand on GDPR/CCPA technical implementations.
 
 ### docs/Python/Flask.md
-- [ ] Update to newest version: Ensure compatibility with modern Flask (3.x).
+- [x] Update to newest version: Ensure compatibility with modern Flask (3.x).
 
 ### docs/Python/Jupyter.md
-- [ ] Update to newest version: Transition notes heavily to JupyterLab.
+- [x] Update to newest version: Transition notes heavily to JupyterLab.
 
 ### docs/Python/Matplotlib.md
-- [ ] Link additions: Point to current Matplotlib galleries and documentation.
+- [x] Link additions: Point to current Matplotlib galleries and documentation.
 
 ### docs/Python/Python.md
-- [ ] **Content expansion: Add more code snippets for modern Python features.**
+- [x] **Content expansion: Add more code snippets for modern Python features.**
 
 ### docs/Python/Python3.md
-- [ ] File splitting / merge: Consolidate fully with `Python.md`.
+- [x] File splitting / merge: Consolidate fully with `Python.md`.
 
 ### docs/Scala/Akka.md
-- [ ] Link additions: Update references to current Akka or Pekko forks.
+- [x] Link additions: Update references to current Akka or Pekko forks.
 
 ### docs/Scala/Play_Framework.md
-- [ ] Update to newest version: Check Play 3.x compatibility.
+- [x] Update to newest version: Check Play 3.x compatibility.
 
 ### docs/Scala/Scala_Collections.md
-- [ ] Link additions: Fix and update missing http/https links.
+- [x] Link additions: Fix and update missing http/https links.
 
 ### docs/Scala/Scala_Database_Access.md
-- [ ] Content expansion: Add examples (Slick, Doobie, Quill).
+- [x] Content expansion: Add examples (Slick, Doobie, Quill).
 
 ### docs/Scala/Scala_Design_Patterns.md
-- [ ] Update to newest version: Reflect changes in Scala 3 constructs.
+- [x] Update to newest version: Reflect changes in Scala 3 constructs.
 
 ### docs/Scala/Scala_Generalities.md
-- [ ] Update to newest version: Refresh basic syntax for Scala 3.
+- [x] Update to newest version: Refresh basic syntax for Scala 3.
 
 ### docs/Scala/Scala_Language.md
-- [ ] Update to newest version: Incorporate Scala 3 features (givens, enums).
+- [x] Update to newest version: Incorporate Scala 3 features (givens, enums).
 
 ### docs/Scala/Scala_Testing.md
-- [ ] Update to newest version: Refresh ScalaTest / MUnit examples.
+- [x] Update to newest version: Refresh ScalaTest / MUnit examples.
 
 ### docs/Scala/Scala_Types.md
-- [ ] Update to newest version: Add union and intersection types (Scala 3).
+- [x] Update to newest version: Add union and intersection types (Scala 3).
 
 ### docs/Scala/Scaladoc.md
-- [ ] Update to newest version: Update tags to align with Scala 3 / Dotty scaladoc tool.
+- [x] Update to newest version: Update tags to align with Scala 3 / Dotty scaladoc tool.
 
 ### docs/Scala/sbt.md
-- [ ] Update to newest version: Refresh obsolete dates and versions.
+- [x] Update to newest version: Refresh obsolete dates and versions.
 
 ### docs/Search/ElasticSearch.md
 - [ ] Update to newest version: Refresh to ElasticSearch 8.x.

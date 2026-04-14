@@ -28,7 +28,7 @@ Create a gradle project (for Java)
 
 ```bash
 cd /mnt/d/code/gradle
-gradle init --type java-application  
+gradle init --type java-application
 ```
 
 You can now use `./gradlew` or `gradlew.bat` in the project folder
@@ -120,7 +120,7 @@ hello.configure {
 }
 
 task next {
-    dependsOn hello   // or 'hello' if lazy initialized - task dependency 
+    dependsOn hello   // or 'hello' if lazy initialized - task dependency
     doLast {
        println hello.myProperty
     }
@@ -210,4 +210,30 @@ dependencies {
 
 // pointer to the Java entrypoint
 mainClassName="com.someorg.someprj.App"
+```
+
+## Modern `build.gradle.kts` (Kotlin DSL)
+
+```kotlin
+plugins {
+    id("java")
+    id("application")
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation("org.junit.jupiter:junit-jupiter:5.9.2")
+    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+}
+
+application {
+    mainClass.set("com.example.Main")
+}
+
+tasks.named<Test>("test") {
+    useJUnitPlatform()
+}
 ```

@@ -306,3 +306,21 @@ git init --bare foobar.git
 git rev-parse --show-toplevel     # print top-level directory
 git rev-parse --git-dir           # print .git directory name
 ```
+
+## Modern Git Commands
+
+Use `git switch` and `git restore` instead of overloaded `git checkout`.
+
+```shell
+# Create and switch to a new branch
+git switch -c new-feature
+
+# Switch to an existing branch
+git switch main
+
+# Restore a modified file to its state in HEAD
+git restore my_file.txt
+
+# Unstage a file (move from staging back to working directory)
+git restore --staged my_file.txt
+```
