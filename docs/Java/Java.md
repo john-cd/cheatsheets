@@ -5,9 +5,12 @@ tags: libraries tools
 comments: true
 ---
 
+# Java Pointers
+
+
 ## Install [Java](https://www.java.com/en/)
 
-[JDK download](https://www.oracle.com/technetwork/java/javase/downloads/index-jsp-138363.html)
+[JDK download](https://www.oracle.com/java/technologies/downloads/)
 
 ```bash
 java -version
@@ -21,13 +24,13 @@ java -version
 
 - [Eclipse](https://eclipse.org/downloads/) IDE
 - [Maven](https://maven.apache.org/download.cgi) or Graddle build tool
-- [Nexus](https://www.sonatype.org/nexus/) private repository
+- [Nexus](https://www.sonatype.com/products/sonatype-nexus-repository) private repository
 - [Maven public repository](https://mvnrepository.com/)
 - [Phabrikator](https://www.phacility.com/) code review
   - [Phabrikator blog](https://scn.sap.com/community/abap/blog/2014/11/24/code-review-with-phabricator--an-open-source-software-engineering-platform)
-- [Jenkins](https://jenkins.io/) CI / CD automation server
+- [Jenkins](https://www.jenkins.io/) CI / CD automation server
 - [JProfiler](https://www.ej-technologies.com/products/jprofiler/overview.html)
-- [FindBugs](https://findbugs.sourceforge.net/) static analysis or [Checker Framework](https://types.cs.washington.edu/checker-framework/)
+- [FindBugs](https://spotbugs.github.io/) static analysis or [Checker Framework](https://types.cs.washington.edu/checker-framework/)
 - [Checkstyle](https://checkstyle.sourceforge.net/) coding standard checker
   - [Style guidelines](https://logging.apache.org/log4j/2.x/javastyle.html)
 
@@ -37,11 +40,11 @@ java -version
 
 - [Log4j](https://logging.apache.org/)
 - [Spring](https://www.spring.io)
-  - [Spring Cloud for Amazon Web Services](https://cloud.spring.io/spring-cloud-aws/)
+  - [Spring Cloud for Amazon Web Services](https://awspring.io/)
   - [Spring boot code generator](https://start.spring.io/)
 - [Apache Commons](https://commons.apache.org/)
 - [Guava](https://github.com/google/guava)
-- [Jackson JSON](https://wiki.fasterxml.com/JacksonHome) or [GSON](https://github.com/google/gson/blob/master/UserGuide.md)
+- [Jackson JSON](https://github.com/FasterXML/jackson) or [GSON](https://github.com/google/gson/blob/master/UserGuide.md)
 - [Hibernate](https://hibernate.org/orm/)
 on the JVM.
 - [Play framework](https://www.playframework.com/)

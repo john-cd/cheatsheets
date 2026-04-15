@@ -4,6 +4,9 @@ category: Scala
 tags: Scala
 ---
 
+# Scala Language
+
+
 ## Links
 
 - [Scala Cheatsheet](https://docs.scala-lang.org/cheatsheets/)

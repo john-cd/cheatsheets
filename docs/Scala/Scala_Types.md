@@ -4,6 +4,9 @@ category: Scala
 tags: Scala
 ---
 
+# Scala Types
+
+
 ## Type Refinement
 
 Type Refinement = "subclassing without naming the subclass".

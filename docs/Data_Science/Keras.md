@@ -15,3 +15,13 @@ tags: deep learning
 - [Keras tutorial for Kaggle 2nd Annual Data Science Bowl](https://github.com/jocicmarko/kaggle-dsb2-keras/)
 - [Supervised Sequence Labelling with Recurrent Neural Networks](https://www.cs.toronto.edu/~graves/preprint.pdf)
 - [Sequence Classification with LSTM Recurrent Neural Networks in Python with Keras](https://machinelearningmastery.com/sequence-classification-lstm-recurrent-neural-networks-python-keras/)
+
+## Quick Notes
+
+- Add practical commands and examples relevant to your current stack.
+
+## Example
+
+```text
+Review this cheatsheet and adapt the commands to your environment before execution.
+```

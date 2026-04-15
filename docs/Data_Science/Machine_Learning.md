@@ -64,3 +64,9 @@ all you need is a web browser to get started. It also provides an API so that if
 
 - [The Elements of Statistical Learning: Data Mining, Inference, and Prediction](https://statweb.stanford.edu/~tibs/ElemStatLearn/)
 - [Boosting Foundations and Algorithms](https://mitpress.mit.edu/books/boosting)
+
+## Example
+
+```text
+Review this cheatsheet and adapt the commands to your environment before execution.
+```

@@ -4,6 +4,9 @@ category: datascience
 tags: data
 ---
 
+# Data Visualization
+
+
 ## Basics
 
 [Data visualization - Wikipedia](https://en.wikipedia.org/wiki/Data_visualization)
@@ -41,3 +44,9 @@ D3 provides many built-in reusable functions and function factories, such as gra
 [Superset vs Metabase vs ReDash](https://hevodata.com/blog/superset-vs-metabase-vs-redash/ )
 
 [AirPal](https://airbnb.io/airpal/)
+
+## Example
+
+```text
+Review this cheatsheet and adapt the commands to your environment before execution.
+```

@@ -4,6 +4,9 @@ category: Scala
 tags: Scala, Design Patterns
 ---
 
+# Scala Design Patterns
+
+
 ## Create a new project from template
 
 Use the “sbt new” command, providing the name of the template. For example, “$ sbt new akka/hello-akka.g8”.

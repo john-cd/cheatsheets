@@ -5,6 +5,9 @@ tags: .NET C#
 comments: true
 ---
 
+# .NET Multithreading
+
+
 ## Advanced .NET Threading
 
 [Advanced .NET Threading, Part 1: Thread Fundamentals](
@@ -24,3 +27,9 @@ https://mva.microsoft.com/en-US/training-courses/advanced-net-threading-part-5-t
 ## Task Parallel Library (TPL)
 
 Use `Task.Run` for CPU-bound work and `async/await` for I/O bound work.
+
+## Example
+
+```text
+Review this cheatsheet and adapt the commands to your environment before execution.
+```

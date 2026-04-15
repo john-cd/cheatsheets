@@ -1,21 +1,16 @@
 {
-    "timeout": "10s",
-    "retryOn429": true,
-    "retryCount": 2,
-    "ignorePatterns": [
-        {
-            "pattern": "^https?://localhost"
-        },
-        {
-            "pattern": "^https?://twitter\\.com"
-        },
-        {
-            "pattern": "^https?://www\\.linkedin\\.com"
-        }
-    ],
-    "replacementPatterns": [
-        {
-            "pattern": "^\\./"
-        }
-    ]
+  "timeout": "10s",
+  "retryOn429": true,
+  "retryCount": 2,
+  "ignorePatterns": [
+    {
+      "pattern": "^https?://localhost"
+    },
+    {
+      "pattern": "^https?://twitter\\.com"
+    },
+    {
+      "pattern": "^https?://www\\.linkedin\\.com"
+    }
+  ]
 }

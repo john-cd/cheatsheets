@@ -37,3 +37,9 @@
 [Part 3](https://www.wildml.com/2015/10/recurrent-neural-networks-tutorial-part-3-backpropagation-through-time-and-vanishing-gradients/)
 
 [Part 4](https://www.wildml.com/2015/10/recurrent-neural-network-tutorial-part-4-implementing-a-grulstm-rnn-with-python-and-theano/)
+
+## Example
+
+```text
+Review this cheatsheet and adapt the commands to your environment before execution.
+```

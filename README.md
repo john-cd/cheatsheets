@@ -31,6 +31,15 @@ uv tool install mkdocs --with mkdocs-material --with mkdocs-minify-plugin --with
 - ``mkdocs build`` - Build the documentation site.
 - ``mkdocs help`` - Print the help message.
 
+### Validation and tests
+
+```bash
+pre-commit run --all-files
+python -m unittest discover -s tests -p "test_*.py"
+node --test tests/*.test.js
+mkdocs build
+```
+
 Within a Dev Container, you may need to use `mkdocs serve --dev-addr 0.0.0.00:8000`.
 
 ### Docker Compose

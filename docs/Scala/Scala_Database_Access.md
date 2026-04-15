@@ -4,6 +4,9 @@ category: Scala
 tags: Scala, DB
 ---
 
+# Scala Database Access
+
+
 ## Database Access / ORM Libraries
 
 [Slick](https://slick.lightbend.com/)

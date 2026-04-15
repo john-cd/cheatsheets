@@ -4,7 +4,10 @@ category: scala
 tags:
 ---
 
-Examples from [Scala Koans](http://scalakoans.org).
+# Scala Collections
+
+
+Examples from [Scala Koans](https://scalakoans.org).
 
 ## Core Packages
 

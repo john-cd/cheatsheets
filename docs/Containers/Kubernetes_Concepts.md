@@ -27,3 +27,13 @@ Shared pod resources include:
   - To keep the right number of replicas (Pods) running in a Deployment. The specified label is used to stamp the Deployment’s newly created Pods (as the value of the ``spec.template.labels`` configuration field), and to query which Pods it already manages (as the value of ``spec.selector.matchLabels``).
   - To tie a Service to a Deployment using the selector field.
   - To look for specific subset of Kubernetes objects, when you are using kubectl. For instance, the command kubectl get deployments --selector=app=nginx only displays Deployments from the nginx app.
+
+## Quick Notes
+
+- Add practical commands and examples relevant to your current stack.
+
+## Example
+
+```text
+Review this cheatsheet and adapt the commands to your environment before execution.
+```

@@ -4,6 +4,9 @@ category: Scala
 tag: Scala Akka Play Web REST
 ---
 
+# Play Framework
+
+
 ## Links
 
 [Play Framework](https://playframework.com/documentation/)

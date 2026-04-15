@@ -4,6 +4,9 @@ category: search
 tags: elasticsearch
 ---
 
+# ElasticSearch Architecture and Configuration
+
+
 ## CONFIGURATION
 
 - config directory

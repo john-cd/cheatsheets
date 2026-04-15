@@ -22,3 +22,9 @@ comments: true
 
 - [Official Documentation](https://www.jetbrains.com/help/idea/)
 - [Keymaps](https://www.jetbrains.com/help/idea/mastering-keyboard-shortcuts.html)
+
+## Example
+
+```text
+Review this cheatsheet and adapt the commands to your environment before execution.
+```
