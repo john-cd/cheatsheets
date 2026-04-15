@@ -1,0 +1,41 @@
+# markdownlint configuration
+# Rule documentation: https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md
+
+# MD013/line-length - Disable line length checks entirely
+MD013: false
+
+# Alternatively, uncomment below to customize instead of disabling:
+# MD013:
+#   line_length: 120
+#   heading_line_length: 120
+#   code_blocks: false
+#   tables: false
+
+# MD002/first-heading-h1 - Enforce that the first heading is an H1
+MD002:
+  level: 1
+
+# MD025/single-title/single-h1 - Enforce that there is only ONE H1 per file
+MD025:
+  level: 1
+  # Ignore the `title:` in YAML front matter so it doesn't conflict with the H1 in the body
+  front_matter_title: ""
+
+# MD007/ul-indent - Unordered list indentation
+MD007:
+  indent: 2
+
+# MD024/no-duplicate-heading - Allow duplicate subheadings (like "Examples") under different parents
+MD024:
+  siblings_only: true
+
+# MD029/ol-prefix - Allow sequential numbering (1. 2. 3.) instead of forcing (1. 1. 1.)
+MD029:
+  style: "ordered"
+
+# MD033/no-inline-html - Disable to allow HTML tags (like <button>) in cheatsheets
+MD033: false
+
+# MD046/code-block-style - Enforce fenced code blocks (```) instead of indented code blocks
+MD046:
+  style: "fenced"

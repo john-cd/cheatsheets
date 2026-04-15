@@ -3,7 +3,11 @@ title: IPython / Jupyter Cheatsheet
 category: python
 tags:
 ---
-### [IPython](https://ipython.org/) / [Jupyter](https://jupyter.org/)
+
+# IPython and Jupyter
+
+- [IPython](https://ipython.org/)
+- [Jupyter](https://jupyter.org/)
 
 Jupyter Notebook is a web-based interactive computing platform. The notebook combines live code, equations, narrative text, visualizations, interactive dashboards and other media.
 
@@ -13,7 +17,7 @@ Jupyter Notebook is a web-based interactive computing platform. The notebook com
   - Embeddable kernel
   - Parallel python
 
-### IPython shell shortcuts
+## IPython shell shortcuts
 
 - TAB expansion to complete python names and file paths
 - ~ and * directory / file expansion
@@ -131,7 +135,9 @@ from pylab import *
 from numpy import *
 ```
 
-### [Qtconsole - an improved console](https://ipython.org/ipython-doc/stable/interactive/qtconsole.html)
+### Qtconsole
+
+[Qtconsole - an improved console](https://ipython.org/ipython-doc/stable/interactive/qtconsole.html)
 
 At the command prompt:
 

@@ -13,8 +13,6 @@ category: devops
 
 [Docker Tutorials and Labs](https://github.com/docker/labs)
 
-[Docker + Jenkins](https://www.toptal.com/java/java-continuous-integration-setup-tutorial) (Update Note: Link unreachable)
-
 [Docker Hub](https://hub.docker.com/)
 
 ## Concepts
