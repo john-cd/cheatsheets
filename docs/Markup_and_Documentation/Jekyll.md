@@ -1,7 +1,7 @@
 ---
 layout: inner
-title:  "Jekyll How-To"
-date:   2017-02-20 11:41:26 -0800
+title: Jekyll How-To
+date: 2017-02-20 11:41:26 -0800
 category: frontend
 tags: blog jekyll
 ---
@@ -13,10 +13,6 @@ Jekyll is a simple, blog-aware, static site generator. It takes your text writte
 [Jekyll Home Page](https://jekyllrb.com)
 
 Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
-
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
 
 [Jekyll source code](https://github.com/jekyll/jekyll)
 
@@ -65,7 +61,7 @@ gem install bundler
 
 Jekyll installs a site that uses a gem-based theme called Minima.
 
-With gem-based themes, some of the site’s directories (such as the assets, _layouts,_includes, and _sass directories) are stored in the theme’s gem, hidden from your immediate view. Yet all of the necessary directories will be read and processed during Jekyll’s build process.
+With gem-based themes, some of the site’s directories (such as the assets, \_layouts,\_includes, and \_sass directories) are stored in the theme’s gem, hidden from your immediate view. Yet all of the necessary directories will be read and processed during Jekyll’s build process.
 
 - Build site locally
 
@@ -99,9 +95,9 @@ $ gem install jekyll-feed
 etc...
 ```
 
-Add to ``_config.yml``
+Add to `_config.yml`
 
-```yaml
+````yaml
 gems:
   - jekyll-paginate
   - jekyll-feed
@@ -124,7 +120,7 @@ Add the theme to your site’s Gemfile:
 
 ```bash
 gem "jekyll-theme-tactile"
-```
+````
 
 ```bash
 $ bundle install
@@ -133,7 +129,7 @@ $ bundle install
 $ bundle show jekyll-theme-tactile
 ```
 
-Add the following to your site’s _config.yml to activate the theme:
+Add the following to your site’s \_config.yml to activate the theme:
 
 ```yaml
 theme: jekyll-theme-tactile
@@ -150,7 +146,7 @@ You can find out info about customizing your Jekyll theme, as well as basic Jeky
 You can find the source code for the Jekyll minima theme at:
 [minima](https://github.com/jekyll/minima)
 
----------------------------------------------------
+______________________________________________________________________
 
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
@@ -185,3 +181,7 @@ bundle exec jekyll serve
 ```
 
 GitHub Pages uses specific versions of Jekyll and its plugins. Reference the [GitHub Pages Dependency versions](https://pages.github.com/versions/) to align your `Gemfile`.
+
+[jekyll-docs]: https://jekyllrb.com/docs/home
+[jekyll-gh]: https://github.com/jekyll/jekyll
+[jekyll-talk]: https://talk.jekyllrb.com/

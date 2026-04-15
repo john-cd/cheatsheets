@@ -1,4 +1,3 @@
-
 # Scala Basics
 
 [Scala Exercises](https://www.scala-exercises.org/)

@@ -72,7 +72,7 @@ kubectl delete deployment <deployment name>
 
 ### Minikube
 
-- ``minikube`` provides its own ingress controller via the Ingress add-on:
+- `minikube` provides its own ingress controller via the Ingress add-on:
 
 ```shell
 minikube addons enable ingress

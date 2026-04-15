@@ -94,7 +94,7 @@ GET /_nodes?plugin=true
 [Head](https://mobz.github.io/elasticsearch-head/)
 
 1. `elasticsearch/bin/plugin -install mobz/elasticsearch-head`
-2. open [https://localhost:9200/_plugin/head](https://localhost:9200/_plugin/head)
+2. open [https://localhost:9200/\_plugin/head](https://localhost:9200/_plugin/head)
 
 [elastichq.org](https://www.elastichq.org/)
 
@@ -148,20 +148,26 @@ Aspire is a framework and libraries of extensible components designed to enable 
 BI platforms that can use ES as an analytics engine:
 
 - Kibana
+
 - [Grafana](https://grafana.org/)
+
 - BIRT
+
   - [Birt](https://developer.actuate.com/community/forum/index.php?/topic/36913-birt-web-service-rest-json/?p=138062)
   - [Birt](https://developer.actuate.com/community/forum/index.php?/topic/36913-birt-web-service-rest-json/?p=138062)
 
 - Adminer
+
   - [Adminer.org](https://www.adminer.org/)
   - Database management in a single PHP file. Works with MySQL, PostgreSQL, SQLite, MS SQL, Oracle, SimpleDB, Elasticsearch, MongoDB. Needs a webserver + PHP: [WAMP](https://bitnami.com/stack/wamp)
 
 - Mongolastic
+
   - A tool that migrates data from MongoDB to Elasticsearch and vice versa
   - [Mongolastic](https://github.com/ozlerhakan/mongolastic)
 
 - Elasticsearch-exporter
+
   - [Elasticsearch-exporter](https://github.com/mallocator/Elasticsearch-Exporter)
 
 ## Code Examples - developing a Web UI for ES
@@ -202,7 +208,7 @@ GET /my_index_nr_1*/_settings?pretty   or ?v
 GET /twitter/_settings,_mappings
 ```
 
-The available features are _settings,_mappings, _warmers and_aliases
+The available features are \_settings,\_mappings, \_warmers and_aliases
 
 \# cluster
 
@@ -221,7 +227,7 @@ PUT my_index/user/1
 }
 ```
 
-\#search
+## search
 
 ```txt
 GET my_index/_search
@@ -249,7 +255,7 @@ GET /megacorp/employee/1
 ```
 
 Field names can be any valid string, but may not include periods.
-Every document in Elasticsearch has a version number. Every time a change is made to a document (including deleting it), the _version number is incremented.
+Every document in Elasticsearch has a version number. Every time a change is made to a document (including deleting it), the \_version number is incremented.
 
 ### *Optimistic concurrency control*
 
@@ -299,7 +305,7 @@ PUT /website/blog/123/_create { ... }
 GET /website/blog/123 # Optional ?pretty.
 ```
 
-  { "_index" : "website", "_type" : "blog", "_id" : "123", "_version" : 1, "found" : true, "_source" : { "title": "My first blog entry", "text": "Just trying this out...", "date": "2014/01/01" }}
+{ "\_index" : "website", "\_type" : "blog", "\_id" : "123", "\_version" : 1, "found" : true, "\_source" : { "title": "My first blog entry", "text": "Just trying this out...", "date": "2014/01/01" }}
 
 \# Contains just the fields that we requested
 
@@ -628,12 +634,17 @@ GET /_cluster/health
 ## CONFIGURATION
 
 - config directory
+
 - yaml file
 
 - Sets the JVM heap size to 0.5 memory size. The OS will use it for file system cache
+
 - Prefer not to allocate 30GB !! --> uncompressed pointers
+
 - Never let the JVM swap    bootstrap.mlockall = true
+
 - Keep the JVM defaults
+
 - Do not use G1GC alternative garbage collector
 
 ```txt

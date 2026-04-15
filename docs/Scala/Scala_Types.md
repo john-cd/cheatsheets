@@ -6,7 +6,6 @@ tags: Scala
 
 # Scala Types
 
-
 ## Type Refinement
 
 Type Refinement = "subclassing without naming the subclass".
@@ -48,7 +47,7 @@ def remove[K](key: K)  // function
 
 ## Type Variance
 
-Covariance ``+A`` allow you to set the your container to a either a variable with the same type or parent type.
+Covariance `+A` allow you to set the your container to a either a variable with the same type or parent type.
 
 ```scala
 class MyContainer[+A](a: A)(implicit manifest: scala.reflect.Manifest[A]) {
@@ -63,7 +62,7 @@ class MyContainer[+A](a: A)(implicit manifest: scala.reflect.Manifest[A]) {
     fruitBasket.contents
 ```
 
-Contravariance ``-A`` is the opposite of covariance
+Contravariance `-A` is the opposite of covariance
 
 Declaring neither -/+, indicates invariance variance.  You cannot use a superclass variable reference ("contravariant" position) or a subclass variable reference ("covariant" position) of that type.
 
@@ -81,7 +80,7 @@ class PetContainer[P <: Pet](p: P) {
 }
 ```
 
-Lower type bounds declare a type to be a supertype of another type. The term ``B >: A`` expresses that the type parameter B or the abstract type B refer to a supertype of type A.
+Lower type bounds declare a type to be a supertype of another type. The term `B >: A` expresses that the type parameter B or the abstract type B refer to a supertype of type A.
 
 ## Abstract Types
 
@@ -118,7 +117,7 @@ Abstract types:
 ## Infix Type
 
 We can make a type infix, meaning that a generic type with two type parameters can be displayed between two types.
-The type specifier ``Pair[String,Int]`` can be written as ``String Pair Int``.
+The type specifier `Pair[String,Int]` can be written as `String Pair Int`.
 
 ```scala
 class Pair[A, B](a: A, b: B)
@@ -173,7 +172,7 @@ class VerifiedTweeter(val username_ : String) extends Tweeter with User {  // We
 There are two specific requirements that are created with self-types:
 
 1. If B is extended, then you're required to mix-in an A.
-1. When a concrete class finally extends/mixes-in these traits, some class/trait must implement A.
+2. When a concrete class finally extends/mixes-in these traits, some class/trait must implement A.
 
 ```scala
 trait Wrong extends Tweeter {

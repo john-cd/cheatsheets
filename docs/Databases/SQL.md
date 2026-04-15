@@ -380,7 +380,7 @@ ALTER COLUMN column_name datatype
 
 ## Autoincrement
 
-``` SQL
+```SQL
 CREATE TABLE Persons
 (
 ID int IDENTITY(1,1) PRIMARY KEY,
@@ -499,7 +499,7 @@ CONVERT(VARCHAR(10),GETDATE(),110)
 
 ## SQL Server Data Types
 
-**Data type / Description / Storage**
+### Data type / Description / Storage
 
 `char(n)`
 Fixed width character string. Maximum 8,000 characters
@@ -646,12 +646,12 @@ SQL aggregate functions return a single value, calculated from values in a colum
 
 Useful aggregate functions:
 
-* `AVG()`   - Returns the average value
-* `COUNT()` - Returns the number of rows
-* `TOP 1`   - Single sample
-* `MAX()`   - Returns the largest value
-* `MIN()`   - Returns the smallest value
-* `SUM()`   - Returns the sum
+- `AVG()`   - Returns the average value
+- `COUNT()` - Returns the number of rows
+- `TOP 1`   - Single sample
+- `MAX()`   - Returns the largest value
+- `MIN()`   - Returns the smallest value
+- `SUM()`   - Returns the sum
 
 Examples:
 
@@ -688,13 +688,13 @@ HAVING COUNT(Orders.OrderID) > 10;
 
 ## SQL Scalar functions
 
-* Converts a field to upper case: SELECT UPPER(column_name) FROM table_name;
-* Converts a field to lower case: SELECT LOWER(column_name) FROM table_name;
-* MID() - Extract characters from a text field
-* LEN() - Returns the length of a text field
-* ROUND() - Rounds a numeric field to the number of decimals specified
-* NOW() - Returns the current system date and time
-* FORMAT() - Formats how a field is to be displayed
+- Converts a field to upper case: SELECT UPPER(column_name) FROM table_name;
+- Converts a field to lower case: SELECT LOWER(column_name) FROM table_name;
+- MID() - Extract characters from a text field
+- LEN() - Returns the length of a text field
+- ROUND() - Rounds a numeric field to the number of decimals specified
+- NOW() - Returns the current system date and time
+- FORMAT() - Formats how a field is to be displayed
 
 ```SQL
 SELECT ProductName, ROUND(Price,0) AS RoundedPrice
@@ -804,11 +804,11 @@ GO
 
 Q. Here's the data in a table 'orders'
 
-  customer_id order_id order_day
-  123        27424624    25Dec2011
-  123        89690900    25Dec2010
-  797        12131323    25Dec2010
-  876        67145419    15Dec2011
+customer_id order_id order_day
+123        27424624    25Dec2011
+123        89690900    25Dec2010
+797        12131323    25Dec2010
+876        67145419    15Dec2011
 
 Could you give me SQL for customers who placed orders on both the days, 25th Dec 2010 and 25th Dec 2011?
 

@@ -10,9 +10,9 @@ tags: Java Logs
 
 ## Key Components
 
-* loggers: Responsible for capturing logging information.
-* appenders: Responsible for publishing logging information to various preferred destinations.
-* layouts: Responsible for formatting logging information in different styles.
+- loggers: Responsible for capturing logging information.
+- appenders: Responsible for publishing logging information to various preferred destinations.
+- layouts: Responsible for formatting logging information in different styles.
 
 There are seven levels of logging defined within the API: OFF, DEBUG, INFO, ERROR, WARN, FATAL, and ALL.
 

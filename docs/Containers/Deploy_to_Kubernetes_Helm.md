@@ -15,7 +15,7 @@ tags: Kubernetes MiniKube Kubectl
 
 [Helm](https://helm.sh/)
 
-## Deployment of a ``sbt``-built app on Kubernetes (MiniKube)
+## Deployment of a `sbt`-built app on Kubernetes (MiniKube)
 
 ### Test packaging without Kubernetes first
 
@@ -25,17 +25,17 @@ tags: Kubernetes MiniKube Kubectl
 sbt stage
 ```
 
-- For direct deployment, create a distribution in ``target/universal``
+- For direct deployment, create a distribution in `target/universal`
 
 ```shell
 sbt dist
 ```
 
-The ``dist`` task builds a binary version of your application that you can deploy to a server without any dependency on SBT, the only thing the server needs is a Java installation.
+The `dist` task builds a binary version of your application that you can deploy to a server without any dependency on SBT, the only thing the server needs is a Java installation.
 
 ### Deploy a Helm chart to Kubernetes
 
-Prerequisites: ``minikube``, ``kubectl``, ``docker`` client and ``helm`` should be installed
+Prerequisites: `minikube`, `kubectl`, `docker` client and `helm` should be installed
 
 - Generate the Dockerfile and environment prepared for creating a Docker image
 
@@ -43,9 +43,9 @@ Prerequisites: ``minikube``, ``kubectl``, ``docker`` client and ``helm`` should 
 sbt docker:stage
 ```
 
-- Verify the output under ``target/docker``
+- Verify the output under `target/docker`
 
-- Start ``minikube``
+- Start `minikube`
 
 ```shell
 minikube start
@@ -58,9 +58,9 @@ minikube addons list
 minikube addons enable ingress
 ```
 
-Also consider enabling ``heapster``
+Also consider enabling `heapster`
 
-- List available nodes to verify that ``kubectl`` is properly configured
+- List available nodes to verify that `kubectl` is properly configured
 
 ```shell
 kubectl get nodes
@@ -75,10 +75,10 @@ eval $(minikube docker-env)
 ```
 
 Just make sure you tag your Docker image with something other than ‘latest’ and use that tag while you pull the image.
-Otherwise, if you do not specify version of your image, it will be assumed as ``:latest``, with pull image policy of ``Always`` correspondingly, which may eventually result in ErrImagePull as you may not have any versions of your Docker image out there in the default docker registry (usually DockerHub) yet.
+Otherwise, if you do not specify version of your image, it will be assumed as `:latest`, with pull image policy of `Always` correspondingly, which may eventually result in ErrImagePull as you may not have any versions of your Docker image out there in the default docker registry (usually DockerHub) yet.
 
-- If needed, remove previously built images from the local Docker server with ``sbt docker:clean`` or ``docker rmi <image>``.
-To view the list of Docker images, run ``docker images``
+- If needed, remove previously built images from the local Docker server with `sbt docker:clean` or `docker rmi <image>`.
+  To view the list of Docker images, run `docker images`
 
 - Build the Docker image and publish it to Kubernetes' Docker server.
 
@@ -88,13 +88,13 @@ sbt docker:publishLocal
 
 - Deploy the Helm chart
 
-``` shell
+```shell
 helm install <release name> <helm chart folder> --dry-run --debug &> output.txt
 ```
 
 and if that looks OK
 
-``` shell
+```shell
 helm install <release name> <helm chart folder>
 ```
 
@@ -104,7 +104,7 @@ or specify a release name:
 helm install <release name> <helm chart folder>
 ```
 
-- Verify the Helm deployment to ``minikube``
+- Verify the Helm deployment to `minikube`
 
 ```shell
 helm list
@@ -128,7 +128,7 @@ kubectl port-forward <pod name> 8080:<target port on pod>
 curl -v https://localhost:8080/api
 ```
 
-``kubectl port-forward`` also allows using resource name, such as a service name, to select a matching pod to port forward to
+`kubectl port-forward` also allows using resource name, such as a service name, to select a matching pod to port forward to
 
 ```shell
 kubectl port-forward svc/<service name>  8080:<service port>
@@ -144,7 +144,7 @@ helm uninstall <release name>
 
 ### If you want to deploy / not deploy an Ingress
 
-- Update ``values.yaml`` in the Helm chart root folder
+- Update `values.yaml` in the Helm chart root folder
 
 ```yaml
 ingress:
@@ -189,7 +189,7 @@ kubectl create secret tls ${CERT_NAME} --key ${KEY_FILE} --cert ${CERT_FILE}
 kubectl create secret tls my-secret --key tls.key --cert tls.crt
 ```
 
-Add under ``spec:`` in
+Add under `spec:` in
 
 ```yaml
   tls:
@@ -198,7 +198,7 @@ Add under ``spec:`` in
     secretName: my-secret
 ```
 
-Find and delete all nginx pods to force the ``nginx.conf`` to update and reflect the ingress changes. Find the ingress pods with the following:
+Find and delete all nginx pods to force the `nginx.conf` to update and reflect the ingress changes. Find the ingress pods with the following:
 
 ```shell
 kubectl get pods --all-namespaces

@@ -5,23 +5,35 @@ This document tracks the update and improvement of all cheatsheets and markdown 
 The goal is to ensure all cheatsheets remain technical, very concise, and directed at software engineers.
 
 - [x] **Update documentation structure for easier navigation** (e.g., group related topics, consolidate redundant drafts).
+
 - [ ] **Add more code snippets for Docker and Python** across relevant cheatsheets.
+
 - [ ] **Format, lint, and split large files** to maintain readability and conciseness.
 
 - [ ] update all code examples to latest version of the dependencies
-- [ ] embed long code examples with --8<--
+
+- [ ] embed long code examples with --8\<--
+
 - [ ] add tests?
 
 - [ ] Fix Markdown formatting, including: single top-level heading, zero or two trailing spaces, headings should be surrounded by a blank line
+
 - [ ] Make sure the Markdown text forms full sentences with proper capitalization
+
 - [ ] Add commentary around code blocks and comments within to explain how they work and what they do.
+
 - [ ] code comments should generally start with a capitalized letter and end with a period.
+
 - [ ] Verify all URLs / links - update what you can; add a note otherwise
+
 - [ ] Add internal links between markdown files
+
 - [ ] update UPDATE.md file with tasks (fixes, improvements, suggestions...) to improve the cheat sheets
 
 - [ ] compare the new cheatsheets vs .orig and validate
+
 - [ ] consolidate all python cheatsheeets in this repo
+
 - [ ] consolidate with my website in one repo??
 
 ## Files

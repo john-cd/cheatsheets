@@ -38,7 +38,7 @@ help                    # python help system
 ??someobj or someobj??  # detailed help
 ```
 
-``%pdoc`` ``%pdef`` ``%psource``  for docstring, function definition, source code only.
+`%pdoc` `%pdef` `%psource`  for docstring, function definition, source code only.
 
 ### Run
 
@@ -48,7 +48,7 @@ To run a program directly from the IPython console:
 %run somescript.py      # instead of execfile("somescript.py") at the python prompt
 ```
 
-``%run`` has special flags for timing the execution of your scripts (``-t``) or for running them under the control of either Python's pdb debugger (``-d``) or profiler (``-p``):
+`%run` has special flags for timing the execution of your scripts (`-t`) or for running them under the control of either Python's pdb debugger (`-d`) or profiler (`-p`):
 
 ```py
 %run -d myscript.py
@@ -68,9 +68,9 @@ To run a program directly from the IPython console:
 %reset  -f -s           # remove objects -f for force -s for soft (leaves history).
 ```
 
-- ```%reset``` is not a kernel restart
-- Restart with ``Ctrl+.`` in "qtconsole"
-- ``import module ; reload(module)`` to reload a module from disk
+- `%reset` is not a kernel restart
+- Restart with `Ctrl+.` in "qtconsole"
+- `import module ; reload(module)` to reload a module from disk
 
 ### Debugging
 
@@ -100,17 +100,17 @@ _i _ii _i4              # etc.. for previous input. _ih for list of previous inp
 
 ### GUI integration
 
-Start with ``ipython --gui=qt`` or at the IPython prompt:
+Start with `ipython --gui=qt` or at the IPython prompt:
 
 ```py
 %gui wx
 ```
 
-Arguments can be ``wx``, ``qt``, ``gtk`` and ``tk``.
+Arguments can be `wx`, `qt`, `gtk` and `tk`.
 
 ### Matplotlib / pylab graphics in an iPython shell
 
-Start with: ``ipython --matplotlib`` ( or ``--matplotlib=qt`` etc...)
+Start with: `ipython --matplotlib` ( or `--matplotlib=qt` etc...)
 
 At the IPython prompt:
 
@@ -121,7 +121,7 @@ At the IPython prompt:
 %pylab inline
 ```
 
-``%pylab`` makes the following imports:
+`%pylab` makes the following imports:
 
 ```python
 import numpy
@@ -172,9 +172,9 @@ display(f)
 
 - Start with: ipython notebook and switch to browser
 - Keyboard shortcuts:
-  - ``Enter`` to edit a cell
-  - ``Shift + Enter`` to evaluate
-  - ``Ctrl + m`` or ``Esc`` for the "command mode"
+  - `Enter` to edit a cell
+  - `Shift + Enter` to evaluate
+  - `Ctrl + m` or `Esc` for the "command mode"
 
 In command mode:
 

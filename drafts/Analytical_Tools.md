@@ -54,9 +54,9 @@
 
 [R Commander - Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/R_Commander)
 
-[R (programming language) - Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/R_(programming_language))
+[R (programming language) - Wikipedia, the free encyclopedia](<https://en.wikipedia.org/wiki/R_(programming_language)>)
 
-[SAS (software) - Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/SAS_(software))
+[SAS (software) - Wikipedia, the free encyclopedia](<https://en.wikipedia.org/wiki/SAS_(software)>)
 
 [Software- Visualization and Data Mining](https://www.kdnuggets.com/software/visualization.html)
 
@@ -84,9 +84,9 @@
 
 [Visual analytics - Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Visual_analytics)
 
-[Weka (machine learning) - Wikipedia, the free encyclopedia (2)](https://en.wikipedia.org/wiki/Weka_(machine_learning))
+[Weka (machine learning) - Wikipedia, the free encyclopedia (2)](<https://en.wikipedia.org/wiki/Weka_(machine_learning)>)
 
-[Weka (machine learning) - Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Weka_(machine_learning))
+[Weka (machine learning) - Wikipedia, the free encyclopedia](<https://en.wikipedia.org/wiki/Weka_(machine_learning)>)
 
 ## Patent Analytics
 

@@ -7,7 +7,6 @@ comments: true
 
 # Java Pointers
 
-
 ## Install [Java](https://www.java.com/en/)
 
 [JDK download](https://www.oracle.com/java/technologies/downloads/)
@@ -46,7 +45,7 @@ java -version
 - [Guava](https://github.com/google/guava)
 - [Jackson JSON](https://github.com/FasterXML/jackson) or [GSON](https://github.com/google/gson/blob/master/UserGuide.md)
 - [Hibernate](https://hibernate.org/orm/)
-on the JVM.
+  on the JVM.
 - [Play framework](https://www.playframework.com/)
 - [Spark web microframework](https://sparkjava.com/)
 - [Akka](https://akka.io/) - actor model, to build highly concurrent, distributed, and resilient message-driven applications

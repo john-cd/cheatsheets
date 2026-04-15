@@ -40,25 +40,25 @@ You can now use `./gradlew` or `gradlew.bat` in the project folder
 
 ## Common commands
 
-* `./gradlew tasks` in your project directory lists which tasks you can run in your project, such as building or running your code.
-* `./gradlew projects`
-* `./gradlew properties`
+- `./gradlew tasks` in your project directory lists which tasks you can run in your project, such as building or running your code.
+- `./gradlew projects`
+- `./gradlew properties`
 
 Most commonly used Java tasks:
 
-* `./gradlew build` will compile your project's code into a /build folder.
-* `./gradlew run` will run the compiled code in your build folder.
-* `./gradlew clean` will purge that build folder.
-* `./gradlew test` will execute unit tests without building or running your code again.
+- `./gradlew build` will compile your project's code into a /build folder.
+- `./gradlew run` will run the compiled code in your build folder.
+- `./gradlew clean` will purge that build folder.
+- `./gradlew test` will execute unit tests without building or running your code again.
 
 ## Build process
 
-* Gradle launches as a new JVM process
-* It parses the `gradle.properties` file and configures Gradle accordingly
-* Next, it creates a Settings instance for the build
-* Then, it evaluates the `settings.gradle` file against the Settings object
-* It creates a hierarchy of Projects, based on the configured Settings object
-* Finally, it executes each `build.gradle` file against its project
+- Gradle launches as a new JVM process
+- It parses the `gradle.properties` file and configures Gradle accordingly
+- Next, it creates a Settings instance for the build
+- Then, it evaluates the `settings.gradle` file against the Settings object
+- It creates a hierarchy of Projects, based on the configured Settings object
+- Finally, it executes each `build.gradle` file against its project
 
 In case of a multi-project build, we'd probably have multiple different `build.gradle` files, one for each project.
 The `build.gradle` file is executed against a Project instance, with one Project instance created per subproject.

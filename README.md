@@ -26,10 +26,10 @@ uv tool install mkdocs --with mkdocs-material --with mkdocs-minify-plugin --with
 
 ### Basic MkDocs Commands
 
-- ``mkdocs new [dir-name]`` - Create a new project.
-- ``mkdocs serve`` - Start the live-reloading docs server.
-- ``mkdocs build`` - Build the documentation site.
-- ``mkdocs help`` - Print the help message.
+- `mkdocs new [dir-name]` - Create a new project.
+- `mkdocs serve` - Start the live-reloading docs server.
+- `mkdocs build` - Build the documentation site.
+- `mkdocs help` - Print the help message.
 
 ### Validation and tests
 

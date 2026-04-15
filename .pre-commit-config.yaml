@@ -1,14 +1,4 @@
 repos:
-  # mdformat enforces the CommonMark specification strictly
-  - repo: https://github.com/executablebooks/mdformat
-    rev: 0.7.17
-    hooks:
-      - id: mdformat
-        name: Format Markdown (CommonMark)
-        additional_dependencies:
-          - mdformat-gfm         # Support GitHub Flavored Markdown (e.g., tables)
-          - mdformat-frontmatter # Preserve YAML frontmatter in your cheatsheets
-
   # markdownlint enforces stylistic rules and catches syntax issues
   - repo: https://github.com/igorshubovych/markdownlint-cli
     rev: v0.48.0
@@ -17,7 +7,7 @@ repos:
         name: Lint Markdown
         args: ["--fix"]
         # Exclude the drafts directory using a regex pattern
-        exclude: ^drafts/.*$
+        exclude: ^(drafts/|trash/|.*\.orig$)
 
   # markdown-link-check validates all hyperlinks in Markdown files
   - repo: https://github.com/tcort/markdown-link-check
@@ -26,4 +16,4 @@ repos:
       - id: markdown-link-check
         name: Check for broken links in Markdown
         args: ["--config", ".markdown-link-check.json"]
-        exclude: ^drafts/.*$
+        exclude: ^(drafts/|trash/|.*\.orig$)

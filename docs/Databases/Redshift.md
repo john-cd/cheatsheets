@@ -6,13 +6,14 @@ tags: Redshift DW Warehouse
 
 # RedShift
 
-
 Amazon Redshift is a fully managed, petabyte-scale data warehouse service in the cloud. You can analyze all your data using standard SQL and your existing Business Intelligence (BI) tools.
 
 ## Redshift Best Practices
 
 - Smaller node types load data faster
+
 - Best Practices for data load:
+
   - 1 file in S3 per slice (instances in RedShift)
   - Compressed using gzip compression
   - File size: 1MB to 1GB compressed
@@ -21,10 +22,15 @@ Amazon Redshift is a fully managed, petabyte-scale data warehouse service in the
   - First column of SORTKEY should not be compressed
 
 - Workflows: move from staging table to production table
+
 - Make sure to wrap the entire workflow into ONE transaction
+
 - COMMITs are very expensive in RedShift
+
 - Disable statistics on staging tables
+
 - Make sure that the distribution keys match between staging and prod tables
+
 - Compress your staging tables
 
 - Do ANALYZE after VACUUM

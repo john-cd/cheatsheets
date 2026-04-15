@@ -79,11 +79,11 @@ sudo chkconfig --level 3 httpd on  # specific runlevel
 - [Linux Boot Process](https://www.thegeekstuff.com/2011/02/linux-boot-process/)
 - [Scripts in /etc/init.d](https://www.novell.com/documentation/suse91/suselinux-adminguide/html/ch13s04.html)
 
-You can also use a ``/etc/rc.d/rc.local`` script.
+You can also use a `/etc/rc.d/rc.local` script.
 
 ### Running Commands on your Linux Instance at Launch
 
-- Paste a user data script into the ``User data`` field
+- Paste a user data script into the `User data` field
 
 ```bash
 #!/bin/bash
@@ -100,13 +100,13 @@ find /var/www -type f -exec chmod 0664 {} +
 echo "<?php phpinfo(); ?>" > /var/www/html/phpinfo.php
 ```
 
-- Or use ``cloud-init``
+- Or use `cloud-init`
   - [cloud-init for AWS EC2](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AmazonLinuxAMIBasics.html#CloudInit)
   - [cloud-init docs](https://cloudinit.readthedocs.io/en/latest/)
 
-File location: ``/etc/sysconfig/cloudinit``
+File location: `/etc/sysconfig/cloudinit`
 
-Cloud-init output log file: ``/var/log/cloud-init-output.log``
+Cloud-init output log file: `/var/log/cloud-init-output.log`
 
 ### Install the SSM Agent on EC2 Instances at Start-Up
 

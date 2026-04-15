@@ -9,7 +9,7 @@ tags: aws lambda cloud
 ## Useful Links
 
 - [Building a Dynamic DNS for Route 53 using CloudWatch Events and Lambda](https://github.com/awslabs/aws-lambda-ddns-function)
-- [Lambkin](https://github.com/jarpy/lambkin) - CLI tool for generating and managing simple functions in AWS Lambda
+- [AWS SAM CLI](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/install-sam-cli.html) - CLI tool for building, testing, and deploying Lambda applications
 
 ## Serverless Framework Configuration Example
 
@@ -21,7 +21,7 @@ frameworkVersion: '3'
 
 provider:
   name: aws
-  runtime: python3.10
+  runtime: python3.13
   region: us-east-1
 
 functions:

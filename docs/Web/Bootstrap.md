@@ -6,12 +6,11 @@ tags: Bootstrap web CSS
 
 # Bootstrap
 
-
 ## Bootstrap
 
 ### Useful Links
 
-[Bootstrap]( https://getbootstrap.com/)
+[Bootstrap](https://getbootstrap.com/)
 
 ### Install
 

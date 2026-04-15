@@ -98,7 +98,7 @@ $( "form :checked" ); //  :checked targets checked checkboxes
 
 ## DOM Traversal and Manipulation
 
-Get the ``<button>`` element with the class 'continue' and change its HTML to 'Next Step...'
+Get the `<button>` element with the class 'continue' and change its HTML to 'Next Step...'
 
 ```js
 $( "button.continue" ).html( "Next Step..." )
@@ -578,6 +578,5 @@ showGraphWithCanvas();
 showTable();
 }
 ```
-
 
 <!-- TODO: Add more modern JavaScript (ES6+) examples -->

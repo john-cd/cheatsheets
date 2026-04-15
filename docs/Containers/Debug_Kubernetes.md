@@ -28,8 +28,9 @@ kubectl run <deployment name> --image=<docker image>:<tag>
 
 Useful options:
 
-- ``--restart=Never``
-- if the pod has a console: ``-i --tty  --command -- bash``
+- `--restart=Never`
+
+- if the pod has a console: `-i --tty  --command -- bash`
 
 - Attach to the (first) container in the Pod:
 
@@ -37,7 +38,7 @@ Useful options:
 kubectl attach <pod name> -i -t
 ```
 
-If there are multiple containers in the pod, use: ``-c <container name>``
+If there are multiple containers in the pod, use: `-c <container name>`
 
 - Get a shell to a running Container:
 

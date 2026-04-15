@@ -6,7 +6,6 @@ tags:
 
 # Scala Collections
 
-
 Examples from [Scala Koans](https://scalakoans.org).
 
 ## Core Packages
@@ -327,7 +326,7 @@ mySet1 diff mySet2
 mySet1.equals(mySet2)  // independent of order
 ```
 
-## Option[T]
+## Option\[T\]
 
 ```scala
 val someValue: Option[String] = Some("I am wrapped in something")

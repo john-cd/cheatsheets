@@ -7,7 +7,6 @@ comments: true
 
 # Development Tools
 
-
 ## Communication / IM
 
 - Slack
@@ -45,13 +44,19 @@ comments: true
 - [Comparison of integrated development environments](https://en.wikipedia.org/wiki/Comparison_of_integrated_development_environments)
 
 - [Notepad++](https://notepad-plus-plus.org/)
+
   - [Plugins](https://www.guidingtech.com/31357/notepad-plus-plugins/)
+
 - Gedit
+
 - Sublime Text
 
 - [Eclipse](https://www.eclipse.org/)
+
   - [List of Eclipse-based software](https://en.wikipedia.org/wiki/List_of_Eclipse-based_software)
+
 - Visual Studio
+
 - Visual Studio Code
 
 ### _for Python_
@@ -78,6 +83,7 @@ comments: true
 - [Oracle Virtualbox](https://www.virtualbox.org/)
 
 - Docker
+
 - Kubernetes
 
 ## SQL Tools
@@ -116,7 +122,7 @@ comments: true
 ## Other
 
 - [Cygwin](https://www.cygwin.com/)
-- [Log Tail]( https://www.log-expert.de/)
+- [Log Tail](https://www.log-expert.de/)
 - [Diff - WinMerge](https://winmerge.org/)
 
 ### CLI Tools

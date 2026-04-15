@@ -6,7 +6,6 @@ tags: elasticsearch
 
 # ElasticSearch Plugins
 
-
 ## Plugins
 
 This file has been broken out from ElasticSearch.md.

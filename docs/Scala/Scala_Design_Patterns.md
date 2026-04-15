@@ -6,11 +6,10 @@ tags: Scala, Design Patterns
 
 # Scala Design Patterns
 
-
 ## Create a new project from template
 
 Use the “sbt new” command, providing the name of the template. For example, “$ sbt new akka/hello-akka.g8”.
-You can find a list of templates [here](https://github.com/foundweekends/giter8/wiki/giter8-templates/30ac1007438f6f7727ea98c19db1f82ea8f00ac8).
+You can find a list of templates in the [Giter8 templates catalog](https://github.com/foundweekends/giter8/wiki/giter8-templates/30ac1007438f6f7727ea98c19db1f82ea8f00ac8).
 
 Or download from [Scala Project Templates](https://developer.lightbend.com/start/)
 

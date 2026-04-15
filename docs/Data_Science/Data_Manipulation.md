@@ -6,11 +6,10 @@ tags: data
 
 # Data Manipulation
 
-
 ## Pandas
 
-* [Pandas cheatsheet](https://github.com/pandas-dev/pandas/blob/master/doc/cheatsheet/Pandas_Cheat_Sheet.pdf)
-* [Pandas cheatsheet 2](https://www.datasciencecentral.com/profiles/blogs/data-science-in-python-pandas-cheat-sheet)
+- [Pandas cheatsheet](https://github.com/pandas-dev/pandas/blob/master/doc/cheatsheet/Pandas_Cheat_Sheet.pdf)
+- [Pandas cheatsheet 2](https://www.datasciencecentral.com/profiles/blogs/data-science-in-python-pandas-cheat-sheet)
 
 ## Data Wrangling with .NET
 

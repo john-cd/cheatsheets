@@ -6,7 +6,6 @@ tags: Scala
 
 # Scala (Generalities)
 
-
 ## Main Features of Scala
 
 - All types are objects

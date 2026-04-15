@@ -107,22 +107,22 @@ The terms query is the same as the term query, but allows you to specify multipl
 
 \# Compound Queries
 
-  {
-     "bool": {
-       "must": { "match": { "tweet": "elasticsearch" }},
-        "must_not": { "match": { "name": "mary" }},
-        "should": { "match": { "tweet": "full text" }},
-        "filter": { "range": { "age" : { "gt" : 30 }} }
-     }
-  }
+{
+"bool": {
+"must": { "match": { "tweet": "elasticsearch" }},
+"must_not": { "match": { "name": "mary" }},
+"should": { "match": { "tweet": "full text" }},
+"filter": { "range": { "age" : { "gt" : 30 }} }
+}
+}
 
 \# VALIDATE A QUERY
 
-  GET /gb/tweet/_validate/query?explain { "query": { "tweet" : { "match" : "really powerful" } }}
+GET /gb/tweet/\_validate/query?explain { "query": { "tweet" : { "match" : "really powerful" } }}
 
 \# understand why one particular document matched or, more important, why it didn’t match
 
-  GET /us/tweet/12/_explain { "query" : { "bool" : { "filter" : { "term" : { "user_id" : 2 }}, "must" : { "match" : { "tweet" : "honeymoon" }} } }}
+GET /us/tweet/12/\_explain { "query" : { "bool" : { "filter" : { "term" : { "user_id" : 2 }}, "must" : { "match" : { "tweet" : "honeymoon" }} } }}
 
 ## MAPPINGS (schemas)
 

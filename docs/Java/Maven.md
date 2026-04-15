@@ -45,13 +45,13 @@ This directory contains your local Maven repository. When you download a depende
 
 ### Directory Layout
 
-[Introduction to the standard directory layout](https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html )
+[Introduction to the standard directory layout](https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html)
 
-Without customization, source code is assumed to be in ``${basedir}/src/main/java`` and resources are assumed to be in ``${basedir}/src/main/resources``.
-Tests are assumed to be in ``${basedir}/src/test``, and a project is assumed to produce a JAR file.
-Maven assumes that you want the compile bytecode to ``${basedir}/target/classes`` and then create a distributable JAR file in ``${basedir}/target``
+Without customization, source code is assumed to be in `${basedir}/src/main/java` and resources are assumed to be in `${basedir}/src/main/resources`.
+Tests are assumed to be in `${basedir}/src/test`, and a project is assumed to produce a JAR file.
+Maven assumes that you want the compile bytecode to `${basedir}/target/classes` and then create a distributable JAR file in `${basedir}/target`
 
-For [WAR files](https://en.wikipedia.org/wiki/WAR_(file_format)), the ``/WEB-INF`` directory  contains a file named ``web.xml`` which defines the structure of the web application.
+For [WAR files](<https://en.wikipedia.org/wiki/WAR_(file_format)>), the `/WEB-INF` directory  contains a file named `web.xml` which defines the structure of the web application.
 See  also [Tomcat Deployment guide](https://tomcat.apache.org/tomcat-7.0-doc/appdev/deployment.html)
 
 ## Cheatsheet
@@ -129,11 +129,11 @@ mvn deploy
 mvn deploy:deploy-file -Dfile=/path/to/jar/file -DrepositoryId=repos-server -Durl=http ://repos.company.o
 ```
 
-You can run ``mvn site`` and then find an ``index.html`` file in ``target/site`` that contains links to JavaDoc and a few reports about your source code.
+You can run `mvn site` and then find an `index.html` file in `target/site` that contains links to JavaDoc and a few reports about your source code.
 
 ## POM files
 
-Use the search engine at [repository.sonatype.org](https://repository.sonatype.org) to find dependencies by name and get the ``xml`` necessary to paste into your ``pom.xml``
+Use the search engine at [repository.sonatype.org](https://repository.sonatype.org) to find dependencies by name and get the `xml` necessary to paste into your `pom.xml`
 
 ```xml
 <project>

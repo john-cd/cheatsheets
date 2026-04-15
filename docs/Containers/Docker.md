@@ -48,7 +48,7 @@ docker pull centos
 ```
 
 Create then start a container: `docker run [OPTIONS] IMAGE [COMMAND] [ARG...]`
-    * [Docker run reference](https://docs.docker.com/engine/reference/run/)
+\* [Docker run reference](https://docs.docker.com/engine/reference/run/)
 
 ```bash
 docker run hello-world
@@ -101,7 +101,7 @@ docker info
 
 ## Port Mapping
 
-``-p 80:5000``  would map port 80 on our local host to port 5000 inside our container.
+`-p 80:5000`  would map port 80 on our local host to port 5000 inside our container.
 
 ```bash
 docker run -d -p 80:5000 training/webapp python app.py
@@ -113,9 +113,9 @@ Full format: ip:hostPort:containerPort | ip::containerPort | hostPort:containerP
 docker run -d -p 127.0.0.1:80:5000 training/webapp python app.py
 ```
 
-Both hostPort and containerPort can be specified as a range of ports. When specifying ranges for both, the number of container ports in the range must match the number of host ports in the range, for example: ``-p1234-1236:1234-1236/tcp``
+Both hostPort and containerPort can be specified as a range of ports. When specifying ranges for both, the number of container ports in the range must match the number of host ports in the range, for example: `-p1234-1236:1234-1236/tcp`
 
-The ``-P`` flag tells Docker to map any required network ports inside our container to our host (using random ports).
+The `-P` flag tells Docker to map any required network ports inside our container to our host (using random ports).
 
 ```bash
 docker run -d -P training/webapp python app.py
@@ -123,8 +123,8 @@ docker run -d -P training/webapp python app.py
 
 ## Linking
 
-``--link <name or id>:alias`` where *name* is the name of the container we’re linking to and *alias* is an alias for the link name.
-The ``--link`` flag also takes the form: ``--link <name or id>``
+`--link <name or id>:alias` where *name* is the name of the container we’re linking to and *alias* is an alias for the link name.
+The `--link` flag also takes the form: `--link <name or id>`
 
 ```bash
 docker run -d --name myES -p 9200:9200 -p 9300:9300 elasticsearch
@@ -154,13 +154,13 @@ docker inspect web
 
 You can also use the VOLUME instruction in a Dockerfile to add one or more new volumes to any container created from that image.
 
-Mount the host directory, ``/src/webapp``, into the container at ``/opt/webapp``.
+Mount the host directory, `/src/webapp`, into the container at `/opt/webapp`.
 
 ```bash
 docker run -d -P --name web -v /src/webapp:/opt/webapp training/webapp python app.py
 ```
 
-On Windows, use:  ``docker run -v /c/Users/<path>:/<container path> ...``
+On Windows, use:  `docker run -v /c/Users/<path>:/<container path> ...`
 
 ## Example Dockerfile
 

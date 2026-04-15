@@ -12,6 +12,6 @@ login as: `ec2-user` (Amazon Linux) or: `ubuntu` (Ubuntu)
 
 [Bash shell documentation](https://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO.html)
 
-- Use a shell script to configure the instance [link](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html)
+- Use a shell script to configure the instance in [EC2 user data](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html)
 
 - User data: You can specify user data to configure an instance during launch, or to run a configuration script.

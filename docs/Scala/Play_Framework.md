@@ -6,7 +6,6 @@ tag: Scala Akka Play Web REST
 
 # Play Framework
 
-
 ## Links
 
 [Play Framework](https://playframework.com/documentation/)
@@ -15,7 +14,7 @@ tag: Scala Akka Play Web REST
 
 The layout of a Play application is standardized to keep things as simple as possible. After a first successful compile, a Play application looks like this:
 
-```txt
+````txt
 app                      → Application sources
  └ assets                → Compiled asset sources
     └ stylesheets        → Typically LESS CSS sources
@@ -77,7 +76,7 @@ class HomeController @Inject()(val controllerComponents: ControllerComponents) e
     Ok(s"Showing item details for ID: $id")
   }
 }
-```
+````
 
 ## Play
 

@@ -6,7 +6,6 @@ tags: Scala
 
 # Scala Language
 
-
 ## Links
 
 - [Scala Cheatsheet](https://docs.scala-lang.org/cheatsheets/)
@@ -21,11 +20,11 @@ Some examples are derived from [Scala Koans](https://www.scalakoans.org/).
 
 Class Names - For all class names, the first letter should be in Upper Case. If several words are used to form a name of the class, each inner word's first letter should be in Upper Case.
 
-``class MyFirstScalaClass``
+`class MyFirstScalaClass`
 
 Method Names - All method names should start with a Lower Case letter. If multiple words are used to form the name of the method, then each inner word's first letter should be in Upper Case.
 
-``def myMethodName()``
+`def myMethodName()`
 
 Program File Name - Name of the program file should exactly match the object name. When saving the file you should save it using the object name (Remember Scala is case-sensitive) and append ".scala" to the end of the name. If the file name and the object name do not match your program will not compile.
 
@@ -295,7 +294,7 @@ def capitalizeAll(args: String*) = {
 capitalizeAll("rarity", "applejack")
 ```
 
-If you want a collection expanded into a vararg, add ``:_*``
+If you want a collection expanded into a vararg, add `:_*`
 
 ```scala
 def repeatedParameterMethod(x: Int, y: String, z: Any*) = {
@@ -340,8 +339,8 @@ object FrenchDate {
 }
 ```
 
-``1 + 2 * 3 / x`` consists exclusively of method calls, because it is equivalent to the following expression: ``(1).+(((2).*(3))./(x))``
-This also means that +, *, etc. are valid identifiers in Scala.
+`1 + 2 * 3 / x` consists exclusively of method calls, because it is equivalent to the following expression: `(1).+(((2).*(3))./(x))`
+This also means that +, \*, etc. are valid identifiers in Scala.
 
 Infix Operators do NOT work if an object has a method that takes two parameters.
 
@@ -350,7 +349,7 @@ Infix Operators do NOT work if an object has a method that takes two parameters.
  val s: String = g toHexString // Postfix operators work if an object has a method that takes no parameters.
 ```
 
-Prefix operators work if an object has a method name that starts with unary_
+Prefix operators work if an object has a method name that starts with unary\_
 
 ```scala
 class Stereo {
@@ -615,7 +614,7 @@ val c2 = b2.Coordinate(25, 25)
 // Val c1 = c2  won't work.
 ```
 
-Use ``A#B`` for a Java-style inner class:
+Use `A#B` for a Java-style inner class:
 
 ```scala
 class Graph {
@@ -673,7 +672,7 @@ var b = Employee.apply("John", "Doe")
 
 ## Case Classes
 
-- The ``new`` keyword is not mandatory to create instances of these classes (i.e. one can write Const(5) instead of new Const(5)),
+- The `new` keyword is not mandatory to create instances of these classes (i.e. one can write Const(5) instead of new Const(5)),
 - Getter functions are automatically defined for the constructor parameters (i.e. it is possible to get the value of the v constructor parameter of some instance c of class Const just by writing c.v),
 - Default definitions for methods equals and hashCode are provided, which work on the structure of the instances and not on their identity,
 - A default definition for method toString is provided, and prints the value in a source form (e.g. the tree for expression x+1 prints as Sum(Var(x),Const(1))),
@@ -712,7 +711,7 @@ final case class Const(v: Int) extends Tree
 
 ### Pattern Matching
 
-``{ case "x" => 5 }`` defines a partial function which, when given the string "x" as argument, returns the integer 5, and fails with an exception otherwise.
+`{ case "x" => 5 }` defines a partial function which, when given the string "x" as argument, returns the integer 5, and fails with an exception otherwise.
 
 ```scala
 type Environment = String => Int // The type Environment can be used as an alias of the type of functions from String to Int.
@@ -908,7 +907,7 @@ myQueue.put(3)
 myQueue.get()
 ```
 
-- More traits can be stacked one atop another, make sure that all overrides are labelled ``abstract override``.
+- More traits can be stacked one atop another, make sure that all overrides are labelled `abstract override`.
 - The order of the mixins are important. Traits on the right take effect first.
 - Traits are instantiated before a classes instantiation from left to right.
 - Linerization: the diamond inheritance problem is avoided since instantiations are tracked and will not allow multiple instantiations of the same parent trait
@@ -1011,6 +1010,7 @@ def max[T](x: T, y: T)(using ord: Ord[T]): T =
 ## Scala Documentation
 
 [sbt-microsites- Getting Started](https://47deg.github.io/sbt-microsites/docs/)
+
 ## Algebraic Data Types
 
 [Scala pattern gist](https://gist.github.com/arosien/0aee59cc734042f7044d24bdaec731a8)
@@ -1117,18 +1117,18 @@ Abstraction over structural recursion
 -> Convert user to JSON
 
 map
-F[A] => (A => B) => F[B]
--> Get user from database (might not be a user): Result[User] -> Get order for user (might not be an order): User => Result[Order]
+F\[A\] => (A => B) => F\[B\]
+-> Get user from database (might not be a user): Result\[User\] -> Get order for user (might not be an order): User => Result\[Order\]
 
 flatMap
-F[A] => (A => F[B]) => F[B]
--> Get user by id: UserId => Result[User] -> Get user’s order: User => Result[Order] -> Transform order to JSON: (Order => Json) => Result[Json] -> Send JSON: Result[Json] => Response
+F\[A\] => (A => F\[B\]) => F\[B\]
+-> Get user by id: UserId => Result\[User\] -> Get user’s order: User => Result\[Order\] -> Transform order to JSON: (Order => Json) => Result\[Json\] -> Send JSON: Result\[Json\] => Response
 
 Summary
 Standard patterns for sequencing computations
 fold is general transformation for algebraic data types
-map: F[A] => (A => B) => F[B]
-flatMap: F[A] => (A => F[B]) => F[B]
+map: F\[A\] => (A => B) => F\[B\]
+flatMap: F\[A\] => (A => F\[B\]) => F\[B\]
 
 // fold: A => B
 
@@ -1147,20 +1147,20 @@ case class Success[A](value: A) extends Result[A]
 case class Failure[A]() extends Result[A]
 ```
 
-// map: F[A] => (A => B) => F[B]
+// map: F\[A\] => (A => B) => F\[B\]
 
-// Get user from database (might not be a user): Result[User]
-def getUser(id: Long): Result[User]
-// Get order for user (might not be an order): User => Result[Order]
-def getOrder(user: User): Result[Order]
+// Get user from database (might not be a user): Result\[User\]
+def getUser(id: Long): Result\[User\]
+// Get order for user (might not be an order): User => Result\[Order\]
+def getOrder(user: User): Result\[Order\]
 
-val order: Result[Order] =
-  getUser(12) // Result[User]
-    .flatMap(getOrder) // User => Result[Order]
+val order: Result\[Order\] =
+getUser(12) // Result\[User\]
+.flatMap(getOrder) // User => Result\[Order\]
 
-// flatMap: F[A] => (A => F[B]) => F[B]
+// flatMap: F\[A\] => (A => F\[B\]) => F\[B\]
 
-// Get user by id: UserId => Result[User]
-// Get user's order: User => Result[Order]
-// Transform order to JSON: (Order => Json) => Result[Json]
-// Send JSON: Result[Json] => Response
+// Get user by id: UserId => Result\[User\]
+// Get user's order: User => Result\[Order\]
+// Transform order to JSON: (Order => Json) => Result\[Json\]
+// Send JSON: Result\[Json\] => Response

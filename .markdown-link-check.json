@@ -2,6 +2,7 @@
   "timeout": "10s",
   "retryOn429": true,
   "retryCount": 2,
+  "aliveStatusCodes": [0, 200, 206, 301, 302, 303, 307, 308, 403, 429],
   "ignorePatterns": [
     {
       "pattern": "^https?://localhost"

@@ -7,7 +7,6 @@ comments: true
 
 # WPF
 
-
 ## Useful Links
 
 [WPF tutorial](https://wpftutorial.net/)
@@ -32,7 +31,7 @@ comments: true
 
 ### Commands
 
-[WPF Commands](https://msdn.microsoft.com/en-us/library/ms752308(v=vs.110).aspx)
+[WPF Commands](<https://msdn.microsoft.com/en-us/library/ms752308(v=vs.110).aspx>)
 
 WPF provides a set of predefined commands. The command library consists of the following classes: ApplicationCommands, NavigationCommands, MediaCommands, EditingCommands, and the ComponentCommands.
 

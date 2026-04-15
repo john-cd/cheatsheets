@@ -23,7 +23,10 @@ class DocsQualityTests(unittest.TestCase):
             if path.name == "index.md":
                 continue
             text = path.read_text(encoding="utf-8")
-            self.assertRegex(text, r"^##\s+\S", f"Missing H2 section in {path}")
+            self.assertIsNotNone(
+                re.search(r"^##\s+\S", text, re.MULTILINE),
+                f"Missing H2 section in {path}",
+            )
 
     def test_each_cheatsheet_has_at_least_one_example_block(self):
         for path in _docs():
