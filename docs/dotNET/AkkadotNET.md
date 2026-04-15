@@ -120,8 +120,6 @@ public class JobActor: ReceiveActor
   }
 }
 
-
-
 // Example of untyped actor
 
 public class MyActor : UntypedActor
@@ -210,4 +208,5 @@ public class FooActor : ReceiveActor, IWithUnboundedStash
 ```
 
 ## Official Documentation
+
 - [Akka.NET Official Docs](https://getakka.net/)

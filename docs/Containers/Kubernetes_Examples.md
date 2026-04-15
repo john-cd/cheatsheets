@@ -94,8 +94,9 @@ metadata:
   namespace: default
 type: Opaque
 ---
+```
 
-### Custom Resource Definition (CRD) Example
+## Custom Resource Definition (CRD) Example
 
 CustomResourceDefinitions allow you to extend the Kubernetes API with your own custom objects.
 

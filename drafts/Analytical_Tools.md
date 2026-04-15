@@ -97,4 +97,5 @@
 [Patent visualisation - Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Patent_visualisation)
 
 ## Configuration
+
 Ensure environment variables like `SPARK_HOME` are correctly set.

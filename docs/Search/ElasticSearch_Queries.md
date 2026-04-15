@@ -3,8 +3,6 @@ title: ElasticSearch Queries
 category: search
 ---
 
-
-
 # ElasticSearch Queries
 
 ## SEARCH

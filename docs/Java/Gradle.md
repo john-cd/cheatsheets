@@ -1,9 +1,10 @@
 ---
 title: Gradle Basics
 category: java
-tags: tools 
+tags: tools
 comments: true
 ---
+
 # Gradle
 
 ## Install

@@ -3,8 +3,6 @@ title: ElasticSearch Setup
 category: search
 ---
 
-
-
 # ElasticSearch Setup
 
 ## INSTALL
@@ -50,6 +48,7 @@ Then go to
 ```txt
 GET /_cluster/health
 ```
+
 ## ELK Stack
 
 [The Complete Guide to the ELK Stack - Logz.io](https://logz.io/learn/complete-guide-elk-stack/)

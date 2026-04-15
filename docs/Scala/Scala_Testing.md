@@ -4,6 +4,8 @@ category: Scala
 tags: Scala, Tests
 ---
 
+# Scala Testing
+
 ## Links
 
 [https://www.scalatest.org/](https://www.scalatest.org/)
@@ -140,7 +142,9 @@ class SetSuite extends AnyFunSuite:
 ```
 
 ## MUnit Example
+
 MUnit is a popular testing library for Scala 3.
+
 ```scala
 class MySuite extends munit.FunSuite {
   test("hello") {

@@ -71,7 +71,6 @@ Twine is a utility for publishing Python packages on PyPI.
 
 Host, run, and code Python in the cloud
 
-
 ## Python 3
 
 Python 3 is the current version of the Python programming language. It is a high-level, general-purpose programming language that emphasizes code readability with its notable use of significant indentation.
@@ -247,18 +246,21 @@ x, y, z = [], [], []  # type: List[int], List[int], List[str]
 ## Modern Python Features
 
 ### Type Hinting (Python 3.5+)
+
 ```python
 def greeting(name: str) -> str:
     return 'Hello ' + name
 ```
 
 ### f-strings (Python 3.6+)
+
 ```python
 name = "World"
 print(f"Hello {name}")
 ```
 
 ### Data Classes (Python 3.7+)
+
 ```python
 from dataclasses import dataclass
 
@@ -270,12 +272,14 @@ class Point:
 ```
 
 ### Walrus Operator (Python 3.8+)
+
 ```python
 if (n := len(a)) > 10:
     print(f"List is too long ({n} elements, expected <= 10)")
 ```
 
 ### Match Statement (Python 3.10+)
+
 ```python
 def http_error(status):
     match status:

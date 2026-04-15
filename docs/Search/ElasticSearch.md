@@ -3,17 +3,16 @@ title: ElasticSearch Cheatsheet
 category: search
 tags: IR
 ---
+
 # Cheatsheets
 
 [Jolicode](https://elasticsearch-cheatsheet.jolicode.com/)
 
 ## Development URLs
 
-[Kibana (port 5601)](https://localhost:5601)
-
-[Sense](https://localhost:5601/app/sense)
-
-[ElasticSearch (port 9200)](https://localhost:9200)
+- [Kibana (port 5601)](https://localhost:5601)
+- [Sense](https://localhost:5601/app/sense)
+- [ElasticSearch (port 9200)](https://localhost:9200)
 
 ## CURL
 

@@ -979,13 +979,16 @@ Use traits:
 ## Scala 3 Features
 
 ### Enums
+
 ```scala
 enum Color:
   case Red, Green, Blue
 ```
 
 ### Given Instances and Using Clauses
+
 Replacing `implicits` for context parameters.
+
 ```scala
 trait Ord[T]:
   def compare(x: T, y: T): Int

@@ -29,6 +29,7 @@ Amazon Redshift is a fully managed, petabyte-scale data warehouse service in the
 ## Advanced SQL Code Examples
 
 **Window Functions:**
+
 ```sql
 SELECT event_id, event_time,
        LEAD(event_time) OVER (PARTITION BY user_id ORDER BY event_time) AS next_event_time
@@ -36,6 +37,7 @@ FROM events;
 ```
 
 **Materialized Views:**
+
 ```sql
 CREATE MATERIALIZED VIEW mv_sales_summary
 BACKUP NO

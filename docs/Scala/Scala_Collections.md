@@ -374,4 +374,5 @@ import scala.collection.JavaConversions._
 ```
 
 ## Updated Links
+
 [Scala Collections Documentation](https://docs.scala-lang.org/overviews/collections/introduction.html)

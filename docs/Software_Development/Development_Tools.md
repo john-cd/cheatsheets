@@ -117,6 +117,7 @@ comments: true
 - [Diff - WinMerge](https://winmerge.org/)
 
 ### CLI Tools
+
 ```bash
 grep -ri "search_term" .
 curl -I https://example.com

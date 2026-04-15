@@ -3,6 +3,8 @@ title: Deploy to Kubernetes (Helm)
 tags: Kubernetes MiniKube Kubectl
 ---
 
+# Deploy to Kubernetes (Helm)
+
 ## Useful Links
 
 [Deploying scala sbt microservice to Kubernetes](https://steveking.site/blog/2017/deploying-scala-sbt-microservices-to-kubernetes/)

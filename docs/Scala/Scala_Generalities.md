@@ -51,6 +51,7 @@ scala -classpath . HelloWorld
 ```
 
 ## Scala 3 Updates
+
 - **Indentation-based syntax**: Similar to Python.
 - **Enums**: First-class support for algebraic data types.
 - **Extension Methods**: Easier way to add methods to existing types.

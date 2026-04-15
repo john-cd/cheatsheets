@@ -6,4 +6,5 @@
 [Kubernetes on AWS with Terraform (kubespray)](https://github.com/kubernetes-incubator/kubespray/tree/master/contrib/terraform/aws)
 
 ## Modern Practices
+
 Use state locking and remote state storage (e.g., S3 + DynamoDB).

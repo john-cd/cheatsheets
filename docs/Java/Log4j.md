@@ -102,10 +102,12 @@ logger.debug("Logging in user {} with birthday {}", user.getName(), user.getBirt
 ```
 
 ## Log4Shell Mitigation Context
+
 **Important:** Versions of Log4j2 between 2.0-beta9 and 2.14.1 are vulnerable to Log4Shell (CVE-2021-44228).
 **Fix:** Always ensure you are using Log4j2 version **2.17.1 or newer**.
 
 ## Modern Dependencies
+
 ```xml
 <dependency>
     <groupId>org.apache.logging.log4j</groupId>
@@ -120,6 +122,7 @@ logger.debug("Logging in user {} with birthday {}", user.getName(), user.getBirt
 ```
 
 ## Modern log4j2.xml Configuration
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration status="WARN">

@@ -30,6 +30,7 @@ https://softwaremill.com/comparing-scala-relational-database-access-libraries/#s
 ## Modern Examples
 
 ### Slick
+
 ```scala
 import slick.jdbc.H2Profile.api._
 import scala.concurrent.ExecutionContext.Implicits.global

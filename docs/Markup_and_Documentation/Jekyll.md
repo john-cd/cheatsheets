@@ -20,7 +20,6 @@ Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most ou
 
 [Jekyll source code](https://github.com/jekyll/jekyll)
 
-
 ## Jekyll Install How-To
 
 [Install Instructions](https://jekyllrb.com/docs/installation/)

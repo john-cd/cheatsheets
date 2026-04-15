@@ -196,11 +196,13 @@ Papermill is a tool for parameterizing and executing Jupyter Notebooks.
 JupyterLab is the latest web-based interactive development environment for notebooks, code, and data.
 
 ### Installation
+
 ```shell
 pip install jupyterlab
 ```
 
 ### Starting JupyterLab
+
 ```shell
 jupyter lab
 ```
