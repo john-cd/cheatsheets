@@ -1,7 +1,7 @@
 ---
-layout: inner
-title: Jekyll How-To
-date: 2017-02-20 11:41:26 -0800
+layout: "inner"
+title: "Jekyll How-To"
+date: "2017-02-20 11:41:26 -0800"
 category: frontend
 tags: blog jekyll
 ---
@@ -146,7 +146,7 @@ You can find out info about customizing your Jekyll theme, as well as basic Jeky
 You can find the source code for the Jekyll minima theme at:
 [minima](https://github.com/jekyll/minima)
 
-______________________________________________________________________
+---
 
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 

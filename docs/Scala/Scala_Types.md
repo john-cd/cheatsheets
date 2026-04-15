@@ -171,8 +171,8 @@ class VerifiedTweeter(val username_ : String) extends Tweeter with User {  // We
 
 There are two specific requirements that are created with self-types:
 
-1. If B is extended, then you're required to mix-in an A.
-2. When a concrete class finally extends/mixes-in these traits, some class/trait must implement A.
+- If B is extended, then you're required to mix in an A.
+- When a concrete class finally extends/mixes in these traits, some class/trait must implement A.
 
 ```scala
 trait Wrong extends Tweeter {

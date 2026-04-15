@@ -24,7 +24,7 @@ aws emr create-cluster --name "Spark cluster" --release-label emr-7.0.0 --applic
 --ec2-attributes KeyName=myKey --instance-type m5.xlarge --instance-count 3 --use-default-roles
 ```
 
-Note: For Windows, replace the above Linux line continuation character () with the caret (^).
+Note: For Windows, replace the above Linux line continuation character (`\`) with the caret (`^`).
 
 *When using a config file:*
 

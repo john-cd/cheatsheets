@@ -160,7 +160,7 @@ minikube stop
 
 ## Install [Helm](https://helm.sh/)
 
-Helm is a package manager for Kubernetes. Download a binary release of the Helm client from the [Helm releases page](https://github.com/kubernetes/helm/releases)
+Helm is a package manager for Kubernetes. Download a binary release of the Helm client from the [Helm releases page](https://github.com/helm/helm/releases)
 
 - Once you have Helm ready, you can initialize the local CLI and also install Tiller into your Kubernetes cluster in one step:
 

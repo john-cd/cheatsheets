@@ -29,7 +29,7 @@ java -version
   - [Phabrikator blog](https://scn.sap.com/community/abap/blog/2014/11/24/code-review-with-phabricator--an-open-source-software-engineering-platform)
 - [Jenkins](https://www.jenkins.io/) CI / CD automation server
 - [JProfiler](https://www.ej-technologies.com/products/jprofiler/overview.html)
-- [FindBugs](https://spotbugs.github.io/) static analysis or [Checker Framework](https://types.cs.washington.edu/checker-framework/)
+- [SpotBugs (successor to FindBugs)](https://spotbugs.github.io/) static analysis or [Checker Framework](https://types.cs.washington.edu/checker-framework/)
 - [Checkstyle](https://checkstyle.sourceforge.net/) coding standard checker
   - [Style guidelines](https://logging.apache.org/log4j/2.x/javastyle.html)
 
