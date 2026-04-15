@@ -3,7 +3,7 @@ title: Kubernetes Cheatsheet
 tags: Kubernetes MiniKube Kubectl
 ---
 
-### ``minikube``
+# ``minikube``
 
 - To access the Kubernetes Dashboard, run this command in a shell after starting Minikube to get the address:
 
@@ -13,7 +13,7 @@ minikube dashboard
 
 - The minikube VM is exposed to the host system via a host-only IP address, that can be obtained with the ``minikube ip`` command
 
-### ``kubectl``
+## ``kubectl``
 
 [kubectl Cheat Sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
 
@@ -37,7 +37,7 @@ kubectl run hello-world-pod --labels="run=load-balancer-example" --image=gcr.io/
 - ``kubectl logs`` - print the logs from a container in a pod
 - ``kubectl exec`` - execute a command on a container in a pod
 
-### Using the Docker daemon in the Minikube VM
+## Using the Docker daemon in the Minikube VM
 
 When using a single VM of Kubernetes, it’s really handy to reuse the minikube’s built-in Docker daemon
 

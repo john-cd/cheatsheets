@@ -1,4 +1,4 @@
-# Scaladoc 
+# Scaladoc
 
 - [Scaladoc](https://docs.scala-lang.org/overviews/scaladoc/for-library-authors.html)
 - [Scaladoc Style Guide](https://docs.scala-lang.org/style/scaladoc.html)

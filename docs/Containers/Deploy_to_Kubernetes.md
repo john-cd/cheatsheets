@@ -3,9 +3,9 @@ title: Deploy to Kubernetes
 tags: Kubernetes MiniKube Kubectl
 ---
 
-using ``kubectl``
+# Using `kubectl`
 
-### Create ConfigMap from config files
+## Create ConfigMap from config files
 
 A [ConfigMap](https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/) stores K8s-specific configuration that can be mounted as volume or used in env variables.
 It is often used to provide production configuration: application configuration, log settings, etc...
@@ -45,7 +45,7 @@ f [[ $secretText =~ $regex ]]
 done
 ```
 
-### Create Resources (Deployment, Service, Ingress, etc...)
+## Create Resources (Deployment, Service, Ingress, etc...)
 
 ```shell
 kubectl create -f <path/to/resource_config.yaml>
@@ -66,11 +66,11 @@ kubectl get pods
 kubectl delete deployment <deployment name>
 ```
 
-### Install an Ingress Controller
+## Install an Ingress Controller
 
 - An ingress controller is necessary to make Ingresses work. See the [Ingress doc](https://kubernetes.io/docs/concepts/services-networking/ingress/)
 
-#### Minikube
+### Minikube
 
 - ``minikube`` provides its own ingress controller via the Ingress add-on:
 
@@ -84,7 +84,7 @@ Enabling the add-on provisions the following:
 - the Nginx ingress controller
 - a service that exposes a default Nginx backend pod for handling unmapped requests.
 
-#### Alternative ingress controllers
+### Alternative ingress controllers
 
 - Install [https://traefik.io/](https://traefik.io/)
 

@@ -4,9 +4,12 @@ category: markup
 tags: python
 ---
 
+# reStructuredText
+
 reStructuredText is an easy-to-read, what-you-see-is-what-you-get plaintext markup syntax and parser system. It is useful for in-line program documentation (such as Python docstrings), for quickly creating simple web pages, and for standalone documents.
 
-# [reStructuredText](https://docutils.sourceforge.io/rst.html)
+
+[reStructuredText](https://docutils.sourceforge.io/rst.html)
 
 [reStructuredText Quick Ref](https://docutils.sourceforge.io/docs/user/rst/quickref.html)
 

@@ -31,18 +31,18 @@ Assume 'HelloWorld' is the object name: the file should be saved as 'HelloWorld.
 ### Packages
 
 ```scala
-package pkg   // at start of file
-package pkg { ... } // bracket style
+package pkg // At start of file.
+package pkg { ... } // Bracket style.
 ```
 
 ### Imports
 
 ```scala
-import scala.collection._                 // wildcard import. When importing all the names of a package or class, one uses the underscore character (_) instead of the asterisk (*).
-import scala.collection.Vector              // one class import
-import scala.collection.{Vector, Sequence} // selective import. Multiple classes can be imported from the same package by enclosing them in curly braces
-import scala.collection.{Vector => Vec28} // renaming import.
-import java.util.{Date => _, _}             // import all from java.util except Date.
+import scala.collection._ // Wildcard import. When importing all the names of a package or class, one uses the underscore character (_) instead of the asterisk (*).
+import scala.collection.Vector // One class import.
+import scala.collection.{Vector, Sequence} // Selective import. Multiple classes can be imported from the same package by enclosing them in curly braces.
+import scala.collection.{Vector => Vec28} // Renaming import.
+import java.util.{Date => _, _} // Import all from java.util except Date.
 ```
 
 All classes from the java.lang package are imported by default. The Predef object provides definitions that are accessible in all Scala compilation units without explicit qualification:
@@ -50,8 +50,8 @@ All classes from the java.lang package are imported by default. The Predef objec
 - immutable Map, Set, List, ::, Nil, print, println, assert, assume, require, ensuring
 
 ```scala
-import scala.collection.mutable.HashMap               // Mutable collections must be imported.
-import scala.collection.immutable.{TreeMap, TreeSet}  // So are specialized collections.
+import scala.collection.mutable.HashMap // Mutable collections must be imported.
+import scala.collection.immutable.{TreeMap, TreeSet} // So are specialized collections.
 ```
 
 ### Application Entry Point
@@ -73,15 +73,15 @@ The result of the last expression in the block is the result of the overall bloc
 println({
   val x = 1 + 1
   x + 1
-}) // 3
+}) // 3.
 ```
 
 ### Variables and Values
 
 ```scala
-var x = 5 // variable
-val x = 5 // immutable value / "const"
-var x: Double = 5 // explicit type
+var x = 5 // Variable.
+val x = 5 // Immutable value / "const".
+var x: Double = 5 // Explicit type.
 println(x)
 ```
 
@@ -94,24 +94,24 @@ lazy val a = {heavymath(); 19}
 ### Literals
 
 ```scala
-val a = 2  // int
-val b = 31L     // long
-val c = 0x30B   // hexadecimal
-val d = 3f  // float
-val e = 3.22d // double
+val a = 2 // Int.
+val b = 31L // Long.
+val c = 0x30B // Hexadecimal.
+val d = 3f // Float.
+val e = 3.22d // Double.
 val f = 93e-9
-val g = 'a'   // character
-val h = '\u0061'  // unicode for a
-val i = '\141'   // octal for a
-val j = '\"'  // escape sequences
+val g = 'a' // Character.
+val h = '\u0061' // Unicode for a.
+val i = '\141' // Octal for a.
+val j = '\"' // Escape sequences.
 val k = '\\'
-val s = "To be or not to be"   // string
+val s = "To be or not to be" // String.
 s.charAt(0)
 val s2 = """An apple a day
-keeps the doctor away"""  // multi-lines string
+keeps the doctor away""" // Multi-lines string.
 s2.split('\n')
 val s3 = """An apple a day
-           |keeps the doctor away"""  // Multiline String literals can use | to specify the starting position of subsequent lines, then use stripMargin to remove the surplus indentation.
+           |keeps the doctor away""" // Multiline String literals can use | to specify the starting position of subsequent lines, then use stripMargin to remove the surplus indentation.
 s3.stripMargin
 ```
 
@@ -131,12 +131,12 @@ object Planets extends Enumeration {
 }
 
 Planets.Mercury.id
-Planets.Mercury.toString //How does it get the name? by Reflection.
+Planets.Mercury.toString // How does it get the name? by Reflection.
 
 object GreekPlanets extends Enumeration {
-  val Mercury = Value(1, "Hermes")   // enumeration with your own index and/or your own Strings
+  val Mercury = Value(1, "Hermes") // Enumeration with your own index and/or your own Strings.
   val Venus = Value(2, "Aphrodite")
-  //Fun Fact: Tellus is Roman for (Mother) Earth
+  // Fun Fact: Tellus is Roman for (Mother) Earth.
   val Earth = Value(3, "Gaia")
   val Mars = Value(4, "Ares")
   val Jupiter = Value(5, "Zeus")
@@ -150,57 +150,57 @@ object GreekPlanets extends Enumeration {
 ### Common Data Structures
 
 ```scala
-(1,2,3)                  // tuple literal. (Tuple3)
-var (x,y,z) = (1,2,3)  // destructuring bind: tuple unpacking via pattern matching.
+(1,2,3) // Tuple literal. (Tuple3).
+var (x,y,z) = (1,2,3) // Destructuring bind: tuple unpacking via pattern matching.
 // BAD var x,y,z = (1,2,3) // hidden error: each assigned to the entire tuple.
 
-val tuple = ("apple", 3) // mixed type tuple
+val tuple = ("apple", 3) // Mixed type tuple.
 tuple._1
 tuple._2
 tuple.swap
 ```
 
 ```scala
-var xs = List(1,2,3)  // list (immutable).
-xs(2)                  // paren indexing
-1 :: List(2,3)    // cons (create a new list by prepending the element).
+var xs = List(1,2,3) // List (immutable).
+xs(2) // Paren indexing.
+1 :: List(2,3) // Cons (create a new list by prepending the element).
 
-1 to 5                   // Range sugar. Same as `1 until 6`
+1 to 5 // Range sugar. Same as `1 until 6`.
 1 to 10 by 2
-Range(1, 10, 2)    // Range does not include the last item, even in a step increment
+Range(1, 10, 2) // Range does not include the last item, even in a step increment.
 Range(1, 9, 2).inclusive
 ```
 
 ```scala
-()        // (empty parens) sole member of the Unit type (like C/Java void).
+() // (empty parens) sole member of the Unit type (like C/Java void).
 ```
 
 ### Control Constructs
 
 ```scala
-if (check) happy else sad // conditional.
+if (check) happy else sad // Conditional.
 if (check) happy            //
-if (check) happy else () // same as above
-while (x < 5) { println(x); x += 1} // while loop.
-do { println(x); x += 1} while (x < 5) // do while loop.
+if (check) happy else () // Same as above.
+while (x < 5) { println(x); x += 1} // While loop.
+do { println(x); x += 1} while (x < 5) // Do while loop.
 
-for (x <- xs if x%2 == 0) yield x*10  // for comprehension with guard
-xs.filter(_%2 == 0).map(_*10)       // same as filter/map
-for ((x,y) <- xs zip ys) yield x*y    // for comprehension: destructuring bind
-(xs zip ys) map { case (x,y) => x*y } // same as
-for (x <- xs; y <- ys) yield x*y      // for comprehension: cross product. Later generators varying more rapidly than earlier ones
-xs flatMap {x => ys map {y => x*y}}   // same as
+for (x <- xs if x%2 == 0) yield x*10 // For comprehension with guard.
+xs.filter(_%2 == 0).map(_*10) // Same as filter/map.
+for ((x,y) <- xs zip ys) yield x*y // For comprehension: destructuring bind.
+(xs zip ys) map { case (x,y) => x*y } // Same as.
+for (x <- xs; y <- ys) yield x*y // For comprehension: cross product. Later generators varying more rapidly than earlier ones.
+xs flatMap {x => ys map {y => x*y}} // Same as.
 for (x <- xs; y <- ys) {
-  println("%d/%d = %.1f".format(x, y, x/y.toFloat))  // for comprehension: imperative-ish
+  println("%d/%d = %.1f".format(x, y, x/y.toFloat)) // For comprehension: imperative-ish.
 }
-for (i <- 1 to 5) {      // for comprehension: iterate including the upper bound
+for (i <- 1 to 5) { // For comprehension: iterate including the upper bound.
   println(i)
 }
-for (i <- 1 until 5) {     // for comprehension: iterate omitting the upper bound
+for (i <- 1 until 5) { // For comprehension: iterate omitting the upper bound.
   println(i)
 }
 
-import scala.util.control.Breaks._  // break
+import scala.util.control.Breaks._ // Break.
 breakable {
   for (x <- xs) {
     if (Math.random < 0.1) break
@@ -212,8 +212,8 @@ breakable {
 
 ```scala
 val helloMessage = "Hello World"
-s"Application $helloMessage"  // string interpolation; can include expressions which can include numbers and strings
-// use `f` prefix before the string instead of an `s` for sprintf formatting
+s"Application $helloMessage" // String interpolation; can include expressions which can include numbers and strings.
+// Use `f` prefix before the string instead of an `s` for sprintf formatting.
 ```
 
 ## Functions
@@ -222,19 +222,19 @@ Scala is a functional language in the sense that every function is a value and e
 Scala provides a lightweight syntax for defining anonymous functions, it supports higher-order functions, it allows functions to be nested, and supports currying.
 
 ```scala
-def add(x: Int, y: Int): Int = x + y   // the return type is declared after the parameter list and a colon
+def add(x: Int, y: Int): Int = x + y // The return type is declared after the parameter list and a colon.
 
-// GOOD def f(x: Any) = println(x)
+// GOOD def f(x: Any) = println(x).
 // BAD  def f(x) = println(x)   // syntax error: need types for every arg.
 
-def f(x: Int) = {       // inferred return type
+def f(x: Int) = { // Inferred return type.
   val square = x*x
   square.toString
-  } // The last expression in the body is the method’s return value. (Scala does have a return keyword, but it’s rarely used.)
+  } // The last expression in the body is the method’s return value. (Scala does have a return keyword, but it’s rarely used.).
 
-// BAD def f(x: Int) { x*x }  hidden error: without = it’s a Unit-returning procedure; causes havoc
+// BAD def f(x: Int) { x*x }  hidden error: without = it’s a Unit-returning procedure; causes havoc.
 
-// When performing recursion, the return type on the method is mandatory!
+// When performing recursion, the return type on the method is mandatory!.
 ```
 
 - Backticks for reserved keywords and identifiers with a space (rare)
@@ -255,10 +255,10 @@ def name: String = System.getProperty("name")
 ### Procedures
 
 ```scala
-def foo(x: Int) { //Note: No `=`; returns Unit
+def foo(x: Int) { // Note: No `=`; returns Unit.
       print(x.toString)
     }
-def foo(x: Int): Unit =  print(x.toString)  // or
+def foo(x: Int): Unit =  print(x.toString) // Or.
 ```
 
 Convention (not required for the compiler) states that if you a call a method that returns a Unit / has a side effect, invoke that method with empty parenthesis, other leave the parenthesis out
@@ -281,7 +281,7 @@ me.addColors(blue = 40)
 ### Variable Length Arguments
 
 ```scala
-def sum(args: Int*) = args.reduceLeft(_+_)    // varargs. must be last arg
+def sum(args: Int*) = args.reduceLeft(_+_) // Varargs. must be last arg.
 
 def capitalizeAll(args: String*) = {
       args.map { arg =>
@@ -309,11 +309,11 @@ meaning that the last call and only call of the method is the recursive method. 
 to a loop from a stack
 
 ```scala
-import scala.annotation.tailrec // importing annotation!
-@tailrec      //  compiler will check that the function is tail recursive
+import scala.annotation.tailrec // Importing annotation!.
+@tailrec // Compiler will check that the function is tail recursive.
 def factorial(i: BigInt): BigInt = {
       @tailrec
-      def fact(i: BigInt, accumulator: BigInt): BigInt = {  // methods can be placed inside in methods; return type is obligatory
+      def fact(i: BigInt, accumulator: BigInt): BigInt = { // Methods can be placed inside in methods; return type is obligatory.
         if (i <= 1)
           accumulator
         else
@@ -332,7 +332,7 @@ object FrenchDate {
     def main(args: Array[String]) {
         val now = new Date
         val df = getDateInstance(LONG, Locale.FRANCE)
-    println(df format now)       // Methods taking one argument can be used with an infix syntax. Equivalent to df.format(now)
+    println(df format now) // Methods taking one argument can be used with an infix syntax. Equivalent to df.format(now).
     }
 }
 ```
@@ -344,7 +344,7 @@ Infix Operators do NOT work if an object has a method that takes two parameters.
 
 ```scala
  val g: Int = 31
- val s: String = g toHexString  // Postfix operators work if an object has a method that takes no parameters
+ val s: String = g toHexString // Postfix operators work if an object has a method that takes no parameters.
 ```
 
 Prefix operators work if an object has a method name that starts with unary_
@@ -356,7 +356,7 @@ class Stereo {
     }
 
 val stereo = new Stereo
-+stereo   // it is on
++stereo // It is on.
 ```
 
 Methods with colons are right-associative, that means the object that a method is on will be on the _right_ and the method parameter will be on the _left_
@@ -368,7 +368,7 @@ class Foo (y:Int) {
 
 val foo = new Foo(9)
 10 ~: foo
-foo.~:(10)  // same as
+foo.~:(10) // Same as.
 ```
 
 ### Anonymous Functions
@@ -376,27 +376,27 @@ foo.~:(10)  // same as
 ```scala
 def lambda = (x: Int) => x + 1
 
-// other variants
+// Other variants.
 def lambda2 = { x: Int => x + 1 }
 val lambda3 = new Function1[Int, Int] {
       def apply(v1: Int): Int = v1 + 1
     }
 
-val everything = () => 42        // without parameter
-val add = (x: Int, y: Int) => x + y    // multiple parameters
+val everything = () => 42 // Without parameter.
+val add = (x: Int, y: Int) => x + y // Multiple parameters.
 
-(1 to 5).map(_*2)                // underscore notation.
-(1 to 5) map (_*2)        // same with infix sugar.
-(1 to 5).reduceLeft( _+_ )      // underscores are positionally matched 1st and 2nd args.
-(1 to 5).map( x => x*x )      // to use an arg twice, have to name it.
-(1 to 5).map { x => val y = x*2; println(y); y } // block style returns last expression.
-(1 to 5) filter {_%2 == 0} map {_*2}            // pipeline style (works with parens too).
+(1 to 5).map(_*2) // Underscore notation.
+(1 to 5) map (_*2) // Same with infix sugar.
+(1 to 5).reduceLeft( _+_ ) // Underscores are positionally matched 1st and 2nd args.
+(1 to 5).map( x => x*x ) // To use an arg twice, have to name it.
+(1 to 5).map { x => val y = x*2; println(y); y } // Block style returns last expression.
+(1 to 5) filter {_%2 == 0} map {_*2} // Pipeline style (works with parens too).
 
-// GOOD (1 to 5).map(2*)
+// GOOD (1 to 5).map(2*).
 // BAD (1 to 5).map(*2)                         // anonymous function: bound infix method. Use 2*_ for sanity’s sake instead.
 
 def compose(g: R => R, h: R => R) = (x:R) => g(h(x))
-val f = compose({_*2}, {_-1})     // anonymous functions: to pass in multiple blocks, need outer parens.
+val f = compose({_*2}, {_-1}) // Anonymous functions: to pass in multiple blocks, need outer parens.
 ```
 
 Passing anonymous functions as parameter:
@@ -417,7 +417,7 @@ Function Values:
 
 ```scala
 object Timer {
-    def oncePerSecond(callback: () => Unit) {        // () => T is a Function type that takes a Unit type. Unit is known as 'void' to a Java programmer.
+    def oncePerSecond(callback: () => Unit) { // () => T is a Function type that takes a Unit type. Unit is known as 'void' to a Java programmer.
         while (true) { callback(); Thread sleep 1000 }
     }
 
@@ -426,7 +426,7 @@ object Timer {
     }
 
     def main(args: Array[String]) {
-        oncePerSecond(timeFlies)       // function value; could also be () => timeFlies()
+        oncePerSecond(timeFlies) // Function value; could also be () => timeFlies().
     }
 }
 ```
@@ -436,7 +436,7 @@ object Timer {
 This is used extensively in scala to create blocks.
 
 ```scala
-    def calc(x: => Int): Either[Throwable, Int] = {   //x is a call by name parameter; delayed execution of x
+    def calc(x: => Int): Either[Throwable, Int] = { // X is a call by name parameter; delayed execution of x.
       try {
         Right(x)
       } catch {
@@ -444,8 +444,8 @@ This is used extensively in scala to create blocks.
       }
     }
 
-    val y = calc {                                    //This looks like a natural block
-      println("Here we go!")                          //Some superfluous call
+    val y = calc { // This looks like a natural block.
+      println("Here we go!") // Some superfluous call.
       49 + 20
     }
 ```
@@ -460,7 +460,7 @@ object PigLatinizer {
 val result = PigLatinizer {
       val x = "pret"
       val z = "zel"
-      x ++ z //concatenate the strings
+      x ++ z // Concatenate the strings.
     }
 ```
 
@@ -477,11 +477,11 @@ def closure = {
 ### Currying
 
 ```scala
-val zscore = (mean: R, sd: R) => (x:R) => (x-mean)/sd  // currying, obvious syntax.
-def zscore(mean: R, sd: R) = (x: R) => (x-mean)/sd         // currying, obvious syntax
-def zscore(mean: R, sd: R)(x: R) = (x-mean)/sd          // currying, sugar syntax. but then:
-val normer = zscore(7, 0.4) _                          // need trailing underscore to get the partial, only for the sugar version.
-def mapmake[T](g: T => T)(seq: List[T]) = seq.map(g)  // generic type.
+val zscore = (mean: R, sd: R) => (x:R) => (x-mean)/sd // Currying, obvious syntax.
+def zscore(mean: R, sd: R) = (x: R) => (x-mean)/sd // Currying, obvious syntax.
+def zscore(mean: R, sd: R)(x: R) = (x-mean)/sd // Currying, sugar syntax. but then:.
+val normer = zscore(7, 0.4) _ // Need trailing underscore to get the partial, only for the sugar version.
+def mapmake[T](g: T => T)(seq: List[T]) = seq.map(g) // Generic type.
 
 def multiply(x: Int, y: Int) = x * y
 val multiplyCurried = (multiply _).curried
@@ -493,10 +493,10 @@ multiplyCurried(3)(2)
 
 ```scala
 def adder(m: Int, n: Int) = m + n
-val add2 = adder(2, _:Int)  // You can partially apply any argument in the argument list, not just the last one.
-add2(3)    // which is 5
+val add2 = adder(2, _:Int) // You can partially apply any argument in the argument list, not just the last one.
+add2(3) // Which is 5.
 
-val add3 = adder _    // underscore to convert from a function to a lambda
+val add3 = adder _ // Underscore to convert from a function to a lambda.
 adder(1, 9)
 add3(1, 9)
 ```
@@ -504,79 +504,79 @@ add3(1, 9)
 ### Partial Functions
 
 ```scala
-val doubleEvens: PartialFunction[Int, Int] = new PartialFunction[Int, Int] {   // full declaration
-      //States that this partial function will take on the task
+val doubleEvens: PartialFunction[Int, Int] = new PartialFunction[Int, Int] { // Full declaration.
+      // States that this partial function will take on the task.
       def isDefinedAt(x: Int) = x % 2 == 0
 
-      //What we do if this does partial function matches
+      // What we do if this does partial function matches.
       def apply(v1: Int) = v1 * 2
     }
 
 val tripleOdds: PartialFunction[Int, Int] = {
-      case x: Int if (x % 2) != 0 => x * 3    // syntaxic sugar (usual way)
+      case x: Int if (x % 2) != 0 => x * 3 // Syntaxic sugar (usual way).
     }
 
-val whatToDo = doubleEvens orElse tripleOdds    // combine the partial functions together: OrElse
+val whatToDo = doubleEvens orElse tripleOdds // Combine the partial functions together: OrElse.
 
 val addFive = (x: Int) => x + 5
-val whatToDo = doubleEvens orElse tripleOdds andThen addFive  // chain (partial) functions together: andThen
+val whatToDo = doubleEvens orElse tripleOdds andThen addFive // Chain (partial) functions together: andThen.
 ```
 
 ## Classes, Objects, and Traits
 
 ```scala
-class C(x: R)                     // constructor params - x is only available in class body
-class C(val x: R)      // c.x constructor params - automatic public (immutable) member defined
-class D(var x: R)       // you can define class with var or val parameters
+class C(x: R) // Constructor params - x is only available in class body.
+class C(val x: R) // C.x constructor params - automatic public (immutable) member defined.
+class D(var x: R) // You can define class with var or val parameters.
 
 class C(var x: R) {
-  assert(x > 0, "positive please")  // constructor is class body
-  var y = x                         // declare a public member
-  val readonly = 5                  // declare a gettable but not settable member
-  private var secret = 1            // declare a private member
-  def this = this(42)               // alternative constructor
+  assert(x > 0, "positive please") // Constructor is class body.
+  var y = x // Declare a public member.
+  val readonly = 5 // Declare a gettable but not settable member.
+  private var secret = 1 // Declare a private member.
+  def this = this(42) // Alternative constructor.
 }
 
-new{ ... } // anonymous class
-abstract class D { ... } // define an abstract(non-createable) class.
-class C extends D { ... } // define an inherited class. Class hierarchy is linear, a class can only extend from one parent class
-class C(x: R) extends D(x) // inheritance and constructor params. (wishlist: automatically pass-up params by default)
-// A class can be placed inside another class
-object O extends D { ... } // define a singleton.
+new{ ... } // Anonymous class.
+abstract class D { ... } // Define an abstract(non-createable) class.
+class C extends D { ... } // Define an inherited class. Class hierarchy is linear, a class can only extend from one parent class.
+class C(x: R) extends D(x) // Inheritance and constructor params. (wishlist: automatically pass-up params by default).
+// A class can be placed inside another class.
+object O extends D { ... } // Define a singleton.
 
-trait T { ... }    // traits. See below.
+trait T { ... } // Traits. See below.
 class C extends T { ... }
 class C extends D with T { ... }
 
-// interfaces-with-implementation. no constructor params. mixin-able.
+// Interfaces-with-implementation. no constructor params. mixin-able.
 trait T1; trait T2
-class C extends T1 with T2          // multiple traits.
-class C extends D with T1 with T2 // parent class and (multiple) trait(s).
-class C extends D { override def f = ...} // must declare method overrides.
+class C extends T1 with T2 // Multiple traits.
+class C extends D with T1 with T2 // Parent class and (multiple) trait(s).
+class C extends D { override def f = ...} // Must declare method overrides.
 
-var c = new C(4)  // Instantiation
-//BAD new List[Int]
-//GOOD List(1,2,3)  // Instead, convention: callable factory shadowing the type
+var c = new C(4) // Instantiation.
+// BAD new List[Int].
+// GOOD List(1,2,3)  // Instead, convention: callable factory shadowing the type.
 
-classOf[String] // class literal.
+classOf[String] // Class literal.
 classOf[String].getCanonicalName
 classOf[String].getSimpleName
 val zoom = "zoom"
 zoom.getClass == classOf[String]
 
-x.isInstanceOf[String] // type check (runtime)
-x.asInstanceOf[String] // type cast (runtime)
-x: String    // compare to parameter ascription (compile time)
+x.isInstanceOf[String] // Type check (runtime).
+x.asInstanceOf[String] // Type cast (runtime).
+x: String // Compare to parameter ascription (compile time).
 ```
 
 ### Methods
 
 ```scala
 class Complex(real: Double, imaginary: Double) {
-    def re = real       // return type inferred automatically by the compiler
-    def im = imaginary  // methods without arguments
+    def re = real // Return type inferred automatically by the compiler.
+    def im = imaginary // Methods without arguments.
     def print(): Unit = println(s"$real + i * $imaginary")
- override def toString() = "" + re + (if (im < 0) "" else "+") + im + "i"  // override methods inherited from a super-class
+ override def toString() = "" + re + (if (im < 0) "" else "+") + im + "i" // Override methods inherited from a super-class.
 }
 ```
 
@@ -585,7 +585,7 @@ class Complex(real: Double, imaginary: Double) {
 Asserts take a boolean argument and can take a message.
 
 ```scala
-assert(true) // should be true
+assert(true) // Should be true.
 assert(true, "This should be true")
 ```
 
@@ -609,7 +609,7 @@ val b1 = Board(20, 20)
 val b2 = Board(30, 30)
 val c1 = b1.Coordinate(15, 15)
 val c2 = b2.Coordinate(25, 25)
-// val c1 = c2  won't work
+// Val c1 = c2  won't work.
 ```
 
 Use ``A#B`` for a Java-style inner class:
@@ -617,7 +617,7 @@ Use ``A#B`` for a Java-style inner class:
 ```scala
 class Graph {
   class Node {
-    var connectedNodes: List[Graph#Node] = Nil   // accepts Nodes from any Graph
+    var connectedNodes: List[Graph#Node] = Nil // Accepts Nodes from any Graph.
     def connectTo(node: Graph#Node) {
       if (connectedNodes.find(node.equals).isEmpty) {
         connectedNodes = node :: connectedNodes
@@ -660,11 +660,11 @@ The apply method is a magical method in Scala.
 class Employee (val firstName:String, val lastName:String)
 
 object Employee {
- def apply(firstName:String, lastName:String) = new Employee(firstName, lastName)  // would also work in a class, but rarer
+ def apply(firstName:String, lastName:String) = new Employee(firstName, lastName) // Would also work in a class, but rarer.
 }
 
 val a = Employee("John", "Doe")
-// is equivalent to
+// Is equivalent to.
 var b = Employee.apply("John", "Doe")
 ```
 
@@ -677,23 +677,23 @@ var b = Employee.apply("John", "Doe")
 - Instances of these classes can be decomposed through pattern matching
 
 ```scala
-case class Person(first: String, last: String, age: Int = 0)  // Case classes can have default and named parameters
-val p1 = Person("Fred", "Jones")    // new is optional
+case class Person(first: String, last: String, age: Int = 0) // Case classes can have default and named parameters.
+val p1 = Person("Fred", "Jones") // New is optional.
 val p2 = new Person("Fred", "Jones")
-p1 == p2         // true
-p1.hashCode == p2.hashCode    // true
-p1 eq p2         // false
-val p3 = p2.copy(first = "Jane")  // copy the case class but change the name in the copy
+p1 == p2 // True.
+p1.hashCode == p2.hashCode // True.
+p1 eq p2 // False.
+val p3 = p2.copy(first = "Jane") // Copy the case class but change the name in the copy.
 ```
 
 ```scala
-case class Dog(var name: String, breed: String)   // Case classes can have mutable properties - potentially unsafe
+case class Dog(var name: String, breed: String) // Case classes can have mutable properties - potentially unsafe.
 ```
 
 Case classes can be disassembled to their constituent parts as a tuple:
 
 ```scala
-val parts = Person.unapply(p1).get // returns Option[T]
+val parts = Person.unapply(p1).get // Returns Option[T].
 parts._1
 parts._2
 ```
@@ -701,7 +701,7 @@ parts._2
 ### Algebraic data type
 
 ```scala
-sealed trait Tree    // or abstract class
+sealed trait Tree // Or abstract class.
 final case class Sum(l: Tree, r: Tree) extends Tree
 final case class Var(n: String) extends Tree
 final case class Const(v: Int) extends Tree
@@ -712,7 +712,7 @@ final case class Const(v: Int) extends Tree
 ``{ case "x" => 5 }`` defines a partial function which, when given the string "x" as argument, returns the integer 5, and fails with an exception otherwise.
 
 ```scala
-type Environment = String => Int  // the type Environment can be used as an alias of the type of functions from String to Int
+type Environment = String => Int // The type Environment can be used as an alias of the type of functions from String to Int.
 
 def eval(t: Tree, env: Environment): Int = t match {
     case Sum(l, r) => eval(l, env) + eval(r, env)
@@ -722,27 +722,27 @@ def eval(t: Tree, env: Environment): Int = t match {
 
 def derive(t: Tree, v: String): Tree = t match {
     case Sum(l, r) => Sum(derive(l, v), derive(r, v))
-    case Var(n) if (v == n) => Const(1)                  // guard, an expression following the if keyword.
-    case _ => Const(0)                                   // wild-card, written _, which is a pattern matching any value, without giving it a name.
+    case Var(n) if (v == n) => Const(1) // Guard, an expression following the if keyword.
+    case _ => Const(0) // Wild-card, written _, which is a pattern matching any value, without giving it a name.
 }
 ```
 
 ```scala
-// GOOD (xs zip ys) map { case (x,y) => x*y }
+// GOOD (xs zip ys) map { case (x,y) => x*y }.
 // BAD (xs zip ys) map( (x,y) => x*y ) // use case in function args for pattern matching.
-// BAD
+// BAD.
 val v42 = 42
 Some(3) match {
   case Some(v42) => println("42")
   case _ => println("Not 42")
 } // “v42” is interpreted as a name matching any Int value, and “42” is printed.
-// GOOD
+// GOOD.
 val v42 = 42
 Some(3) match {
   case Some(`v42`) => println("42")
   case _ => println("Not 42")
 } // ”`v42`” with backticks is interpreted as the existing val v42, and “Not 42” is printed.
-// GOOD
+// GOOD.
 val UppercaseVal = 42
 Some(3) match {
   case Some(UppercaseVal) => println("42")
@@ -764,7 +764,7 @@ val secondElement = List(1,2,3) match {
 ### Regex
 
 ```scala
-val MyRegularExpression = """a=([^,]+),\s+b=(.+)""".r     //.r turns a String to a regular expression
+val MyRegularExpression = """a=([^,]+),\s+b=(.+)""".r // .r turns a String to a regular expression.
 expr match {
       case (MyRegularExpression(a, b)) => a + b
    }
@@ -795,15 +795,15 @@ for (patternMatch <- keyValPattern.findAllMatchIn(input))
 ```scala
 class Car(val make: String, val model: String, val year: Short, val topSpeed: Short)
 
-object Car {                 // What is typical is to create a custom extractor in the companion object of the class.
-  def unapply(x: Car) = Some(x.make, x.model, x.year, x.topSpeed)   // returns an Option[T]
+object Car { // What is typical is to create a custom extractor in the companion object of the class.
+  def unapply(x: Car) = Some(x.make, x.model, x.year, x.topSpeed) // Returns an Option[T].
 }
 
-val Car(a, b, c, d) = new Car("Chevy", "Camaro", 1978, 120)   // assign values to a .. d
+val Car(a, b, c, d) = new Car("Chevy", "Camaro", 1978, 120) // Assign values to a .. d.
 
-val x = new Car("Chevy", "Camaro", 1978, 120) match {    // pattern matching
-  case Car(s, t, _, _) => (s, t)         // _ for variables we don't care about.
-  case _ => ("Ford", "Edsel")           // fallback
+val x = new Car("Chevy", "Camaro", 1978, 120) match { // Pattern matching.
+  case Car(s, t, _, _) => (s, t) // _ for variables we don't care about.
+  case _ => ("Ford", "Edsel") // Fallback.
 }
 ```
 
@@ -831,7 +831,7 @@ In Scala, when a class inherits from a trait, it implements that traits's interf
 
 ```scala
 trait Ord {
-    def < (that: Any): Boolean                              // The type Any which is used above is the type which is a super-type of all other types in Scala
+    def < (that: Any): Boolean // The type Any which is used above is the type which is a super-type of all other types in Scala.
     def <=(that: Any): Boolean = (this < that) || (this == that)
     def > (that: Any): Boolean = !(this <= that)
     def >=(that: Any): Boolean = !(this < that)
@@ -849,7 +849,7 @@ class Date(y: Int, m: Int, d: Int) extends Ord {
         o.day == day && o.month == month && o.year == year
     }
 
-    def <(that: Any): Boolean = {    // The trait declare the type (e.g. method), where a concrete implementer will satisfy the type
+    def <(that: Any): Boolean = { // The trait declare the type (e.g. method), where a concrete implementer will satisfy the type.
         if (!that.isInstanceOf[Date])
             error("cannot compare " + that + " and a Date")
         val o = that.asInstanceOf[Date](year < o.year) ||
@@ -873,7 +873,7 @@ trait Logging {
 
       def log = logCache
     }
-val a = new A("stuff") with Logging  // mixin traits during instantiation!
+val a = new A("stuff") with Logging // Mixin traits during instantiation!.
 a.log("I did something")
 a.log.size
 ```
@@ -895,10 +895,10 @@ class BasicIntQueue extends IntQueue {
 }
 
 trait Doubling extends IntQueue {
-  abstract override def put(x: Int) { super.put(2 * x) }    // abstract override is necessary to stack traits
+  abstract override def put(x: Int) { super.put(2 * x) } // Abstract override is necessary to stack traits.
 }
 
-class MyQueue extends BasicIntQueue with Doubling   // could also mixin during instantiation
+class MyQueue extends BasicIntQueue with Doubling // Could also mixin during instantiation.
 
 val myQueue = new MyQueue
 myQueue.put(3)
@@ -975,3 +975,189 @@ Use traits:
     #
     @
 ```
+
+## Scala 3 Features
+
+### Enums
+
+```scala
+enum Color:
+  case Red, Green, Blue
+```
+
+### Given Instances and Using Clauses
+
+Replacing `implicits` for context parameters.
+
+```scala
+trait Ord[T]:
+  def compare(x: T, y: T): Int
+
+given intOrd: Ord[Int] with
+  def compare(x: Int, y: Int) =
+    if x < y then -1 else if x > y then 1 else 0
+
+def max[T](x: T, y: T)(using ord: Ord[T]): T =
+  if ord.compare(x, y) < 0 then y else x
+```
+
+## Scala Basics
+
+[Scala Exercises](https://www.scala-exercises.org/)
+
+## Scala Documentation
+
+[sbt-microsites- Getting Started](https://47deg.github.io/sbt-microsites/docs/)
+## Algebraic Data Types
+
+[Scala pattern gist](https://gist.github.com/arosien/0aee59cc734042f7044d24bdaec731a8)
+
+```scala
+// A website visitor is: logged in; or anonymous.
+// A logged in user has:.
+// An ID; and.
+// An email address.
+
+sealed trait Visitor {
+  def fold[B](
+    ifLoggedIn: (Long, String) => B,
+    ifAnonymous: () => B): B =
+    this match {
+      case LoggedIn(id, email) =>
+        ifLoggedIn(id, email)
+      case Anonymous() =>
+        ifAnonymous()
+    }
+
+  // How de we write toJson using fold?.
+  def toJson2(): String =
+    fold(
+      (id, email) => s"{type:logged_in,id:$id, email:$email}",
+      () => "{type:anonymous}")
+
+  def toJson(): String =
+    this match {
+      case LoggedIn(id, email) => s"{type:logged_in,id:$id, email:$email}"
+      case Anonymous() => "{type:anonymous}"
+    }
+}
+case class LoggedIn(id: Long, email: String) extends Visitor
+case class Anonymous() extends Visitor
+```
+
+## Structural Recursion
+
+Goal: transform algebraic data types
+Structure of the code follows structure of the data
+Two (sub-)patterns: pattern matching and polymorphism
+
+Summary
+
+Processing algebraic data types immediately follows from the structure of the data
+Can choose between pattern matching and polymorphism
+Pattern matching (within the base trait) is usually preferred
+
+// Calculation.add(value: Int): Calculation
+
+```scala
+// A calculation is a success or failure.
+// A success has a value.
+// A failure has an error.
+sealed trait Calculation {
+  def add(value: Int): Calculation =
+    this match {
+      case Success(v) => Success(v + value)
+      case f @ Failure(msg) => f
+    }
+
+  def failLoudly(): Calculation =
+    this match {
+      case s: Success => s
+      case Failure(msg) => Failure(msg + "!!!")
+    }
+}
+case class Success(value: Int) extends Calculation
+case class Failure(msg: String) extends Calculation
+
+val calc = Success(12) // Constructor.
+```
+
+```scala
+sealed trait MyList[A] {
+  def fold[B](
+    ifEmpty: () => B,
+    ifPair: (A, B) => B): B =
+    this match {
+      case Empty() =>
+        ifEmpty()
+      case Pair(head, tail) =>
+        ifPair(
+          head, // A.
+          tail.fold(ifEmpty, f)) // B.
+    }
+}
+case class Empty[A]() extends MyList[A]
+case class Pair[A](head: A, tail: MyList[A]) extends MyList[A]
+```
+
+## Sequencing Computation
+
+Goal: patterns for sequencing computations
+Functional programming is about transforming values
+That is all you can do without introducing side-effects
+A => B => C
+This is sequencing computations
+Three patterns: fold, map, and flatMap
+fold
+A => B
+Abstraction over structural recursion
+-> Convert user to JSON
+
+map
+F[A] => (A => B) => F[B]
+-> Get user from database (might not be a user): Result[User] -> Get order for user (might not be an order): User => Result[Order]
+
+flatMap
+F[A] => (A => F[B]) => F[B]
+-> Get user by id: UserId => Result[User] -> Get user’s order: User => Result[Order] -> Transform order to JSON: (Order => Json) => Result[Json] -> Send JSON: Result[Json] => Response
+
+Summary
+Standard patterns for sequencing computations
+fold is general transformation for algebraic data types
+map: F[A] => (A => B) => F[B]
+flatMap: F[A] => (A => F[B]) => F[B]
+
+// fold: A => B
+
+// Convert user to JSON
+
+```scala
+// A Result is a Success with value A or a Failure (with no value).
+sealed trait Result[A] {
+  def map[B](f: A => B): Result[B] =
+    this match {
+      case Success(a) => Success(f(a))
+      case f: Failure => f
+    }
+}
+case class Success[A](value: A) extends Result[A]
+case class Failure[A]() extends Result[A]
+```
+
+// map: F[A] => (A => B) => F[B]
+
+// Get user from database (might not be a user): Result[User]
+def getUser(id: Long): Result[User]
+// Get order for user (might not be an order): User => Result[Order]
+def getOrder(user: User): Result[Order]
+
+val order: Result[Order] =
+  getUser(12) // Result[User]
+    .flatMap(getOrder) // User => Result[Order]
+
+// flatMap: F[A] => (A => F[B]) => F[B]
+
+// Get user by id: UserId => Result[User]
+// Get user's order: User => Result[Order]
+// Transform order to JSON: (Order => Json) => Result[Json]
+// Send JSON: Result[Json] => Response

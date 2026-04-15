@@ -3,6 +3,8 @@ title: Kubernetes Concepts
 tags: Kubernetes
 ---
 
+# Kubernetes Concepts
+
 - Pods - A Pod is a Kubernetes abstraction that represents a group of one or more application containers (such as Docker or rkt), and some shared resources for those containers.
 Kubernetes workloads, such as Deployments and Jobs, are composed of one or more Pods.
 Shared pod resources include:

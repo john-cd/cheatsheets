@@ -6,7 +6,6 @@ tags: elasticsearch
 
 ## CONFIGURATION
 
-
 - config directory
 - yaml file
 

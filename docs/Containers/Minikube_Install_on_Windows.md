@@ -3,7 +3,7 @@ title: Minikube Install on Windows
 tags: Kubernetes MiniKube Kubectl
 ---
 
-## Install ``minikube`` on Windows
+# Install ``minikube`` on Windows
 
 [Minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/) runs a single-node Kubernetes cluster inside a VM on your laptop for users looking to try out Kubernetes or develop with it day-to-day.
 
@@ -80,7 +80,7 @@ kubectl auth can-i edit pods
 kubectl auth can-i delete pods
 ```
 
-### Run ``kubectl`` from the Ubuntu on Windows command line
+## Run ``kubectl`` from the Ubuntu on Windows command line
 
 If installed by ``choco``
 

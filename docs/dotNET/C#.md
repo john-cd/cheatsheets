@@ -170,7 +170,9 @@ public static IEnumerable<char> AlphabetSubset3(char start, char end)
 ```
 
 ## Modern C# Features
+
 ### Records
+
 ```csharp
 public record Person(string FirstName, string LastName);
 ```

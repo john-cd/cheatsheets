@@ -77,7 +77,7 @@ Emphasis can be used in the `mi\*dd\*le of a word`.
 
 ## Code
 
- `span of code`
+`span of code`
 
 ~~~txt
 ```python
@@ -124,7 +124,9 @@ Code highlighting to bitbucket README.md written in Python Markdown
 
 [Python markdown main site](https://pythonhosted.org//Markdown/)
 
-#### [Cloning your Bitbucket Wiki](https://confluence.atlassian.com/display/BITBUCKET/View+and+edit+pages)
+### Clonig Bitbucket Wiki
+
+[Cloning your Bitbucket Wiki](https://confluence.atlassian.com/display/BITBUCKET/View+and+edit+pages)
 
 ```bash
 git clone https://bitbucket.org/MY_USER/MY_REPO/wiki
@@ -139,22 +141,28 @@ Current standards heavily follow [CommonMark](https://commonmark.org/).
 **Bold** and *Italic*
 
 ### Lists
+
 - Item 1
 - Item 2
   - Nested Item
 
 ### Links and Images
+
 [CommonMark](https://commonmark.org/)
 ![Alt Text](https://via.placeholder.com/150)
 
 ### Code Blocks
+
 ```python
 def hello():
     print("Hello CommonMark")
 ```
 
 ### Tables
+
+```txt
 | Syntax      | Description |
 | ----------- | ----------- |
 | Header      | Title       |
 | Paragraph   | Text        |
+```

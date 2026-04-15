@@ -3,6 +3,7 @@ title: IPython / Jupyter Cheatsheet
 category: python
 tags:
 ---
+
 ### [IPython](https://ipython.org/) / [Jupyter](https://jupyter.org/)
 
 Jupyter Notebook is a web-based interactive computing platform. The notebook combines live code, equations, narrative text, visualizations, interactive dashboards and other media.

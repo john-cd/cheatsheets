@@ -9,6 +9,7 @@ tags: elasticsearch
 With version 8.0, security is enabled by default.
 
 ### Basic Indexing (cURL)
+
 ```shell
 curl -X POST "https://localhost:9200/my-index-000001/_doc/" -u elastic:password -H 'Content-Type: application/json' -d'
 {
@@ -22,6 +23,7 @@ curl -X POST "https://localhost:9200/my-index-000001/_doc/" -u elastic:password 
 ```
 
 ### Search API
+
 ```shell
 curl -X GET "https://localhost:9200/my-index-000001/_search?pretty" -u elastic:password -H 'Content-Type: application/json' -d'
 {
@@ -35,6 +37,7 @@ curl -X GET "https://localhost:9200/my-index-000001/_search?pretty" -u elastic:p
 ```
 
 ### Python Client Example
+
 ```python
 from elasticsearch import Elasticsearch
 

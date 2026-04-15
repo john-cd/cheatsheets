@@ -1,0 +1,22 @@
+name: Markdown Lint and Format
+
+on:
+  push:
+    branches: [ main, master ]
+    paths:
+      - '**.md'
+      - '.pre-commit-config.yaml'
+  pull_request:
+    branches: [ main, master ]
+    paths:
+      - '**.md'
+
+jobs:
+  pre-commit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: pre-commit/action@v3.0.1

@@ -1,6 +1,6 @@
-> **Note**: jQuery is largely considered legacy. Modern frontend development typically uses React, Vue, or vanilla JavaScript.
-
 # jQuery
+
+> **Note**: jQuery is largely considered legacy. Modern frontend development typically uses React, Vue, or vanilla JavaScript.
 
 ## Links
 
@@ -578,3 +578,6 @@ showGraphWithCanvas();
 showTable();
 }
 ```
+
+
+<!-- TODO: Add more modern JavaScript (ES6+) examples -->

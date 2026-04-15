@@ -43,6 +43,7 @@ Open the Spark UI to monitor: [https://localhost:4040](https://localhost:4040)
 ## IntelliJ Setup
 
 Modern IntelliJ IDEA versions have built-in support for sbt and Scala.
+
 1. Install the official Scala plugin.
 2. Import the project by opening the `build.sbt` file.
 3. Mark your `src/main/scala` folder as a Sources Root if it isn't automatically detected.

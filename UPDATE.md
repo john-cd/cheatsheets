@@ -86,3 +86,140 @@ The goal is to ensure all cheatsheets remain technical, very concise, and direct
 ### docs/Search/Logstash.md
 
 - [ ] Update to newest version: Align with latest ELK stack.
+
+### docs/Software_Development/Development_Tools.md
+
+- [ ] Formatting: Add relevant CLI code examples.
+
+### docs/Software_Development/Eclipse.md
+
+- [ ] Removal: Assess for removal as IntelliJ is the modern standard.
+
+### docs/Software_Development/IntelliJ.md
+
+- [ ] Link additions: Add links to official documentation and keymaps.
+
+### docs/Web/Bootstrap.md
+
+- [ ] Update to newest version: Update to Bootstrap 5, fix links.
+
+### docs/Web/CORS.md
+
+- [ ] Formatting: Add server-side and client-side code examples.
+
+### docs/Web/jQuery.md
+
+- [ ] Removal: Assess for removal, or strictly mark as legacy context documentation.
+
+### docs/Windows/Command_Prompt_Here.md
+
+- [ ] Removal: Assess for removal; replace with Windows Terminal/WSL notes.
+
+### docs/dotNET/ASPdotNET.md
+
+- [ ] Update to newest version: Align with modern ASP.NET Core framework.
+
+### docs/dotNET/AkkadotNET.md
+
+- [ ] Link additions: Add references to official documentation.
+
+### docs/dotNET/C#.md
+
+- [ ] Update to newest version: Include modern C# features and syntax.
+
+### docs/dotNET/Multithreading.md
+
+- [ ] Update to newest version: Emphasize modern Task Parallel Library (TPL).
+
+### docs/dotNET/WPF.md
+
+- [ ] Update to newest version: Refresh UI patterns.
+
+### docs/index.md
+
+- [ ] Update documentation structure: Implement navigation improvements.
+
+### drafts/Analytical_Tools.md
+
+- [ ] Formatting: Add relevant configuration examples.
+
+### drafts/Azure.md
+
+- [ ] Content expansion: Fill in the brief placeholders.
+
+### drafts/Citizen_developer_tools.md
+
+- [ ] Content expansion: Expand on low-code platforms and add links.
+
+### drafts/Cloud_Computing.md
+
+- [ ] Content expansion: Add substance to the brief overview.
+
+### drafts/DataScience.md
+
+- [ ] Formatting: Add code examples and fix outdated references.
+
+### drafts/Data_Visualization.md
+
+- [ ] Content expansion: Distinguish from the similarly named file in docs/.
+
+### drafts/Databases.md
+
+- [ ] Content expansion: Expand out brief sections.
+
+### drafts/ELK.md
+
+- [ ] File splitting / merge: Consolidate with ElasticSearch and Logstash files.
+
+### drafts/ETL.md
+
+- [ ] Content expansion: Expand placeholders.
+
+### drafts/Hive.md
+
+- [ ] Content expansion: Add HiveQL examples.
+
+### drafts/Java.md
+
+- [ ] File splitting / merge: Combine with `docs/Java/Java.md`.
+
+### drafts/Kong.md
+
+- [ ] Content expansion: Add API Gateway configurations.
+
+### drafts/Logging.md
+
+- [ ] Content expansion: Add structured logging examples.
+
+### drafts/Play_Framework2.md
+
+- [ ] File splitting / merge: Combine with `docs/Scala/Play_Framework.md`.
+
+### drafts/Scala2.md
+
+- [ ] File splitting / merge: Integrate relevant parts into main Scala documentation.
+
+### drafts/Scala3.md
+
+- [ ] File splitting / merge: Move contents to `docs/Scala/Scala_Language.md`.
+
+### drafts/Software_Design.md
+
+- [ ] Content expansion: Elaborate on system design principles.
+
+### drafts/Stream_Processing.md
+
+- [ ] Content expansion: Add Kafka/Flink concepts.
+
+### drafts/Terraform2.md
+
+- [ ] Content expansion: Rename and expand with modern Terraform practices.
+
+### drafts/Windows_Tools.md
+
+- [ ] Removal: Assess for removal or update with modern dev tooling (WSL, Windows Terminal).
+
+### Added Tasks
+
+- [ ] `docs/Web/jQuery.md`: Add more modern JavaScript (ES6+) examples
+- [ ] `docs/Containers/Kubernetes_Concepts.md`: Expand on Kubernetes custom resources (CRDs)

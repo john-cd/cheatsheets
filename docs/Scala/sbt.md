@@ -1,5 +1,7 @@
 
-# SBT Links
+# SBT
+
+## Links
 
 [SBT Home Page](https://www.scala-sbt.org/)
 
@@ -122,6 +124,7 @@ The libraryDependencies key involves two complexities: ``+=`` rather than ``:=``
 The ``%`` method is used to construct an Ivy module ID from strings.
 
 ## Modern build.sbt
+
 ```scala
 val scala3Version = "3.3.0"
 

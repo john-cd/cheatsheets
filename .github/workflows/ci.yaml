@@ -1,11 +1,14 @@
 name: ci
+
 on:
   push:
     branches:
       - master
       - main
+
 permissions:
   contents: write
+
 jobs:
   deploy:
     runs-on: ubuntu-latest

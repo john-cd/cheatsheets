@@ -46,6 +46,7 @@ Some Javascript libraries, such as AngularJS and Sencha Touch, send preflight re
 ## Code Examples
 
 ### Express.js (Server-side)
+
 ```javascript
 const express = require('express');
 const cors = require('cors');
@@ -55,6 +56,7 @@ app.use(cors());
 ```
 
 ### Fetch API (Client-side)
+
 ```javascript
 fetch('https://api.example.com/data', {
     mode: 'cors'

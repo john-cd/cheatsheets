@@ -259,7 +259,9 @@ TypeTags can be used to determine a type used before it erased by the VM by usin
 ## Scala 3 Types
 
 ### Union Types
+
 Union types allow a value to be one of multiple types.
+
 ```scala
 def help(id: UserName | Password) =
   val user = id match
@@ -268,7 +270,9 @@ def help(id: UserName | Password) =
 ```
 
 ### Intersection Types
+
 Intersection types replace compound types (`A with B`).
+
 ```scala
 trait Resettable:
   def reset(): Unit
