@@ -3,6 +3,8 @@ title: Spark on Kubernetes
 tags: Kubernetes MiniKube Kubectl Spark
 ---
 
+# Spark on Kubernetes
+
 ## Running Spark on Kubernetes
 
 [Official Documentation](https://spark.apache.org/docs/latest/running-on-kubernetes.html)

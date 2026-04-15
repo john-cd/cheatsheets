@@ -28,3 +28,9 @@
 - Not hypervisors. They use Linux cgroups and namespaces to isolate processes.
 - They do not emulate hardware but rather share the host OS kernel.
 - Much lighter and faster startup compared to full VMs.
+
+## Example
+
+```text
+Review this cheatsheet and adapt the commands to your environment before execution.
+```

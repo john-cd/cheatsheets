@@ -52,3 +52,9 @@
 - AWS [command line interface](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-set-up.html)
 
 - [AWS toolkit for Visual Studio](https://docs.aws.amazon.com/AWSToolkitVS/latest/UserGuide/welcome.html)
+
+## Example
+
+```text
+Review this cheatsheet and adapt the commands to your environment before execution.
+```

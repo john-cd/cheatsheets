@@ -30,66 +30,66 @@
 
 ### Class specific tags
 
-``@constructor`` placed in the class comment will describe the primary constructor.
+`@constructor` placed in the class comment will describe the primary constructor.
 Method specific tags
 
-``@return`` detail the return value from a method (one per method).
+`@return` detail the return value from a method (one per method).
 Method, Constructor and/or Class tags
 
-``@throws`` what exceptions (if any) the method or constructor may throw.
+`@throws` what exceptions (if any) the method or constructor may throw.
 
-``@param`` detail a value parameter for a method or constructor, provide one per parameter to the method/constructor.
+`@param` detail a value parameter for a method or constructor, provide one per parameter to the method/constructor.
 
-``@tparam`` detail a type parameter for a method, constructor or class. Provide one per type parameter.
+`@tparam` detail a type parameter for a method, constructor or class. Provide one per type parameter.
 
 ### Usage tags
 
-``@see`` reference other sources of information like external document links or related entities in the documentation.
+`@see` reference other sources of information like external document links or related entities in the documentation.
 
-``@note`` add a note for pre or post conditions, or any other notable restrictions or expectations.
+`@note` add a note for pre or post conditions, or any other notable restrictions or expectations.
 
-``@example`` for providing example code or related example documentation.
+`@example` for providing example code or related example documentation.
 
-``@usecase`` provide a simplified method definition for when the full method definition is too complex or noisy. An example is (in the collections API), providing documentation for methods that omit the implicit canBuildFrom.
+`@usecase` provide a simplified method definition for when the full method definition is too complex or noisy. An example is (in the collections API), providing documentation for methods that omit the implicit canBuildFrom.
 
 ### Member grouping tags
 
-``@group <group>`` - mark the entity as a member of the `<group>` group.
+`@group <group>` - mark the entity as a member of the `<group>` group.
 
-``@groupname <group> <name>`` - provide an optional name for the group. `<name>` is displayed as the group header
+`@groupname <group> <name>` - provide an optional name for the group. `<name>` is displayed as the group header
 before the group description.
 
-``@groupdesc <group> <description>`` - add optional descriptive text to display under the group name. Supports multiline formatted text.
+`@groupdesc <group> <description>` - add optional descriptive text to display under the group name. Supports multiline formatted text.
 
-``@groupprio`` - control the order of the group on the page. Defaults to 0. Ungrouped elements have an implicit priority of 1000. Use a value between 0 and 999 to set a relative position to other groups. Low values will appear before high values.
+`@groupprio` - control the order of the group on the page. Defaults to 0. Ungrouped elements have an implicit priority of 1000. Use a value between 0 and 999 to set a relative position to other groups. Low values will appear before high values.
 
 ### Diagram tags
 
-``@contentDiagram`` - use with traits and classes to include a content hierarchy diagram showing included types. The diagram content can be fine tuned with additional specifiers taken from hideNodes, hideOutgoingImplicits, hideSubclasses, hideEdges, hideIncomingImplicits, hideSuperclasses and hideInheritedNode. hideDiagram can be supplied to prevent a diagram from being created if it would be created by default. Packages and objects have content diagrams by default.
+`@contentDiagram` - use with traits and classes to include a content hierarchy diagram showing included types. The diagram content can be fine tuned with additional specifiers taken from hideNodes, hideOutgoingImplicits, hideSubclasses, hideEdges, hideIncomingImplicits, hideSuperclasses and hideInheritedNode. hideDiagram can be supplied to prevent a diagram from being created if it would be created by default. Packages and objects have content diagrams by default.
 
-``@inheritanceDiagram``
+`@inheritanceDiagram`
 
 ### Other tags
 
-``@author`` provide author information for the following entity
+`@author` provide author information for the following entity
 
-``@version`` the version of the system or API that this entity is a part of.
+`@version` the version of the system or API that this entity is a part of.
 
-``@since`` like ``@version`` but defines the system or API that this entity was first defined in.
+`@since` like `@version` but defines the system or API that this entity was first defined in.
 
-``@todo`` for documenting unimplemented features or unimplemented aspects of an entity.
+`@todo` for documenting unimplemented features or unimplemented aspects of an entity.
 
-``@deprecated`` marks the entity as deprecated, providing both the replacement implementation that should be used and the version/date at which this entity was deprecated.
+`@deprecated` marks the entity as deprecated, providing both the replacement implementation that should be used and the version/date at which this entity was deprecated.
 
-``@migration`` like deprecated but provides advanced warning of planned changes ahead of deprecation. Same fields as ``@deprecated``.
+`@migration` like deprecated but provides advanced warning of planned changes ahead of deprecation. Same fields as `@deprecated`.
 
-``@inheritdoc`` take comments from a superclass as defaults if comments are not provided locally.
+`@inheritdoc` take comments from a superclass as defaults if comments are not provided locally.
 
-``@documentable`` Expand a type alias and abstract type into a full template page. - TODO: Test the “abstract type” claim - no examples of this in the Scala code base
+`@documentable` Expand a type alias and abstract type into a full template page. - TODO: Test the “abstract type” claim - no examples of this in the Scala code base
 
 ### Macros
 
-``@define <name> <definition>`` allows use of $name in other Scaladoc comments within the same source file which will be expanded to the contents of `<definition>`.
+`@define <name> <definition>` allows use of $name in other Scaladoc comments within the same source file which will be expanded to the contents of `<definition>`.
 
 ## Markup
 
@@ -109,7 +109,7 @@ before the group description.
 
 Paragraphs are started with one (or more) blank lines.
 
-``*`` in the margin for the comment is valid (and should be included) but the line should be blank otherwise.
+`*` in the margin for the comment is valid (and should be included) but the line should be blank otherwise.
 
 Code blocks are contained within {{{ this }}} and may be multi-line.
 

@@ -41,7 +41,7 @@ The problems that Pipenv seeks to solve are multi-faceted:
 
 ## Testing
 
-[Mockito]( https://mockito-python.readthedocs.io/en/latest/)
+[Mockito](https://mockito-python.readthedocs.io/en/latest/)
 
 [Code coverage measurement for Python](https://github.com/nedbat/coveragepy)
 
@@ -131,7 +131,7 @@ print(f"result: {value:10.5}" )  # width precision
 
 [async and await](https://snarky.ca/how-the-heck-does-async-await-work-in-python-3-5/)
 
-``yield from iterator``
+`yield from iterator`
 
 is equivalent
 
@@ -189,10 +189,10 @@ else:
 
 #### Async improvements - 3.6
 
-- set comprehension: ``{i async for i in agen()}``
-- list comprehension: ``[i async for i in agen()]``
-- dict comprehension: ``{i: i ** 2 async for i in agen()}``
-- generator expression: ``(i ** 2 async for i in agen())``
+- set comprehension: `{i async for i in agen()}`
+- list comprehension: `[i async for i in agen()]`
+- dict comprehension: `{i: i ** 2 async for i in agen()}`
+- generator expression: `(i ** 2 async for i in agen())`
 
 ### Type hinting
 
@@ -216,7 +216,7 @@ def retry(url: Url, retry_count: int) -> None: ...
 from typing import TypeVar, Iterable, Tuple
 ```
 
-Other common typings include: Any; Generic, Dict, List, Optional, Mapping, Set, Sequence - expressed as Sequence[int]
+Other common typings include: Any; Generic, Dict, List, Optional, Mapping, Set, Sequence - expressed as Sequence\[int\]
 
 ```python
 T = TypeVar('T', int, float, complex)  # T is either or an int, a float or a complex

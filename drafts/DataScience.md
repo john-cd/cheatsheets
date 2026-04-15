@@ -1,4 +1,3 @@
-
 # Basics
 
 [Introduction to Machine Learning](https://developers.google.com/machine-learning/crash-course/ml-intro)
@@ -17,7 +16,7 @@
 
 [Build Your Own Semantic Search Engine With Hakia's APIs - TechCrunch](https://techcrunch.com/2008/06/19/build-your-own-semenatic-search-engine-with-hakias-apis/)
 
-[How To Create Natural Language Semantic Search For Arbitrary Objects With Deep Learning]
+\[How To Create Natural Language Semantic Search For Arbitrary Objects With Deep Learning\]
 ( <https://towardsdatascience.com/semantic-code-search-3cd6d244a39c> )
 
 [Code Search on Kubeflow](https://github.com/kubeflow/examples/tree/master/code_search)

@@ -1,4 +1,3 @@
-
 # Terraform
 
 [jonmorehouse-terraform-provisioner-ansible- A provisioner for bootstrapping terraform resources with ansible](https://github.com/jonmorehouse/terraform-provisioner-ansible)

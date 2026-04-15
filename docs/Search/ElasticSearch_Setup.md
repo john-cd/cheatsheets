@@ -20,14 +20,14 @@ cd elasticsearch-<version>
 curl 'https://localhost:9200/?pretty'
 ```
 
-5. Install [Kibana](https://www.elastic.co/downloads/kibana)
+1. Install [Kibana](https://www.elastic.co/downloads/kibana)
 
-    - Open `config/kibana.yml` in an editor
-    - Set the elasticsearch.url to point at your Elasticsearch instance
-    - Run `./bin/kibana` (orbin\kibana.bat on Windows)
-    - Point your browser at [https://localhost:5601](https://localhost:5601)
+   - Open `config/kibana.yml` in an editor
+   - Set the elasticsearch.url to point at your Elasticsearch instance
+   - Run `./bin/kibana` (orbin\\kibana.bat on Windows)
+   - Point your browser at [https://localhost:5601](https://localhost:5601)
 
-6. Install [Sense](https://www.elastic.co/guide/en/elasticsearch/guide/current/running-elasticsearch.html#sense)
+2. Install [Sense](https://www.elastic.co/guide/en/elasticsearch/guide/current/running-elasticsearch.html#sense)
 
 ```bash
 ./bin/kibana plugin --install elastic/sense

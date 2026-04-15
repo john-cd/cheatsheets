@@ -5,12 +5,46 @@ on:
     branches:
       - master
       - main
+  pull_request:
+    branches:
+      - master
+      - main
 
 permissions:
   contents: write
 
 jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: 3.13
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
+      - uses: actions/cache@v5
+        with:
+          key: mkdocs-material-${{ env.cache_id }}
+          path: .cache
+          restore-keys: |
+            mkdocs-material-
+      - name: Install uv
+        uses: astral-sh/setup-uv@v7
+        with:
+          enable-cache: true
+          cache-dependency-glob: "mkdocs.yml"
+      - run: uv pip install --system mkdocs mkdocs-material mkdocs-minify-plugin mkdocs-redirects pre-commit
+      - run: pre-commit run --all-files
+      - run: python -m unittest discover -s tests -p "test_*.py"
+      - run: node --test tests/*.test.js
+      - run: mkdocs build
+
   deploy:
+    if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
+    needs: validate
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6

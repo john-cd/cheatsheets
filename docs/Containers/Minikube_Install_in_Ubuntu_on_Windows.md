@@ -35,4 +35,4 @@ Check that `kubectl` is properly configured by getting the cluster state:
 kubectl cluster-info
 ```
 
-Beware that you may have two different config files in ``~/.kube/`` and e.g. ``/mnt/c/Users/<user name>/.kube`` if you installed ``minikube`` in Windows with WSL.
+Beware that you may have two different config files in `~/.kube/` and e.g. `/mnt/c/Users/<user name>/.kube` if you installed `minikube` in Windows with WSL.

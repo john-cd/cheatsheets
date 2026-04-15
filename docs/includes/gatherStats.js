@@ -1,3 +1,17 @@
+function normalizeAddressKey(address) {
+    return (address || "").toString().toLowerCase();
+}
+
+function buildStatsAggregationPipeline(limit) {
+    var max = Number.isInteger(limit) && limit > 0 ? limit : 100000;
+    return [
+        { $group: { _id: { $toLower: "$address" }, count: { $sum: 1 } } },
+        { $sort: { "count": -1 } },
+        { $limit: max },
+        { $out: "stats" }
+    ];
+}
+
 function gatherStats() {
     var start = Date.now();
 
@@ -10,12 +24,7 @@ function gatherStats() {
     db = outputDB; // Set current database for the next aggregate step.
 
     // Create temporary collection with count.
-    inputColl.aggregate(  [
-    { $group: { _id: { $toLower: "$address" }, count: { $sum: 1 } } },
-    { $sort: { "count": -1 } },
-    { $limit: 100000 },                 // Limit to 100k addresses with highest count.
-    { $out: "stats" }
-    ],  { allowDiskUse: true } );       // Returns { _id, count } where _id is the address.
+    inputColl.aggregate(buildStatsAggregationPipeline(100000), { allowDiskUse: true }); // Returns { _id, count } where _id is the address.
 
     var statsColl = outputDB.getCollection("stats");
 
@@ -26,7 +35,7 @@ function gatherStats() {
 
     var inputCursor = inputColl.find( {}, {} );
     inputCursor.forEach( function(doc) {
-        var statDoc = statsColl.findOne( { _id: doc.address } );
+        var statDoc = statsColl.findOne( { _id: normalizeAddressKey(doc.address) } );
         if (statDoc) {
             doc.count = statDoc.count;
             outputBulk.insert(doc);
@@ -54,4 +63,10 @@ function gatherStats() {
     console.log(" | DONE | ");
 }
 
-gatherStats();
+if (typeof module !== "undefined" && module.exports) {
+    module.exports = { gatherStats, normalizeAddressKey, buildStatsAggregationPipeline };
+}
+
+if (typeof module === "undefined" || !module.parent) {
+    gatherStats();
+}

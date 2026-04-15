@@ -2,7 +2,7 @@
 
 ## Airflow
 
-[ETL principles — ETL Best Practices with Airflow]( https://gtoonstra.github.io/etl-with-airflow/principles)
+[ETL principles — ETL Best Practices with Airflow](https://gtoonstra.github.io/etl-with-airflow/principles)
 
 ## Platforms
 

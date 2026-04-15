@@ -11,3 +11,13 @@ tags: data
 [Building a Recommendation Engine- An Algorithm Tutorial - Toptal](https://www.toptal.com/algorithms/predicting-likes-inside-a-simple-recommendation-engine)
 
 [Music Recognition Algorithm- How Shazam Works - Toptal](https://www.toptal.com/algorithms/shazam-it-music-processing-fingerprinting-and-recognition)
+
+## Quick Notes
+
+- Add practical commands and examples relevant to your current stack.
+
+## Example
+
+```text
+Review this cheatsheet and adapt the commands to your environment before execution.
+```

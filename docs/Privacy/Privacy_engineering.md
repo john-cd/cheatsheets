@@ -29,3 +29,9 @@ Collect only what is strictly necessary. Strip PII (Personally Identifiable Info
 
 - **At Rest**: Transparent Data Encryption (TDE), encrypted EBS/S3 volumes.
 - **In Transit**: Enforce TLS 1.2+ for all communications.
+
+## Example
+
+```text
+Review this cheatsheet and adapt the commands to your environment before execution.
+```

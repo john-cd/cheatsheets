@@ -3,13 +3,13 @@ title: Minikube Install on Windows
 tags: Kubernetes MiniKube Kubectl
 ---
 
-# Install ``minikube`` on Windows
+# Install `minikube` on Windows
 
 [Minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/) runs a single-node Kubernetes cluster inside a VM on your laptop for users looking to try out Kubernetes or develop with it day-to-day.
 
 - For Windows, install [VirtualBox](https://www.virtualbox.org/wiki/Downloads) or Hyper-V first.
 - Minikube is distributed in binary form: [GitHub Repo](https://github.com/kubernetes/minikube/releases). Download the minikube-installer.exe file, and execute the installer. This should automatically add minikube.exe to your path with an uninstaller available as well.
-- If needed, add ``C:\Program Files (x86)\Kubernetes\minikube`` or similar to the PATH (in ``System Settings`` > ``Environment Variables``)
+- If needed, add `C:\Program Files (x86)\Kubernetes\minikube` or similar to the PATH (in `System Settings` > `Environment Variables`)
 - Test that minikube works:
 
 ```shell
@@ -18,9 +18,9 @@ minikube
 
 More info at [Getting Started](https://kubernetes.io/docs/getting-started-guides/minikube/)
 
-## Install ``kubectl``
+## Install `kubectl`
 
-Use a version of [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) that is the same version as your server or later. Using an older ``kubectl`` with a newer server might produce validation errors.
+Use a version of [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) that is the same version as your server or later. Using an older `kubectl` with a newer server might produce validation errors.
 
 On Windows 10 (using Git Bash):
 
@@ -44,11 +44,11 @@ Run kubectl version to verify that the version you’ve installed is sufficientl
 kubectl version
 ```
 
-### Configure ``kubectl``
+### Configure `kubectl`
 
-Configure ``kubectl`` to use a remote Kubernetes cluster
+Configure `kubectl` to use a remote Kubernetes cluster
 
-- If ``~/.kube`` config does not exist (it should have been created by ``minikube``), enter the following in Powershell:
+- If `~/.kube` config does not exist (it should have been created by `minikube`), enter the following in Powershell:
 
 ```shell
 cd C:\users\<yourusername>
@@ -59,7 +59,7 @@ New-Item config -type file
 
 - Edit the config file with a text editor of your choice.
 
-- Check that ``kubectl`` is properly configured by getting the cluster state:
+- Check that `kubectl` is properly configured by getting the cluster state:
 
 ```shell
 kubectl cluster-info
@@ -80,9 +80,9 @@ kubectl auth can-i edit pods
 kubectl auth can-i delete pods
 ```
 
-## Run ``kubectl`` from the Ubuntu on Windows command line
+## Run `kubectl` from the Ubuntu on Windows command line
 
-If installed by ``choco``
+If installed by `choco`
 
 ```shell
 export PATH=$PATH:/mnt/c/ProgramData/chocolatey/bin/kubectl
@@ -91,11 +91,11 @@ export PATH=$PATH:/mnt/c/ProgramData/chocolatey/bin/kubectl
 kubectl.exe
 ```
 
-## Run ``minikube``
+## Run `minikube`
 
 [Running Kubernetes Locally via Minikube](https://kubernetes.io/docs/getting-started-guides/minikube/)
 
-- Install [curl]( https://curl.haxx.se/)
+- Install [curl](https://curl.haxx.se/)
 
 ```shell
 choco install curl
@@ -160,7 +160,7 @@ minikube stop
 
 ## Install [Helm](https://helm.sh/)
 
-Helm is a package manager for Kubernetes. Download a binary release of the Helm client from [here](https://github.com/kubernetes/helm/releases)
+Helm is a package manager for Kubernetes. Download a binary release of the Helm client from the [Helm releases page](https://github.com/helm/helm/releases)
 
 - Once you have Helm ready, you can initialize the local CLI and also install Tiller into your Kubernetes cluster in one step:
 
@@ -168,7 +168,7 @@ Helm is a package manager for Kubernetes. Download a binary release of the Helm 
 helm init
 ```
 
-This will install Tiller (the helm server) into the current Kubernetes cluster (as listed in ``kubectl config current-context``).
+This will install Tiller (the helm server) into the current Kubernetes cluster (as listed in `kubectl config current-context`).
 
 - Install a test Helm chart, then clean up
 

@@ -71,7 +71,7 @@
 
 ## AWS EC2
 
-- Log onto instance with [Putty SSH]( https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-connect-to-instance-linux.html#using-putty)
+- Log onto instance with [Putty SSH](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-connect-to-instance-linux.html#using-putty)
 
 login as: ec2-user (Amazon Linux) or: ubuntu
 
@@ -96,20 +96,20 @@ Command-line s3 clients:
 
 ## Redshift
 
-1) Use Case
+1. Use Case
 
 - Large-scale SQL analytical database
 - Querying in Redshift is FAST
 - Full SQL compared to [HiveQL](https://hive.apache.org/)
 - Redshift isn’t a complete replacement for a Hadoop system (no streaming, no text processing)
 
-2) Tools
+1. Tools
 
 - install SQL [tool](https://docs.aws.amazon.com/redshift/latest/gsg/rs-gsg-prereq.html)
 - or [Aginity](https://www.aginity.com/workbench/redshift/)
 - Microsoft [SSDT](https://stackoverflow.com/questions/17323590/redshift-with-ssis-ssdt)
 
-3) Get data into Redshift:
+1. Get data into Redshift:
 
 - COPY from S3 (delimited text files)
 - COPY from DynamoDB (NoSQL datastore)
@@ -117,7 +117,7 @@ Command-line s3 clients:
 
 Tables have ‘keys’ that define how the data is split across slices. The recommended practice is to split based upon commonly-joined columns, so that joined data resides on the same slice, thus avoiding the need to move data between systems.
 
-4) Examples:
+1. Examples:
 
 ```sql
 COPY table1 FROM 's3://bucket1/' credentials 'aws_access_key_id=abc;aws_secret_access_key=xyz' delimiter '|' gzip removequotes truncatecolumns maxerror 1000

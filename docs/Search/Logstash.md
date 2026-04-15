@@ -2,9 +2,9 @@
 
 ## Operations
 
-``logstash -w 4`` to set the number of worker threads
+`logstash -w 4` to set the number of worker threads
 
-Use ``path.data`` to distribute the data on multiple (EBS) disks
+Use `path.data` to distribute the data on multiple (EBS) disks
 
 ## Outputs
 
@@ -75,7 +75,7 @@ filter {
 }
 ```
 
-### Conditionals both in ``filter`` and ``outputs``
+### Conditionals both in `filter` and `outputs`
 
 ```txt
 regexp

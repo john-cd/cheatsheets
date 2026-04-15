@@ -79,14 +79,14 @@ Emphasis can be used in the `mi\*dd\*le of a word`.
 
 `span of code`
 
-~~~txt
+````txt
 ```python
 
  def wiki_rocks(text):
   formatter = lambda t: "funky"+t
   return formatter(text)
 ```
-~~~
+````
 
 will be displayed as
 
@@ -117,12 +117,12 @@ Safe mode requires that you replace, remove, or escape HTML tags appropriately.
 
 Code highlighting to bitbucket README.md written in Python Markdown
 
- :::python
-        friends = ['john', 'pat', 'gary', 'michael']
-        for i, name in enumerate(friends):
-            print "iteration {iteration} is {name}".format(iteration=i, name=name)
+:::python
+friends = \['john', 'pat', 'gary', 'michael'\]
+for i, name in enumerate(friends):
+print "iteration {iteration} is {name}".format(iteration=i, name=name)
 
-[Python markdown main site](https://pythonhosted.org//Markdown/)
+[Python-Markdown main site](https://python-markdown.github.io/)
 
 ### Clonig Bitbucket Wiki
 

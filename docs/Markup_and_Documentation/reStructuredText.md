@@ -8,7 +8,6 @@ tags: python
 
 reStructuredText is an easy-to-read, what-you-see-is-what-you-get plaintext markup syntax and parser system. It is useful for in-line program documentation (such as Python docstrings), for quickly creating simple web pages, and for standalone documents.
 
-
 [reStructuredText](https://docutils.sourceforge.io/rst.html)
 
 [reStructuredText Quick Ref](https://docutils.sourceforge.io/docs/user/rst/quickref.html)
@@ -73,7 +72,7 @@ This is a normal text paragraph again.
 
 ## Links
 
- `Link text <https://example.com>`_ for inline web links.
+`Link text <https://example.com>`\_ for inline web links.
 
 ## Definitions
 
@@ -127,7 +126,7 @@ See <https://infinitemonkeycorps.net/docs/pph/>
 - Code can also be indicated by indenting four spaces or preceding with `::` and a blank line
 - Link to other methods, functions, classes, modules with :meth:`mymethod`,
 - :func:`myfunc`, :class:`myclass`, and :mod:`mymodule`.
-- Hyperlink names go in backticks with a trailing underscore: `Google`_
+- Hyperlink names go in backticks with a trailing underscore: `Google`\_
 - Targets can be defined anywhere with: `.. _Google: https://www.google.com/`
 
 ## Explicit Markup

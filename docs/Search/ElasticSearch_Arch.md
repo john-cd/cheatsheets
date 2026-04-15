@@ -4,15 +4,22 @@ category: search
 tags: elasticsearch
 ---
 
+# ElasticSearch Architecture and Configuration
+
 ## CONFIGURATION
 
 - config directory
+
 - yaml file
 
 - Sets the JVM heap size to 0.5 memory size. The OS will use it for file system cache
+
 - Prefer not to allocate 30GB !! --> uncompressed pointers
+
 - Never let the JVM swap    bootstrap.mlockall = true
+
 - Keep the JVM defaults
+
 - Do not use G1GC alternative garbage collector
 
 ```txt

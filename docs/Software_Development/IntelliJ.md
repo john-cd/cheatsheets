@@ -9,16 +9,24 @@ comments: true
 
 ## Shortcuts
 
-    Search Anywhere     Double Shift
-    Got to file         Ctrl + Shift + N
-    Recent files        Ctrl + E
-    Code Completion     Ctrl + Space
-    Parameters          Ctrl + P
-    Highlight usages in file            Ctrl + Shift + F7
-    Declaration of the current method   Alt + Q
-    Code Templates      Ctrl + J
+```text
+Search Anywhere     Double Shift
+Got to file         Ctrl + Shift + N
+Recent files        Ctrl + E
+Code Completion     Ctrl + Space
+Parameters          Ctrl + P
+Highlight usages in file            Ctrl + Shift + F7
+Declaration of the current method   Alt + Q
+Code Templates      Ctrl + J
+```
 
 ## Links
 
 - [Official Documentation](https://www.jetbrains.com/help/idea/)
 - [Keymaps](https://www.jetbrains.com/help/idea/mastering-keyboard-shortcuts.html)
+
+## Example
+
+```text
+Review this cheatsheet and adapt the commands to your environment before execution.
+```

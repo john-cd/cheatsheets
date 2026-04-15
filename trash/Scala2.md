@@ -110,18 +110,18 @@ Abstraction over structural recursion
 -> Convert user to JSON
 
 map
-F[A] => (A => B) => F[B]
--> Get user from database (might not be a user): Result[User] -> Get order for user (might not be an order): User => Result[Order]
+F\[A\] => (A => B) => F\[B\]
+-> Get user from database (might not be a user): Result\[User\] -> Get order for user (might not be an order): User => Result\[Order\]
 
 flatMap
-F[A] => (A => F[B]) => F[B]
--> Get user by id: UserId => Result[User] -> Get user’s order: User => Result[Order] -> Transform order to JSON: (Order => Json) => Result[Json] -> Send JSON: Result[Json] => Response
+F\[A\] => (A => F\[B\]) => F\[B\]
+-> Get user by id: UserId => Result\[User\] -> Get user’s order: User => Result\[Order\] -> Transform order to JSON: (Order => Json) => Result\[Json\] -> Send JSON: Result\[Json\] => Response
 
 Summary
 Standard patterns for sequencing computations
 fold is general transformation for algebraic data types
-map: F[A] => (A => B) => F[B]
-flatMap: F[A] => (A => F[B]) => F[B]
+map: F\[A\] => (A => B) => F\[B\]
+flatMap: F\[A\] => (A => F\[B\]) => F\[B\]
 
 // fold: A => B
 
@@ -140,20 +140,20 @@ case class Success[A](value: A) extends Result[A]
 case class Failure[A]() extends Result[A]
 ```
 
-// map: F[A] => (A => B) => F[B]
+// map: F\[A\] => (A => B) => F\[B\]
 
-// Get user from database (might not be a user): Result[User]
-def getUser(id: Long): Result[User]
-// Get order for user (might not be an order): User => Result[Order]
-def getOrder(user: User): Result[Order]
+// Get user from database (might not be a user): Result\[User\]
+def getUser(id: Long): Result\[User\]
+// Get order for user (might not be an order): User => Result\[Order\]
+def getOrder(user: User): Result\[Order\]
 
-val order: Result[Order] =
-  getUser(12) // Result[User]
-    .flatMap(getOrder) // User => Result[Order]
+val order: Result\[Order\] =
+getUser(12) // Result\[User\]
+.flatMap(getOrder) // User => Result\[Order\]
 
-// flatMap: F[A] => (A => F[B]) => F[B]
+// flatMap: F\[A\] => (A => F\[B\]) => F\[B\]
 
-// Get user by id: UserId => Result[User]
-// Get user's order: User => Result[Order]
-// Transform order to JSON: (Order => Json) => Result[Json]
-// Send JSON: Result[Json] => Response
+// Get user by id: UserId => Result\[User\]
+// Get user's order: User => Result\[Order\]
+// Transform order to JSON: (Order => Json) => Result\[Json\]
+// Send JSON: Result\[Json\] => Response

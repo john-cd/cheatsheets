@@ -5,6 +5,8 @@ tags: .NET C# ASP.NET
 comments: true
 ---
 
+# ASP.NET Core app
+
 ## Using Yeoman to generate a ASP.NET Core app from a template
 
 ### Install Node.js and npm

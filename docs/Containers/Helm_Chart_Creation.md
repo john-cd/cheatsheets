@@ -27,7 +27,7 @@ helm install <release-name> <chart-name> --dry-run --debug
 
 ## Create dependencies between charts
 
-Create ``requirements.yaml``
+Create `requirements.yaml`
 
 Add a remote repo
 

@@ -67,7 +67,7 @@ val clickstreamDF = spark.read.format("csv")
   .load("dbfs:///databricks-datasets/wikipedia-datasets/data-001/clickstream/raw-uncompressed")
 ```
 
-PARQUET - To create Dataset[Row] using SparkSession
+PARQUET - To create Dataset\[Row\] using SparkSession
 
 ```scala
 val people = spark.read.parquet("...")

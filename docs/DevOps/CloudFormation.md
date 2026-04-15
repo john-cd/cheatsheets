@@ -1,8 +1,10 @@
 ---
-title:  CloudFormation Basics
+title: CloudFormation Basics
 category: devops
 tags: AWS
 ---
+
+# CloudFormation Basics
 
 ## DevOps Philosophy
 
