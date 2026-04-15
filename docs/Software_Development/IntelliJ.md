@@ -17,3 +17,7 @@ comments: true
     Highlight usages in file            Ctrl + Shift + F7
     Declaration of the current method   Alt + Q
     Code Templates      Ctrl + J
+
+## Links
+- [Official Documentation](https://www.jetbrains.com/help/idea/)
+- [Keymaps](https://www.jetbrains.com/help/idea/mastering-keyboard-shortcuts.html)

@@ -45,12 +45,36 @@ target                   → Generated stuff
  └ universal             → Application packaging
  └ web                   → Compiled web assets
 test                     → source folder for unit or functional tests
+
+## Controllers
+
+In modern Play applications, controllers are standard classes that use dependency injection. They typically extend `BaseController` (or `AbstractController`) and require `ControllerComponents` to be injected.
+
+```scala
+package controllers
+
+import javax.inject._
+import play.api.mvc._
+
+/**
+ * A modern, dependency-injected controller.
+ */
+@Singleton
+class HomeController @Inject()(val controllerComponents: ControllerComponents) extends BaseController {
+
+  /**
+   * Action for the index route (e.g., GET /)
+   */
+  def index(): Action[AnyContent] = Action { implicit request: Request[AnyContent] =>
+    Ok("Hello, world!")
+    // To render a Twirl template: Ok(views.html.index("Welcome!"))
+  }
+
+  def show(id: Long): Action[AnyContent] = Action { implicit request: Request[AnyContent] =>
+    Ok(s"Showing item details for ID: $id")
+  }
+}
 ```
-
-## Play 3.x
-Play 3.0 uses Apache Pekko instead of Akka.
-
-[Play Framework Documentation](https://www.playframework.com/documentation/3.0.x/Home)
 
 ## Play
 

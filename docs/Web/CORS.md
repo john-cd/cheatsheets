@@ -42,3 +42,21 @@ Some Javascript libraries, such as AngularJS and Sencha Touch, send preflight re
 ## API Gateway and CORS
 
 [How to CORS (AWS)](https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-cors.html)
+
+## Code Examples
+
+### Express.js (Server-side)
+```javascript
+const express = require('express');
+const cors = require('cors');
+const app = express();
+
+app.use(cors());
+```
+
+### Fetch API (Client-side)
+```javascript
+fetch('https://api.example.com/data', {
+    mode: 'cors'
+});
+```

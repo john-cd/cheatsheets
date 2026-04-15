@@ -115,3 +115,9 @@ comments: true
 - [Cygwin](https://www.cygwin.com/)
 - [Log Tail]( https://www.log-expert.de/)
 - [Diff - WinMerge](https://winmerge.org/)
+
+### CLI Tools
+```bash
+grep -ri "search_term" .
+curl -I https://example.com
+```

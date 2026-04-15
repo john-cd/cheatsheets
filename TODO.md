@@ -1,6 +1,6 @@
 # TODO
 
-## Plan for moving to Zola + Rust
+## Plan for moving to Zola + Rust ??
 
 1. **Install Zola:** Download via `brew install zola` or directly from the GitHub releases page.
 2. **Initialize a new Zola site:** Run `zola init site` to create the project structure.

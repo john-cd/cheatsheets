@@ -51,11 +51,13 @@ on the JVM.
 ## Modern Java Features (Java 17 / 21)
 
 ### Records
+
 ```java
 public record User(String name, int age) {}
 ```
 
 ### Pattern Matching for switch (Java 21)
+
 ```java
 static String formatterPatternSwitch(Object obj) {
     return switch (obj) {
@@ -69,6 +71,7 @@ static String formatterPatternSwitch(Object obj) {
 ```
 
 ### Text Blocks
+
 ```java
 String html = """
               <html>
@@ -78,6 +81,7 @@ String html = """
               </html>
               """;
 ```
+
 ## Java
 
 [Spock](https://spockframework.org/)
