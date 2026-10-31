@@ -5,7 +5,7 @@
 
 ARG WORK_DIR="/code"
 
-ARG PYTHON_VERSION=3.13
+ARG PYTHON_VERSION=3.15
 FROM python:${PYTHON_VERSION}-slim as base
 
 # Prevents Python from writing pyc files.
