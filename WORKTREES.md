@@ -31,9 +31,6 @@ it. `CODE_PYTHON_ENV_ROOT`, `CODE_PYTHON_BUILD_ROOT`, and
 `CODE_PYTHON_OUTPUT_ROOT` select external per-project/per-worktree locations.
 See the README for this repository's project paths and commands.
 
-## Configuration alignment checkout
+## Current state
 
-The `codex/config-homogeneity` branch uses `.worktrees/a` for this review.
-The primary checkout stays on `develop`; existing edits and detached work are preserved.
-See [CONFIGURATION.md](CONFIGURATION.md) for output setup and validation evidence.
-Use `git worktree list --porcelain` for current ownership and paths.
+The 2026-11-01 configuration alignment was integrated into develop; no dedicated alignment worktree remains. Use git worktree list --porcelain and git status --short for live ownership and cleanliness.
