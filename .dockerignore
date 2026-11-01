@@ -34,17 +34,24 @@ site/
 LICENSE
 README.md
 
-# Local outputs, caches, and linked worktrees
-/build/
-/target/
-/.sccache
+# Repository metadata and worktree state
+.git/
+**/.git/
 /.worktrees/
+**/.worktrees/
+
+# Python caches and environments
 **/__pycache__/
 **/.venv/
 **/.ruff_cache/
 **/.pytest_cache/
-.git/
-.env
-.env.*
-!.env.example
-!.env.*.example
+**/.ipynb_checkpoints/
+
+# CI runner output
+/.ci/
+**/.ci/
+
+# Secrets and local environment files
+**/.env.*
+!/.env.example
+!**/.env.example

@@ -293,12 +293,23 @@ nohup.out
 site/
 .cache/
 
-# Local outputs, caches, and linked worktrees
-/build/
-/target/
-/.sccache
+# Repository-local outputs and generated files
 /.worktrees/
+**/.worktrees/
+/.ci/
+**/.ci/
+/build/
+**/build/
 **/__pycache__/
 **/.venv/
 **/.ruff_cache/
 **/.pytest_cache/
+**/.ipynb_checkpoints/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Local credentials and environment files
+.env.*
+!.env.example
+!.env.*.example

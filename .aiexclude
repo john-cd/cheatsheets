@@ -1,16 +1,32 @@
-
-
-# Local outputs, caches, and linked worktrees
-/build/
-/target/
-/.sccache
-/.worktrees/
+# Generated artifacts, caches, and local machine state
 **/__pycache__/
 **/.venv/
 **/.ruff_cache/
 **/.pytest_cache/
+**/.ipynb_checkpoints/
+**/*.py[cod]
+
+# Repository metadata and worktree state
 .git/
+/.worktrees/
+**/.worktrees/
+
+# Editor and operating-system state
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# CI runner output
+/.ci/
+**/.ci/
+
+# Local credentials and environment files
 .env
 .env.*
 !.env.example
 !.env.*.example
+*.key
+*.pem
