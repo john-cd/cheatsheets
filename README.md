@@ -65,7 +65,7 @@ Consult Docker's [getting started](https://docs.docker.com/go/get-started-sharin
 ## Central build outputs and worktrees
 
 - Keep auxiliary Git worktrees under .worktrees/ and name them with one lowercase letter from a through j. A through j are reserved here.
-- Windows: target outputs go to D:/target/cheatsheets/slot and intermediate build outputs go to C:/code_build/cheatsheets/slot. C: is NTFS; D: is ReFS.
+- Windows: target outputs go to CODE_TARGET_ROOT/cheatsheets/<slot> and intermediate build outputs go to CODE_BUILD_ROOT/cheatsheets/slot. Keep CODE_BUILD_ROOT on an NTFS volume; do not use a ReFS volume for builds.
 - Linux/macOS: target outputs go to the XDG cache folder (or ~/.cache) under cargo-target/cheatsheets/<slot>; intermediate outputs go under cargo-build/cheatsheets/<slot>.
 - This repository has no Cargo workspace, so it has no Cargo target directory or sccache base directory.
 - No Cargo workspace or sccache configuration is present.

@@ -27,7 +27,7 @@ gradle -v
 Create a gradle project (for Java)
 
 ```bash
-cd /mnt/d/code/gradle
+cd "$CODE_REPOS_ROOT/gradle"
 gradle init --type java-application
 ```
 
