@@ -26,6 +26,6 @@ hooks = [
 [[repos]]
 repo = "local"
 hooks = [
-    { id = "ruff-check", name = "Ruff check", entry = "python scripts/dev_env.py uv run ruff check .", language = "system", types = ["python"], pass_filenames = false },
-    { id = "ruff-format", name = "Ruff format", entry = "python scripts/dev_env.py uv run ruff format --check .", language = "system", types = ["python"], pass_filenames = false },
+    { id = "ruff-check", name = "Ruff check", entry = "just lint", language = "system", types = ["python"], pass_filenames = false },
+    { id = "ruff-format", name = "Ruff format", entry = "just fmt-check", language = "system", types = ["python"], pass_filenames = false },
 ]

@@ -17,6 +17,11 @@ jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
+      - name: Install Just
+        # taiki-e/install-action v2.87.30
+        uses: taiki-e/install-action@a4d3f3f761dcd95cce1b72cb61cb6d1963438177
+        with:
+          tool: just@1.59.0
       - uses: actions/checkout@v7
       - uses: actions/setup-python@v7
         with:
@@ -26,18 +31,23 @@ jobs:
           node-version: 22
       - name: Install uv
         uses: astral-sh/setup-uv@v7
-      - run: python scripts/dev_env.py uv sync --locked
-      - run: python scripts/dev_env.py uv tool install prek
-      - run: python scripts/dev_env.py prek run --all-files
-      - run: python scripts/dev_env.py uv run python -m unittest discover -s tests -p "test_*.py"
+      - run: just sync
+      - run: just uv tool install prek
+      - run: just hooks
+      - run: just test
       - run: node --test tests/*.test.js
-      - run: python scripts/dev_env.py uv run mkdocs build
+      - run: just docs
 
   deploy:
     if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
     needs: validate
     runs-on: ubuntu-latest
     steps:
+      - name: Install Just
+        # taiki-e/install-action v2.87.30
+        uses: taiki-e/install-action@a4d3f3f761dcd95cce1b72cb61cb6d1963438177
+        with:
+          tool: just@1.59.0
       - uses: actions/checkout@v7
       - name: Configure Git Credentials
         run: |
@@ -48,5 +58,5 @@ jobs:
           python-version-file: .python-version
       - name: Install uv
         uses: astral-sh/setup-uv@v7
-      - run: python scripts/dev_env.py uv sync --locked
-      - run: python scripts/dev_env.py uv run mkdocs gh-deploy --force
+      - run: just sync
+      - run: just uv run mkdocs gh-deploy --force

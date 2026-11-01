@@ -9,6 +9,8 @@ on:
       - 'pyproject.toml'
       - 'uv.lock'
       - '.python-version'
+      - 'justfile'
+      - 'scripts/env.just'
   pull_request:
     branches: [ main, master ]
     paths:
@@ -18,11 +20,16 @@ jobs:
   prek:
     runs-on: ubuntu-latest
     steps:
+      - name: Install Just
+        # taiki-e/install-action v2.87.30
+        uses: taiki-e/install-action@a4d3f3f761dcd95cce1b72cb61cb6d1963438177
+        with:
+          tool: just@1.59.0
       - uses: actions/checkout@v7
       - uses: actions/setup-python@v7
         with:
           python-version-file: .python-version
       - uses: astral-sh/setup-uv@v7
-      - run: python scripts/dev_env.py uv sync --locked
-      - run: python scripts/dev_env.py uv tool install prek
-      - run: python scripts/dev_env.py prek run --all-files
+      - run: just sync
+      - run: just uv tool install prek
+      - run: just hooks
