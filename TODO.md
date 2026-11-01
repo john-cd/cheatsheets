@@ -2,23 +2,6 @@
 
 GitHub Issues are currently disabled for this repository, so this file is the authoritative backlog for the remaining follow-up tasks.
 
-## Completed in this pass
-
-- [x] Reviewed repository structure, automation, cheatsheets, and code artifacts.
-- [x] Fixed `markdown-link-check` hook configuration in `prek.toml` (`v3.14.2` tag format).
-- [x] Fixed markdown-link-check JSON config to avoid runtime crashes.
-- [x] Updated CI platform/tooling versions:
-  - [x] `actions/checkout` updated to `v6` in markdown lint workflow.
-  - [x] `actions/setup-python` updated to `v6` in markdown lint workflow.
-  - [x] Python version bumped from `3.12` to `3.13` in markdown lint workflow.
-  - [x] Added PR validation flow in CI with Python + Node setup.
-- [x] Added automated tests outside cheatsheet pages:
-  - [x] `tests/test_docs_quality.py` for docs structure/quality checks.
-  - [x] `tests/gatherStats.test.js` for `docs/includes/gatherStats.js`.
-- [x] Improved all cheatsheets missing key structure by adding headings/sections/examples where needed.
-- [x] Refreshed known outdated links in cheatsheets (Java, Scala and related references).
-- [x] Fixed an address normalization bug in `gatherStats.js` and made helper logic testable.
-
 ## Follow-up fixes and suggestions
 
 - [ ] Replace remaining legacy/outdated external references that are still reachable but suboptimal.
@@ -36,6 +19,7 @@ GitHub Issues are currently disabled for this repository, so this file is the au
 - [ ] Kubernetes Security (PSA/PSS, RBAC patterns, network policies)
 - [ ] FinOps for Cloud Workloads
 - [ ] Incident Response and Postmortems
+
 ## Configuration alignment (2026-11-01)
 
 The configuration-alignment work is integrated into `develop` in focused commits.
@@ -54,8 +38,6 @@ Ruff formatting completed locally; finish lint and CI evidence without pulling t
 - [ ] Run the owning Just/Cargo Make format and read-only lint commands. Record exact scope, platform, versions, and remaining failures; fix causes rather than applying unsafe blanket fixes or claiming skipped hooks passed.
 - [ ] Keep `AGENTS.md`, `CONTRIBUTING.md` where present, `README.md`, `CONFIGURATION.md`, `TODO.md`, and `WORKTREES.md` consistent with the final commands and exceptions.
 
-
-
 Validation: repository format/lint recipes, relevant `prek` hooks, configuration parsing, and `git diff --check`. Pure formatting changes do not require unrelated application test suites.
 
 ### [P2] Complete dependency-update coverage and consistent CI caching
@@ -70,7 +52,7 @@ Dependency-update roots and caching conventions differ across the repositories. 
 - `devcontainers`: `/`
 - `github-actions`: `/`
 
-#### Acceptance criteria
+### Acceptance criteria
 
 - [ ] Verify these roots against tracked manifests, independent workspaces, Python/uv projects, nested local actions, Dockerfiles/Compose files, devcontainers, charts, submodules, and supported toolchain files. Add omissions; keep immutable/malformed test fixtures intentionally excluded and documented.
 - [ ] Validate Dependabot syntax and ecosystem/directory rules. Preserve repository-specific ignores/registries; avoid overlapping updates and replace pip coverage with uv where lock ownership requires it. Do not assume custom shell/version-pin strings are automatically updated.
@@ -78,7 +60,5 @@ Dependency-update roots and caching conventions differ across the repositories. 
 - [ ] Review all workflow/composite-action references and supported inputs with actionlint and relevant security checks. Keep toolchain, container, Python, formatter, and workflow pins compatible; verify Docker COPY contexts retain required source/configuration and omit local outputs/cache links.
 - [ ] Exercise applicable hosted Linux/Windows/macOS jobs and container builds when prerequisites are available. Report unavailable CI/services/credentials explicitly, and fix failures in focused commits.
 - [ ] Synchronize `.github` workflow documentation, `CONFIGURATION.md`, README/contributor guidance, TODO, and worktree notes with verified behavior.
-
-
 
 Do not close on YAML parsing alone: attach command results and hosted-run evidence, or keep unmet criteria open. Existing shipping/security/test policies should be preserved unless a reviewed fix requires a change.
