@@ -3,7 +3,7 @@ version: 2
 updates:
   - package-ecosystem: uv
     schedule:
-      interval: weekly
+      interval: monthly
       day: monday
       time: 06:00
       timezone: America/Los_Angeles
@@ -18,7 +18,7 @@ updates:
           - patch
   - package-ecosystem: docker
     schedule:
-      interval: weekly
+      interval: monthly
       day: monday
       time: 06:00
       timezone: America/Los_Angeles
@@ -34,7 +34,7 @@ updates:
   - package-ecosystem: docker-compose
     directory: /.devcontainer
     schedule:
-      interval: weekly
+      interval: monthly
       day: monday
       time: 06:00
       timezone: America/Los_Angeles
@@ -48,7 +48,7 @@ updates:
           - patch
   - package-ecosystem: devcontainers
     schedule:
-      interval: weekly
+      interval: monthly
       day: monday
       time: 06:00
       timezone: America/Los_Angeles
@@ -63,7 +63,7 @@ updates:
           - patch
   - package-ecosystem: github-actions
     schedule:
-      interval: weekly
+      interval: monthly
       day: monday
       time: 06:00
       timezone: America/Los_Angeles
