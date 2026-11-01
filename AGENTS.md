@@ -1,5 +1,9 @@
 # cheatsheets agent instructions
 
+## Communication
+
+- Keep answers concise, use American spelling, use Unix-style line endings.
+
 ## Python environments and output paths
 
 - Keep auxiliary worktrees under `.worktrees/`, named with one lowercase letter from `a` through `j`. Keep the main worktree on the configured integration branch.
@@ -36,3 +40,9 @@ Windows drive paths elsewhere in this file are defaults. Set a root variable to 
 - Preserve unique commits on named branches before moving a detached checkout. Keep history linear, squash unpublished related changes, and never rewrite published history without explicit authorization.
 - Use `CODE_TEMP_ROOT` for Windows temp files: `D:/temp` when available, otherwise `C:/temp`. Unix uses its native `TMPDIR` or `/tmp`.
 - Use `CODE_PACKAGES_ROOT` for package data (Windows `D:/packages`) and `CODE_TOOLS_ROOT` for portable tools (Windows `C:/tools`). Existing tool-specific environment overrides take precedence; changing a root does not move installed packages.
+
+## Configuration consistency
+
+Follow [CONFIGURATION.md](CONFIGURATION.md) when changing repository tooling. Use American
+spelling and LF line endings; keep README, contributor instructions, and configuration comments
+synchronized. Preserve documented platform, domain, and teaching-example exceptions.
