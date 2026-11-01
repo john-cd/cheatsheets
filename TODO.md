@@ -1,6 +1,6 @@
 # TODO
 
-Current work is tracked in [GitHub Issues](https://github.com/john-cd/cheatsheets/issues); this file keeps offline follow-up notes.
+GitHub Issues are currently disabled for this repository, so this file is the authoritative backlog for the remaining follow-up tasks.
 
 ## Completed in this pass
 
