@@ -2,7 +2,7 @@ name: Prek checks
 
 on:
   push:
-    branches: [ main, master ]
+    branches: [main, master]
     paths:
       - '**.md'
       - 'prek.toml'
@@ -12,7 +12,7 @@ on:
       - 'justfile'
       - 'scripts/env.just'
   pull_request:
-    branches: [ main, master ]
+    branches: [main, master]
     paths:
       - '**.md'
 
@@ -30,6 +30,9 @@ jobs:
         with:
           python-version-file: .python-version
       - uses: astral-sh/setup-uv@v7
+        with:
+          enable-cache: true
+          cache-dependency-glob: '**/uv.lock'
       - run: just sync
       - run: just uv tool install prek
       - run: just hooks

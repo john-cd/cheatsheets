@@ -31,6 +31,9 @@ jobs:
           node-version: 22
       - name: Install uv
         uses: astral-sh/setup-uv@v7
+        with:
+          enable-cache: true
+          cache-dependency-glob: '**/uv.lock'
       - run: just sync
       - run: just uv tool install prek
       - run: just hooks
@@ -58,5 +61,8 @@ jobs:
           python-version-file: .python-version
       - name: Install uv
         uses: astral-sh/setup-uv@v7
+        with:
+          enable-cache: true
+          cache-dependency-glob: '**/uv.lock'
       - run: just sync
       - run: just uv run mkdocs gh-deploy --force
