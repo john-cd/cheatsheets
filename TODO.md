@@ -3,7 +3,7 @@
 ## Completed in this pass
 
 - [x] Reviewed repository structure, automation, cheatsheets, and code artifacts.
-- [x] Fixed pre-commit hook configuration for `markdown-link-check` (`v3.14.2` tag format).
+- [x] Fixed `markdown-link-check` hook configuration in `prek.toml` (`v3.14.2` tag format).
 - [x] Fixed markdown-link-check JSON config to avoid runtime crashes.
 - [x] Updated CI platform/tooling versions:
   - [x] `actions/checkout` updated to `v6` in markdown lint workflow.

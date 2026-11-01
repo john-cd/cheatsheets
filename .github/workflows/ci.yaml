@@ -17,36 +17,37 @@ jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
+      - name: Install Just
+        # taiki-e/install-action v2.87.30
+        uses: taiki-e/install-action@a4d3f3f761dcd95cce1b72cb61cb6d1963438177
+        with:
+          tool: just@1.59.0
       - uses: actions/checkout@v7
       - uses: actions/setup-python@v7
         with:
-          python-version: 3.13
+          python-version-file: .python-version
       - uses: actions/setup-node@v7
         with:
           node-version: 22
-      - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
-      - uses: actions/cache@v6
-        with:
-          key: mkdocs-material-${{ env.cache_id }}
-          path: .cache
-          restore-keys: |
-            mkdocs-material-
       - name: Install uv
         uses: astral-sh/setup-uv@v7
-        with:
-          enable-cache: true
-          cache-dependency-glob: "mkdocs.yml"
-      - run: uv pip install --system mkdocs mkdocs-material mkdocs-minify-plugin mkdocs-redirects pre-commit
-      - run: pre-commit run --all-files
-      - run: python -m unittest discover -s tests -p "test_*.py"
+      - run: just sync
+      - run: just uv tool install prek
+      - run: just hooks
+      - run: just test
       - run: node --test tests/*.test.js
-      - run: mkdocs build
+      - run: just docs
 
   deploy:
     if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
     needs: validate
     runs-on: ubuntu-latest
     steps:
+      - name: Install Just
+        # taiki-e/install-action v2.87.30
+        uses: taiki-e/install-action@a4d3f3f761dcd95cce1b72cb61cb6d1963438177
+        with:
+          tool: just@1.59.0
       - uses: actions/checkout@v7
       - name: Configure Git Credentials
         run: |
@@ -54,18 +55,8 @@ jobs:
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
       - uses: actions/setup-python@v7
         with:
-          python-version: 3.15
-      - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
-      - uses: actions/cache@v6
-        with:
-          key: mkdocs-material-${{ env.cache_id }}
-          path: .cache
-          restore-keys: |
-            mkdocs-material-
+          python-version-file: .python-version
       - name: Install uv
         uses: astral-sh/setup-uv@v7
-        with:
-          enable-cache: true
-          cache-dependency-glob: "mkdocs.yml"
-      - run: uv pip install --system mkdocs-material
-      - run: mkdocs gh-deploy --force
+      - run: just sync
+      - run: just uv run mkdocs gh-deploy --force

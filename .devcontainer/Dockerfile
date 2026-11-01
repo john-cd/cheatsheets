@@ -16,14 +16,15 @@ ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
-
-RUN uv pip install --system mkdocs \
-    mkdocs-material \
-    mkdocs-minify-plugin \
-    mkdocs-redirects
+COPY --from=ghcr.io/casey/just:1.59.0 /just /usr/local/bin/just
 
 ARG WORK_DIR
 WORKDIR $WORK_DIR
+
+# Resolve the locked project environment outside the repository checkout.
+COPY pyproject.toml uv.lock justfile ./
+COPY scripts/env.just scripts/env.just
+RUN just uv sync --locked
 
 ## -------------------------------------------------------------
 FROM base AS dev
@@ -87,6 +88,6 @@ FROM base AS ci
 COPY . .
 
 ARG WORK_DIR
-RUN rm -rf $WORK_DIR/site/ && mkdocs build
+RUN just uv run mkdocs build
 
 #CMD [ "ci.sh" ]
