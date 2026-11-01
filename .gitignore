@@ -313,3 +313,4 @@ site/
 .env.*
 !.env.example
 !.env.*.example
+!.devcontainer/.env

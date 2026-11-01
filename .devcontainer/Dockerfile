@@ -5,7 +5,7 @@
 
 ARG WORK_DIR="/code"
 
-ARG PYTHON_VERSION=3.15
+ARG PYTHON_VERSION
 FROM python:${PYTHON_VERSION}-slim as base
 
 # Prevents Python from writing pyc files.
@@ -15,8 +15,10 @@ ENV PYTHONDONTWRITEBYTECODE=1
 # the application crashes without emitting any logs due to buffering.
 ENV PYTHONUNBUFFERED=1
 
-COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
-COPY --from=ghcr.io/casey/just:1.59.0 /just /usr/local/bin/just
+ARG UV_VERSION
+ARG JUST_VERSION
+COPY --from=ghcr.io/astral-sh/uv:${UV_VERSION} /uv /uvx /bin/
+COPY --from=ghcr.io/casey/just:${JUST_VERSION} /just /usr/local/bin/just
 
 ARG WORK_DIR
 WORKDIR $WORK_DIR

@@ -12,3 +12,7 @@ services:
     build:
       context: ..
       dockerfile: .devcontainer/Dockerfile
+      args:
+        PYTHON_VERSION: ${PYTHON_VERSION:?Set PYTHON_VERSION in .devcontainer/.env}
+        UV_VERSION: ${UV_VERSION:?Set UV_VERSION in .devcontainer/.env}
+        JUST_VERSION: ${JUST_VERSION:?Set JUST_VERSION in .devcontainer/.env}
