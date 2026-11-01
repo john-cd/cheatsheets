@@ -82,14 +82,10 @@ kubectl auth can-i delete pods
 
 ## Run `kubectl` from the Ubuntu on Windows command line
 
-If installed by `choco`
-
-```shell
-export PATH=$PATH:/mnt/c/ProgramData/chocolatey/bin/kubectl
-
-# then use:
-kubectl.exe
-```
+For routine work, install and use a Linux-native `kubectl` inside WSL so the
+binary, kubeconfig, and working files stay on the Linux filesystem. Avoid
+adding Windows-hosted package executables to the WSL `PATH`; only cross that
+filesystem boundary when you must use an existing Windows installation.
 
 ## Run `minikube`
 
