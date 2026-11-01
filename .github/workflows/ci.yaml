@@ -3,12 +3,12 @@ name: ci
 on:
   push:
     branches:
-      - master
       - main
+      - develop
   pull_request:
     branches:
-      - master
       - main
+      - develop
 
 permissions:
   contents: write
@@ -42,7 +42,7 @@ jobs:
       - run: just docs
 
   deploy:
-    if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
+    if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/develop')
     needs: validate
     runs-on: ubuntu-latest
     steps:

@@ -1,5 +1,7 @@
 # TODO
 
+Current work is tracked in [GitHub Issues](https://github.com/john-cd/cheatsheets/issues); this file keeps offline follow-up notes.
+
 ## Completed in this pass
 
 - [x] Reviewed repository structure, automation, cheatsheets, and code artifacts.
