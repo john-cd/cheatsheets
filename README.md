@@ -106,3 +106,8 @@ Storage roots are configurable through `CODE_REPOS_ROOT`, `CODE_TEMP_ROOT`,
 Unix uses native home/cache/temp paths. A root override changes destinations;
 it does not move existing installations. Use `CODE_PYTHON_ENV_ROOT`,
 `CODE_PYTHON_BUILD_ROOT`, and `CODE_PYTHON_OUTPUT_ROOT` for Python-specific paths.
+
+## Repository configuration
+
+See [CONFIGURATION.md](CONFIGURATION.md) for shared formatting, lint, dependency-update,
+build-profile, cache, linker, and editor conventions. Keep it synchronized with configuration changes.

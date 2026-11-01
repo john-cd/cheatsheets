@@ -1,6 +1,6 @@
 # Worktrees
 
-Updated 2026-10-31 (America/Los_Angeles). This file describes the managed layout;
+Updated 2026-11-01 (America/Los_Angeles). This file describes the managed layout;
 use `git worktree list --porcelain` and `git status --short` for live state.
 
 - The primary checkout stays on `develop` and uses cache slot `main`.
@@ -30,3 +30,10 @@ the environment directly. Run `just --justfile <project>/justfile env` to inspec
 it. `CODE_PYTHON_ENV_ROOT`, `CODE_PYTHON_BUILD_ROOT`, and
 `CODE_PYTHON_OUTPUT_ROOT` select external per-project/per-worktree locations.
 See the README for this repository's project paths and commands.
+
+## Configuration alignment checkout
+
+The `codex/config-homogeneity` branch uses `.worktrees/a` for this review.
+The primary checkout stays on `develop`; existing edits and detached work are preserved.
+See [CONFIGURATION.md](CONFIGURATION.md) for output setup and validation evidence.
+Use `git worktree list --porcelain` for current ownership and paths.
