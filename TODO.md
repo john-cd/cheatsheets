@@ -38,9 +38,7 @@ GitHub Issues are currently disabled for this repository, so this file is the au
 - [ ] Incident Response and Postmortems
 ## Configuration alignment (2026-11-01)
 
-Implementation is paused. Focused editor/ignore and applicable formatting commits are on
-`codex/config-homogeneity`; build/profile, CI, and documentation edits remain under review.
-See `WORKTREES.md` for the checkout slot. No branch has been pushed.
+The configuration-alignment work is integrated into `develop` in focused commits.
 
 GitHub Issues is disabled for this repository, so the remaining tasks are recorded here.
 
