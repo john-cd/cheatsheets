@@ -32,7 +32,7 @@ def _storage_roots() -> dict[str, Path]:
             "CODE_PYTHON_ENV_ROOT": Path("D:/packages/uv/environments"),
             "CODE_PYTHON_BUILD_ROOT": temp_root / "python-build",
             "CODE_PYTHON_OUTPUT_ROOT": temp_root / "python-output",
-            "CODE_TOOLS_ROOT": Path("D:/tools"),
+            "CODE_TOOLS_ROOT": Path("C:/tools"),
         }
     else:
         temp_default = Path(os.environ.get("TMPDIR") or "/tmp")
@@ -95,8 +95,8 @@ def _prepare_environment(
     python_env_root = roots["CODE_PYTHON_ENV_ROOT"]
 
     env["UV_CACHE_DIR"] = str(package_root / "uv" / "cache")
-    env["UV_PYTHON_INSTALL_DIR"] = str(package_root / "uv" / "python")
-    env["UV_TOOL_DIR"] = str(package_root / "uv" / "tools")
+    env["UV_PYTHON_INSTALL_DIR"] = str(tools_root / "uv" / "python")
+    env["UV_TOOL_DIR"] = str(tools_root / "uv" / "tools")
     env["UV_TOOL_BIN_DIR"] = str(tools_root / "uv" / "bin")
     env["UV_LINK_MODE"] = "copy"
     # Each repo, Python project, and worktree gets its own environment. This

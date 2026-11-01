@@ -5,7 +5,7 @@
 - Keep auxiliary worktrees under `.worktrees/`, named with one lowercase letter from `a` through `j`. Keep the main worktree on the configured integration branch.
 - Keep Python environments, build caches, and generated outputs outside the repository. Use `CODE_PYTHON_ENV_ROOT`, `CODE_PYTHON_BUILD_ROOT`, and `CODE_PYTHON_OUTPUT_ROOT`; the helper assigns repository/project/worktree-specific subdirectories.
 - Use the committed `uv.lock` and `.python-version`. Run Python commands through `python scripts/dev_env.py`: `env`, `uv sync --locked`, `uv run ...`, and `prek run --all-files`.
-- Configure roots with `CODE_*_ROOT` variables. Windows defaults are `D:/code`, `D:/packages/uv/environments`, `D:/temp/python-build`, `D:/temp/python-output`, `D:/packages`, `D:/tools`, and `D:/temp` (falling back to `C:/temp`). Unix-like defaults use native home directories, XDG cache settings where applicable, and `TMPDIR` or `/tmp`.
+- Configure roots with `CODE_*_ROOT` variables. Windows defaults are `D:/code`, `D:/packages/uv/environments`, `D:/temp/python-build`, `D:/temp/python-output`, `D:/packages`, `C:/tools`, and `D:/temp` (falling back to `C:/temp`). Unix-like defaults use native home directories, XDG cache settings where applicable, and `TMPDIR` or `/tmp`.
 - `CODE_BUILD_ROOT`, `CODE_TARGET_ROOT`, and `CODE_SCCACHE_ROOT` belong to Rust/Cargo tooling. This Python helper does not read or set them.
 ## Machine storage roots
 
@@ -24,7 +24,7 @@ The current Windows defaults below can be overridden per machine or shell with e
 - CODE_SCCACHE_ROOT: D:/sccache on Windows; XDG cache or ~/.cache/sccache by default on Unix.
 - CODE_TEMP_ROOT: D:/temp on Windows, with C:/temp as a fallback where a script needs one; Unix uses the existing TMPDIR or /tmp.
 - CODE_PACKAGES_ROOT: D:/packages on Windows; ~/.local/share by default on Unix.
-- CODE_TOOLS_ROOT: D:/tools on Windows; ~/.local/tools by default on Unix.
+- CODE_TOOLS_ROOT: C:/tools on Windows; ~/.local/tools by default on Unix.
 - CODE_PYTHON_ENV_ROOT: D:/packages/uv/environments on Windows; ~/.local/share/uv/environments by default on Unix.
 - CODE_PYTHON_BUILD_ROOT: D:/temp/python-build on Windows; TMPDIR-or-/tmp/python-build by default on Unix.
 - CODE_PYTHON_OUTPUT_ROOT: D:/temp/python-output on Windows; TMPDIR-or-/tmp/python-output by default on Unix.

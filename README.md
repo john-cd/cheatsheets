@@ -66,7 +66,7 @@ To push an image to your registry, use `docker push myregistry.com/myapp`.
 Consult Docker's [getting started](https://docs.docker.com/go/get-started-sharing/) docs for more detail on building and pushing.
 `uv.lock` pins the MkDocs environment and `.python-version` selects Python 3.15. Use `python scripts/dev_env.py env` to display the active worktree, Python environment, cache, build, output, uv, prek, and temporary-directory settings.
 
-Python caches and generated outputs use per-repository, per-project, per-worktree subdirectories under `CODE_PYTHON_BUILD_ROOT` and `CODE_PYTHON_OUTPUT_ROOT`; MkDocs writes to the configured output subdirectory for the active worktree. Python environments and package caches use `CODE_PYTHON_ENV_ROOT` and `CODE_PACKAGES_ROOT`. The roots are configurable through environment variables. Windows defaults are `D:\packages\uv\environments`, `D:\temp\python-build`, `D:\temp\python-output`, `D:\packages`, `D:\tools`, and `D:\temp` (with `C:\temp` as fallback); Unix-like defaults use native home directories and the existing `TMPDIR` or `/tmp`. `CODE_BUILD_ROOT`, `CODE_TARGET_ROOT`, and `CODE_SCCACHE_ROOT` are reserved for Rust/Cargo tooling.
+Python caches and generated outputs use per-repository, per-project, per-worktree subdirectories under `CODE_PYTHON_BUILD_ROOT` and `CODE_PYTHON_OUTPUT_ROOT`; MkDocs writes to the configured output subdirectory for the active worktree. Python environments and package caches use `CODE_PYTHON_ENV_ROOT` and `CODE_PACKAGES_ROOT`. The roots are configurable through environment variables. Windows defaults are `D:\packages\uv\environments`, `D:\temp\python-build`, `D:\temp\python-output`, `D:\packages`, `C:\tools`, and `D:\temp` (with `C:\temp` as fallback); Unix-like defaults use native home directories and the existing `TMPDIR` or `/tmp`. `CODE_BUILD_ROOT`, `CODE_TARGET_ROOT`, and `CODE_SCCACHE_ROOT` are reserved for Rust/Cargo tooling.
 
 ## Consistent Python and hook tooling
 
@@ -82,9 +82,11 @@ Run tools through `python scripts/dev_env.py` (use `--project <directory>`
 before the command for a nested Python project). For example,
 `python scripts/dev_env.py uv sync --locked` and
 `python scripts/dev_env.py prek run --all-files`. `env` displays resolved paths.
-The helper sets `PIP_CACHE_DIR`, `UV_CACHE_DIR`, `UV_PYTHON_INSTALL_DIR`,
-`UV_TOOL_DIR`, and `PREK_HOME` under `CODE_PACKAGES_ROOT` (default `D:/packages`).
-`UV_TOOL_BIN_DIR` defaults to `D:/tools/uv/bin`. Environments are isolated by
+The helper sets `PIP_CACHE_DIR`, `UV_CACHE_DIR`, and `PREK_HOME` under
+`CODE_PACKAGES_ROOT` (default `D:/packages`), reserved for packages, crates, and
+library caches. Python interpreters and installed tools use `CODE_TOOLS_ROOT`
+(default `C:/tools`): `UV_PYTHON_INSTALL_DIR` is `C:/tools/uv/python`,
+`UV_TOOL_DIR` is `C:/tools/uv/tools`, and `UV_TOOL_BIN_DIR` is `C:/tools/uv/bin`. Environments are isolated by
 repository, project, and worktree under `CODE_PYTHON_ENV_ROOT`; its default follows
 `CODE_PACKAGES_ROOT/uv/environments`. Python caches and outputs use
 `CODE_PYTHON_BUILD_ROOT` and `CODE_PYTHON_OUTPUT_ROOT` under `CODE_TEMP_ROOT`.
