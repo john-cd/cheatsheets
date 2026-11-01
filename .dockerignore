@@ -33,3 +33,18 @@ site/
 **/values.dev.yaml
 LICENSE
 README.md
+
+# Local outputs, caches, and linked worktrees
+/build/
+/target/
+/.sccache
+/.worktrees/
+**/__pycache__/
+**/.venv/
+**/.ruff_cache/
+**/.pytest_cache/
+.git/
+.env
+.env.*
+!.env.example
+!.env.*.example

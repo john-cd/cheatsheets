@@ -243,7 +243,8 @@ $RECYCLE.BIN/
 __MACOSX/
 .AppleDouble
 .LSOverride
-Icon[]
+Icon[
+]
 
 # Thumbnails
 ._*
@@ -291,4 +292,13 @@ nohup.out
 *.vsix
 site/
 .cache/
+
+# Local outputs, caches, and linked worktrees
+/build/
+/target/
+/.sccache
 /.worktrees/
+**/__pycache__/
+**/.venv/
+**/.ruff_cache/
+**/.pytest_cache/

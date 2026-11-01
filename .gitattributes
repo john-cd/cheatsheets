@@ -70,7 +70,7 @@ devcontainer.json linguist-language=JSON-with-Comments
 *.adoc     text
 *.textile  text
 *.mustache text
-*.csv      text eol=crlf
+*.csv      text eol=lf
 *.tab      text
 *.tsv      text
 *.txt      text
@@ -98,10 +98,9 @@ devcontainer.json linguist-language=JSON-with-Comments
 *.ksh      text eol=lf
 *.sh       text eol=lf
 *.zsh      text eol=lf
-# These are explicitly windows files and should use crlf
-*.bat      text eol=crlf
-*.cmd      text eol=crlf
-*.ps1      text eol=crlf
+*.bat      text eol=lf
+*.cmd      text eol=lf
+*.ps1      text eol=lf
 
 # Serialisation
 *.json     text
