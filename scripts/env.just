@@ -1,3 +1,6 @@
+# Purpose: Export shared Python tooling paths and provide uv and prek recipes.
+# Usage: Import from a project justfile; run that justfile with --list or env.
+
 # Shared Python environment configuration, imported by each Python project's justfile.
 set shell := ["bash", "-uc"]
 set windows-shell := ["C:/Program Files/Git/bin/bash.exe", "-uc"]
@@ -70,9 +73,11 @@ run +args: _python-prepare
 prek +args: _python-prepare
     cd {{quote(py_repo_root)}} && prek "$@"
 
+# Install the repository Git hook shims with prek.
 hooks-install: _python-prepare
     cd {{quote(py_repo_root)}} && prek install
 
+# Run all repository hooks against every tracked file.
 hooks: _python-prepare
     cd {{quote(py_repo_root)}} && prek run --all-files
 
