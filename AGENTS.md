@@ -1,15 +1,12 @@
 # cheatsheets agent instructions
 
-## Central build outputs and worktrees
+## Python environments and output paths
 
-- Keep auxiliary Git worktrees under .worktrees/ and name them with one lowercase letter from a through j. A through j are reserved here.
-- Keep the main worktree on this repository’s configured integration branch (usually `develop`; use `main` or `master` when that is the configured integration branch). Keep topic branches in auxiliary worktrees.
-- Windows: target outputs go to CODE_TARGET_ROOT/cheatsheets/<slot> and intermediate build outputs go to CODE_BUILD_ROOT/cheatsheets/slot. Keep CODE_BUILD_ROOT on an NTFS volume; do not use a ReFS volume for builds.
-- Linux/macOS: target outputs go to the XDG cache folder (or ~/.cache) under cargo-target/cheatsheets/<slot>; intermediate outputs go under cargo-build/cheatsheets/<slot>.
-- This repository has no Cargo workspace, so it has no Cargo target directory or sccache base directory.
-- No Cargo workspace or sccache configuration is present.
-- sccache base directories: not applicable.
-
+- Keep auxiliary worktrees under `.worktrees/`, named with one lowercase letter from `a` through `j`. Keep the main worktree on the configured integration branch.
+- Keep Python environments, build caches, and generated outputs outside the repository. Use `CODE_PYTHON_ENV_ROOT`, `CODE_PYTHON_BUILD_ROOT`, and `CODE_PYTHON_OUTPUT_ROOT`; the helper assigns repository/project/worktree-specific subdirectories.
+- Use the committed `uv.lock` and `.python-version`. Run Python commands through `python scripts/dev_env.py`: `env`, `uv sync --locked`, `uv run ...`, and `prek run --all-files`.
+- Configure roots with `CODE_*_ROOT` variables. Windows defaults are `D:/code`, `D:/packages/uv/environments`, `D:/temp/python-build`, `D:/temp/python-output`, `D:/packages`, `D:/tools`, and `D:/temp` (falling back to `C:/temp`). Unix-like defaults use native home directories, XDG cache settings where applicable, and `TMPDIR` or `/tmp`.
+- `CODE_BUILD_ROOT`, `CODE_TARGET_ROOT`, and `CODE_SCCACHE_ROOT` belong to Rust/Cargo tooling. This Python helper does not read or set them.
 ## Machine storage roots
 
 - On Windows, use `CODE_TEMP_ROOT` for temporary and staging files, setting `TEMP`, `TMP`, and `TMPDIR` as needed. Use `C:\temp` only when `CODE_TEMP_ROOT` is unavailable.
@@ -19,7 +16,7 @@
 
 ## Portable storage-root configuration
 
-The current Windows defaults below can be overridden per machine or shell with environment variables. The per-repository Rust Justfile or Cargo Make helper, when present, reads these variables. Non-Rust repositories do not need a Cargo build runner; use the environment roots only for tools or scripts that consume them.
+The current Windows defaults below can be overridden per machine or shell with environment variables. Rust projects read Rust-specific build and target roots through their Cargo runner. Python projects use `scripts/dev_env.py` for uv environments, Python caches, and generated output paths.
 
 - CODE_REPOS_ROOT: D:/code on Windows; ~/code by default on Unix.
 - CODE_BUILD_ROOT: C:/code_build on Windows; XDG cache or ~/.cache/cargo-build by default on Unix. Keep Windows build output on NTFS.
@@ -27,6 +24,9 @@ The current Windows defaults below can be overridden per machine or shell with e
 - CODE_SCCACHE_ROOT: D:/sccache on Windows; XDG cache or ~/.cache/sccache by default on Unix.
 - CODE_TEMP_ROOT: D:/temp on Windows, with C:/temp as a fallback where a script needs one; Unix uses the existing TMPDIR or /tmp.
 - CODE_PACKAGES_ROOT: D:/packages on Windows; ~/.local/share by default on Unix.
-- CODE_TOOLS_ROOT: C:/tools on Windows; ~/.local/tools by default on Unix.
+- CODE_TOOLS_ROOT: D:/tools on Windows; ~/.local/tools by default on Unix.
+- CODE_PYTHON_ENV_ROOT: D:/packages/uv/environments on Windows; ~/.local/share/uv/environments by default on Unix.
+- CODE_PYTHON_BUILD_ROOT: D:/temp/python-build on Windows; TMPDIR-or-/tmp/python-build by default on Unix.
+- CODE_PYTHON_OUTPUT_ROOT: D:/temp/python-output on Windows; TMPDIR-or-/tmp/python-output by default on Unix.
 
 Windows drive paths elsewhere in this file are defaults. Set a root variable to relocate the corresponding directory. WSL must keep its distribution temp behavior and must not redirect temp variables to a Windows drive mount.

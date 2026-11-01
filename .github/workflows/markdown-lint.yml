@@ -1,22 +1,28 @@
-name: Markdown Lint and Format
+name: Prek checks
 
 on:
   push:
     branches: [ main, master ]
     paths:
       - '**.md'
-      - '.pre-commit-config.yaml'
+      - 'prek.toml'
+      - 'pyproject.toml'
+      - 'uv.lock'
+      - '.python-version'
   pull_request:
     branches: [ main, master ]
     paths:
       - '**.md'
 
 jobs:
-  pre-commit:
+  prek:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-python@v7
         with:
-          python-version: '3.15'
-      - uses: pre-commit/action@v3.0.1
+          python-version-file: .python-version
+      - uses: astral-sh/setup-uv@v7
+      - run: python scripts/dev_env.py uv sync --locked
+      - run: python scripts/dev_env.py uv tool install prek
+      - run: python scripts/dev_env.py prek run --all-files

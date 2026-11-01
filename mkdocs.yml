@@ -8,6 +8,7 @@ site_name: "John's Cheatsheets"
 site_description: "A collection of cheatsheets and code snippets."
 site_author: "S. John CD"
 site_url: "https://john-cd.com/cheatsheets/"
+site_dir: !ENV [MKDOCS_SITE_DIR, site]
 
 # Required within Dev Container (default binding is 127.0.0.1:8000)
 dev_addr: 0.0.0.0:8000

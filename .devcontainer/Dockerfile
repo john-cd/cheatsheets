@@ -17,13 +17,13 @@ ENV PYTHONUNBUFFERED=1
 
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
 
-RUN uv pip install --system mkdocs \
-    mkdocs-material \
-    mkdocs-minify-plugin \
-    mkdocs-redirects
-
 ARG WORK_DIR
 WORKDIR $WORK_DIR
+
+# Resolve the locked project environment outside the repository checkout.
+COPY pyproject.toml uv.lock ./
+COPY scripts/dev_env.py scripts/dev_env.py
+RUN python scripts/dev_env.py uv sync --locked
 
 ## -------------------------------------------------------------
 FROM base AS dev
@@ -87,6 +87,6 @@ FROM base AS ci
 COPY . .
 
 ARG WORK_DIR
-RUN rm -rf $WORK_DIR/site/ && mkdocs build
+RUN python scripts/dev_env.py uv run mkdocs build
 
 #CMD [ "ci.sh" ]
