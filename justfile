@@ -37,3 +37,6 @@ serve: _python-prepare
 
 # Check Python formatting, lint the code, and run the tests.
 check: fmt-check lint test
+
+hooks-run:
+    prek run
