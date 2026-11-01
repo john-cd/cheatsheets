@@ -15,9 +15,9 @@
 *.csv text
 *.sh text
 *.bash text
-*.ps1 text
-*.bat text
-*.cmd text
+*.ps1 text eol=crlf
+*.bat text eol=crlf
+*.cmd text eol=crlf
 *.proto text
 Dockerfile* text
 .devcontainer.json linguist-language=JSON-with-Comments
