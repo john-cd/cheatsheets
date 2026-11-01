@@ -14,6 +14,8 @@ The source Markdown files are found in the `docs` folder. The generated HTML / J
 
 ## Contributing
 
+For setup, checks, configuration ownership, and documentation requirements, see [CONTRIBUTING.md](CONTRIBUTING.md).
+
 ### Install
 
 If you use [Visual Studio Code](https://code.visualstudio.com/), install the [Dev Container extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers). Otherwise, consider the [Dev Container CLI](https://containers.dev/supporting#devcontainer-cli). `Dev Container` allows you to edit and test the web site within a `Docker` container.

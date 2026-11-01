@@ -1,64 +1,71 @@
 # TODO
 
-GitHub Issues are currently disabled for this repository, so this file is the authoritative backlog for the remaining follow-up tasks.
+GitHub Issues is disabled (verified 2026-11-01). This is the authoritative backlog.
+Use American spelling and LF; record evidence before marking a task complete.
 
-## Follow-up fixes and suggestions
+## P1: documentation quality
 
-- [ ] Replace remaining legacy/outdated external references that are still reachable but suboptimal.
-- [ ] Expand MkDocs nav to include all published docs pages now present under `docs/`.
-- [ ] Add ownership/maintenance metadata per cheatsheet category (last review date, maintainer).
-- [ ] Add link health checks that distinguish blocked-network failures from true dead links.
+Problem: navigation, references, and maintenance metadata still need review.
 
-## Additional cheatsheet subjects to add
+- [ ] Replace reachable but obsolete references; retain intentional historical context.
+- [ ] Include all published docs pages in MkDocs navigation.
+- [ ] Add category ownership and last-review metadata after actual review.
+- [ ] Add CONTRIBUTING.md with setup, format/lint/test/build commands and README links.
 
-- [ ] GitHub Actions (advanced pipelines, reusable workflows, caching, matrix builds)
-- [ ] Platform Engineering (golden paths, templates, scorecards)
-- [ ] Observability (OpenTelemetry, metrics/logs/traces correlation)
-- [ ] AI Engineering (RAG basics, prompt patterns, eval loops, safety checks)
-- [ ] Data Contracts and Schema Evolution
-- [ ] Kubernetes Security (PSA/PSS, RBAC patterns, network policies)
-- [ ] FinOps for Cloud Workloads
-- [ ] Incident Response and Postmortems
+Acceptance: navigation covers published pages, links resolve or have documented exceptions,
+and contributor instructions match the configured commands.
 
-## Configuration alignment (2026-11-01)
+## P2: quality gates
 
-The configuration-alignment work is integrated into `develop` in focused commits.
+Problem: Python checks alone do not validate the maintained documentation/tooling content.
 
-GitHub Issues is disabled for this repository, so the remaining tasks are recorded here.
+- [ ] Confirm Ruff rules and scoped hooks without weakening stricter rules or examples.
+- [ ] Cover Markdown, TOML, YAML, and shell content with applicable format/lint commands.
+- [ ] Add link checks that distinguish blocked networks from broken destinations.
+- [ ] Run read-only format/lint/prek checks; record versions, scope, and actual failures.
+- [ ] Keep README, AGENTS.md, CONFIGURATION.md, and WORKTREES.md synchronized.
 
-### [P2] Finish shared formatting, lint, and hook policy validation
+Acceptance: maintained file types have runnable quality gates; commands and results are recorded.
+Do not report skipped checks as passing or synchronize full runtime dependencies for formatting.
 
-Ruff formatting completed locally; finish lint and CI evidence without pulling the full application stack into formatting hooks.
+## P2: dependencies, CI, and containers
 
-#### Acceptance criteria
+Problem: updater coverage and runtime/cache behavior still require verification.
 
-- [ ] Review the local Rustfmt/Clippy and/or Ruff changes and commit formatting separately from behavior changes. Use the pinned formatter, American spelling, UTF-8, and LF.
-- [ ] Align the Ruff baseline without weakening existing stronger rules; retain documented lesson/example exceptions and project Python pins.
-- [ ] Make formatter/linter hooks operate on the appropriate languages/projects. Avoid whole-workspace auto-formatting during unrelated configuration commits and avoid full runtime dependency synchronization for Python quality checks.
-- [ ] Run the owning Just/Cargo Make format and read-only lint commands. Record exact scope, platform, versions, and remaining failures; fix causes rather than applying unsafe blanket fixes or claiming skipped hooks passed.
-- [ ] Keep `AGENTS.md`, `CONTRIBUTING.md` where present, `README.md`, `CONFIGURATION.md`, `TODO.md`, and `WORKTREES.md` consistent with the final commands and exceptions.
+- [ ] Audit Dependabot roots for uv, Docker, Compose, devcontainers, and GitHub Actions.
+- [ ] Preserve lock ownership, registries, justified exclusions, and non-overlapping updates.
+- [ ] Validate workflow/local-action references, supported inputs, and security checks.
+- [ ] Use locked uv resolution and caches keyed by the owning lockfiles.
+- [ ] Pin reasonable software/image/feature versions in the central version source.
+- [ ] Validate Compose base/override, build/start the devcontainer, and exercise hosted CI.
 
-Validation: repository format/lint recipes, relevant `prek` hooks, configuration parsing, and `git diff --check`. Pure formatting changes do not require unrelated application test suites.
+Acceptance: dependency roots have explicit coverage/dispositions, pins and build contexts agree,
+and hosted/container behavior has logs. Schema parsing alone is not runtime acceptance.
 
-### [P2] Complete dependency-update coverage and consistent CI caching
+## P3: new content
 
-Dependency-update roots and caching conventions differ across the repositories. Changes are pending locally and need schema/runtime verification before acceptance.
+Problem: requested subjects are not yet covered by reviewed cheat sheets.
 
-## Audited roots
+- [ ] Advanced GitHub Actions: reusable workflows, caching, and matrix builds.
+- [ ] Platform engineering: golden paths, templates, and scorecards.
+- [ ] Observability: OpenTelemetry and metrics/logs/traces correlation.
+- [ ] AI engineering: RAG, prompt patterns, evaluation loops, and safety checks.
+- [ ] Data contracts and schema evolution.
+- [ ] Kubernetes security: PSA/PSS, RBAC, and network policies.
+- [ ] Cloud workload FinOps.
+- [ ] Incident response and postmortems.
 
-- `uv`: `/`
-- `docker`: `/.devcontainer`
-- `docker-compose`: `/.devcontainer`
-- `devcontainers`: `/`
-- `github-actions`: `/`
+Acceptance for each subject: a scoped page with use cases, checked examples, references,
+and navigation/cross-links; distinguish proposals from published content.
 
-### Acceptance criteria
+## Repository maintenance
 
-- [ ] Verify these roots against tracked manifests, independent workspaces, Python/uv projects, nested local actions, Dockerfiles/Compose files, devcontainers, charts, submodules, and supported toolchain files. Add omissions; keep immutable/malformed test fixtures intentionally excluded and documented.
-- [ ] Validate Dependabot syntax and ecosystem/directory rules. Preserve repository-specific ignores/registries; avoid overlapping updates and replace pip coverage with uv where lock ownership requires it. Do not assume custom shell/version-pin strings are automatically updated.
-- [ ] Use locked uv resolution and setup-uv caching keyed by the correct lockfiles. Validate the new/existing Python quality jobs and project-specific environment/output paths.
-- [ ] Review all workflow/composite-action references and supported inputs with actionlint and relevant security checks. Keep toolchain, container, Python, formatter, and workflow pins compatible; verify Docker COPY contexts retain required source/configuration and omit local outputs/cache links.
-- [ ] Exercise applicable hosted Linux/Windows/macOS jobs and container builds when prerequisites are available. Report unavailable CI/services/credentials explicitly, and fix failures in focused commits.
-- [ ] Synchronize `.github` workflow documentation, `CONFIGURATION.md`, README/contributor guidance, TODO, and worktree notes with verified behavior.
+- [ ] Review dirty worktrees and topic/backup branches; commit reviewed work separately.
+- [ ] Integrate useful work linearly into develop; retire only verified obsolete branches/worktrees.
+- [ ] Review candidate temporary/LLM files by ownership/history before cleanup.
+- [ ] Preserve active work, unique commits, reusable caches, and permitted worktree slots.
+- [ ] Update WORKTREES.md with the reviewed dispositions.
 
-Do not close on YAML parsing alone: attach command results and hosted-run evidence, or keep unmet criteria open. Existing shipping/security/test policies should be preserved unless a reviewed fix requires a change.
+Acceptance: every cleanup target has a recorded disposition and no unrelated work is lost.
+Human/account/host blockers belong here with their concrete prerequisites; no upstream-release
+wait is currently inventoried. Add a release trigger and review date when one is identified.
