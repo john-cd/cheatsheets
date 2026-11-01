@@ -92,8 +92,8 @@ will be displayed as
 
 ```python
 def wiki_rocks(text):
- formatter = lambda t: "funky"+t
- return formatter(text)
+    formatter = lambda t: "funky" + t
+    return formatter(text)
 ```
 
 ## Blockquotes

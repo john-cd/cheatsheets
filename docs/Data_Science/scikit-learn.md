@@ -28,7 +28,8 @@ clf = make_pipeline(StandardScaler(), HistGradientBoostingClassifier())
 # Column Transformer
 preprocessor = ColumnTransformer(
     transformers=[
-        ('num', StandardScaler(), ['numerical_col']),
-        ('cat', OneHotEncoder(), ['categorical_col'])
-    ])
+        ("num", StandardScaler(), ["numerical_col"]),
+        ("cat", OneHotEncoder(), ["categorical_col"]),
+    ]
+)
 ```

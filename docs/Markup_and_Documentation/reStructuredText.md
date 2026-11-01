@@ -356,11 +356,11 @@ Sphinx generates documentation from reST files. Modern `conf.py` often includes 
 ```python
 # conf.py
 extensions = [
-    'sphinx.ext.autodoc',     # Include documentation from docstrings
-    'sphinx.ext.napoleon',    # Support for NumPy and Google style docstrings
-    'sphinx.ext.viewcode',    # Add links to highlighted source code
-    'sphinx_rtd_theme'        # Modern Read the Docs theme
+    "sphinx.ext.autodoc",  # Include documentation from docstrings
+    "sphinx.ext.napoleon",  # Support for NumPy and Google style docstrings
+    "sphinx.ext.viewcode",  # Add links to highlighted source code
+    "sphinx_rtd_theme",  # Modern Read the Docs theme
 ]
 
-html_theme = 'sphinx_rtd_theme'
+html_theme = "sphinx_rtd_theme"
 ```

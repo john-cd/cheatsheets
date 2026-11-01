@@ -43,9 +43,7 @@ from elasticsearch import Elasticsearch
 
 # Create the client instance
 client = Elasticsearch(
-    "https://localhost:9200",
-    basic_auth=("elastic", "password"),
-    verify_certs=False
+    "https://localhost:9200", basic_auth=("elastic", "password"), verify_certs=False
 )
 
 # Successful response!

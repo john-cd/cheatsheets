@@ -24,10 +24,7 @@ val spark = SparkSession.builder()
 ```python
 from pyspark.sql import SparkSession
 
-spark = SparkSession.builder \
-    .appName("SparkBasics") \
-    .master("local[*]") \
-    .getOrCreate()
+spark = SparkSession.builder.appName("SparkBasics").master("local[*]").getOrCreate()
 ```
 
 ## Useful Links

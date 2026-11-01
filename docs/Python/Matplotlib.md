@@ -41,12 +41,12 @@ plt.subplot(2, 1, 1)
 
 # Make the first plot
 plt.plot(x, y_sin)
-plt.title('Sine')
+plt.title("Sine")
 
 # Set the second subplot as active, and make the second plot.
 plt.subplot(2, 1, 2)
 plt.plot(x, y_cos)
-plt.title('Cosine')
+plt.title("Cosine")
 
 # Show the figure.
 plt.show()
@@ -66,12 +66,12 @@ y = np.sin(x)
 fig, ax = plt.subplots()
 
 # Plot data on the Axes
-ax.plot(x, y, label='sin(x)')
+ax.plot(x, y, label="sin(x)")
 
 # Add labels and title
-ax.set_xlabel('X-axis')
-ax.set_ylabel('Y-axis')
-ax.set_title('Simple Plot')
+ax.set_xlabel("X-axis")
+ax.set_ylabel("Y-axis")
+ax.set_title("Simple Plot")
 ax.legend()
 
 # Show plot

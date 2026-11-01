@@ -121,10 +121,10 @@ print("global:", x)
 ### String interpolation - new in 3.6
 
 ```python
-name="David"
+name = "David"
 f"My name is {name}"
 value = decimal.Decimal("10.4507")
-print(f"result: {value:10.5}" )  # width precision
+print(f"result: {value:10.5}")  # width precision
 ```
 
 ### PEP 492 - Coroutines with async and await syntax
@@ -137,21 +137,23 @@ is equivalent
 
 ```python
 for x in iterator:
-     yield x
+    yield x
 ```
 
 Example:
 
 ```python
 def lazy_range(up_to):
-     """Generator to return the sequence of integers from 0 to up_to, exclusive."""
-     index = 0
-     def gratuitous_refactor():
-           nonlocal index
-           while index < up_to:
-               yield index
-               index += 1
-     yield from gratuitous_refactor()
+    """Generator to return the sequence of integers from 0 to up_to, exclusive."""
+    index = 0
+
+    def gratuitous_refactor():
+        nonlocal index
+        while index < up_to:
+            yield index
+            index += 1
+
+    yield from gratuitous_refactor()
 ```
 
 New 3.12 syntax:
@@ -182,9 +184,9 @@ loop.close()
 
 ```python
 async for TARGET in ITER:
-  BLOCK
+    BLOCK
 else:
-  BLOCK2
+    BLOCK2
 ```
 
 #### Async improvements - 3.6
@@ -209,6 +211,8 @@ def greet(name: str) -> str
 
 ```python
 Url = str
+
+
 def retry(url: Url, retry_count: int) -> None: ...
 ```
 
@@ -219,15 +223,19 @@ from typing import TypeVar, Iterable, Tuple
 Other common typings include: Any; Generic, Dict, List, Optional, Mapping, Set, Sequence - expressed as Sequence\[int\]
 
 ```python
-T = TypeVar('T', int, float, complex)  # T is either or an int, a float or a complex
-Vector = Iterable[Tuple[T, T]]          #
+T = TypeVar("T", int, float, complex)  # T is either or an int, a float or a complex
+Vector = Iterable[Tuple[T, T]]  #
+
 
 def inproduct(v: Vector[T]) -> T:
-       return sum(x*y for x, y in v)
+    return sum(x * y for x, y in v)
+
 
 def dilate(v: Vector[T], scale: T) -> Vector[T]:
-       return ((x * scale, y * scale) for x, y in v)
-vec = [] # type: Vector[float]
+    return ((x * scale, y * scale) for x, y in v)
+
+
+vec = []  # type: Vector[float]
 ```
 
 #### For functions
@@ -239,7 +247,7 @@ Callable[[Arg1Type, Arg2Type], ReturnType]
 #### Type comments
 
 ```python
-x = []   # type: List[Employee]
+x = []  # type: List[Employee]
 x, y, z = [], [], []  # type: List[int], List[int], List[str]
 ```
 
@@ -249,7 +257,7 @@ x, y, z = [], [], []  # type: List[int], List[int], List[str]
 
 ```python
 def greeting(name: str) -> str:
-    return 'Hello ' + name
+    return "Hello " + name
 ```
 
 ### f-strings (Python 3.6+)
@@ -263,6 +271,7 @@ print(f"Hello {name}")
 
 ```python
 from dataclasses import dataclass
+
 
 @dataclass
 class Point:
@@ -300,6 +309,7 @@ Dataclasses (introduced in Python 3.7) provide a decorator and functions for aut
 ```python
 from dataclasses import dataclass
 
+
 @dataclass
 class InventoryItem:
     name: str
@@ -317,10 +327,12 @@ Asyncio is a library to write concurrent code using the `async`/`await` syntax.
 ```python
 import asyncio
 
+
 async def main():
-    print('Hello ...')
+    print("Hello ...")
     await asyncio.sleep(1)
-    print('... World!')
+    print("... World!")
+
 
 asyncio.run(main())
 ```
@@ -331,5 +343,5 @@ Type hinting allows you to explicitly state the expected type of arguments and r
 
 ```python
 def greeting(name: str) -> str:
-    return 'Hello ' + name
+    return "Hello " + name
 ```

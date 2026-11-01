@@ -127,6 +127,7 @@ At the IPython prompt:
 import numpy
 import matplotlib
 from matplotlib import pylab, mlab, pyplot
+
 np = numpy
 plt = pyplot
 from IPython.display import display
@@ -158,9 +159,10 @@ To embed plots, SVG or HTML in qtconsole, call display:
 ```py
 from IPython.core.display import display, display_html
 from IPython.core.display import display_png, display_svg
-display(plt.gcf()) # embeds the current figure in the qtconsole
-display(*getfigs()) # embeds all active figures in the qtconsole
-#or:
+
+display(plt.gcf())  # embeds the current figure in the qtconsole
+display(*getfigs())  # embeds all active figures in the qtconsole
+# or:
 f = plt.figure()
 plt.plot(np.rand(100))
 display(f)

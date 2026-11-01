@@ -125,5 +125,6 @@ Intake is a lightweight package for finding, investigating, loading and dissemin
 
 ```python
 import pandas as pd
-df = pd.read_csv('data.csv')
+
+df = pd.read_csv("data.csv")
 ```
