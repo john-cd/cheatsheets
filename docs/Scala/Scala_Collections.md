@@ -3,6 +3,7 @@ title: Scala Collections
 category: scala
 tags:
 ---
+<!-- TODO Reviewed ??-??-2026 -->
 
 # Scala Collections
 

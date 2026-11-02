@@ -1,3 +1,5 @@
+<!-- TODO Reviewed ??-??-2026 -->
+
 # jQuery
 
 > **Note**: jQuery is largely considered legacy. Modern frontend development typically uses React, Vue, or vanilla JavaScript.

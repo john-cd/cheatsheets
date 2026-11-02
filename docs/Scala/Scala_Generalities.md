@@ -3,6 +3,7 @@ title: Scala (Generalities)
 category: Scala
 tags: Scala
 ---
+<!-- TODO Reviewed ??-??-2026 -->
 
 # Scala (Generalities)
 

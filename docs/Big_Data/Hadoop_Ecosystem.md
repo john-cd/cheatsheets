@@ -1,3 +1,5 @@
+<!-- TODO Reviewed ??-??-2026 -->
+
 # Hadoop Ecosystem
 
 Hadoop is not a single product, but rather a software family. Modern data ecosystems have evolved to prioritize the separation of compute and storage (e.g., cloud-native object storage like S3 replacing HDFS in many cloud deployments).

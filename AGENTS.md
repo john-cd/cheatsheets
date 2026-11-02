@@ -1,4 +1,11 @@
+<!-- TODO Reviewed ??-??-2026 -->
+
 # cheatsheets agent instructions
+
+## Human review markers
+
+- `TODO Reviewed ??-??-<year>` and `Reviewed <date>` comments are for human review only. Preserve existing markers verbatim during edits; do not remove them or treat them as software TODOs.
+- When modifying a file that contains a `Reviewed <date>` marker without `TODO`, preserve that marker and add a separate `TODO Reviewed ??-??-<year>` comment to request fresh human review.
 
 ## Communication
 

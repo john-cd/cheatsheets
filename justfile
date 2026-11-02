@@ -1,8 +1,13 @@
+# TODO Reviewed ??-??-2026
+
 # Purpose: Run this Python project with its configured environment and external output directories.
 # Usage: Run just --list from this directory to inspect the available recipes.
 
 # Python tasks for cheatsheets.
 import 'scripts/env.just'
+# py_project_path is repository-relative and scopes source, cache, and output paths.
+# py_environment_project selects the locked dependency environment; set it to a shared
+# project key when sibling tools should reuse that project's virtual environment.
 
 py_project_path := "."
 py_environment_project := "."

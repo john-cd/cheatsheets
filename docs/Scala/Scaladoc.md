@@ -1,3 +1,5 @@
+<!-- TODO Reviewed ??-??-2026 -->
+
 # Scaladoc
 
 - [Scaladoc](https://docs.scala-lang.org/overviews/scaladoc/for-library-authors.html)

@@ -1,3 +1,5 @@
+<!-- TODO Reviewed ??-??-2026 -->
+
 # Install Spark Locally
 
 Modern Spark (3.x and 4.x) runs on Java 17+, Python 3.10+ and R 4.x+. For the Scala API, Spark uses Scala 2.12 or 2.13.

@@ -1,3 +1,5 @@
+<!-- TODO Reviewed ??-??-2026 -->
+
 # Log shipping
 
 [Fluentd](https://docs.fluentd.org/)

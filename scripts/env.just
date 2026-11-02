@@ -1,3 +1,5 @@
+# TODO Reviewed ??-??-2026
+
 # Purpose: Export shared Python tooling paths and provide uv and prek recipes.
 # Usage: Import from a project justfile; run that justfile with --list or env.
 
@@ -5,6 +7,9 @@
 set shell := ["bash", "-uc"]
 set windows-shell := ["C:/Program Files/Git/bin/bash.exe", "-uc"]
 
+# Resolve the importing project from this file's location. Worktree builds, caches, and outputs
+# are keyed by repository, project, and worktree slot; py_environment_project may share an
+# environment across related projects that use the same lockfile.
 py_repo_root := parent_directory(source_directory())
 py_main_repo := if file_name(parent_directory(py_repo_root)) == ".worktrees" { parent_directory(parent_directory(py_repo_root)) } else { py_repo_root }
 py_repo_name := file_name(py_main_repo)
@@ -14,6 +19,26 @@ py_project_dir := join(py_repo_root, py_project_path)
 py_project_key := if py_project_path == "." { join(py_repo_name, py_slot) } else { join(py_repo_name, py_project_path, py_slot) }
 py_environment_key := if py_environment_project == "." { join(py_repo_name, py_slot) } else { join(py_repo_name, py_environment_project, py_slot) }
 
+# Overrideable storage roots (the caller's environment wins over these defaults):
+# CODE_REPOS_ROOT reports the conventional checkout root (D:/code on Windows, ~/code on Unix);
+# py_repo_root itself is derived from this imported file's location.
+# CODE_TEMP_ROOT holds temporary files (D:/temp when present, else C:/temp; Unix TMPDIR or /tmp).
+# CODE_PACKAGES_ROOT holds package data and caches (D:/packages or ~/.local/share).
+# CODE_TOOLS_ROOT holds portable tools (C:/tools or ~/.local/tools).
+# CODE_PYTHON_ENV_ROOT stores uv project environments; defaults below CODE_PACKAGES_ROOT.
+# CODE_PYTHON_BUILD_ROOT stores per-project/worktree Python caches; defaults below CODE_TEMP_ROOT.
+# CODE_PYTHON_OUTPUT_ROOT stores generated artifacts; defaults below CODE_TEMP_ROOT.
+# CODE_PYTHON_BUILD_DIR and CODE_PYTHON_OUTPUT_DIR scope build/output data to py_project_path
+# and the worktree slot.
+# UV_PROJECT_ENVIRONMENT uses py_environment_project so related projects can share one venv.
+# UV_CACHE_DIR and PIP_CACHE_DIR hold download caches; UV_PYTHON_INSTALL_DIR and UV_TOOL_DIR
+# hold uv-managed Python/tool installations; UV_TOOL_BIN_DIR is prepended to PATH.
+# UV_LINK_MODE=copy avoids cross-device hard-link failures when package and environment roots differ.
+# PREK_HOME is prek's shared cache/data directory. Python bytecode, Ruff, and pytest caches are
+# redirected into CODE_PYTHON_BUILD_DIR; PYTEST_ADDOPTS retains caller options and sets cache_dir.
+# MKDOCS_SITE_DIR keeps MkDocs output under CODE_PYTHON_OUTPUT_DIR.
+# TEMP, TMP, and TMPDIR point temporary-file users at CODE_TEMP_ROOT on Windows; Unix preserves
+# caller settings (falling back to /tmp). These values are exported to every recipe subprocess.
 export CODE_REPOS_ROOT := env("CODE_REPOS_ROOT", if os() == "windows" { "D:/code" } else { join(home_directory(), "code") })
 export CODE_TEMP_ROOT := env("CODE_TEMP_ROOT", if os() == "windows" { if path_exists("D:/temp") == "true" { "D:/temp" } else { "C:/temp" } } else { env("TMPDIR", "/tmp") })
 export CODE_PACKAGES_ROOT := env("CODE_PACKAGES_ROOT", if os() == "windows" { "D:/packages" } else { join(home_directory(), ".local/share") })

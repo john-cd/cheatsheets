@@ -3,6 +3,7 @@ title: Scala Design Patterns
 category: Scala
 tags: Scala, Design Patterns
 ---
+<!-- TODO Reviewed ??-??-2026 -->
 
 # Scala Design Patterns
 

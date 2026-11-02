@@ -3,6 +3,7 @@ title: Apache Log4j 2
 category: java
 tags: Java Logs
 ---
+<!-- TODO Reviewed ??-??-2026 -->
 
 # Apache Log4j 2
 

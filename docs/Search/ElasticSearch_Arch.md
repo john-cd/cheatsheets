@@ -3,6 +3,7 @@ title: ElasticSearch Architecture and Configuration
 category: search
 tags: elasticsearch
 ---
+<!-- TODO Reviewed ??-??-2026 -->
 
 # ElasticSearch Architecture and Configuration
 

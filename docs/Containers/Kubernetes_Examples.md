@@ -2,6 +2,7 @@
 title: Kubernetes Examples
 tags: Kubernetes
 ---
+<!-- TODO Reviewed ??-??-2026 -->
 
 # Service + Deployment example
 

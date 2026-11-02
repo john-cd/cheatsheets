@@ -1,3 +1,5 @@
+<!-- TODO Reviewed ??-??-2026 -->
+
 # CORS
 
 - [CORS on Wikipedia](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing)

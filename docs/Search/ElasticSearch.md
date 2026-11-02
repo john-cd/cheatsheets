@@ -3,6 +3,7 @@ title: ElasticSearch Cheatsheet
 category: search
 tags: IR
 ---
+<!-- TODO Reviewed ??-??-2026 -->
 
 # Cheatsheets
 

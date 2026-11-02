@@ -1,3 +1,5 @@
+<!-- TODO Reviewed ??-??-2026 -->
+
 # Scala Basics
 
 [Scala Exercises](https://www.scala-exercises.org/)
