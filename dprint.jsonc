@@ -1,0 +1,41 @@
+// TODO Reviewed ??-??-2026
+
+{
+  "$schema": "https://dprint.dev/schemas/v0.json",
+  "lineWidth": 100,
+  "newLineKind": "lf",
+  "markdown": {
+    "lineWidth": 100,
+    "textWrap": "maintain"
+  },
+  "includes": [
+    "**/*.md",
+    "**/*.mdx",
+    "**/*.json",
+    "**/*.jsonc",
+    "**/*.toml",
+    "**/*.yaml",
+    "**/*.yml"
+  ],
+  "excludes": [
+    "**/.git/**",
+    "**/.worktrees/**",
+    "**/target/**",
+    "**/build/**",
+    "**/node_modules/**",
+    "**/.venv/**",
+    "**/Cargo.toml",
+    "**/Cargo.lock",
+    "**/uv.lock",
+    "**/package-lock.json",
+    "**/pnpm-lock.yaml",
+    "**/test_fixtures/**",
+    "**/tests/fixtures/**"
+  ],
+  "plugins": [
+    "npm:@dprint/markdown@0.28.0",
+    "npm:@dprint/json@0.25.2",
+    "npm:@dprint/toml@0.9.0",
+    "npm:dprint-plugin-yaml@0.6.0"
+  ]
+}

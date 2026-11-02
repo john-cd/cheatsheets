@@ -21,7 +21,7 @@ Keep this file, README, contributor guidance, and configuration comments synchro
 | `.gitignore`, `.dockerignore`, `.aiexclude` | Exclude Python environments, caches, generated outputs, and worktrees; keep maintained configuration and lockfiles reviewable. Ignore files are not a security boundary. |
 | `AGENTS.md`, `CONTRIBUTING.md`, `README.md` | Keep repository-specific commands, ownership, and examples; link this reference. |
 | `pyproject.toml`, `uv.lock`, `.python-version` | Keep Python versions, dependency resolution, and Python tooling configuration in sync. |
-| `prek.toml`, `dprint.json*` | Maintain the configured hooks and documentation formatting rules where these files are present. |
+| `prek.toml`, `dprint.jsonc` | Use dprint for Markdown and shared config formatting, markdownlint for Markdown lint, and Ruff for Python formatting and linting. |
 | `.github/`, `.devcontainer/`, `Dockerfile*` | Preserve workflow and container behavior; keep Python pins, dependency installation, and lockfile usage consistent. |
 
 ## Dependency updates
