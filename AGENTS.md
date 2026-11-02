@@ -17,12 +17,11 @@
 - Keep Python environments, build caches, and generated outputs outside the repository. Use `CODE_PYTHON_ENV_ROOT`, `CODE_PYTHON_BUILD_ROOT`, and `CODE_PYTHON_OUTPUT_ROOT`; the Justfile assigns repository/project/worktree-specific subdirectories.
 - Use the committed `uv.lock` and `.python-version`. Run Python commands through `just`: `env`, `uv sync --locked`, `uv run ...`, and `prek run --all-files`.
 - Configure roots with `CODE_*_ROOT` variables. Windows defaults are `D:/code`, `D:/packages/uv/environments`, `D:/temp/python-build`, `D:/temp/python-output`, `D:/packages`, `C:/tools`, and `D:/temp` (falling back to `C:/temp`). Unix-like defaults use native home directories, XDG cache settings where applicable, and `TMPDIR` or `/tmp`.
-- `CODE_BUILD_ROOT`, `CODE_TARGET_ROOT`, and `CODE_SCCACHE_ROOT` belong to Rust/Cargo tooling. This Python Justfile does not read or set them.
 
 ## Machine storage roots
 
 - On Windows, use `CODE_TEMP_ROOT` for temporary and staging files, setting `TEMP`, `TMP`, and `TMPDIR` as needed. Use `C:\temp` only when `CODE_TEMP_ROOT` is unavailable.
-- Keep package-manager data, library caches, and package installations under `CODE_PACKAGES_ROOT`, including Cargo, npm, NuGet, pip/uv, vcpkg, and similar data. Do not store standalone tool distributions there.
+- Keep package-manager data, library caches, and package installations under `CODE_PACKAGES_ROOT`, including npm, NuGet, pip/uv, vcpkg, and similar data. Do not store standalone tool distributions there.
 - Keep portable developer tools and SDKs under `CODE_TOOLS_ROOT`, in a named subdirectory per tool (for example NASM, Oracle Instant Client, Cap'n Proto, Flutter, Pandoc, Tectonic, and repository tool bundles). Update PATH and installer/config references when relocating a tool. Leave package-manager-managed tools in their managed roots unless replacing them with a portable installation.
 - In WSL, keep temporary files on the distribution's configured temp paths. Keep package data in `CODE_PACKAGES_ROOT` (default `~/.local/share`) and portable tools in `CODE_TOOLS_ROOT` (default `~/.local/tools`); avoid Windows drive mounts for these roots unless a tool requires them.
 
@@ -77,6 +76,4 @@ synchronized. Preserve documented platform, domain, and teaching-example excepti
   `c` when disk space allows. When disk space is low, inspect active worktrees and build processes; remove
   the oldest obsolete build directories first. Then clean task-owned temporary directories and obsolete
   `build`/`target` directories. Do not remove directories used by active checkouts or processes.
-- `cargo-deny` findings are not a blocker gate. Fix them, add a justified exception, or create a follow-up
-  issue or task and record the outcome. Other OS or Docker validation is not a blocker gate either;
-  create a follow-up issue or task when that validation is unavailable.
+- Other OS or Docker validation is not a blocker gate; create a follow-up issue or task when that validation is unavailable.
