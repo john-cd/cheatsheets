@@ -53,8 +53,8 @@ Without customization, source code is assumed to be in `${basedir}/src/main/java
 Tests are assumed to be in `${basedir}/src/test`, and a project is assumed to produce a JAR file.
 Maven assumes that you want the compile bytecode to `${basedir}/target/classes` and then create a distributable JAR file in `${basedir}/target`
 
-For [WAR files](<https://en.wikipedia.org/wiki/WAR_(file_format)>), the `/WEB-INF` directory  contains a file named `web.xml` which defines the structure of the web application.
-See  also [Tomcat Deployment guide](https://tomcat.apache.org/tomcat-7.0-doc/appdev/deployment.html)
+For [WAR files](https://en.wikipedia.org/wiki/WAR_(file_format)), the `/WEB-INF` directory contains a file named `web.xml` which defines the structure of the web application.
+See also [Tomcat Deployment guide](https://tomcat.apache.org/tomcat-7.0-doc/appdev/deployment.html)
 
 ## Cheatsheet
 

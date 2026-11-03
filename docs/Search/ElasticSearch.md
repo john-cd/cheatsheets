@@ -3,6 +3,7 @@ title: ElasticSearch Cheatsheet
 category: search
 tags: IR
 ---
+
 <!-- TODO Reviewed ??-??-2026 -->
 
 # Cheatsheets
@@ -258,7 +259,7 @@ GET /megacorp/employee/1
 Field names can be any valid string, but may not include periods.
 Every document in Elasticsearch has a version number. Every time a change is made to a document (including deleting it), the \_version number is incremented.
 
-### *Optimistic concurrency control*
+### _Optimistic concurrency control_
 
 ```txt
 PUT /website/blog/1?version=1  { "title": "My first blog entry", "text": "Starting to get the hang of this..."}
@@ -293,7 +294,7 @@ Response:
 }
 ```
 
-\#  creating an entirely new document and not overwriting an existing one
+\# creating an entirely new document and not overwriting an existing one
 
 ```txt
 PUT /website/blog/123?op_type=create { ... }
@@ -403,7 +404,7 @@ POST /website/_bulk
 {"title":"My second blog post"}
 ```
 
-Try  around 5-15MB in size.
+Try around 5-15MB in size.
 
 ## MATCH
 
@@ -488,19 +489,19 @@ GET /_search { "query": { "match": { "tweet": "elasticsearch" } }, "sort": "twee
 Find all employees who enjoy "rock climbing" - and highlight the matches
 
 ```txt
-  GET /megacorp/employee/_search
-  {
-      "query" : {
-          "match_phrase" : {
-              "about" : "rock climbing"
-          }
-      },
-      "highlight": {
-          "fields" : {
-              "about" : {}
-          }
-      }
-  }
+GET /megacorp/employee/_search
+{
+    "query" : {
+        "match_phrase" : {
+            "about" : "rock climbing"
+        }
+    },
+    "highlight": {
+        "fields" : {
+            "about" : {}
+        }
+    }
+}
 ```
 
 ## ANALYSIS
@@ -530,54 +531,54 @@ Aggregations and searches can span multiple indices
 ### Calculate the most popular interests for all employees
 
 ```txt
-  GET /megacorp/employee/_search
-  {
-    "aggs": {
-      "all_interests": {
-        "terms": {
-          "field": "interests"
-        }
+GET /megacorp/employee/_search
+{
+  "aggs": {
+    "all_interests": {
+      "terms": {
+        "field": "interests"
       }
     }
   }
+}
 ```
 
 ### Calculate the most popular interests for employees named "Smith"
 
 ```txt
-  GET /megacorp/employee/_search
-  {
-    "query": {
-      "match": {
-        "last_name": "smith"
-      }
-    },
-    "aggs": {
-      "all_interests": {
-        "terms": {
-          "field": "interests"
-        }
+GET /megacorp/employee/_search
+{
+  "query": {
+    "match": {
+      "last_name": "smith"
+    }
+  },
+  "aggs": {
+    "all_interests": {
+      "terms": {
+        "field": "interests"
       }
     }
   }
+}
 ```
 
 ### Calculate the average age of employee per interest - hierarchical aggregates
 
 ```txt
-  GET /megacorp/employee/_search
-  {
-      "aggs" : {
-          "all_interests" : {
-              "terms" : { "field" : "interests" },
-              "aggs" : {
-                  "avg_age" : {
-                      "avg" : { "field" : "age" }
-                  }
-              }
-          }
-      }
-  }
+GET /megacorp/employee/_search
+{
+    "aggs" : {
+        "all_interests" : {
+            "terms" : { "field" : "interests" },
+            "aggs" : {
+                "avg_age" : {
+                    "avg" : { "field" : "age" }
+                }
+            }
+        }
+    }
+}
 ```
 
 requires in config/elasticsearch.yml
@@ -586,30 +587,30 @@ requires in config/elasticsearch.yml
 - script.indexed: true
 
 ```txt
-  GET /tlo/contacts/_search
-  {
-    "size" : 0,
-    "query": {
-      "constant_score": {
-        "filter": {
-          "terms": {
-            "version": [
-              "20160301",
-              "20160401"
-            ]
-          }
-        }
-      }
-    },
-    "aggs": {
-      "counts": {
-        "cardinality": {
-          "script": "doc['first_name'].value + ' ' + doc['last_name'].value + ' ' + doc['company'].value",
-          "missing": "N/A"
+GET /tlo/contacts/_search
+{
+  "size" : 0,
+  "query": {
+    "constant_score": {
+      "filter": {
+        "terms": {
+          "version": [
+            "20160301",
+            "20160401"
+          ]
         }
       }
     }
+  },
+  "aggs": {
+    "counts": {
+      "cardinality": {
+        "script": "doc['first_name'].value + ' ' + doc['last_name'].value + ' ' + doc['company'].value",
+        "missing": "N/A"
+      }
+    }
   }
+}
 ```
 
 ## INDEX MANAGEMENT
@@ -619,8 +620,8 @@ By default, indices are assigned five primary shards. The number of primary shar
 - Add an index
 
 ```txt
-  PUT /blogs { "settings" : { "number_of_shards" : 3, "number_of_replicas" : 1 }}
-  PUT /blogs/_settings { "number_of_replicas" : 2}
+PUT /blogs { "settings" : { "number_of_shards" : 3, "number_of_replicas" : 1 }}
+PUT /blogs/_settings { "number_of_replicas" : 2}
 ```
 
 - ElasticSearch Shards should be 50 GB or less in size.
@@ -642,7 +643,7 @@ GET /_cluster/health
 
 - Prefer not to allocate 30GB !! --> uncompressed pointers
 
-- Never let the JVM swap    bootstrap.mlockall = true
+- Never let the JVM swap bootstrap.mlockall = true
 
 - Keep the JVM defaults
 
@@ -669,7 +670,7 @@ to override the configuration file
 
 ### Discovery
 
-- AWS plugin available   --> also include integration with S3 (snapshot to S3)
+- AWS plugin available --> also include integration with S3 (snapshot to S3)
 - AWS: multi-AZ is OK but replication across far data centers is not recommended
 - See: resiliency
 
@@ -682,8 +683,8 @@ Install plugins on ALL machines of the cluster
 To install,
 
 ```bash
-  ./bin/plugin install marvel-agent
-  ./bin/plugin remove marvel-agent
+./bin/plugin install marvel-agent
+./bin/plugin remove marvel-agent
 ```
 
 One type per index is recommended, except for parent child / nested indexes.

@@ -3,6 +3,7 @@ title: Data Visualization
 category: datascience
 tags: data
 ---
+
 <!-- TODO Reviewed ??-??-2026 -->
 
 # Data Visualization
@@ -13,7 +14,7 @@ tags: data
 
 [19 Tools for Data Visualization Projects](https://www.upwork.com/hiring/data/19-data-visualization-tools/)
 
-[22 free tools for data visualization and analysis - Computerworld](https://www.computerworld.com/s/article/9215504/22_free_tools_for_data_visualization_and_analysis)
+[22 free tools for data visualization and analysis - Computerworld (2017)](https://www.computerworld.com/article/1545211/enterprise-applications-22-free-tools-for-data-visualization-and-analysis.html)
 
 [22 free tools for data visualization and analysis](https://www.guardian.co.uk/news/datablog/2012/mar/28/data-visualisation-tools-free)
 
@@ -27,7 +28,7 @@ D3 provides many built-in reusable functions and function factories, such as gra
 
 [C3.js](https://c3js.org/)
 
-[Google Charts](https://google-developers.appspot.com/chart/)
+[Google Charts](https://developers.google.com/chart/interactive/docs/)
 
 ## Tools
 

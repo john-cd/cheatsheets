@@ -3,6 +3,7 @@ title: Scala Language
 category: Scala
 tags: Scala
 ---
+
 <!-- TODO Reviewed ??-??-2026 -->
 
 # Scala Language
@@ -11,7 +12,7 @@ tags: Scala
 
 - [Scala Cheatsheet](https://docs.scala-lang.org/cheatsheets/)
 - [Scala @ TutorialPoint](https://www.tutorialspoint.com/scala/index.htm)
-- [Scala Tutorial (PDF)](https://www.scala-lang.org/docu/files/ScalaTutorial.pdf)
+- [Scala Tutorials](https://docs.scala-lang.org/tutorials.html)
 
 Some examples are derived from [Scala Koans](https://www.scalakoans.org/).
 
@@ -346,8 +347,8 @@ This also means that +, \*, etc. are valid identifiers in Scala.
 Infix Operators do NOT work if an object has a method that takes two parameters.
 
 ```scala
- val g: Int = 31
- val s: String = g toHexString // Postfix operators work if an object has a method that takes no parameters.
+val g: Int = 31
+val s: String = g toHexString // Postfix operators work if an object has a method that takes no parameters.
 ```
 
 Prefix operators work if an object has a method name that starts with unary\_
@@ -601,7 +602,7 @@ def addNaturals(nats: List[Int]): Int = {
 
 ### Path-dependent Classes
 
-When a class is instantiated inside of another object, it belongs to the instance.  This is a path dependent type. Once established, it cannot be placed inside of another object
+When a class is instantiated inside of another object, it belongs to the instance. This is a path dependent type. Once established, it cannot be placed inside of another object
 
 ```scala
 case class Board(length: Int, height: Int) {
@@ -928,55 +929,55 @@ Use traits:
 ## Keyword List
 
 ```txt
-    abstract
-    case
-    catch
-    class
-    def
-    do
-    else
-    extends
-    false
-    final
-    finally
-    for
-    forSome
-    if
-    implicit
-    import
-    lazy
-    match
-    new
-    Null
-    object
-    override
-    package
-    private
-    protected
-    return
-    sealed
-    super
-    this
-    throw
-    trait
-    Try
-    true
-    type
-    val
-    var
-    while
-    with
-    yield
-     -
-     :
-     =
-     =>
-    <-
-    <:
-    <%
-    >:
-    #
-    @
+abstract
+case
+catch
+class
+def
+do
+else
+extends
+false
+final
+finally
+for
+forSome
+if
+implicit
+import
+lazy
+match
+new
+Null
+object
+override
+package
+private
+protected
+return
+sealed
+super
+this
+throw
+trait
+Try
+true
+type
+val
+var
+while
+with
+yield
+ -
+ :
+ =
+ =>
+<-
+<:
+<%
+>:
+#
+@
 ```
 
 ## Scala 3 Features
@@ -1010,7 +1011,7 @@ def max[T](x: T, y: T)(using ord: Ord[T]): T =
 
 ## Scala Documentation
 
-[sbt-microsites- Getting Started](https://47deg.github.io/sbt-microsites/docs/)
+[sbt-microsites - Getting Started](https://47degrees.github.io/sbt-microsites/docs/getting-started/)
 
 ## Algebraic Data Types
 

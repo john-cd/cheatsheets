@@ -3,6 +3,7 @@ title: SQL Cheatsheet
 category: databases
 tags: SQL RDBMS
 ---
+
 <!-- TODO Reviewed ??-??-2026 -->
 
 # SQL Cheatsheet
@@ -11,14 +12,14 @@ Structured Query Language (SQL) is a domain-specific language used in programmin
 
 ## DML: SELECT
 
-*Filter*:
+_Filter_:
 
 ```SQL
 SELECT LastName, FirstName, Address FROM Persons
 WHERE Address IS NULL
 ```
 
-*Like*:
+_Like_:
 
 ```SQL
 SELECT * FROM Customers
@@ -31,7 +32,7 @@ SELECT * FROM Customers
 WHERE Country NOT LIKE '%land%';
 ```
 
-*Sort*:
+_Sort_:
 
 ```SQL
 SELECT * FROM Customers
@@ -41,7 +42,7 @@ SELECT * FROM Customers
 ORDER BY Country, CustomerName;
 ```
 
-*Limit*:
+_Limit_:
 
 ```SQL
 SELECT TOP number|percent column_name(s)
@@ -53,7 +54,7 @@ SELECT TOP 2 * FROM Customers;
 SELECT TOP 50 PERCENT * FROM Customers;
 ```
 
-*Oracle Syntax*:
+_Oracle Syntax_:
 
 ```SQL
 SELECT column_name(s)
@@ -61,7 +62,7 @@ FROM table_name
 WHERE ROWNUM <= number;
 ```
 
-*Joins*:
+_Joins_:
 
 ```SQL
 SELECT Customers.CustomerName, Orders.OrderID
@@ -71,7 +72,7 @@ ON Customers.CustomerID = Orders.CustomerID
 ORDER BY Customers.CustomerName;
 ```
 
-*Union*:
+_Union_:
 
 ```SQL
 SELECT column_name(s) FROM table1
@@ -83,7 +84,7 @@ UNION ALL
 SELECT column_name(s) FROM table2;
 ```
 
-*Select Into*:
+_Select Into_:
 
 ```SQL
 SELECT column_name(s)
@@ -91,7 +92,7 @@ INTO newtable [IN externaldb]
 FROM table1;
 ```
 
-*Formula*:
+_Formula_:
 
 ```SQL
 SELECT ProductName, UnitPrice*(UnitsInStock+ISNULL(UnitsOnOrder,0))
@@ -113,7 +114,7 @@ INSERT INTO Customers (CustomerName, City, Country)
 VALUES ('Cardinal', 'Stavanger', 'Norway');
 ```
 
-*Insert from select*:
+_Insert from select_:
 
 ```SQL
 INSERT INTO table2(column_name(s))
@@ -161,7 +162,7 @@ DROP DATABASE my_db;
 
 ## Tables
 
-*Create*:
+_Create_:
 
 ```SQL
 CREATE TABLE table_name
@@ -212,14 +213,14 @@ ALTER TABLE Persons
 DROP CONSTRAINT uc_PersonID
 ```
 
-*Temporary Table*:
+_Temporary Table_:
 
 ```SQL
 CREATE TABLE #MyTempTable (cola INT PRIMARY KEY);
 INSERT INTO #MyTempTable VALUES (1);
 ```
 
-*Drop / Truncate*:
+_Drop / Truncate_:
 
 ```SQL
 DROP TABLE table_name
@@ -440,7 +441,7 @@ WHERE condition
 DROP VIEW view_name
 ```
 
-*Examples*:
+_Examples_:
 
 ```SQL
 CREATE VIEW [Products Above Average Price] AS
@@ -472,7 +473,7 @@ DATEDIFF() -- Returns the time between two dates
 CONVERT()  -- Displays date/time data in different formats
 ```
 
-*Example*:
+_Example_:
 
 ```SQL
 CREATE TABLE Orders
@@ -647,12 +648,12 @@ SQL aggregate functions return a single value, calculated from values in a colum
 
 Useful aggregate functions:
 
-- `AVG()`   - Returns the average value
+- `AVG()` - Returns the average value
 - `COUNT()` - Returns the number of rows
-- `TOP 1`   - Single sample
-- `MAX()`   - Returns the largest value
-- `MIN()`   - Returns the smallest value
-- `SUM()`   - Returns the sum
+- `TOP 1` - Single sample
+- `MAX()` - Returns the largest value
+- `MIN()` - Returns the smallest value
+- `SUM()` - Returns the sum
 
 Examples:
 
@@ -806,19 +807,19 @@ GO
 Q. Here's the data in a table 'orders'
 
 customer_id order_id order_day
-123        27424624    25Dec2011
-123        89690900    25Dec2010
-797        12131323    25Dec2010
-876        67145419    15Dec2011
+123 27424624 25Dec2011
+123 89690900 25Dec2010
+797 12131323 25Dec2010
+876 67145419 15Dec2011
 
 Could you give me SQL for customers who placed orders on both the days, 25th Dec 2010 and 25th Dec 2011?
 
 ```SQL
-  SELECT o.customer_id, o.order_day
-  FROM orders AS o
-  INNER JOIN orders AS o1
-  ON o.customer_id = o1.customer_id
-  WHERE ...
+SELECT o.customer_id, o.order_day
+FROM orders AS o
+INNER JOIN orders AS o1
+ON o.customer_id = o1.customer_id
+WHERE ...
 ```
 
 ## Modern SQL Dialects

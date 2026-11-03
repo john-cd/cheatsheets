@@ -2,6 +2,7 @@
 title: Helm Chart Creation
 tags: Kubernetes MiniKube Kubectl
 ---
+
 <!-- TODO Reviewed ??-??-2026 -->
 
 # Helm Chart Creation
@@ -9,7 +10,7 @@ tags: Kubernetes MiniKube Kubectl
 ## Links
 
 - [Helm Charts Documentation](https://helm.sh/docs/topics/charts/)
-- [How to create your first Helm chart](https://docs.bitnami.com/kubernetes/how-to/create-your-first-helm-chart/)
+- [Getting started with Helm chart templates](https://helm.sh/docs/v3/chart_template_guide/getting_started/)
 
 ## Steps
 

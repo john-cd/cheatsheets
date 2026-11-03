@@ -3,6 +3,7 @@ title: Scala Design Patterns
 category: Scala
 tags: Scala, Design Patterns
 ---
+
 <!-- TODO Reviewed ??-??-2026 -->
 
 # Scala Design Patterns
@@ -172,7 +173,6 @@ object ComponentRegistry extends
 // =======================
 val warmer = ComponentRegistry.warmer
 warmer.trigger
-
 ```
 
 ## Type Classes (using context-bound type parameters)

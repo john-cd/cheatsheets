@@ -3,17 +3,18 @@ title: Git Cheatsheet
 category: sourcecontrol
 tags: SCM DevOps
 ---
+
 <!-- TODO Reviewed ??-??-2026 -->
 
 # Git Cheatsheets
 
 - [Graphical git cheatsheet](https://byte.kde.org/~zrusin/git/git-cheat-sheet-medium.png)
 - [Git basic commands](https://www.atlassian.com/git/tutorials/svn-to-git-prepping-your-team-migration/basic-git-commands)
-- [Git cheatsheet (visual)](https://www.maxoberberger.net/media/cheatsheet/git-cheatsheet-visual.pdf)
+- [Git cheatsheet (PDF)](https://training.github.com/downloads/github-git-cheat-sheet.pdf)
 - [Git cheatsheet (interactive)](https://ndpsoftware.com/git-cheatsheet.html#loc=workspace)
 - [Git full documentation](https://git-scm.com/doc)
 
-*Repo hosting:*
+_Repo hosting:_
 
 - [BitBucket](https://bitbucket.org/)
 - [GitHub](https://github.com/)
@@ -128,7 +129,7 @@ git checkout HEAD hello.py      #  Check out the most recent version
 
 Branches are just pointers to commits.
 
-- List all of the branches in your repository.  Also tell you what branch you're currently in ('\*' branch):
+- List all of the branches in your repository. Also tell you what branch you're currently in ('\*' branch):
 
 ```bash
 git branch

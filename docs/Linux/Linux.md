@@ -3,6 +3,7 @@ title: Linux Cheatsheet
 category: Linux
 tags:
 ---
+
 <!-- TODO Reviewed ??-??-2026 -->
 
 ## Vim
@@ -120,7 +121,7 @@ yum install -y amazon-ssm-agent.rpm
 
 ## Linux desktop
 
-[How can I connect to an Amazon EC2 Linux instance with desktop functionality from Windows?](https://aws.amazon.com/premiumsupport/knowledge-center/connect-to-linux-desktop-from-windows/)
+[Install Amazon DCV on Linux for remote desktop access](https://docs.aws.amazon.com/dcv/latest/adminguide/setting-up-installing-linux.html)
 
 ## Modern CLI Tooling
 

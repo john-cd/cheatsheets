@@ -3,6 +3,7 @@ title: Scala Database Access
 category: Scala
 tags: Scala, DB
 ---
+
 <!-- TODO Reviewed ??-??-2026 -->
 
 # Scala Database Access
@@ -19,7 +20,7 @@ tags: Scala, DB
 
 [SORM](https://sorm-framework.org/)
 
-[Doobie](https://tpolecat.github.io/doobie/)
+[Doobie](https://typelevel.org/doobie/)
 
 [ReactiveMongo](https://reactivemongo.org/)
 

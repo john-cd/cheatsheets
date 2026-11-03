@@ -4,11 +4,12 @@ category: dotNET
 tags: .NET C#
 comments: true
 ---
+
 <!-- TODO Reviewed ??-??-2026 -->
 
 # C# Cheatsheets
 
-[Quick Reference](https://www.digilife.be/quickreferences/qrc/core%20csharp%20and%20.net%20quick%20reference.pdf)
+[C# language reference](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/)
 
 [Cheatsheet](https://www.cheatography.com/kimyo/cheat-sheets/c/)
 

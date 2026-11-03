@@ -4,6 +4,7 @@ category: dotNET
 tags: .NET C#
 comments: true
 ---
+
 <!-- TODO Reviewed ??-??-2026 -->
 
 # WPF
@@ -32,7 +33,7 @@ comments: true
 
 ### Commands
 
-[WPF Commands](<https://msdn.microsoft.com/en-us/library/ms752308(v=vs.110).aspx>)
+[WPF Commands](https://msdn.microsoft.com/en-us/library/ms752308(v=vs.110).aspx)
 
 WPF provides a set of predefined commands. The command library consists of the following classes: ApplicationCommands, NavigationCommands, MediaCommands, EditingCommands, and the ComponentCommands.
 

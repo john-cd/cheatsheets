@@ -1,12 +1,12 @@
 // TODO Reviewed ??-??-2026
 
 {
-    "cSpell.enabled": true,
-    "cSpell.words": [
-        "Anson",
-        "Buildx",
-        "debugpy",
-        "moby",
-        "pylance"
-    ]
+  "cSpell.enabled": true,
+  "cSpell.words": [
+    "Anson",
+    "Buildx",
+    "debugpy",
+    "moby",
+    "pylance"
+  ]
 }

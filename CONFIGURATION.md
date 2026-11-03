@@ -1,6 +1,7 @@
 # Repository configuration
 
 Reviewed 2026-11-01. This is the consistency plan and reference for `cheatsheets`.
+
 <!-- TODO Reviewed ??-??-2026 -->
 
 Keep this file, README, contributor guidance, and configuration comments synchronized.
@@ -15,26 +16,26 @@ Keep this file, README, contributor guidance, and configuration comments synchro
 
 ## File ownership
 
-| Files | Convention |
-| --- | --- |
-| `.editorconfig`, `.gitattributes` | Use UTF-8 and LF; use four-space Python indentation and two-space configuration indentation. |
-| `.gitignore`, `.dockerignore`, `.aiexclude` | Exclude Python environments, caches, generated outputs, and worktrees; keep maintained configuration and lockfiles reviewable. Ignore files are not a security boundary. |
-| `AGENTS.md`, `CONTRIBUTING.md`, `README.md` | Keep repository-specific commands, ownership, and examples; link this reference. |
-| `pyproject.toml`, `uv.lock`, `.python-version` | Keep Python versions, dependency resolution, and Python tooling configuration in sync. |
-| `prek.toml`, `dprint.jsonc` | Use dprint for Markdown and shared config formatting, markdownlint for Markdown lint, and Ruff for Python formatting and linting. |
-| `.github/`, `.devcontainer/`, `Dockerfile*` | Preserve workflow and container behavior; keep Python pins, dependency installation, and lockfile usage consistent. |
+| Files                                          | Convention                                                                                                                                                               |
+| ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `.editorconfig`, `.gitattributes`              | Use UTF-8 and LF; use four-space Python indentation and two-space configuration indentation.                                                                             |
+| `.gitignore`, `.dockerignore`, `.aiexclude`    | Exclude Python environments, caches, generated outputs, and worktrees; keep maintained configuration and lockfiles reviewable. Ignore files are not a security boundary. |
+| `AGENTS.md`, `CONTRIBUTING.md`, `README.md`    | Keep repository-specific commands, ownership, and examples; link this reference.                                                                                         |
+| `pyproject.toml`, `uv.lock`, `.python-version` | Keep Python versions, dependency resolution, and Python tooling configuration in sync.                                                                                   |
+| `prek.toml`, `dprint.jsonc`                    | Use dprint for Markdown and shared config formatting, markdownlint for Markdown lint, and Ruff for Python formatting and linting.                                        |
+| `.github/`, `.devcontainer/`, `Dockerfile*`    | Preserve workflow and container behavior; keep Python pins, dependency installation, and lockfile usage consistent.                                                      |
 
 ## Dependency updates
 
 Dependabot runs monthly on Monday at 6:00 a.m. Pacific with grouped minor/patch updates. The maintained roots are the Python project at `/`, Docker and Compose under `/.devcontainer`, devcontainer features at `/`, and GitHub Actions at `/`. Revisit this section and `.github/dependabot.yml` whenever a dependency root, Dockerfile, chart, or local action is added.
 
-| Ecosystem | Roots |
-| --- | --- |
-| `uv` | `/` |
-| `docker` | `/.devcontainer` |
+| Ecosystem        | Roots            |
+| ---------------- | ---------------- |
+| `uv`             | `/`              |
+| `docker`         | `/.devcontainer` |
 | `docker-compose` | `/.devcontainer` |
-| `devcontainers` | `/` |
-| `github-actions` | `/` |
+| `devcontainers`  | `/`              |
+| `github-actions` | `/`              |
 
 GitHub Actions uses `/` for workflows and explicit directories for nested composite actions. Dependabot can update supported tool versions, container images/features, charts, and packages; it does not update arbitrary version strings in shell scripts or custom formatter-pin files.
 

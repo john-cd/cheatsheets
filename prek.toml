@@ -7,37 +7,44 @@ minimum_prek_version = "0.5.6"
 [[repos]]
 repo = "builtin"
 hooks = [
-    { id = "check-added-large-files" },
-    { id = "check-case-conflict" },
-    { id = "check-illegal-windows-names" },
-    { id = "check-merge-conflict" },
-    { id = "check-toml" },
-    { id = "check-vcs-permalinks" },
-    { id = "check-yaml" },
-    { id = "detect-private-key" },
-    { id = "end-of-file-fixer" },
-    { id = "fix-byte-order-marker" },
-    { id = "mixed-line-ending", args = ["--fix=lf"] },
-    { id = "trailing-whitespace", args = ["--markdown-linebreak-ext=md"] },
+  { id = "check-added-large-files" },
+  { id = "check-case-conflict" },
+  { id = "check-illegal-windows-names" },
+  { id = "check-merge-conflict" },
+  { id = "check-toml" },
+  { id = "check-vcs-permalinks" },
+  { id = "check-yaml" },
+  { id = "detect-private-key" },
+  { id = "end-of-file-fixer" },
+  { id = "fix-byte-order-marker" },
+  { id = "mixed-line-ending", args = ["--fix=lf"] },
+  { id = "trailing-whitespace", args = ["--markdown-linebreak-ext=md"] },
 ]
 
 [[repos]]
 repo = "https://github.com/igorshubovych/markdownlint-cli"
 rev = "v0.48.0"
 hooks = [
-    { id = "markdownlint", name = "Lint Markdown", args = ["--fix"] },
+  { id = "markdownlint", name = "Lint Markdown", args = ["--fix"] },
 ]
 
 [[repos]]
 repo = "https://github.com/tcort/markdown-link-check"
 rev = "v3.14.2"
 hooks = [
-    { id = "markdown-link-check", name = "Check for broken links", args = ["--config", ".markdown-link-check.json"] },
+  { id = "markdown-link-check", name = "Check for broken links", args = [
+    "--config",
+    ".markdown-link-check.json",
+  ] },
 ]
 
 [[repos]]
 repo = "local"
 hooks = [
-    { id = "ruff-check", name = "Ruff check", entry = "just lint", language = "system", types = ["python"], pass_filenames = false },
-    { id = "ruff-format", name = "Ruff format", entry = "just fmt-check", language = "system", types = ["python"], pass_filenames = false },
+  { id = "ruff-check", name = "Ruff check", entry = "just lint", language = "system", types = [
+    "python",
+  ], pass_filenames = false },
+  { id = "ruff-format", name = "Ruff format", entry = "just fmt-check", language = "system", types = [
+    "python",
+  ], pass_filenames = false },
 ]

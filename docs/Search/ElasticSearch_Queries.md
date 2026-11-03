@@ -2,6 +2,7 @@
 title: ElasticSearch Queries
 category: search
 ---
+
 <!-- TODO Reviewed ??-??-2026 -->
 
 # ElasticSearch Queries
@@ -134,7 +135,7 @@ You can control dynamic nature of mappings
 Mapping (or schema definition) for the tweet type in the gb index
 
 ```txt
-  GET /gb/_mapping/tweet
+GET /gb/_mapping/tweet
 ```
 
 Elasticsearch supports the following simple field types:
@@ -157,23 +158,23 @@ The index attribute controls how the string will be indexed. It can contain one 
 If we want to map the field as an exact value, we need to set it to not_analyzed:
 
 ```txt
-  {
-    "tag": {
-    "type": "string",
-    "index": "not_analyzed"
-    }
+{
+  "tag": {
+  "type": "string",
+  "index": "not_analyzed"
   }
+}
 ```
 
 For analyzed string fields, use the analyzer attribute to specify which analyzer to apply both at search time and at index time. By default, Elasticsearch uses the standard analyzer, but you can change this by specifying one of the built-in analyzers, such as whitespace, simple, or english:
 
 ```txt
-  {
-    "tweet": {
-    "type": "string",
-    "analyzer": "english"
-    }
+{
+  "tweet": {
+  "type": "string",
+  "analyzer": "english"
   }
+}
 ```
 
 ### Create a new index, specifying that the tweet field should use the english analyzer

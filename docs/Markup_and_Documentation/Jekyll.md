@@ -5,6 +5,7 @@ date: "2017-02-20 11:41:26 -0800"
 category: frontend
 tags: blog jekyll
 ---
+
 <!-- TODO Reviewed ??-??-2026 -->
 
 # Jekyll Basics
@@ -158,10 +159,12 @@ Jekyll also offers powerful support for code snippets:
 ```md
 {% highlight ruby %}
 def print_hi(name)
-  puts "Hi, #{name}"
+puts "Hi, #{name}"
 end
 print_hi('Tom')
+
 ## => prints 'Hi, Tom' to STDOUT.
+
 {% endhighlight %}
 ```
 

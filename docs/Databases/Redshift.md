@@ -3,6 +3,7 @@ title: RedShift
 category: databases
 tags: Redshift DW Warehouse
 ---
+
 <!-- TODO Reviewed ??-??-2026 -->
 
 # RedShift

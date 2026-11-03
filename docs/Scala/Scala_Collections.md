@@ -3,6 +3,7 @@ title: Scala Collections
 category: scala
 tags:
 ---
+
 <!-- TODO Reviewed ??-??-2026 -->
 
 # Scala Collections
@@ -33,11 +34,11 @@ Notable packages include:
 Additional parts of the standard library are shipped as separate libraries. These include:
 
 ```txt
-  scala.reflect - Scala's reflection API (scala-reflect.jar)
-  scala.xml - XML parsing, manipulation, and serialization (scala-xml.jar)
-  scala.swing - A convenient wrapper around Java's GUI framework called Swing (scala-swing.jar)
-  scala.util.parsing - Parser combinators (scala-parser-combinators.jar)
-  Automatic imports
+scala.reflect - Scala's reflection API (scala-reflect.jar)
+scala.xml - XML parsing, manipulation, and serialization (scala-xml.jar)
+scala.swing - A convenient wrapper around Java's GUI framework called Swing (scala-swing.jar)
+scala.util.parsing - Parser combinators (scala-parser-combinators.jar)
+Automatic imports
 ```
 
 Identifiers in the scala package and the scala.Predef object are always in scope by default.
@@ -345,10 +346,10 @@ val value = someValue match {     // pattern matching
 - Option is more than just a replacement of null, its also a collection.
 
 ```scala
-    Some(10) filter { _ == 10}
-    Some(Some(10)) flatMap { _ map { _ + 10}}
-  var newValue1 = 0
-    Some(20) foreach { newValue1 = _}
+  Some(10) filter { _ == 10}
+  Some(Some(10)) flatMap { _ map { _ + 10}}
+var newValue1 = 0
+  Some(20) foreach { newValue1 = _}
 ```
 
 - flatMap of Options will filter out all Nones and keep the Somes
@@ -361,11 +362,11 @@ val result = list.flatMap(it => if (it % 2 == 0) Some(it) else None)
 - Using "for comprehension"
 
 ```scala
-    val values = List(Some(10), Some(20), None, Some(15))
-    val newValues = for {
-      someValue <- values
-      value <- someValue
-    } yield value
+val values = List(Some(10), Some(20), None, Some(15))
+val newValues = for {
+  someValue <- values
+  value <- someValue
+} yield value
 ```
 
 ## Java Interop

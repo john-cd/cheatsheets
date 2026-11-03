@@ -3,6 +3,7 @@ title: ElasticSearch APIs
 category: search
 tags: elasticsearch
 ---
+
 <!-- TODO Reviewed ??-??-2026 -->
 
 ## ElasticSearch 8.x Modern APIs

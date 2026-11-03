@@ -3,6 +3,7 @@ title: Keras Cheatsheet
 category: datascience
 tags: deep learning
 ---
+
 <!-- TODO Reviewed ??-??-2026 -->
 
 # Useful Links
@@ -13,7 +14,7 @@ tags: deep learning
 
 - [Building autoencoders in Keras](https://blog.keras.io/building-autoencoders-in-keras.html)
 
-- [manifold-learning-and-autoencoders](https://www.kaggle.com/apapiu/digit-recognizer/manifold-learning-and-autoencoders)
+- [Manifold learning and autoencoders notebook](https://www.kaggle.com/code/apapiu/manifold-learning-autoencoders-fashion-version)
 
 - [Keras tutorial for Kaggle 2nd Annual Data Science Bowl](https://github.com/jocicmarko/kaggle-dsb2-keras/)
 

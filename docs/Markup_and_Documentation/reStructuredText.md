@@ -3,6 +3,7 @@ title: reStructuredText Cheatsheet
 category: markup
 tags: python
 ---
+
 <!-- TODO Reviewed ??-??-2026 -->
 
 # reStructuredText
@@ -13,7 +14,7 @@ reStructuredText is an easy-to-read, what-you-see-is-what-you-get plaintext mark
 
 [reStructuredText Quick Ref](https://docutils.sourceforge.io/docs/user/rst/quickref.html)
 
-[reStructuredText Cheat Sheet](https://docutils.sourceforge.io/docs/user/rst/cheatsheet.txt)  (see below)
+[reStructuredText Cheat Sheet](https://docutils.sourceforge.io/docs/user/rst/quickref.html) (see below)
 
 ## reST Short Overview
 
@@ -89,7 +90,7 @@ This is a normal text paragraph again.
 ### Footnotes
 
 ```txt
- Lorem ipsum [#]_ dolor sit amet ... [#]_
+Lorem ipsum [#]_ dolor sit amet ... [#]_
 ```
 
 ## Use of reStructuredText in Python docstrings
@@ -118,11 +119,11 @@ See <https://infinitemonkeycorps.net/docs/pph/>
 
 - Normal docstring formatting conventions apply: see PEP 257.
 - Identifier references go in \`backticks\`.
-- `:param lat: some text`  _documents parameters_
+- `:param lat: some text` _documents parameters_
 - `:type lat: float` _documents parameter types_
 - `:return:` dictionary giving some info... _documents return values_
 - `:rtype: dict` _documents return type_
-- `:raises SomeError:` sometext...  _documents exceptions raised_
+- `:raises SomeError:` sometext... _documents exceptions raised_
 - `>>>` _starts a doctest and is automatically formatted as code_
 - Code can also be indicated by indenting four spaces or preceding with `::` and a blank line
 - Link to other methods, functions, classes, modules with :meth:`mymethod`,

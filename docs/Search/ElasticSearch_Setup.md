@@ -2,6 +2,7 @@
 title: ElasticSearch Setup
 category: search
 ---
+
 <!-- TODO Reviewed ??-??-2026 -->
 
 # ElasticSearch Setup
@@ -34,7 +35,7 @@ curl 'https://localhost:9200/?pretty'
 ./bin/kibana plugin --install elastic/sense
 ```
 
-*On Windows:*
+_On Windows:_
 
 ```bash
 bin\kibana.bat plugin --install elastic/sense

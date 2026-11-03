@@ -3,6 +3,7 @@ title: Markdown Essentials
 category: markup
 tags: github
 ---
+
 <!-- TODO Reviewed ??-??-2026 -->
 
 # Markdown Essentials
@@ -40,10 +41,10 @@ Syntax highlighted code block
 ## Emphasis
 
 ```txt
- *single asterisks*
- _single underscores_
- **double asterisks**
- __double underscores__
+*single asterisks*
+_single underscores_
+**double asterisks**
+__double underscores__
 ```
 
 Emphasis can be used in the `mi\*dd\*le of a word`.
@@ -100,14 +101,14 @@ def wiki_rocks(text):
 ## Blockquotes
 
 ```txt
- > This is a blockquote with two paragraphs.
- >
- > Second paragraph.
+> This is a blockquote with two paragraphs.
+>
+> Second paragraph.
 ```
 
 ## GitHub Pages
 
-[GitHub Pages documentation](https://help.github.com/categories/github-pages-basics/)
+[GitHub Pages documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages)
 
 GitHub Pages site will use the layout and styles from the Jekyll theme you have selected in your repository settings. The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
@@ -127,7 +128,7 @@ print "iteration {iteration} is {name}".format(iteration=i, name=name)
 
 ### Clonig Bitbucket Wiki
 
-[Cloning your Bitbucket Wiki](https://confluence.atlassian.com/display/BITBUCKET/View+and+edit+pages)
+[Create or edit a Bitbucket wiki page](https://support.atlassian.com/bitbucket-cloud/docs/create-or-edit-a-wiki-page/)
 
 ```bash
 git clone https://bitbucket.org/MY_USER/MY_REPO/wiki
@@ -139,7 +140,7 @@ Current standards heavily follow [CommonMark](https://commonmark.org/).
 
 ### Syntax Examples
 
-**Bold** and *Italic*
+**Bold** and _Italic_
 
 ### Lists
 

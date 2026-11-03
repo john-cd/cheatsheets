@@ -2,6 +2,7 @@
 title: Docker Cheatsheet
 category: devops
 ---
+
 <!-- TODO Reviewed ??-??-2026 -->
 
 # Docker Cheatsheet
@@ -102,7 +103,7 @@ docker info
 
 ## Port Mapping
 
-`-p 80:5000`  would map port 80 on our local host to port 5000 inside our container.
+`-p 80:5000` would map port 80 on our local host to port 5000 inside our container.
 
 ```bash
 docker run -d -p 80:5000 training/webapp python app.py
@@ -124,7 +125,7 @@ docker run -d -P training/webapp python app.py
 
 ## Linking
 
-`--link <name or id>:alias` where *name* is the name of the container we’re linking to and *alias* is an alias for the link name.
+`--link <name or id>:alias` where _name_ is the name of the container we’re linking to and _alias_ is an alias for the link name.
 The `--link` flag also takes the form: `--link <name or id>`
 
 ```bash
@@ -161,7 +162,7 @@ Mount the host directory, `/src/webapp`, into the container at `/opt/webapp`.
 docker run -d -P --name web -v /src/webapp:/opt/webapp training/webapp python app.py
 ```
 
-On Windows, use:  `docker run -v /c/Users/<path>:/<container path> ...`
+On Windows, use: `docker run -v /c/Users/<path>:/<container path> ...`
 
 ## Example Dockerfile
 
@@ -204,7 +205,7 @@ CMD ["./myapp"]
 `compose.yaml` (or `compose.yaml`) to define and run multi-container applications:
 
 ```yaml
-version: '3.8'
+version: "3.8"
 
 services:
   web:

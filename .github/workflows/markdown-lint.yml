@@ -6,17 +6,17 @@ on:
   push:
     branches: [main, develop]
     paths:
-      - '**.md'
-      - 'prek.toml'
-      - 'pyproject.toml'
-      - 'uv.lock'
-      - '.python-version'
-      - 'justfile'
-      - 'scripts/env.just'
+      - "**.md"
+      - "prek.toml"
+      - "pyproject.toml"
+      - "uv.lock"
+      - ".python-version"
+      - "justfile"
+      - "scripts/env.just"
   pull_request:
     branches: [main, develop]
     paths:
-      - '**.md'
+      - "**.md"
 
 jobs:
   prek:
@@ -34,7 +34,7 @@ jobs:
       - uses: astral-sh/setup-uv@v7
         with:
           enable-cache: true
-          cache-dependency-glob: '**/uv.lock'
+          cache-dependency-glob: "**/uv.lock"
       - run: just sync
       - run: just uv tool install prek
       - run: just hooks

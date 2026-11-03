@@ -3,6 +3,7 @@ title: IPython / Jupyter Cheatsheet
 category: python
 tags:
 ---
+
 <!-- TODO Reviewed ??-??-2026 -->
 
 # IPython and Jupyter
@@ -39,7 +40,7 @@ help                    # python help system
 ??someobj or someobj??  # detailed help
 ```
 
-`%pdoc` `%pdef` `%psource`  for docstring, function definition, source code only.
+`%pdoc` `%pdef` `%psource` for docstring, function definition, source code only.
 
 ### Run
 
@@ -139,7 +140,7 @@ from numpy import *
 
 ### Qtconsole
 
-[Qtconsole - an improved console](https://ipython.org/ipython-doc/stable/interactive/qtconsole.html)
+[Qtconsole - an improved console](https://qtconsole.readthedocs.io/en/stable/)
 
 At the command prompt:
 
@@ -182,14 +183,14 @@ display(f)
 In command mode:
 
 ```txt
-     h list of keyboard shortcuts
-     1-6 to convert to heading cell
-     m to convert to markdown cell
-     y to convert to code
-     c copy / v paste
-     d d delete cell
-     s save notebook
-     . to restart kernel
+h list of keyboard shortcuts
+1-6 to convert to heading cell
+m to convert to markdown cell
+y to convert to code
+c copy / v paste
+d d delete cell
+s save notebook
+. to restart kernel
 ```
 
 ## Papermill

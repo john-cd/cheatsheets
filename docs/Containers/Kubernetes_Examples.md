@@ -2,6 +2,7 @@
 title: Kubernetes Examples
 tags: Kubernetes
 ---
+
 <!-- TODO Reviewed ??-??-2026 -->
 
 # Service + Deployment example
@@ -15,10 +16,10 @@ spec:
   selector:
     app: p2p-robot
   ports:
-  - name: http
-    protocol: TCP
-    port: 80
-    targetPort: http # can a text label (port name) or port number
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: http # can a text label (port name) or port number
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -28,33 +29,33 @@ spec:
   selector:
     matchLabels:
       app: p2p-robot
-  replicas: 2          # tells deployment to run 2 pods matching the template
-  template:            # create pods using pod definition in this template
+  replicas: 2 # tells deployment to run 2 pods matching the template
+  template: # create pods using pod definition in this template
     metadata:
       # the name is not included in the meta data as a unique name is
       # generated from the deployment name
       labels:
         app: p2p-robot # label used above in matchLabels
     spec:
-        containers:
+      containers:
         - name: p2p-robot
           image: "johncd/p2p-robot:1.0.0"
           imagePullPolicy: IfNotPresent
           ports:
-          - containerPort: 9000
-            name: http
+            - containerPort: 9000
+              name: http
           env:
-          - name: APPLICATION_SECRET    #  Place the application secret in an environment variable, which is read in application.conf
-            valueFrom:
+            - name: APPLICATION_SECRET #  Place the application secret in an environment variable, which is read in application.conf
+              valueFrom:
                 secretKeyRef:
                   name: application-secret
                   key: application_secret
           volumeMounts:
-          - name: conf-volume
-            mountPath: /usr/local/etc
-        volumes:
+            - name: conf-volume
+              mountPath: /usr/local/etc
+      volumes:
         - name: conf-volume
-          configMap:            # The configMap resource provides a way to inject configuration data into Pods.
+          configMap: # The configMap resource provides a way to inject configuration data into Pods.
             name: app-conf
 ```
 
@@ -132,7 +133,7 @@ spec:
     singular: crontab
     kind: CronTab
     shortNames:
-    - ct
+      - ct
 ```
 
 Once the CRD is created in the cluster, you can create instances of your new Custom Resource (CR):

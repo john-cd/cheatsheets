@@ -3,6 +3,7 @@ title: ElasticSearch Architecture and Configuration
 category: search
 tags: elasticsearch
 ---
+
 <!-- TODO Reviewed ??-??-2026 -->
 
 # ElasticSearch Architecture and Configuration
@@ -17,7 +18,7 @@ tags: elasticsearch
 
 - Prefer not to allocate 30GB !! --> uncompressed pointers
 
-- Never let the JVM swap    bootstrap.mlockall = true
+- Never let the JVM swap bootstrap.mlockall = true
 
 - Keep the JVM defaults
 
@@ -44,7 +45,7 @@ to override the configuration file
 
 ### Discovery
 
-- AWS plugin available   --> also include integration with S3 (snapshot to S3)
+- AWS plugin available --> also include integration with S3 (snapshot to S3)
 - AWS: multi-AZ is OK but replication across far data centers is not recommended
 - See: resiliency
 
@@ -57,8 +58,8 @@ Install plugins on ALL machines of the cluster
 To install,
 
 ```bash
-  ./bin/plugin install marvel-agent
-  ./bin/plugin remove marvel-agent
+./bin/plugin install marvel-agent
+./bin/plugin remove marvel-agent
 ```
 
 One type per index is recommended, except for parent child / nested indexes.

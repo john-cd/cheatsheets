@@ -2,6 +2,7 @@
 title: Deploy to Kubernetes (Helm)
 tags: Kubernetes MiniKube Kubectl
 ---
+
 <!-- TODO Reviewed ??-??-2026 -->
 
 # Deploy to Kubernetes (Helm)
@@ -149,7 +150,7 @@ helm uninstall <release name>
 
 ```yaml
 ingress:
-  enabled: true  # or: false; true by default
+  enabled: true # or: false; true by default
 ```
 
 - If true, make sure the minikube Ingress add-on is enabled
@@ -177,9 +178,9 @@ openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout tls.key -out tls.crt
 Note: To find myhost.com for minikube, run the following commands:
 
 ```shell
- $ minikube ssh
- $ echo $HOSTNAME
- minikube
+$ minikube ssh
+$ echo $HOSTNAME
+minikube
 ```
 
 - Create a Kubernetes secret
@@ -193,9 +194,9 @@ kubectl create secret tls my-secret --key tls.key --cert tls.crt
 Add under `spec:` in
 
 ```yaml
-  tls:
+tls:
   - hosts:
-    - myhost.com
+      - myhost.com
     secretName: my-secret
 ```
 

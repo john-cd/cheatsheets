@@ -3,6 +3,7 @@ title: Scala Patterns
 category: Scala
 tags: Scala
 ---
+
 <!-- TODO Reviewed ??-??-2026 -->
 
 # Algebraic Data Types

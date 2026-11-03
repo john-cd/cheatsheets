@@ -17,7 +17,7 @@ libraryDependencies ++= Seq(
 )
 ```
 
-*Note:* Using `% "provided"` means you expect the Spark libraries to be present on the cluster where you submit the job, keeping your "fat jar" small. For local testing from within IntelliJ, you may need to temporarily remove `"provided"`.
+_Note:_ Using `% "provided"` means you expect the Spark libraries to be present on the cluster where you submit the job, keeping your "fat jar" small. For local testing from within IntelliJ, you may need to temporarily remove `"provided"`.
 
 ## Packaging and Submission
 
@@ -29,7 +29,7 @@ $ sbt assembly
 [info] Packaging {..}/{..}/target/scala-2.12/simple-project-assembly-1.0.jar
 ```
 
-*Note:* Do not use `sbt run` for Spark cluster applications.
+_Note:_ Do not use `sbt run` for Spark cluster applications.
 
 Then use [spark-submit](https://spark.apache.org/docs/latest/submitting-applications.html#launching-applications-with-spark-submit) to run your application:
 

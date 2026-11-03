@@ -3,6 +3,7 @@ title: Play Framework
 category: Scala
 tag: Scala Akka Play Web REST
 ---
+
 <!-- TODO Reviewed ??-??-2026 -->
 
 # Play Framework
@@ -86,8 +87,6 @@ class HomeController @Inject()(val controllerComponents: ControllerComponents) e
 [yohangz-scala-play-angular-seed- Scala Play 2.6.x + Angular 5 with Angular CLI seed project with full-fledged build process](https://github.com/yohangz/scala-play-angular-seed)
 
 [Getting Started With Play Framework - DZone - Refcardz](https://dzone.com/refcardz/getting-started-play-framework?chapter=10)
-
-[How Visier Accelerates Developer Productivity with Play Framework, Typescript and Angular 2 - @lightbend](https://www.lightbend.com/blog/getting-started-with-angular-2)
 
 [jamesward-play-rest-security](https://github.com/jamesward/play-rest-security)
 

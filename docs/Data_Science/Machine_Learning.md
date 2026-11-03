@@ -4,6 +4,7 @@ category: datascience
 tags: ML data
 comments: true
 ---
+
 <!-- TODO Reviewed ??-??-2026 -->
 
 # Useful Links
@@ -59,7 +60,7 @@ comments: true
 ## Tutorials
 
 - [machinelearningmastery.com](https://machinelearningmastery.com/)
-- [Kaggle](https://www.kaggle.com/wiki/Tutorials)
+- [Kaggle Learn](https://www.kaggle.com/learn)
 
 ## Books
 

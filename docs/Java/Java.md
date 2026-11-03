@@ -4,6 +4,7 @@ category: java
 tags: libraries tools
 comments: true
 ---
+
 <!-- TODO Reviewed ??-??-2026 -->
 
 # Java Pointers
@@ -20,8 +21,6 @@ java -version
 
 [List 1](https://www.loggly.com/blog/8-tools-for-every-java-developers-toolkit/)
 
-[List 2](https://blog.newrelic.com/2014/05/21/toolsforjavadevelopers/)
-
 - [Eclipse](https://eclipse.org/downloads/) IDE
 - [Maven](https://maven.apache.org/download.cgi) or Graddle build tool
 - [Nexus](https://www.sonatype.com/products/sonatype-nexus-repository) private repository
@@ -32,7 +31,7 @@ java -version
 - [JProfiler](https://www.ej-technologies.com/products/jprofiler/overview.html)
 - [SpotBugs (successor to FindBugs)](https://spotbugs.github.io/) static analysis or [Checker Framework](https://types.cs.washington.edu/checker-framework/)
 - [Checkstyle](https://checkstyle.sourceforge.net/) coding standard checker
-  - [Style guidelines](https://logging.apache.org/log4j/2.x/javastyle.html)
+  - [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html)
 
 ## Java Libraries
 

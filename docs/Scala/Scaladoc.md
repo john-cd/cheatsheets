@@ -6,26 +6,26 @@
 - [Scaladoc Style Guide](https://docs.scala-lang.org/style/scaladoc.html)
 
 ```scala
- /** Start the comment here
-   * and use the left star followed by a
-   * white space on every line.
-   *
-   * Even on empty paragraph-break lines.
-   *
-   * Note that the * on each line is aligned
-   * with the second * in /** so that the
-   * left margin is on the same column on the
-   * first line and on subsequent ones.
-   *
-   * The closing Scaladoc tag goes on its own,
-   * separate line. E.g.
-   *
-   * Calculate the square of the given number
-   *
-   * @param d the Double to square
-   * @return the result of squaring d
-   */
-  def square(d: Double): Double = d * d
+/** Start the comment here
+  * and use the left star followed by a
+  * white space on every line.
+  *
+  * Even on empty paragraph-break lines.
+  *
+  * Note that the * on each line is aligned
+  * with the second * in /** so that the
+  * left margin is on the same column on the
+  * first line and on subsequent ones.
+  *
+  * The closing Scaladoc tag goes on its own,
+  * separate line. E.g.
+  *
+  * Calculate the square of the given number
+  *
+  * @param d the Double to square
+  * @return the result of squaring d
+  */
+ def square(d: Double): Double = d * d
 ```
 
 ## Tags
@@ -96,15 +96,15 @@ before the group description.
 ## Markup
 
 ```txt
- `monospace`
- ''italic text''
- '''bold text'''
- __underline__
- ^superscript^
- ,,subscript,,
- [[entity link]], e.g. [[scala.collection.Seq]]
- [[https://external.link External Link]],
-   e.g. [[https://scala-lang.org Scala Language Site]]
+`monospace`
+''italic text''
+'''bold text'''
+__underline__
+^superscript^
+,,subscript,,
+[[entity link]], e.g. [[scala.collection.Seq]]
+[[https://external.link External Link]],
+  e.g. [[https://scala-lang.org Scala Language Site]]
 ```
 
 ## Other formatting notes

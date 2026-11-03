@@ -3,6 +3,7 @@ title: CloudFormation Basics
 category: devops
 tags: AWS
 ---
+
 <!-- TODO Reviewed ??-??-2026 -->
 
 # CloudFormation Basics
@@ -26,13 +27,13 @@ YAML notation for folded text: `>`
 
 ```yaml
 data: >
-   Wrapped text
-   will be folded
-   into a single
-   paragraph
+  Wrapped text
+  will be folded
+  into a single
+  paragraph
 
-   Blank lines denote
-   paragraph breaks
+  Blank lines denote
+  paragraph breaks
 ```
 
 ## Sample Templates
@@ -104,7 +105,7 @@ Metadata:
 
 Parameters:
   InstanceTypeParameter:
-    Type: String            # String, Number, List<Number>, CommaDelimitedList e.g. "test,dev,prod", or an AWS-specific types such as Amazon EC2 key pair names and VPC IDs.
+    Type: String # String, Number, List<Number>, CommaDelimitedList e.g. "test,dev,prod", or an AWS-specific types such as Amazon EC2 key pair names and VPC IDs.
     Default: t2.micro
     AllowedValues:
       - t2.micro
@@ -132,18 +133,18 @@ Mappings:
       "32": "ami-9c03a89d"
 
 Conditions:
-  CreateProdResources: !Equals [ !Ref EnvType, prod ]
+  CreateProdResources: !Equals [!Ref EnvType, prod]
 
 Transform:
   set of transforms
 
 Resources:
   Ec2Instance:
-      Type: AWS::EC2::Instance
-      Properties:
-        InstanceType:
-          Ref: InstanceTypeParameter  # reference to parameter above
-        ImageId: ami-2f726546
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType:
+        Ref: InstanceTypeParameter # reference to parameter above
+      ImageId: ami-2f726546
 
 Outputs:
   VolumeId:
@@ -161,7 +162,7 @@ Outputs:
 ```yaml
 Resources:
   HelloBucket:
-    Type: AWS::S3::Bucket  # AWS::ProductIdentifier::ResourceType
+    Type: AWS::S3::Bucket # AWS::ProductIdentifier::ResourceType
 ```
 
 ### EC2
@@ -172,18 +173,18 @@ Resources:
     Type: AWS::EC2::Instance
     Properties:
       SecurityGroups:
-      - Ref: InstanceSecurityGroup
+        - Ref: InstanceSecurityGroup
       KeyName: mykey
-      ImageId: ''
+      ImageId: ""
   InstanceSecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:
       GroupDescription: Enable SSH access via port 22
       SecurityGroupIngress:
-      - IpProtocol: tcp
-        FromPort: '22'
-        ToPort: '22'
-        CidrIp: 0.0.0.0/0
+        - IpProtocol: tcp
+          FromPort: "22"
+          ToPort: "22"
+          CidrIp: 0.0.0.0/0
 ```
 
 ## Modern CloudFormation Basics
@@ -191,7 +192,7 @@ Resources:
 Use YAML instead of JSON for modern templates.
 
 ```yaml
-AWSTemplateFormatVersion: '2010-09-09'
+AWSTemplateFormatVersion: "2010-09-09"
 Description: A simple modern EC2 instance template
 Parameters:
   InstanceType:

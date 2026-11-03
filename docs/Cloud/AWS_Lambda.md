@@ -3,6 +3,7 @@ title: AWS Lambda
 category: cloud
 tags: aws lambda cloud
 ---
+
 <!-- TODO Reviewed ??-??-2026 -->
 
 # AWS Lambda
@@ -18,7 +19,7 @@ To deploy a Lambda function via the [Serverless Framework](https://www.serverles
 
 ```yaml
 service: my-python-lambda
-frameworkVersion: '3'
+frameworkVersion: "3"
 
 provider:
   name: aws

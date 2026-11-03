@@ -3,6 +3,7 @@ title: Scala Types
 category: Scala
 tags: Scala
 ---
+
 <!-- TODO Reviewed ??-??-2026 -->
 
 # Scala Types
@@ -65,7 +66,7 @@ class MyContainer[+A](a: A)(implicit manifest: scala.reflect.Manifest[A]) {
 
 Contravariance `-A` is the opposite of covariance
 
-Declaring neither -/+, indicates invariance variance.  You cannot use a superclass variable reference ("contravariant" position) or a subclass variable reference ("covariant" position) of that type.
+Declaring neither -/+, indicates invariance variance. You cannot use a superclass variable reference ("contravariant" position) or a subclass variable reference ("covariant" position) of that type.
 
 ## Upper and Lower Type Bounds
 

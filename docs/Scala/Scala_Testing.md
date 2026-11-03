@@ -3,6 +3,7 @@ title: Scala Testing
 category: Scala
 tags: Scala, Tests
 ---
+
 <!-- TODO Reviewed ??-??-2026 -->
 
 # Scala Testing
@@ -13,7 +14,7 @@ tags: Scala, Tests
 
 [Writing TDD unit tests with scalatest](https://alvinalexander.com/scala/writing-tdd-unit-tests-with-scalatest)
 
-[At a Glance](https://www.scalatest.org/at_a_glance/)
+[ScalaTest documentation](https://www.scalatest.org/)
 
 ## Examples
 
@@ -50,7 +51,7 @@ class PizzaTests extends FunSuite with BeforeAndAfter {
 }
 ```
 
-## [Styles](https://www.scalatest.org/at_a_glance/)
+## [Styles](https://www.scalatest.org/)
 
 ### FunSuite
 

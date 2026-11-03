@@ -19,7 +19,7 @@ The following procedure creates a cluster with Spark installed.
 
 ## Create a EMR Cluster with Spark using the AWS CLI
 
-*Simple cluster:*
+_Simple cluster:_
 
 ```bash
 aws emr create-cluster --name "Spark cluster" --release-label emr-7.0.0 --applications Name=Spark \
@@ -28,14 +28,14 @@ aws emr create-cluster --name "Spark cluster" --release-label emr-7.0.0 --applic
 
 Note: For Windows, replace the above Linux line continuation character (`\`) with the caret (`^`).
 
-*When using a config file:*
+_When using a config file:_
 
 ```bash
 aws emr create-cluster --release-label --applications Name=Spark \
 --instance-type m5.xlarge --instance-count 3 --configurations https://s3.amazonaws.com/mybucket/myfolder/myConfig.json
 ```
 
-*Sample myConfig.json:*
+_Sample myConfig.json:_
 
 ```json
 [
@@ -48,7 +48,7 @@ aws emr create-cluster --release-label --applications Name=Spark \
 ]
 ```
 
-*Using Spot instances:*
+_Using Spot instances:_
 
 ```bash
 aws emr create-cluster --name "Spot cluster" --release-label emr-7.0.0 --applications Name=Spark \
@@ -59,7 +59,7 @@ InstanceGroupType=CORE,BidPrice=0.03,InstanceType=m5.xlarge,InstanceCount=2
 # InstanceGroupType=TASK,BidPrice=0.10,InstanceType=m5.xlarge,InstanceCount=3
 ```
 
-*In Java:*
+_In Java:_
 
 ```java
 // start Spark on EMR in java

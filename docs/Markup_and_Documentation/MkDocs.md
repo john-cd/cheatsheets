@@ -3,6 +3,7 @@ title: MkDocs Basics
 category: markup
 tags: python
 ---
+
 <!-- TODO Reviewed ??-??-2026 -->
 
 # MkDocs Basics
@@ -49,10 +50,10 @@ just uv run mkdocs gh-deploy
 ### MkDocs project layout
 
 ```txt
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+mkdocs.yml    # The configuration file.
+docs/
+    index.md  # The documentation homepage.
+    ...       # Other markdown pages, images and other files.
 ```
 
 ## Material for MkDocs Best Practices

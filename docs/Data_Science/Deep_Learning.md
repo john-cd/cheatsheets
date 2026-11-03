@@ -22,7 +22,7 @@
 
 [Neural Networks - Dropout](https://www.cs.toronto.edu/~hinton/absps/JMLRdropout.pdf)
 
-[Deep Learning Glossary](https://www.wildml.com/deep-learning-glossary/)
+[Machine Learning Glossary](https://developers.google.com/machine-learning/glossary)
 
 [Deep Learning for Visual Question Answering](https://avisingh599.github.io/deeplearning/visual-qa/)
 

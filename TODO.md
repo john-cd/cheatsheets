@@ -1,5 +1,3 @@
-<!-- TODO Reviewed ??-??-2026 -->
-
 # TODO
 
 <!-- recommended-issue-order:start -->
@@ -12,20 +10,17 @@ validation before implementing. Existing acceptance details remain below.
 
 ### Ready: quick wins
 
-- [Restore the dprint baseline](#review-follow-up-november-2-2026) — Formatting-only change; preserve historical content and review markers.
-- [Limit CI write authority to deployment](#review-follow-up-november-2-2026) — Bounded workflow-permission correction.
 - [Reconcile worktree guidance and document the owning commands](#review-follow-up-november-2-2026) — Align existing policy without moving active checkouts.
 
 ### Ready: priority order
 
-- [Fix documentation navigation and obsolete references](#p1-documentation-quality) — P1: cover published pages and retain intentional historical context.
 - [Finish scoped quality gates and link classification](#p2-quality-gates) — P2: local checks first; classify network failures separately.
 - [Audit updater roots, action inputs and lock/cache ownership](#p2-dependencies-ci-and-containers) — P2: configuration work is ready; hosted/container execution is separate.
 - [Review branch/worktree ownership](#repository-maintenance) — Read-only comparison first; preserve unique and active work.
-- [Add proposed cheat sheets one subject at a time](#p3-new-content) — P3: after existing documentation correctness.
 
 ### Blocked or deferred
 
+- [Add proposed cheat sheets one subject at a time](#p3-new-content) — Defer until existing documentation and maintenance work is complete.
 - [Hosted CI/deployment and devcontainer runtime acceptance](#p2-dependencies-ci-and-containers) — Needs Actions/deployment access and a working container host; configuration fixes remain ready.
 - [Ownership, review dates and cleanup decisions](#p1-documentation-quality) — Needs actual owner/human review; never invent dates or treat markers as completed reviews.
 
@@ -36,17 +31,11 @@ Use American spelling and LF; record evidence before marking a task complete.
 
 ## P1: documentation quality
 
-Problem: navigation, references, and maintenance metadata still need review.
+Problem: maintenance metadata still needs review.
 
-- [ ] Replace reachable but obsolete references; retain intentional historical context.
-- [ ] Include all published docs pages in MkDocs navigation.
 - [ ] Add category ownership and last-review metadata after actual review.
-- [x] Add CONTRIBUTING.md with setup, format/lint/test/build commands and README links.
-      Source verified at `efb06ed4`: the contributor guide exists and README links to it.
-      Full command/runtime acceptance remains covered by the quality tasks below.
 
-Acceptance: navigation covers published pages, links resolve or have documented exceptions,
-and contributor instructions match the configured commands.
+Acceptance: category ownership and review dates reflect actual human review.
 
 ## P2: quality gates
 
@@ -106,20 +95,12 @@ wait is currently inventoried. Add a release trigger and review date when one is
 ## Review follow-up: November 2, 2026
 
 Reviewed published `develop` at `efb06ed4da10ae8e5966f8bee47c6bb806f764de`.
-The following tasks refine the existing quality and CI work rather than create a second backlog:
+Remaining follow-up work refines the existing quality and CI baseline:
 
-- [ ] **P2: Restore the configured dprint baseline.** Read-only `dprint check --config
-      D:/code/cheatsheets/dprint.jsonc` reports 83 unformatted files. Format in a focused
-      change, preserve historical examples and human review markers, and rerun the check.
-      Do not describe hook configuration validation as a full hook pass.
 - [ ] **P2: Reconcile worktree policy.** `AGENTS.md` limits slots to `a`, `b`, and `c`,
       while README and WORKTREES.md permit `a` through `j`. Use one documented set that
       agrees with `scripts/env.just`; verify permitted and rejected slots without moving
       existing worktrees. Preserve the independent empty `main` history.
-- [ ] **P2: Limit CI write authority to deployment.** `.github/workflows/ci.yaml`
-      grants `contents: write` at workflow scope, including validation. Give validation
-      read-only permissions and grant only the deployment job the write permission it
-      needs; retain the push-only deployment condition and test PR/push behavior.
 - [ ] **P3: State the Python/documentation contract in AGENTS.md.** Keep the shared
       storage and Git rules, but add the owning unittest, Node test, MkDocs, and
       configuration-check commands from README and Justfile. Keep this documentation
