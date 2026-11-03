@@ -2,6 +2,35 @@
 
 # TODO
 
+<!-- recommended-issue-order:start -->
+
+## Recommended work order
+
+Snapshot: November 3, 2026. GitHub Issues is disabled, so links below point to the authoritative local tasks.
+Read top to bottom: quick wins, then priority work. Recheck source and prior
+validation before implementing. Existing acceptance details remain below.
+
+### Ready: quick wins
+
+- [Restore the dprint baseline](#review-follow-up-november-2-2026) — Formatting-only change; preserve historical content and review markers.
+- [Limit CI write authority to deployment](#review-follow-up-november-2-2026) — Bounded workflow-permission correction.
+- [Reconcile worktree guidance and document the owning commands](#review-follow-up-november-2-2026) — Align existing policy without moving active checkouts.
+
+### Ready: priority order
+
+- [Fix documentation navigation and obsolete references](#p1-documentation-quality) — P1: cover published pages and retain intentional historical context.
+- [Finish scoped quality gates and link classification](#p2-quality-gates) — P2: local checks first; classify network failures separately.
+- [Audit updater roots, action inputs and lock/cache ownership](#p2-dependencies-ci-and-containers) — P2: configuration work is ready; hosted/container execution is separate.
+- [Review branch/worktree ownership](#repository-maintenance) — Read-only comparison first; preserve unique and active work.
+- [Add proposed cheat sheets one subject at a time](#p3-new-content) — P3: after existing documentation correctness.
+
+### Blocked or deferred
+
+- [Hosted CI/deployment and devcontainer runtime acceptance](#p2-dependencies-ci-and-containers) — Needs Actions/deployment access and a working container host; configuration fixes remain ready.
+- [Ownership, review dates and cleanup decisions](#p1-documentation-quality) — Needs actual owner/human review; never invent dates or treat markers as completed reviews.
+
+<!-- recommended-issue-order:end -->
+
 GitHub Issues is disabled (reverified 2026-11-02). This is the authoritative backlog.
 Use American spelling and LF; record evidence before marking a task complete.
 
