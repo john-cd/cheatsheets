@@ -45,3 +45,7 @@ check: fmt-check lint test
 
 hooks-run:
     prek run
+
+# Lint repository Markdown with the pinned markdownlint-cli2.
+markdownlint *args='':
+    npx --yes markdownlint-cli2@0.24.0 {{ args }}
