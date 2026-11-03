@@ -41,6 +41,8 @@ Windows drive paths elsewhere in this file are defaults. Set a root variable to 
 
 ## Required repository storage and Git policy
 
+- For issue work, create at least one commit per issue. Every commit must address only one issue; never combine multiple issues in a commit. An issue may have multiple focused commits.
+
 - Keep the primary checkout on `develop`. Keep `main` as an independent empty root commit; do not merge development history into it.
 - Auxiliary worktrees must be direct children of `.worktrees/` and use slots `a`, `b`, or `c` only. Never use task-named or external worktree paths.
 - Preserve unique commits on named branches before moving a detached checkout. Keep history linear, squash unpublished related changes, and never rewrite published history without explicit authorization.
