@@ -7,7 +7,7 @@ updates:
     schedule:
       interval: monthly
       day: monday
-      time: 06:00
+      time: "06:00"
       timezone: America/Los_Angeles
     directory: /
     open-pull-requests-limit: 5
@@ -22,7 +22,7 @@ updates:
     schedule:
       interval: monthly
       day: monday
-      time: 06:00
+      time: "06:00"
       timezone: America/Los_Angeles
     directory: /.devcontainer
     open-pull-requests-limit: 5
@@ -38,7 +38,7 @@ updates:
     schedule:
       interval: monthly
       day: monday
-      time: 06:00
+      time: "06:00"
       timezone: America/Los_Angeles
     open-pull-requests-limit: 5
     groups:
@@ -52,7 +52,7 @@ updates:
     schedule:
       interval: monthly
       day: monday
-      time: 06:00
+      time: "06:00"
       timezone: America/Los_Angeles
     directory: /
     open-pull-requests-limit: 5
@@ -67,7 +67,7 @@ updates:
     schedule:
       interval: monthly
       day: monday
-      time: 06:00
+      time: "06:00"
       timezone: America/Los_Angeles
     directory: /
     open-pull-requests-limit: 5
