@@ -24,7 +24,7 @@ jobs:
     steps:
       - name: Install Just
         # taiki-e/install-action v2.87.30
-        uses: taiki-e/install-action@86f7a0ffb25f40114606501a311ebcfaf882ea32
+        uses: taiki-e/install-action@1919c4a95903d2c33e4a221102edca87309fc14b
         with:
           tool: just@1.59.0
       - uses: actions/checkout@v7
