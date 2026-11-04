@@ -18,14 +18,14 @@
         <link rel="prev" href="../../Cloud/Serverless/">
       
       
-        <link rel="next" href="../Deploy_to_Kubernetes%20%20%28Helm%29/">
+        <link rel="next" href="../Deploy_to_Kubernetes/">
       
       
         
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
     
     
       
@@ -33,10 +33,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -334,8 +334,6 @@
       
         
       
-        
-      
     
     
     
@@ -418,14 +416,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Big_Data/Install_Spark_2.3_Locally/" class="md-nav__link">
+      <a href="../../Big_Data/Install_Spark_Locally/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Install Spark 2.3 Locally
+    Install Spark Locally
   
 
     
@@ -453,7 +451,7 @@
   <span class="md-ellipsis">
     
   
-    DataFrames APIs
+    Spark APIs
   
 
     
@@ -502,14 +500,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Big_Data/Spark_Development_with_sbt_and_InteliJ/" class="md-nav__link">
+      <a href="../../Big_Data/Spark_Development_with_sbt_and_IntelliJ/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Setup a Spark Development Environment with IntelliJ and sbt
+    Spark Development with sbt and IntelliJ
   
 
     
@@ -558,34 +556,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Big_Data/Spark_on_EC2/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Install Spark on EC2 with Flintrock
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../Big_Data/Spark_on_Kubernetes/" class="md-nav__link">
         
   
@@ -593,7 +563,7 @@
   <span class="md-ellipsis">
     
   
-    Spark 2.3 on Kubernetes
+    Spark on Kubernetes
   
 
     
@@ -622,6 +592,12 @@
   
     
     
+      
+        
+      
+        
+      
+        
       
         
       
@@ -683,14 +659,42 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Cloud/AWS/" class="md-nav__link">
+      <a href="../../Cloud/AWS_Compute/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    AWS Services Overview
+    AWS Compute
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Cloud/AWS_Databases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AWS Databases
   
 
     
@@ -719,6 +723,62 @@
     
   
     AWS Lambda
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Cloud/AWS_Overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AWS Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Cloud/AWS_Storage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AWS Storage
   
 
     
@@ -858,6 +918,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -900,6 +962,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -908,10 +972,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#run-a-test-docker-container" class="md-nav__link">
+  <a href="#run-a-test-k8s-pod" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Run a test Docker container
+        Run a test K8s pod
       
     </span>
   </a>
@@ -919,10 +983,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#run-a-test-k8s-pod" class="md-nav__link">
+  <a href="#ephemeral-debug-containers" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Run a test K8s pod
+        Ephemeral Debug Containers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#useful-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Useful Links
       
     </span>
   </a>
@@ -945,14 +1020,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../Deploy_to_Kubernetes%20%20%28Helm%29/" class="md-nav__link">
+      <a href="../Deploy_to_Kubernetes/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Deploy to Kubernetes (Helm)
+    Deploy to Kubernetes
   
 
     
@@ -973,14 +1048,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../Deploy_to_Kubernetes/" class="md-nav__link">
+      <a href="../Deploy_to_Kubernetes_Helm/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Deploy to Kubernetes
+    Deploy to Kubernetes (Helm)
   
 
     
@@ -1339,7 +1414,7 @@
   <span class="md-ellipsis">
     
   
-    Libraries
+    Deep Learning
   
 
     
@@ -2528,8 +2603,6 @@
       
         
       
-        
-      
     
     
     
@@ -2676,34 +2749,6 @@
     
   
     Python Links
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Python/Python3/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Python 3
   
 
     
@@ -3096,7 +3141,7 @@
   <span class="md-ellipsis">
     
   
-    SBT Links
+    Sbt
   
 
     
@@ -3125,6 +3170,16 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
       
         
       
@@ -3212,6 +3267,146 @@
   
   
     <li class="md-nav__item">
+      <a href="../../Search/ElasticSearch_APIs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ElasticSearch APIs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Search/ElasticSearch_Arch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ElasticSearch Architecture and Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Search/ElasticSearch_Plugins/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ElasticSearch Plugins
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Search/ElasticSearch_Queries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ElasticSearch Queries
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Search/ElasticSearch_Setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ElasticSearch Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../Search/Logstash/" class="md-nav__link">
         
   
@@ -3219,7 +3414,7 @@
   <span class="md-ellipsis">
     
   
-    LogStash
+    Logstash
   
 
     
@@ -3248,8 +3443,6 @@
   
     
     
-      
-        
       
         
       
@@ -3317,34 +3510,6 @@
     
   
     Development Tools
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Software_Development/Eclipse/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Useful Links
   
 
     
@@ -3557,6 +3722,14 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -3582,7 +3755,7 @@
   <span class="md-ellipsis">
     
   
-    Windows
+    dotNET
   
 
     
@@ -3595,107 +3768,6 @@
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_18">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Windows
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Windows/Command_Prompt_Here/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Command Line
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-        
-        
-      
-    
-    
-      
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_19" >
-        
-          
-          <label class="md-nav__link" for="__nav_19" id="__nav_19_label" tabindex="">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    dotNET
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_19_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_19">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -3872,9 +3944,9 @@
   
 
 
-  <h1>Debug Kubernetes</h1>
+<!-- TODO Reviewed ??-??-2026 -->
 
-<h3 id="run-a-test-docker-container">Run a test Docker container<a class="headerlink" href="#run-a-test-docker-container" title="Permanent link">&para;</a></h3>
+<h1 id="run-a-test-docker-container">Run a test Docker container<a class="headerlink" href="#run-a-test-docker-container" title="Permanent link">&para;</a></h1>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>-p<span class="w"> </span>&lt;port&gt;:&lt;port&gt;<span class="w"> </span>&lt;docker<span class="w"> </span>image&gt;:&lt;tag&gt;
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>docker<span class="w"> </span>ps
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># cleanup</span>
@@ -3884,12 +3956,14 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>winpty<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>-p<span class="w"> </span>&lt;port&gt;:&lt;port&gt;<span class="w"> </span>-it<span class="w"> </span>--entrypoint<span class="w"> </span>bash<span class="w"> </span>&lt;docker<span class="w"> </span>image&gt;:&lt;tag&gt;
 </code></pre></div>
 <p>The above assumes you are using cygwin / git bash on Windows.</p>
-<h3 id="run-a-test-k8s-pod">Run a test K8s pod<a class="headerlink" href="#run-a-test-k8s-pod" title="Permanent link">&para;</a></h3>
+<h2 id="run-a-test-k8s-pod">Run a test K8s pod<a class="headerlink" href="#run-a-test-k8s-pod" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>kubectl<span class="w"> </span>run<span class="w"> </span>&lt;deployment<span class="w"> </span>name&gt;<span class="w"> </span>--image<span class="o">=</span>&lt;docker<span class="w"> </span>image&gt;:&lt;tag&gt;
 </code></pre></div>
 <p>Useful options:</p>
 <ul>
-<li><code>--restart=Never</code></li>
+<li>
+<p><code>--restart=Never</code></p>
+</li>
 <li>
 <p>if the pod has a console: <code>-i --tty  --command -- bash</code></p>
 </li>
@@ -3910,6 +3984,18 @@
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>kubectl<span class="w"> </span>delete<span class="w"> </span>pod<span class="w"> </span>&lt;pod<span class="w"> </span>name&gt;
 </code></pre></div>
+<h2 id="ephemeral-debug-containers">Ephemeral Debug Containers<a class="headerlink" href="#ephemeral-debug-containers" title="Permanent link">&para;</a></h2>
+<p>Starting with Kubernetes 1.25, <code>kubectl debug</code> allows you to attach an ephemeral container to a running pod for troubleshooting, which is especially useful if the pod's image doesn't contain debugging utilities (like <code>bash</code> or <code>curl</code>).</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># Add an interactive busybox container to a running pod</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>kubectl<span class="w"> </span>debug<span class="w"> </span>-it<span class="w"> </span>&lt;pod_name&gt;<span class="w"> </span>--image<span class="o">=</span>busybox<span class="w"> </span>--target<span class="o">=</span>&lt;container_name&gt;
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="c1"># Debug a node by creating a privileged pod on it</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>kubectl<span class="w"> </span>debug<span class="w"> </span>node/&lt;node_name&gt;<span class="w"> </span>-it<span class="w"> </span>--image<span class="o">=</span>ubuntu
+</code></pre></div>
+<h2 id="useful-links">Useful Links<a class="headerlink" href="#useful-links" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://kubernetes.io/docs/tasks/debug/">Official K8s Troubleshooting Guide</a></li>
+</ul>
 
 
 
@@ -3967,13 +4053,13 @@
         
         
           
-          <a href="../Deploy_to_Kubernetes%20%20%28Helm%29/" class="md-footer__link md-footer__link--next" aria-label="Next: Deploy to Kubernetes (Helm)">
+          <a href="../Deploy_to_Kubernetes/" class="md-footer__link md-footer__link--next" aria-label="Next: Deploy to Kubernetes">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Deploy to Kubernetes (Helm)
+                Deploy to Kubernetes
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -4130,10 +4216,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.sections", "navigation.prune", "navigation.indexes", "navigation.footer", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.sections", "navigation.prune", "navigation.indexes", "navigation.footer", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
       
     
   </body>

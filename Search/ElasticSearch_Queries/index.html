@@ -12,31 +12,31 @@
         <meta name="author" content="S. John CD">
       
       
-        <link rel="canonical" href="https://john-cd.com/cheatsheets/Cloud/AWS/">
+        <link rel="canonical" href="https://john-cd.com/cheatsheets/Search/ElasticSearch_Queries/">
       
       
-        <link rel="prev" href="../../Big_Data/Spark_on_Kubernetes/">
+        <link rel="prev" href="../ElasticSearch_Plugins/">
       
       
-        <link rel="next" href="../AWS_Lambda/">
+        <link rel="next" href="../ElasticSearch_Setup/">
       
       
         
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
     
     
       
-        <title>AWS Services Overview - John's Cheatsheets</title>
+        <title>ElasticSearch Queries - John's Cheatsheets</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -90,7 +90,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#aws-services-overview" class="md-skip">
+        <a href="#elasticsearch-queries" class="md-skip">
           Skip to content
         </a>
       
@@ -126,7 +126,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              AWS Services Overview
+              ElasticSearch Queries
             
           </span>
         </div>
@@ -334,8 +334,6 @@
       
         
       
-        
-      
     
     
     
@@ -418,14 +416,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Big_Data/Install_Spark_2.3_Locally/" class="md-nav__link">
+      <a href="../../Big_Data/Install_Spark_Locally/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Install Spark 2.3 Locally
+    Install Spark Locally
   
 
     
@@ -453,7 +451,7 @@
   <span class="md-ellipsis">
     
   
-    DataFrames APIs
+    Spark APIs
   
 
     
@@ -502,14 +500,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Big_Data/Spark_Development_with_sbt_and_InteliJ/" class="md-nav__link">
+      <a href="../../Big_Data/Spark_Development_with_sbt_and_IntelliJ/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Setup a Spark Development Environment with IntelliJ and sbt
+    Spark Development with sbt and IntelliJ
   
 
     
@@ -558,34 +556,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Big_Data/Spark_on_EC2/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Install Spark on EC2 with Flintrock
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../Big_Data/Spark_on_Kubernetes/" class="md-nav__link">
         
   
@@ -593,7 +563,7 @@
   <span class="md-ellipsis">
     
   
-    Spark 2.3 on Kubernetes
+    Spark on Kubernetes
   
 
     
@@ -618,12 +588,16 @@
       
   
   
-    
   
   
-  
     
     
+      
+        
+      
+        
+      
+        
       
         
       
@@ -642,11 +616,11 @@
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
@@ -667,7 +641,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -682,44 +656,17 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    AWS Services Overview
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../Cloud/AWS_Compute/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    AWS Services Overview
+    AWS Compute
   
 
     
@@ -728,125 +675,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#basic-services" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Basic Services
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#storage" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Storage
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#databases" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Databases
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#analytics" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Analytics
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#etl--elt--batch-processing" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ETL / ELT / Batch Processing
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#application-services" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Application Services
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#monitoring" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Monitoring
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#infrastructure-deployment--automation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Infrastructure Deployment / Automation
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#desktop-in-the-cloud" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Desktop in the Cloud
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -859,7 +687,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../AWS_Lambda/" class="md-nav__link">
+      <a href="../../Cloud/AWS_Databases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AWS Databases
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Cloud/AWS_Lambda/" class="md-nav__link">
         
   
   
@@ -887,7 +743,63 @@
   
   
     <li class="md-nav__item">
-      <a href="../Serverless/" class="md-nav__link">
+      <a href="../../Cloud/AWS_Overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AWS Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Cloud/AWS_Storage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AWS Storage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Cloud/Serverless/" class="md-nav__link">
         
   
   
@@ -1026,14 +938,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Containers/Deploy_to_Kubernetes%20%20%28Helm%29/" class="md-nav__link">
+      <a href="../../Containers/Deploy_to_Kubernetes/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Deploy to Kubernetes (Helm)
+    Deploy to Kubernetes
   
 
     
@@ -1054,14 +966,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Containers/Deploy_to_Kubernetes/" class="md-nav__link">
+      <a href="../../Containers/Deploy_to_Kubernetes_Helm/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Deploy to Kubernetes
+    Deploy to Kubernetes (Helm)
   
 
     
@@ -1420,7 +1332,7 @@
   <span class="md-ellipsis">
     
   
-    Libraries
+    Deep Learning
   
 
     
@@ -2609,8 +2521,6 @@
       
         
       
-        
-      
     
     
     
@@ -2757,34 +2667,6 @@
     
   
     Python Links
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Python/Python3/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Python 3
   
 
     
@@ -3177,7 +3059,7 @@
   <span class="md-ellipsis">
     
   
-    SBT Links
+    Sbt
   
 
     
@@ -3202,8 +3084,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -3211,6 +3095,16 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -3222,11 +3116,11 @@
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" checked>
         
           
           <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="">
@@ -3247,7 +3141,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_15">
             <span class="md-nav__icon md-icon"></span>
             
@@ -3265,7 +3159,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Search/ElasticSearch/" class="md-nav__link">
+      <a href="../ElasticSearch/" class="md-nav__link">
         
   
   
@@ -3293,14 +3187,273 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Search/Logstash/" class="md-nav__link">
+      <a href="../ElasticSearch_APIs/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    LogStash
+    ElasticSearch APIs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ElasticSearch_Arch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ElasticSearch Architecture and Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ElasticSearch_Plugins/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ElasticSearch Plugins
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ElasticSearch Queries
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ElasticSearch Queries
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#search" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SEARCH
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query-dsl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        QUERY DSL
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exact-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EXACT SEARCH
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mappings-schemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MAPPINGS (schemas)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MAPPINGS (schemas)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-a-new-index-specifying-that-the-tweet-field-should-use-the-english-analyzer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create a new index, specifying that the tweet field should use the english analyzer
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parent-child-relationships" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parent Child Relationships
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ElasticSearch_Setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ElasticSearch Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Logstash/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Logstash
   
 
     
@@ -3329,8 +3482,6 @@
   
     
     
-      
-        
       
         
       
@@ -3398,34 +3549,6 @@
     
   
     Development Tools
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Software_Development/Eclipse/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Useful Links
   
 
     
@@ -3638,6 +3761,14 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -3663,7 +3794,7 @@
   <span class="md-ellipsis">
     
   
-    Windows
+    dotNET
   
 
     
@@ -3676,107 +3807,6 @@
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_18">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Windows
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Windows/Command_Prompt_Here/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Command Line
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-        
-        
-      
-    
-    
-      
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_19" >
-        
-          
-          <label class="md-nav__link" for="__nav_19" id="__nav_19_label" tabindex="">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    dotNET
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_19_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_19">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -3953,152 +3983,241 @@
   
 
 
-<h1 id="aws-services-overview">AWS Services Overview<a class="headerlink" href="#aws-services-overview" title="Permanent link">&para;</a></h1>
-<h2 id="basic-services">Basic Services<a class="headerlink" href="#basic-services" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Compute: EC2 (autoscaling, ELB load balancing)</li>
-<li>Networking / Security: VPC (security groups), IAM (users/groups/application roles)</li>
-</ul>
-<h2 id="storage">Storage<a class="headerlink" href="#storage" title="Permanent link">&para;</a></h2>
-<ul>
-<li>S3: secure, scalable object-level storage, static web site hosting...</li>
-<li>Glacier: long-term storage</li>
-<li>EBS: block-level storage (for EC2 instances)</li>
-</ul>
-<h2 id="databases">Databases<a class="headerlink" href="#databases" title="Permanent link">&para;</a></h2>
-<ul>
-<li>RDS: relational databases (MySQL, PostgreSQL, MSSQL, MariaDB, Aurora...)</li>
-<li>DynamoDB: scalable NoSQL database backed by solid-state drives</li>
-</ul>
-<h2 id="analytics">Analytics<a class="headerlink" href="#analytics" title="Permanent link">&para;</a></h2>
-<ul>
-<li>RedShift: PostgreSQL-based columnstore OLAP database that uses SQL. MPP architecture.</li>
-<li>EMR: Hadoop cluster (Hive, Pig, HBase, Spark...).</li>
-</ul>
-<h2 id="etl--elt--batch-processing">ETL / ELT / Batch Processing<a class="headerlink" href="#etl--elt--batch-processing" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Glue</li>
-<li>Batch</li>
-<li>Data Pipeline: orchestrate data transfers between S3, DynamoDB, Redshift</li>
-</ul>
-<h2 id="application-services">Application Services<a class="headerlink" href="#application-services" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Notifications: SNS (alerts by email, SMS...), SES (bulk email)</li>
-<li>Queue: SQS (async message queues for component decoupling)</li>
-<li>Workflows, State Machine as a Service: AWS Step Functions, SWF (task-oriented workflows - complicated)</li>
-<li>Document Search: ElasticSearch, CloudSearch</li>
-</ul>
-<h2 id="monitoring">Monitoring<a class="headerlink" href="#monitoring" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Cloudwatch (monitor services and instances e.g. CPU utilization, etc...)</li>
-<li>CloudTrail (monitor API calls)</li>
-</ul>
-<h2 id="infrastructure-deployment--automation">Infrastructure Deployment / Automation<a class="headerlink" href="#infrastructure-deployment--automation" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Elastic Beanstalk (simple, mostly web or Linux worker)</li>
-<li>CloudFormation (JSON / YAML templates - more difficult, but many existing templates)</li>
-<li>OpsWork (higher level than CloudFormation, uses non-native components - Chef-based)</li>
-</ul>
-<h2 id="desktop-in-the-cloud">Desktop in the Cloud<a class="headerlink" href="#desktop-in-the-cloud" title="Permanent link">&para;</a></h2>
-<ul>
-<li>WorkSpaces</li>
-</ul>
-<h1 id="details">Details<a class="headerlink" href="#details" title="Permanent link">&para;</a></h1>
-<h2 id="tools">Tools<a class="headerlink" href="#tools" title="Permanent link">&para;</a></h2>
-<ul>
-<li>
-<p>Unix tools on Windows: <a href="https://www.cygwin.com/">Cygwin</a></p>
-</li>
-<li>
-<p>Putty SSH client for Windows <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/get-set-up-for-amazon-ec2.html">doc</a></p>
-</li>
-<li>
-<p>Download and install PuTTY <a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/">link</a>. Be sure to install the entire suite.</p>
-</li>
-<li>Start PuTTYgen (for example, from the Start menu, click All Programs &gt; PuTTY &gt; PuTTYgen).</li>
-<li>Under Type of key to generate, select SSH-2 RSA.</li>
-<li>Load the .pem file (private key) downloaded from the console (in "credentials" folder)</li>
-<li>
-<p>Save private key</p>
-</li>
-<li>
-<p>AWS <a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-set-up.html">command line interface</a></p>
-</li>
-<li>
-<p><a href="https://docs.aws.amazon.com/AWSToolkitVS/latest/UserGuide/welcome.html">AWS toolkit for Visual Studio</a></p>
-</li>
-<li>
-<p><a href="https://aws.amazon.com/documentation/powershell/">AWS tools for PowerShell</a></p>
-</li>
-</ul>
-<h2 id="aws-ec2">AWS EC2<a class="headerlink" href="#aws-ec2" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Log onto instance with <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-connect-to-instance-linux.html#using-putty">Putty SSH</a></li>
-</ul>
-<p>login as: ec2-user (Amazon Linux) or: ubuntu</p>
-<p><a href="https://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO.html">Bash shell documentation</a></p>
-<ul>
-<li>
-<p>Use a shell script to configure the instance <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html">link</a></p>
-</li>
-<li>
-<p>User data: You can specify user data to configure an instance during launch, or to run a configuration script. To attach a file, select the "As file" option and browse for the file to attach.</p>
-</li>
-</ul>
-<h2 id="aws-s3">AWS S3<a class="headerlink" href="#aws-s3" title="Permanent link">&para;</a></h2>
-<p>GUI tools to upload / manage files:</p>
-<ul>
-<li>AWS Console</li>
-<li>S3 Browser</li>
-<li>CloudBerry</li>
-</ul>
-<p>Command-line s3 clients:</p>
-<ul>
-<li>AWS command line (see above)</li>
-<li>S3 command line tools</li>
-</ul>
-<h2 id="redshift">Redshift<a class="headerlink" href="#redshift" title="Permanent link">&para;</a></h2>
-<p>1) Use Case</p>
-<ul>
-<li>Large-scale SQL analytical database</li>
-<li>Querying in Redshift is FAST</li>
-<li>Full SQL compared to <a href="https://hive.apache.org/">HiveQL</a></li>
-<li>Redshift isn’t a complete replacement for a Hadoop system (no streaming, no text processing)</li>
-</ul>
-<p>2) Tools</p>
-<ul>
-<li>install SQL <a href="https://docs.aws.amazon.com/redshift/latest/gsg/rs-gsg-prereq.html">tool</a></li>
-<li>or <a href="https://www.aginity.com/workbench/redshift/">Aginity</a></li>
-<li>Microsoft <a href="https://stackoverflow.com/questions/17323590/redshift-with-ssis-ssdt">SSDT</a></li>
-</ul>
-<p>3) Get data into Redshift:</p>
-<ul>
-<li>COPY from S3 (delimited text files)</li>
-<li>COPY from DynamoDB (NoSQL datastore)</li>
-<li>JDBC/ODBC transactions (not efficient for bulk loading)</li>
-</ul>
-<p>Tables have ‘keys’ that define how the data is split across slices. The recommended practice is to split based upon commonly-joined columns, so that joined data resides on the same slice, thus avoiding the need to move data between systems.</p>
-<p>4) Examples:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">COPY</span><span class="w"> </span><span class="n">table1</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="s1">&#39;s3://bucket1/&#39;</span><span class="w"> </span><span class="n">credentials</span><span class="w"> </span><span class="s1">&#39;aws_access_key_id=abc;aws_secret_access_key=xyz&#39;</span><span class="w"> </span><span class="k">delimiter</span><span class="w"> </span><span class="s1">&#39;|&#39;</span><span class="w"> </span><span class="n">gzip</span><span class="w"> </span><span class="n">removequotes</span><span class="w"> </span><span class="n">truncatecolumns</span><span class="w"> </span><span class="n">maxerror</span><span class="w"> </span><span class="mi">1000</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">field1</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">table1</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">field2</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">table1</span>
+<!-- TODO Reviewed ??-??-2026 -->
+
+<h1 id="elasticsearch-queries">ElasticSearch Queries<a class="headerlink" href="#elasticsearch-queries" title="Permanent link">&para;</a></h1>
+<h2 id="search">SEARCH<a class="headerlink" href="#search" title="Permanent link">&para;</a></h2>
+<p>Every field in a document is indexed and can be queried.</p>
+<p># Search for all employees in the megacorp index:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>GET /megacorp/employee/_search
 </code></pre></div>
-<h2 id="emr">EMR<a class="headerlink" href="#emr" title="Permanent link">&para;</a></h2>
+<p># Search for all employees in the megacorp index
+# who have "Smith" in the last_name field</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>GET /megacorp/employee/_search?q=last_name:Smith
+</code></pre></div>
+<p># Same query as above, but using the Query DSL</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>GET /megacorp/employee/_search
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>{
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    "query": {
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>      "match": {
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>        "last_name": "smith"
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>      }
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    }
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>}
+</code></pre></div>
+<p># SEARCH QUERY STRING</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>GET /_all/tweet/_search?q=tweet:elasticsearch
+</code></pre></div>
+<p>Don't forget to URL encode special characters e.g. +name:john +tweet:mary</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>GET /_search?q=%2Bname%3Ajohn+%2Btweet%3Amary
+</code></pre></div>
+<p>The + prefix indicates conditions that must be satisfied for our query to match. Similarly a - prefix would indicate conditions that must not match. All conditions without a + or - are optional</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>+name:(mary john) +date:&gt;2014-09-10 +(aggregations geo) # Last part searches _all.
+</code></pre></div>
+<h2 id="query-dsl">QUERY DSL<a class="headerlink" href="#query-dsl" title="Permanent link">&para;</a></h2>
+<p>When used in filtering context, the query is said to be a "non-scoring" or "filtering" query. That is, the query simply asks the question: "Does this document match?". The answer is always a simple, binary yes|no.
+When used in a querying context, the query becomes a "scoring" query.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a># Find all employees whose `last_name` is Smith.
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a># And who are older than 30.
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>GET /megacorp/employee/_search
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>{
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>"query" : {
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>  "filtered" : {
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>      "filter" : {
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>      "range" : {
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>          "age" : { "gt" : 30 }
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>      }
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>      },
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>      "query" : {
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>      "match" : {
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>          "last_name" : "smith"
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>      }
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>      }
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>  }
+<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>}
+<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>}
+</code></pre></div>
+<h2 id="exact-search">EXACT SEARCH<a class="headerlink" href="#exact-search" title="Permanent link">&para;</a></h2>
+<p># Find all employees who enjoy "rock climbing"</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>GET /megacorp/employee/_search
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>{
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>"query" : {
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>  "match_phrase" : {
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>      "about" : "rock climbing"
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>  }
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>}
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>}
+</code></pre></div>
+<p># EXACT VALUES</p>
+<p>The term query is used to search by exact values, be they numbers, dates, Booleans, or not_analyzed exact-value string fields</p>
+<p>The terms query is the same as the term query, but allows you to specify multiple values to match. If the field contains any of the specified values, the document matches</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>{ "terms": { "tag": [ "search", "full_text", "nosql" ] }}
+</code></pre></div>
+<p># Compound Queries</p>
+<p>{
+"bool": {
+"must": { "match": { "tweet": "elasticsearch" }},
+"must_not": { "match": { "name": "mary" }},
+"should": { "match": { "tweet": "full text" }},
+"filter": { "range": { "age" : { "gt" : 30 }} }
+}
+}</p>
+<p># VALIDATE A QUERY</p>
+<p>GET /gb/tweet/_validate/query?explain { "query": { "tweet" : { "match" : "really powerful" } }}</p>
+<p># understand why one particular document matched or, more important, why it didn’t match</p>
+<p>GET /us/tweet/12/_explain { "query" : { "bool" : { "filter" : { "term" : { "user_id" : 2 }}, "must" : { "match" : { "tweet" : "honeymoon" }} } }}</p>
+<h2 id="mappings-schemas">MAPPINGS (schemas)<a class="headerlink" href="#mappings-schemas" title="Permanent link">&para;</a></h2>
+<p>Every type has its own mapping, or schema definition. A mapping defines the fields within a type, the datatype for each field, and how the field should be handled by Elasticsearch. A mapping is also used to configure metadata associated with the type.</p>
+<p>You can control dynamic nature of mappings</p>
+<p>Mapping (or schema definition) for the tweet type in the gb index</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>GET /gb/_mapping/tweet
+</code></pre></div>
+<p>Elasticsearch supports the following simple field types:</p>
 <ul>
-<li><a href="https://aws.amazon.com/elasticmapreduce/faqs/">EMR FAQs</a></li>
-<li><a href="https://docs.aws.amazon.com/ElasticMapReduce/latest/DeveloperGuide/emr-etl.html">Extract, Transform, and Load (ETL) Data with Amazon EMR</a></li>
-<li><a href="https://aws.amazon.com/articles/Elastic-MapReduce">EMR article</a></li>
+<li>String: string</li>
+<li>Whole number: byte, short, integer, long</li>
+<li>Floating-point: float, double</li>
+<li>Boolean: boolean</li>
+<li>Date: date</li>
 </ul>
-<h2 id="swf">SWF<a class="headerlink" href="#swf" title="Permanent link">&para;</a></h2>
-<p>The Amazon Simple Workflow Service (Amazon SWF) makes it easy to build applications that coordinate work across distributed components. In Amazon SWF, a task represents a logical unit of work that is performed by a component of your application. Coordinating tasks across the application involves managing intertask dependencies, scheduling, and concurrency in accordance with the logical flow of the application. Amazon SWF gives you full control over implementing tasks and coordinating them without worrying about underlying complexities such as tracking their progress and maintaining their state.</p>
-<p>When using Amazon SWF, you implement workers to perform tasks. These workers can run either on cloud infrastructure, such as Amazon Elastic Compute Cloud (Amazon EC2), or on your own premises. You can create tasks that are long-running, or that may fail, time out, or require restarts—or that may complete with varying throughput and latency. Amazon SWF stores tasks and assigns them to workers when they are ready, tracks their progress, and maintains their state, including details on their completion. To coordinate tasks, you write a program that gets the latest state of each task from Amazon SWF and uses it to initiate subsequent tasks. Amazon SWF maintains an application's execution state durably so that the application is resilient to failures in individual components. With Amazon SWF, you can implement, deploy, scale, and modify these application components independently.</p>
-<p>Amazon SWF offers capabilities to support a variety of application requirements. It is suitable for a range of use cases that require coordination of tasks, including media processing, web application back-ends, business process workflows, and analytics pipelines.</p>
+<p>Fields of type string are, by default, considered to contain full text. That is, their value will be passed through an analyzer before being indexed, and a full-text query on the field will pass the query string through an analyzer before searching.
+The two most important mapping attributes for string fields are index and analyzer.</p>
+<p>The index attribute controls how the string will be indexed. It can contain one of three values:</p>
+<ul>
+<li><code>analyzed</code>: First analyze the string and then index it. In other words, index this field as full text.</li>
+<li><code>not_analyzed</code>: Index this field, so it is searchable, but index the value exactly as specified. Do not analyze it.</li>
+<li><code>no</code>: Don’t index this field at all. This field will not be searchable.</li>
+</ul>
+<p>If we want to map the field as an exact value, we need to set it to not_analyzed:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>{
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>  "tag": {
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>  "type": "string",
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>  "index": "not_analyzed"
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>  }
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>}
+</code></pre></div>
+<p>For analyzed string fields, use the analyzer attribute to specify which analyzer to apply both at search time and at index time. By default, Elasticsearch uses the standard analyzer, but you can change this by specifying one of the built-in analyzers, such as whitespace, simple, or english:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>{
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>  "tweet": {
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>  "type": "string",
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>  "analyzer": "english"
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>  }
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>}
+</code></pre></div>
+<h3 id="create-a-new-index-specifying-that-the-tweet-field-should-use-the-english-analyzer">Create a new index, specifying that the tweet field should use the english analyzer<a class="headerlink" href="#create-a-new-index-specifying-that-the-tweet-field-should-use-the-english-analyzer" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>PUT /gb
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>  { "mappings":
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>       { "tweet" :
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>                 { "properties" : {
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>                      "tweet" : { "type" : "string", "analyzer": "english" },
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>                      "date" : { "type" : "date" },
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>                      "name" : { "type" : "string" },
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>                      "user_id" : { "type" : "long" }
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>                    }}}}
+</code></pre></div>
+<p>null, arrays, objects: see <a href="https://www.elastic.co/guide/en/elasticsearch/guide/current/complex-core-fields.html">complex core fields</a></p>
+<h2 id="parent-child-relationships"><a href="https://qbox.io/blog/parent-child-relationships-in-elasticsearch">Parent Child Relationships</a><a class="headerlink" href="#parent-child-relationships" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="err">DELETE</span><span class="w"> </span><span class="err">/</span><span class="kc">test</span><span class="err">_i</span><span class="kc">n</span><span class="err">dex</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="err">PUT</span><span class="w"> </span><span class="err">/</span><span class="kc">test</span><span class="err">_i</span><span class="kc">n</span><span class="err">dex</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="p">{</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="w">   </span><span class="nt">"mappings"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="w">      </span><span class="nt">"parent_type"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="w">         </span><span class="nt">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="w">            </span><span class="nt">"num_prop"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="w">               </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"integer"</span>
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="w">            </span><span class="p">},</span>
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="w">            </span><span class="nt">"str_prop"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="w">               </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span>
+<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a><span class="w">         </span><span class="p">}</span>
+<a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a><span class="w">      </span><span class="p">},</span>
+<a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a><span class="w">      </span><span class="nt">"child_type"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a><span class="w">         </span><span class="nt">"_parent"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a><span class="w">            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"parent_type"</span>
+<a id="__codelineno-13-19" name="__codelineno-13-19" href="#__codelineno-13-19"></a><span class="w">         </span><span class="p">},</span>
+<a id="__codelineno-13-20" name="__codelineno-13-20" href="#__codelineno-13-20"></a><span class="w">         </span><span class="nt">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-21" name="__codelineno-13-21" href="#__codelineno-13-21"></a><span class="w">            </span><span class="nt">"child_num"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-22" name="__codelineno-13-22" href="#__codelineno-13-22"></a><span class="w">               </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"integer"</span>
+<a id="__codelineno-13-23" name="__codelineno-13-23" href="#__codelineno-13-23"></a><span class="w">            </span><span class="p">},</span>
+<a id="__codelineno-13-24" name="__codelineno-13-24" href="#__codelineno-13-24"></a><span class="w">            </span><span class="nt">"child_str"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-25" name="__codelineno-13-25" href="#__codelineno-13-25"></a><span class="w">               </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span>
+<a id="__codelineno-13-26" name="__codelineno-13-26" href="#__codelineno-13-26"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-13-27" name="__codelineno-13-27" href="#__codelineno-13-27"></a><span class="w">         </span><span class="p">}</span>
+<a id="__codelineno-13-28" name="__codelineno-13-28" href="#__codelineno-13-28"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-13-29" name="__codelineno-13-29" href="#__codelineno-13-29"></a><span class="w">   </span><span class="p">}</span>
+<a id="__codelineno-13-30" name="__codelineno-13-30" href="#__codelineno-13-30"></a><span class="p">}</span>
+<a id="__codelineno-13-31" name="__codelineno-13-31" href="#__codelineno-13-31"></a>
+<a id="__codelineno-13-32" name="__codelineno-13-32" href="#__codelineno-13-32"></a><span class="err">POST</span><span class="w"> </span><span class="err">/</span><span class="kc">test</span><span class="err">_i</span><span class="kc">n</span><span class="err">dex/_bulk</span>
+<a id="__codelineno-13-33" name="__codelineno-13-33" href="#__codelineno-13-33"></a><span class="p">{</span><span class="nt">"index"</span><span class="p">:{</span><span class="nt">"_type"</span><span class="p">:</span><span class="s2">"parent_type"</span><span class="p">,</span><span class="nt">"_id"</span><span class="p">:</span><span class="mi">1</span><span class="p">}}</span>
+<a id="__codelineno-13-34" name="__codelineno-13-34" href="#__codelineno-13-34"></a><span class="p">{</span><span class="nt">"num_prop"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="nt">"str_prop"</span><span class="p">:</span><span class="s2">"hello"</span><span class="p">}</span>
+<a id="__codelineno-13-35" name="__codelineno-13-35" href="#__codelineno-13-35"></a><span class="p">{</span><span class="nt">"index"</span><span class="p">:{</span><span class="nt">"_type"</span><span class="p">:</span><span class="s2">"child_type"</span><span class="p">,</span><span class="nt">"_id"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="nt">"_parent"</span><span class="p">:</span><span class="mi">1</span><span class="p">}}</span>
+<a id="__codelineno-13-36" name="__codelineno-13-36" href="#__codelineno-13-36"></a><span class="p">{</span><span class="nt">"child_num"</span><span class="p">:</span><span class="mi">11</span><span class="p">,</span><span class="nt">"child_str"</span><span class="p">:</span><span class="s2">"foo"</span><span class="p">}</span>
+<a id="__codelineno-13-37" name="__codelineno-13-37" href="#__codelineno-13-37"></a><span class="p">{</span><span class="nt">"index"</span><span class="p">:{</span><span class="nt">"_type"</span><span class="p">:</span><span class="s2">"child_type"</span><span class="p">,</span><span class="nt">"_id"</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="nt">"_parent"</span><span class="p">:</span><span class="mi">1</span><span class="p">}}</span>
+<a id="__codelineno-13-38" name="__codelineno-13-38" href="#__codelineno-13-38"></a><span class="p">{</span><span class="nt">"child_num"</span><span class="p">:</span><span class="mi">12</span><span class="p">,</span><span class="nt">"child_str"</span><span class="p">:</span><span class="s2">"bar"</span><span class="p">}</span>
+<a id="__codelineno-13-39" name="__codelineno-13-39" href="#__codelineno-13-39"></a><span class="p">{</span><span class="nt">"index"</span><span class="p">:{</span><span class="nt">"_type"</span><span class="p">:</span><span class="s2">"parent_type"</span><span class="p">,</span><span class="nt">"_id"</span><span class="p">:</span><span class="mi">2</span><span class="p">}}</span>
+<a id="__codelineno-13-40" name="__codelineno-13-40" href="#__codelineno-13-40"></a><span class="p">{</span><span class="nt">"num_prop"</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="nt">"str_prop"</span><span class="p">:</span><span class="s2">"goodbye"</span><span class="p">}</span>
+<a id="__codelineno-13-41" name="__codelineno-13-41" href="#__codelineno-13-41"></a><span class="p">{</span><span class="nt">"index"</span><span class="p">:{</span><span class="nt">"_type"</span><span class="p">:</span><span class="s2">"child_type"</span><span class="p">,</span><span class="nt">"_id"</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span><span class="nt">"_parent"</span><span class="p">:</span><span class="mi">2</span><span class="p">}}</span>
+<a id="__codelineno-13-42" name="__codelineno-13-42" href="#__codelineno-13-42"></a><span class="p">{</span><span class="nt">"child_num"</span><span class="p">:</span><span class="mi">21</span><span class="p">,</span><span class="nt">"child_str"</span><span class="p">:</span><span class="s2">"baz"</span><span class="p">}</span>
+<a id="__codelineno-13-43" name="__codelineno-13-43" href="#__codelineno-13-43"></a>
+<a id="__codelineno-13-44" name="__codelineno-13-44" href="#__codelineno-13-44"></a><span class="err">POST</span><span class="w"> </span><span class="err">/</span><span class="kc">test</span><span class="err">_i</span><span class="kc">n</span><span class="err">dex/child_</span><span class="kc">t</span><span class="err">ype/_search</span>
+<a id="__codelineno-13-45" name="__codelineno-13-45" href="#__codelineno-13-45"></a>
+<a id="__codelineno-13-46" name="__codelineno-13-46" href="#__codelineno-13-46"></a><span class="err">POST</span><span class="w"> </span><span class="err">/</span><span class="kc">test</span><span class="err">_i</span><span class="kc">n</span><span class="err">dex/child_</span><span class="kc">t</span><span class="err">ype/</span><span class="mi">2</span><span class="err">?pare</span><span class="kc">nt</span><span class="err">=</span><span class="mi">1</span>
+<a id="__codelineno-13-47" name="__codelineno-13-47" href="#__codelineno-13-47"></a><span class="p">{</span>
+<a id="__codelineno-13-48" name="__codelineno-13-48" href="#__codelineno-13-48"></a><span class="w">   </span><span class="nt">"child_num"</span><span class="p">:</span><span class="w"> </span><span class="mi">13</span><span class="p">,</span>
+<a id="__codelineno-13-49" name="__codelineno-13-49" href="#__codelineno-13-49"></a><span class="w">   </span><span class="nt">"child_str"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bars"</span>
+<a id="__codelineno-13-50" name="__codelineno-13-50" href="#__codelineno-13-50"></a><span class="p">}</span>
+<a id="__codelineno-13-51" name="__codelineno-13-51" href="#__codelineno-13-51"></a>
+<a id="__codelineno-13-52" name="__codelineno-13-52" href="#__codelineno-13-52"></a><span class="err">POST</span><span class="w"> </span><span class="err">/</span><span class="kc">test</span><span class="err">_i</span><span class="kc">n</span><span class="err">dex/child_</span><span class="kc">t</span><span class="err">ype/_search</span>
+<a id="__codelineno-13-53" name="__codelineno-13-53" href="#__codelineno-13-53"></a>
+<a id="__codelineno-13-54" name="__codelineno-13-54" href="#__codelineno-13-54"></a><span class="err">POST</span><span class="w"> </span><span class="err">/</span><span class="kc">test</span><span class="err">_i</span><span class="kc">n</span><span class="err">dex/child_</span><span class="kc">t</span><span class="err">ype/</span><span class="mi">3</span><span class="err">/_upda</span><span class="kc">te</span><span class="err">?pare</span><span class="kc">nt</span><span class="err">=</span><span class="mi">2</span>
+<a id="__codelineno-13-55" name="__codelineno-13-55" href="#__codelineno-13-55"></a><span class="p">{</span>
+<a id="__codelineno-13-56" name="__codelineno-13-56" href="#__codelineno-13-56"></a><span class="w">   </span><span class="nt">"script"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ctx._source.child_num+=1"</span>
+<a id="__codelineno-13-57" name="__codelineno-13-57" href="#__codelineno-13-57"></a><span class="p">}</span>
+<a id="__codelineno-13-58" name="__codelineno-13-58" href="#__codelineno-13-58"></a>
+<a id="__codelineno-13-59" name="__codelineno-13-59" href="#__codelineno-13-59"></a><span class="err">POST</span><span class="w"> </span><span class="err">/</span><span class="kc">test</span><span class="err">_i</span><span class="kc">n</span><span class="err">dex/child_</span><span class="kc">t</span><span class="err">ype/_search</span>
+<a id="__codelineno-13-60" name="__codelineno-13-60" href="#__codelineno-13-60"></a>
+<a id="__codelineno-13-61" name="__codelineno-13-61" href="#__codelineno-13-61"></a><span class="err">POST</span><span class="w"> </span><span class="err">/</span><span class="kc">test</span><span class="err">_i</span><span class="kc">n</span><span class="err">dex/child_</span><span class="kc">t</span><span class="err">ype/_search</span>
+<a id="__codelineno-13-62" name="__codelineno-13-62" href="#__codelineno-13-62"></a><span class="p">{</span>
+<a id="__codelineno-13-63" name="__codelineno-13-63" href="#__codelineno-13-63"></a><span class="w">    </span><span class="nt">"query"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-64" name="__codelineno-13-64" href="#__codelineno-13-64"></a><span class="w">        </span><span class="nt">"term"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-65" name="__codelineno-13-65" href="#__codelineno-13-65"></a><span class="w">           </span><span class="nt">"child_str"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-66" name="__codelineno-13-66" href="#__codelineno-13-66"></a><span class="w">              </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"foo"</span>
+<a id="__codelineno-13-67" name="__codelineno-13-67" href="#__codelineno-13-67"></a><span class="w">           </span><span class="p">}</span>
+<a id="__codelineno-13-68" name="__codelineno-13-68" href="#__codelineno-13-68"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-13-69" name="__codelineno-13-69" href="#__codelineno-13-69"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-13-70" name="__codelineno-13-70" href="#__codelineno-13-70"></a><span class="p">}</span>
+<a id="__codelineno-13-71" name="__codelineno-13-71" href="#__codelineno-13-71"></a>
+<a id="__codelineno-13-72" name="__codelineno-13-72" href="#__codelineno-13-72"></a><span class="err">POST</span><span class="w"> </span><span class="err">/</span><span class="kc">test</span><span class="err">_i</span><span class="kc">n</span><span class="err">dex/pare</span><span class="kc">nt</span><span class="err">_</span><span class="kc">t</span><span class="err">ype/_search</span>
+<a id="__codelineno-13-73" name="__codelineno-13-73" href="#__codelineno-13-73"></a><span class="p">{</span>
+<a id="__codelineno-13-74" name="__codelineno-13-74" href="#__codelineno-13-74"></a><span class="w">   </span><span class="nt">"query"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-75" name="__codelineno-13-75" href="#__codelineno-13-75"></a><span class="w">      </span><span class="nt">"filtered"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-76" name="__codelineno-13-76" href="#__codelineno-13-76"></a><span class="w">         </span><span class="nt">"query"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-77" name="__codelineno-13-77" href="#__codelineno-13-77"></a><span class="w">            </span><span class="nt">"match_all"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span>
+<a id="__codelineno-13-78" name="__codelineno-13-78" href="#__codelineno-13-78"></a><span class="w">         </span><span class="p">},</span>
+<a id="__codelineno-13-79" name="__codelineno-13-79" href="#__codelineno-13-79"></a><span class="w">         </span><span class="nt">"filter"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-80" name="__codelineno-13-80" href="#__codelineno-13-80"></a><span class="w">            </span><span class="nt">"has_child"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-81" name="__codelineno-13-81" href="#__codelineno-13-81"></a><span class="w">               </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"child_type"</span><span class="p">,</span>
+<a id="__codelineno-13-82" name="__codelineno-13-82" href="#__codelineno-13-82"></a><span class="w">               </span><span class="nt">"filter"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-83" name="__codelineno-13-83" href="#__codelineno-13-83"></a><span class="w">                  </span><span class="nt">"term"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-84" name="__codelineno-13-84" href="#__codelineno-13-84"></a><span class="w">                     </span><span class="nt">"child_str"</span><span class="p">:</span><span class="w"> </span><span class="s2">"foo"</span>
+<a id="__codelineno-13-85" name="__codelineno-13-85" href="#__codelineno-13-85"></a><span class="w">                  </span><span class="p">}</span>
+<a id="__codelineno-13-86" name="__codelineno-13-86" href="#__codelineno-13-86"></a><span class="w">               </span><span class="p">}</span>
+<a id="__codelineno-13-87" name="__codelineno-13-87" href="#__codelineno-13-87"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-13-88" name="__codelineno-13-88" href="#__codelineno-13-88"></a><span class="w">         </span><span class="p">}</span>
+<a id="__codelineno-13-89" name="__codelineno-13-89" href="#__codelineno-13-89"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-13-90" name="__codelineno-13-90" href="#__codelineno-13-90"></a><span class="w">   </span><span class="p">}</span>
+<a id="__codelineno-13-91" name="__codelineno-13-91" href="#__codelineno-13-91"></a><span class="p">}</span>
+</code></pre></div>
 
 
 
 
 
 
+
+  
+  
 
 
 
@@ -4130,7 +4249,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../Big_Data/Spark_on_Kubernetes/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Spark 2.3 on Kubernetes">
+          <a href="../ElasticSearch_Plugins/" class="md-footer__link md-footer__link--prev" aria-label="Previous: ElasticSearch Plugins">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -4140,20 +4259,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Spark 2.3 on Kubernetes
+                ElasticSearch Plugins
               </div>
             </div>
           </a>
         
         
           
-          <a href="../AWS_Lambda/" class="md-footer__link md-footer__link--next" aria-label="Next: AWS Lambda">
+          <a href="../ElasticSearch_Setup/" class="md-footer__link md-footer__link--next" aria-label="Next: ElasticSearch Setup">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                AWS Lambda
+                ElasticSearch Setup
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -4310,10 +4429,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.sections", "navigation.prune", "navigation.indexes", "navigation.footer", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.sections", "navigation.prune", "navigation.indexes", "navigation.footer", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
       
     
   </body>

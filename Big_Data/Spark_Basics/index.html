@@ -18,14 +18,14 @@
         <link rel="prev" href="../Spark_APIs/">
       
       
-        <link rel="next" href="../Spark_Development_with_sbt_and_InteliJ/">
+        <link rel="next" href="../Spark_Development_with_sbt_and_IntelliJ/">
       
       
         
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
     
     
       
@@ -33,10 +33,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -336,8 +336,6 @@
       
         
       
-        
-      
     
     
     
@@ -420,14 +418,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../Install_Spark_2.3_Locally/" class="md-nav__link">
+      <a href="../Install_Spark_Locally/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Install Spark 2.3 Locally
+    Install Spark Locally
   
 
     
@@ -455,7 +453,7 @@
   <span class="md-ellipsis">
     
   
-    DataFrames APIs
+    Spark APIs
   
 
     
@@ -536,6 +534,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#creating-a-sparksession" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating a SparkSession
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#useful-links" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -547,10 +556,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#spark-and-mongodb" class="md-nav__link">
+  <a href="#spark-connectors" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Spark and MongoDB
+        Spark Connectors
       
     </span>
   </a>
@@ -558,32 +567,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#spark-and-nlp" class="md-nav__link">
+  <a href="#ecosystem-integrations" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Spark and NLP
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#graphx" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        GraphX
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#apache-zeppelin" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Apache Zeppelin
+        Ecosystem Integrations
       
     </span>
   </a>
@@ -606,14 +593,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../Spark_Development_with_sbt_and_InteliJ/" class="md-nav__link">
+      <a href="../Spark_Development_with_sbt_and_IntelliJ/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Setup a Spark Development Environment with IntelliJ and sbt
+    Spark Development with sbt and IntelliJ
   
 
     
@@ -662,34 +649,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../Spark_on_EC2/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Install Spark on EC2 with Flintrock
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../Spark_on_Kubernetes/" class="md-nav__link">
         
   
@@ -697,7 +656,7 @@
   <span class="md-ellipsis">
     
   
-    Spark 2.3 on Kubernetes
+    Spark on Kubernetes
   
 
     
@@ -726,6 +685,12 @@
   
     
     
+      
+        
+      
+        
+      
+        
       
         
       
@@ -787,14 +752,42 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Cloud/AWS/" class="md-nav__link">
+      <a href="../../Cloud/AWS_Compute/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    AWS Services Overview
+    AWS Compute
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Cloud/AWS_Databases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AWS Databases
   
 
     
@@ -823,6 +816,62 @@
     
   
     AWS Lambda
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Cloud/AWS_Overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AWS Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Cloud/AWS_Storage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AWS Storage
   
 
     
@@ -982,14 +1031,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Containers/Deploy_to_Kubernetes%20%20%28Helm%29/" class="md-nav__link">
+      <a href="../../Containers/Deploy_to_Kubernetes/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Deploy to Kubernetes (Helm)
+    Deploy to Kubernetes
   
 
     
@@ -1010,14 +1059,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Containers/Deploy_to_Kubernetes/" class="md-nav__link">
+      <a href="../../Containers/Deploy_to_Kubernetes_Helm/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Deploy to Kubernetes
+    Deploy to Kubernetes (Helm)
   
 
     
@@ -1376,7 +1425,7 @@
   <span class="md-ellipsis">
     
   
-    Libraries
+    Deep Learning
   
 
     
@@ -2565,8 +2614,6 @@
       
         
       
-        
-      
     
     
     
@@ -2713,34 +2760,6 @@
     
   
     Python Links
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Python/Python3/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Python 3
   
 
     
@@ -3133,7 +3152,7 @@
   <span class="md-ellipsis">
     
   
-    SBT Links
+    Sbt
   
 
     
@@ -3162,6 +3181,16 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
       
         
       
@@ -3249,6 +3278,146 @@
   
   
     <li class="md-nav__item">
+      <a href="../../Search/ElasticSearch_APIs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ElasticSearch APIs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Search/ElasticSearch_Arch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ElasticSearch Architecture and Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Search/ElasticSearch_Plugins/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ElasticSearch Plugins
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Search/ElasticSearch_Queries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ElasticSearch Queries
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Search/ElasticSearch_Setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ElasticSearch Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../Search/Logstash/" class="md-nav__link">
         
   
@@ -3256,7 +3425,7 @@
   <span class="md-ellipsis">
     
   
-    LogStash
+    Logstash
   
 
     
@@ -3285,8 +3454,6 @@
   
     
     
-      
-        
       
         
       
@@ -3354,34 +3521,6 @@
     
   
     Development Tools
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Software_Development/Eclipse/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Useful Links
   
 
     
@@ -3594,6 +3733,14 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -3619,7 +3766,7 @@
   <span class="md-ellipsis">
     
   
-    Windows
+    dotNET
   
 
     
@@ -3632,107 +3779,6 @@
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_18">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Windows
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Windows/Command_Prompt_Here/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Command Line
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-        
-        
-      
-    
-    
-      
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_19" >
-        
-          
-          <label class="md-nav__link" for="__nav_19" id="__nav_19_label" tabindex="">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    dotNET
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_19_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_19">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -3909,43 +3955,48 @@
   
 
 
+<!-- TODO Reviewed ??-??-2026 -->
+
 <h1 id="spark-basics">Spark Basics<a class="headerlink" href="#spark-basics" title="Permanent link">&para;</a></h1>
 <ul>
 <li><a href="https://spark.apache.org/">Main Web Site</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Apache_Spark">Apache Spark on Wikipedia</a></li>
 </ul>
+<h2 id="creating-a-sparksession">Creating a SparkSession<a class="headerlink" href="#creating-a-sparksession" title="Permanent link">&para;</a></h2>
+<p>Since Spark 2.x, <code>SparkSession</code> is the entry point for reading data and executing SQL queries over data.</p>
+<p><strong>Scala:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">import</span><span class="w"> </span><span class="nn">org</span><span class="p">.</span><span class="nn">apache</span><span class="p">.</span><span class="nn">spark</span><span class="p">.</span><span class="nn">sql</span><span class="p">.</span><span class="nc">SparkSession</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kd">val</span><span class="w"> </span><span class="n">spark</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">SparkSession</span><span class="p">.</span><span class="n">builder</span><span class="p">()</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="p">.</span><span class="n">appName</span><span class="p">(</span><span class="s">"SparkBasics"</span><span class="p">)</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="p">.</span><span class="n">master</span><span class="p">(</span><span class="s">"local[*]"</span><span class="p">)</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="p">.</span><span class="n">config</span><span class="p">(</span><span class="s">"spark.some.config.option"</span><span class="p">,</span><span class="w"> </span><span class="s">"some-value"</span><span class="p">)</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span><span class="p">.</span><span class="n">getOrCreate</span><span class="p">()</span>
+</code></pre></div>
+<p><strong>Python (PySpark):</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">pyspark.sql</span><span class="w"> </span><span class="kn">import</span> <span class="n">SparkSession</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">spark</span> <span class="o">=</span> <span class="n">SparkSession</span><span class="o">.</span><span class="n">builder</span><span class="o">.</span><span class="n">appName</span><span class="p">(</span><span class="s2">"SparkBasics"</span><span class="p">)</span><span class="o">.</span><span class="n">master</span><span class="p">(</span><span class="s2">"local[*]"</span><span class="p">)</span><span class="o">.</span><span class="n">getOrCreate</span><span class="p">()</span>
+</code></pre></div>
 <h2 id="useful-links">Useful Links<a class="headerlink" href="#useful-links" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://ampcamp.berkeley.edu/">Ampcamp big data bootcamp</a></li>
-<li><a href="https://datalakes.com/rdds-simplified/">RDDs Simplified</a></li>
-<li><a href="https://spark-summit.org/2016/events/elasticsearch-and-apache-lucene-for-apache-spark-and-mllib/">Elasticsearch and Apache Lucene for Apache Spark and MLlib</a></li>
-<li><a href="https://aws.amazon.com/emr/details/spark/">Spark on AWS</a></li>
-<li><a href="https://www.getblueshift.com/running-apache-spark-1-0-on-aws/">Running Apache Spark on AWS</a></li>
-<li><a href="https://bigsnarf.wordpress.com/2015/01/21/running-apache-spark-emr-on-aws/">Running Apache Spark EMR and EC2 scripts on AWS with read write S3</a></li>
-<li><a href="https://github.com/awslabs/emr-bootstrap-actions/blob/master/spark/examples/spark-submit-via-step.md">Spark on EMR - How to Submit a Spark Application with EMR Steps</a></li>
+<li><a href="https://spark.apache.org/docs/latest/quick-start.html">Official Quick Start</a></li>
+<li><a href="https://spark.apache.org/docs/latest/rdd-programming-guide.html">RDD Programming Guide</a></li>
+<li><a href="https://spark.apache.org/docs/latest/sql-programming-guide.html">Spark SQL, DataFrames and Datasets Guide</a></li>
+<li><a href="https://docs.aws.amazon.com/emr/latest/ReleaseGuide/emr-spark.html">Spark on AWS EMR</a></li>
 <li><a href="https://www.gitbook.com/book/databricks/databricks-spark-reference-applications/details">Databricks Reference Apps</a></li>
-<li><a href="https://www.hadoop360.com/blog/introduction-to-apache-spark-with-examples-and-use-cases">Introduction to Apache Spark with Examples and Use Cases</a></li>
 </ul>
-<h2 id="spark-and-mongodb">Spark and MongoDB<a class="headerlink" href="#spark-and-mongodb" title="Permanent link">&para;</a></h2>
+<h2 id="spark-connectors">Spark Connectors<a class="headerlink" href="#spark-connectors" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://databricks.com/blog/2015/03/20/using-mongodb-with-spark.html">Using MongoDB with Apache Spark</a></li>
 <li><a href="https://www.mongodb.com/products/spark-connector">MongoDB Spark connector</a></li>
+<li><a href="https://www.elastic.co/guide/en/elasticsearch/hadoop/current/spark.html">Elasticsearch Hadoop (for Spark)</a></li>
 </ul>
-<h2 id="spark-and-nlp">Spark and NLP<a class="headerlink" href="#spark-and-nlp" title="Permanent link">&para;</a></h2>
+<h2 id="ecosystem-integrations">Ecosystem Integrations<a class="headerlink" href="#ecosystem-integrations" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://spark-summit.org/eu-2015/events/dictionary-based-annotation-at-scale-with-spark-solrtexttagger-and-opennlp/">Dictionary Based Annotation at Scale with Spark, SolrTextTagger and OpenNLP</a></li>
+<li><strong>Graph Processing:</strong> <a href="https://spark.apache.org/docs/latest/graphx-programming-guide.html">Graphx programming guide</a></li>
+<li><strong>Notebooks:</strong> Apache Zeppelin and JupyterLab are commonly used interactive environments for Spark. Zeppelin server is usually found at port 8890.</li>
+<li><a href="https://zeppelin.apache.org/">Zeppelin</a></li>
 </ul>
-<p>Here is a complete set of example on how to use DL4J (Deep Learning for Java) that uses UIMA on the SPARK platform</p>
-<p><a href="https://github.com/deeplearning4j/dl4j-spark-cdh5-examples">Deep Learning for Java</a></p>
-<p>and in the following project the use of CTAKES UIMA module from within the Spark framework</p>
-<p><a href="https://dzone.com/articles/in-progress-natural-language-processing">Natural Language Processing with Apache Spark</a></p>
-<h2 id="graphx">GraphX<a class="headerlink" href="#graphx" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="https://spark.apache.org/docs/latest/graphx-programming-guide.html">Graphx programming guide</a></li>
-</ul>
-<h2 id="apache-zeppelin">Apache Zeppelin<a class="headerlink" href="#apache-zeppelin" title="Permanent link">&para;</a></h2>
-<p>Connect to Zeppelin using the same SSH tunneling method to connect to other web servers on the master node. Zeppelin server is found at port 8890.</p>
-<p><a href="https://zeppelin.incubator.apache.org">Zeppelin</a></p>
 
 
 
@@ -3983,7 +4034,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../Spark_APIs/" class="md-footer__link md-footer__link--prev" aria-label="Previous: DataFrames APIs">
+          <a href="../Spark_APIs/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Spark APIs">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -3993,20 +4044,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                DataFrames APIs
+                Spark APIs
               </div>
             </div>
           </a>
         
         
           
-          <a href="../Spark_Development_with_sbt_and_InteliJ/" class="md-footer__link md-footer__link--next" aria-label="Next: Setup a Spark Development Environment with IntelliJ and sbt">
+          <a href="../Spark_Development_with_sbt_and_IntelliJ/" class="md-footer__link md-footer__link--next" aria-label="Next: Spark Development with sbt and IntelliJ">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Setup a Spark Development Environment with IntelliJ and sbt
+                Spark Development with sbt and IntelliJ
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -4163,10 +4214,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.sections", "navigation.prune", "navigation.indexes", "navigation.footer", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.sections", "navigation.prune", "navigation.indexes", "navigation.footer", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
       
     
   </body>

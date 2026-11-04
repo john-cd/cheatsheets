@@ -12,31 +12,31 @@
         <meta name="author" content="S. John CD">
       
       
-        <link rel="canonical" href="https://john-cd.com/cheatsheets/Windows/Command_Prompt_Here/">
+        <link rel="canonical" href="https://john-cd.com/cheatsheets/Cloud/AWS_Overview/">
       
       
-        <link rel="prev" href="../../Web/jQuery/">
+        <link rel="prev" href="../AWS_Lambda/">
       
       
-        <link rel="next" href="../../dotNET/ASPdotNET/">
+        <link rel="next" href="../AWS_Storage/">
       
       
         
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
     
     
       
-        <title>Command Line - John's Cheatsheets</title>
+        <title>AWS Overview - John's Cheatsheets</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -89,6 +89,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#aws-services-overview" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -121,7 +126,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Command Line
+              AWS Overview
             
           </span>
         </div>
@@ -329,8 +334,6 @@
       
         
       
-        
-      
     
     
     
@@ -413,14 +416,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Big_Data/Install_Spark_2.3_Locally/" class="md-nav__link">
+      <a href="../../Big_Data/Install_Spark_Locally/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Install Spark 2.3 Locally
+    Install Spark Locally
   
 
     
@@ -448,7 +451,7 @@
   <span class="md-ellipsis">
     
   
-    DataFrames APIs
+    Spark APIs
   
 
     
@@ -497,14 +500,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Big_Data/Spark_Development_with_sbt_and_InteliJ/" class="md-nav__link">
+      <a href="../../Big_Data/Spark_Development_with_sbt_and_IntelliJ/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Setup a Spark Development Environment with IntelliJ and sbt
+    Spark Development with sbt and IntelliJ
   
 
     
@@ -553,34 +556,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Big_Data/Spark_on_EC2/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Install Spark on EC2 with Flintrock
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../Big_Data/Spark_on_Kubernetes/" class="md-nav__link">
         
   
@@ -588,7 +563,7 @@
   <span class="md-ellipsis">
     
   
-    Spark 2.3 on Kubernetes
+    Spark on Kubernetes
   
 
     
@@ -613,10 +588,18 @@
       
   
   
+    
   
   
+  
     
     
+      
+        
+      
+        
+      
+        
       
         
       
@@ -635,11 +618,11 @@
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
@@ -660,7 +643,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -678,14 +661,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Cloud/AWS/" class="md-nav__link">
+      <a href="../AWS_Compute/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    AWS Services Overview
+    AWS Compute
   
 
     
@@ -706,7 +689,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Cloud/AWS_Lambda/" class="md-nav__link">
+      <a href="../AWS_Databases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AWS Databases
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AWS_Lambda/" class="md-nav__link">
         
   
   
@@ -731,10 +742,223 @@
                 
   
   
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AWS Overview
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AWS Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basic-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic Services
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Storage
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#databases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Databases
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analytics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Analytics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etl--elt--batch-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ETL / ELT / Batch Processing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#application-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Application Services
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Monitoring
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#infrastructure-deployment--automation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Infrastructure Deployment / Automation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tools
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
   
   
     <li class="md-nav__item">
-      <a href="../../Cloud/Serverless/" class="md-nav__link">
+      <a href="../AWS_Storage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AWS Storage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Serverless/" class="md-nav__link">
         
   
   
@@ -873,14 +1097,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Containers/Deploy_to_Kubernetes%20%20%28Helm%29/" class="md-nav__link">
+      <a href="../../Containers/Deploy_to_Kubernetes/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Deploy to Kubernetes (Helm)
+    Deploy to Kubernetes
   
 
     
@@ -901,14 +1125,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Containers/Deploy_to_Kubernetes/" class="md-nav__link">
+      <a href="../../Containers/Deploy_to_Kubernetes_Helm/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Deploy to Kubernetes
+    Deploy to Kubernetes (Helm)
   
 
     
@@ -1267,7 +1491,7 @@
   <span class="md-ellipsis">
     
   
-    Libraries
+    Deep Learning
   
 
     
@@ -2456,8 +2680,6 @@
       
         
       
-        
-      
     
     
     
@@ -2604,34 +2826,6 @@
     
   
     Python Links
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Python/Python3/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Python 3
   
 
     
@@ -3024,7 +3218,7 @@
   <span class="md-ellipsis">
     
   
-    SBT Links
+    Sbt
   
 
     
@@ -3053,6 +3247,16 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
       
         
       
@@ -3140,6 +3344,146 @@
   
   
     <li class="md-nav__item">
+      <a href="../../Search/ElasticSearch_APIs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ElasticSearch APIs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Search/ElasticSearch_Arch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ElasticSearch Architecture and Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Search/ElasticSearch_Plugins/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ElasticSearch Plugins
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Search/ElasticSearch_Queries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ElasticSearch Queries
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Search/ElasticSearch_Setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ElasticSearch Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../Search/Logstash/" class="md-nav__link">
         
   
@@ -3147,7 +3491,7 @@
   <span class="md-ellipsis">
     
   
-    LogStash
+    Logstash
   
 
     
@@ -3176,8 +3520,6 @@
   
     
     
-      
-        
       
         
       
@@ -3245,34 +3587,6 @@
     
   
     Development Tools
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Software_Development/Eclipse/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Useful Links
   
 
     
@@ -3478,109 +3792,6 @@
       
   
   
-    
-  
-  
-  
-    
-    
-      
-        
-      
-    
-    
-    
-      
-        
-        
-      
-    
-    
-      
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_18" id="__nav_18_label" tabindex="">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Windows
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_18">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Windows
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Command Line
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
   
   
     
@@ -3611,10 +3822,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_19" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" >
         
           
-          <label class="md-nav__link" for="__nav_19" id="__nav_19_label" tabindex="">
+          <label class="md-nav__link" for="__nav_18" id="__nav_18_label" tabindex="">
             
   
   
@@ -3632,8 +3843,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_19_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_19">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_18">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -3810,25 +4021,75 @@
   
 
 
-  <h1>Command Line</h1>
+<!-- TODO Reviewed ??-??-2026 -->
 
-<p>Just type "cmd" to the location bar. It will start a new command prompt in current path.</p>
-<p>OR</p>
-<p>Hold the "Shift" key while right-clicking a blank space in the desired folder to bring up a more verbose context menu. One of the options is "Open PowerShell Here".</p>
-<p>To re-enable the "Open Command Prompt Here" (disabled by the Windows 10 Creators Update):</p>
+<h1 id="aws-services-overview">AWS Services Overview<a class="headerlink" href="#aws-services-overview" title="Permanent link">&para;</a></h1>
+<h2 id="basic-services">Basic Services<a class="headerlink" href="#basic-services" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://superuser.com/questions/1201988/how-do-i-change-open-with-powershell-to-open-with-command-prompt-when-shift">Link</a></li>
-<li><a href="https://blogs.msdn.microsoft.com/andrew_richards/2017/03/01/enhancing-the-open-command-prompt-here-shift-right-click-context-menu-experience/">Link 2</a></li>
+<li>Compute: EC2 (autoscaling, ELB load balancing), Lambda</li>
+<li>Networking / Security: VPC (security groups), IAM (users/groups/application roles)</li>
 </ul>
+<h2 id="storage">Storage<a class="headerlink" href="#storage" title="Permanent link">&para;</a></h2>
+<ul>
+<li>S3: secure, scalable object-level storage, static web site hosting</li>
+<li>Glacier: long-term storage</li>
+<li>EBS: block-level storage (for EC2 instances)</li>
+</ul>
+<h2 id="databases">Databases<a class="headerlink" href="#databases" title="Permanent link">&para;</a></h2>
+<ul>
+<li>RDS: relational databases (MySQL, PostgreSQL, MSSQL, MariaDB, Aurora)</li>
+<li>DynamoDB: scalable NoSQL database backed by solid-state drives</li>
+</ul>
+<h2 id="analytics">Analytics<a class="headerlink" href="#analytics" title="Permanent link">&para;</a></h2>
+<ul>
+<li>RedShift: PostgreSQL-based columnstore OLAP database that uses SQL. MPP architecture.</li>
+<li>EMR: Hadoop cluster (Hive, Spark, Flink).</li>
+</ul>
+<h2 id="etl--elt--batch-processing">ETL / ELT / Batch Processing<a class="headerlink" href="#etl--elt--batch-processing" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Glue</li>
+<li>Batch</li>
+<li>Data Pipeline: orchestrate data transfers between S3, DynamoDB, Redshift</li>
+</ul>
+<h2 id="application-services">Application Services<a class="headerlink" href="#application-services" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Notifications: SNS (alerts by email, SMS), SES (bulk email)</li>
+<li>Queue: SQS (async message queues for component decoupling)</li>
+<li>Workflows, State Machine as a Service: AWS Step Functions</li>
+<li>Document Search: ElasticSearch, CloudSearch</li>
+</ul>
+<h2 id="monitoring">Monitoring<a class="headerlink" href="#monitoring" title="Permanent link">&para;</a></h2>
+<ul>
+<li>CloudWatch (monitor services and instances e.g. CPU utilization, etc...)</li>
+<li>CloudTrail (monitor API calls)</li>
+</ul>
+<h2 id="infrastructure-deployment--automation">Infrastructure Deployment / Automation<a class="headerlink" href="#infrastructure-deployment--automation" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Elastic Beanstalk (simple, mostly web or Linux worker)</li>
+<li>CloudFormation (JSON / YAML templates - more difficult, but many existing templates)</li>
+<li>CDK (Cloud Development Kit) - Infrastructure as code using Python/TypeScript/etc.</li>
+</ul>
+<h2 id="tools">Tools<a class="headerlink" href="#tools" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Windows Terminal and WSL (Windows Subsystem for Linux) are highly recommended over Putty or Cygwin.</p>
+</li>
+<li>
+<p>AWS <a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-set-up.html">command line interface</a></p>
+</li>
+<li>
+<p><a href="https://docs.aws.amazon.com/AWSToolkitVS/latest/UserGuide/welcome.html">AWS toolkit for Visual Studio</a></p>
+</li>
+</ul>
+<h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Review this cheatsheet and adapt the commands to your environment before execution.
+</code></pre></div>
 
 
 
 
 
 
-
-  
-  
 
 
 
@@ -3860,7 +4121,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../Web/jQuery/" class="md-footer__link md-footer__link--prev" aria-label="Previous: jQuery">
+          <a href="../AWS_Lambda/" class="md-footer__link md-footer__link--prev" aria-label="Previous: AWS Lambda">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -3870,20 +4131,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                jQuery
+                AWS Lambda
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../dotNET/ASPdotNET/" class="md-footer__link md-footer__link--next" aria-label="Next: ASP.NET Core app">
+          <a href="../AWS_Storage/" class="md-footer__link md-footer__link--next" aria-label="Next: AWS Storage">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                ASP.NET Core app
+                AWS Storage
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -4040,10 +4301,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.sections", "navigation.prune", "navigation.indexes", "navigation.footer", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.sections", "navigation.prune", "navigation.indexes", "navigation.footer", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
       
     
   </body>

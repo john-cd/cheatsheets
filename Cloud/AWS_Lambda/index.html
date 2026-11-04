@@ -15,17 +15,17 @@
         <link rel="canonical" href="https://john-cd.com/cheatsheets/Cloud/AWS_Lambda/">
       
       
-        <link rel="prev" href="../AWS/">
+        <link rel="prev" href="../AWS_Databases/">
       
       
-        <link rel="next" href="../Serverless/">
+        <link rel="next" href="../AWS_Overview/">
       
       
         
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
     
     
       
@@ -33,10 +33,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -90,7 +90,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#useful-links" class="md-skip">
+        <a href="#aws-lambda" class="md-skip">
           Skip to content
         </a>
       
@@ -334,8 +334,6 @@
       
         
       
-        
-      
     
     
     
@@ -418,14 +416,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Big_Data/Install_Spark_2.3_Locally/" class="md-nav__link">
+      <a href="../../Big_Data/Install_Spark_Locally/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Install Spark 2.3 Locally
+    Install Spark Locally
   
 
     
@@ -453,7 +451,7 @@
   <span class="md-ellipsis">
     
   
-    DataFrames APIs
+    Spark APIs
   
 
     
@@ -502,14 +500,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Big_Data/Spark_Development_with_sbt_and_InteliJ/" class="md-nav__link">
+      <a href="../../Big_Data/Spark_Development_with_sbt_and_IntelliJ/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Setup a Spark Development Environment with IntelliJ and sbt
+    Spark Development with sbt and IntelliJ
   
 
     
@@ -558,34 +556,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Big_Data/Spark_on_EC2/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Install Spark on EC2 with Flintrock
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../Big_Data/Spark_on_Kubernetes/" class="md-nav__link">
         
   
@@ -593,7 +563,7 @@
   <span class="md-ellipsis">
     
   
-    Spark 2.3 on Kubernetes
+    Spark on Kubernetes
   
 
     
@@ -624,6 +594,12 @@
   
     
     
+      
+        
+      
+        
+      
+        
       
         
       
@@ -685,14 +661,42 @@
   
   
     <li class="md-nav__item">
-      <a href="../AWS/" class="md-nav__link">
+      <a href="../AWS_Compute/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    AWS Services Overview
+    AWS Compute
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AWS_Databases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AWS Databases
   
 
     
@@ -718,6 +722,8 @@
       
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
+      
+        
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
@@ -761,6 +767,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -779,10 +787,88 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#serverless-framework-configuration-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Serverless Framework Configuration Example
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-lambda-handler-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Python Lambda Handler Example
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AWS_Overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AWS Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AWS_Storage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AWS Storage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -934,14 +1020,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Containers/Deploy_to_Kubernetes%20%20%28Helm%29/" class="md-nav__link">
+      <a href="../../Containers/Deploy_to_Kubernetes/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Deploy to Kubernetes (Helm)
+    Deploy to Kubernetes
   
 
     
@@ -962,14 +1048,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Containers/Deploy_to_Kubernetes/" class="md-nav__link">
+      <a href="../../Containers/Deploy_to_Kubernetes_Helm/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Deploy to Kubernetes
+    Deploy to Kubernetes (Helm)
   
 
     
@@ -1328,7 +1414,7 @@
   <span class="md-ellipsis">
     
   
-    Libraries
+    Deep Learning
   
 
     
@@ -2517,8 +2603,6 @@
       
         
       
-        
-      
     
     
     
@@ -2665,34 +2749,6 @@
     
   
     Python Links
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Python/Python3/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Python 3
   
 
     
@@ -3085,7 +3141,7 @@
   <span class="md-ellipsis">
     
   
-    SBT Links
+    Sbt
   
 
     
@@ -3114,6 +3170,16 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
       
         
       
@@ -3201,6 +3267,146 @@
   
   
     <li class="md-nav__item">
+      <a href="../../Search/ElasticSearch_APIs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ElasticSearch APIs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Search/ElasticSearch_Arch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ElasticSearch Architecture and Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Search/ElasticSearch_Plugins/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ElasticSearch Plugins
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Search/ElasticSearch_Queries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ElasticSearch Queries
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Search/ElasticSearch_Setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ElasticSearch Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../Search/Logstash/" class="md-nav__link">
         
   
@@ -3208,7 +3414,7 @@
   <span class="md-ellipsis">
     
   
-    LogStash
+    Logstash
   
 
     
@@ -3237,8 +3443,6 @@
   
     
     
-      
-        
       
         
       
@@ -3306,34 +3510,6 @@
     
   
     Development Tools
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Software_Development/Eclipse/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Useful Links
   
 
     
@@ -3546,6 +3722,14 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -3571,7 +3755,7 @@
   <span class="md-ellipsis">
     
   
-    Windows
+    dotNET
   
 
     
@@ -3584,107 +3768,6 @@
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_18">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Windows
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Windows/Command_Prompt_Here/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Command Line
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-        
-        
-      
-    
-    
-      
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_19" >
-        
-          
-          <label class="md-nav__link" for="__nav_19" id="__nav_19_label" tabindex="">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    dotNET
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_19_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_19">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -3861,11 +3944,50 @@
   
 
 
-  <h1>AWS Lambda</h1>
+<!-- TODO Reviewed ??-??-2026 -->
 
+<h1 id="aws-lambda">AWS Lambda<a class="headerlink" href="#aws-lambda" title="Permanent link">&para;</a></h1>
 <h2 id="useful-links">Useful Links<a class="headerlink" href="#useful-links" title="Permanent link">&para;</a></h2>
-<p><a href="https://github.com/awslabs/aws-lambda-ddns-function">Building a Dynamic DNS for Route 53 using CloudWatch Events and Lambda</a></p>
-<p><a href="https://github.com/jarpy/lambkin">Lambkin</a> - CLI tool for generating and managing simple functions in AWS Lambda</p>
+<ul>
+<li><a href="https://github.com/awslabs/aws-lambda-ddns-function">Building a Dynamic DNS for Route 53 using CloudWatch Events and Lambda</a></li>
+<li><a href="https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/install-sam-cli.html">AWS SAM CLI</a> - CLI tool for building, testing, and deploying Lambda applications</li>
+</ul>
+<h2 id="serverless-framework-configuration-example">Serverless Framework Configuration Example<a class="headerlink" href="#serverless-framework-configuration-example" title="Permanent link">&para;</a></h2>
+<p>To deploy a Lambda function via the <a href="https://www.serverless.com/">Serverless Framework</a>, configure a <code>serverless.yml</code> file:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">service</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my-python-lambda</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nt">frameworkVersion</span><span class="p">:</span><span class="w"> </span><span class="s">"3"</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nt">provider</span><span class="p">:</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">aws</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="nt">runtime</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python3.13</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span><span class="nt">region</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">us-east-1</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="nt">functions</span><span class="p">:</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">  </span><span class="nt">hello</span><span class="p">:</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="nt">handler</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">handler.hello</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">    </span><span class="nt">events</span><span class="p">:</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">httpApi</span><span class="p">:</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">          </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/hello</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">          </span><span class="nt">method</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">get</span>
+</code></pre></div>
+<p>Deploy with:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sls<span class="w"> </span>deploy
+</code></pre></div>
+<h2 id="python-lambda-handler-example">Python Lambda Handler Example<a class="headerlink" href="#python-lambda-handler-example" title="Permanent link">&para;</a></h2>
+<p>An example API Gateway trigger handler <code>handler.py</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="k">def</span><span class="w"> </span><span class="nf">hello</span><span class="p">(</span><span class="n">event</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="n">body</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>        <span class="s2">"message"</span><span class="p">:</span> <span class="s2">"Go Serverless v3.0! Your function executed successfully!"</span><span class="p">,</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>        <span class="s2">"input"</span><span class="p">:</span> <span class="n">event</span><span class="p">,</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>    <span class="p">}</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>    <span class="n">response</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"statusCode"</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span> <span class="s2">"body"</span><span class="p">:</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">body</span><span class="p">)}</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>    <span class="k">return</span> <span class="n">response</span>
+</code></pre></div>
 
 
 
@@ -3906,7 +4028,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../AWS/" class="md-footer__link md-footer__link--prev" aria-label="Previous: AWS Services Overview">
+          <a href="../AWS_Databases/" class="md-footer__link md-footer__link--prev" aria-label="Previous: AWS Databases">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -3916,20 +4038,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                AWS Services Overview
+                AWS Databases
               </div>
             </div>
           </a>
         
         
           
-          <a href="../Serverless/" class="md-footer__link md-footer__link--next" aria-label="Next: Serverless Cheatsheet">
+          <a href="../AWS_Overview/" class="md-footer__link md-footer__link--next" aria-label="Next: AWS Overview">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Serverless Cheatsheet
+                AWS Overview
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -4086,10 +4208,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.sections", "navigation.prune", "navigation.indexes", "navigation.footer", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.sections", "navigation.prune", "navigation.indexes", "navigation.footer", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
       
     
   </body>
