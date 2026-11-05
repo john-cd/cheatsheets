@@ -34,6 +34,7 @@ jobs:
       - uses: astral-sh/setup-uv@v7
         with:
           enable-cache: true
+          version: "0.13.7"
           cache-dependency-glob: "**/uv.lock"
       - run: just sync
       - run: just uv tool install prek

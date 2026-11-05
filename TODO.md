@@ -15,7 +15,7 @@ validation before implementing. Existing acceptance details remain below.
 ### Ready: priority order
 
 - ~~Finish scoped quality gates and link classification~~ — Done 2026-11-04. Evidence: ruff 0.15.5, prek 0.5.7, dprint 0.64.3, markdownlint-cli2 0.24.0 all pass; `just links` found 5 broken and 30 unreachable links (sandbox network), not yet fixed.
-- ~~Audit updater roots, action inputs and lock/cache ownership~~ — Done 2026-11-04 (roots cover uv, docker, compose, devcontainers, actions; CI uses `--locked` and `uv.lock`-keyed caches; `docker compose config` validates). Pin alignment (CI uv unpinned vs `.devcontainer/.env` 0.12.17) and runtime acceptance remain open.
+- ~~Audit updater roots, action inputs and lock/cache ownership~~ — Done 2026-11-04 (roots cover uv, docker, compose, devcontainers, actions; CI uses `--locked` and `uv.lock`-keyed caches; `docker compose config` validates). Pin alignment done (uv 0.13.7 in CI and `.devcontainer/.env`); runtime acceptance remains open.
 - ~~Review branch/worktree ownership~~ — Done 2026-11-04; all backups kept (see WORKTREES.md). Temporary/LLM file cleanup review still open.
 
 ### Blocked or deferred
