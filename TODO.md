@@ -10,7 +10,7 @@ validation before implementing. Existing acceptance details remain below.
 
 ### Ready: quick wins
 
-- [Reconcile worktree guidance and document the owning commands](#review-follow-up-november-2-2026) — Align existing policy without moving active checkouts.
+- ~~Reconcile worktree guidance and document the owning commands~~ — Done: slots `a`–`j` everywhere (verified `j` accepted, `k` rejected by `scripts/env.just`).
 
 ### Ready: priority order
 
@@ -97,11 +97,11 @@ wait is currently inventoried. Add a release trigger and review date when one is
 Reviewed published `develop` at `efb06ed4da10ae8e5966f8bee47c6bb806f764de`.
 Remaining follow-up work refines the existing quality and CI baseline:
 
-- [ ] **P2: Reconcile worktree policy.** `AGENTS.md` limits slots to `a`, `b`, and `c`,
+- [x] **P2: Reconcile worktree policy.** `AGENTS.md` limits slots to `a`, `b`, and `c`,
       while README and WORKTREES.md permit `a` through `j`. Use one documented set that
       agrees with `scripts/env.just`; verify permitted and rejected slots without moving
       existing worktrees. Preserve the independent empty `main` history.
-- [ ] **P3: State the Python/documentation contract in AGENTS.md.** Keep the shared
+- [x] **P3: State the Python/documentation contract in AGENTS.md.** Keep the shared
       storage and Git rules, but add the owning unittest, Node test, MkDocs, and
       configuration-check commands from README and Justfile. Keep this documentation
       repository's historical-content exceptions explicit instead of importing Rust rules.
