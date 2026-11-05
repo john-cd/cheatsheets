@@ -14,7 +14,7 @@ validation before implementing. Existing acceptance details remain below.
 
 ### Ready: priority order
 
-- [Finish scoped quality gates and link classification](#p2-quality-gates) — P2: local checks first; classify network failures separately.
+- ~~Finish scoped quality gates and link classification~~ — Done 2026-11-04. Evidence: ruff 0.15.5, prek 0.5.7, dprint 0.64.3, markdownlint-cli2 0.24.0 all pass; `just links` found 5 broken and 30 unreachable links (sandbox network), not yet fixed.
 - [Audit updater roots, action inputs and lock/cache ownership](#p2-dependencies-ci-and-containers) — P2: configuration work is ready; hosted/container execution is separate.
 - [Review branch/worktree ownership](#repository-maintenance) — Read-only comparison first; preserve unique and active work.
 
@@ -41,11 +41,11 @@ Acceptance: category ownership and review dates reflect actual human review.
 
 Problem: Python checks alone do not validate the maintained documentation/tooling content.
 
-- [ ] Confirm Ruff rules and scoped hooks without weakening stricter rules or examples.
-- [ ] Cover Markdown, TOML, YAML, and shell content with applicable format/lint commands.
-- [ ] Add link checks that distinguish blocked networks from broken destinations.
-- [ ] Run read-only format/lint/prek checks; record versions, scope, and actual failures.
-- [ ] Keep README, AGENTS.md, CONFIGURATION.md, and WORKTREES.md synchronized.
+- [x] Confirm Ruff rules and scoped hooks without weakening stricter rules or examples.
+- [x] Cover Markdown, TOML, YAML, and shell content with applicable format/lint commands.
+- [x] Add link checks that distinguish blocked networks from broken destinations.
+- [x] Run read-only format/lint/prek checks; record versions, scope, and actual failures.
+- [x] Keep README, AGENTS.md, CONFIGURATION.md, and WORKTREES.md synchronized.
 
 Acceptance: maintained file types have runnable quality gates; commands and results are recorded.
 Do not report skipped checks as passing or synchronize full runtime dependencies for formatting.

@@ -1,7 +1,14 @@
 {
   "$schema": "https://raw.githubusercontent.com/DavidAnson/markdownlint-cli2/main/schema/markdownlint-cli2-config-schema.json",
   "globs": ["**/*.md"],
-  "ignores": ["drafts/**", "**/.worktrees/**", "**/node_modules/**", "**/target/**", "**/build/**"],
+  "ignores": [
+    "drafts/**",
+    "trash/**",
+    "**/.worktrees/**",
+    "**/node_modules/**",
+    "**/target/**",
+    "**/build/**"
+  ],
   "gitignore": true,
   "noProgress": true
 }

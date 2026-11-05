@@ -43,6 +43,10 @@ just hooks-install
 just hooks
 just uv run python -m unittest discover -s tests -p "test_*.py"
 node --test tests/*.test.js
+just format-check   # dprint: Markdown, JSON, TOML, YAML
+just markdownlint
+just links          # external links; network failures reported apart from broken ones
+just check-all      # offline gates: Ruff, unittest, dprint, markdownlint
 just uv run mkdocs build
 ```
 

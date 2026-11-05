@@ -49,3 +49,14 @@ hooks-run:
 # Lint repository Markdown with the pinned markdownlint-cli2.
 markdownlint *args='':
     npx --yes markdownlint-cli2@0.24.0 {{ args }}
+
+# Check Markdown, JSON, TOML, and YAML formatting with the repository dprint configuration.
+format-check:
+    dprint check
+
+# Check external links; network failures are reported separately from broken destinations.
+links *args='': _python-prepare
+    uv --directory {{quote(py_project_dir)}} run --locked python scripts/check_links.py {{ args }}
+
+# Run every local, offline quality gate.
+check-all: check format-check markdownlint
