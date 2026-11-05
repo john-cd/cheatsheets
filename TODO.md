@@ -15,7 +15,7 @@ validation before implementing. Existing acceptance details remain below.
 ### Ready: priority order
 
 - ~~Finish scoped quality gates and link classification~~ — Done 2026-11-04. Evidence: ruff 0.15.5, prek 0.5.7, dprint 0.64.3, markdownlint-cli2 0.24.0 all pass; `just links` found 5 broken and 30 unreachable links (sandbox network), not yet fixed.
-- [Audit updater roots, action inputs and lock/cache ownership](#p2-dependencies-ci-and-containers) — P2: configuration work is ready; hosted/container execution is separate.
+- ~~Audit updater roots, action inputs and lock/cache ownership~~ — Done 2026-11-04 (roots cover uv, docker, compose, devcontainers, actions; CI uses `--locked` and `uv.lock`-keyed caches; `docker compose config` validates). Pin alignment (CI uv unpinned vs `.devcontainer/.env` 0.12.17) and runtime acceptance remain open.
 - [Review branch/worktree ownership](#repository-maintenance) — Read-only comparison first; preserve unique and active work.
 
 ### Blocked or deferred
@@ -54,10 +54,10 @@ Do not report skipped checks as passing or synchronize full runtime dependencies
 
 Problem: updater coverage and runtime/cache behavior still require verification.
 
-- [ ] Audit Dependabot roots for uv, Docker, Compose, devcontainers, and GitHub Actions.
-- [ ] Preserve lock ownership, registries, justified exclusions, and non-overlapping updates.
-- [ ] Validate workflow/local-action references, supported inputs, and security checks.
-- [ ] Use locked uv resolution and caches keyed by the owning lockfiles.
+- [x] Audit Dependabot roots for uv, Docker, Compose, devcontainers, and GitHub Actions.
+- [x] Preserve lock ownership, registries, justified exclusions, and non-overlapping updates.
+- [x] Validate workflow/local-action references, supported inputs, and security checks.
+- [x] Use locked uv resolution and caches keyed by the owning lockfiles.
 - [ ] Pin reasonable software/image/feature versions in the central version source.
 - [ ] Validate Compose base/override, build/start the devcontainer, and exercise hosted CI.
 

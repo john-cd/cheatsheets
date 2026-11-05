@@ -8,7 +8,7 @@
 ARG WORK_DIR="/code"
 
 ARG PYTHON_VERSION
-FROM python:${PYTHON_VERSION}-slim as base
+FROM python:${PYTHON_VERSION}-slim AS base
 
 # Prevents Python from writing pyc files.
 ENV PYTHONDONTWRITEBYTECODE=1
