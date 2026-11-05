@@ -8,15 +8,10 @@ Snapshot: November 3, 2026. GitHub Issues is disabled, so links below point to t
 Read top to bottom: quick wins, then priority work. Recheck source and prior
 validation before implementing. Existing acceptance details remain below.
 
-### Ready: quick wins
-
-- ~~Reconcile worktree guidance and document the owning commands~~ — Done: slots `a`–`j` everywhere (verified `j` accepted, `k` rejected by `scripts/env.just`).
-
 ### Ready: priority order
 
-- ~~Finish scoped quality gates and link classification~~ — Done 2026-11-04. Evidence: ruff 0.15.5, prek 0.5.7, dprint 0.64.3, markdownlint-cli2 0.24.0 all pass; `just links` found 5 broken and 30 unreachable links (sandbox network), not yet fixed.
-- ~~Audit updater roots, action inputs and lock/cache ownership~~ — Done 2026-11-04 (roots cover uv, docker, compose, devcontainers, actions; CI uses `--locked` and `uv.lock`-keyed caches; `docker compose config` validates). Pin alignment done (uv 0.13.7 in CI and `.devcontainer/.env`); runtime acceptance remains open.
-- ~~Review branch/worktree ownership~~ — Done 2026-11-04; all backups kept (see WORKTREES.md). Temporary/LLM file cleanup review still open.
+- Fix the 5 broken links found by `just links` (30 more were unreachable from the sandbox; recheck with normal network access).
+- Review temporary/LLM file cleanup (branch/worktree ownership review is done; all backups kept, see WORKTREES.md).
 
 ### Blocked or deferred
 
