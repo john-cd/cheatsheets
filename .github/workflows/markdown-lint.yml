@@ -13,6 +13,7 @@ on:
       - ".python-version"
       - "justfile"
       - "scripts/env.just"
+  workflow_dispatch:
   pull_request:
     branches: [main, develop]
     paths:
