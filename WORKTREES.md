@@ -36,3 +36,17 @@ See the README for this repository's project paths and commands.
 ## Current state
 
 The 2026-11-01 configuration alignment was integrated into develop; no dedicated alignment worktree remains. Use git worktree list --porcelain and git status --short for live ownership and cleanliness.
+
+## Branch dispositions (reviewed 2026-11-04)
+
+Read-only comparison against `develop`; nothing was deleted or moved.
+
+| Branch                                        | Unique commits | Disposition                                      |
+| --------------------------------------------- | -------------- | ------------------------------------------------ |
+| `main`                                        | 1              | Keep: independent empty root commit (by design). |
+| `backup/master-before-sync-20261031-287593a3` | 3              | Keep: pre-sync backup; also on origin.           |
+| `backup/tooling-20261031/develop-before`      | 2              | Keep: pre-rewrite backup; also on origin.        |
+| `backup/tooling-20261031/working-state`       | 3              | Keep: saved working state; also on origin.       |
+
+No auxiliary worktrees exist besides the primary checkout. Retire a backup only after a human
+confirms its commits are obsolete.
