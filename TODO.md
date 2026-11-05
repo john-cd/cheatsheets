@@ -10,7 +10,7 @@ validation before implementing. Existing acceptance details remain below.
 
 ### Ready: priority order
 
-- Fix the 5 broken links found by `just links` (30 more were unreachable from the sandbox; recheck with normal network access).
+- ~~Fix the 5 broken links~~ — Done: were checker false positives (parenthesised URL, HEAD-only 404s); 29 remain unreachable from the sandbox, recheck with normal network.
 - Review temporary/LLM file cleanup (branch/worktree ownership review is done; all backups kept, see WORKTREES.md).
 
 ### Blocked or deferred
