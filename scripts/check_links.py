@@ -14,7 +14,7 @@ import urllib.error
 import urllib.request
 from pathlib import Path
 
-LINK_RE = re.compile(r"\]\((https?://[^)\s]+)\)|<(https?://[^>\s]+)>")
+LINK_RE = re.compile(r"\]\((https?://(?:[^()\s]|\([^()\s]*\))+)\)|<(https?://[^>\s]+)>")
 IGNORED = re.compile(r"^https?://(localhost|127\.0\.0\.1|twitter\.com|www\.linkedin\.com)")
 BROKEN_STATUSES = {404, 410}
 USER_AGENT = "cheatsheets-link-check/1.0"
@@ -26,12 +26,22 @@ def extract_links(text: str) -> set[str]:
     return {url.rstrip(".,;") for url in links if not IGNORED.match(url)}
 
 
+def _fetch(url: str, method: str, timeout: float) -> None:
+    request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT}, method=method)
+    with urllib.request.urlopen(request, timeout=timeout):  # noqa: S310
+        return
+
+
 def classify(url: str, timeout: float = 10.0) -> str:
     """Return 'ok', 'broken', or 'network' for a URL."""
-    request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT}, method="HEAD")
     try:
-        with urllib.request.urlopen(request, timeout=timeout):  # noqa: S310
-            return "ok"
+        try:
+            _fetch(url, "HEAD", timeout)
+        except urllib.error.HTTPError as error:
+            if error.code not in BROKEN_STATUSES:
+                raise
+            _fetch(url, "GET", timeout)  # some sites 404 HEAD requests only
+        return "ok"
     except urllib.error.HTTPError as error:
         if error.code in BROKEN_STATUSES:
             return "broken"
