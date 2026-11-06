@@ -2,22 +2,30 @@
 
 <!-- recommended-issue-order:start -->
 
-## Recommended work order
+## Ready and blocked work
 
-Snapshot: November 3, 2026. GitHub Issues is disabled, so links below point to the authoritative local tasks.
-Read top to bottom: quick wins, then priority work. Recheck source and prior
-validation before implementing. Existing acceptance details remain below.
+Snapshot: November 6, 2026. GitHub Issues is disabled, so this file is the backlog; links point to local sections.
 
-### Ready: priority order
+### Ready
 
-- ~~Fix the 5 broken links~~ — Done: were checker false positives (parenthesised URL, HEAD-only 404s); 29 remain unreachable from the sandbox, recheck with normal network.
-- Review temporary/LLM file cleanup (branch/worktree ownership review is done; all backups kept, see WORKTREES.md).
+- [Pin software, image and feature versions in the central version source](#p2-dependencies-ci-and-containers).
+- [Validate Compose base/override and build/start the devcontainer](#p2-dependencies-ci-and-containers) — Docker 29.9 is available locally.
 
-### Blocked or deferred
+### Blocked
 
-- [Add proposed cheat sheets one subject at a time](#p3-new-content) — Defer until existing documentation and maintenance work is complete.
-- [Hosted CI/deployment and devcontainer runtime acceptance](#p2-dependencies-ci-and-containers) — Needs Actions/deployment access and a working container host; configuration fixes remain ready.
-- [Ownership, review dates and cleanup decisions](#p1-documentation-quality) — Needs actual owner/human review; never invent dates or treat markers as completed reviews.
+#### CI unavailable
+
+- [Exercise hosted CI and deployment](#p2-dependencies-ci-and-containers) — hosted Actions is unavailable.
+
+#### Human decisions and reviews
+
+- [Category ownership and last-review metadata](#p1-documentation-quality) — needs an actual owner review; never invent dates.
+- [Temporary/LLM file cleanup](#repository-maintenance) — needs an ownership decision per file.
+- [New cheat sheet subjects](#p3-new-content) — owner deferred until maintenance work is complete.
+
+#### Hardware, external host or account
+
+- Recheck the 29 links unreachable from the sandbox with normal network access.
 
 <!-- recommended-issue-order:end -->
 
@@ -86,22 +94,3 @@ and navigation/cross-links; distinguish proposals from published content.
 Acceptance: every cleanup target has a recorded disposition and no unrelated work is lost.
 Human/account/host blockers belong here with their concrete prerequisites; no upstream-release
 wait is currently inventoried. Add a release trigger and review date when one is identified.
-
-## Review follow-up: November 2, 2026
-
-Reviewed published `develop` at `efb06ed4da10ae8e5966f8bee47c6bb806f764de`.
-Remaining follow-up work refines the existing quality and CI baseline:
-
-- [x] **P2: Reconcile worktree policy.** `AGENTS.md` limits slots to `a`, `b`, and `c`,
-      while README and WORKTREES.md permit `a` through `j`. Use one documented set that
-      agrees with `scripts/env.just`; verify permitted and rejected slots without moving
-      existing worktrees. Preserve the independent empty `main` history.
-- [x] **P3: State the Python/documentation contract in AGENTS.md.** Keep the shared
-      storage and Git rules, but add the owning unittest, Node test, MkDocs, and
-      configuration-check commands from README and Justfile. Keep this documentation
-      repository's historical-content exceptions explicit instead of importing Rust rules.
-
-Validation: Python 3.15.2 parsed the tracked Python test source; every tracked TOML file
-parsed; `prek validate-config D:/code/cheatsheets/prek.toml` passed. All configured local
-action references resolve. dprint failed as recorded above. These are syntax/configuration
-checks, not a site-build, full-hook, container, or hosted-deployment pass.
