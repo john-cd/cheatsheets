@@ -1,7 +1,7 @@
 """Check external Markdown links, separating blocked networks from broken destinations.
 
-Exit status: 0 = all reachable (or only network failures with --allow-network-failures),
-1 = broken destinations (HTTP 404/410 or similar), 2 = only network failures.
+Exit status: 0 = no broken or blocked targets (network failures may be allowed),
+1 = broken destinations (HTTP 404/410), 2 = unresolved blocked or network checks.
 """
 
 from __future__ import annotations
@@ -17,6 +17,7 @@ from pathlib import Path
 LINK_RE = re.compile(r"\]\((https?://(?:[^()\s]|\([^()\s]*\))+)\)|<(https?://[^>\s]+)>")
 IGNORED = re.compile(r"^https?://(localhost|127\.0\.0\.1|twitter\.com|www\.linkedin\.com)")
 BROKEN_STATUSES = {404, 410}
+HEAD_FALLBACK_STATUSES = BROKEN_STATUSES | {405, 501}
 USER_AGENT = "cheatsheets-link-check/1.0"
 
 
@@ -26,28 +27,44 @@ def extract_links(text: str) -> set[str]:
     return {url.rstrip(".,;") for url in links if not IGNORED.match(url)}
 
 
-def _fetch(url: str, method: str, timeout: float) -> None:
+def _fetch(url: str, method: str, timeout: float) -> int:
     request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT}, method=method)
-    with urllib.request.urlopen(request, timeout=timeout):  # noqa: S310
-        return
+    with urllib.request.urlopen(request, timeout=timeout) as response:  # noqa: S310
+        status = response.getcode()
+        if status is None:
+            raise urllib.error.URLError("response did not include an HTTP status")
+        return status
+
+
+def _classify_http_status(status: int) -> str:
+    if status in BROKEN_STATUSES:
+        return "broken"
+    if status >= 400:
+        return "blocked"
+    return "ok"
 
 
 def classify(url: str, timeout: float = 10.0) -> str:
-    """Return 'ok', 'broken', or 'network' for a URL."""
+    """Return 'ok', 'broken', 'blocked', or 'network' for a URL."""
     try:
         try:
-            _fetch(url, "HEAD", timeout)
+            status = _fetch(url, "HEAD", timeout)
         except urllib.error.HTTPError as error:
-            if error.code not in BROKEN_STATUSES:
-                raise
-            _fetch(url, "GET", timeout)  # some sites 404 HEAD requests only
-        return "ok"
+            if error.code not in HEAD_FALLBACK_STATUSES:
+                status = error.code
+                error.close()
+                return _classify_http_status(status)
+            error.close()
+            try:
+                status = _fetch(url, "GET", timeout)
+            except urllib.error.HTTPError as get_error:
+                status = get_error.code
+                get_error.close()
     except urllib.error.HTTPError as error:
-        if error.code in BROKEN_STATUSES:
-            return "broken"
-        return "ok"  # 403/405/429/5xx: reachable, access policy differs from a broken target
+        return _classify_http_status(error.code)
     except urllib.error.URLError, socket.timeout, ConnectionError, OSError:
         return "network"
+    return _classify_http_status(status)
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -63,15 +80,22 @@ def main(argv: list[str] | None = None) -> int:
             urls.setdefault(url, []).append(file)
 
     results = {url: classify(url) for url in sorted(urls)}
-    for kind in ("broken", "network"):
+    for kind in ("broken", "blocked", "network"):
         for url, status in results.items():
             if status == kind:
                 print(f"{kind.upper()}: {url} ({urls[url][0]})")
     broken = sum(s == "broken" for s in results.values())
+    blocked = sum(s == "blocked" for s in results.values())
     network = sum(s == "network" for s in results.values())
-    print(f"checked={len(results)} broken={broken} network_failures={network}")
+    unresolved = blocked + network
+    print(
+        f"checked={len(results)} broken={broken} blocked={blocked} "
+        f"network_failures={network} unresolved={unresolved}"
+    )
     if broken:
         return 1
+    if blocked:
+        return 2
     if network and not args.allow_network_failures:
         return 2
     return 0

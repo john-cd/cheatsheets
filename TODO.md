@@ -46,7 +46,7 @@ Problem: Python checks alone do not validate the maintained documentation/toolin
 
 - [x] Confirm Ruff rules and scoped hooks without weakening stricter rules or examples.
 - [x] Cover Markdown, TOML, YAML, and shell content with applicable format/lint commands.
-- [x] Add link checks that distinguish blocked networks from broken destinations.
+- [x] Classify inconclusive HTTP statuses as blocked, retry unsupported HEAD requests with GET, and test CLI exit behavior.
 - [x] Run read-only format/lint/prek checks; record versions, scope, and actual failures.
 - [x] Keep README, AGENTS.md, CONFIGURATION.md, and WORKTREES.md synchronized.
 
