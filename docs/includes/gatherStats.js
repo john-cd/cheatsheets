@@ -1,5 +1,9 @@
 // TODO Reviewed ??-??-2026
 
+var INPUT_DATABASE_NAME = "inputDB";
+var OUTPUT_DATABASE_NAME = "outputDB";
+var STATS_COLLECTION_NAME = "stats";
+
 function normalizeAddressKey(address) {
     return (address || "").toString().toLowerCase();
 }
@@ -10,28 +14,26 @@ function buildStatsAggregationPipeline(limit) {
         { $group: { _id: { $toLower: "$address" }, count: { $sum: 1 } } },
         { $sort: { "count": -1 } },
         { $limit: max },
-        { $out: "stats" }
+        { $out: { db: OUTPUT_DATABASE_NAME, coll: STATS_COLLECTION_NAME } }
     ];
 }
 
 function gatherStats() {
     var start = Date.now();
 
-    var inputDB = db.getSiblingDB("inputDB");
+    var inputDB = db.getSiblingDB(INPUT_DATABASE_NAME);
     var inputColl = inputDB.getCollection("inputColl");
 
-    // Debug: inputColl.find( {} ).limit(2).forEach(printjson).
+    var outputDB = db.getSiblingDB(OUTPUT_DATABASE_NAME);
 
-    outputDB = db.getSiblingDB("outputDB");
-    db = outputDB; // Set current database for the next aggregate step.
-
-    // Create temporary collection with count.
+    // $out writes to outputDB and atomically replaces its stats collection.
     inputColl.aggregate(buildStatsAggregationPipeline(100000), { allowDiskUse: true }); // Returns { _id, count } where _id is the address.
 
-    var statsColl = outputDB.getCollection("stats");
+    var statsColl = outputDB.getCollection(STATS_COLLECTION_NAME);
 
-   // Create output collection.
+    // Rebuilding the derived collection makes repeated runs idempotent.
     var outputColl = outputDB.getCollection("outputColl");
+    outputColl.deleteMany({});
     var outputBulk = outputColl.initializeUnorderedBulkOp();
     var counter = 0;
 
