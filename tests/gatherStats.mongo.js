@@ -24,16 +24,17 @@ outputDB.outputColl.insertOne({ _id: "stale", address: "stale", count: 99 });
 load("docs/includes/gatherStats.js");
 gatherStats();
 
-assert.eq(2, outputDB.stats.countDocuments({}));
-assert.eq(2, outputDB.stats.findOne({ _id: "alice" }).count);
-assert.eq(1, outputDB.stats.findOne({ _id: "bob" }).count);
-assert.eq(3, outputDB.outputColl.countDocuments({}));
-assert.eq(0, outputDB.outputColl.countDocuments({ _id: "stale" }));
-assert.eq(-1, inputDB.getCollectionNames().indexOf("stats"));
+var statsCollection = outputDB.getCollection("stats");
+assert.strictEqual(2, statsCollection.countDocuments({}));
+assert.strictEqual(2, statsCollection.findOne({ _id: "alice" }).count);
+assert.strictEqual(1, statsCollection.findOne({ _id: "bob" }).count);
+assert.strictEqual(3, outputDB.outputColl.countDocuments({}));
+assert.strictEqual(0, outputDB.outputColl.countDocuments({ _id: "stale" }));
+assert.strictEqual(-1, inputDB.getCollectionNames().indexOf("stats"));
 
 gatherStats();
 
-assert.eq(2, outputDB.stats.countDocuments({}));
-assert.eq(3, outputDB.outputColl.countDocuments({}));
-assert.eq(0, outputDB.outputColl.countDocuments({ _id: "stale" }));
+assert.strictEqual(2, statsCollection.countDocuments({}));
+assert.strictEqual(3, outputDB.outputColl.countDocuments({}));
+assert.strictEqual(0, outputDB.outputColl.countDocuments({ _id: "stale" }));
 print("gatherStats MongoDB integration checks passed");
