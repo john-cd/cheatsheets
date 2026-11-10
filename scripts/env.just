@@ -3,6 +3,9 @@
 # Purpose: Export shared Python tooling paths and provide uv and prek recipes.
 # Usage: Import from a project justfile; run that justfile with --list or env.
 
+set unstable
+set lists
+
 # Shared Python environment configuration, imported by each Python project's justfile.
 set shell := ["bash", "-uc"]
 set windows-shell := ["C:/Program Files/Git/bin/bash.exe", "-uc"]
@@ -11,9 +14,12 @@ set windows-shell := ["C:/Program Files/Git/bin/bash.exe", "-uc"]
 # are keyed by repository, project, and worktree slot; py_environment_project may share an
 # environment across related projects that use the same lockfile.
 py_repo_root := parent_directory(source_directory())
-py_main_repo := if file_name(parent_directory(py_repo_root)) == ".worktrees" { parent_directory(parent_directory(py_repo_root)) } else { py_repo_root }
+py_repo_parent := parent_directory(py_repo_root)
+py_repo_parent_name := if py_repo_parent =~ '^/$' { "" } else { file_name(py_repo_parent) }
+py_is_worktree := py_repo_parent_name =~ '^\.worktrees$'
+py_main_repo := if py_is_worktree { parent_directory(py_repo_parent) } else { py_repo_root }
 py_repo_name := file_name(py_main_repo)
-py_raw_slot := if file_name(parent_directory(py_repo_root)) == ".worktrees" { file_name(py_repo_root) } else { "main" }
+py_raw_slot := if py_is_worktree { file_name(py_repo_root) } else { "main" }
 py_slot := if py_raw_slot =~ '^(main|[a-j])$' { py_raw_slot } else { error("Invalid Python worktree slot: " + py_raw_slot) }
 py_project_dir := join(py_repo_root, py_project_path)
 py_project_key := if py_project_path == "." { join(py_repo_name, py_slot) } else { join(py_repo_name, py_project_path, py_slot) }

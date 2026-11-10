@@ -7,7 +7,12 @@
 
 ARG WORK_DIR="/code"
 
-ARG PYTHON_VERSION
+ARG PYTHON_VERSION=3.15.2
+ARG UV_VERSION=0.13.7
+ARG JUST_VERSION=1.59.0
+
+FROM ghcr.io/astral-sh/uv:${UV_VERSION} AS uv
+FROM ghcr.io/casey/just:${JUST_VERSION} AS just
 FROM python:${PYTHON_VERSION}-slim AS base
 
 # Prevents Python from writing pyc files.
@@ -17,10 +22,8 @@ ENV PYTHONDONTWRITEBYTECODE=1
 # the application crashes without emitting any logs due to buffering.
 ENV PYTHONUNBUFFERED=1
 
-ARG UV_VERSION
-ARG JUST_VERSION
-COPY --from=ghcr.io/astral-sh/uv:${UV_VERSION} /uv /uvx /bin/
-COPY --from=ghcr.io/casey/just:${JUST_VERSION} /just /usr/local/bin/just
+COPY --from=uv /uv /uvx /bin/
+COPY --from=just /just /usr/local/bin/just
 
 ARG WORK_DIR
 WORKDIR $WORK_DIR
@@ -52,7 +55,8 @@ RUN groupadd --gid $USER_GID $USERNAME \
     && apt-get update \
     && apt-get install -y --no-install-recommends sudo \
     && echo $USERNAME ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$USERNAME \
-    && chmod 0440 /etc/sudoers.d/$USERNAME
+    && chmod 0440 /etc/sudoers.d/$USERNAME \
+    && chown -R "${USERNAME}:${USERNAME}" /tmp/python-build /tmp/python-output
 
 # Switch to the non-privileged user.
 USER $USERNAME

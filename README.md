@@ -72,7 +72,7 @@ You may also build the image directly, e.g.: `docker build --file .devcontainer/
 To push an image to your registry, use `docker push myregistry.com/myapp`.
 
 Consult Docker's [getting started](https://docs.docker.com/go/get-started-sharing/) docs for more detail on building and pushing.
-`uv.lock` pins the MkDocs environment and `.python-version` selects Python 3.15. Use `just env` to display the active worktree, Python environment, cache, build, output, uv, prek, and temporary-directory settings.
+`uv.lock` pins the MkDocs environment and `.python-version` selects Python 3.15.2. The devcontainer uses the same Python patch version; its image and Docker CLI pins are in `.devcontainer/.env` and `.devcontainer/devcontainer.json`. Use `just env` to display the active worktree, Python environment, cache, build, output, uv, prek, and temporary-directory settings.
 
 Python caches and generated outputs use per-repository, per-project, per-worktree subdirectories under `CODE_PYTHON_BUILD_ROOT` and `CODE_PYTHON_OUTPUT_ROOT`; MkDocs writes to the configured output subdirectory for the active worktree. Python environments and package caches use `CODE_PYTHON_ENV_ROOT` and `CODE_PACKAGES_ROOT`. The roots are configurable through environment variables. Windows defaults are `D:\packages\uv\environments`, `D:\temp\python-build`, `D:\temp\python-output`, `D:\packages`, `C:\tools`, and `D:\temp` (with `C:\temp` as fallback); Unix-like defaults use native home directories and the existing `TMPDIR` or `/tmp`.
 

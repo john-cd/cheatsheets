@@ -4,12 +4,7 @@
 
 ## Ready and blocked work
 
-Snapshot: November 6, 2026. GitHub Issues is disabled, so this file is the backlog; links point to local sections.
-
-### Ready
-
-- [Pin software, image and feature versions in the central version source](#p2-dependencies-ci-and-containers).
-- [Validate Compose base/override and build/start the devcontainer](#p2-dependencies-ci-and-containers) — Docker 29.9 is available locally.
+Snapshot: November 10, 2026. GitHub Issues is disabled, so this file is the backlog; links point to local sections.
 
 ### Blocked
 
@@ -61,11 +56,15 @@ Problem: updater coverage and runtime/cache behavior still require verification.
 - [x] Preserve lock ownership, registries, justified exclusions, and non-overlapping updates.
 - [x] Validate workflow/local-action references, supported inputs, and security checks.
 - [x] Use locked uv resolution and caches keyed by the owning lockfiles.
-- [ ] Pin reasonable software/image/feature versions in the central version source.
-- [ ] Validate Compose base/override, build/start the devcontainer, and exercise hosted CI.
+- [x] Pin exact Python, uv, Just, Docker CLI, and Docker feature versions; keep the local and container Python pins synchronized.
+- [x] Validate Compose base/override, build/start the devcontainer, run its Python/Docker checks, and build the CI image.
+- [ ] Exercise hosted CI.
 
 Acceptance: dependency roots have explicit coverage/dispositions, pins and build contexts agree,
-and hosted/container behavior has logs. Schema parsing alone is not runtime acceptance.
+and hosted/container behavior has logs. Local evidence: Compose base/override/CI configuration validated;
+Python 3.15.2 and Docker CLI 29.9.3 run in the container; `just check` passes all 18 tests,
+Ruff format, and Ruff lint; `just docs` and the CI image's MkDocs build pass. Schema parsing alone
+is not runtime acceptance.
 
 ## P3: new content
 
