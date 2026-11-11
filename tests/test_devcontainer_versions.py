@@ -1,3 +1,5 @@
+"""Verify that local Python and container development-tool versions stay aligned."""
+
 import json
 from pathlib import Path
 import re
@@ -8,6 +10,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def read_env(path: Path) -> dict[str, str]:
+    """Read simple KEY=VALUE entries from a dotenv file, ignoring comments and blanks."""
     values = {}
     for line in path.read_text(encoding="utf-8").splitlines():
         if line and not line.startswith("#"):
@@ -17,7 +20,10 @@ def read_env(path: Path) -> dict[str, str]:
 
 
 class DevcontainerVersionTests(unittest.TestCase):
+    """Check version pins shared by the local setup and development container."""
+
     def test_local_python_version_matches_the_container_image_pin(self):
+        """Keep the selected Python patch version equal to Docker's build arguments."""
         local_version = (ROOT / ".python-version").read_text(encoding="utf-8").strip()
         versions = read_env(ROOT / ".devcontainer" / ".env")
         container_version = versions["PYTHON_VERSION"]
@@ -39,6 +45,7 @@ class DevcontainerVersionTests(unittest.TestCase):
         )
 
     def test_docker_feature_and_cli_versions_are_pinned(self):
+        """Require explicit Docker feature and CLI versions instead of floating tags."""
         config = (ROOT / ".devcontainer" / "devcontainer.json").read_text(encoding="utf-8")
         self.assertIn("docker-outside-of-docker:1.10.1", config)
         self.assertRegex(config, r'"version"\s*:\s*"29\.9\.3"')
@@ -46,6 +53,7 @@ class DevcontainerVersionTests(unittest.TestCase):
         self.assertNotIn('"version": "latest"', config)
 
     def test_feature_lock_pins_the_resolved_artifact_and_integrity(self):
+        """Verify the Docker feature lock records a version and matching digest."""
         lock_path = ROOT / ".devcontainer" / "devcontainer-lock.json"
         lock = json.loads(lock_path.read_text(encoding="utf-8"))
         feature = lock["features"]["ghcr.io/devcontainers/features/docker-outside-of-docker:1.10.1"]

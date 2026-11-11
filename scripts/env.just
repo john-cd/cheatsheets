@@ -16,10 +16,12 @@ set windows-shell := ["C:/Program Files/Git/bin/bash.exe", "-uc"]
 py_repo_root := parent_directory(source_directory())
 py_repo_parent := parent_directory(py_repo_root)
 py_repo_parent_name := if py_repo_parent =~ '^/$' { "" } else { file_name(py_repo_parent) }
+# Worktree names select isolated environments; the primary checkout always uses the main slot.
 py_is_worktree := py_repo_parent_name =~ '^\.worktrees$'
 py_main_repo := if py_is_worktree { parent_directory(py_repo_parent) } else { py_repo_root }
 py_repo_name := file_name(py_main_repo)
 py_raw_slot := if py_is_worktree { file_name(py_repo_root) } else { "main" }
+# Reject unsupported slot names before constructing any environment or cache path.
 py_slot := if py_raw_slot =~ '^(main|[a-j])$' { py_raw_slot } else { error("Invalid Python worktree slot: " + py_raw_slot) }
 py_project_dir := join(py_repo_root, py_project_path)
 py_project_key := if py_project_path == "." { join(py_repo_name, py_slot) } else { join(py_repo_name, py_project_path, py_slot) }
@@ -80,6 +82,7 @@ sync: _python-prepare
     uv --directory {{quote(py_project_dir)}} sync --locked
 
 # Forward uv arguments without losing argument boundaries; keep build outputs external.
+# If `uv build` has no explicit output option, direct its artifacts outside the checkout.
 [positional-arguments]
 uv +args: _python-prepare
     @args=("$@"); \

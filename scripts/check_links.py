@@ -28,6 +28,7 @@ def extract_links(text: str) -> set[str]:
 
 
 def _fetch(url: str, method: str, timeout: float) -> int:
+    """Request one URL and return its HTTP status, raising on transport failures."""
     request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT}, method=method)
     with urllib.request.urlopen(request, timeout=timeout) as response:  # noqa: S310
         status = response.getcode()
@@ -37,6 +38,7 @@ def _fetch(url: str, method: str, timeout: float) -> int:
 
 
 def _classify_http_status(status: int) -> str:
+    """Treat 404/410 as broken, other error statuses as blocked, and lower statuses as okay."""
     if status in BROKEN_STATUSES:
         return "broken"
     if status >= 400:
@@ -45,7 +47,11 @@ def _classify_http_status(status: int) -> str:
 
 
 def classify(url: str, timeout: float = 10.0) -> str:
-    """Return 'ok', 'broken', 'blocked', or 'network' for a URL."""
+    """Return 'ok', 'broken', 'blocked', or 'network' after checking one URL.
+
+    Try HEAD first and retry with GET when the server reports a missing resource or does
+    not support HEAD. Network failures remain separate from definite missing-link results.
+    """
     try:
         try:
             status = _fetch(url, "HEAD", timeout)
@@ -68,6 +74,7 @@ def classify(url: str, timeout: float = 10.0) -> str:
 
 
 def main(argv: list[str] | None = None) -> int:
+    """Check links in selected Markdown files and return the documented CLI status."""
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("paths", nargs="*", default=[Path("docs")], type=Path)
     parser.add_argument("--allow-network-failures", action="store_true")

@@ -1,5 +1,6 @@
 // TODO Reviewed ??-??-2026
 
+// Unit coverage for aggregation construction and repeatable output writes using MongoDB-shaped fakes.
 const test = require("node:test");
 const assert = require("node:assert/strict");
 const {
@@ -36,6 +37,7 @@ test("gatherStats writes stats to outputDB and replaces prior output rows", () =
   const stats = new Map();
   const outputDocuments = [{ _id: "stale", count: 99 }];
   const databases = new Map();
+  // Emulate the aggregation result that `$out` writes into the separate stats collection.
   const inputCollection = {
     aggregate(pipeline) {
       const output = pipeline.at(-1).$out;
@@ -58,6 +60,7 @@ test("gatherStats writes stats to outputDB and replaces prior output rows", () =
       };
     },
   };
+  // Keep the fake output collection's delete, bulk insert, and sorted read behavior explicit.
   const outputCollection = {
     deleteMany() {
       outputDocuments.length = 0;

@@ -1,4 +1,6 @@
 // Disposable MongoDB integration fixture. This script drops inputDB and outputDB.
+// It verifies that gatherStats groups addresses case-insensitively, replaces prior output,
+// and leaves the source database unchanged on both its first run and a repeated run.
 // Run from the repository root with:
 // mongosh --quiet --eval 'GATHER_STATS_TEST_ACK = "disposable"; load("tests/gatherStats.mongo.js")'
 if (

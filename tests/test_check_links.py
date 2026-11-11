@@ -1,3 +1,5 @@
+"""Unit tests for Markdown URL extraction, HTTP classification, and CLI outcomes."""
+
 import contextlib
 import io
 import socket
@@ -13,29 +15,36 @@ import check_links  # noqa: E402
 
 
 def http_error(code: int) -> check_links.urllib.error.HTTPError:
+    """Build an HTTP error for a response that would have come from example.com."""
     return check_links.urllib.error.HTTPError("https://example.com", code, "status", {}, None)
 
 
 class CheckLinksTests(unittest.TestCase):
+    """Exercise link filtering, retry rules, result categories, and exit codes."""
+
     def test_extract_links_skips_ignored_hosts(self):
+        """Keep ordinary external links and discard configured local hosts."""
         text = "[a](https://example.com/x). [b](http://localhost:8000) <https://example.org/y>"
         self.assertEqual(
             check_links.extract_links(text), {"https://example.com/x", "https://example.org/y"}
         )
 
     def test_network_failures_are_not_reported_as_broken(self):
+        """Separate unreachable servers from URLs with confirmed missing resources."""
         for error in (OSError("blocked"), socket.timeout("timed out")):
             with self.subTest(error=type(error).__name__):
                 with mock.patch.object(check_links, "_fetch", side_effect=error):
                     self.assertEqual(check_links.classify("https://example.com"), "network")
 
     def test_extract_links_keeps_balanced_parentheses(self):
+        """Retain parentheses that belong to a URL path instead of trimming them."""
         text = "[w](https://en.wikipedia.org/wiki/WAR_(file_format)), done"
         self.assertEqual(
             check_links.extract_links(text), {"https://en.wikipedia.org/wiki/WAR_(file_format)"}
         )
 
     def test_head_unsupported_retries_with_get(self):
+        """Retry a HEAD request rejected as unsupported with a GET request."""
         with mock.patch.object(check_links, "_fetch", side_effect=[http_error(405), 200]) as fetch:
             self.assertEqual(check_links.classify("https://example.com"), "ok")
 
@@ -48,32 +57,38 @@ class CheckLinksTests(unittest.TestCase):
         )
 
     def test_get_access_policy_after_unsupported_head_is_blocked(self):
+        """Report a GET forbidden by the server as blocked after HEAD fallback."""
         with mock.patch.object(
             check_links, "_fetch", side_effect=[http_error(405), http_error(403)]
         ):
             self.assertEqual(check_links.classify("https://example.com"), "blocked")
 
     def test_head_not_found_retries_with_get(self):
+        """Allow GET to confirm a link when HEAD reports a missing resource."""
         with mock.patch.object(check_links, "_fetch", side_effect=[http_error(404), 200]):
             self.assertEqual(check_links.classify("https://example.com"), "ok")
 
     def test_get_not_found_after_head_fallback_is_broken(self):
+        """Classify the destination as broken when both requests return 404."""
         with mock.patch.object(
             check_links, "_fetch", side_effect=[http_error(404), http_error(404)]
         ):
             self.assertEqual(check_links.classify("https://example.com"), "broken")
 
     def test_inconclusive_http_statuses_are_blocked(self):
+        """Keep rate limits and server failures distinct from definite missing links."""
         for status in (403, 405, 429, 500, 503):
             with self.subTest(status=status):
                 with mock.patch.object(check_links, "_fetch", side_effect=http_error(status)):
                     self.assertEqual(check_links.classify("https://example.com"), "blocked")
 
     def test_missing_destination_is_broken(self):
+        """Classify a confirmed 404 response as a broken destination."""
         with mock.patch.object(check_links, "_fetch", side_effect=http_error(404)):
             self.assertEqual(check_links.classify("https://example.com"), "broken")
 
     def test_cli_reports_blocked_targets_and_returns_inconclusive_status(self):
+        """Print blocked targets and return the CLI status reserved for inconclusive checks."""
         with tempfile.TemporaryDirectory() as directory:
             markdown = Path(directory) / "page.md"
             markdown.write_text("[site](https://example.com)", encoding="utf-8")
@@ -91,6 +106,7 @@ class CheckLinksTests(unittest.TestCase):
         )
 
     def test_cli_only_allows_network_failures_when_requested(self):
+        """Require the explicit flag before network failures may pass the CLI check."""
         with tempfile.TemporaryDirectory() as directory:
             markdown = Path(directory) / "page.md"
             markdown.write_text("[site](https://example.com)", encoding="utf-8")
@@ -99,6 +115,7 @@ class CheckLinksTests(unittest.TestCase):
                 self.assertEqual(check_links.main([str(markdown), "--allow-network-failures"]), 0)
 
     def test_cli_returns_broken_status_for_definite_failure(self):
+        """Return the broken-link exit status when a destination is confirmed missing."""
         with tempfile.TemporaryDirectory() as directory:
             markdown = Path(directory) / "page.md"
             markdown.write_text("[site](https://example.com)", encoding="utf-8")
