@@ -7,24 +7,49 @@ Exit status: 0 = no broken or blocked targets (network failures may be allowed),
 from __future__ import annotations
 
 import argparse
-import re
+from html.parser import HTMLParser
 import socket
 import sys
 import urllib.error
 import urllib.request
 from pathlib import Path
+from urllib.parse import urlsplit
 
-LINK_RE = re.compile(r"\]\((https?://(?:[^()\s]|\([^()\s]*\))+)\)|<(https?://[^>\s]+)>")
-IGNORED = re.compile(r"^https?://(localhost|127\.0\.0\.1|twitter\.com|www\.linkedin\.com)")
+import markdown
+
+IGNORED_HOSTS = {"localhost", "127.0.0.1", "twitter.com", "www.linkedin.com"}
 BROKEN_STATUSES = {404, 410}
 HEAD_FALLBACK_STATUSES = BROKEN_STATUSES | {405, 501}
 USER_AGENT = "cheatsheets-link-check/1.0"
 
 
+class _RenderedLinkParser(HTMLParser):
+    """Collect link destinations from anchors emitted by the Markdown renderer."""
+
+    def __init__(self) -> None:
+        super().__init__(convert_charrefs=True)
+        self.hrefs: list[str] = []
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        if tag == "a":
+            self.hrefs.extend(value for name, value in attrs if name == "href" and value)
+
+
+def _is_external_http_url(url: str) -> bool:
+    """Return whether a URL is HTTP(S) and its parsed hostname is not ignored."""
+    try:
+        parsed = urlsplit(url)
+        return parsed.scheme in {"http", "https"} and parsed.hostname not in IGNORED_HOSTS
+    except ValueError:
+        return False
+
+
 def extract_links(text: str) -> set[str]:
-    """Return unique external URLs found in Markdown text."""
-    links = {m.group(1) or m.group(2) for m in LINK_RE.finditer(text)}
-    return {url.rstrip(".,;") for url in links if not IGNORED.match(url)}
+    """Return unique, non-ignored HTTP links rendered from Markdown text."""
+    rendered = markdown.markdown(text, extensions=["fenced_code"])
+    parser = _RenderedLinkParser()
+    parser.feed(rendered)
+    return {url.rstrip(".,;") for url in parser.hrefs if _is_external_http_url(url)}
 
 
 def _fetch(url: str, method: str, timeout: float) -> int:

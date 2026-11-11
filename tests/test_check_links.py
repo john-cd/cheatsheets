@@ -43,6 +43,52 @@ class CheckLinksTests(unittest.TestCase):
             check_links.extract_links(text), {"https://en.wikipedia.org/wiki/WAR_(file_format)"}
         )
 
+    def test_extract_links_finds_rendered_reference_inline_and_autolinks(self):
+        """Find used reference links and inline/autolinks through Markdown rendering."""
+        text = """[inline](https://example.com/inline) [docs][reference]
+<https://example.org/auto>
+
+[reference]: https://example.net/reference
+"""
+        self.assertEqual(
+            check_links.extract_links(text),
+            {
+                "https://example.com/inline",
+                "https://example.net/reference",
+                "https://example.org/auto",
+            },
+        )
+
+    def test_extract_links_ignores_fenced_code_examples(self):
+        """Exclude example links that render as code instead of clickable anchors."""
+        text = """```markdown
+[example](https://example.com/code)
+<https://example.org/code>
+```
+
+[real](https://example.net/real)
+"""
+        self.assertEqual(check_links.extract_links(text), {"https://example.net/real"})
+
+    def test_extract_links_matches_ignored_hosts_exactly(self):
+        """Ignore configured hostnames while retaining hostnames that only share a prefix."""
+        text = """[localhost](https://localhost/path)
+[ip](http://127.0.0.1:8000/path)
+[twitter](https://twitter.com/user)
+[linkedin](https://www.linkedin.com/profile)
+[localhost-prefix](https://localhost.example.org/path)
+[twitter-prefix](https://twitter.com.example.org/path)
+[linkedin-prefix](https://www.linkedin.com.example.org/path)
+"""
+        self.assertEqual(
+            check_links.extract_links(text),
+            {
+                "https://localhost.example.org/path",
+                "https://twitter.com.example.org/path",
+                "https://www.linkedin.com.example.org/path",
+            },
+        )
+
     def test_head_unsupported_retries_with_get(self):
         """Retry a HEAD request rejected as unsupported with a GET request."""
         with mock.patch.object(check_links, "_fetch", side_effect=[http_error(405), 200]) as fetch:
