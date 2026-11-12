@@ -11,12 +11,14 @@
 ARG WORK_DIR
 
 ARG PYTHON_VERSION
+ARG DEBIAN_CODENAME
 ARG UV_VERSION
 ARG JUST_VERSION
 
 FROM ghcr.io/astral-sh/uv:${UV_VERSION} AS uv
 FROM ghcr.io/casey/just:${JUST_VERSION} AS just
-FROM python:${PYTHON_VERSION}-slim AS base
+# Pin the runtime distribution alongside Python to keep build and runtime consistent.
+FROM python:${PYTHON_VERSION}-slim-${DEBIAN_CODENAME} AS base
 
 # Prevents Python from writing pyc files.
 ENV PYTHONDONTWRITEBYTECODE=1

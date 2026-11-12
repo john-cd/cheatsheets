@@ -18,6 +18,8 @@ services:
       dockerfile: .devcontainer/Dockerfile
       args:
         PYTHON_VERSION: ${PYTHON_VERSION:?Set PYTHON_VERSION in .devcontainer/.env or the host environment}
+        # Build the Python image on the same explicit Debian suite in every target.
+        DEBIAN_CODENAME: ${DEBIAN_CODENAME:?Set DEBIAN_CODENAME in .devcontainer/.env or the host environment}
         UV_VERSION: ${UV_VERSION:?Set UV_VERSION in .devcontainer/.env or the host environment}
         JUST_VERSION: ${JUST_VERSION:?Set JUST_VERSION in .devcontainer/.env or the host environment}
 
