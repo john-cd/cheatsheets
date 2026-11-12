@@ -15,9 +15,6 @@ services:
         JUST_VERSION: ${JUST_VERSION:?Set JUST_VERSION in .devcontainer/.env or the host environment}
         PYTHON_VERSION: ${PYTHON_VERSION:?Set PYTHON_VERSION in .devcontainer/.env or the host environment}
         DEBIAN_CODENAME: ${DEBIAN_CODENAME:?Set DEBIAN_CODENAME in .devcontainer/.env or the host environment}
-        USERNAME: ${USERNAME:?Set USERNAME in .devcontainer/.env or the host environment}
-        USER_GID: ${USER_GID:?Set USER_GID in .devcontainer/.env or the host environment}
-        USER_UID: ${USER_UID:?Set USER_UID in .devcontainer/.env or the host environment}
         UV_VERSION: ${UV_VERSION:?Set UV_VERSION in .devcontainer/.env or the host environment}
         WORK_DIR: ${WORK_DIR:?Set WORK_DIR in .devcontainer/.env or the host environment}
       cache_from:

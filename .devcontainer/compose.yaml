@@ -23,7 +23,4 @@ services:
         UV_VERSION: ${UV_VERSION:?Set UV_VERSION in .devcontainer/.env or the host environment}
         JUST_VERSION: ${JUST_VERSION:?Set JUST_VERSION in .devcontainer/.env or the host environment}
 
-        USERNAME: ${USERNAME:?Set USERNAME in .devcontainer/.env or the host environment}
-        USER_GID: ${USER_GID:?Set USER_GID in .devcontainer/.env or the host environment}
-        USER_UID: ${USER_UID:?Set USER_UID in .devcontainer/.env or the host environment}
         WORK_DIR: ${WORK_DIR:?Set WORK_DIR in .devcontainer/.env or the host environment}

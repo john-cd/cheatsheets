@@ -48,23 +48,19 @@ RUN --mount=type=cache,target=/var/cache/apt \
     apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get install -y --no-install-recommends git
 
-ARG USERNAME
-ARG USER_UID
-ARG USER_GID
-
 # Create a non-privileged user
 # See https://docs.docker.com/go/dockerfile-user-best-practices/
-RUN groupadd --gid $USER_GID $USERNAME \
-    && useradd --uid $USER_UID --gid $USER_GID -m $USERNAME \
+RUN groupadd --gid 1000 vscode \
+    && useradd --uid 1000 --gid 1000 -m vscode \
     # Add sudo support. Omit if you don't need to install software after connecting.
     && apt-get update \
     && apt-get install -y --no-install-recommends sudo \
-    && echo $USERNAME ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$USERNAME \
-    && chmod 0440 /etc/sudoers.d/$USERNAME \
-    && chown -R "${USERNAME}:${USERNAME}" /tmp/python-build /tmp/python-output
+    && echo 'vscode ALL=(root) NOPASSWD:ALL' > /etc/sudoers.d/vscode \
+    && chmod 0440 /etc/sudoers.d/vscode \
+    && chown -R vscode:vscode /tmp/python-build /tmp/python-output
 
 # Switch to the non-privileged user.
-USER $USERNAME
+USER vscode
 
 # Create aliases
 RUN <<EOF
