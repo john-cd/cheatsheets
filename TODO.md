@@ -109,3 +109,8 @@ Problem: Material for MkDocs is in maintenance mode, with upstream critical main
 - [ ] Evaluate a gradual Zensical migration, including this site's plugins, customizations, deployment, and rendered page parity.
 
 Acceptance: a tested migration decision preserves URLs, navigation, redirects, search, and publishing behavior.
+
+## Repository review (2026-11-12)
+
+- [ ] **P2 — Give the docs toolchain a reproducible compatibility check (small).**
+      `scripts/check_links.py` uses Python 3.14+ exception syntax, and `.python-version` pins 3.15.2 for the site toolchain. Keep the toolchain baseline distinct from the Python versions described in examples. Include a clean locked build and the link checker in the next Python or MkDocs plugin upgrade, and document any plugin that constrains the supported interpreter.
