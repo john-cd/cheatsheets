@@ -5,7 +5,7 @@
   "name": "cheatsheets - Docker Compose",
 
   // Update the 'dockerComposeFile' list if you have more compose files or use different names.
-  // The .devcontainer/docker-compose.yml file contains any overrides you need/want to make.
+  // The .devcontainer/compose.yaml file contains any overrides you need/want to make.
   "dockerComposeFile": [
     "compose.yaml",
     "compose.override.yaml"
@@ -16,7 +16,7 @@
   "service": "cheatsheets-site",
 
   // The optional 'workspaceFolder' property is the path VS Code should open by default when
-  // connected. This is typically a file mount in .devcontainer/docker-compose.yml
+  // connected. This is typically a file mount in .devcontainer/compose.yaml
   "workspaceFolder": "/code", // "/workspaces/${localWorkspaceFolderBasename}",
 
   // Features to add to the dev container. More info: https://containers.dev/features.

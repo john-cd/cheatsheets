@@ -8,7 +8,7 @@
 #For examples, see the Awesome Compose repository:
 # https://github.com/docker/awesome-compose
 # Note that the path of the Dockerfile and context is relative to the *primary*
-# docker-compose.yml file (the first in the devcontainer.json "dockerComposeFile"
+# compose.yaml file (the first in the devcontainer.json "dockerComposeFile"
 # array).
 name: cheatsheets
 services:

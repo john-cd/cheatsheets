@@ -65,7 +65,7 @@ docker compose down
 and
 
 ```bash
-docker compose -f .devcontainer/compose.yaml -f .devcontainer/compose-ci.yaml up --build
+docker compose -f .devcontainer/compose.yaml -f .devcontainer/compose.ci.yaml up --build
 docker compose down
 ```
 
