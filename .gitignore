@@ -304,6 +304,8 @@ site/
 **/.ruff_cache/
 **/.pytest_cache/
 **/.ipynb_checkpoints/
+**/node_modules/
+**/.npm/
 *.py[cod]
 *.pyo
 *.pyd

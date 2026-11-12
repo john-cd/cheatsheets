@@ -22,7 +22,7 @@ For setup, checks, configuration ownership, and documentation requirements, see 
 
 If you use [Visual Studio Code](https://code.visualstudio.com/), install the [Dev Container extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers). Otherwise, consider the [Dev Container CLI](https://containers.dev/supporting#devcontainer-cli). `Dev Container` allows you to edit and test the web site within a `Docker` container.
 
-Alternatively, install Just, Python 3.15, `uv`, and [Docker](https://www.docker.com/) on your development machine.
+Alternatively, install Just, Python 3.15, Node.js 24.19.0, `uv`, and [Docker](https://www.docker.com/) on your development machine.
 
 ```powershell
 just env
@@ -43,7 +43,8 @@ just hooks-install
 just hooks
 just uv run python -m unittest discover -s tests -p "test_*.py"
 node --test tests/*.test.js
-just format-check   # dprint: Markdown, JSON, TOML, YAML
+just format-check   # Ruff Python formatting
+just format-docs-check  # dprint: Markdown, JSON, TOML, YAML
 just markdownlint
 just links          # external links; network failures reported apart from broken ones
 just check-all      # offline gates: Ruff, unittest, dprint, markdownlint
@@ -73,6 +74,8 @@ To push an image to your registry, use `docker push myregistry.com/myapp`.
 
 Consult Docker's [getting started](https://docs.docker.com/go/get-started-sharing/) docs for more detail on building and pushing.
 `uv.lock` pins the MkDocs environment and `.python-version` selects Python 3.15.2. The devcontainer uses the same Python patch version; its image and Docker CLI pins are in `.devcontainer/.env` and `.devcontainer/devcontainer.json`. Use `just env` to display the active worktree, Python environment, cache, build, output, uv, prek, and temporary-directory settings.
+
+`just deps-upgrade` refreshes the uv lockfile, dprint plugin pins, and prek hook revisions. Review the resulting changes and run the documented checks before committing.
 
 Python caches and generated outputs use per-repository, per-project, per-worktree subdirectories under `CODE_PYTHON_BUILD_ROOT` and `CODE_PYTHON_OUTPUT_ROOT`; MkDocs writes to the configured output subdirectory for the active worktree. Python environments and package caches use `CODE_PYTHON_ENV_ROOT` and `CODE_PACKAGES_ROOT`. The roots are configurable through environment variables. Windows defaults are `D:\packages\uv\environments`, `D:\temp\python-build`, `D:\temp\python-output`, `D:\packages`, `C:\tools`, and `D:\temp` (with `C:\temp` as fallback); Unix-like defaults use native home directories and the existing `TMPDIR` or `/tmp`.
 

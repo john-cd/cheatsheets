@@ -9,7 +9,7 @@ Keep this file, README, contributor guidance, and configuration comments synchro
 ## Consistency plan
 
 1. Share UTF-8 and LF editing defaults while preserving repository-specific examples.
-2. Keep Python versions, dependency pins, formatting, and lint rules consistent across local tasks and CI.
+2. Keep Python and Node versions, dependency pins, formatting, and lint rules consistent across local tasks and CI.
 3. Maintain the declared dependency roots and predictable grouped updates.
 4. Keep Python environments, caches, build files, and generated output in their configured external roots.
 5. Validate formatting and lint locally; record platform or integration checks that remain unavailable.
@@ -39,13 +39,15 @@ Dependabot runs monthly on Monday at 6:00 a.m. Pacific with grouped minor/patch 
 
 GitHub Actions uses `/` for workflows and explicit directories for nested composite actions. Dependabot can update supported tool versions, container images/features, charts, and packages; it does not update arbitrary version strings in shell scripts or custom formatter-pin files.
 
+CI and the devcontainer pin the same Node.js version for Markdown tooling. dprint checks run in both workflows, and the GitHub Pages deploy job is serialized to prevent competing pushes to the published branch.
+
 ## CI caches
 
 Key Python dependency caches by the operating system, Python version, and `uv.lock`. Keep package caches separate from per-project and per-worktree build and output directories. Container builds should install from the committed lockfile and retain the repository's existing uv or pip caching strategy.
 
 ## Python environments
 
-Use `just env`, `just uv sync --locked`, `just fmt`, and `just lint`. The project Justfile assigns repository/project/worktree-specific external environments, caches, and outputs through `CODE_PYTHON_ENV_ROOT`, `CODE_PYTHON_BUILD_ROOT`, and `CODE_PYTHON_OUTPUT_ROOT`. Preserve intentional broken or historical teaching examples; document exceptions where they are owned.
+Use `just env`, `just uv sync --locked`, `just fmt`, and `just lint`. Run `just deps-upgrade` to refresh the uv lockfile, dprint plugin pins, and prek hook revisions together. The project Justfile assigns repository/project/worktree-specific external environments, caches, and outputs through `CODE_PYTHON_ENV_ROOT`, `CODE_PYTHON_BUILD_ROOT`, and `CODE_PYTHON_OUTPUT_ROOT`. Preserve intentional broken or historical teaching examples; document exceptions where they are owned.
 
 ## Validation evidence
 

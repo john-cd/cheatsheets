@@ -6,6 +6,8 @@
 **/.ruff_cache/
 **/.pytest_cache/
 **/.ipynb_checkpoints/
+**/.npm/
+**/node_modules/
 **/*.py[cod]
 
 # Repository metadata and worktree state
@@ -24,6 +26,8 @@ Thumbs.db
 # CI runner output
 /.ci/
 **/.ci/
+**/site/
+**/build/
 
 # Local credentials and environment files
 .env

@@ -22,6 +22,9 @@
   // Features to add to the dev container. More info: https://containers.dev/features.
   // "features": {},
   "features": {
+    "ghcr.io/devcontainers/features/node:2": {
+      "version": "24.19.0"
+    },
     "ghcr.io/devcontainers/features/docker-outside-of-docker:1.10.1": {
       "moby": false,
       "installDockerBuildx": true,

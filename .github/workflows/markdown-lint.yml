@@ -8,16 +8,36 @@ on:
     paths:
       - "**.md"
       - "prek.toml"
+      - "dprint.jsonc"
       - "pyproject.toml"
       - "uv.lock"
       - ".python-version"
       - "justfile"
       - "scripts/env.just"
+      - ".editorconfig"
+      - ".gitattributes"
+      - ".gitignore"
+      - ".dockerignore"
+      - ".aiexclude"
+      - ".github/workflows/markdown-lint.yml"
   workflow_dispatch:
   pull_request:
     branches: [main, develop]
     paths:
       - "**.md"
+      - "prek.toml"
+      - "dprint.jsonc"
+      - "pyproject.toml"
+      - "uv.lock"
+      - ".python-version"
+      - "justfile"
+      - "scripts/env.just"
+      - ".editorconfig"
+      - ".gitattributes"
+      - ".gitignore"
+      - ".dockerignore"
+      - ".aiexclude"
+      - ".github/workflows/markdown-lint.yml"
 
 jobs:
   prek:
@@ -29,6 +49,9 @@ jobs:
         with:
           tool: just@1.59.0
       - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24.19.0
       - uses: actions/setup-python@v7
         with:
           python-version-file: .python-version
@@ -39,4 +62,5 @@ jobs:
           cache-dependency-glob: "**/uv.lock"
       - run: just sync
       - run: just uv tool install prek
+      - uses: dprint/check@v2.3
       - run: just hooks

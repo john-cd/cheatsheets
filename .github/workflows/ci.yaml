@@ -31,7 +31,7 @@ jobs:
           python-version-file: .python-version
       - uses: actions/setup-node@v7
         with:
-          node-version: 22
+          node-version: 24.19.0
       - name: Install uv
         uses: astral-sh/setup-uv@68559e99cc807c1eb7e9238fd43a15bba460eec2 # v10.3.3
         with:
@@ -40,6 +40,7 @@ jobs:
           cache-dependency-glob: "**/uv.lock"
       - run: just sync
       - run: just uv tool install prek
+      - uses: dprint/check@v2.3
       - run: just hooks
       - run: just test
       - run: node --test tests/*.test.js
@@ -48,6 +49,9 @@ jobs:
   deploy:
     if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/develop')
     needs: validate
+    concurrency:
+      group: cheatsheets-pages-deploy
+      cancel-in-progress: false
     permissions:
       contents: write
     runs-on: ubuntu-latest

@@ -32,7 +32,7 @@ lint-check: _python-prepare
 lint: _python-prepare
     uv --directory {{quote(py_project_dir)}} run --locked ruff check --fix .
 
-# Run the project Python tests with pytest.
+# Run the project Python unit tests with unittest.
 test: _python-prepare
     uv --directory {{quote(py_project_dir)}} run --locked python -m unittest discover -s tests -p "test_*.py"
 
@@ -48,7 +48,13 @@ serve: _python-prepare
 check: format-check lint-check test
 
 hooks-run:
-    prek run
+    prek run --all-files
+
+# Upgrade the Python lockfile and pinned repository tools.
+deps-upgrade: _python-prepare
+    uv --directory {{quote(py_project_dir)}} lock --upgrade
+    dprint config update
+    prek autoupdate
 
 # Lint repository Markdown with the pinned markdownlint-cli2.
 markdownlint *args='':

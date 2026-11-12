@@ -23,14 +23,14 @@ hooks = [
 
 [[repos]]
 repo = "https://github.com/igorshubovych/markdownlint-cli"
-rev = "v0.48.0"
+rev = "v0.50.0"
 hooks = [
   { id = "markdownlint", name = "Lint Markdown", args = ["--fix"] },
 ]
 
 [[repos]]
 repo = "https://github.com/tcort/markdown-link-check"
-rev = "v3.14.2"
+rev = "v3.15.0"
 hooks = [
   { id = "markdown-link-check", name = "Check for broken links", args = [
     "--config",

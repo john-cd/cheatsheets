@@ -4,7 +4,7 @@
 
 ## Ready and blocked work
 
-Snapshot: November 10, 2026. GitHub Issues is disabled, so this file is the backlog; links point to local sections.
+Snapshot: November 12, 2026. GitHub Issues is disabled, so this file is the backlog; links point to local sections.
 
 ### Blocked
 
@@ -93,3 +93,19 @@ and navigation/cross-links; distinguish proposals from published content.
 Acceptance: every cleanup target has a recorded disposition and no unrelated work is lost.
 Human/account/host blockers belong here with their concrete prerequisites; no upstream-release
 wait is currently inventoried. Add a release trigger and review date when one is identified.
+
+## P2: tool pin maintenance
+
+Problem: Dependabot does not update tool versions stored only in formatter configuration or command recipes.
+
+- [ ] Consider a review-only updater for dprint plugin and `npx` CLI pins; retain `just deps-upgrade` as the manual fallback.
+
+Acceptance: custom tool pins receive reviewable updates with formatter, lint, and CI evidence; updates are not auto-merged.
+
+## P2: documentation platform
+
+Problem: Material for MkDocs is in maintenance mode, with upstream critical maintenance ending May 5, 2027.
+
+- [ ] Evaluate a gradual Zensical migration, including this site's plugins, customizations, deployment, and rendered page parity.
+
+Acceptance: a tested migration decision preserves URLs, navigation, redirects, search, and publishing behavior.
