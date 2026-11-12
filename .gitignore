@@ -313,3 +313,8 @@ site/
 !.env.example
 !.env.*.example
 !.devcontainer/.env
+
+# Shared non-secret Docker configuration is tracked; local credentials are ignored.
+!.devcontainer/
+!.devcontainer/.env
+.devcontainer/.env.local

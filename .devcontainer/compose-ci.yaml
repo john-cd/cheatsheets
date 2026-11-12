@@ -1,13 +1,24 @@
+# Project-scoped Compose stack: cheatsheets-ci.
+# Build inputs come from tracked .devcontainer/.env; from the repo root pass --env-file .devcontainer/.env.
+# Keep credentials in ignored .devcontainer/.env.local; from the repo root pass it as a second --env-file when present.
 # TODO Reviewed ??-??-2026
 
 # NOT IN USE YET in .github/workflows
 
-name: cheatsheets_ci
+name: cheatsheets-ci
 services:
-  site:
+  cheatsheets-site:
     image: johncd/cheatsheets_ci
     build:
       target: ci
+      args:
+        JUST_VERSION: ${JUST_VERSION:?Set JUST_VERSION in .devcontainer/.env or the host environment}
+        PYTHON_VERSION: ${PYTHON_VERSION:?Set PYTHON_VERSION in .devcontainer/.env or the host environment}
+        USERNAME: ${USERNAME:?Set USERNAME in .devcontainer/.env or the host environment}
+        USER_GID: ${USER_GID:?Set USER_GID in .devcontainer/.env or the host environment}
+        USER_UID: ${USER_UID:?Set USER_UID in .devcontainer/.env or the host environment}
+        UV_VERSION: ${UV_VERSION:?Set UV_VERSION in .devcontainer/.env or the host environment}
+        WORK_DIR: ${WORK_DIR:?Set WORK_DIR in .devcontainer/.env or the host environment}
       cache_from:
         - type=gha
       cache_to:

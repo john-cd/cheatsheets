@@ -1,15 +1,18 @@
+# syntax=docker/dockerfile:1
+# Dockerfile build inputs are required and supplied by Compose from tracked .devcontainer/.env.
+# From the repo root pass --env-file .devcontainer/.env and add --env-file .devcontainer/.env.local when present.
+# Dockerfile build inputs for cheatsheets.
 # TODO Reviewed ??-??-2026
 
-# syntax=docker/dockerfile:1
 
 # Dockerfile reference guide at
 # https://docs.docker.com/go/dockerfile-reference/
 
-ARG WORK_DIR="/code"
+ARG WORK_DIR
 
-ARG PYTHON_VERSION=3.15.2
-ARG UV_VERSION=0.13.7
-ARG JUST_VERSION=1.59.0
+ARG PYTHON_VERSION
+ARG UV_VERSION
+ARG JUST_VERSION
 
 FROM ghcr.io/astral-sh/uv:${UV_VERSION} AS uv
 FROM ghcr.io/casey/just:${JUST_VERSION} AS just
@@ -43,9 +46,9 @@ RUN --mount=type=cache,target=/var/cache/apt \
     apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get install -y --no-install-recommends git
 
-ARG USERNAME=vscode
-ARG USER_UID=1000
-ARG USER_GID=$USER_UID
+ARG USERNAME
+ARG USER_UID
+ARG USER_GID
 
 # Create a non-privileged user
 # See https://docs.docker.com/go/dockerfile-user-best-practices/
