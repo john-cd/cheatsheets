@@ -58,7 +58,7 @@ deps-upgrade: _python-prepare
 
 # Lint repository Markdown with the pinned markdownlint-cli2.
 markdownlint *args='':
-    npx --yes markdownlint-cli2@0.24.0 {{ args }}
+    npx --yes markdownlint-cli2@0.24.1 {{ args }}
 
 # Format Markdown, JSON, TOML, and YAML with the repository dprint configuration.
 format-docs:

@@ -22,7 +22,7 @@ For setup, checks, configuration ownership, and documentation requirements, see 
 
 If you use [Visual Studio Code](https://code.visualstudio.com/), install the [Dev Container extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers). Otherwise, consider the [Dev Container CLI](https://containers.dev/supporting#devcontainer-cli). `Dev Container` allows you to edit and test the web site within a `Docker` container.
 
-Alternatively, install Just, Python 3.15, Node.js 24.19.0, `uv`, and [Docker](https://www.docker.com/) on your development machine.
+Alternatively, install Just, Python 3.15, Node.js 26.13.1, `uv`, and [Docker](https://www.docker.com/) on your development machine.
 
 ```powershell
 just env

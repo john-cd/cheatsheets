@@ -23,7 +23,7 @@
   // "features": {},
   "features": {
     "ghcr.io/devcontainers/features/node:2": {
-      "version": "24.19.0"
+      "version": "26.13.1"
     },
     "ghcr.io/devcontainers/features/docker-outside-of-docker:1.10.1": {
       "moby": false,
