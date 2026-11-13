@@ -22,8 +22,8 @@ def read_env(path: Path) -> dict[str, str]:
 class DevcontainerVersionTests(unittest.TestCase):
     """Check version pins shared by the local setup and development container."""
 
-    def test_local_python_version_matches_the_container_image_pin(self):
-        """Keep the selected Python patch version equal to Docker's build arguments."""
+    def test_local_tool_versions_match_the_container_build_inputs(self):
+        """Keep local version pins wired through Compose to Docker build arguments."""
         local_version = (ROOT / ".python-version").read_text(encoding="utf-8").strip()
         versions = read_env(ROOT / ".devcontainer" / ".env")
         container_version = versions["PYTHON_VERSION"]
@@ -31,18 +31,15 @@ class DevcontainerVersionTests(unittest.TestCase):
         self.assertRegex(local_version, r"^\d+\.\d+\.\d+$")
         self.assertEqual(local_version, container_version)
 
+        version_names = ("PYTHON_VERSION", "UV_VERSION", "JUST_VERSION", "DEBIAN_CODENAME")
         dockerfile = (ROOT / ".devcontainer" / "Dockerfile").read_text(encoding="utf-8")
-        dockerfile_versions = dict(
-            re.findall(
-                r"^ARG (PYTHON_VERSION|UV_VERSION|JUST_VERSION)=(\S+)$",
-                dockerfile,
-                re.MULTILINE,
-            )
-        )
-        self.assertEqual(
-            dockerfile_versions,
-            {name: versions[name] for name in ("PYTHON_VERSION", "UV_VERSION", "JUST_VERSION")},
-        )
+        compose = (ROOT / ".devcontainer" / "compose.yaml").read_text(encoding="utf-8")
+        dockerfile_args = set(re.findall(r"^ARG (\w+)(?:=\S+)?$", dockerfile, re.MULTILINE))
+
+        for name in version_names:
+            with self.subTest(name=name):
+                self.assertIn(name, dockerfile_args)
+                self.assertIn(f"{name}: ${{{name}:?", compose)
 
     def test_docker_feature_and_cli_versions_are_pinned(self):
         """Require explicit Docker feature and CLI versions instead of floating tags."""
