@@ -100,6 +100,8 @@ Problem: Dependabot does not update tool versions stored only in formatter confi
 
 - [ ] Consider a review-only updater for dprint plugin and `npx` CLI pins; retain `just deps-upgrade` as the manual fallback.
 
+Current disposition (2026-11-12): `just deps-upgrade` already refreshes uv, dprint plugin, and prek pins, but does not update the `markdownlint-cli2` version in `justfile`. Keep this task open; do not automate PR creation until hosted Actions is available for workflow validation.
+
 Acceptance: custom tool pins receive reviewable updates with formatter, lint, and CI evidence; updates are not auto-merged.
 
 ## P2: documentation platform
@@ -108,8 +110,13 @@ Problem: Material for MkDocs is in maintenance mode, with upstream critical main
 
 - [ ] Evaluate a gradual Zensical migration, including this site's plugins, customizations, deployment, and rendered page parity.
 
+Assessment (2026-11-12): the lock currently resolves Material for MkDocs 9.8.1. A trial of Zensical 0.0.68 could read the existing project but rejected the required external `MKDOCS_SITE_DIR` with `site_dir must be within project root`. This repository keeps generated output outside the checkout. Zensical's migration guide also notes that `gh-deploy` is not provided, so the Pages publishing workflow needs a replacement. Keep Material for MkDocs while its critical-fix window remains open; complete a build-output and deployment parity trial before switching. See the [Zensical migration guide](https://zensical.org/docs/compatibility/mkdocs/migration/), [plugin compatibility notes](https://zensical.org/docs/compatibility/mkdocs/plugins/), and [Material maintenance timeline](https://squidfunk.github.io/mkdocs-material/changelog/).
+
 Acceptance: a tested migration decision preserves URLs, navigation, redirects, search, and publishing behavior.
 
 ## Repository review (2026-11-12)
 
 - [x] Give the docs toolchain a reproducible compatibility check: `just sync` and `just docs` passed using Python 3.15.2, and `just links` checked 418 URLs with 0 confirmed broken (44 remain blocked or unreachable as detailed above). The current locked MkDocs plugins install and build on the pinned interpreter.
+- [x] Remove `mkdocs-minify-plugin` and `mkdocs-redirects`; neither is enabled in `mkdocs.yml`, and removing them also removes their unused transitive dependencies. Update the container-pin test to check the Compose-to-Dockerfile build-argument wiring.
+
+Validation on 2026-11-12: `uv lock --check`, `uv sync --locked`, Ruff format/lint, 21 Python tests, 4 Node tests, `dprint check`, and the MkDocs build passed. `prek run --all-files` passed its built-in hooks, Markdown lint, and link check; its two Ruff hooks could not start because the repository's Just recipes could not launch the bundled Git Bash shell in this Windows sandbox (`NtCreateDirectoryObject` access denied). The equivalent Ruff checks passed directly. Hosted CI remains unavailable.
