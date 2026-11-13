@@ -39,12 +39,6 @@ Acceptance: category ownership and review dates reflect actual human review.
 
 Problem: Python checks alone do not validate the maintained documentation/tooling content.
 
-- [x] Confirm Ruff rules and scoped hooks without weakening stricter rules or examples.
-- [x] Cover Markdown, TOML, YAML, and shell content with applicable format/lint commands.
-- [x] Classify inconclusive HTTP statuses as blocked, retry unsupported HEAD requests with GET, and test CLI exit behavior.
-- [x] Run read-only format/lint/prek checks; record versions, scope, and actual failures.
-- [x] Keep README, AGENTS.md, CONFIGURATION.md, and WORKTREES.md synchronized.
-
 Acceptance: maintained file types have runnable quality gates; commands and results are recorded.
 Do not report skipped checks as passing or synchronize full runtime dependencies for formatting.
 
@@ -52,12 +46,6 @@ Do not report skipped checks as passing or synchronize full runtime dependencies
 
 Problem: updater coverage and runtime/cache behavior still require verification.
 
-- [x] Audit Dependabot roots for uv, Docker, Compose, devcontainers, and GitHub Actions.
-- [x] Preserve lock ownership, registries, justified exclusions, and non-overlapping updates.
-- [x] Validate workflow/local-action references, supported inputs, and security checks.
-- [x] Use locked uv resolution and caches keyed by the owning lockfiles.
-- [x] Pin exact Python, uv, Just, Docker CLI, and Docker feature versions; keep the local and container Python pins synchronized.
-- [x] Validate Compose base/override, build/start the devcontainer, run its Python/Docker checks, and build the CI image.
 - [ ] Exercise hosted CI.
 
 Acceptance: dependency roots have explicit coverage/dispositions, pins and build contexts agree,
@@ -84,11 +72,7 @@ and navigation/cross-links; distinguish proposals from published content.
 
 ## Repository maintenance
 
-- [x] Review dirty worktrees and topic/backup branches; commit reviewed work separately.
-- [x] Integrate useful work linearly into develop; retire only verified obsolete branches/worktrees.
 - [ ] Review candidate temporary/LLM files by ownership/history before cleanup.
-- [x] Preserve active work, unique commits, reusable caches, and permitted worktree slots.
-- [x] Update WORKTREES.md with the reviewed dispositions.
 
 Acceptance: every cleanup target has a recorded disposition and no unrelated work is lost.
 Human/account/host blockers belong here with their concrete prerequisites; no upstream-release
@@ -116,12 +100,6 @@ Acceptance: a tested migration decision preserves URLs, navigation, redirects, s
 
 ## Repository review (2026-11-13)
 
-- [x] Give the docs toolchain a reproducible compatibility check: `just sync` and `just docs` passed using Python 3.15.2, and `just links` checked 418 URLs with 0 confirmed broken (44 remain blocked or unreachable as detailed above). The current locked MkDocs plugins install and build on the pinned interpreter.
-- [x] Remove `mkdocs-minify-plugin` and `mkdocs-redirects`; neither is enabled in `mkdocs.yml`, and removing them also removes their unused transitive dependencies. Update the container-pin test to check the Compose-to-Dockerfile build-argument wiring.
-
 Validation on 2026-11-12: `uv lock --check`, `uv sync --locked`, Ruff format/lint, 21 Python tests, 4 Node tests, `dprint check`, and the MkDocs build passed. `prek run --all-files` passed its built-in hooks, Markdown lint, and link check; its two Ruff hooks could not start because the repository's Just recipes could not launch the bundled Git Bash shell in this Windows sandbox (`NtCreateDirectoryObject` access denied). The equivalent Ruff checks passed directly. Hosted CI remains unavailable.
-
-- [x] Refresh supported tool pins and GitHub Actions references. CI now pins checkout, Python, Node, and dprint actions to immutable revisions; read-only workflows disable persisted checkout credentials, and the deploy job retains its required push credential. Python and Node runtime pins remain at their current releases.
-- [x] Re-resolve dependency and formatter pins. `just deps-upgrade` and `just uv tree --outdated` found no newer compatible package pins; dprint plugins, prek hook revisions, and markdownlint-cli2 are current. The minimum prek version is aligned with the installed 0.5.7 tool.
 
 Validation on 2026-11-13: `just sync`, format, Ruff lint, Markdown lint, dprint, `just docs`, `prek run --all-files` (including the external link checker), `prek validate-config prek.toml`, and actionlint passed. Python and Node test suites were not run during this maintenance pass. Hosted CI remains unavailable.
