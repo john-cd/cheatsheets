@@ -20,7 +20,7 @@ Snapshot: November 12, 2026. GitHub Issues is disabled, so this file is the back
 
 #### Hardware, external host or account
 
-- Recheck the 29 links unreachable from the sandbox with normal network access.
+- Recheck the 44 URLs that `just links` classified as 15 blocked responses and 29 network failures (418 checked, 0 confirmed broken); distinguish intentional teaching placeholders from unavailable destinations.
 
 <!-- recommended-issue-order:end -->
 
@@ -112,5 +112,4 @@ Acceptance: a tested migration decision preserves URLs, navigation, redirects, s
 
 ## Repository review (2026-11-12)
 
-- [ ] **P2 — Give the docs toolchain a reproducible compatibility check (small).**
-      `scripts/check_links.py` uses Python 3.14+ exception syntax, and `.python-version` pins 3.15.2 for the site toolchain. Keep the toolchain baseline distinct from the Python versions described in examples. Include a clean locked build and the link checker in the next Python or MkDocs plugin upgrade, and document any plugin that constrains the supported interpreter.
+- [x] Give the docs toolchain a reproducible compatibility check: `just sync` and `just docs` passed using Python 3.15.2, and `just links` checked 418 URLs with 0 confirmed broken (44 remain blocked or unreachable as detailed above). The current locked MkDocs plugins install and build on the pinned interpreter.
