@@ -4,7 +4,7 @@
 
 ## Ready and blocked work
 
-Snapshot: November 12, 2026. GitHub Issues is disabled, so this file is the backlog; links point to local sections.
+Snapshot: November 13, 2026. GitHub Issues is disabled, so this file is the backlog; links point to local sections.
 
 ### Blocked
 
@@ -114,9 +114,14 @@ Assessment (2026-11-12): the lock currently resolves Material for MkDocs 9.8.1. 
 
 Acceptance: a tested migration decision preserves URLs, navigation, redirects, search, and publishing behavior.
 
-## Repository review (2026-11-12)
+## Repository review (2026-11-13)
 
 - [x] Give the docs toolchain a reproducible compatibility check: `just sync` and `just docs` passed using Python 3.15.2, and `just links` checked 418 URLs with 0 confirmed broken (44 remain blocked or unreachable as detailed above). The current locked MkDocs plugins install and build on the pinned interpreter.
 - [x] Remove `mkdocs-minify-plugin` and `mkdocs-redirects`; neither is enabled in `mkdocs.yml`, and removing them also removes their unused transitive dependencies. Update the container-pin test to check the Compose-to-Dockerfile build-argument wiring.
 
 Validation on 2026-11-12: `uv lock --check`, `uv sync --locked`, Ruff format/lint, 21 Python tests, 4 Node tests, `dprint check`, and the MkDocs build passed. `prek run --all-files` passed its built-in hooks, Markdown lint, and link check; its two Ruff hooks could not start because the repository's Just recipes could not launch the bundled Git Bash shell in this Windows sandbox (`NtCreateDirectoryObject` access denied). The equivalent Ruff checks passed directly. Hosted CI remains unavailable.
+
+- [x] Refresh supported tool pins and GitHub Actions references. CI now pins checkout, Python, Node, and dprint actions to immutable revisions; read-only workflows disable persisted checkout credentials, and the deploy job retains its required push credential. Python and Node runtime pins remain at their current releases.
+- [x] Re-resolve dependency and formatter pins. `just deps-upgrade` and `just uv tree --outdated` found no newer compatible package pins; dprint plugins, prek hook revisions, and markdownlint-cli2 are current. The minimum prek version is aligned with the installed 0.5.7 tool.
+
+Validation on 2026-11-13: `just sync`, format, Ruff lint, Markdown lint, dprint, `just docs`, `prek run --all-files` (including the external link checker), `prek validate-config prek.toml`, and actionlint passed. Python and Node test suites were not run during this maintenance pass. Hosted CI remains unavailable.
