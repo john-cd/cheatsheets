@@ -2,7 +2,7 @@
 
 exclude = '^(drafts/|trash/|.*\.orig$)'
 
-minimum_prek_version = "0.5.6"
+minimum_prek_version = "0.5.7"
 
 [[repos]]
 repo = "builtin"

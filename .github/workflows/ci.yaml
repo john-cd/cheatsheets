@@ -16,6 +16,13 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   validate:
     runs-on: ubuntu-latest
@@ -25,11 +32,13 @@ jobs:
         uses: taiki-e/install-action@1919c4a95903d2c33e4a221102edca87309fc14b
         with:
           tool: just@1.59.0
-      - uses: actions/checkout@v7
-      - uses: actions/setup-python@v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
         with:
           python-version-file: .python-version
-      - uses: actions/setup-node@v7
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version: 26.13.1
       - name: Install uv
@@ -40,7 +49,7 @@ jobs:
           cache-dependency-glob: "**/uv.lock"
       - run: just sync
       - run: just uv tool install prek
-      - uses: dprint/check@v2.6
+      - uses: dprint/check@371a959e3c77f34a76a03d2c50df2e3f2302d016 # v2.6
       - run: just hooks
       - run: just test
       - run: node --test tests/*.test.js
@@ -61,12 +70,13 @@ jobs:
         uses: taiki-e/install-action@1919c4a95903d2c33e4a221102edca87309fc14b
         with:
           tool: just@1.59.0
-      - uses: actions/checkout@v7
+      # Keep the checkout token available so mkdocs gh-deploy can push gh-pages.
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - name: Configure Git Credentials
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-      - uses: actions/setup-python@v7
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
         with:
           python-version-file: .python-version
       - name: Install uv
