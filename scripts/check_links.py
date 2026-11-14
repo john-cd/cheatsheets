@@ -1,3 +1,5 @@
+# TODO Reviewed ??-??-2026.
+
 """Check external Markdown links, separating blocked networks from broken destinations.
 
 Exit status: 0 = no broken or blocked targets (network failures may be allowed),

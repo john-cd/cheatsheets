@@ -4,7 +4,6 @@
 # Dockerfile build inputs for cheatsheets.
 # TODO Reviewed ??-??-2026
 
-
 # Dockerfile reference guide at
 # https://docs.docker.com/go/dockerfile-reference/
 

@@ -1,3 +1,5 @@
+# TODO Reviewed ??-??-2026.
+
 """Verify that local Python and container development-tool versions stay aligned."""
 
 import json
