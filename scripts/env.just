@@ -30,7 +30,7 @@ py_environment_key := if py_environment_project == "." { join(py_repo_name, py_s
 # Overrideable storage roots (the caller's environment wins over these defaults):
 # CODE_REPOS_ROOT reports the conventional checkout root (D:/code on Windows, ~/code on Unix);
 # py_repo_root itself is derived from this imported file's location.
-# CODE_TEMP_ROOT holds temporary files (D:/temp when present, else C:/temp; Unix TMPDIR or /tmp).
+# CODE_TEMP_ROOT holds temporary files (C:/temp; Unix TMPDIR or /tmp).
 # CODE_PACKAGES_ROOT holds package data and caches (D:/packages or ~/.local/share).
 # CODE_TOOLS_ROOT holds portable tools (C:/tools or ~/.local/tools).
 # CODE_PYTHON_ENV_ROOT stores uv project environments; defaults below CODE_PACKAGES_ROOT.
@@ -48,7 +48,7 @@ py_environment_key := if py_environment_project == "." { join(py_repo_name, py_s
 # TEMP, TMP, and TMPDIR point temporary-file users at CODE_TEMP_ROOT on Windows; Unix preserves
 # caller settings (falling back to /tmp). These values are exported to every recipe subprocess.
 export CODE_REPOS_ROOT := env("CODE_REPOS_ROOT", if os() == "windows" { "D:/code" } else { join(home_directory(), "code") })
-export CODE_TEMP_ROOT := env("CODE_TEMP_ROOT", if os() == "windows" { if path_exists("D:/temp") == "true" { "D:/temp" } else { "C:/temp" } } else { env("TMPDIR", "/tmp") })
+export CODE_TEMP_ROOT := env("CODE_TEMP_ROOT", if os() == "windows" { "C:/temp" } else { env("TMPDIR", "/tmp") })
 export CODE_PACKAGES_ROOT := env("CODE_PACKAGES_ROOT", if os() == "windows" { "D:/packages" } else { join(home_directory(), ".local/share") })
 export CODE_TOOLS_ROOT := env("CODE_TOOLS_ROOT", if os() == "windows" { "C:/tools" } else { join(home_directory(), ".local/tools") })
 export CODE_PYTHON_ENV_ROOT := env("CODE_PYTHON_ENV_ROOT", join(CODE_PACKAGES_ROOT, "uv/environments"))

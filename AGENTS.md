@@ -16,7 +16,7 @@
 - Keep auxiliary worktrees under `.worktrees/`, named with one lowercase letter from `a` through `j`. Keep the main worktree on the configured integration branch.
 - Keep Python environments, build caches, and generated outputs outside the repository. Use `CODE_PYTHON_ENV_ROOT`, `CODE_PYTHON_BUILD_ROOT`, and `CODE_PYTHON_OUTPUT_ROOT`; the Justfile assigns repository/project/worktree-specific subdirectories.
 - Use the committed `uv.lock` and `.python-version`. Run Python commands through `just`: `env`, `uv sync --locked`, `uv run ...`, and `prek run --all-files`.
-- Configure roots with `CODE_*_ROOT` variables. Windows defaults are `D:/code`, `D:/packages/uv/environments`, `D:/temp/python-build`, `D:/temp/python-output`, `D:/packages`, `C:/tools`, and `D:/temp` (falling back to `C:/temp`). Unix-like defaults use native home directories, XDG cache settings where applicable, and `TMPDIR` or `/tmp`.
+- Configure roots with `CODE_*_ROOT` variables. Windows defaults are `D:/code`, `D:/packages/uv/environments`, `C:/temp/python-build`, `C:/temp/python-output`, `D:/packages`, `C:/tools`, and `C:/temp` (falling back to `C:/temp`). Unix-like defaults use native home directories, XDG cache settings where applicable, and `TMPDIR` or `/tmp`.
 
 ## Machine storage roots
 
@@ -30,12 +30,12 @@
 The current Windows defaults below can be overridden per machine or shell with environment variables. Python projects use the project Justfile for uv environments, Python caches, and generated output paths.
 
 - CODE_REPOS_ROOT: D:/code on Windows; ~/code by default on Unix.
-- CODE_TEMP_ROOT: D:/temp on Windows, with C:/temp as a fallback where a script needs one; Unix uses the existing TMPDIR or /tmp.
+- CODE_TEMP_ROOT: C:/temp on Windows, with C:/temp as a fallback where a script needs one; Unix uses the existing TMPDIR or /tmp.
 - CODE_PACKAGES_ROOT: D:/packages on Windows; ~/.local/share by default on Unix.
 - CODE_TOOLS_ROOT: C:/tools on Windows; ~/.local/tools by default on Unix.
 - CODE_PYTHON_ENV_ROOT: D:/packages/uv/environments on Windows; ~/.local/share/uv/environments by default on Unix.
-- CODE_PYTHON_BUILD_ROOT: D:/temp/python-build on Windows; TMPDIR-or-/tmp/python-build by default on Unix.
-- CODE_PYTHON_OUTPUT_ROOT: D:/temp/python-output on Windows; TMPDIR-or-/tmp/python-output by default on Unix.
+- CODE_PYTHON_BUILD_ROOT: C:/temp/python-build on Windows; TMPDIR-or-/tmp/python-build by default on Unix.
+- CODE_PYTHON_OUTPUT_ROOT: C:/temp/python-output on Windows; TMPDIR-or-/tmp/python-output by default on Unix.
 
 Windows drive paths elsewhere in this file are defaults. Set a root variable to relocate the corresponding directory. WSL must keep its distribution temp behavior and must not redirect temp variables to a Windows drive mount.
 
@@ -46,7 +46,7 @@ Windows drive paths elsewhere in this file are defaults. Set a root variable to 
 - Keep the primary checkout on `develop`. Keep `main` as an independent empty root commit; do not merge development history into it.
 - Auxiliary worktrees must be direct children of `.worktrees/` and use slots `a` through `j` only. Never use task-named or external worktree paths.
 - Preserve unique commits on named branches before moving a detached checkout. Keep history linear, squash unpublished related changes, and never rewrite published history without explicit authorization.
-- Use `CODE_TEMP_ROOT` for Windows temp files: `D:/temp` when available, otherwise `C:/temp`. Unix uses its native `TMPDIR` or `/tmp`.
+- Use `CODE_TEMP_ROOT` for Windows temp files: `C:/temp` when available, otherwise `C:/temp`. Unix uses its native `TMPDIR` or `/tmp`.
 - Use `CODE_PACKAGES_ROOT` for package data (Windows `D:/packages`) and `CODE_TOOLS_ROOT` for portable tools (Windows `C:/tools`). Existing tool-specific environment overrides take precedence; changing a root does not move installed packages.
 
 ## Configuration consistency

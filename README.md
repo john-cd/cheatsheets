@@ -77,7 +77,7 @@ Consult Docker's [getting started](https://docs.docker.com/go/get-started-sharin
 
 `just deps-upgrade` refreshes the uv lockfile, dprint plugin pins, and prek hook revisions. Review the resulting changes and run the documented checks before committing.
 
-Python caches and generated outputs use per-repository, per-project, per-worktree subdirectories under `CODE_PYTHON_BUILD_ROOT` and `CODE_PYTHON_OUTPUT_ROOT`; MkDocs writes to the configured output subdirectory for the active worktree. Python environments and package caches use `CODE_PYTHON_ENV_ROOT` and `CODE_PACKAGES_ROOT`. The roots are configurable through environment variables. Windows defaults are `D:\packages\uv\environments`, `D:\temp\python-build`, `D:\temp\python-output`, `D:\packages`, `C:\tools`, and `D:\temp` (with `C:\temp` as fallback); Unix-like defaults use native home directories and the existing `TMPDIR` or `/tmp`.
+Python caches and generated outputs use per-repository, per-project, per-worktree subdirectories under `CODE_PYTHON_BUILD_ROOT` and `CODE_PYTHON_OUTPUT_ROOT`; MkDocs writes to the configured output subdirectory for the active worktree. Python environments and package caches use `CODE_PYTHON_ENV_ROOT` and `CODE_PACKAGES_ROOT`. The roots are configurable through environment variables. Windows defaults are `D:\packages\uv\environments`, `C:\temp\python-build`, `C:\temp\python-output`, `D:\packages`, `C:\tools`, and `C:\temp` (with `C:\temp` as fallback); Unix-like defaults use native home directories and the existing `TMPDIR` or `/tmp`.
 
 ## Python tooling
 
@@ -100,7 +100,7 @@ Caches and generated files use matching paths under `CODE_PYTHON_BUILD_ROOT`
 and `CODE_PYTHON_OUTPUT_ROOT`. The main checkout uses slot `main`; linked
 worktrees use their letter. Configure `CODE_PACKAGES_ROOT` for uv/pip/prek
 caches and `CODE_TOOLS_ROOT` for uv-managed interpreters and tools.
-Windows defaults are `D:/packages`, `C:/tools`, and `D:/temp` for temporary
+Windows defaults are `D:/packages`, `C:/tools`, and `C:/temp` for temporary
 files; Unix uses `~/.local/share`, `~/.local/tools`, and native temporary paths.
 `CODE_PYTHON_ENV_ROOT` defaults to `<packages>/uv/environments`; build and output
 roots default to `<temp>/python-build` and `<temp>/python-output`.
@@ -113,7 +113,7 @@ The primary checkout uses `develop`; `main` is an independent empty branch.
 Auxiliary worktrees belong under `.worktrees/`, with names one lowercase letter from a through j only.
 Storage roots are configurable through `CODE_REPOS_ROOT`, `CODE_TEMP_ROOT`,
 `CODE_PACKAGES_ROOT`, and `CODE_TOOLS_ROOT`. Windows defaults are `D:/code`,
-`D:/temp` (`C:/temp` fallback), `D:/packages`, and `C:/tools` respectively.
+`C:/temp` (`C:/temp` fallback), `D:/packages`, and `C:/tools` respectively.
 Unix uses native home/cache/temp paths. A root override changes destinations;
 it does not move existing installations. Use `CODE_PYTHON_ENV_ROOT`,
 `CODE_PYTHON_BUILD_ROOT`, and `CODE_PYTHON_OUTPUT_ROOT` for Python-specific paths.
