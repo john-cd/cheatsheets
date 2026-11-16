@@ -4,10 +4,14 @@ var INPUT_DATABASE_NAME = "inputDB";
 var OUTPUT_DATABASE_NAME = "outputDB";
 var STATS_COLLECTION_NAME = "stats";
 
+/** Converts an input address to the lowercase key used by the stats collection. */
 function normalizeAddressKey(address) {
     return (address || "").toString().toLowerCase();
 }
 
+/** Builds a pipeline that replaces the stats collection with the most frequent addresses.
+ * A missing or invalid limit defaults to 100,000 entries.
+ */
 function buildStatsAggregationPipeline(limit) {
     var max = Number.isInteger(limit) && limit > 0 ? limit : 100000;
     return [
@@ -18,6 +22,7 @@ function buildStatsAggregationPipeline(limit) {
     ];
 }
 
+/** Rebuilds the address counts and derived output collection, then prints the results. */
 function gatherStats() {
     var start = Date.now();
 
@@ -46,7 +51,7 @@ function gatherStats() {
             counter++;
             if ( counter % 1000 == 0 ) {
                     outputBulk.execute();
-                    // You have to reset.
+                    // Start a fresh bulk operation after flushing the current batch.
                     outputBulk = outputColl.initializeUnorderedBulkOp();
                 }
             }

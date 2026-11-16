@@ -29,10 +29,12 @@ class _RenderedLinkParser(HTMLParser):
     """Collect link destinations from anchors emitted by the Markdown renderer."""
 
     def __init__(self) -> None:
+        """Decode HTML character references so hrefs match the browser's destinations."""
         super().__init__(convert_charrefs=True)
         self.hrefs: list[str] = []
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        """Collect nonempty href attributes from anchor tags."""
         if tag == "a":
             self.hrefs.extend(value for name, value in attrs if name == "href" and value)
 
@@ -108,6 +110,7 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
 
     files = [f for p in args.paths for f in ([p] if p.is_file() else sorted(p.rglob("*.md")))]
+    # Check each destination once while retaining the source for diagnostics.
     urls: dict[str, list[Path]] = {}
     for file in files:
         for url in extract_links(file.read_text(encoding="utf-8")):
