@@ -20,7 +20,7 @@ use `git worktree list --porcelain` and `git status --short` for live state.
 
 Override the `CODE_*_ROOT` environment variables before invoking tooling.
 Windows defaults are `CODE_REPOS_ROOT=D:/code`,
-`CODE_TEMP_ROOT=D:/temp` (`C:/temp` fallback),
+`CODE_TEMP_ROOT=C:/temp` (`C:/temp` fallback),
 `CODE_PACKAGES_ROOT=D:/packages`, and `CODE_TOOLS_ROOT=C:/tools`.
 Unix uses native home/cache/temp directories. Root overrides do not move existing
 installations or rewrite independent package-manager settings.
