@@ -2,8 +2,9 @@
 
 # Cheatsheets
 
-This repository is the source for a searchable programming-reference website with concise
-cheatsheets and practical guides, built from Markdown with MkDocs and Material for MkDocs.
+This repository is the source for a searchable programming-reference website
+with concise cheatsheets and practical guides, built from Markdown with MkDocs
+and Material for MkDocs.
 
 [John's Cheatsheets](https://john-cd.com/cheatsheets/)
 
@@ -11,21 +12,35 @@ cheatsheets and practical guides, built from Markdown with MkDocs and Material f
 
 ## Repo structure
 
-This website is generated using [MkDocs](https://mkdocs.org) and [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/).
+This website is generated using [MkDocs](https://mkdocs.org) and
+[Material for MkDocs](https://squidfunk.github.io/mkdocs-material/).
 
-The source Markdown files are found in the `docs` folder. The generated HTML / JS is written to the external output path configured by the project Justfile. There is also a `drafts` folder for Markdown files that are not ready for publication.
+The source Markdown files are found in the `docs` folder. The generated HTML /
+JS is written to the external output path configured by the project Justfile.
+There is also a `drafts` folder for Markdown files that are not ready for
+publication.
 
-`.devcontainer` contains the [Dev Container](https://code.visualstudio.com/docs/devcontainers/containers) file and associated [Docker Compose](https://docs.docker.com/compose/) and [Dockerfile](https://docs.docker.com/reference/dockerfile/) setup. `github/workflows` contains the GitHub Action continuous deployment workflow.
+`.devcontainer` contains the
+[Dev Container](https://code.visualstudio.com/docs/devcontainers/containers)
+file and associated [Docker Compose](https://docs.docker.com/compose/) and
+[Dockerfile](https://docs.docker.com/reference/dockerfile/) setup.
+`github/workflows` contains the GitHub Action continuous deployment workflow.
 
 ## Contributing
 
-For setup, checks, configuration ownership, and documentation requirements, see [CONTRIBUTING.md](CONTRIBUTING.md).
+For setup, checks, configuration ownership, and documentation requirements, see
+[CONTRIBUTING.md](CONTRIBUTING.md).
 
 ### Install
 
-If you use [Visual Studio Code](https://code.visualstudio.com/), install the [Dev Container extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers). Otherwise, consider the [Dev Container CLI](https://containers.dev/supporting#devcontainer-cli). `Dev Container` allows you to edit and test the web site within a `Docker` container.
+If you use [Visual Studio Code](https://code.visualstudio.com/), install the
+[Dev Container extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers).
+Otherwise, consider the
+[Dev Container CLI](https://containers.dev/supporting#devcontainer-cli). `Dev
+Container` allows you to edit and test the web site within a `Docker` container.
 
-Alternatively, install Just, Python 3.15, Node.js 26.13.1, `uv`, and [Docker](https://www.docker.com/) on your development machine.
+Alternatively, install Just, Python 3.15, Node.js 26.13.1, `uv`, and
+[Docker](https://www.docker.com/) on your development machine.
 
 ```powershell
 just env
@@ -54,7 +69,8 @@ just check-all      # offline gates: Ruff, unittest, dprint, markdownlint
 just uv run mkdocs build
 ```
 
-Within a Dev Container, you may need to use `mkdocs serve --dev-addr 0.0.0.00:8000`.
+Within a Dev Container, you may need to use `mkdocs serve --dev-addr
+0.0.0.00:8000`.
 
 ### Docker Compose
 
@@ -72,56 +88,76 @@ docker compose -f .devcontainer/compose.yaml -f .devcontainer/compose.ci.yaml up
 docker compose down
 ```
 
-You may also build the image directly, e.g.: `docker build --file .devcontainer/Dockerfile --target dev --tag johncd/cheatsheets:latest .`
-To push an image to your registry, use `docker push myregistry.com/myapp`.
+You may also build the image directly, e.g.: `docker build --file
+.devcontainer/Dockerfile --target dev --tag johncd/cheatsheets:latest .` To push
+an image to your registry, use `docker push myregistry.com/myapp`.
 
-Consult Docker's [getting started](https://docs.docker.com/go/get-started-sharing/) docs for more detail on building and pushing.
-`uv.lock` pins the MkDocs environment and `.python-version` selects Python 3.15.2. The devcontainer uses the same Python patch version; its image and Docker CLI pins are in `.devcontainer/.env` and `.devcontainer/devcontainer.json`. Use `just env` to display the active worktree, Python environment, cache, build, output, uv, prek, and temporary-directory settings.
+Consult Docker's
+[getting started](https://docs.docker.com/go/get-started-sharing/) docs for more
+detail on building and pushing. `uv.lock` pins the MkDocs environment and
+`.python-version` selects Python 3.15.2. The devcontainer uses the same Python
+patch version; its image and Docker CLI pins are in `.devcontainer/.env` and
+`.devcontainer/devcontainer.json`. Use `just env` to display the active
+worktree, Python environment, cache, build, output, uv, prek, and
+temporary-directory settings.
 
-`just deps-upgrade` refreshes the uv lockfile, dprint plugin pins, and prek hook revisions. Review the resulting changes and run the documented checks before committing.
+`just deps-upgrade` refreshes the uv lockfile, dprint plugin pins, and prek hook
+revisions. Review the resulting changes and run the documented checks before
+committing.
 
-Python caches and generated outputs use per-repository, per-project, per-worktree subdirectories under `CODE_PYTHON_BUILD_ROOT` and `CODE_PYTHON_OUTPUT_ROOT`; MkDocs writes to the configured output subdirectory for the active worktree. Python environments and package caches use `CODE_PYTHON_ENV_ROOT` and `CODE_PACKAGES_ROOT`. The roots are configurable through environment variables. Windows defaults are `D:\packages\uv\environments`, `C:\temp\python-build`, `C:\temp\python-output`, `D:\packages`, `C:\tools`, and `C:\temp` (with `C:\temp` as fallback); Unix-like defaults use native home directories and the existing `TMPDIR` or `/tmp`.
+Python caches and generated outputs use per-repository, per-project,
+per-worktree subdirectories under `CODE_PYTHON_BUILD_ROOT` and
+`CODE_PYTHON_OUTPUT_ROOT`; MkDocs writes to the configured output subdirectory
+for the active worktree. Python environments and package caches use
+`CODE_PYTHON_ENV_ROOT` and `CODE_PACKAGES_ROOT`. The roots are configurable
+through environment variables. Windows defaults are
+`D:\packages\uv\environments`, `C:\temp\python-build`, `C:\temp\python-output`,
+`D:\packages`, `C:\tools`, and `C:\temp` (with `C:\temp` as fallback); Unix-like
+defaults use native home directories and the existing `TMPDIR` or `/tmp`.
 
 ## Python tooling
 
 Install Just and uv; Windows recipes use Git Bash. Each Python project has a
-Justfile. Environment variables are defined in `scripts/env.just`, imported
-by those Justfiles; no Python environment wrapper is required.
+Justfile. Environment variables are defined in `scripts/env.just`, imported by
+those Justfiles; no Python environment wrapper is required.
 
 - `just env` — this repository.
 
-From a project's directory, run `just sync`, `just fmt`, `just lint`, or
-`just check`. `just --list` shows its available tasks. Named validation tasks
-use `uv run --locked`; `just uv <args...>` forwards arbitrary uv commands and
-`just run <command...>` runs a command in the locked environment.
+From a project's directory, run `just sync`, `just fmt`, `just lint`, or `just
+check`. `just --list` shows its available tasks. Named validation tasks use `uv
+run --locked`; `just uv <args...>` forwards arbitrary uv commands and `just run
+<command...>` runs a command in the locked environment.
 
 `just hooks-install` installs the repository's prek hooks; `just hooks` runs
-them against all files. Install prek first if needed with `just uv tool install prek`.
+them against all files. Install prek first if needed with `just uv tool install
+prek`.
 
-Virtual environments use `CODE_PYTHON_ENV_ROOT/<repo>/<project>/<slot>`.
-Caches and generated files use matching paths under `CODE_PYTHON_BUILD_ROOT`
-and `CODE_PYTHON_OUTPUT_ROOT`. The main checkout uses slot `main`; linked
-worktrees use their letter. Configure `CODE_PACKAGES_ROOT` for uv/pip/prek
-caches and `CODE_TOOLS_ROOT` for uv-managed interpreters and tools.
-Windows defaults are `D:/packages`, `C:/tools`, and `C:/temp` for temporary
-files; Unix uses `~/.local/share`, `~/.local/tools`, and native temporary paths.
-`CODE_PYTHON_ENV_ROOT` defaults to `<packages>/uv/environments`; build and output
-roots default to `<temp>/python-build` and `<temp>/python-output`.
-`just env` prints the resolved values. `just uv build` routes distributions to the external
-output directory unless an explicit `--out-dir` or `-o` is supplied.
+Virtual environments use `CODE_PYTHON_ENV_ROOT/<repo>/<project>/<slot>`. Caches
+and generated files use matching paths under `CODE_PYTHON_BUILD_ROOT` and
+`CODE_PYTHON_OUTPUT_ROOT`. The main checkout uses slot `main`; linked worktrees
+use their letter. Configure `CODE_PACKAGES_ROOT` for uv/pip/prek caches and
+`CODE_TOOLS_ROOT` for uv-managed interpreters and tools. Windows defaults are
+`D:/packages`, `C:/tools`, and `C:/temp` for temporary files; Unix uses
+`~/.local/share`, `~/.local/tools`, and native temporary paths.
+`CODE_PYTHON_ENV_ROOT` defaults to `<packages>/uv/environments`; build and
+output roots default to `<temp>/python-build` and `<temp>/python-output`. `just
+env` prints the resolved values. `just uv build` routes distributions to the
+external output directory unless an explicit `--out-dir` or `-o` is supplied.
 
 ## Checkout and storage policy
 
 The primary checkout uses `develop`; `main` is an independent empty branch.
-Auxiliary worktrees belong under `.worktrees/`, with names one lowercase letter from a through j only.
-Storage roots are configurable through `CODE_REPOS_ROOT`, `CODE_TEMP_ROOT`,
-`CODE_PACKAGES_ROOT`, and `CODE_TOOLS_ROOT`. Windows defaults are `D:/code`,
-`C:/temp` (`C:/temp` fallback), `D:/packages`, and `C:/tools` respectively.
-Unix uses native home/cache/temp paths. A root override changes destinations;
-it does not move existing installations. Use `CODE_PYTHON_ENV_ROOT`,
-`CODE_PYTHON_BUILD_ROOT`, and `CODE_PYTHON_OUTPUT_ROOT` for Python-specific paths.
+Auxiliary worktrees belong under `.worktrees/`, with names one lowercase letter
+from a through j only. Storage roots are configurable through `CODE_REPOS_ROOT`,
+`CODE_TEMP_ROOT`, `CODE_PACKAGES_ROOT`, and `CODE_TOOLS_ROOT`. Windows defaults
+are `D:/code`, `C:/temp` (`C:/temp` fallback), `D:/packages`, and `C:/tools`
+respectively. Unix uses native home/cache/temp paths. A root override changes
+destinations; it does not move existing installations. Use
+`CODE_PYTHON_ENV_ROOT`, `CODE_PYTHON_BUILD_ROOT`, and `CODE_PYTHON_OUTPUT_ROOT`
+for Python-specific paths.
 
 ## Repository configuration
 
-See [CONFIGURATION.md](CONFIGURATION.md) for shared formatting, lint, dependency-update,
-build-profile, cache, linker, and editor conventions. Keep it synchronized with configuration changes.
+See [CONFIGURATION.md](CONFIGURATION.md) for shared formatting, lint,
+dependency-update, build-profile, cache, linker, and editor conventions. Keep it
+synchronized with configuration changes.
