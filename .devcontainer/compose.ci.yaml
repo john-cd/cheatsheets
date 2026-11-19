@@ -18,9 +18,9 @@ services:
         UV_VERSION: ${UV_VERSION:?Set UV_VERSION in .devcontainer/.env or the host environment}
         WORK_DIR: ${WORK_DIR:?Set WORK_DIR in .devcontainer/.env or the host environment}
       cache_from:
-        - type=gha
+        - type=gha,scope=cheatsheets-ci
       cache_to:
-        - type=gha,mode=max
+        - type=gha,mode=max,scope=cheatsheets-ci,ignore-error=true
     # Bind the output folder to a folder in the CI host
     volumes:
       - ../site:/code/site
