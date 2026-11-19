@@ -226,7 +226,7 @@ services:
       - "5000:5000"
 
   db:
-    image: postgres:16-alpine
+    image: postgres:18.7-trixie
     environment:
       - POSTGRES_PASSWORD=secret
     volumes:
