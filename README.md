@@ -2,6 +2,9 @@
 
 # Cheatsheets
 
+This repository is the source for a searchable programming-reference website with concise
+cheatsheets and practical guides, built from Markdown with MkDocs and Material for MkDocs.
+
 [John's Cheatsheets](https://john-cd.com/cheatsheets/)
 
 [John's Main Website](https://john-cd.com)
