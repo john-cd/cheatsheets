@@ -18,6 +18,21 @@ updates:
         update-types:
           - minor
           - patch
+  - package-ecosystem: npm
+    schedule:
+      interval: monthly
+      day: monday
+      time: "06:00"
+      timezone: America/Los_Angeles
+    directory: /
+    open-pull-requests-limit: 5
+    groups:
+      minor-and-patch:
+        patterns:
+          - "*"
+        update-types:
+          - minor
+          - patch
   - package-ecosystem: docker
     schedule:
       interval: monthly

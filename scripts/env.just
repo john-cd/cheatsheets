@@ -41,6 +41,7 @@ py_environment_key := if py_environment_project == "." { join(py_repo_name, py_s
 # UV_PROJECT_ENVIRONMENT uses py_environment_project so related projects can share one venv.
 # UV_CACHE_DIR and PIP_CACHE_DIR hold download caches; UV_PYTHON_INSTALL_DIR and UV_TOOL_DIR
 # hold uv-managed Python/tool installations; UV_TOOL_BIN_DIR is prepended to PATH.
+# NPM_CONFIG_CACHE defaults to npm package downloads under CODE_PACKAGES_ROOT.
 # UV_LINK_MODE=copy avoids cross-device hard-link failures when package and environment roots differ.
 # PREK_HOME is prek's shared cache/data directory. Python bytecode, Ruff, and pytest caches are
 # redirected into CODE_PYTHON_BUILD_DIR; PYTEST_ADDOPTS retains caller options and sets cache_dir.
@@ -63,6 +64,7 @@ export UV_TOOL_DIR := replace(join(CODE_TOOLS_ROOT, "uv/tools"), "\\", "/")
 export UV_TOOL_BIN_DIR := replace(join(CODE_TOOLS_ROOT, "uv/bin"), "\\", "/")
 export UV_LINK_MODE := "copy"
 export PIP_CACHE_DIR := replace(join(CODE_PACKAGES_ROOT, "pip"), "\\", "/")
+export NPM_CONFIG_CACHE := replace(env("NPM_CONFIG_CACHE", join(CODE_PACKAGES_ROOT, "npm")), "\\", "/")
 export PREK_HOME := replace(join(CODE_PACKAGES_ROOT, "prek"), "\\", "/")
 export PYTHONPYCACHEPREFIX := CODE_PYTHON_BUILD_DIR + "/pycache"
 export RUFF_CACHE_DIR := CODE_PYTHON_BUILD_DIR + "/ruff"
@@ -134,6 +136,7 @@ env:
     @printf 'UV_TOOL_BIN_DIR=%s\n' {{quote(UV_TOOL_BIN_DIR)}}
     @printf 'UV_LINK_MODE=%s\n' {{quote(UV_LINK_MODE)}}
     @printf 'PIP_CACHE_DIR=%s\n' {{quote(PIP_CACHE_DIR)}}
+    @printf 'NPM_CONFIG_CACHE=%s\n' {{quote(NPM_CONFIG_CACHE)}}
     @printf 'PREK_HOME=%s\n' {{quote(PREK_HOME)}}
     @printf 'PYTHONPYCACHEPREFIX=%s\n' {{quote(PYTHONPYCACHEPREFIX)}}
     @printf 'RUFF_CACHE_DIR=%s\n' {{quote(RUFF_CACHE_DIR)}}
