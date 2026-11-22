@@ -74,7 +74,7 @@ and navigation/cross-links; distinguish proposals from published content.
 
 ## Repository maintenance
 
-- [ ] Review candidate temporary/LLM files by ownership/history before cleanup.
+- [ ] Review candidate temporary/LLM files by ownership/history before cleanup. <!-- Partial (2026-11-22): the 12 archived `trash/` pages and 49 `.orig` snapshots are all tracked and have commit history; Git reports no untracked files. Their tracked history and review markers do not establish that they are disposable, so retain them pending an owner decision. -->
 
 Acceptance: every cleanup target has a recorded disposition and no unrelated work is lost.
 Human/account/host blockers belong here with their concrete prerequisites; no upstream-release
