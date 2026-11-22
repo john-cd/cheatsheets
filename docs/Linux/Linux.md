@@ -79,7 +79,7 @@ sudo chkconfig --level 3 httpd on  # specific runlevel
 ## Linux Boot Process
 
 - [Linux Boot Process](https://www.thegeekstuff.com/2011/02/linux-boot-process/)
-- [Scripts in /etc/init.d](https://www.novell.com/documentation/suse91/suselinux-adminguide/html/ch13s04.html)
+- [SysV init scripts in /etc/init.d](https://www.freedesktop.org/software/systemd/man/253/systemd-sysv-generator.html)
 
 You can also use a `/etc/rc.d/rc.local` script.
 

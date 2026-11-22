@@ -88,4 +88,19 @@ jobs:
       - run: just uv tool install prek
       - uses: dprint/check@371a959e3c77f34a76a03d2c50df2e3f2302d016 # v2.6
       - run: just hooks
+
+  markdownlint-cli2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install Just
+        # taiki-e/install-action v2.87.30
+        uses: taiki-e/install-action@1919c4a95903d2c33e4a221102edca87309fc14b
+        with:
+          tool: just@1.59.0
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 26.13.1
       - run: just markdownlint
