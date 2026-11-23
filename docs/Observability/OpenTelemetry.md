@@ -160,7 +160,8 @@ exporter from another example.
    gateway, and monitor the Collector itself.
 6. Review the emitted data, sampling, cardinality, retention, and cost with
    service owners. Remove attributes and logs that do not help answer a real
-   operational question.
+   operational question. For application-level evaluation patterns, see
+   [AI Engineering](../AI/AI_Engineering.md).
 
 ## Privacy and operational checks
 
