@@ -14,7 +14,7 @@ tags: Scala
 - [Scala @ TutorialPoint](https://www.tutorialspoint.com/scala/index.htm)
 - [Scala Tutorials](https://docs.scala-lang.org/tutorials.html)
 
-Some examples are derived from [Scala Koans](https://www.scalakoans.org/).
+Some examples are adapted from [Scala Koans](https://github.com/bsamaripa/scala-koans), an unofficial refreshed exercise repository.
 
 ## Basics
 

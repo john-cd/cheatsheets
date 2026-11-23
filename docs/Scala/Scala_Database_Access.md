@@ -22,7 +22,7 @@ tags: Scala, DB
 
 [Doobie](https://typelevel.org/doobie/)
 
-[ReactiveMongo getting started](https://reactivemongo.org/releases/1.0/documentation/tutorial/getstarted.html)
+[ReactiveMongo project and documentation](https://github.com/ReactiveMongo/ReactiveMongo)
 
 [Comparison of multiple frameworks](https://softwaremill.com/comparing-scala-relational-database-access-libraries/#summary)
 

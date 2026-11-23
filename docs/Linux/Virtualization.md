@@ -4,7 +4,7 @@
 
 [Comparison of platform virtual machines](https://en.wikipedia.org/wiki/Comparison_of_platform_virtual_machines)
 
-[Linux KVM](https://www.linux-kvm.org/)
+[Linux KVM documentation](https://docs.kernel.org/virt/kvm/index.html)
 
 [Xen](https://en.wikipedia.org/wiki/Xen)
 

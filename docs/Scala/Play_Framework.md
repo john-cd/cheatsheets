@@ -82,7 +82,7 @@ class HomeController @Inject()(val controllerComponents: ControllerComponents) e
 
 ## Play
 
-[Angular 2+ with Play Framework 2.6.x – Yohan Gomez – Medium](https://medium.com/@yohan.gz/https-medium-com-yohan-gz-angular-with-play-framework-a6c3f8b339f3)
+[Angular 8 with Play Framework 2.7.x (2017) – Yohan Gomez – Medium](https://medium.com/@yohan.gz/https-medium-com-yohan-gz-angular-with-play-framework-a6c3f8b339f3)
 
 [yohangz-scala-play-angular-seed- Scala Play 2.6.x + Angular 5 with Angular CLI seed project with full-fledged build process](https://github.com/yohangz/scala-play-angular-seed)
 

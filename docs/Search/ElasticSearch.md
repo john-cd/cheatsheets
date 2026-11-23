@@ -125,11 +125,9 @@ Live charts and statistics for elasticsearch cluster:
 
 ### **Aspire**
 
-[Aspire](https://www.searchtechnologies.com/aspire-for-elasticsearch)
+[Aspire for Elasticsearch (Elastic, 2015)](https://www.elastic.co/blog/partner-spotlight-search-technologies-launches-aspire-for-elasticsearch)
 
 Aspire is a framework and libraries of extensible components designed to enable creation of solutions to acquire data from one or more content repositories (such as file systems, relational databases, cloud storage, or content management systems), extract metadata and text from the documents, analyze, modify and enhance the content and metadata if needed, and then publish each document, together with its metadata, to a search engine or other target application
-
-[Docs](https://wiki.searchtechnologies.com/index.php/Main_Page)
 
 ### **Integration with Hadoop**
 
