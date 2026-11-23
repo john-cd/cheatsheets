@@ -41,3 +41,5 @@ tags: Kubernetes
 ```text
 Review this cheatsheet and adapt the commands to your environment before execution.
 ```
+
+For admission controls, service-account permissions, and network isolation, see [Kubernetes Security](Kubernetes_Security.md).

@@ -57,7 +57,6 @@ is not runtime acceptance.
 
 Problem: requested subjects are not yet covered by reviewed cheat sheets.
 
-- [ ] Kubernetes security: PSA/PSS, RBAC, and network policies.
 - [ ] Cloud workload FinOps.
 - [ ] Incident response and postmortems.
 
