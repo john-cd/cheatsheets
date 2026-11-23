@@ -7,6 +7,8 @@ tags: Kubernetes MiniKube Kubectl
 
 # Using `kubectl`
 
+Before applying workloads, review the [Kubernetes security guide](Kubernetes_Security.md) for Pod Security Admission, least-privilege RBAC, and NetworkPolicy rollout.
+
 ## Create ConfigMap from config files
 
 A [ConfigMap](https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/) stores K8s-specific configuration that can be mounted as volume or used in env variables.
