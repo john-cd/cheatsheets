@@ -14,6 +14,7 @@ In the meanwhile, feel free to use as you wish. Please email me suggestions and 
 - [Python](Python/Python.md)
 - [Scala](Scala/Scala_Language.md)
 - [GitHub Actions](DevOps/GitHub_Actions.md)
+- [Platform Engineering](DevOps/Platform_Engineering.md)
 - [Web](Web/Bootstrap.md)
 - [.NET](dotNET/C%23.md)
 - [Docker](Containers/Docker.md)
