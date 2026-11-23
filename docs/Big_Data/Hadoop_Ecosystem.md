@@ -31,7 +31,7 @@ Its core and common components consist of the following:
 
 ## Hadoop and Mongo
 
-- [Hadoop and MongoDB](https://www.mongodb.com/hadoop-and-mongodb)
+- [Hadoop and MongoDB](https://www.mongodb.com/resources/products/compatibilities/hadoop-and-mongodb)
 - [Hadoop and MongoDB Use Cases](https://docs.mongodb.org/ecosystem/use-cases/hadoop/)
 
 ## AWS EMR
@@ -48,3 +48,4 @@ Amazon EMR is a cloud-native big data platform that simplifies running big data 
 - Flink
 - Zeppelin
 - ZooKeeper
+
