@@ -96,6 +96,8 @@ aws emr list-instances --cluster-id j-2AL4XXXXXX5T9Or:aws emr describe-clusters 
 
 - [View Web Interfaces Hosted on Amazon EMR Clusters](https://docs.aws.amazon.com//ElasticMapReduce/latest/ManagementGuide/emr-web-interfaces.html)
 
+Replace `master-public-dns-name` and `slave-public-dns-name` below with the DNS names for your active cluster. These example hosts are placeholders, not public destinations.
+
 - YARN ResourceManager: [https://master-public-dns-name:8088](https://master-public-dns-name:8088/)
 
 - YARN NodeManager: [https://slave-public-dns-name:8042](https://slave-public-dns-name:8042/)

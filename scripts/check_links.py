@@ -19,7 +19,15 @@ from urllib.parse import urlsplit
 
 import markdown
 
-IGNORED_HOSTS = {"localhost", "127.0.0.1", "twitter.com", "www.linkedin.com"}
+IGNORED_HOSTS = {
+    "localhost",
+    "127.0.0.1",
+    "twitter.com",
+    "www.linkedin.com",
+    # Amazon EMR examples use deployment-specific hostnames that are not live destinations.
+    "master-public-dns-name",
+    "slave-public-dns-name",
+}
 BROKEN_STATUSES = {404, 410}
 HEAD_FALLBACK_STATUSES = BROKEN_STATUSES | {405, 501}
 USER_AGENT = "cheatsheets-link-check/1.0"

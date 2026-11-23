@@ -78,9 +78,13 @@ class CheckLinksTests(unittest.TestCase):
 [ip](http://127.0.0.1:8000/path)
 [twitter](https://twitter.com/user)
 [linkedin](https://www.linkedin.com/profile)
+[emr-master](https://master-public-dns-name:8088/)
+[emr-worker](https://slave-public-dns-name:8042/)
 [localhost-prefix](https://localhost.example.org/path)
 [twitter-prefix](https://twitter.com.example.org/path)
 [linkedin-prefix](https://www.linkedin.com.example.org/path)
+[emr-master-prefix](https://master-public-dns-name.example.org/path)
+[emr-worker-prefix](https://slave-public-dns-name.example.org/path)
 """
         self.assertEqual(
             check_links.extract_links(text),
@@ -88,6 +92,8 @@ class CheckLinksTests(unittest.TestCase):
                 "https://localhost.example.org/path",
                 "https://twitter.com.example.org/path",
                 "https://www.linkedin.com.example.org/path",
+                "https://master-public-dns-name.example.org/path",
+                "https://slave-public-dns-name.example.org/path",
             },
         )
 
