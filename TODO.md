@@ -10,10 +10,6 @@ Snapshot: November 23, 2026. GitHub Issues is enabled and has no open issues; th
 
 ### Blocked
 
-#### Hardware, external host or account
-
-- Recheck external URLs currently classified as blocked or unreachable by `just links`. <!-- Partial (2026-11-23): the full locked scan found 457 links, 0 broken destinations, 4 HTTP-blocked and manually verified pages, and 3 network failures. Replaced the unreachable references and removed this task, but hosted CI then received HTTP 503 from rendered GitHub file pages for Pandas, Play/Angular, and Notepad++ resources. Those links now use the official Pandas PDF or raw GitHub content; remove this task after the hosted link check passes. -->
-
 #### Human decisions and reviews
 
 - [Category ownership and last-review metadata](#p1-documentation-quality) — needs an actual owner review; never invent dates.
