@@ -19,6 +19,9 @@ deployment paths, environment provisioning, identity, security controls,
 observability, and support. It should reduce repeated decisions and waiting
 while making ownership and operational expectations clear.
 
+For a deeper guide to signals and cross-signal correlation, see
+[Observability with OpenTelemetry](../Observability/OpenTelemetry.md).
+
 ## Start with a user journey
 
 Choose a frequent task that crosses team boundaries. Examples include:

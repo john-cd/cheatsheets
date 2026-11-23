@@ -1,4 +1,4 @@
-<!-- TODO Reviewed 11-22-2026. -->
+<!-- TODO Reviewed 11-23-2026. -->
 
 # TODO
 
@@ -6,7 +6,7 @@
 
 ## Ready and blocked work
 
-Snapshot: November 22, 2026. GitHub Issues is enabled and has no open issues; this file tracks repository tasks, with links to local sections.
+Snapshot: November 23, 2026. GitHub Issues is enabled and has no open issues; this file tracks repository tasks, with links to local sections.
 
 ### Blocked
 
@@ -14,7 +14,6 @@ Snapshot: November 22, 2026. GitHub Issues is enabled and has no open issues; th
 
 - [Category ownership and last-review metadata](#p1-documentation-quality) — needs an actual owner review; never invent dates.
 - [Temporary/LLM file cleanup](#repository-maintenance) — needs an ownership decision per file.
-- [New cheat sheet subjects](#p3-new-content) — owner deferred until maintenance work is complete.
 
 #### Hardware, external host or account
 
@@ -58,7 +57,6 @@ is not runtime acceptance.
 
 Problem: requested subjects are not yet covered by reviewed cheat sheets.
 
-- [ ] Observability: OpenTelemetry and metrics/logs/traces correlation.
 - [ ] AI engineering: RAG, prompt patterns, evaluation loops, and safety checks.
 - [ ] Data contracts and schema evolution.
 - [ ] Kubernetes security: PSA/PSS, RBAC, and network policies.
