@@ -30,7 +30,7 @@ java -version
 - [Jenkins](https://www.jenkins.io/) CI / CD automation server
 - [JProfiler](https://www.ej-technologies.com/products/jprofiler/overview.html)
 - [SpotBugs (successor to FindBugs)](https://spotbugs.github.io/) static analysis or [Checker Framework](https://types.cs.washington.edu/checker-framework/)
-- [Checkstyle](https://checkstyle.sourceforge.net/) coding standard checker
+- [Checkstyle](https://checkstyle.org/) coding standard checker
   - [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html)
 
 ## Java Libraries

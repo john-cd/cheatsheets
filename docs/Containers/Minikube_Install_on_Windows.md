@@ -9,7 +9,7 @@ tags: Kubernetes MiniKube Kubectl
 
 [Minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/) runs a single-node Kubernetes cluster inside a VM on your laptop for users looking to try out Kubernetes or develop with it day-to-day.
 
-- For Windows, install [VirtualBox](https://www.virtualbox.org/wiki/Downloads) or Hyper-V first.
+- For Windows, install [VirtualBox](https://download.virtualbox.org/virtualbox/) or Hyper-V first.
 - Minikube is distributed in binary form: [GitHub Repo](https://github.com/kubernetes/minikube/releases). Download the minikube-installer.exe file, and execute the installer. This should automatically add minikube.exe to your path with an uninstaller available as well.
 - If needed, add `C:\Program Files (x86)\Kubernetes\minikube` or similar to the PATH (in `System Settings` > `Environment Variables`)
 - Test that minikube works:

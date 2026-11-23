@@ -58,7 +58,6 @@ is not runtime acceptance.
 
 Problem: requested subjects are not yet covered by reviewed cheat sheets.
 
-- [ ] Advanced GitHub Actions: reusable workflows, caching, and matrix builds.
 - [ ] Platform engineering: golden paths, templates, and scorecards.
 - [ ] Observability: OpenTelemetry and metrics/logs/traces correlation.
 - [ ] AI engineering: RAG, prompt patterns, evaluation loops, and safety checks.
