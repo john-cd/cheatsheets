@@ -18,6 +18,7 @@ In the meanwhile, feel free to use as you wish. Please email me suggestions and 
 - [Observability with OpenTelemetry](Observability/OpenTelemetry.md)
 - [Data Contracts and Schema Evolution](Data/Data_Contracts.md)
 - [AI Engineering](AI/AI_Engineering.md)
+- [Cloud Workload FinOps](Cloud/Cloud_Workload_FinOps.md)
 - [Web](Web/Bootstrap.md)
 - [.NET](dotNET/C%23.md)
 - [Docker](Containers/Docker.md)
