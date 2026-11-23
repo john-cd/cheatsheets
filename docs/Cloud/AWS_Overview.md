@@ -49,6 +49,9 @@
 
 ## Tools
 
+For a provider-neutral workload cost allocation and optimization workflow, see
+[Cloud Workload FinOps](Cloud_Workload_FinOps.md).
+
 - Windows Terminal and WSL (Windows Subsystem for Linux) are highly recommended over Putty or Cygwin.
 
 - AWS [command line interface](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-set-up.html)

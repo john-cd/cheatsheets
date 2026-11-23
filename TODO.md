@@ -57,7 +57,6 @@ is not runtime acceptance.
 
 Problem: requested subjects are not yet covered by reviewed cheat sheets.
 
-- [ ] Cloud workload FinOps.
 - [ ] Incident response and postmortems.
 
 Acceptance for each subject: a scoped page with use cases, checked examples, references,
