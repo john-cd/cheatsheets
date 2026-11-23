@@ -92,6 +92,6 @@ class HomeController @Inject()(val controllerComponents: ControllerComponents) e
 
 [joost-de-vries-play-angular-typescript.g8- A giter8 template for a Play Angular 4 Typescript application](https://github.com/joost-de-vries/play-angular-typescript.g8)
 
-[play-angular-typescript.g8-app.module.ts at master · joost-de-vries-play-angular-typescript.g8](https://github.com/joost-de-vries/play-angular-typescript.g8/blob/master/src/main/g8/app/assets/app/app.module.ts)
+[play-angular-typescript.g8 app.module.ts](https://raw.githubusercontent.com/joost-de-vries/play-angular-typescript.g8/master/src/main/g8/app/assets/app/app.module.ts)
 
 [playframework-play-scala-secure-session-example- An example Play application showing encrypted session management](https://github.com/playframework/play-scala-secure-session-example)
