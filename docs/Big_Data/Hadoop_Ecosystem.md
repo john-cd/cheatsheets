@@ -48,4 +48,3 @@ Amazon EMR is a cloud-native big data platform that simplifies running big data 
 - Flink
 - Zeppelin
 - ZooKeeper
-
