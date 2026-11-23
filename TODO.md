@@ -40,13 +40,13 @@ Problem: Python checks alone do not validate the maintained documentation/toolin
 Acceptance: maintained file types have runnable quality gates; commands and results are recorded.
 Do not report skipped checks as passing or synchronize full runtime dependencies for formatting.
 
-<!-- Partial (2026-11-22): fixed the hosted `just test` failure caused by hard-coded Docker feature version 1.10.1 after Dependabot updated the config and lock to 1.10.3. Local `just check-all` passes all 21 Python tests plus Ruff, dprint, and pinned markdownlint; `just hooks` also passes. Hosted rerun for the fix is pending. -->
+Validation (2026-11-22): fixed the hosted `just test` failure caused by hard-coded Docker feature version 1.10.1 after Dependabot updated the config and lock to 1.10.3. Local `just check-all` passes all 21 Python tests plus Ruff, dprint, and pinned markdownlint; `just hooks` also passes. Hosted `ci` run [#45111215683](https://github.com/john-cd/cheatsheets/actions/runs/45111215683) and `Prek checks` run [#45111215681](https://github.com/john-cd/cheatsheets/actions/runs/45111215681) both pass on commit `06368f4`.
 
 ## P2: dependencies, CI, and containers
 
 Problem: updater coverage and runtime/cache behavior still require verification.
 
-- [ ] Exercise hosted CI and container behavior.
+- [ ] Exercise container runtime behavior. <!-- Partial (2026-11-22): the CI image built and its in-container MkDocs build passed once. On retry, Docker Desktop's BuildKit/containerd store returned a read-only filesystem I/O error; Ubuntu WSL has Node/npm but no Docker Desktop socket. No Docker data was pruned or restarted. Reattempt when Docker Desktop storage is healthy. Hosted CI runs #45111215683 and #45111215681 pass. -->
 
 Acceptance: dependency roots have explicit coverage/dispositions, pins and build contexts agree,
 and hosted/container behavior has logs. Local evidence: Compose base/override/CI configuration validated;
@@ -84,7 +84,7 @@ Problem: Dependabot does not update tool versions stored only in formatter confi
 
 - [ ] Add review-only update coverage for the `markdownlint-cli2` pin; retain `just deps-upgrade` as the manual fallback for other tool pins.
 
-Implementation (2026-11-21): root `package.json` owns the exact `markdownlint-cli2` version; the Just recipe passes that version to `npx`, keeping downloads in `NPM_CONFIG_CACHE` under `CODE_PACKAGES_ROOT` without installing `node_modules` into the checkout. Monthly npm Dependabot updates are configured, and the Markdown workflow watches `package.json` and runs `just markdownlint` in an independent job so a network-dependent hook cannot skip the pinned CLI check. Updates remain review-only with no auto-merge. <!-- Partial (2026-11-22): hosted `Prek checks` run #45024055092 passed on develop and ran the pinned Markdown checks. No Dependabot PR updating `package.json` / `markdownlint-cli2` exists yet, so keep this open until that update PR and its workflow run are verified. --> Local elevated checks passed; npm listed 0.24.2 as latest on 2026-11-21. See [Dependabot version updates](https://docs.github.com/en/code-security/how-tos/secure-your-supply-chain/secure-your-dependencies/configure-version-updates) and [markdownlint-cli2 on npm](https://www.npmjs.com/package/markdownlint-cli2).
+Implementation (2026-11-21): root `package.json` owns the exact `markdownlint-cli2` version; the Just recipe passes that version to `npx`, keeping downloads in `NPM_CONFIG_CACHE` under `CODE_PACKAGES_ROOT` without installing `node_modules` into the checkout. Monthly npm Dependabot updates are configured, and the Markdown workflow watches `package.json` and runs `just markdownlint` in an independent job so a network-dependent hook cannot skip the pinned CLI check. Updates remain review-only with no auto-merge. <!-- Partial (2026-11-22): hosted `Prek checks` run #45111215681 passed on develop and ran the pinned Markdown checks. No Dependabot PR updating `package.json` / `markdownlint-cli2` exists yet, so keep this open until that update PR and its workflow run are verified. --> Local elevated checks passed; npm listed 0.24.2 as latest on 2026-11-21. See [Dependabot version updates](https://docs.github.com/en/code-security/how-tos/secure-your-supply-chain/secure-your-dependencies/configure-version-updates) and [markdownlint-cli2 on npm](https://www.npmjs.com/package/markdownlint-cli2).
 
 Acceptance: Dependabot creates reviewable npm update PRs, the Markdown workflow runs the pinned CLI and existing checks, and updates are not auto-merged.
 
