@@ -43,7 +43,7 @@ java -version
   - [Spring boot code generator](https://start.spring.io/)
 - [Apache Commons](https://commons.apache.org/)
 - [Guava](https://github.com/google/guava)
-- [Jackson JSON](https://github.com/FasterXML/jackson) or [GSON](https://github.com/google/gson/blob/main/UserGuide.md)
+- [Jackson JSON](https://github.com/FasterXML/jackson) or [GSON](https://raw.githubusercontent.com/google/gson/main/UserGuide.md)
 - [Hibernate](https://hibernate.org/orm/)
   on the JVM.
 - [Play framework](https://www.playframework.com/)

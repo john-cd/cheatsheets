@@ -17,7 +17,7 @@ Snapshot: November 23, 2026. GitHub Issues is enabled and has no open issues; th
 
 #### Hardware, external host or account
 
-- Recheck external URLs currently classified as blocked or unreachable by `just links`. <!-- Partial (2026-11-23): replaced migrated and retired destinations, then reran the full locked scan: 457 checked, 0 broken, 6 HTTP-blocked, and 2 network failures (8 unresolved). The blocked links are the MIT Press DOI, the legacy Maven 2 refcard, two Medium articles, Maven Repository, and the Upwork data-visualization article. The network failures are the current ReactiveMongo getting-started page and the legacy Search Technologies Aspire wiki. No destination returned 404 or 410; keep this task open until the remaining blocked and unreachable endpoints can be verified. -->
+- Recheck external URLs currently classified as blocked or unreachable by `just links`. <!-- Partial (2026-11-23): replaced migrated and retired destinations, then reran the full locked scan: 457 checked, 0 broken, 6 HTTP-blocked, and 2 network failures (8 unresolved). The hosted link checker also received HTTP 503 from GitHub's rendered Gson guide, so that reference now uses GitHub's raw content endpoint. The six blocked links are the MIT Press DOI, the legacy Maven 2 refcard, two Medium articles, Maven Repository, and the Upwork data-visualization article. The network failures are the current ReactiveMongo getting-started page and the legacy Search Technologies Aspire wiki. No destination returned 404 or 410; keep this task open until the remaining blocked and unreachable endpoints can be verified. -->
 
 <!-- recommended-issue-order:end -->
 
