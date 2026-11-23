@@ -10,6 +10,9 @@ tags: SQL RDBMS
 
 Structured Query Language (SQL) is a domain-specific language used in programming and designed for managing data held in a relational database management system (RDBMS). It is particularly useful in handling structured data.
 
+For versioned payloads that cross application or storage boundaries, see
+[data contracts and schema evolution](../Data/Data_Contracts.md).
+
 ## DML: SELECT
 
 _Filter_:
