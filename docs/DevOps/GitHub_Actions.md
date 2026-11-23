@@ -16,6 +16,9 @@ and the repository's [Git cheatsheet](Git.md). The examples below use
 full-length action commit SHAs; review the upstream action and update each pin
 through the repository's normal dependency review.
 
+For the broader developer-platform context around reusable workflows and golden
+paths, see [Platform Engineering](Platform_Engineering.md).
+
 ## Reusable workflows
 
 A reusable workflow is a YAML file in `.github/workflows/` that declares
