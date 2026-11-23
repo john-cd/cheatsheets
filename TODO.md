@@ -18,7 +18,7 @@ Snapshot: November 22, 2026. GitHub Issues is enabled and has no open issues; th
 
 #### Hardware, external host or account
 
-- Recheck the 37 remaining URLs that `just links` classifies as 16 blocked responses and 21 network failures (409 checked, 0 confirmed broken). <!-- Partial (2026-11-22): rechecked all links after identifying nine Amazon EMR master/worker hostname examples as intentional placeholders and excluding those exact hosts from network checks. The remaining 37 destinations are still blocked or unverified; no 404/410 was confirmed. -->
+- Recheck external URLs currently classified as blocked or unreachable by `just links`. <!-- Partial (2026-11-23): reran `just links` over 409 destinations after excluding nine Amazon EMR placeholder hosts; 0 404/410 responses, 15 blocked HTTP responses, and 21 network failures (36 unresolved). The remaining destinations are still unverified; no links were removed or replaced. -->
 
 <!-- recommended-issue-order:end -->
 
