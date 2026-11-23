@@ -47,7 +47,7 @@ comments: true
 
 - [Notepad++](https://notepad-plus-plus.org/)
 
-  - [Notepad++ plugin management](https://github.com/notepad-plus-plus/npp-usermanual/blob/master/content/docs/plugins.md)
+  - [Notepad++ plugin management](https://raw.githubusercontent.com/notepad-plus-plus/npp-usermanual/master/content/docs/plugins.md)
 
 - Gedit
 

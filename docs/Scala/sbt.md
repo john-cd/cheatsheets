@@ -8,7 +8,7 @@
 
 [Scala school's SBT page](https://twitter.github.io/scala_school/sbt.html)
 
-[SBT: The Missing Tutorial](https://github.com/shekhargulati/52-technologies-in-2016/blob/master/02-sbt/README.md)
+[SBT: The Missing Tutorial](https://raw.githubusercontent.com/shekhargulati/52-technologies-in-2016/master/02-sbt/README.md)
 
 ## Create a New Project
 
