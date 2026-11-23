@@ -12,7 +12,7 @@ tags: data
 
 [Data visualization - Wikipedia](https://en.wikipedia.org/wiki/Data_visualization)
 
-[19 Tools for Data Visualization Projects](https://www.upwork.com/hiring/data/19-data-visualization-tools/)
+[From Data to Viz: chart-selection guide](https://www.data-to-viz.com/)
 
 [22 free tools for data visualization and analysis - Computerworld (2017)](https://www.computerworld.com/article/1545211/enterprise-applications-22-free-tools-for-data-visualization-and-analysis.html)
 

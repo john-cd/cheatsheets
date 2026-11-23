@@ -24,7 +24,7 @@ java -version
 - [Eclipse](https://eclipse.org/downloads/) IDE
 - [Maven](https://maven.apache.org/download.cgi) or Graddle build tool
 - [Nexus](https://www.sonatype.com/products/sonatype-nexus-repository) private repository
-- [Maven public repository](https://mvnrepository.com/)
+- [Maven Central artifact search](https://central.sonatype.com/)
 - [Phabrikator](https://www.phacility.com/) code review
   - [Phabrikator blog](https://scn.sap.com/community/abap/blog/2014/11/24/code-review-with-phabricator--an-open-source-software-engineering-platform)
 - [Jenkins](https://www.jenkins.io/) CI / CD automation server
