@@ -57,8 +57,6 @@ is not runtime acceptance.
 
 Problem: requested subjects are not yet covered by reviewed cheat sheets.
 
-- [ ] Incident response and postmortems.
-
 Acceptance for each subject: a scoped page with use cases, checked examples, references,
 and navigation/cross-links; distinguish proposals from published content.
 
