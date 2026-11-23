@@ -28,7 +28,7 @@ virtualenv is a tool to create isolated Python environments. Since Python 3.3, a
 
 A set of command line tools to help you keep your pip-based packages fresh, even when you've pinned them.
 
-[Pipenv](https://pipenv.kennethreitz.org/en/latest/)
+[Pipenv](https://pipenv.pypa.io/en/stable/)
 
 The problems that Pipenv seeks to solve are multi-faceted:
 

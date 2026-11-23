@@ -23,9 +23,9 @@ tags: Scala
 
 REPL [https://ammonite.io/](https://ammonite.io/)
 
-[https://scalafiddle.io/](https://scalafiddle.io/)
+[Scastie Scala playground](https://scastie.scala-lang.org/)
 
-- [The Lift Framework](https://liftweb.net/)
+- [The Lift Framework](https://github.com/lift/framework)
 - [The Play framework](https://www.playframework.com/)
 - [The Bowler framework](https://github.com/bowler-framework/bowler-quickstart)
 - [Akka](https://akka.io/)

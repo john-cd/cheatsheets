@@ -10,19 +10,19 @@ tags: Scala, DB
 
 ## Database Access / ORM Libraries
 
-[Slick](https://slick.lightbend.com/)
+[Slick](https://scala-slick.org/)
 
-- [Manual](https://slick.lightbend.com/doc/3.2.1/introduction.html)
+- [Manual](https://scala-slick.org/doc/stable/)
 
 [JOOQ](https://www.jooq.org/)
 
-[Squeryl](https://squeryl.org/getting-started.html)
+[Squeryl](https://www.squeryl.org/)
 
-[SORM](https://sorm-framework.org/)
+[SORM artifact on Maven Central](https://central.sonatype.com/artifact/org.sorm-framework/sorm)
 
 [Doobie](https://typelevel.org/doobie/)
 
-[ReactiveMongo](https://reactivemongo.org/)
+[ReactiveMongo getting started](https://reactivemongo.org/releases/1.0/documentation/tutorial/getstarted.html)
 
 [Comparison of multiple frameworks](https://softwaremill.com/comparing-scala-relational-database-access-libraries/#summary)
 

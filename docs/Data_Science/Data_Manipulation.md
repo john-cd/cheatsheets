@@ -15,7 +15,7 @@ tags: data
 
 ## Data Wrangling with .NET
 
-[Quora: Which is the best machine learning library for .NET?](https://www.quora.com/Which-is-the-best-machine-learning-library-for-NET)
+[ML.NET documentation](https://learn.microsoft.com/en-us/dotnet/machine-learning/)
 
 [Deedle- Exploratory data library for .NET](https://bluemountaincapital.github.io/Deedle/)
 
@@ -23,9 +23,9 @@ Deedle is an easy to use library for data and time series manipulation and for s
 
 The library implements a wide range of operations for data manipulation including advanced indexing and slicing, joining and aligning data, handling of missing values, grouping and aggregation, statistics and more.
 
-[Accord.NET Framework](https://accord-framework.net/)
+[Accord.NET Framework (archived)](https://github.com/accord-net/framework)
 
-Accord.NET provides statistical analysis, machine learning, image processing and computer vision methods for .NET applications. The Accord.NET Framework extends the popular AForge.NET with new features, adding to a more complete environment for scientific computing in .NET.
+Accord.NET provides statistical analysis, machine learning, image processing and computer vision methods for .NET applications. The Accord.NET Framework extends the popular AForge.NET with new features, adding to a more complete environment for scientific computing in .NET. The project has been archived and is read-only since November 19, 2020.
 
 ## Example
 

@@ -10,7 +10,9 @@
 
 [Maven Quick Ref](https://maven.apache.org/guides/MavenQuickReferenceCard.pdf)
 
-[Apache-maven-2](https://dzone.com/refcardz/apache-maven-2)
+[Apache Maven 2 Refcard (legacy)](https://dzone.com/refcardz/apache-maven-2)
+
+Apache Maven 2 is end-of-life; use the current Maven quick reference for supported releases. See the [Maven 2 end-of-life notice](https://maven.apache.org/maven-2.x-eol.html).
 
 [Maven Basics](https://deeplearning4j.org/maven.html)
 
@@ -135,7 +137,7 @@ You can run `mvn site` and then find an `index.html` file in `target/site` that 
 
 ## POM files
 
-Use the search engine at [repository.sonatype.org](https://repository.sonatype.org) to find dependencies by name and get the `xml` necessary to paste into your `pom.xml`
+Use [Maven Central Search](https://central.sonatype.com/search) to find dependencies and their coordinates, then add them to your `pom.xml`.
 
 ```xml
 <project>

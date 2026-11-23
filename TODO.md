@@ -17,7 +17,7 @@ Snapshot: November 23, 2026. GitHub Issues is enabled and has no open issues; th
 
 #### Hardware, external host or account
 
-- Recheck external URLs currently classified as blocked or unreachable by `just links`. <!-- Partial (2026-11-23): the full locked scan covered 445 destinations: 0 broken, 15 blocked HTTP responses, and 21 network failures (36 unresolved). Replaced the MongoDB Hadoop link after its old route returned 503; the current official compatibility page returned 200, and its per-page check found 0 broken, 1 blocked (the Amazon EMR PDF), and 0 network failures. Also replaced the Gson `master` link after hosted Prek received a 503; the official guide is on `main`, and the Java page recheck found 0 broken, 1 blocked (`https://mvnrepository.com/`), and 0 network failures. The remaining destinations still need review; no valid links were removed. -->
+- Recheck external URLs currently classified as blocked or unreachable by `just links`. <!-- Partial (2026-11-23): replaced migrated and retired destinations, then reran the full locked scan: 457 checked, 0 broken, 6 HTTP-blocked, and 2 network failures (8 unresolved). The blocked links are the MIT Press DOI, the legacy Maven 2 refcard, two Medium articles, Maven Repository, and the Upwork data-visualization article. The network failures are the current ReactiveMongo getting-started page and the legacy Search Technologies Aspire wiki. No destination returned 404 or 410; keep this task open until the remaining blocked and unreachable endpoints can be verified. -->
 
 <!-- recommended-issue-order:end -->
 

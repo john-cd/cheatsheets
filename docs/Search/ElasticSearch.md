@@ -177,7 +177,7 @@ BI platforms that can use ES as an analytics engine:
 - [Sitepoint](https://www.sitepoint.com/building-recipe-search-site-angular-elasticsearch/)
 - [CottageLabs](https://github.com/CottageLabs/facetview2)
 - [scrutmydocs.org](https://www.scrutmydocs.org/)
-- [qbox.io](https://qbox.io/blog/series/machine-learning)
+- [Elasticsearch machine learning documentation](https://www.elastic.co/docs/explore-analyze/machine-learning)
 
 ## Java API
 
@@ -185,7 +185,7 @@ BI platforms that can use ES as an analytics engine:
 - [elasticsearch tutorial](https://github.com/jaibeermalik/elasticsearch-tutorial)
 - [elasticsearchfr/](https://github.com/elasticsearchfr/hands-on)
 - [IBM](https://www.ibm.com/developerworks/library/j-use-elasticsearch-java-apps/index.html)
-- [dzone](https://dzone.com/articles/elasticsearch-java-api)
+- [Elasticsearch Java client getting started](https://www.elastic.co/docs/reference/elasticsearch/clients/java/getting-started)
 
 ## BASICS
 

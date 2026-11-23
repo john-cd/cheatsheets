@@ -193,7 +193,7 @@ PUT /gb
 
 null, arrays, objects: see [complex core fields](https://www.elastic.co/guide/en/elasticsearch/guide/current/complex-core-fields.html)
 
-## [Parent Child Relationships](https://qbox.io/blog/parent-child-relationships-in-elasticsearch)
+## [Parent-child relationships](https://www.elastic.co/docs/reference/query-languages/query-dsl/joining-queries)
 
 ```JSON
 DELETE /test_index

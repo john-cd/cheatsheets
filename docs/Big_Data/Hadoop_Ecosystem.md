@@ -36,7 +36,7 @@ Its core and common components consist of the following:
 
 ## AWS EMR
 
-[Amazon EMR Best Practices](https://media.amazonwebservices.com/AWS_Amazon_EMR_Best_Practices.pdf)
+[Plan, configure, and launch Amazon EMR clusters](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan.html)
 
 Amazon EMR is a cloud-native big data platform that simplifies running big data frameworks. Modern EMR includes:
 

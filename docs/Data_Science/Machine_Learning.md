@@ -9,8 +9,6 @@ comments: true
 
 # Useful Links
 
-[DataTau](https://www.datatau.com/)
-
 ## Datasets
 
 - [UC Irvine Machine Learning Repository](https://archive.ics.uci.edu/ml/)
@@ -31,7 +29,7 @@ comments: true
 
 [Lecture 10 Reinforcement Learning I](https://www.youtube.com/watch?v=IXuHxkpO5E8)
 
-[PyBrain](https://www.pybrain.org/)
+[PyBrain source repository](https://github.com/pybrain/pybrain)
 
 [PyBrain - a simple neural networks library in Python](https://fastml.com/pybrain-a-simple-neural-networks-library-in-python/)
 
@@ -64,8 +62,8 @@ comments: true
 
 ## Books
 
-- [The Elements of Statistical Learning: Data Mining, Inference, and Prediction](https://statweb.stanford.edu/~tibs/ElemStatLearn/)
-- [Boosting Foundations and Algorithms](https://mitpress.mit.edu/books/boosting)
+- [The Elements of Statistical Learning: Data Mining, Inference, and Prediction](https://hastie.su.domains/ElemStatLearn/)
+- [Boosting: Foundations and Algorithms](https://doi.org/10.7551/mitpress/8291.001.0001)
 
 ## Example
 

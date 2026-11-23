@@ -47,7 +47,7 @@ comments: true
 
 - [Notepad++](https://notepad-plus-plus.org/)
 
-  - [Plugins](https://www.guidingtech.com/31357/notepad-plus-plugins/)
+  - [Notepad++ plugin management](https://github.com/notepad-plus-plus/npp-usermanual/blob/master/content/docs/plugins.md)
 
 - Gedit
 
