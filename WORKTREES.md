@@ -2,7 +2,7 @@
 
 # Worktrees
 
-Updated 2026-11-01 (America/Los_Angeles). This file describes the managed layout;
+Updated 2026-11-23 (America/Los_Angeles). This file describes the managed layout;
 use `git worktree list --porcelain` and `git status --short` for live state.
 
 - The primary checkout stays on `develop` and uses cache slot `main`.
@@ -35,7 +35,14 @@ See the README for this repository's project paths and commands.
 
 ## Current state
 
-The 2026-11-01 configuration alignment was integrated into develop; no dedicated alignment worktree remains. Use git worktree list --porcelain and git status --short for live ownership and cleanliness.
+Reviewed 2026-11-23. Live checkouts:
+
+| Checkout        | Owner  | Branch or revision           | Status                                                                                                                 |
+| --------------- | ------ | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| Repository root | nobody | `develop` / `origin/develop` | Clean and synchronized.                                                                                                |
+| `.worktrees/a`  | nobody | detached / `18d3f2a`         | Clean; its unique commits are preserved on `codex/cheatsheets-markdown-ci` and `origin/codex/cheatsheets-markdown-ci`. |
+
+Use git worktree list --porcelain and git status --short to refresh this local inventory.
 
 ## Branch dispositions (reviewed 2026-11-04)
 
@@ -48,5 +55,4 @@ Read-only comparison against `develop`; nothing was deleted or moved.
 | `backup/tooling-20261031/develop-before`      | 2              | Keep: pre-rewrite backup; also on origin.        |
 | `backup/tooling-20261031/working-state`       | 3              | Keep: saved working state; also on origin.       |
 
-No auxiliary worktrees exist besides the primary checkout. Retire a backup only after a human
-confirms its commits are obsolete.
+The live inventory above records active auxiliary worktrees. Retire a backup only after a human confirms its commits are obsolete.
