@@ -43,6 +43,8 @@ Problem: updater coverage and runtime/cache behavior still require verification.
 
 Validation (2026-11-23): the CI image built with the isolated `codex-cheatsheets-check-20261123` BuildKit builder, and the in-image MkDocs build completed. The default Docker Desktop builder still fails even for a minimal `/bin/sh` build (`exec format error`), so it was left untouched. A disposable container reported Python 3.15.2, uv 0.13.7, and just 1.59.0; its generated site served HTTP 200 at `http://127.0.0.1:18083/` with the expected HTML title and 68,442-byte response. The container was stopped; no existing images or caches were pruned. Hosted CI runs #45111215683 and #45111215681 pass. After PR #24 merged, develop push run [#45142181326](https://github.com/john-cd/cheatsheets/actions/runs/45142181326) passed both `validate` and `deploy`.
 
+Validation retry (2026-11-23): Docker Desktop 29.9.3 and WSL2 `docker-desktop` are running. A valid `linux/amd64` build using the default Docker builder still fails on `RUN ["/bin/sh", "-c", "test -x /bin/sh && echo default-builder-shell-ok"]` with `exec /bin/sh: exec format error`; running that base image directly executes `/bin/sh` successfully. Compose CI configuration passes. The pinned CI image (`PYTHON_VERSION=3.15.2`, `UV_VERSION=0.13.7`, `JUST_VERSION=1.59.0`) built successfully with isolated docker-container BuildKit v0.35.1; the in-image MkDocs build generated `/tmp/python-output/code/main/site`. A disposable HTTP server returned 200 with title `John's Cheatsheets` (74,406 bytes). The container and temporary image tar/tag were removed; the isolated BuildKit cache was retained. Build log: `D:\code_build\cheatsheets\main\docker-ci-build-b57dd34195f24279bea24308581c9069.log`. <!-- Partial (2026-11-23): the default Docker BuildKit executor still cannot execute `/bin/sh`; keep this item open until the default builder is repaired or its continued failure receives an explicit disposition. -->
+
 Acceptance: dependency roots have explicit coverage/dispositions, pins and build contexts agree,
 and hosted/container behavior has logs. Local evidence: Compose base/override/CI configuration validated;
 Python 3.15.2 and Docker CLI 29.9.3 run in the container; `just check` passes all 18 tests,
@@ -52,6 +54,8 @@ is not runtime acceptance.
 ## P3: new content
 
 Problem: requested subjects are not yet covered by reviewed cheat sheets.
+
+<!-- Blocked (2026-11-23): no concrete subjects are listed in this task or in open GitHub issues; propose topics before implementing new pages. -->
 
 Acceptance for each subject: a scoped page with use cases, checked examples, references,
 and navigation/cross-links; distinguish proposals from published content.
