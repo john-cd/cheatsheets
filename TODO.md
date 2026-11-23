@@ -46,7 +46,7 @@ Validation (2026-11-22): fixed the hosted `just test` failure caused by hard-cod
 
 Problem: updater coverage and runtime/cache behavior still require verification.
 
-- [ ] Exercise container runtime behavior. <!-- Partial (2026-11-22): the CI image built and its in-container MkDocs build passed once. On retry, Docker Desktop's BuildKit/containerd store returned a read-only filesystem I/O error; Ubuntu WSL has Node/npm but no Docker Desktop socket. No Docker data was pruned or restarted. Reattempt when Docker Desktop storage is healthy. Hosted CI runs #45111215683 and #45111215681 pass. -->
+Validation (2026-11-23): the CI image built with the isolated `codex-cheatsheets-check-20261123` BuildKit builder, and the in-image MkDocs build completed. The default Docker Desktop builder still fails even for a minimal `/bin/sh` build (`exec format error`), so it was left untouched. A disposable container reported Python 3.15.2, uv 0.13.7, and just 1.59.0; its generated site served HTTP 200 at `http://127.0.0.1:18083/` with the expected HTML title and 68,442-byte response. The container was stopped; no existing images or caches were pruned. Hosted CI runs #45111215683 and #45111215681 pass.
 
 Acceptance: dependency roots have explicit coverage/dispositions, pins and build contexts agree,
 and hosted/container behavior has logs. Local evidence: Compose base/override/CI configuration validated;

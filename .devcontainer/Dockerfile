@@ -7,12 +7,12 @@
 # Dockerfile reference guide at
 # https://docs.docker.com/go/dockerfile-reference/
 
-ARG WORK_DIR
-
-ARG PYTHON_VERSION
-ARG DEBIAN_CODENAME
-ARG UV_VERSION
-ARG JUST_VERSION
+# Defaults match .devcontainer/.env for direct builds; Compose still supplies the tracked values.
+ARG WORK_DIR=/code
+ARG PYTHON_VERSION=3.15.2
+ARG DEBIAN_CODENAME=trixie
+ARG UV_VERSION=0.13.7
+ARG JUST_VERSION=1.59.0
 
 FROM ghcr.io/astral-sh/uv:${UV_VERSION} AS uv
 FROM ghcr.io/casey/just:${JUST_VERSION} AS just
