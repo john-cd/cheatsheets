@@ -1,4 +1,4 @@
-<!-- TODO Reviewed ??-??-2026. -->
+<!-- TODO Reviewed 11-22-2026. -->
 
 # TODO
 
@@ -6,13 +6,9 @@
 
 ## Ready and blocked work
 
-Snapshot: November 13, 2026. GitHub Issues is disabled, so this file is the backlog; links point to local sections.
+Snapshot: November 22, 2026. GitHub Issues is enabled and has no open issues; this file tracks repository tasks, with links to local sections.
 
 ### Blocked
-
-#### CI unavailable
-
-- [Exercise hosted CI and deployment](#p2-dependencies-ci-and-containers) — hosted Actions is unavailable.
 
 #### Human decisions and reviews
 
@@ -26,7 +22,7 @@ Snapshot: November 13, 2026. GitHub Issues is disabled, so this file is the back
 
 <!-- recommended-issue-order:end -->
 
-GitHub Issues is disabled (reverified 2026-11-02). This is the authoritative backlog.
+GitHub Issues is enabled, with zero open issues on 2026-11-22. This file is the authoritative task backlog.
 Use American spelling and LF; record evidence before marking a task complete.
 
 ## P1: documentation quality
@@ -44,11 +40,13 @@ Problem: Python checks alone do not validate the maintained documentation/toolin
 Acceptance: maintained file types have runnable quality gates; commands and results are recorded.
 Do not report skipped checks as passing or synchronize full runtime dependencies for formatting.
 
+<!-- Partial (2026-11-22): fixed the hosted `just test` failure caused by hard-coded Docker feature version 1.10.1 after Dependabot updated the config and lock to 1.10.3. Local `just check-all` passes all 21 Python tests plus Ruff, dprint, and pinned markdownlint; `just hooks` also passes. Hosted rerun for the fix is pending. -->
+
 ## P2: dependencies, CI, and containers
 
 Problem: updater coverage and runtime/cache behavior still require verification.
 
-- [ ] Exercise hosted CI.
+- [ ] Exercise hosted CI and container behavior.
 
 Acceptance: dependency roots have explicit coverage/dispositions, pins and build contexts agree,
 and hosted/container behavior has logs. Local evidence: Compose base/override/CI configuration validated;
@@ -86,15 +84,13 @@ Problem: Dependabot does not update tool versions stored only in formatter confi
 
 - [ ] Add review-only update coverage for the `markdownlint-cli2` pin; retain `just deps-upgrade` as the manual fallback for other tool pins.
 
-Implementation (2026-11-21): root `package.json` owns the exact `markdownlint-cli2` version; the Just recipe passes that version to `npx`, keeping downloads in `NPM_CONFIG_CACHE` under `CODE_PACKAGES_ROOT` without installing `node_modules` into the checkout. Monthly npm Dependabot updates are configured, and the Markdown workflow watches `package.json` and runs `just markdownlint` in an independent job so a network-dependent hook cannot skip the pinned CLI check. Updates remain review-only with no auto-merge. Local elevated checks passed; keep this task open until a hosted Dependabot update PR and its Markdown workflow run confirm the service-side behavior. npm listed 0.24.2 as latest on this date. See [Dependabot version updates](https://docs.github.com/en/code-security/how-tos/secure-your-supply-chain/secure-your-dependencies/configure-version-updates) and [markdownlint-cli2 on npm](https://www.npmjs.com/package/markdownlint-cli2).
+Implementation (2026-11-21): root `package.json` owns the exact `markdownlint-cli2` version; the Just recipe passes that version to `npx`, keeping downloads in `NPM_CONFIG_CACHE` under `CODE_PACKAGES_ROOT` without installing `node_modules` into the checkout. Monthly npm Dependabot updates are configured, and the Markdown workflow watches `package.json` and runs `just markdownlint` in an independent job so a network-dependent hook cannot skip the pinned CLI check. Updates remain review-only with no auto-merge. <!-- Partial (2026-11-22): hosted `Prek checks` run #45024055092 passed on develop and ran the pinned Markdown checks. No Dependabot PR updating `package.json` / `markdownlint-cli2` exists yet, so keep this open until that update PR and its workflow run are verified. --> Local elevated checks passed; npm listed 0.24.2 as latest on 2026-11-21. See [Dependabot version updates](https://docs.github.com/en/code-security/how-tos/secure-your-supply-chain/secure-your-dependencies/configure-version-updates) and [markdownlint-cli2 on npm](https://www.npmjs.com/package/markdownlint-cli2).
 
 Acceptance: Dependabot creates reviewable npm update PRs, the Markdown workflow runs the pinned CLI and existing checks, and updates are not auto-merged.
 
 ## P2: documentation platform
 
 Problem: Material for MkDocs is in maintenance mode, with upstream critical maintenance ending May 5, 2027.
-
-- [x] Evaluate a gradual Zensical migration, including output paths, plugins and Markdown extensions, navigation, search, publishing, and rendered page parity.
 
 Assessment (2026-11-21): tested Zensical 0.1.3 against the repository. The real build fails before rendering with `site_dir must be within project root` because `just docs` configures the required absolute external `MKDOCS_SITE_DIR`; this conflicts with the repository rule to keep generated output outside the checkout. A copy under `C:\temp` built successfully with relative `site/` output and no issues. All 84 HTML route paths, all 83 sitemap URLs, and heading IDs on every page matched the Material build; both search indexes contain 790 documents. Navigation destinations matched after normalizing absolute and relative URL forms, apart from Material's home link and a `javascript:void(0)` control. There is no explicit MkDocs `plugins:` list, and the current Markdown/PyMdown configuration, including the custom TOC slugify callable, built successfully in the trial. No redirect plugin or map is configured. Two parity decisions remain: Zensical documents `navigation.indexes` and `toc.integrate` as incompatible, and its rendered search lacks Material's suggestion and share controls. Publishing was not trialled: this repo deploys with `mkdocs gh-deploy` to `gh-pages`, while Zensical has no `gh-deploy` command; its documented Pages artifact workflow requires changing the Pages source and still needs validation for the custom URL and both main/develop deployment triggers. Decision: no-go for migration under the current output-path rule; keep MkDocs. Reopen migration work if Zensical supports external output or the repository's output policy changes, then trial the Pages workflow and resolve the navigation/search choices before switching. See the [Zensical migration guide](https://zensical.org/docs/compatibility/mkdocs/migration/), [plugin compatibility notes](https://zensical.org/docs/compatibility/mkdocs/plugins/), [Python Markdown extension compatibility](https://zensical.org/docs/compatibility/markdown/python-markdown-extensions/), [navigation](https://zensical.org/docs/setup/navigation/), [search](https://zensical.org/docs/setup/search/), and [publishing guide](https://zensical.org/docs/publish-your-site/).
 

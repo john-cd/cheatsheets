@@ -46,19 +46,36 @@ class DevcontainerVersionTests(unittest.TestCase):
     def test_docker_feature_and_cli_versions_are_pinned(self):
         """Require explicit Docker feature and CLI versions instead of floating tags."""
         config = (ROOT / ".devcontainer" / "devcontainer.json").read_text(encoding="utf-8")
-        self.assertIn("docker-outside-of-docker:1.10.1", config)
+        feature_reference = re.search(
+            r'"(?P<reference>ghcr\.io/devcontainers/features/docker-outside-of-docker:(?P<version>\d+\.\d+\.\d+))"\s*:',
+            config,
+        )
+        self.assertIsNotNone(feature_reference, "Docker feature must use an exact semantic version")
         self.assertRegex(config, r'"version"\s*:\s*"29\.9\.3"')
         self.assertRegex(config, r'"dockerDashComposeVersion"\s*:\s*"v2"')
         self.assertNotIn('"version": "latest"', config)
 
     def test_feature_lock_pins_the_resolved_artifact_and_integrity(self):
         """Verify the Docker feature lock records a version and matching digest."""
+        config = (ROOT / ".devcontainer" / "devcontainer.json").read_text(encoding="utf-8")
+        feature_reference = re.search(
+            r'"(?P<reference>ghcr\.io/devcontainers/features/docker-outside-of-docker:(?P<version>\d+\.\d+\.\d+))"\s*:',
+            config,
+        )
+        self.assertIsNotNone(feature_reference, "Docker feature must use an exact semantic version")
+
         lock_path = ROOT / ".devcontainer" / "devcontainer-lock.json"
         lock = json.loads(lock_path.read_text(encoding="utf-8"))
-        feature = lock["features"]["ghcr.io/devcontainers/features/docker-outside-of-docker:1.10.1"]
+        feature = lock["features"][feature_reference.group("reference")]
 
         self.assertRegex(feature["version"], r"^\d+\.\d+\.\d+$")
+        self.assertEqual(feature["version"], feature_reference.group("version"))
         self.assertRegex(feature["resolved"], r"@sha256:[0-9a-f]{64}$")
+        self.assertTrue(
+            feature["resolved"].startswith(
+                feature_reference.group("reference").rsplit(":", 1)[0] + "@"
+            )
+        )
         self.assertEqual(feature["integrity"], "sha256:" + feature["resolved"].rsplit(":", 1)[1])
 
 
