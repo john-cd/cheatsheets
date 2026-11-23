@@ -86,7 +86,7 @@ class HomeController @Inject()(val controllerComponents: ControllerComponents) e
 
 [yohangz-scala-play-angular-seed- Scala Play 2.6.x + Angular 5 with Angular CLI seed project with full-fledged build process](https://github.com/yohangz/scala-play-angular-seed)
 
-[Getting Started With Play Framework - DZone - Refcardz](https://dzone.com/refcardz/getting-started-play-framework?chapter=10)
+[Getting started with Play Framework](https://www.playframework.com/getting-started)
 
 [jamesward-play-rest-security](https://github.com/jamesward/play-rest-security)
 
