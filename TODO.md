@@ -17,7 +17,7 @@ Snapshot: November 23, 2026. GitHub Issues is enabled and has no open issues; th
 
 #### Hardware, external host or account
 
-- Recheck external URLs currently classified as blocked or unreachable by `just links`. <!-- Partial (2026-11-23): reran `just links` over 409 destinations after excluding nine Amazon EMR placeholder hosts; 0 404/410 responses, 15 blocked HTTP responses, and 21 network failures (36 unresolved). The remaining destinations are still unverified; no links were removed or replaced. -->
+- Recheck external URLs currently classified as blocked or unreachable by `just links`. <!-- Partial (2026-11-23): the full locked scan covered 445 destinations: 0 broken, 15 blocked HTTP responses, and 21 network failures (36 unresolved). Replaced the MongoDB Hadoop link after its old route returned 503; the current official compatibility page returned 200, and its per-page check found 0 broken, 1 blocked (the Amazon EMR PDF), and 0 network failures. Also replaced the Gson `master` link after hosted Prek received a 503; the official guide is on `main`, and the Java page recheck found 0 broken, 1 blocked (`https://mvnrepository.com/`), and 0 network failures. The remaining destinations still need review; no valid links were removed. -->
 
 <!-- recommended-issue-order:end -->
 
@@ -57,7 +57,6 @@ is not runtime acceptance.
 
 Problem: requested subjects are not yet covered by reviewed cheat sheets.
 
-- [ ] Data contracts and schema evolution.
 - [ ] Kubernetes security: PSA/PSS, RBAC, and network policies.
 - [ ] Cloud workload FinOps.
 - [ ] Incident response and postmortems.
