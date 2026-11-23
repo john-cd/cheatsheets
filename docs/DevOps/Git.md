@@ -10,7 +10,7 @@ tags: SCM DevOps
 
 - [GitHub Actions workflows](GitHub_Actions.md)
 
-- [Graphical git cheatsheet](https://byte.kde.org/~zrusin/git/git-cheat-sheet-medium.png)
+- [Graphical Git cheatsheet](https://github.com/hbons/git-cheat-sheet)
 - [Git basic commands](https://www.atlassian.com/git/tutorials/svn-to-git-prepping-your-team-migration/basic-git-commands)
 - [Git cheatsheet (PDF)](https://training.github.com/downloads/github-git-cheat-sheet.pdf)
 - [Git cheatsheet (interactive)](https://ndpsoftware.com/git-cheatsheet.html#loc=workspace)

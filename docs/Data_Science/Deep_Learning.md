@@ -10,13 +10,9 @@
 
 ## Useful Links
 
-[What is deep learning](https://www.quora.com/What-is-deep-learning)
-
-[Why-is-Deep-Learning-so-popular-and-in-demand-these-days](https://www.quora.com/Why-is-Deep-Learning-so-popular-and-in-demand-these-days)
+[Neural networks module in Google's Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course/neural-networks)
 
 [Deep Learning for beginners (deeplearning4j)](https://deeplearning4j.org/deeplearningforbeginners.html)
-
-[The best answers to your most crucial deep learning questions](https://www.bigdatanews.com/profiles/blogs/the-best-answers-to-your-most-crucial-deep-learning-questions)
 
 [Colah's blog - Neural Networks](https://colah.github.io/)
 

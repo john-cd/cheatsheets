@@ -8,7 +8,7 @@ tags:
 
 ## Vim
 
-[Vim Commands Cheat Sheet](https://www.fprintf.net/vimCheatSheet.html)
+[Vim quick reference](https://vimhelp.org/quickref.txt.html)
 
 ```sh
 :q
@@ -57,23 +57,16 @@ sudo service jenkins start
 sudo service nginx start
 ```
 
-### Autostarting a service on Amazon Linux
+### Enabling a service at startup on Amazon Linux
 
-- [Tutorial on "Chkconfig" Command in Linux with Examples](https://www.yourownlinux.com/2015/01/tutorial-on-chkconfig-command-in-linux-with-examples.html)
-- [man page](https://linux.die.net/man/8/chkconfig)
+- [Amazon Linux 2023 service migration notes](https://docs.aws.amazon.com/linux/al2023/ug/deprecated-al2023.html)
 
 ```bash
-# check a service is configured for startup
-sudo chkconfig sshd
-echo $?  # 0 = configured for startup
-# or
-sudo chkconfig --list mysqld
-sudo chkconfig --list         # all services
-
-# add a service
-sudo chkconfig --add vsftpd
-sudo chkconfig mysqld on
-sudo chkconfig --level 3 httpd on  # specific runlevel
+# enable a service at startup
+sudo systemctl enable sshd.service
+systemctl is-enabled sshd.service
+# list enabled services
+systemctl list-unit-files --type=service --state=enabled
 ```
 
 ## Linux Boot Process

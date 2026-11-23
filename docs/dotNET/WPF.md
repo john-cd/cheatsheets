@@ -11,9 +11,9 @@ comments: true
 
 ## Useful Links
 
-[WPF tutorial](https://wpftutorial.net/)
+[WPF overview and tutorial](https://learn.microsoft.com/en-us/dotnet/desktop/wpf/overview/)
 
-[WPF Documentation](https://msdn.microsoft.com/en-us/library/vstudio/ms754130.aspx)
+[WPF Documentation](https://learn.microsoft.com/en-us/dotnet/desktop/wpf/)
 
 [WPF Samples](https://github.com/Microsoft/WPF-Samples)
 

@@ -23,7 +23,7 @@ source <(kubectl completion bash)
 echo "source <(kubectl completion bash)" >> ~/.bashrc
 ```
 
-If necessary, install [socat](https://www.cyberciti.biz/faq/linux-unix-tcp-port-forwarding/)
+If necessary, install [socat](https://man7.org/linux/man-pages/man1/socat.1.html); its manual includes TCP port-forwarding examples.
 
 ```shell
 sudo apt-get update && sudo apt-get install socat

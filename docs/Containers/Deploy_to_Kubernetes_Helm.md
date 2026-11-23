@@ -161,11 +161,11 @@ minikube addons enable ingress
 
 - Deploy on Kubernetes as above
 
-See [Blog](https://medium.com/@Oskarr3/setting-up-ingress-on-minikube-6ae825e98f82)
+See the current [Kubernetes Ingress documentation](https://kubernetes.io/docs/concepts/services-networking/ingress/). The linked [2017 Minikube walkthrough](https://medium.com/@Oskarr3/setting-up-ingress-on-minikube-6ae825e98f82) is historical and uses an older Minikube release.
 
 ### SSL Termination (TO DO)
 
-[IBM Ingress TLS tutorial](https://www.ibm.com/support/knowledgecenter/en/SS5PWC/front_end_tls_ingress_task.html)
+[Kubernetes Ingress TLS guidance](https://kubernetes.io/docs/concepts/services-networking/ingress/#tls)
 
 - Generate a x509, pem encoded, RSA 2048 certificate with [OpenSSL](https://www.openssl.org/)
 
