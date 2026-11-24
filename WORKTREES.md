@@ -56,3 +56,10 @@ Read-only comparison against `develop`; nothing was deleted or moved.
 | `backup/tooling-20261031/working-state`       | 3              | Keep: saved working state; also on origin.       |
 
 The live inventory above records active auxiliary worktrees. Retire a backup only after a human confirms its commits are obsolete.
+
+## Branch review 2026-11-24
+
+Primary checkout: develop, synchronized with origin/develop.
+Slots a and b: nobody, clean detached HEADs at 18d3f2a and adda3ef; build directories retained.
+Both topic branches were already squash-integrated and were deleted locally and remotely.
+The origin/gh-pages branch remains the active GitHub Pages publication source.
