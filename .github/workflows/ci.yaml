@@ -1,3 +1,19 @@
+# Workflow contract documentation (maintained with the implementation).
+# Workflow contract: cheatsheets / ci.
+# Purpose: Validate the maintained source with the tools and commands listed in this job; Deploy the
+# checked site or application through the configured destination.
+# Execution: push, workflow_dispatch, pull_request. Trigger branches/paths below are the
+# authoritative input boundary.
+# Manual operation: use the Actions tab or gh workflow run; input defaults below apply unless
+# explicitly overridden.
+# Run policy: the concurrency block below controls cancellation/serialization; preserve production
+# and manual side-effect guards.
+# Access: workflow token permissions are {"contents": "read"}; job-level overrides below own any
+# elevated access.
+# Maintenance: keep full-SHA action references/tool pins coordinated with Dependabot and the
+# repository configuration. See README.md in this directory for the job map and local validation.
+# End workflow contract documentation.
+
 # TODO Reviewed ??-??-2026
 
 name: ci
@@ -24,9 +40,15 @@ env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
+  # Job validate: Validate the maintained source with the tools and commands listed in this job.
+  # Keep compatible checks in the same job to reuse installed dependencies and build outputs;
+  # distinct OS/feature entries retain their behavior coverage.
   validate:
+    timeout-minutes: 30
     runs-on: ubuntu-latest
     steps:
+      # Install the tool versions consumed by the following checks. Prefer the existing prebuilt
+      # installer path to recompiling development tools on every fresh runner.
       - name: Install Just
         # taiki-e/install-action v2.87.30
         uses: taiki-e/install-action@75a7c0f87bd666af3cdb75c5b9e9d03ab6044e6f
@@ -35,12 +57,18 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
+      # Select the declared runtime before dependency installation so local/CI version differences
+      # do not mask failures; reuse only the package cache configured below.
       - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
         with:
           python-version-file: .python-version
+      # Select the declared runtime before dependency installation so local/CI version differences
+      # do not mask failures; reuse only the package cache configured below.
       - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version: 26.13.1
+      # Select the declared runtime before dependency installation so local/CI version differences
+      # do not mask failures; reuse only the package cache configured below.
       - name: Install uv
         uses: astral-sh/setup-uv@1db35dd8eee11c5894872e0b383ae6c406cf738d # v10.4.0
         with:
@@ -51,11 +79,20 @@ jobs:
       - run: just uv tool install prek
       - uses: dprint/check@371a959e3c77f34a76a03d2c50df2e3f2302d016 # v2.6
       - run: just hooks
+      - run: just markdownlint
       - run: just test
       - run: node --test tests/*.test.js
       - run: just docs
 
+  # Job deploy: Deploy the checked site or application through the configured destination.
+  # This job can change a live environment; keep its condition, permissions and environment
+  # protections together.
+  # Dependency boundary: "validate"; downstream work must not consume an unchecked or missing
+  # upstream result.
+  # Guard: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref ==
+  # 'refs/heads/develop'). Keep this condition when refactoring triggers or job dependencies.
   deploy:
+    timeout-minutes: 30
     if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/develop')
     needs: validate
     concurrency:
@@ -65,6 +102,8 @@ jobs:
       contents: write
     runs-on: ubuntu-latest
     steps:
+      # Install the tool versions consumed by the following checks. Prefer the existing prebuilt
+      # installer path to recompiling development tools on every fresh runner.
       - name: Install Just
         # taiki-e/install-action v2.87.30
         uses: taiki-e/install-action@75a7c0f87bd666af3cdb75c5b9e9d03ab6044e6f
@@ -76,9 +115,13 @@ jobs:
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+      # Select the declared runtime before dependency installation so local/CI version differences
+      # do not mask failures; reuse only the package cache configured below.
       - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
         with:
           python-version-file: .python-version
+      # Select the declared runtime before dependency installation so local/CI version differences
+      # do not mask failures; reuse only the package cache configured below.
       - name: Install uv
         uses: astral-sh/setup-uv@1db35dd8eee11c5894872e0b383ae6c406cf738d # v10.4.0
         with:
@@ -86,4 +129,6 @@ jobs:
           version: "0.13.7"
           cache-dependency-glob: "**/uv.lock"
       - run: just sync
+      # This is a publication boundary. Preserve its preceding validation, existing event/ref guard,
+      # environment approvals and write permissions.
       - run: just uv run mkdocs gh-deploy --force
